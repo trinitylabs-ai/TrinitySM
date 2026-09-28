@@ -1,0 +1,12 @@
+{
+  "recorded_configurations": [
+    {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1"
+    }
+  ],
+  "deployment_note": "These are the saved grader model identifiers. No unrecorded provider revision or sampling setting is inferred.",
+  "source_note": "IMOBench scorer snapshot SHA matches each original grading run manifest.",
+  "reference_note": "Official per-problem guidelines and reference text are preserved with recorded hashes."
+}

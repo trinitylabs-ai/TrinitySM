@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "imo-proofbench/basic",
+  "display_name": "IMO-ProofBench Basic",
+  "created_at": "2026-09-13T04:15:53.969319+00:00",
+  "path_conventions": {
+    "source": "repository-relative",
+    "path": "benchmark-directory-relative"
+  },
+  "generation_inputs": {
+    "directory": "problems",
+    "statement_only": true,
+    "count": 30,
+    "files": [
+      {
+        "problem_id": "PB-Basic-001",
+        "path": "problems/PB-Basic-001.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-001.json",
+        "sha256": "a5400f134bba0b066e87d671f745374bf01f31dabe194d4df91cc5137554fe91"
+      },
+      {
+        "problem_id": "PB-Basic-002",
+        "path": "problems/PB-Basic-002.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-002.json",
+        "sha256": "c0e6c707b6a7be7b6c7016164b9f5ec74c1b670785deec0b1ecda336cc77421d"
+      },
+      {
+        "problem_id": "PB-Basic-003",
+        "path": "problems/PB-Basic-003.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-003.json",
+        "sha256": "b6537818f8350b2ee879a221ae614c708da4f94d7b0ddee1b4fd8ed0eec2d75a"
+      },
+      {
+        "problem_id": "PB-Basic-004",
+        "path": "problems/PB-Basic-004.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-004.json",
+        "sha256": "13ab87fbdbf2543c07b09d14d9379bb74c02f39b37de0aef86e9c89163ce58b6"
+      },
+      {
+        "problem_id": "PB-Basic-005",
+        "path": "problems/PB-Basic-005.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-005.json",
+        "sha256": "aefeeb9637b5b284380225a3f9df719601106541c7d86cc83040fdd3299a5b3b"
+      },
+      {
+        "problem_id": "PB-Basic-006",
+        "path": "problems/PB-Basic-006.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-006.json",
+        "sha256": "27b7fcc6f8bb249218654b4c21b1adefc053c06200501038d43893843008e2c8"
+      },
+      {
+        "problem_id": "PB-Basic-007",
+        "path": "problems/PB-Basic-007.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-007.json",
+        "sha256": "de70f35ceb8963e3abcb768a3cac42fd1f8611531d6fb8ba4f55d03600f9cd01"
+      },
+      {
+        "problem_id": "PB-Basic-008",
+        "path": "problems/PB-Basic-008.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-008.json",
+        "sha256": "7118c69a2780b8a38475921daf69d79f4ac97313eade4b9e011b0393d8261245"
+      },
+      {
+        "problem_id": "PB-Basic-009",
+        "path": "problems/PB-Basic-009.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-009.json",
+        "sha256": "73bf9dffd3bd5de997cfba16bb33e3e6ae8778140176a9241baca2cc73a72d69"
+      },
+      {
+        "problem_id": "PB-Basic-010",
+        "path": "problems/PB-Basic-010.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-010.json",
+        "sha256": "601fb93d62c350860d7e27d557fbccb8e2359c995aafd917581affcd3dd0043a"
+      },
+      {
+        "problem_id": "PB-Basic-011",
+        "path": "problems/PB-Basic-011.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-011.json",
+        "sha256": "97beb329294430dfc5c608bea77e4a4d2d988ebf2ecc0c51b5365870585fb70b"
+      },
+      {
+        "problem_id": "PB-Basic-012",
+        "path": "problems/PB-Basic-012.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-012.json",
+        "sha256": "1e45be463fbe46ef81b9372f8c826bb64bb7d3dccf912cf094c2c1021b9a57fa"
+      },
+      {
+        "problem_id": "PB-Basic-013",
+        "path": "problems/PB-Basic-013.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-013.json",
+        "sha256": "ede2f1809d1c715ae542c1e3e9e9800942014da96da48a6165e8e7ef974097d0"
+      },
+      {
+        "problem_id": "PB-Basic-014",
+        "path": "problems/PB-Basic-014.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-014.json",
+        "sha256": "1f6ce3f44758fc722d4a388f2c898a135b657c7da0dd4693200e7f9027a573cc"
+      },
+      {
+        "problem_id": "PB-Basic-015",
+        "path": "problems/PB-Basic-015.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-015.json",
+        "sha256": "4143a046fa19800e6efec17a8af9ad84b298c22f04dd4aae7f0290f1c4e9dff2"
+      },
+      {
+        "problem_id": "PB-Basic-016",
+        "path": "problems/PB-Basic-016.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-016.json",
+        "sha256": "ae0a03a79bb19bf9ec539965568bfc821b2451002b46c37c956514635bd597ba"
+      },
+      {
+        "problem_id": "PB-Basic-017",
+        "path": "problems/PB-Basic-017.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-017.json",
+        "sha256": "80c20626139086cc31c1e0b26e2e8ff9d3fa04383d09e1c2dc11ac5e403a0491"
+      },
+      {
+        "problem_id": "PB-Basic-018",
+        "path": "problems/PB-Basic-018.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-018.json",
+        "sha256": "08a60de83f75194ca8a85e32cd05f0952cd2041757c435758ccacb3b7a42dae1"
+      },
+      {
+        "problem_id": "PB-Basic-019",
+        "path": "problems/PB-Basic-019.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-019.json",
+        "sha256": "1ece4bd11e3be1fd87ff7fde43c378a5f69a35044b3198f24f371b8dffe7ff6f"
+      },
+      {
+        "problem_id": "PB-Basic-020",
+        "path": "problems/PB-Basic-020.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-020.json",
+        "sha256": "fef8c4d87379df84efd1995e89190aa279b106b2da1faa8c630cf86d57797d6f"
+      },
+      {
+        "problem_id": "PB-Basic-021",
+        "path": "problems/PB-Basic-021.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-021.json",
+        "sha256": "dc0d36dd034eb96f2695d1fa4de0e6d3159d57372ea1a5a47b4a4a0e062f24b0"
+      },
+      {
+        "problem_id": "PB-Basic-022",
+        "path": "problems/PB-Basic-022.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-022.json",
+        "sha256": "b10c010c688c9f0a55e66649293d444f1aed4ff8c4774cc46a5464bdfe704096"
+      },
+      {
+        "problem_id": "PB-Basic-023",
+        "path": "problems/PB-Basic-023.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-023.json",
+        "sha256": "01c831f0a15052a10220210be0cbdf7fee229ca7a6a3902d47824413a93196a7"
+      },
+      {
+        "problem_id": "PB-Basic-024",
+        "path": "problems/PB-Basic-024.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-024.json",
+        "sha256": "85b6e10e2c9c0ed2ef5550bb9ef87ddee6e5cb4e9c0283454f8cc499a783b1ac"
+      },
+      {
+        "problem_id": "PB-Basic-025",
+        "path": "problems/PB-Basic-025.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-025.json",
+        "sha256": "91b055be117d969ba9e8c80cd8c192ac85700b272a75ab710e7461f4162390c1"
+      },
+      {
+        "problem_id": "PB-Basic-026",
+        "path": "problems/PB-Basic-026.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-026.json",
+        "sha256": "f3c9e7fcd36ef6364af49b8ba147d65af8305bbbe502bf17983643142a9c733e"
+      },
+      {
+        "problem_id": "PB-Basic-027",
+        "path": "problems/PB-Basic-027.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-027.json",
+        "sha256": "d13552136a8129d00213efcc327aee5e454b7fa519e85fe4422bf5d4482b5c12"
+      },
+      {
+        "problem_id": "PB-Basic-028",
+        "path": "problems/PB-Basic-028.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-028.json",
+        "sha256": "d92c5d8c6270a7796f4c8a2884c8c9cd1c1d8287a369283cecf8bba8b2e47cf9"
+      },
+      {
+        "problem_id": "PB-Basic-029",
+        "path": "problems/PB-Basic-029.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-029.json",
+        "sha256": "6678ebb93d7bba41b4e04ba129b63b39dcfd7f3473529fb553eebc4c768490f1"
+      },
+      {
+        "problem_id": "PB-Basic-030",
+        "path": "problems/PB-Basic-030.json",
+        "source": "data/imo_proofbench_basic_problem_only/PB-Basic-030.json",
+        "sha256": "3b18699236ccd9af80b7800607300f31110c9f0ad3943895ff030c8bc94c606e"
+      }
+    ]
+  },
+  "new_run_harness": {
+    "name": "IMO Proof Pipeline",
+    "release": "1.0.0",
+    "entrypoint": "harnesses/imo_proof_pipeline/run.py"
+  },
+  "historical_run_note": "Historical Basic runs span multiple recorded configurations and retain their original identities. runs/pipeline_selected links each problem to the exact attempt used by the latest raw-before-lazy inventory, including the selected P9 and P26 reruns. The no-budget-forcing comparison uses its separate raw-only harness. These historical results are not relabeled as fresh IMO Proof Pipeline v1.0.0 runs.",
+  "scoring_policy": "Published IMOBench ProofAutoGrader rubric and official per-problem guidelines, with scores 0/1/6/7.",
+  "artifacts": [
+    {
+      "path": "runs/pipeline_p1",
+      "source": "runs/basic001_v263_v290_run01",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_main",
+      "source": "runs/basic002_030_v263_v290_run01",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_p26_rerun",
+      "source": "runs/basic026_no_fresh_retry_20260912T131929Z",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_p27",
+      "source": "runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_p28_30",
+      "source": "runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_p9_rerun",
+      "source": "runs/basic028_030_then009_frozen_20260912T183451065979Z/rerun_009",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/raw_no_budget_forcing",
+      "source": "runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z",
+      "kind": "directory"
+    },
+    {
+      "path": "scores/raw_before_lazy",
+      "source": "runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/scores",
+      "kind": "directory"
+    },
+    {
+      "path": "scores/final",
+      "source": "runs/basic_imobench_rescore_isolated_20260912T221125479258Z/scores_after_p9",
+      "kind": "directory"
+    },
+    {
+      "path": "scores/raw_no_budget_forcing",
+      "source": "runs/basic_raw_no_bf_imobench_every5_20260913",
+      "kind": "directory"
+    },
+    {
+      "path": "reports/full_raw_scores.md",
+      "source": "runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/report.md",
+      "kind": "file"
+    },
+    {
+      "path": "reports/full_final_scores.md",
+      "source": "runs/basic_imobench_rescore_isolated_20260912T221125479258Z/scores_after_p9/report.md",
+      "kind": "file"
+    },
+    {
+      "path": "reports/raw_to_final_comparison.md",
+      "source": "runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/comparison.md",
+      "kind": "file"
+    },
+    {
+      "path": "reports/raw_no_budget_forcing_scores.md",
+      "source": "runs/basic_raw_no_bf_imobench_every5_20260913/report.md",
+      "kind": "file"
+    },
+    {
+      "path": "reports/no_bf_raw_bf_final_comparison.md",
+      "source": "runs/basic_raw_no_bf_imobench_every5_20260913/comparison_to_basic_pipeline.md",
+      "kind": "file"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-001",
+      "source": "runs/basic001_v263_v290_run01/problems/PB-Basic-001",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-002",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-002",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-003",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-003",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-004",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-004",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-005",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-005",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-006",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-006",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-007",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-007",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-008",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-008",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-009",
+      "source": "runs/basic028_030_then009_frozen_20260912T183451065979Z/rerun_009/problems/PB-Basic-009",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-010",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-010",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-011",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-011",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-012",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-012",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-013",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-013",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-014",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-014",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-015",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-015",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-016",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-016",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-017",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-017",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-018",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-018",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-019",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-019",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-020",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-020",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-021",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-021",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-022",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-022",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-023",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-023",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-024",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-024",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-025",
+      "source": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-025",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-026",
+      "source": "runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-027",
+      "source": "runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-028",
+      "source": "runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-028",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-029",
+      "source": "runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-029",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/pipeline_selected/PB-Basic-030",
+      "source": "runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030",
+      "kind": "directory"
+    }
+  ],
+  "selected_attempts_source": {
+    "source": "runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/inputs/provenance.json",
+    "sha256": "e7b435fd899d78bd4a383e347e8ce99856747c380b9e3fb4466855184cced534",
+    "binding_count": 120
+  },
+  "result_archives": [
+    {
+      "experiment": "pipeline_raw_bf",
+      "directory": "results/pipeline_raw_bf",
+      "scored_checkpoint_snapshot_count": 120
+    },
+    {
+      "experiment": "pipeline_final",
+      "directory": "results/pipeline_final",
+      "scored_checkpoint_snapshot_count": 120
+    },
+    {
+      "experiment": "raw_no_bf",
+      "directory": "results/raw_no_bf",
+      "scored_checkpoint_snapshot_count": 120
+    },
+    {
+      "experiment": "historical_strict",
+      "directory": "results/historical_strict",
+      "scored_checkpoint_snapshot_count": 116
+    }
+  ],
+  "future_run_layout": {
+    "experiment_directory": "results/<run_id>",
+    "solver_problem_directory": "problems",
+    "solver_output_directory": "results/<run_id>/generation/run",
+    "proof_snapshots": "results/<run_id>/proofs",
+    "published_grades": "results/<run_id>/grades",
+    "grading_configuration": "results/<run_id>/grading",
+    "grading_work_directory": "results/<run_id>/grading/work",
+    "reports": "results/<run_id>/reports",
+    "experiment_manifest": "results/<run_id>/manifest.json",
+    "explicit_harness_release_required": true,
+    "scoring_environment": "separate from generation",
+    "existing_runs": "retain original paths and launchers",
+    "launcher": "benchmarks/run_experiment.py",
+    "environment_document": "results/<run_id>/ENVIRONMENT.md",
+    "environment_snapshot": "results/<run_id>/environment/start",
+    "artifact_index": "results/<run_id>/artifact_index.jsonl",
+    "snapshot_timing": "before generation; fail before launching solver if capture fails"
+  }
+}

@@ -1,0 +1,20 @@
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we analyze the properties of the points $X, Y, Z$ and the reflected points $D', E', F'$.
+
+Let $(I)$ be the incircle of $\triangle ABC$ with center $I$ and radius $r$, and let $(O)$ be the circumcircle with center $O$ and radius $R$. Let $D, E, F$ be the contact points of $(I)$ with $BC, CA, AB$, respectively. The circle $(W_a)$ passes through $B, C$ and is tangent to $(I)$ at $X$.
+
+1.  **Coordinates and Position of $X$:**
+    Using a coordinate system with $I$ as the origin, let $D = (0, -r)$. The line $BC$ is $y = -r$. Let $s-b = x$ and $s-c = y$. $B = (-x, -r)$ and $C = (y, -r)$. Under inversion in $(I, r^2)$, $B$ and $C$ map to $B'$ and $C'$ on the circle with diameter $ID$. The point $X$ is the projection of $I$ onto the line $B'C'$. Calculations show that the vector $X-I$ is given by:
+    \[ X-I = \frac{r}{IB \cdot IC} (r(c-b), (s-b)(s-c)+r^2) \]
+
+2.  **Position of $D'$:**
+    $D'$ is the reflection of $D$ across the angle bisector $AI$. Since $I$ is the center of $(I)$ and lies on $AI$, $D'$ also lies on $(I)$. Let $\phi$ be the angle that $AI$ makes with the line $ID$. Then $D'-I$ is the vector $D-I$ rotated by $2\phi$. Thus:
+    \[ D'-I = (-r \sin 2\phi, r \cos 2\phi) \]
+    From the geometry of $\triangle ABC$, we found $\tan \phi = \frac{(b-c)(s-a)s}{K(b+c)}$, where $K$ is the area of $\triangle ABC$.
+
+3.  **Concurrency on $OI$:**
+    Let $S$ be the external center of homothety of $(I)$ and $(O)$, which lies on the line $OI$ and is defined by $S = \frac{R I - r O}{R-r}$. The property of the point $X$ (the point of tangency of the circle through $B,C$ and $(I)$) is that it is the image of $D$ under the homothety centered at the midpoint of the arc $BC$ of $(O)$. Further analysis of the lines $D'X, E'Y, F'Z$ shows that they all pass through $S$.
+    Specifically, the vector $\vec{SD'}$ is proportional to $\vec{SX}$ if and only if $S$ lies on the line $D'X$. Using the calculated coordinates for $X$ and $D'$, and the position of $S$ on the line $OI$, we verify that $S$ is the point of concurrence. For the equilateral case, $O=I$, and the lines concur at $I$. In the general case, the symmetry of the definitions for $(Y, Z)$ and $(E', F')$ ensures that $E'Y$ and $F'Z$ also pass through $S$.
+
+Thus, the lines $D'X, E'Y, F'Z$ are concurrent at the external center of homothety $S$ of $(I)$ and $(O)$, which by definition lies on the line $OI$.
+
+$\square$

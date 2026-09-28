@@ -1,0 +1,47 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+  "proof": "evidence/proofs/22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da.md",
+  "completed_at": "2026-09-17T06:56:37.700192+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The conversion of the first unsigned angle equality into E1 is not justified and contradicts the stated calculation. For ordinary unsigned angles, cot(theta) is (u·v)/|u×v|, not (u·v)/(u×v). Indeed, after choosing det(B,C)>0, the two displayed denominators for ∠KBA and ∠ACL have opposite signs, so the displayed signed cotangents must be negatives, not equal. The submitted text nevertheless says they are equated; that operation does not produce the listed E1.",
+    "summary": "The coordinate setup, circumcenter formula, algebraic target, and final rescaling are meaningful progress, and the displayed E1 may be recoverable by a separate orientation argument. However, the load-bearing passage from the three ordinary angle equalities to E1,E2,E3 uses a false signed-cotangent rule and supplies no branch/sign analysis. Consequently the large algebraic certificate has not been connected to the geometric hypotheses as submitted. The blanket assertion that strict interiority makes every listed guard nonzero is also unsupported and incorrectly described. Under the stipulated harsh policy, this unsupported decisive bridge caps the proof at 3.",
+    "strengths": [
+      "Correctly reduces OM=ON to equality of the squared distances from 2O to B and C.",
+      "Provides explicit coordinates for the circumcenter and an extensive algebraic certificate intended to derive the target polynomial.",
+      "The missing orientation analysis is plausibly repairable with barycentric determinant-sign computations; no wholly different geometric strategy is necessarily required."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Unsigned angles are encoded using signed cross products without absolute values or a proof of the required signs. In the first equality the two stated denominators have opposite signs, so the claimed act of equating the displayed ratios is false and does not yield E1. This is the essential bridge needed before the algebraic certificate can be applied."
+      },
+      {
+        "severity": "substantial",
+        "description": "The proof asserts that strict interiority implies every listed nonzero guard because each is an area determinant of a triangle formed by the named points. This is neither demonstrated nor literally true for several complicated guards (including expressions with coefficients such as 3). Although the later certificate appears to need only a smaller subset of guards, the proof does not reorganize the application accordingly or verify that subset explicitly."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_t10r01_v355_export_20260917T063618Z/grades/imo2026_p2/t10_r01/tool_rewrite/strict/summary.json",
+    "native_record_file_sha256": "653b3305883094bd8906de8a1628171e1be40a752466f1291228354ba6360ad4",
+    "selected_record": "benchmarks/imo2026/results/p2_t10r01_v355_export_20260917T063618Z/grades/imo2026_p2/t10_r01/tool_rewrite/strict/summary.json",
+    "selected_record_file_sha256": "653b3305883094bd8906de8a1628171e1be40a752466f1291228354ba6360ad4",
+    "proof": "benchmarks/imo2026/results/p2_t10r01_v355_export_20260917T063618Z/proofs/imo2026_p2/t10_r01/tool_rewrite.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf"
+}

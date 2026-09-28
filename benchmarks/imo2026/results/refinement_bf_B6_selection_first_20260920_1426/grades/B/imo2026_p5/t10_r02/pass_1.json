@@ -1,0 +1,55 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_d9db8544d041f2db9914e57c",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "df22cb04cd3f04e9f938e57006ee0020958e7a8ee920a5604a700320901d050c",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "fbe4dfbb4bb85287ae1bf11ff812824e40ab5a6d4e113e4bd58c78987fc05bef",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In Step 3, C=sup g is treated as a finite real number before boundedness of g has been established. The proof's own liminf-and-orbit argument readily rules out C=+∞, but this case is not explicitly discharged. This is a minor omission, not a central gap, so no Rules A–F ceiling applies.",
+    "summary": "The classification f(x)=x+c, c≥0, is correct. The functional equation, orbit formula, nonnegativity of g, asymptotic argument forcing all positive defect values to coincide, separation argument excluding mixed values, and converse verification are essentially sound. Only minor quantifier/boundedness details require explicit repair.",
+    "strengths": [
+      "Correctly obtains f(f(y))=2f(y)-y by forcing equality at x=f(y).",
+      "Correctly derives f^n(y)=y+ng(y), invariance of g along orbits, and g≥0.",
+      "The liminf argument provides a valid route to showing every positive value of g equals a common constant.",
+      "The supremum/separation argument excluding coexistence of defects 0 and C is correct.",
+      "The converse follows correctly from AM-GM and RMS-AM."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The finiteness of C=sup g is not explicitly established before C is used as a real constant. If g were unbounded, the preceding estimates would give g(x)→∞, contradicting constancy of g along any positive-defect orbit; adding this observation repairs the issue."
+      },
+      {
+        "severity": "minor",
+        "description": "The claim that one can bracket every x≥y0 between z_n and z_{n+1} was stated for every c in Im(g), but it fails when c=0. The zero case is unnecessary because g≥0 already gives the required liminf bound."
+      },
+      {
+        "severity": "minor",
+        "description": "The assertion 'without loss of generality y0<x0' is not justified by symmetry, but follows immediately by replacing the C-defect point x0 with a sufficiently large forward iterate x0+nC."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:47:52.874406+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_1/p5/proof_d9db8544d041f2db9914e57c"
+}

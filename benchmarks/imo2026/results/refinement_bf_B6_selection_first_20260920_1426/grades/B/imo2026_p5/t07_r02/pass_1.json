@@ -1,0 +1,46 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_53a6dcbebe41763d5cea9785",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "b9fb449d4fc945b1b4ae88147984b3ffa2568821b288d487a20612ee0cf13548",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "587327c2bbfaa6d15d55a523511dc7475771f25969e76c2d914fc26f1eb9ac1d",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Step 3, the assertion that for every n one can choose m∈N with |z_n-w_m|≤D is false: if z_n<w-D, no nonnegative m works. Only sufficiently large n have this property. Since this claim is used to prove uniqueness of the positive value of c, Rule C applies.",
+    "summary": "The classification and overall strategy are correct, and nearly all computations are valid. However, the central orbit-comparison argument contains a false quantified assertion. Replacing “for any n” by “for all sufficiently large n” and choosing m by rounding (z_n-w)/D repairs the proof directly, but the false load-bearing statement caps the score at 5 under Rule C.",
+    "strengths": [
+      "Correctly derives c(f(y))=c(y), the iterate formula f^n(x)=x+nc(x), and c(x)≥0.",
+      "Obtains a valid quadratic continuity estimate for c when one argument lies in Im(f).",
+      "The connectedness argument excluding coexistence of defect levels 0 and C is otherwise sound.",
+      "Correctly verifies every function f(x)=x+C with C≥0."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The close-orbit selection is claimed for every n, which is demonstrably false (for example, for f(t)=t+1, z=2, w=100, n=0). The needed eventual version is true and easy to prove, but it is load-bearing for the proof that all positive defect values coincide."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:49:27.247522+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_1/p5/proof_53a6dcbebe41763d5cea9785"
+}

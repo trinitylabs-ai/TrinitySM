@@ -1,0 +1,9 @@
+{
+  "run_id": "p2_c3_t07r02_real_branches_v349_20260916T232047Z",
+  "started_at": "2026-09-16T23:22:55.950446+00:00",
+  "completed_at": "2026-09-17T00:04:32.058900+00:00",
+  "wall_seconds": 2496.108481694013,
+  "worker_exited": true,
+  "returncode": 0,
+  "excludes_environment_capture_and_grading": true
+}

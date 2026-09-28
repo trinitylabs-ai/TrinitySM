@@ -1,0 +1,40 @@
+{
+  "stage": "fusion",
+  "started_at": "2026-08-21T04:33:27.626447+00:00",
+  "completed_at": "2026-08-21T04:34:09.864024+00:00",
+  "latency_seconds": 42.237597356550395,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8022/v1",
+  "model": "nvidia/Gemma-4-31B-IT-NVFP4",
+  "prompt_sha256": "e248d61b08d7fcf0d964137795283bceff65145b6a79e9cfba6cfac32463e59c",
+  "request_sha256": "727a5f43dc9912ebc94af79b20543d502b7143f5c60f007f78fa302f3fd12cd2",
+  "response_id": "chatcmpl-ba475d2ec9e237ef",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 17562,
+    "total_tokens": 21108,
+    "completion_tokens": 3546,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 5000,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 854774787,
+    "thinking_token_budget": 3000,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 7200
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/cognitive_well_imo2026_p145_v027_local_ensemble_vs_terra_phase1_v2_20260820/p4_s2/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/fusion.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/cognitive_well_imo2026_p145_v027_local_ensemble_vs_terra_phase1_v2_20260820/p4_s2/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/fusion.reasoning.txt"
+}

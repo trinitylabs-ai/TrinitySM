@@ -1,0 +1,111 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+For any positive integer $n$, let $\delta(n)$ be the largest odd divisor of $n$. Prove for any $N>0$ that we have
+ \[
+ \left| \sum_{n=1}^N \frac{\delta(n)}{n}- \frac{2}{3}N \right| <1.
+ \]
+
+**GROUND-TRUTH SOLUTION**
+
+Observe the following: If the greatest power of $2$ that divides $n$ is $2^k$, the greatest odd divisor dividing $n$ is $\frac{n}{2^k}$.
+
+ Let $\sum_{n=1}^N \frac{\delta(n)}{n}$ be $S(N)$.
+
+ Let the greatest power of $2$ smaller or equal to $N$ be $2^k$. Then, $2^k \leq N <2^{k+1}$ holds. Using the observation, we get the following equation:
+ $\sum_{n=1}^{2^k} \frac{\delta(n)}{n} = \sum_{i=0}^{k-1} \frac{2^{k-1-i}}{2^i} + \frac{1}{2^k} = 2^{k-1}(\frac{1-\frac{1}{4^{k}}}{\frac{3}{4}}) + \frac{1}{2^k}$
+
+ Now observe that for $2^k < n <2^{k+1}$, $\frac{\delta(n)}{n} = \frac{\delta(n-2^k)}{n-2^k}$. Therefore, we have that $S(N)= S(N-2^k)+ (\frac{2^{k+1}}{3})(1-\frac{1}{4^{k}}) + \frac{1}{2^k}$
+
+ Using this, we have that $S(N) - \frac{2N}{3} = S(N-2^k) - \frac{2(N-2^k)}{3} + \frac{1}{3\cdot 2^k}$
+
+ Therefore, $|S(N) - \frac{2N}{3}|\leq \sum_{k=0}^\infty \frac{1}{3\cdot 2^k} \leq 1$
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Expressed $\sum \delta(n)/n$ as negative powers of 2's and attempted to rearrange the summation.
+(Almost)
+ 1. Successfully rearranged the summation, and counted $2^{-k}$ correctly.
+
+**PROPOSED SOLUTION**
+
+To prove that for any positive integer $N$, the inequality $\left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1$ holds, where $\delta(n)$ denotes the largest odd divisor of $n$, we proceed as follows.
+
+First, we characterize the term $\frac{\delta(n)}{n}$. For any positive integer $n$, we can uniquely write $n = 2^{v_2(n)} \cdot m$, where $v_2(n)$ is the exponent of the highest power of $2$ dividing $n$, and $m$ is an odd integer. By the definition of $\delta(n)$, we have $\delta(n) = m$. Therefore,
+\[ \frac{\delta(n)}{n} = \frac{m}{2^{v_2(n)} \cdot m} = \frac{1}{2^{v_2(n)}}. \]
+Let $S(N) = \sum_{n=1}^N \frac{\delta(n)}{n} = \sum_{n=1}^N \frac{1}{2^{v_2(n)}}$. We group the terms of this sum according to the value of $v_2(n)$. For a fixed non-negative integer $k$, the number of integers $n \in \{1, 2, \dots, N\}$ such that $v_2(n) = k$ is the number of multiples of $2^k$ minus the number of multiples of $2^{k+1}$ in the range $[1, N]$. This count is given by:
+\[ C_k(N) = \left\lfloor \frac{N}{2^k} \right\rfloor - \left\lfloor \frac{N}{2^{k+1}} \right\rfloor. \]
+Thus, we can rewrite the sum $S(N)$ as:
+\[ S(N) = \sum_{k=0}^\infty \frac{1}{2^k} C_k(N) = \sum_{k=0}^\infty \frac{1}{2^k} \left( \left\lfloor \frac{N}{2^k} \right\rfloor - \left\lfloor \frac{N}{2^{k+1}} \right\rfloor \right). \]
+We expand this series to observe a telescoping structure:
+\[ S(N) = \left( \lfloor N \rfloor - \lfloor N/2 \rfloor \right) + \frac{1}{2} \left( \lfloor N/2 \rfloor - \lfloor N/4 \rfloor \right) + \frac{1}{4} \left( \lfloor N/4 \rfloor - \lfloor N/8 \rfloor \right) + \dots \]
+Regrouping the terms by the common floor values $\lfloor N/2^k \rfloor$, we obtain:
+\[ S(N) = \lfloor N \rfloor - \left( 1 - \frac{1}{2} \right) \lfloor N/2 \rfloor - \left( \frac{1}{2} - \frac{1}{4} \right) \lfloor N/4 \rfloor - \left( \frac{1}{4} - \frac{1}{8} \right) \lfloor N/8 \rfloor - \dots \]
+\[ S(N) = N - \sum_{k=1}^\infty \frac{1}{2^k} \lfloor N/2^k \rfloor. \]
+Next, we use the identity $\lfloor x \rfloor = x - \{x\}$, where $\{x\}$ denotes the fractional part of $x$:
+\[ S(N) = N - \sum_{k=1}^\infty \frac{1}{2^k} \left( \frac{N}{2^k} - \left\{ \frac{N}{2^k} \right\} \right) = N - N \sum_{k=1}^\infty \frac{1}{4^k} + \sum_{k=1}^\infty \frac{1}{2^k} \left\{ \frac{N}{2^k} \right\}. \]
+The sum $\sum_{k=1}^\infty \frac{1}{4^k}$ is a geometric series with first term $1/4$ and common ratio $1/4$, which evaluates to:
+\[ \sum_{k=1}^\infty \frac{1}{4^k} = \frac{1/4}{1 - 1/4} = \frac{1/4}{3/4} = \frac{1}{3}. \]
+Substituting this value back into the expression for $S(N)$, we find:
+\[ S(N) = N - \frac{1}{3}N + \sum_{k=1}^\infty \frac{1}{2^k} \left\{ \frac{N}{2^k} \right\} = \frac{2}{3}N + \sum_{k=1}^\infty \frac{1}{2^k} \left\{ \frac{N}{2^k} \right\}. \]
+The difference between the sum and $\frac{2}{3}N$ is therefore:
+\[ S(N) - \frac{2}{3}N = \sum_{k=1}^\infty \frac{1}{2^k} \left\{ \frac{N}{2^k} \right\}. \]
+Since $0 \le \{x\} < 1$ for all $x$, the sum is bounded as follows:
+\[ 0 \le \sum_{k=1}^\infty \frac{1}{2^k} \left\{ \frac{N}{2^k} \right\} < \sum_{k=1}^\infty \frac{1}{2^k} = 1. \]
+Consequently, we have $0 \le S(N) - \frac{2}{3}N < 1$, which implies that
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1. \]
+The proof is complete. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

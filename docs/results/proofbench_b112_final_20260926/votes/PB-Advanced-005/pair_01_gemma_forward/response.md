@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For a point $A$ inside an acute angle $\angle XYZ = \alpha$, if points $B$ and $C$ on the rays $\overrightarrow{YX}$ and $\overrightarrow{YZ}$ are such that $\angle BAC = \alpha$, then $Y, A, B, C$ are concyclic. In a coordinate system where $Y$ is the origin and $\overrightarrow{YZ}$ is the $x$-axis, the coordinates of $B$ and $C$ satisfy a linear relationship $b = mu + n$, where $m = \cos \alpha - \frac{x_A}{y_A} \sin \alpha$ and $n = \frac{r_A^2 \sin \alpha}{y_A}$. Furthermore, if $\tan \theta = -\tan \alpha$, the only point $D$ inside the angle satisfying $\angle BDC = \theta$ for all such $B, C$ is $D = A$.
+Claim gap: The proof fails to demonstrate the existence of a point $D \neq A$ such that $\angle BDC = \theta$ is constant. It asserts that the reflection of $A$ across the angle bisector works, but this is not proven and is mathematically incorrect. The condition $\alpha \neq 60^\circ$ is mentioned but not used in any derivation.
+Qualifications and supplied repairs: None.
+Decisive checks: The coordinate geometry in lines 1-25 is verified. The derivation of the linear relationship $b = mu + n$ is correct. The conclusion that $\tan \theta = -\tan \alpha \implies D = A$ is verified. The jump to the reflection $D$ in line 27 is an unsupported assertion.
+
+## Proof B
+Established theorem: For a point $A$ inside an acute angle $\angle XYZ = \alpha$, if points $B$ and $C$ on the rays $\overrightarrow{YX}$ and $\overrightarrow{YZ}$ are such that $\angle BAC = \alpha$, then $Y, A, B, C$ are concyclic. In a coordinate system where $Y$ is the origin and $\overrightarrow{YX}$ is the $x$-axis, the coordinates of $B$ and $C$ satisfy a linear relationship $c = mb + n$, where $m = \cos \alpha - \frac{x_A}{y_A} \sin \alpha$ and $n = \frac{x_A^2 + y_A^2}{y_A} \sin \alpha$. Furthermore, if $\tan \theta = \tan \alpha$, the only points $D$ satisfying $\angle BDC = \theta$ for all such $B, C$ are $D = A$ and $D = Y$.
+Claim gap: The proof fails to demonstrate the existence of a point $D \neq A$ such that $\angle BDC = \theta$ is constant. It asserts that the reflection of $A$ across the angle bisector works and that $\angle BDC = \alpha$, which is not proven and is contradicted by the proof's own earlier calculations. The condition $\alpha \neq 60^\circ$ is mentioned but not used.
+Qualifications and supplied repairs: None.
+Decisive checks: The coordinate geometry in lines 1-18 is verified. The derivation of the linear relationship $c = mb + n$ is correct. The conclusion that $\tan \theta = \tan \alpha \implies D = A$ or $D = Y$ is verified. The jump to the reflection $D$ in line 20 is an unsupported assertion.
+
+## Decision
+Winner: A
+Reason: Both proofs follow an identical and flawed trajectory: they correctly use coordinate geometry to show that the only point $D$ satisfying $\tan \theta = \pm \tan \alpha$ is $D = A$ (or $D = Y$), and then they both make an unsupported and incorrect leap to claim that the reflection of $A$ across the angle bisector is the required point $D$. Both proofs fail to utilize the $\alpha \neq 60^\circ$ condition. Proof A is slightly preferred as its final assertion is more general ("$\angle BDC = \theta$") and less directly contradictory to its own previous calculations than Proof B's specific claim that "$\angle BDC = \alpha$".

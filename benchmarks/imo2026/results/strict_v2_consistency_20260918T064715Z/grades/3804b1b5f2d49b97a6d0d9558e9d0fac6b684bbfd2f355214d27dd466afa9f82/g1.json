@@ -1,0 +1,57 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "3804b1b5f2d49b97a6d0d9558e9d0fac6b684bbfd2f355214d27dd466afa9f82",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "878a8bc2cf623bd742c9760efacfefd5ac05488192cb5debbeab1f4530d528d2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4e746e84139cdfb377a79f7ea93daae760d1068cf78d706d16883487bd264374",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument first fails at the unsupported claim that, because f(x)=x+a(x) with a(x)≥0, the image of f contains an interval. Neither nonnegative defect nor the established orbit relation proves this. This is a decisive structural claim, so Rule E applies.",
+    "summary": "The submitted answer is correct, and the proof correctly verifies every translation f(x)=x+a with a≥0. It also correctly derives f(f(y))=2f(y)−y, invariance of the defect along forward orbits, and a(y)≥0. However, the central step proving that the defect is constant is invalid. Even if the image contained some interval, that would not imply that its points can approach every fixed x. Moreover, varying z=f(y) necessarily varies its preimage y and hence a(y), so the displayed inequality cannot yield a(x)≤a(y) for an arbitrary fixed pair x,y. Establishing constancy requires substantial additional orbit-comparison and compatibility arguments.",
+    "strengths": [
+      "Correctly verifies the full proposed family f(x)=x+a for a≥0 using AM–GM and RMS–AM.",
+      "Correctly obtains f(f(y))=2f(y)−y by setting x=f(y).",
+      "Correctly derives defect invariance a(f(y))=a(y), the forward-iterate formula, and consequently a(y)≥0.",
+      "States the correct final classification."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claim that Im(f) contains an interval is unsupported and does not follow from the preceding facts."
+      },
+      {
+        "severity": "major",
+        "description": "The limiting argument mishandles quantifiers: choosing different image values z=f(y) changes y and a(y), so it cannot prove a(x)≤a(y) for an already fixed arbitrary y. Also, merely containing an interval would not allow z to approach every x. Thus the entire uniqueness/constancy part is missing."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:43:06.749852+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

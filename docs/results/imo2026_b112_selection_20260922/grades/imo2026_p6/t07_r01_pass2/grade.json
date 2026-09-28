@@ -1,0 +1,62 @@
+{
+  "problem_id": "imo2026_p6",
+  "submission_id": "proof_0f4505ae10b1252f73a2457bc1052ff7",
+  "pass_index": 2,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Rule E applies in the finiteness argument: the opening formula requires inclusion-minimal hitting sets, but stabilization of h_n controls only minimum-cardinality hitting sets. An inclusion-minimal hitting set can have more than |Q_1| elements, so S\\{p} need not belong to the asserted finite family H_N. Consequently, finiteness of P_global is not established.",
+    "summary": "The hitting-set reformulation and uniform gap bound are valid, but the central finiteness claim is unsupported. Even conditionally, the finite-state description incorrectly treats every Q_i as a subset of P_global. Finally, the passage from eventual to pure translational periodicity uses an unjustified multiplier and an invalid downward induction. The correct conclusion is therefore not proved.",
+    "strengths": [
+      "Correctly translates the gcd requirement into a hitting-set condition, provided “minimal” means inclusion-minimal.",
+      "Correctly observes that Q_1 hits every Q_i and obtains the uniform bound a_{n+1}-a_n <= rad(a_1).",
+      "Once a genuinely finite relevant prime universe is available, the proposed finite-state idea is a plausible route to eventual translational periodicity."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The proof conflates inclusion-minimal and minimum-cardinality hitting sets. If “minimal” means minimum-cardinality, the initial formula for a_{n+1} is unjustified; if it means inclusion-minimal, the bound |S| <= |Q_1| used in the finiteness argument is false in general."
+      },
+      {
+        "severity": "substantial",
+        "description": "Finiteness of primes appearing in minimal hitting sets would not imply that each full support Q_i is contained in P_global; sequence terms may have additional prime factors. One would need to replace Q_i by appropriate traces and prove that these traces determine the transition."
+      },
+      {
+        "severity": "major",
+        "description": "The claimed choice of m with mL' divisible by rad(a_1...a_{N+mT'}) is neither proved nor generally available. Moreover, the stated downward-induction hypothesis gives the relation only for indices at least n+1, yet the proof immediately uses it at n-1. Thus the extension from an eventual period to all n fails."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "proof_sha256": "0f4505ae10b1252f73a2457bc1052ff7db3e637e174d62a9a8b707a714c1ebdc",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "evidence_sha256": "0e992250cedc3125b6e7cb76cc22a18bff77aa6da607f8f61fc8db36f499d522",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p6/t07_r01_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "7cf6a89107ec122afa1eb5dd7b84a93c3f1e31e427677a9ca8d95f242d5013ad",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "621f852bd6207861021034089e3f13f22831f51921da63b9e9483558511df71c",
+    "raw_response_1.txt": "c2356a720106d068053669e5d3cf845f47b4e6a05149e75f28c5abd9efc7e7d0",
+    "summary.json": "edb5b150690fd973fd2b20a37c94764bb50ff37ecaa33f191b15f841913e4c47"
+  }
+}

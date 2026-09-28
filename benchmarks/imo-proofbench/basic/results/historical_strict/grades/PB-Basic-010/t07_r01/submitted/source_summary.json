@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T04:55:48.736085+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 10,
+  "problem_id": "PB-Basic-010",
+  "case_id": "PB-Basic-010.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic010_strict_inputs_20260911/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic010_strict_inputs_20260911/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic010_strict_inputs_20260911/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "9ac10fa2ea98df216ace308927799d6e7e44a442d4f237337db70bba60c18424",
+  "reference_sha256": "66bdc28500613c733898e74da7e52371bd2c9774f2a086ae1cf992b72dde0f1e",
+  "proof_sha256": "4ce4bebba572c1664cbf9e3a192385462e5599ac2f3b6f9c11189bb094e95618",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic010_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "318ea3c842843cb2a91605019d614b4439ea1cdcdecf19cc0bc38fe1b17a5ec4",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly rewrites the difference as \\(L-R=1011(\\Sigma_B-\\Sigma_A)\\). Since \\(\\Sigma_A+\\Sigma_B=1011\\cdot2023\\) is odd, the two subset sums cannot be equal, so \\(L-R\\ne0\\). This is a complete and valid alternative to the reference approach.",
+    "strengths": [
+      "Correctly combines the two pair sums over the partition \\(A\\times B\\).",
+      "Derives the decisive identity \\(L-R=|A|\\Sigma_B-|B|\\Sigma_A\\) explicitly.",
+      "Uses a complete parity argument to rule out \\(\\Sigma_A=\\Sigma_B\\)."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

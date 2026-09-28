@@ -1,0 +1,55 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "447144fdaea05eb31a2ae9c107507895c0f47db24c432698dd692c43bcb2eead",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "1b57fde04cebe0a4366ef51db02031168ea75aa6cadf0c2c2352a26da0502276",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "fe8ea8b31555cf92f9ade582847d11428f27082a7a7a59b2278ecac15146a872",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Case 3, the assertion that obtaining a 90° angle allows Mulan to force every smaller θ is unsupported and false. The claims that she can force 2θ merely because 2θ≤180° and can manipulate the maximum angle to a desired value do not follow. Since this produces an incorrect classification, Rule A applies.",
+    "summary": "The claimed answer 0°<θ≤90° is false; the correct values are θ=180°/n for integers n≥2. For example, θ=70° is included by the submission but is not winning. Starting from (35°,35°,110°), none of the angles is a positive integer multiple of 70°. Because 180° is not such a multiple, after every cut at least one child again has no angle that is a positive multiple of 70°, so Shan-Yu can retain that child forever and avoid 70°. The correct arguments for θ>90° and θ=90° constitute meaningful partial progress, meriting the Rule A ceiling of 2.",
+    "strengths": [
+      "The invariant argument for θ>90° is essentially correct: from a triangle whose angles are all below θ, both children cannot simultaneously contain an angle at least θ.",
+      "The one-move construction for θ=90° is correct after labeling two acute angles as the base angles."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final classification includes invalid values such as θ=70°, so it is demonstrably incorrect and subject to Rule A."
+      },
+      {
+        "severity": "major",
+        "description": "The entire θ<90° sufficiency argument rests on false or unsupported central assertions about forcing 2θ or otherwise obtaining an arbitrary prescribed angle."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:34:09.314723+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00025",
+  "native_rejection_count": 0
+}

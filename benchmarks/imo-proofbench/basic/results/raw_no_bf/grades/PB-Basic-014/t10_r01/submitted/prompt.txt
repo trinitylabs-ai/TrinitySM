@@ -1,0 +1,107 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In Shoreline Amphitheatre, 2024 Googlers each hold up to five flags of various colors. Any group of three Googlers will always have at least two people holding flags of the same color. Prove that one specific flag color is held by at least 200 Googlers.
+
+**GROUND-TRUTH SOLUTION**
+
+Take any Googler. He holds at most 5 flags. If everyone holds at least one of those flags but not more than 199 people speak have each flag, then there are at most 1 + 5·198 = 991 Googlers. But there are 2024 Googlers, so we must be able to find someone who holds none of the 5 flags. He too has at most 5 flags, giving a total of 10 between the two Googlers selected. Now we are told that every other Googler holds at least one of these 10 flags. So if no more than 199 Googlers holds each flag, then there are at most 2 + 10·198 = 1982 Googlers. But there are 2024 Googlers, so one of the 10 flags must be held by 200 or more people.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Established that there is a pair of people not sharing a flag of the same color.
+ (Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that one specific flag color is held by at least 200 Googlers, we can model the problem using the language of hypergraphs.
+
+**1. Definitions and Modeling**
+Let $N = 2024$ be the number of Googlers. For each Googler $i \in \{1, 2, \dots, N\}$, let $F_i$ be the set of colors of the flags they are holding. We are given that for each $i$, $|F_i| \le 5$.
+The problem states that for any group of three Googlers $\{i, j, k\}$, at least two of them must hold flags of the same color. In terms of our sets, this means:
+$$(F_i \cap F_j \neq \emptyset) \lor (F_i \cap F_k \neq \emptyset) \lor (F_j \cap F_k \neq \emptyset)$$
+This condition implies that it is impossible to find three sets $F_i, F_j, F_k$ that are pairwise disjoint.
+
+**2. Hypergraph Matching and Hitting Sets**
+In hypergraph theory, a **matching** is a collection of pairwise disjoint edges (sets). The **matching number** $\nu(\mathcal{F})$ is the size of the largest matching in the collection $\mathcal{F} = \{F_1, \dots, F_N\}$.
+The given condition tells us that there is no matching of size 3. Therefore, $\nu(\mathcal{F}) \le 2$.
+
+A **hitting set** (or transversal) is a set of elements that intersects every edge in the hypergraph. The **transversal number** $\tau(\mathcal{F})$ is the size of the smallest hitting set.
+A fundamental property of hypergraphs is that for any collection $\mathcal{F}$ where each set has at most $r$ elements, the transversal number is bounded by the matching number:
+$$\tau(\mathcal{F}) \le r \cdot \nu(\mathcal{F})$$
+*Proof of this property:* Let $M = \{S_1, \dots, S_\nu\}$ be a maximal matching in $\mathcal{F}$. Let $U$ be the union of all elements in these sets: $U = \bigcup_{j=1}^\nu S_j$. If there were a set $S \in \mathcal{F}$ such that $S \cap U = \emptyset$, then $S$ would be disjoint from every set in $M$, allowing us to add $S$ to $M$ and create a larger matching. This contradicts the maximality of $M$. Thus, $U$ is a hitting set. Since each set in $M$ has at most $r$ elements, $|U| \le r \cdot \nu$.
+
+**3. Application to the Problem**
+In our case, $r = 5$ (the maximum number of flags per person) and $\nu(\mathcal{F}) \le 2$. 
+First, we consider the possibility of empty sets. If $F_i = \emptyset$, the Googler holds no flags. If two Googlers $i, j$ held no flags, then for any third Googler $k$, we would have $F_i \cap F_j = \emptyset, F_i \cap F_k = \emptyset$, and $F_j \cap F_k = \emptyset$, which violates the problem condition. Thus, at most one Googler can hold no flags.
+
+Let $\mathcal{F}^*$ be the collection of non-empty sets $F_i$. Then $|\mathcal{F}^*| \ge N - 1 = 2023$.
+Using the property $\tau \le r\nu$, there exists a hitting set $U$ for $\mathcal{F}^*$ such that:
+$$|U| \le 5 \cdot 2 = 10$$
+Every Googler in $\mathcal{F}^*$ holds at least one flag color from the set $U$.
+
+**4. Pigeonhole Principle**
+Let $x_c$ be the number of Googlers who hold a flag of color $c$. Summing the frequencies of the colors in $U$ across all Googlers in $\mathcal{F}^*$, we have:
+$$\sum_{c \in U} x_c = \sum_{F \in \mathcal{F}^*} |F \cap U| \ge \sum_{F \in \mathcal{F}^*} 1 = |\mathcal{F}^*| \ge 2023$$
+By the Pigeonhole Principle, there must exist at least one color $c \in U$ such that:
+$$x_c \ge \frac{2023}{|U|} \ge \frac{2023}{10} = 202.3$$
+Since $x_c$ must be an integer, $x_c \ge 203$.
+
+Thus, there exists at least one flag color held by at least 203 Googlers, which is greater than or equal to 200.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

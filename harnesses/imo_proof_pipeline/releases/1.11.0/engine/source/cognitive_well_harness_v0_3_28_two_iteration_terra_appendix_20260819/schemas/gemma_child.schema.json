@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["obligation_id", "parent_claim_id", "statement", "exact_negation", "dependency_ids", "rationale"],
+  "properties": {
+    "obligation_id": {"type": "string", "minLength": 1},
+    "parent_claim_id": {"type": "string", "minLength": 1},
+    "statement": {"type": "string", "minLength": 1},
+    "exact_negation": {"type": "string", "minLength": 1},
+    "dependency_ids": {"type": "array", "items": {"type": "string"}},
+    "rationale": {"type": "string", "minLength": 1}
+  }
+}

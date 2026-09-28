@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7c79c17c4bdf24c71c115d082b86063a7d3baf22104fbb0e3ff2c6e6f3344fe8",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "ff8b82a5cde2aaca8b9c698ea041bdeb19deefb6bda7c9533d427cd40e53da98",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "d279cb719669dd48438528057526e276375edb2e768027ca790f0d2be60a9457",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument in Section 4 is unsupported, invoking Rule E. Since Mulan may choose the cut parameter continuously, newly created angles are not confined to the asserted countable family \\(\\phi+m\\theta+k180^\\circ\\). Merely choosing an initial triangle outside a countable set provides no strategy ensuring that Shan-Yu can keep avoiding \\(\\theta\\) after every future cut.",
+    "summary": "The final classification is correct, and the peeling construction gives substantial progress toward sufficiency. However, the entire only-if direction depends on an invalid countability assertion and supplies neither the required invariant nor an adaptive safe-child strategy for Shan-Yu. Establishing necessity requires a genuinely new central argument, so the proof is capped at 3 by Rule E.",
+    "strengths": [
+      "Correctly identifies the answer \\(\\theta=180^\\circ/n\\) for integers \\(n\\ge2\\).",
+      "The angle-peeling move from \\(m\\theta\\) to \\((m-1)\\theta\\) is essentially correct.",
+      "Move B is a viable basis for sufficiency once its ordering and legality conditions are supplied."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed restriction of all creatable angles to a countable affine family is undefined or false: a cut can introduce an arbitrary real angle. Consequently, the countability argument does not prove that any starting triangle is unwinnable."
+      },
+      {
+        "severity": "major",
+        "description": "No invariant is proved showing that for every Mulan cut Shan-Yu has a child that remains safe. This is the decisive missing necessity argument."
+      },
+      {
+        "severity": "minor",
+        "description": "For \\(\\theta<60^\\circ\\), the statement that repeated Move A creates an angle below \\(\\theta\\) is not explained, though it is readily repaired by repeatedly subtracting \\(\\theta\\) from an angle initially exceeding \\(\\theta\\)."
+      },
+      {
+        "severity": "minor",
+        "description": "Move B requires not only \\(\\gamma<\\theta\\) but also a suitable ordering ensuring \\(\\alpha+\\gamma>\\theta\\); the proof does not specify choosing \\(\\alpha\\) as the larger remaining angle."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:41:25.701434+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

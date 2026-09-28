@@ -1,0 +1,19 @@
+{
+  "schema": "imo-experiment-v1",
+  "run_id": "basic009_t07_r01_r1c3_v352_20260917T033155Z",
+  "benchmark": "imo-proofbench/basic",
+  "created_at": "2026-09-17T03:33:48.027661+00:00",
+  "harness_release": "1.7.0",
+  "launcher_sha256": "6fec07584e559e0d4e6e2df699a2de070303d7f78b4c3ad50c2547ac7dcc3c52",
+  "state": "failed_or_interrupted",
+  "generation_output": "generation/run",
+  "grading_output": "grading/work",
+  "tool_harness": {
+    "version": "0.3.352",
+    "release_sha256": "3bd83e61cf66bdc7a45b18907d07ad910e3100cb93b8fcb3ca1a31ec13182391",
+    "proof_file": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/pipeline_final/proofs/PB-Basic-009/t07_r01/submitted.md",
+    "proof_file_sha256": "9fe853ab7e59d304818d60d76deac4e2a603f70a843db0bfd6e1bd49070199a8",
+    "detection_from": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v350_20260917T031532Z/generation/run"
+  },
+  "snapshot_sha256": "600883b4cb179edef596bffce209254f8bea83bb1d9af253f0c3328e1b53989a"
+}

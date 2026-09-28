@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "cfd8bae48315349241d0e51a9d818410fcc02492f82476c0e326be8fe4156eeb",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "37d06d955b705fa899705a95dbe900d1d9509560f7d043e418a5b56c89d4b6a4",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "e59edfde3ef22fe6c94dce6ee05299f039e45a5279ef0f07b0bfbce122cb9204",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Section 3, the argument jumps from the valid cases k=2,3 to all integers k≥2 without giving a strategy or induction. The claims about successively forcing 2θ,4θ,… and using “complementary traps” do not establish that both possible retained triangles are winning. This is an unsupported central inference under Rule E, so the score is capped at 3.",
+    "summary": "The final classification is correct, and the cut parametrization and the strategies for θ=90° and θ=60° are essentially valid. However, neither general direction is proved: sufficiency for arbitrary k is only asserted through an undefined recursion, while necessity offers no invariant or rigorous Shan-Yu strategy. Substantial new arguments are needed for both directions.",
+    "strengths": [
+      "States the correct answer θ=180°/k for integers k≥2.",
+      "Correctly describes the angle triples produced by a cevian cut.",
+      "Gives an essentially correct one-move strategy for θ=90°.",
+      "Gives an essentially correct two-stage strategy for θ=60°, with the necessary choice of labeling left implicit."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "No valid strategy is supplied for general θ=180°/k. The doubling/complement discussion neither specifies legal cuts for arbitrary current triangles nor proves recursively that both children are winning."
+      },
+      {
+        "severity": "major",
+        "description": "The necessity direction is merely asserted: “cycling,” avoiding attempted values, and the absence of traps are not defined or proved. A load-bearing invariant showing that Shan-Yu can always retain a safe child is missing."
+      },
+      {
+        "severity": "substantial",
+        "description": "The claim that Mulan can force a sequence of angles converging to θ is unsupported and, even if true, would not imply victory in finitely many steps with an angle exactly equal to θ."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:27:58.415377+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00016",
+  "native_rejection_count": 0
+}

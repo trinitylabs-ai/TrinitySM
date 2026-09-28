@@ -1,0 +1,44 @@
+Let $k = 2024$. We seek all polynomials $P(x) \in \mathbb{Z}[x]$ such that for every $s \in S = \{n^k : n \in \mathbb{Z}_{\ge 0}\}$, the equation $P(x) = s$ has an integer solution $x$.
+
+**1. Analysis of Degree and Growth**
+Let $d$ be the degree of $P(x)$. If $P(x)$ is a constant $c$, then $c = n^k$ for all $n \in \mathbb{Z}_{\ge 0}$, which is impossible. Thus $d \ge 1$.
+For each $n \in \mathbb{N}$, let $x_n$ be an integer such that $P(x_n) = n^k$. As $n \to \infty$, we must have $|x_n| \to \infty$.
+Let $P(x) = a_d x^d + a_{d-1} x^{d-1} + \dots + a_0$. For large $x$, the equation $P(x) = y$ has real solutions $x$ that satisfy the asymptotic expansion:
+$x = \sigma (y/a_d)^{1/d} - \frac{a_{d-1}}{d a_d} + O(y^{-1/d})$
+where $\sigma \in \{1, -1\}$. For $y = n^k$, we have:
+$x_n = \sigma_n (n^k/a_d)^{1/d} - \frac{a_{d-1}}{d a_d} + O(n^{-k/d})$
+where $\sigma_n$ may depend on $n$. To eliminate the dependence on the sign $\sigma_n$, we define the sequence $z_n = x_n + \frac{a_{d-1}}{d a_d}$. Then $z_n = \sigma_n (n^k/a_d)^{1/d} + O(n^{-k/d})$.
+Squaring this, we obtain:
+$z_n^2 = (n^k/a_d)^{2/d} + 2 \sigma_n (n^k/a_d)^{1/d} O(n^{-k/d}) + O(n^{-2k/d}) = (n^k/a_d)^{2/d} + O(1)$.
+Now, define the sequence $w_n = (d a_d z_n)^2 = (d a_d x_n + a_{d-1})^2$. Since $a_d, a_{d-1}, x_n$ are integers, $w_n$ is a sequence of integers. Its asymptotic behavior is:
+$w_n = (d a_d)^2 (n^k/a_d)^{2/d} + O(1) = d^2 a_d^{2 - 2/d} n^{2k/d} + O(1)$.
+
+**2. Finite Difference Argument**
+Let $r = 2k/d$. For any integer $m > r$, the $m$-th order differences of $n^r$ and the constant term $O(1)$ both tend to zero as $n \to \infty$. Thus, $\Delta^m w_n \to 0$. Since $w_n$ are integers, $\Delta^m w_n$ must be eventually zero.
+A sequence whose $m$-th order differences are eventually zero is eventually a polynomial. Thus, there exists a polynomial $R(y) \in \mathbb{Q}[y]$ such that $w_n = R(n)$ for all $n > N$.
+The degree of $R$ must be $r = 2k/d$, which implies $2k/d$ is an integer. Furthermore, $w_n$ is a perfect square for all $n > N$ by construction. A polynomial in $\mathbb{Q}[y]$ that takes square values for all sufficiently large integers must be the square of a polynomial in $\mathbb{Q}[y]$. Thus, $R(y) = Q(y)^2$ for some $Q(y) \in \mathbb{Q}[y]$.
+
+**3. Determining the Form of $P(x)$**
+From $(d a_d z_n)^2 = Q(n)^2$, we have $d a_d z_n = \sigma_n Q(n)$ for $\sigma_n \in \{1, -1\}$.
+$d a_d x_n + a_{d-1} = \sigma_n Q(n) \implies x_n = \frac{\sigma_n Q(n) - a_{d-1}}{d a_d}$.
+Since $P(x_n) = n^k$ for all $n > N$, the identity $P(\frac{\sigma_n Q(n) - a_{d-1}}{d a_d}) = n^k$ holds.
+If $\sigma_n$ is eventually constant, we have a polynomial identity $P(L(y)) = y^k$ for $L(y) = \frac{\pm Q(y) - a_{d-1}}{d a_d}$.
+If $\sigma_n$ is not eventually constant, we can partition $n > N$ into two infinite sets $N_+$ and $N_-$. The identity $P(L(y)) = y^k$ must hold for both $L_+(y) = \frac{Q(y) - a_{d-1}}{d a_d}$ and $L_-(y) = \frac{-Q(y) - a_{d-1}}{d a_d}$. In either case, there exists $L(y) \in \mathbb{Q}[y]$ such that $P(L(y)) = y^k$.
+Let $m = \deg L$. Then $dm = k$. Let $L(y) = b_m y^m + b_{m-1} y^{m-1} + \dots + b_0$.
+$P(L(y)) = a_d (b_m y^m + b_{m-1} y^{m-1} + \dots)^d + a_{d-1} (b_m y^m + \dots)^{d-1} + \dots = y^k$.
+Comparing coefficients of $y^{dm}$, $y^{dm-1}$, ..., $y^{m+1}$, we find $a_d b_m^d = 1$ and $b_{m-1} = b_{m-2} = \dots = b_1 = 0$.
+Thus $L(y) = b_m y^m + b_0$. Substituting this back, $P(b_m y^m + b_0) = y^k$.
+Let $z = b_m y^m + b_0$, then $y^k = ((z-b_0)/b_m)^{k/m} = (z-b_0)^d / b_m^d$.
+Since $a_d = 1/b_m^d$, we have $P(z) = a_d (z-b_0)^d$.
+
+**4. Final Classification**
+Since $P(z) \in \mathbb{Z}[z]$, the leading coefficient $a_d$ must be an integer.
+For $n=0 \in S$, $P(x) = 0$ must have an integer solution $x_0$, so $a_d (x_0 - b_0)^d = 0 \implies b_0 = x_0 \in \mathbb{Z}$.
+For $n=1 \in S$, $P(x) = 1$ must have an integer solution $x_1$, so $a_d (x_1 - b_0)^d = 1$.
+This implies $a_d$ must be a divisor of 1 in $\mathbb{Z}$, so $a_d = \pm 1$.
+- If $a_d = 1$, $P(x) = (x-b_0)^d$. This is a solution for any $d|k$ and $b_0 \in \mathbb{Z}$, as $P(x) = n^k \implies x-b_0 = \pm n^{k/d}$ (if $d$ even) or $x-b_0 = n^{k/d}$ (if $d$ odd).
+- If $a_d = -1$, $P(x) = -(x-b_0)^d$.
+  - If $d$ is even, $P(x) \le 0$ for all $x$, so $P(x) = n^k$ has no solution for $n \ge 1$.
+  - If $d$ is odd, $P(x) = n^k \implies (x-b_0)^d = -n^k \implies x-b_0 = -n^{k/d}$, which always has an integer solution.
+
+Letting $b = -b_0$, the polynomials are $P(x) = (x+b)^d$ for $d|2024, b \in \mathbb{Z}$, and $P(x) = -(x+b)^d$ for odd $d|2024, b \in \mathbb{Z}$.

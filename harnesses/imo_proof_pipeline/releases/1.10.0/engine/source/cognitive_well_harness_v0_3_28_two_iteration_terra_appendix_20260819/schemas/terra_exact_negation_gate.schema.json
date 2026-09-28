@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "exact_negation_valid",
+    "first_issue",
+    "external_information_used"
+  ],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "exact_negation_valid": {"type": "boolean"},
+    "first_issue": {"type": ["string", "null"]},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

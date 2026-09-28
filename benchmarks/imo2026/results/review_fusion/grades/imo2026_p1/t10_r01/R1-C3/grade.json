@@ -1,0 +1,39 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T10:54:22.547775+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 1,
+  "problem_id": "imo2026_p1",
+  "case_id": "imo2026_p1.explicit.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None.",
+    "summary": "The submission gives a complete and correct proof. The lexicographic monovariant consisting of the valuation-square sum and the number of entries greater than 1 proves finite termination, while the primewise gcd of all valuation coordinates is invariant and uniquely reconstructs the terminal integer.",
+    "strengths": [
+      "Correctly computes the valuation transformation as (min(e,f), |e-f|).",
+      "Shows that the square-sum strictly decreases whenever the selected integers have a nontrivial gcd, while the count of entries greater than 1 decreases in the coprime case.",
+      "Establishes that at least one entry greater than 1 is always retained, so a terminal board has exactly one such entry.",
+      "Correctly proves invariance of the gcd of the valuation coordinates and uses it to give an explicit choice-independent formula for M."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

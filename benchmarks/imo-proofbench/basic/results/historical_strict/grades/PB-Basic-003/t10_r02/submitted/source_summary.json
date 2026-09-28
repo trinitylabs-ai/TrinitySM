@@ -1,0 +1,52 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T14:34:05.229172+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 3,
+  "problem_id": "PB-Basic-003",
+  "case_id": "PB-Basic-003.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/problems/PB-Basic-003.json",
+  "reference_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/references/PB-Basic-003.md",
+  "proof_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/proofs/PB-Basic-003/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "16462e4803bedfc97a953b1a9c8f6f9e16ec677093b9e8d65333fdfcac01c177",
+  "reference_sha256": "1e4a8c99a55a3f90754e4d740d058bf6fd392ac6897e955daa646ad1c9001667",
+  "proof_sha256": "0dc38713a67883b5d3083f0e25707938af88aa8b38995a46394af2455363885e",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "5c6c59ab7923c1836314a3f0571a75282ff4dfe8144f5538e5463dcc07744719",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the \\(f(0)=0\\) case, the proof asserts without justification that nonzero \\(f\\) yields some \\(a\\ne0\\) with \\(f(f(a))\\ne0\\); this follows directly from \\(P(a,0)\\), which gives \\(f(f(a))=-f(a)\\) for \\(a\\ne0\\).",
+    "summary": "The complete solution set is correct, and both main cases are handled coherently. The omitted step is load-bearing for the bijectivity argument but requires only one direct substitution. Some restrictions involving division by \\(c-a\\) and the definition of \\(g(c)\\) are also stated imprecisely, though the final argument uses only admissible values.",
+    "strengths": [
+      "Correctly derives bijectivity and identifies \\(f(x)=-x\\) in the \\(f(0)=0\\), nonzero case.",
+      "Correctly obtains \\(f(c+f(b))=b-c\\) and ultimately \\(f(x)=c-x\\) when \\(c\\ne0\\).",
+      "Verifies the zero function and gives the complete correct answer family."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The existence of \\(a\\ne0\\) with \\(f(f(a))\\ne0\\) is asserted without the necessary one-line application of \\(P(a,0)\\)."
+      },
+      {
+        "severity": "minor",
+        "description": "Several identities involving \\(C_a\\), division by \\(c-a\\), and periodicity of \\(g\\) omit the exclusions \\(a\\notin\\{0,c\\}\\), although the decisive final substitution respects them."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

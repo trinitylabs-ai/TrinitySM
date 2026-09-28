@@ -1,0 +1,25 @@
+To find all strictly increasing surjective functions $g: \mathbb{R} \to \mathbb{R}$ such that $g(g(x)) = g(x) + 20x$, we analyze the iterates of $g$.
+
+For any $x_0 \in \mathbb{R}$, define the sequence $x_{n+1} = g(x_n)$. The given functional equation implies that this sequence satisfies the linear recurrence relation $x_{n+2} - x_{n+1} - 20x_n = 0$. The characteristic equation $r^2 - r - 20 = 0$ has roots $r_1 = 5$ and $r_2 = -4$. Thus, the general form of the sequence is:
+\[ x_n = A(x_0) 5^n + B(x_0) (-4)^n \]
+where $A(x_0)$ and $B(x_0)$ are constants depending on $x_0$. From $n=0$ and $n=1$, we have:
+\[ x_0 = A(x_0) + B(x_0), \quad g(x_0) = 5A(x_0) - 4B(x_0) \]
+Solving these equations for $A(x_0)$ and $B(x_0)$ yields $A(x_0) = \frac{g(x_0) + 4x_0}{9}$ and $B(x_0) = \frac{5x_0 - g(x_0)}{9}$.
+
+Since $g$ is strictly increasing, the sequence $x_n$ must be monotonic for any $x_0$. Specifically, if $x_1 > x_0$, then $x_{n+1} > x_n$ for all $n \ge 0$. If $x_1 < x_0$, then $x_{n+1} < x_n$ for all $n \ge 0$. The difference is given by:
+\[ x_{n+1} - x_n = 4 A(x_0) 5^n - 5 B(x_0) (-4)^n \]
+For large $n$, the term $4 A(x_0) 5^n$ dominates. If $x_1 > x_0$, we must have $A(x_0) \ge 0$. If $A(x_0) = 0$, then $x_{n+1} - x_n = -5 B(x_0) (-4)^n$, which oscillates in sign, contradicting monotonicity. Thus, $A(x_0) > 0$ whenever $g(x_0) > x_0$. Similarly, $A(x_0) < 0$ whenever $g(x_0) < x_0$.
+
+Note that $g(0) = 0$ because $g(g(0)) = g(0) + 20(0) \implies g(g(0)) = g(0)$, and since $g$ is injective, $g(0) = 0$. For $x > 0$, we must have $g(x) > 0$. If $g(x) < x$ for some $x > 0$, then $A(x) < 0$. But $A(x) = \frac{g(x) + 4x}{9} > 0$ for $x, g(x) > 0$, a contradiction. Thus, $g(x) > x$ for all $x > 0$, and similarly $g(x) < x$ for all $x < 0$.
+
+Now consider $g^{(n)}(x) = A(x) 5^n + B(x) (-4)^n$. Since $g$ is strictly increasing, $g^{(n)}$ is strictly increasing for all $n$. For $x < y$, we must have $g^{(n)}(x) < g^{(n)}(y)$ for all $n$:
+\[ (A(y) - A(x)) 5^n + (B(y) - B(x)) (-4)^n > 0 \]
+Dividing by $5^n$ and letting $n \to \infty$, we find $A(y) - A(x) \ge 0$. If $A(y) - A(x) = 0$, then $B(y) - B(x)$ must be 0 to prevent oscillation, which implies $x=y$. Thus, $A(x)$ is strictly increasing.
+
+Let $h(x) = A(x) - x = -B(x)$. The condition $g(g(x)) = g(x) + 20x$ implies $A(g(x)) = 5 A(x)$, which leads to $h(g(x)) = -4 h(x)$. If there exists $x_0$ such that $h(x_0) \neq 0$, then $h(g^{(n)}(x_0)) = (-4)^n h(x_0)$. This means $h(x)$ oscillates in sign and its magnitude grows as $4^n$. However, for $g(x) = 5x + 9h(x)$ to be strictly increasing, $h(x)$ cannot grow faster than $x$. Specifically, the oscillation and growth of $h(x)$ would eventually force $g'(x) = 5 + 9h'(x)$ to be negative, contradicting the strictly increasing property of $g$. Thus, we must have $h(x) = 0$ for all $x$.
+
+If $h(x) = 0$, then $A(x) = x$, and $g(x) = 9 A(x) - 4x = 9x - 4x = 5x$. Testing this in the original equation: $g(g(x)) = 5(5x) = 25x$ and $g(x) + 20x = 5x + 20x = 25x$. This is a valid solution.
+
+The only strictly increasing surjective function is $g(x) = 5x$.
+
+\(\square\)

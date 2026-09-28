@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "243293b5a42f22ad809d33e665d0dcf33715e5c02dae6cc99798c34ff4fcf6ab",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "64dfa303e75178ba5da260238d196d3bd3577a82efa63cc3d9585d2280d34167",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "After correctly reducing the conclusion to the displayed identity involving AK, AL, b, c, and the angles, the submission merely asserts that the remaining angle conditions force this identity. No derivation is supplied; uniqueness, even if proved, would not imply the identity. This is the decisive missing calculation under Rule B.",
+    "summary": "The coordinate setup, sine-law calculations yielding the two cotangent relations, antipodal construction of O', and reduction of OM=ON to an explicit equality are coherent and essentially correct. However, the final explicit equality—the crux of the problem—is not proved from the unused cross-angle constraints. Because the preceding reduction is sound and the omitted claim is an explicit, checkable, true equality, Rule B makes 4 eligible, but the omission prevents a complete proof.",
+    "strengths": [
+      "Correctly derives cot(phi_1)=cot(alpha)+2cot(gamma) and cot(phi_3)=cot(alpha)+2cot(beta).",
+      "Correctly uses the antipode O'=2O-A to obtain O'K perpendicular to AK and O'L perpendicular to AL.",
+      "Correctly reduces OM=ON to O'B=O'C and then to a fully explicit trigonometric identity."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The submission never proves that the conditions involving angle LBK and angle LCK imply the final displayed identity. The last paragraph simply asserts this compatibility, and the separate unsupported claim of uniqueness does not establish it."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:47:57.304581+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

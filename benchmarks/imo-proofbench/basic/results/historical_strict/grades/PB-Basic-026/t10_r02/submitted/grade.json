@@ -1,0 +1,54 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T15:14:46.363727+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 26,
+  "problem_id": "PB-Basic-026",
+  "case_id": "PB-Basic-026.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "c6ba255f6bbb3bfd642e146b2a30b43e700e8da579130b27eda8a8fd634c1529",
+  "reference_sha256": "641eed7b84a961cc7a5180ea62acc3d04fcd72eacd72ca53d6909345d7153aac",
+  "proof_sha256": "289cc1f04bb56c170f21ac84eaab5424bbf9a6b5a28e9f514c2b6e299984f0f1",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/tasks.json",
+  "task_manifest_sha256": "704b5e2f7577350d75ebf1bd43d27e4150704f1bc33942c34e5162def5b101f1",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The negative-ratio homothety maps \\(M_a\\) to the point diametrically opposite \\(D\\), not to \\(D\\); hence the claimed collinearity \\(S_{int},D,M_a\\) is false.",
+    "summary": "Only preliminary homothety observations are valid. The proof then uses several false incidences and an unsupported final inference, so it does not establish that \\(D'X\\) passes through \\(S_{int}\\) or prove the required concurrency.",
+    "strengths": [
+      "Correctly identifies tangent-direction correspondences under homothety and attempts to use the three-circles similitude theorem."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "\\(S_{int}\\) does not generally lie on \\(AI\\), so reflecting a line through \\(S_{int}\\) across \\(AI\\) does not preserve \\(S_{int}\\)."
+      },
+      {
+        "severity": "major",
+        "description": "Since \\(M_a\\in AI\\), its reflection across \\(AI\\) is itself, not the other arc midpoint as claimed."
+      },
+      {
+        "severity": "major",
+        "description": "The stated collinearities involving \\(M_W\\), \\(M_a'\\), and the similitude centers do not imply \\(X,S_{int},D'\\) are collinear; this unsupported inference is the entire concurrency argument. [Strict scoring rubric](/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/SKILL.md)"
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

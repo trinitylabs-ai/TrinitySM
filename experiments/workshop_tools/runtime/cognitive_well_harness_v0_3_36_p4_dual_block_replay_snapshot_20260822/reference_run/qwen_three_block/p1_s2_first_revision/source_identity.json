@@ -1,0 +1,20 @@
+{
+  "sample_id": "p1_s2_first_revision",
+  "stage": "first_ensemble_feedback_revision",
+  "sources": {
+    "fusion_source_prompt": "/opt/proof-workshop/math_harness_runs/cognitive_well_imo2026_p145_v027_local_ensemble_vs_terra_phase1_v2_20260820/p1_s2/local_raw/p1_s2_ensemble_revision_regrade_0_attempt1.local_fusion/fusion.prompt.txt",
+    "local_critic_opc": "/opt/proof-workshop/math_harness_runs/cognitive_well_imo2026_p145_v027_local_ensemble_vs_terra_phase1_v2_20260820/p1_s2/local_raw/p1_s2_ensemble_revision_regrade_0_attempt1.local_fusion/opc.txt",
+    "whole_proof_and_adversarial_gptoss": "/opt/proof-workshop/math_harness_runs/cognitive_well_imo2026_p145_v027_local_ensemble_vs_terra_phase1_v2_20260820/p1_s2/local_raw/p1_s2_ensemble_revision_regrade_0_attempt1.local_fusion/gptoss.txt"
+  },
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "candidate_proof_sha256": "dbc27624535fe72f86a2f0067346750a655b867bda3a86e96b84f0234ad3ce29",
+  "grading_rubric_sha256": "3f78e3f6a228b6bf24da4103ded3a9bba0b8dc65f43ac9296d567788d9e5e80f",
+  "local_critic_sha256": "bd2f5155aa92ece8677ad9df1ed590fbd90c3ecac34a60632a991c990d06310b",
+  "whole_proof_grader_sha256": "41a658792b48e1e212157cda1eb56ea8470f2d643be4c2746dcbe83d585aa9f8",
+  "adversarial_checker_sha256": "506a57b456395ca6b21910c255d1cb6e3be4d75134c9cbb08a53a72b81b233d1",
+  "review_layout": "split_gptoss_three_slot",
+  "fusion_system_sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b",
+  "fusion_user_sha256": "715aebecc9a08ff67e9142f0fe1f41bfd2e7b567dcc30286d5fa974504ae1ecc",
+  "reference_solution_access": false,
+  "gold_information_in_fusion_input": false
+}

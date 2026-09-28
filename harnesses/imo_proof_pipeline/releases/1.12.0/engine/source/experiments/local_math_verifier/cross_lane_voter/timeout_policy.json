@@ -1,0 +1,14 @@
+{
+  "answer_only_max_tokens": 8192,
+  "answer_only_thinking_enabled": false,
+  "answer_only_timeout_seconds": 120,
+  "failure_policy": "preserve_outputs_and_leave_vote_invalid",
+  "fresh_retries_after_timeout": 0,
+  "logical_limit_seconds": 600,
+  "max_answer_only_continuations": 1,
+  "missing_valid_initial_answer": "one_answer_only_continuation_from_saved_reasoning_and_answer",
+  "ordinary_bf_unchanged": true,
+  "policy": "logical-600s-initial-else-one-answer-only-120s-v1",
+  "scope": "cross_lane_comparison_only",
+  "valid_initial_answer": "reuse_without_model_call"
+}

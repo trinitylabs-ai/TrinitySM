@@ -1,0 +1,50 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_d9db8544d041f2db9914e57c",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "df22cb04cd3f04e9f938e57006ee0020958e7a8ee920a5604a700320901d050c",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "fbe4dfbb4bb85287ae1bf11ff812824e40ab5a6d4e113e4bd58c78987fc05bef",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In Step 3, C=sup g is treated as a finite real without explicitly ruling out C=+∞. The displayed tail estimate and orbit invariance do rule this out directly: an unbounded range would force g(t)→∞, contradicting the constant positive value of g along an orbit tending to infinity. This is a minor omitted clarification, not a Rule E central gap.",
+    "summary": "The classification f(x)=x+c, c≥0, is correct, and the proof contains the essential argument. The iteration identity gives g≥0; the tail estimate forces all positive values of g to coincide; the forbidden-interval argument excludes coexistence of zero and positive defects; and the converse is correctly verified. Only short quantifier/selection clarifications are missing, so no Rules A–E cap applies.",
+    "strengths": [
+      "Correctly derives f(f(y))=2f(y)-y and hence f^n(y)=y+ng(y) with g(y)≥0.",
+      "Obtains a valid lower estimate that, together with orbit invariance, forces every positive defect value to equal the supremum.",
+      "The supremum-boundary argument in Step 4 correctly rules out a mixture of defect values 0 and C.",
+      "Correctly verifies every translation f(x)=x+c for c≥0 using AM-GM and RMS-AM."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The possibility that sup g=+∞ is not explicitly disposed of before C is used as a finite defect value, although the proof's own tail and orbit arguments give an immediate contradiction in that case."
+      },
+      {
+        "severity": "minor",
+        "description": "The phrase “without loss of generality y0<x0” is not justified by symmetry. It is valid after replacing the chosen x0∈S_C by a sufficiently large forward iterate x0+nC, as established earlier, but this selection should be stated."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:51:17.877650+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_2/p5/proof_d9db8544d041f2db9914e57c"
+}

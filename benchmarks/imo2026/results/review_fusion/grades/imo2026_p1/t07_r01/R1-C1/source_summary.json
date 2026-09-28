@@ -1,0 +1,76 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T10:03:43.428031+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 0
+  },
+  "per_problem": {
+    "1": {
+      "scores": [
+        6
+      ],
+      "mean": 6.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T10:03:43.426592+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "case_id": "imo2026_p1.explicit.t07_r01",
+      "candidate_id": "t07_r01",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r01/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "local",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "The claim that the terminal set S_p^* contains the single element v_p(M) is false when p does not divide M; then S_p^* is empty.",
+        "summary": "The termination argument and the primewise gcd invariant are correct and establish both conclusions. The only defect is an omitted empty-set case for primes not dividing M. Since the solution explicitly defines the gcd of an empty S_p^* as 0, the argument is repaired immediately by splitting into p dividing M and p not dividing M.",
+        "strengths": [
+          "Correctly shows that the product is unchanged when gcd(m,n)=1 and strictly decreases otherwise.",
+          "Correctly shows that gcd-one moves reduce the number of entries greater than 1, yielding termination.",
+          "Correctly proves that at least one entry greater than 1 always remains.",
+          "Correctly identifies the valuation transformation as (x,y) to (min(x,y),|x-y|).",
+          "Correctly establishes invariance of the gcd of the positive p-adic valuations and reconstructs M from these invariants."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "For p not dividing the terminal integer M, the positive-exponent multiset is empty, not a singleton containing 0. The stated convention gcd(empty)=0 supplies the missing case directly."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

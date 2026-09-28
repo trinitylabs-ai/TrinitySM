@@ -1,0 +1,1 @@
+Find all non-negative integers $a,b,c$ such that $20^{a}+b^{4}=2024^{c}$

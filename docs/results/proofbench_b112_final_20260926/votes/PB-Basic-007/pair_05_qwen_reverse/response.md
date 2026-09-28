@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For $n=1$, no solutions exist. For $n=2$, the unique solution is $(a_0, a_1, a_2) = (-1, 1, 3)$. For $n \ge 3$, the proof establishes that if $d_i = a_i - a_{i-1} \neq 0$ for all $i$, no solutions exist, using a growth argument for $|a_{n-1}| \ge 4$ and case analysis for smaller values.
+Claim gap: The proof contains a gap in the case where $d_k = 0$ for some $k$ (constant tail). Specifically, when analyzing $a_0 = -3$, the proof restricts $a_1$ to divisors of 3 ($\{\pm 1, \pm 3\}$) without justification, missing the case $a_1 = 0$ (which is a multiple of 3). Additionally, the argument for $n > 3$ dominance in the $d_i \neq 0$ case is asserted without detailed verification of the bound coefficients.
+Qualifications and supplied repairs: The check for $a_1 = 0$ when $a_0 = -3$ was supplied; it leads to a contradiction via modulo 3 arithmetic ($28 + 3a_2 + a_1 = 0$ with $a_1=0$ implies $3 \mid 28$). The growth argument for $|X| \ge 4$ was verified to be correct.
+Decisive checks: The derivation of the quartic for $n=2$ is correct. The divisibility chain $d_i \mid d_{i+1}$ is correctly identified. The bound $|a_j| \le 3 + (n-j)|3-X|$ is correct. The omission of $a_1=0$ in the $a_0=-3$ case is a demonstrated defect.
+
+## Proof B
+Established theorem: For $n=1$, no solutions exist. For $n=2$, the unique solution is $(a_0, a_1, a_2) = (-1, 1, 3)$. For $n \ge 3$, the proof establishes that if $d_i \neq 0$ for all $i$, no solutions exist, using rigorous divisibility constraints for small $a_{n-1}$ and growth bounds for large $a_{n-1}$.
+Claim gap: The proof contains a logical flaw in the case where $d_k = 0$ for some $k$ (constant tail) with $m \ge 2$. It claims that the non-decreasing property of $|a_i - 3|$ prevents $f(a_0) = a_1$ from being satisfied due to growth, but growth actually satisfies the inequality $|a_1 - 3| \ge |a_0 - 3|$. However, this subcase (plateaus) is likely empty due to the condition $f(c)=c$ implying $c=0$ or specific coefficient constraints, which are not fully explored.
+Qualifications and supplied repairs: The flaw in the $m \ge 2$ growth argument was identified. The $d_i \neq 0$ case analysis was verified to be rigorous, particularly the use of $d_1 \mid d_n$ to restrict $a_{n-2}$ when $a_{n-1}=1$.
+Decisive checks: The derivation for $n=2$ is correct. The divisibility chain $d_i \mid d_{i+1}$ is correctly applied. The case analysis for $a_{n-1} \in \{1, 0, -1\}$ is verified to be correct and superior to Proof A's approach. The claim that $|a_i - 3|$ non-decreasing prevents solutions is a demonstrated defect.
+
+## Decision
+Winner: B
+Reason: Proof B provides a more rigorous and structurally sound analysis of the main case ($d_i \neq 0$) by leveraging the divisibility chain $d_1 \mid \dots \mid d_n$ to constrain the sequence values, rather than relying solely on polynomial root checking as in Proof A. While both proofs have gaps in the "constant tail" subcase ($d_k=0$), Proof B's gap is a flawed justification for a likely empty case, whereas Proof A's gap is a missed check of a valid candidate ($a_1=0$). Proof B's handling of the $n=2$ case and the $d_i \neq 0$ case for $n \ge 3$ is mathematically stronger and more complete.

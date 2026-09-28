@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-024",
+  "problem": "Let $P$ be a function from the set $\\mathbb{Q}$ of rational numbers\n to itself, and suppose that $P$ satisfies\n \\[\n (P(b-P(a))+a-P(b))(P(a+P(b-P(a)))-b)=0\n \\]\n for all rational numbers $a,b$. Prove that the set $\\{P(a)+P(-a):a\\in\\mathbb{Q}\\}$\n is a finite set, and find the maximum possible number of elements\n in this set."
+}

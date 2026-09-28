@@ -1,0 +1,64 @@
+{
+  "problem_id": "imo2026_p3",
+  "candidate": "t10_r02",
+  "group": "core",
+  "grader_candidate": "core_t10_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t10_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc.md",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+  "v1_score": 2,
+  "v1_grade": "docs/public_release/evidence/grades/234ba15833bc33143f6b158dad4290655108a1f93395e26ded271148d3de1307.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t10_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:17:11.410105+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claimed lower bound is false. For n=2, Liu's proposed partition is (3/5,1/5,1/5). Xiang may use only one cut, splitting 3/5 into two pieces of length 3/10. The final lengths are 3/10,3/10,1/5,1/5, so Liu receives only 1/2, not the claimed 3/5.",
+    "summary": "Rule A applies: the claimed value (n+1)/(2n+1) is incorrect. Already for n=2 it gives 3/5, whereas the correct value is 4/7. The proposed lower-bound construction fails explicitly, and the upper-bound construction in Case 2 can produce a nonpositive final piece. Substantial replacement arguments are needed.",
+    "strengths": [
+      "Correctly reduces the claiming phase to the sum of the odd-ranked piece lengths.",
+      "Correctly observes that Liu always receives at least 1/2.",
+      "Uses the useful alternating-discrepancy formulation."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that equalizing all pieces is Xiang's minimizing strategy, and that unequal pieces or fewer cuts increase Liu's payoff, is unsupported and false; the n=2 counterexample above invalidates the entire lower bound."
+      },
+      {
+        "severity": "major",
+        "description": "The Case 2 response may not define positive pieces. For n=2 and initial lengths (0.34,0.33,0.33), the proposed last piece is x_3=2(0.34)-1+2ε=-0.32+2ε, which is negative for sufficiently small ε. Thus the central upper-bound construction is not admissible."
+      },
+      {
+        "severity": "minor",
+        "description": "In Case 1, the claimed exact sorted ordering into consecutive specified pairs need not hold when the unpaired smallest original piece interleaves with the half-pieces. The discrepancy conclusion could be repaired by deleting adjacent equal pairs, but that argument is not given."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "44b83dfeeb8c572c8c7240c264a2b0893c9b3fdca7e9553a64913c930707309e",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

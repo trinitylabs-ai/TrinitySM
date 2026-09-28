@@ -1,0 +1,32 @@
+Let $a_1, a_2, \dots, a_{18}$ be 18 real numbers with average $m$. Let $x_i = a_i - m$ for each $i=1, \dots, 18$. Then $\sum_{i=1}^{18} x_i = 0$. The condition $a_i + a_j + a_k \ge 3m$ is equivalent to $x_i + x_j + x_k \ge 0$. Let $A$ be the number of triples $1 \le i < j < k \le 18$ such that $x_i + x_j + x_k \ge 0$.
+
+First, we show that $A=136$ is attainable. Let $x_1 = 17$ and $x_2 = x_3 = \dots = x_{18} = -1$. The sum is $17 + 17(-1) = 0$. A triple $(i, j, k)$ satisfies $x_i + x_j + x_k \ge 0$ if and only if it contains $x_1$, because if $i, j, k > 1$, then $x_i + x_j + x_k = -3 < 0$, and if $i=1$, then $x_1 + x_j + x_k = 17 - 1 - 1 = 15 \ge 0$. The number of such triples is $\binom{17}{2} = \frac{17 \times 16}{2} = 136$.
+
+To prove that $A \ge 136$ for any set of $x_i$ summing to zero, let $p$ be the number of positive values among $x_1, \dots, x_{18}$. If $p=0$, then all $x_i \le 0$. Since $\sum x_i = 0$, we must have $x_i = 0$ for all $i$, and $A = \binom{18}{3} = 816$.
+
+Assume $p \ge 1$. Let $x_1 \ge x_2 \ge \dots \ge x_p > 0 \ge x_{p+1} \ge \dots \ge x_{18}$. Let $y_j = |x_j|$ for $j=p+1, \dots, 18$. Then $S = \sum_{i=1}^p x_i = \sum_{j=p+1}^{18} y_j$. We partition the triples $(i, j, k)$ into four types:
+- Type 3: $i, j, k \le p$. There are $\binom{p}{3}$ such triples, and their sum is always positive.
+- Type 2: $i, j \le p$ and $k > p$. The sum is $x_i + x_j - y_k$.
+- Type 1: $i \le p$ and $j, k > p$. The sum is $x_i - y_j - y_k$.
+- Type 0: $i, j, k > p$. The sum is $-y_i - y_j - y_k \le 0$.
+
+Let $C_2(x_i, x_j)$ be the number of $k \in \{p+1, \dots, 18\}$ such that $y_k \le x_i + x_j$, and let $C_1(x_i)$ be the number of pairs $j, k \in \{p+1, \dots, 18\}$ such that $y_j + y_k \le x_i$. Then
+$$A \ge \binom{p}{3} + \sum_{1 \le i < j \le p} C_2(x_i, x_j) + \sum_{i=1}^p C_1(x_i).$$
+We analyze the sums for fixed $y_k$. For the Type 1 triples, we have
+$$\sum_{i=1}^p C_1(x_i) = \sum_{i=1}^p \sum_{p+1 \le j < k \le 18} I(y_j + y_k \le x_i) = \sum_{p+1 \le j < k \le 18} \sum_{i=1}^p I(x_i \ge y_j + y_k),$$
+where $I(\cdot)$ is the indicator function. For any pair $(j, k)$, the sum $\sum_{i=1}^p I(x_i \ge y_j + y_k)$ is the number of $x_i$ at least $y_j + y_k$. Since $\sum_{i=1}^p x_i = S \ge y_j + y_k$ for all $j, k$, there is at least one $x_i$ (specifically $x_1$) such that $x_i \ge y_j + y_k$. Thus, $\sum_{i=1}^p C_1(x_i) \ge \binom{18-p}{2}$.
+
+For the Type 2 triples, we have
+$$\sum_{1 \le i < j \le p} C_2(x_i, x_j) = \sum_{1 \le i < j \le p} \sum_{k=p+1}^{18} I(y_k \le x_i + x_j) = \sum_{k=p+1}^{18} \sum_{1 \le i < j \le p} I(x_i + x_j \ge y_k).$$
+For a fixed $k$, let $N(y_k)$ be the number of pairs $(i, j)$ such that $x_i + x_j \ge y_k$. Since $\sum_{i=1}^p x_i = S \ge y_k$, if $p \ge 2$, the number of pairs $N(y_k)$ is minimized when $x_1 \to S$ and $x_2, \dots, x_p \to 0^+$. In this limit, only the pairs $(1, j)$ for $j=2, \dots, p$ satisfy $x_1 + x_j \ge y_k$, giving $p-1$ pairs. Thus, for $p \ge 2$, $\sum_{1 \le i < j \le p} C_2(x_i, x_j) \ge (18-p)(p-1)$.
+
+Combining these, for $p \ge 2$, we have
+$$A \ge \binom{p}{3} + (18-p)(p-1) + \binom{18-p}{2}.$$
+Let $f(p) = \binom{p}{3} + (18-p)(p-1) + \binom{18-p}{2}$.
+$f(2) = 0 + 16(1) + \binom{16}{2} = 16 + 120 = 136$.
+$f(3) = 1 + 15(2) + \binom{15}{2} = 1 + 30 + 105 = 136$.
+$f(4) = 4 + 14(3) + \binom{14}{2} = 4 + 42 + 91 = 137$.
+For $p \ge 3$, $f(p+1) - f(p) = \binom{p}{2} + (17-p)p - (18-p)(p-1) + \binom{17-p}{2} - \binom{18-p}{2} = \frac{p(p-1)}{2} + 17p - p^2 - (18p - 18 - p^2 + p) - (17-p) = \frac{p^2-p}{2} - 2p + 18 - 17 + p = \frac{p^2-3p+2}{2} = \binom{p-1}{2} \ge 0$.
+Thus $f(p)$ is non-decreasing for $p \ge 2$, so $A \ge 136$ for all $p \ge 2$. For $p=1$, $A \ge \binom{17}{2} = 136$.
+
+The minimum possible value of $A$ is 136.

@@ -1,0 +1,34 @@
+To prove the inequality $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ for positive reals $a,b,c$ such that $a+b+c=1$, we define the function
+\[ L(a,b,c) = \sqrt{a}+\sqrt{b}+\sqrt{c} - 3\sqrt{3}(ab+bc+ca). \]
+Since the expression is symmetric in $a, b, c$, we seek to find the minimum of $L(a,b,c)$ subject to the constraint $a+b+c=1$.
+
+**1. Reduction to the case of equal variables**
+Fix $c$ and the sum $S = a+b$. We examine $L$ as a function of $a$ for $a \in (0, S)$:
+\[ g(a) = \sqrt{a} + \sqrt{S-a} + \sqrt{c} - 3\sqrt{3}(a(S-a) + cS). \]
+To find the extrema, we compute the derivative with respect to $a$:
+\[ g'(a) = \frac{1}{2\sqrt{a}} - \frac{1}{2\sqrt{S-a}} - 3\sqrt{3}(S-2a) = (S-2a) \left[ \frac{1}{2\sqrt{a(S-a)}(\sqrt{a} + \sqrt{S-a})} - 3\sqrt{3} \right]. \]
+Let $K(a) = 2\sqrt{a(S-a)}(\sqrt{a} + \sqrt{S-a})$. The function $K(a)$ is symmetric about $a=S/2$, vanishing at $a=0$ and $a=S$, and reaching its maximum at $a=S/2$ with $K(S/2) = S\sqrt{2S}$.
+- If $K(S/2) \leq \frac{1}{3\sqrt{3}}$, then $\frac{1}{K(a)} - 3\sqrt{3} \geq 0$ for all $a \in (0, S)$. Thus, $g'(a)$ has the same sign as $S-2a$, meaning $g(a)$ increases on $(0, S/2)$ and decreases on $(S/2, S)$. The minimum occurs at the boundaries $a \to 0$ or $a \to S$.
+- If $K(S/2) > \frac{1}{3\sqrt{3}}$, then $\frac{1}{K(a)} - 3\sqrt{3}$ is negative near $a=S/2$ and positive near the boundaries. Thus, $g'(a)$ is positive near $a=0$, negative for $a \in (a_0, S/2)$, and positive for $a \in (S/2, S-a_0)$. The minimum occurs at either $a=S/2$ or at the boundaries $a \to 0, S$.
+
+In all cases, the minimum of $L(a,b,c)$ must occur when at least two variables are equal (either $a=b$ or one variable is $0$).
+
+**2. Analysis of the case $a=b$**
+Let $a=b$, then $c=1-2a$ for $a \in (0, 1/2)$. The function becomes:
+\[ f(a) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(a^2 + 2a(1-2a)) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(2a - 3a^2). \]
+The derivative is:
+\[ f'(a) = \frac{1}{\sqrt{a}} - \frac{1}{\sqrt{1-2a}} - 6\sqrt{3}(1-3a) = (1-3a) \left[ \frac{1}{\sqrt{a(1-2a)}(\sqrt{a} + \sqrt{1-2a})} - 6\sqrt{3} \right]. \]
+Let $H(a) = \sqrt{a(1-2a)}(\sqrt{a} + \sqrt{1-2a})$. $H(a)$ is 0 at $a=0, 1/2$ and reaches a maximum at $a=1/3$ with $H(1/3) = \frac{2}{3\sqrt{3}} \approx 0.385$. Since $1/6\sqrt{3} \approx 0.096$, there exists a small $a_0$ such that $H(a) = 1/6\sqrt{3}$.
+- For $a \in (0, a_0)$, $H(a) < 1/6\sqrt{3} \implies f'(a) > 0$.
+- For $a \in (a_0, 1/3)$, $H(a) > 1/6\sqrt{3} \implies f'(a) < 0$.
+- For $a \in (1/3, 1/2)$, $H(a) > 1/6\sqrt{3} \implies f'(a) > 0$.
+The minimum is $\min(f(0), f(1/3))$. Since $f(0) = 1$ and $f(1/3) = \frac{2}{\sqrt{3}} + \frac{1}{\sqrt{3}} - 3\sqrt{3}(\frac{2}{3} - \frac{1}{3}) = \sqrt{3} - \sqrt{3} = 0$, the minimum is 0.
+
+**3. Analysis of the case $a \to 0$**
+If $a=0$, then $b+c=1$. The function is $L(0,b,c) = \sqrt{b} + \sqrt{c} - 3\sqrt{3}bc$.
+Using the same logic as above, the minimum occurs at $b=c=1/2$:
+\[ L(0, 1/2, 1/2) = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - 3\sqrt{3}\left(\frac{1}{4}\right) = \sqrt{2} - \frac{3\sqrt{3}}{4} \approx 1.414 - 1.299 = 0.115 > 0. \]
+
+Since the minimum in all possible cases is $L(1/3, 1/3, 1/3) = 0$, we conclude that $L(a,b,c) \geq 0$ for all $a,b,c > 0$ such that $a+b+c=1$.
+
+\(\square\)

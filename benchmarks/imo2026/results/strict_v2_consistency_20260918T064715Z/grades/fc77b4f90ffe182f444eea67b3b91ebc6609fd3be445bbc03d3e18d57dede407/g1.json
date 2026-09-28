@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "fc77b4f90ffe182f444eea67b3b91ebc6609fd3be445bbc03d3e18d57dede407",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "7ee7c7ac8983476f6bec570d618c8a7d7539fed2b971a31e9805c489842442e2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "126af03676b0316c0253275b8d73dc45e08ed6821ea7e0bf195d21bdb573336a",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument is unsupported: after correctly verifying the family f(x)=x+c, the submission only examines assumed special forms (bounded perturbations, linear functions, and powers) and then asserts that consistency forces c(x) to be constant. No argument is given for an arbitrary function, so Rule E applies.",
+    "summary": "The claimed classification is correct, and the converse is established by valid RMS–AM and AM–GM applications (also valid for c=0). The initial squaring is valid as well. However, combining the inequalities yields only the tautology 2(x-f(y))^2≥0, and the subsequent asymptotic discussion does not prove that every admissible function has the proposed form. Establishing necessity requires a new central structural argument.",
+    "strengths": [
+      "Correct final family f(x)=x+c with c≥0.",
+      "Correct verification that every member of this family satisfies both inequalities.",
+      "Valid initial squared forms of the two inequalities."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The exclusion of all other functions is merely asserted and is based on non-exhaustive trial classes; it does not address arbitrary positive-real functions."
+      },
+      {
+        "severity": "minor",
+        "description": "The displayed lower bound for f(y) is not meaningful when its radicand is negative, so it requires a case/domain qualification."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:44:29.100576+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

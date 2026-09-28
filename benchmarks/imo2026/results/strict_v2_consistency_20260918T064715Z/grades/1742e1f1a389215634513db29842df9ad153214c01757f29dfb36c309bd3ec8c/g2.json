@@ -1,0 +1,49 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "1742e1f1a389215634513db29842df9ad153214c01757f29dfb36c309bd3ec8c",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "46f454d8d9025c45f33be92f4a9f72319814078cc2c59ca11594ed1cfdf2421e",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect. The proof is complete under standard conventions for gcds involving zero and prime valuations.",
+    "summary": "The submission correctly proves termination using the lexicographically decreasing pair consisting of the total number of prime factors counted with multiplicity and the number of entries greater than 1. It then proves that a move cannot eliminate all remaining nonunit entries. Finally, it identifies the invariant gcd of the valuation vector for every prime and reconstructs the unique terminal integer, establishing independence from all choices.",
+    "strengths": [
+      "The termination measure is well founded and strictly decreases in every move.",
+      "The argument that a terminal board contains exactly one entry greater than 1 is valid.",
+      "The primewise transformation of valuations is computed correctly.",
+      "The gcd of each prime's full valuation vector is correctly shown to be invariant.",
+      "The terminal value is correctly reconstructed from its prime valuations, proving choice-independence."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T09:02:55.818865+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

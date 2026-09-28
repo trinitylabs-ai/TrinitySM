@@ -1,0 +1,33 @@
+To prove that $XO$ is perpendicular to $DE$, we will use a coordinate geometry approach. Let the vertices of the acute triangle $ABC$ be denoted by their coordinates. Let $C$ be the origin $(0,0)$ and the line $CA$ be the $x$-axis. Let $a, b, c$ denote the side lengths $BC, AC, AB$, respectively.
+
+1.  **Coordinates of the vertices and points:**
+    *   $C = (0,0)$.
+    *   $A = (b, 0)$.
+    *   $B = (a \cos C, a \sin C)$.
+    *   Since $D$ is the foot of the altitude from $B$ to $AC$, $D$ is the projection of $B$ onto the $x$-axis: $D = (a \cos C, 0)$.
+    *   $E$ is the foot of the altitude from $C$ to $AB$. In $\triangle BCE$, $\angle BEC = 90^\circ$, so $CE = BC \sin B = a \sin B$. The angle $\angle ECA = 90^\circ - A$. Thus, the coordinates of $E$ are:
+        $E = (CE \cos(90^\circ - A), CE \sin(90^\circ - A)) = (a \sin B \sin A, a \sin B \cos A)$.
+
+2.  **Coordinates of $O$ and $X$:**
+    *   $E_1$ is the reflection of $E$ across $AC$ (the $x$-axis), so $E_1 = (a \sin B \sin A, -a \sin B \cos A)$.
+    *   $E_2$ is the reflection of $E$ across $BC$. The line $BC$ makes an angle $C$ with the $x$-axis. The distance $CE = a \sin B$. The angle of $CE$ is $90^\circ - A$. The angle of $CE_2$ is $C + (C - (90^\circ - A)) = 2C + A - 90^\circ$.
+    *   The circumcenter $O$ of $\triangle CE_1 E_2$ lies on the angle bisector of $\angle E_1 C E_2$. The angle of $CO$ is $\frac{(A - 90^\circ) + (2C + A - 90^\circ)}{2} = A + C - 90^\circ = 90^\circ - B$.
+    *   The circumradius $R_\Gamma$ of $\triangle CE_1 E_2$ is given by $R_\Gamma = \frac{E_1 E_2}{2 \sin(2C)}$. Since $CE_1 = CE_2 = CE$, by the Law of Cosines, $E_1 E_2^2 = 2 CE^2 (1 - \cos 2C) = 4 CE^2 \sin^2 C$. Thus $E_1 E_2 = 2 CE \sin C$.
+    *   $R_\Gamma = \frac{2 CE \sin C}{2 \sin 2C} = \frac{CE \sin C}{2 \sin C \cos C} = \frac{CE}{2 \cos C} = \frac{a \sin B}{2 \cos C}$.
+    *   The coordinates of $O$ are:
+        $O = (R_\Gamma \cos(90^\circ - B), R_\Gamma \sin(90^\circ - B)) = (R_\Gamma \sin B, R_\Gamma \cos B) = \left( \frac{a \sin^2 B}{2 \cos C}, \frac{a \sin B \cos B}{2 \cos C} \right)$.
+    *   The circle $\Gamma$ passes through $C(0,0)$ and has center $O(x_O, y_O)$. Its equation is $(x-x_O)^2 + (y-y_O)^2 = x_O^2 + y_O^2$. $X$ is the intersection of $\Gamma$ with $AC$ (the $x$-axis) other than $C$. Setting $y=0$, we get $(x-x_O)^2 = x_O^2$, so $x = 0$ or $x = 2x_O$. Thus, $X = (2x_O, 0) = \left( \frac{a \sin^2 B}{\cos C}, 0 \right)$.
+
+3.  **Perpendicularity of $XO$ and $DE$:**
+    *   The vector $\vec{XO} = O - X = \left( -\frac{a \sin^2 B}{2 \cos C}, \frac{a \sin B \cos B}{2 \cos C} \right)$.
+    *   The vector $\vec{DE} = E - D = (a \sin B \sin A - a \cos C, a \sin B \cos A)$.
+    *   The dot product $\vec{XO} \cdot \vec{DE}$ is:
+        $\vec{XO} \cdot \vec{DE} = \left( -\frac{a \sin^2 B}{2 \cos C} \right) (a \sin B \sin A - a \cos C) + \left( \frac{a \sin B \cos B}{2 \cos C} \right) (a \sin B \cos A)$
+        $= \frac{a \sin B}{2 \cos C} [-\sin B (a \sin B \sin A - a \cos C) + \cos B (a \sin B \cos A)]$
+        $= \frac{a^2 \sin B}{2 \cos C} [-\sin^2 B \sin A + \sin B \cos C + \sin B \cos B \cos A]$
+        $= \frac{a^2 \sin^2 B}{2 \cos C} [-\sin A \sin B + \cos C + \cos A \cos B]$
+        $= \frac{a^2 \sin^2 B}{2 \cos C} [\cos(A+B) + \cos C]$.
+    *   Since $A+B = 180^\circ - C$, $\cos(A+B) = -\cos C$. Thus, $\cos(A+B) + \cos C = 0$.
+    *   Therefore, $\vec{XO} \cdot \vec{DE} = 0$, which proves that $XO \perp DE$.
+
+\(\square\)

@@ -1,0 +1,5 @@
+For a real number $r$, let $A(r)$ denote the fractional part of $2r$ in its decimal representation. For a real number $r$ and a positive integer $n$, define $B(n,r)$ as
+ $$
+ B(n,r)=\sum_{k=1}^n A(kr).
+ $$
+ Find all positive real numbers $r$ such that $n(n+1)r - B(n,r)$ is a multiple of $n$ for all positive integers $n$.

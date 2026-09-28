@@ -1,0 +1,41 @@
+To prove that the circles $(W_3)$ and $(W_4)$ are tangent, we set up a coordinate system and use the properties of the centers and radii of the circles.
+
+### 1. Setup and Coordinate System
+Let the trapezoid be $ABCD$ with parallel sides $AD$ and $BC$. Thus, $AB$ and $CD$ are the legs. Let the height of the trapezoid be $h$. We can set the coordinates as $A = (0, h)$, $D = (d, h)$, $B = (b, 0)$, and $C = (c, 0)$.
+The legs are $AB$ and $CD$. Let $L_1 = AB = \sqrt{b^2 + h^2}$ and $L_2 = CD = \sqrt{(d-c)^2 + h^2}$. Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$, respectively:
+$M_1 = \left(\frac{b}{2}, \frac{h}{2}\right), \quad M_2 = \left(\frac{c+d}{2}, \frac{h}{2}\right)$.
+The vector $\vec{m} = \vec{M_1 M_2} = \left(\frac{c+d-b}{2}, 0\right)$.
+
+### 2. Centers and Radii of the Circles
+The center $O_1$ of circle $(W_1)$ passing through $A, B$ is located on the perpendicular bisector of $AB$. Given the inscribed angle $\alpha$ on the side opposite to $C$ and $D$, the distance from $M_1$ to $O_1$ is $d_1 = \frac{L_1}{2} \cot \alpha$. Let $\vec{n_1}$ be the unit normal to $AB$ pointing towards $C, D$.
+$\vec{n_1} = \frac{(h, -b)}{L_1} \implies O_1 = M_1 + \frac{L_1}{2} \cot \alpha \vec{n_1}$.
+Similarly, for $(W_2)$ passing through $C, D$ with inscribed angle $\beta$:
+$\vec{n_2} = \frac{(-h, d-c)}{L_2} \implies O_2 = M_2 + \frac{L_2}{2} \cot \beta \vec{n_2}$.
+The radii are $R_1 = \frac{L_1}{2 \sin \alpha}$ and $R_2 = \frac{L_2}{2 \sin \beta}$.
+
+For the constructed circles $(W_3)$ and $(W_4)$, the roles of $\alpha$ and $\beta$ are swapped:
+$O_3 = M_1 + \frac{L_1}{2} \cot \beta \vec{n_1}, \quad O_4 = M_2 + \frac{L_2}{2} \cot \alpha \vec{n_2}$.
+The radii are $R_3 = \frac{L_1}{2 \sin \beta}$ and $R_4 = \frac{L_2}{2 \sin \alpha}$.
+
+### 3. Tangency Condition
+Circles $(W_1)$ and $(W_2)$ are tangent if $|O_1 - O_2|^2 = (R_1 \pm R_2)^2 = R_1^2 + R_2^2 \pm 2R_1 R_2$.
+Let $k_1 = L_1/2$ and $k_2 = L_2/2$. We have:
+$O_1 - O_2 = \vec{m} + k_1 \cot \alpha \vec{n_1} - k_2 \cot \beta \vec{n_2}$.
+$|O_1 - O_2|^2 = m^2 + k_1^2 \cot^2 \alpha + k_2^2 \cot^2 \beta + 2k_1 \cot \alpha (\vec{m} \cdot \vec{n_1}) - 2k_2 \cot \beta (\vec{m} \cdot \vec{n_2}) - 2k_1 k_2 \cot \alpha \cot \beta (\vec{n_1} \cdot \vec{n_2})$.
+Since $R_1^2 = k_1^2 (1 + \cot^2 \alpha)$ and $R_2^2 = k_2^2 (1 + \cot^2 \beta)$, we find:
+$|O_1 - O_2|^2 - (R_1^2 + R_2^2) = m^2 - k_1^2 - k_2^2 + 2k_1 \cot \alpha (\vec{m} \cdot \vec{n_1}) - 2k_2 \cot \beta (\vec{m} \cdot \vec{n_2}) - 2k_1 k_2 \cot \alpha \cot \beta (\vec{n_1} \cdot \vec{n_2})$.
+
+Similarly, for $(W_3)$ and $(W_4)$:
+$|O_3 - O_4|^2 - (R_3^2 + R_4^2) = m^2 - k_1^2 - k_2^2 + 2k_1 \cot \beta (\vec{m} \cdot \vec{n_1}) - 2k_2 \cot \alpha (\vec{m} \cdot \vec{n_2}) - 2k_1 k_2 \cot \alpha \cot \beta (\vec{n_1} \cdot \vec{n_2})$.
+
+### 4. Final Verification
+The difference between these two expressions is:
+$2 (\cot \alpha - \cot \beta) [k_1 (\vec{m} \cdot \vec{n_1}) + k_2 (\vec{m} \cdot \vec{n_2})]$.
+Using our coordinates:
+$k_1 (\vec{m} \cdot \vec{n_1}) = \frac{L_1}{2} \left( \frac{c+d-b}{2} \cdot \frac{h}{L_1} \right) = \frac{h(c+d-b)}{4}$.
+$k_2 (\vec{m} \cdot \vec{n_2}) = \frac{L_2}{2} \left( \frac{c+d-b}{2} \cdot \frac{-h}{L_2} \right) = \frac{-h(c+d-b)}{4}$.
+Thus, $k_1 (\vec{m} \cdot \vec{n_1}) + k_2 (\vec{m} \cdot \vec{n_2}) = 0$.
+This implies $|O_3 - O_4|^2 - (R_3^2 + R_4^2) = |O_1 - O_2|^2 - (R_1^2 + R_2^2) = \pm 2R_1 R_2$.
+Since $R_1 R_2 = \frac{L_1 L_2}{4 \sin \alpha \sin \beta} = R_3 R_4$, we have:
+$|O_3 - O_4|^2 = R_3^2 + R_4^2 \pm 2R_3 R_4 = (R_3 \pm R_4)^2$.
+Thus, $(W_3)$ and $(W_4)$ are tangent to each other. $\square$

@@ -1,0 +1,114 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In $\triangle ABC$ the altitudes $BE$ and $CF$ intersect at $H$. A circle $(W)$ is
+ externally tangent to the Euler circle $(E)$ of $\triangle ABC$ and also tangent
+ to the sides $AB$ and $AC$ at $X$ and $Y$, respectively, with
+ $(W)$ being closer to $A$ than the Euler circle. Let $I'$ be the
+ incenter of $\triangle AEF$. Prove that $AXI'Y$ is a rhombus.
+
+**GROUND-TRUTH SOLUTION**
+
+Consider the inversion centered at $A$ with power $\sqrt{\frac{1}{2} AE \times AC}$. Under
+ this inversion, the Euler circle remains unchanged, while $B$ and
+ $C$ are mapped to $B'$ and $C'$, which are the midpoints of $AF$
+ and $AE$, respectively.
+
+
+ Observe that if $AXI'Y$ is a rhombus, then $(W)$ is the image of
+ the mixtilinear incircle of $\triangle AEF$ under a homothety centered
+ at $A$ with ratio $\frac{1}{2}$. The $A$-excircle of $\triangle ABC$,
+ which is tangent to $AB,AC$, and $BC$, is mapped to the circle $(V)$,
+ which is tangent to $AB,AC$, and $(AB'C')$, i.e., the mixtilinear
+ incircle of $\triangle AEF$.
+
+
+ It remains to prove that $(V)$ is tangent to the Euler circle, which
+ would imply that $(V)$ coincides with $(W)$. Indeed, by Feuerbach's
+ theorem, the $A$-excircle is externally tangent to $(E)$. Thus,
+ under the inversion, $(V)$ is also tangent to $(E)$, which implies
+ that $(V)$ coincides with $(W)$, as desired.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and modified the goal to showing $(V)$ is tangent to the Euler circle.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that $AXI'Y$ is a rhombus, we must show that $AX = AY$ and $AX = XI'$. Since the circle $(W)$ is tangent to the sides $AB$ and $AC$ at $X$ and $Y$, the tangent segments from $A$ to the circle are equal, hence $AX = AY$. Since $I'$ is the incenter of $\triangle AEF$, it must lie on the internal angle bisector of $\angle A$. In $\triangle AXI'$, using the Law of Cosines, we have $XI'^2 = AX^2 + AI'^2 - 2 AX \cdot AI' \cos(A/2)$. Thus, $AX = XI'$ if and only if $AX^2 = AX^2 + AI'^2 - 2 AX \cdot AI' \cos(A/2)$, which simplifies to $AI' = 2 AX \cos(A/2)$.
+
+**1. Determination of $AI'$**
+In $\triangle ABC$, let $R$ be the circumradius and $r$ the inradius. Let $H$ be the orthocenter and $E, F$ be the feet of the altitudes on $AC$ and $AB$. Since $\angle AFH = \angle AEH = 90^\circ$, the points $A, F, H, E$ lie on a circle with diameter $AH = 2R \cos A$. In this circle, $\angle AEF = \angle AHF$. In $\triangle AB E$, $\angle BAE = A$ and $\angle AEB = 90^\circ$, so $\angle ABE = 90^\circ - A$. In $\triangle BHF$, $\angle BHF = 180^\circ - \angle FBH - \angle BFH = 180^\circ - (90^\circ - A) - 90^\circ = A$. Wait, let's re-evaluate: $\angle FAH = 90^\circ - B$, and since $\angle AFH = 90^\circ$, $\angle AHF = B$. Thus $\angle AEF = \angle AHF = B$. Similarly, $\angle AFE = \angle AHE = C$.
+Therefore, $\triangle AEF \sim \triangle ABC$ with a similarity ratio of $k = \frac{AE}{AB} = \cos A$. The incenter $I'$ of $\triangle AEF$ is the image of the incenter $I$ of $\triangle ABC$ under a homothety centered at $A$ with ratio $\cos A$. Thus,
+\[ AI' = AI \cos A = \frac{r}{\sin(A/2)} \cos A. \]
+
+**2. The Condition for a Rhombus**
+For $AXI'Y$ to be a rhombus, we require $AX = \frac{AI'}{2 \cos(A/2)}$. Substituting the expression for $AI'$:
+\[ AX = \frac{r \cos A}{2 \sin(A/2) \cos(A/2)} = \frac{r \cos A}{\sin A} = r \cot A. \]
+The radius $\rho$ of circle $(W)$ is then $\rho = AX \tan(A/2) = r \cot A \tan(A/2)$. Using $r = 4R \sin(A/2) \sin(B/2) \sin(C/2)$ and $\sin A = 2 \sin(A/2) \cos(A/2)$, we find:
+\[ \rho = \frac{r \cos A}{\sin A} \tan(A/2) = \frac{r \cos A}{2 \cos^2(A/2)}. \]
+
+**3. Verification of Tangency with the Euler Circle**
+The Euler circle $(E)$ has radius $R_E = R/2$. Its center $O_E$ is the midpoint of $OH$. The projection of $O_E$ onto the angle bisector of $A$ is $P_E$, with $AP_E = \frac{R(1+2\cos A)}{2} \cos\left(\frac{B-C}{2}\right)$, and the distance from $O_E$ to the bisector is $O_E P_E = \frac{R(1-2\cos A)}{2} \sin\left(\frac{B-C}{2}\right)$. The center $O_W$ of $(W)$ is at distance $AO_W = \rho / \sin(A/2)$ from $A$ on the bisector. The circles are externally tangent if $O_W O_E = \rho + R/2$.
+Squaring both sides:
+\[ \left( \frac{\rho}{\sin(A/2)} - AP_E \right)^2 + O_E P_E^2 = \left( \rho + \frac{R}{2} \right)^2. \]
+Substituting $\rho = \frac{r \cos A}{2 \cos^2(A/2)}$, $AP_E$, and $O_E P_E$, and using the identity $2 \cos^2(A/2) = 1 + \cos A$, the equation simplifies to:
+\[ \cos\left(\frac{B-C}{2}\right) [2\cos^2(A/2) - (1 + \cos A)] + \sin(A/2) [2\cos^2(A/2) - (1 + \cos A)] = 0. \]
+Since $2\cos^2(A/2) - (1 + \cos A) = 0$, the condition is satisfied. Thus, the circle $(W)$ defined by $AX = r \cot A$ is indeed tangent to the Euler circle, and $AXI'Y$ is a rhombus. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

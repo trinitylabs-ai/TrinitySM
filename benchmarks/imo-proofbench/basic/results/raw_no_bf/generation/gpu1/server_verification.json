@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-09-13T01:45:51.959024+00:00",
+  "endpoint": "http://127.0.0.1:8031/v1",
+  "model": "google/gemma-4-31B-it",
+  "model_root": "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it/snapshots/842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "max_model_len": 262144,
+  "pid": 144522,
+  "process_start_ticks": "16362291",
+  "argv_sha256": "79a32376b5db3ad126d0bd5bb91e934732cdd6da336e4701986cf98aa5dfdbaa",
+  "speculative_config": {
+    "method": "mtp",
+    "model": "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it-assistant/snapshots/627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+    "num_speculative_tokens": 4
+  },
+  "dtype": "bfloat16",
+  "reasoning_parser": "gemma4"
+}

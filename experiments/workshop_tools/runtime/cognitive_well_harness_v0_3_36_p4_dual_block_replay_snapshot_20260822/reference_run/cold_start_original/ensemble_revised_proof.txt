@@ -1,0 +1,32 @@
+To determine the values of $\theta$ for which Mulan can guarantee victory, we analyze the game using the concept of a "winning set" of triangles.
+
+**1. Definition of the Winning Set**
+Let $W$ be the set of triangles from which Mulan can force a win in finitely many steps. A triangle $T$ is in $W$ if:
+(i) $T$ has at least one angle equal to $\theta$.
+(ii) There exists a cut from a vertex to the opposite side that divides $T$ into two triangles $T_1$ and $T_2$ such that both $T_1 \in W$ and $T_2 \in W$.
+
+**2. The Case where $180^\circ/\theta = n$ for some integer $n \ge 2$**
+Assume $\theta = 180^\circ/n$. Let $S = \{ k\theta \mid k \in \mathbb{Z}^+, 0 < k\theta < 180^\circ \}$. We claim that any triangle containing an angle $\alpha \in S$ is in $W$.
+We prove this by induction on $k$ for an angle $\alpha = k\theta$:
+- **Base case ($k=1$):** If $T$ has an angle $\theta$, then $T \in W$ by definition.
+- **Inductive step:** Assume any triangle with an angle $m\theta$ for $1 \le m < k$ is in $W$. Consider a triangle $T$ with an angle $k\theta$. Mulan can cut this angle into $\theta$ and $(k-1)\theta$. The two resulting triangles, $T_1$ and $T_2$, will have angles $\theta$ and $(k-1)\theta$ respectively. Since $\theta \in S$ and $(k-1)\theta \in S$ (and $k-1 < k$), both $T_1, T_2 \in W$ by the inductive hypothesis. Thus, $T \in W$.
+
+Now we show that any triangle $T(A, B, C)$ is in $W$ if $180^\circ/\theta = n$.
+Mulan chooses a vertex, say $C$, and makes a cut to the opposite side $AB$. Let $\phi$ be the angle $\angle APC$ (where $P$ is the cut point). The range of $\phi$ is $(A, A+C)$. The length of this interval is $C$.
+- If any angle of $T$ is in $S$, then $T \in W$ by the previous lemma.
+- If no angle is in $S$, Mulan can win if she can choose $\phi$ such that both $\phi \in S$ and $180^\circ - \phi \in S$.
+If $\phi = k\theta$, then $180^\circ - \phi = 180^\circ - k\theta = (n-k)\theta$. Both $k\theta$ and $(n-k)\theta$ are in $S$. Thus, if $\phi = k\theta$, then $T_1 \in W$ and $T_2 \in W$.
+Since at least one angle of $T$ must be $\ge 60^\circ$, and $n \ge 2$ implies $\theta \le 90^\circ$, at least one angle (say $C$) satisfies $C \ge \theta$ unless $n=2$ (where $C$ could be $< 90^\circ$). In any case, for $n \ge 2$, the interval $(A, A+C)$ contains at least one multiple $k\theta$ unless $A$ is already a multiple of $\theta$. Specifically, if $C \ge \theta$, the interval $(A, A+C)$ must contain a multiple of $\theta$ unless $A = m\theta$, in which case $T$ already contains an angle in $S$. 
+Thus, Mulan can always force a win if $180^\circ/\theta$ is an integer $n \ge 2$.
+
+**3. The Case where $180^\circ/\theta$ is not an integer**
+If $180^\circ/\theta \notin \mathbb{Z}$, then there are no positive integers $k, m$ such that $k\theta + m\theta = 180^\circ$. 
+Let $S = \{ k\theta \mid k \in \mathbb{Z}^+ \}$. We claim that if $T \in W$, then $T$ must have an angle in $S$.
+- If $T$ has an angle $\theta$, then it has an angle in $S$.
+- If $T$ does not have an angle in $S$, for $T$ to be in $W$, Mulan must split it into $T_1, T_2 \in W$. By the inductive assumption, both $T_1$ and $T_2$ must contain an angle in $S$. Since $T$ had no such angle, these angles must be the ones created by the cut: $\phi$ and $180^\circ - \phi$.
+- This requires $\phi = k\theta$ and $180^\circ - \phi = m\theta$, which implies $180^\circ = (k+m)\theta$, contradicting that $180^\circ/\theta$ is not an integer.
+Thus, if $180^\circ/\theta \notin \mathbb{Z}$, Mulan can only win if $T$ initially has an angle in $S$. Since Shan-Yu chooses $T$, he can choose a triangle (e.g., equilateral) with no angles in $S$ (unless $\theta = 60^\circ$ or $120^\circ$, but these divide $180^\circ$ evenly).
+
+The values of $\theta$ are those for which $180^\circ/\theta = n$ for $n \in \{2, 3, 4, \dots\}$.
+
+\boxed{\theta = \frac{180^\circ}{n} \text{ for } n \in \{2, 3, 4, \dots\}}

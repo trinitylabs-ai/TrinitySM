@@ -1,0 +1,8 @@
+{
+  "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+  "executable": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/.venv/bin/python",
+  "prefix": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/.venv",
+  "platform": "Linux-6.8.0-110-generic-x86_64-with-glibc2.35",
+  "packages": {},
+  "builds": {}
+}

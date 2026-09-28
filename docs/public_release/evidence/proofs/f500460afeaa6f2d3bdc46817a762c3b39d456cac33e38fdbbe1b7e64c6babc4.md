@@ -1,0 +1,44 @@
+To determine all functions $f: \mathbb{R}_{>0} \to \mathbb{R}_{>0}$ such that for every $x, y > 0$,
+$$\sqrt{\frac{x^2 + f(y)^2}{2}} \ge \frac{f(x) + y}{2} \ge \sqrt{x f(y)},$$
+we proceed as follows.
+
+**1. Identifying a general property of $f$**
+Let $x = f(y)$. The given chain of inequalities becomes:
+$$\sqrt{\frac{f(y)^2 + f(y)^2}{2}} \ge \frac{f(f(y)) + y}{2} \ge \sqrt{f(y) f(y)} \implies f(y) \ge \frac{f(f(y)) + y}{2} \ge f(y).$$
+This forces $f(f(y)) = 2f(y) - y$ for all $y > 0$.
+Let $c(x) = f(x) - x$. Then $f(x) = x + c(x)$. The equation $f(f(x)) = 2f(x) - x$ implies:
+$$f(x) + c(f(x)) = 2f(x) - x \implies c(f(x)) = f(x) - x = c(x).$$
+Thus, $c(f(x)) = c(x)$ for all $x > 0$. By induction, $f^{(n)}(x) = x + n c(x)$ for all $n \in \mathbb{N}$. Since the codomain of $f$ is $\mathbb{R}_{>0}$, we must have $x + n c(x) > 0$ for all $n \in \mathbb{N}$ and $x > 0$, which implies $c(x) \ge 0$ for all $x > 0$.
+
+**2. Deriving bounds on $c(x)$**
+From the second inequality $\frac{f(x) + y}{2} \ge \sqrt{x f(y)}$, we have:
+$$f(x) + y \ge 2\sqrt{x f(y)}.$$
+Let $z = f(y)$. Since $c(f(y)) = c(y)$, we have $y = z - c(y) = z - c(z)$. Substituting these into the inequality:
+$$x + c(x) + z - c(z) \ge 2\sqrt{xz} \implies c(x) - c(z) \ge 2\sqrt{xz} - x - z = -(\sqrt{x} - \sqrt{z})^2.$$
+This holds for all $x > 0$ and $z \in \text{Im}(f)$. If $x$ is also in $\text{Im}(f)$, then by symmetry $c(z) - c(x) \ge -(\sqrt{z} - \sqrt{x})^2$. Thus, for any $x, z \in \text{Im}(f)$:
+$$|c(x) - c(z)| \le (\sqrt{x} - \sqrt{z})^2.$$
+
+**3. Proving $c(x)$ is constant**
+Let $x, z \in \text{Im}(f)$ be arbitrary. Let $a = c(x)$ and $b = c(z)$. Since $c(f(x)) = c(x)$, the iterates $x_n = x + na$ and $z_m = z + mb$ are also in $\text{Im}(f)$ for all $n, m \in \mathbb{N}$, and they satisfy $c(x_n) = a$ and $c(z_m) = b$. Substituting these into the derived inequality:
+$$|a - b| \le (\sqrt{x + na} - \sqrt{z + mb})^2 \quad \text{for all } n, m \in \mathbb{N}.$$
+We consider two cases:
+Case 1: $a, b > 0$.
+We examine the term $\sqrt{x + na} - \sqrt{z + mb} = \frac{(x - z) + (na - mb)}{\sqrt{x + na} + \sqrt{z + mb}}$.
+If $a/b \in \mathbb{Q}$, let $a/b = p/q$ for $p, q \in \mathbb{N}$. Choosing $n = kq$ and $m = kp$ for $k \in \mathbb{N}$ makes $na - mb = 0$. As $k \to \infty$, the expression tends to 0.
+If $a/b \notin \mathbb{Q}$, by Kronecker's Theorem, the set $\{na - mb : n, m \in \mathbb{N}\}$ is dense in $\mathbb{R}$. We can choose sequences $n_k, m_k \to \infty$ such that $|n_k a - m_k b| < 1$. Then the expression again tends to 0 as $k \to \infty$.
+In both scenarios, we find $|a - b| \le 0$, so $a = b$.
+
+Case 2: $c(x) = 0$ for some $x \in \text{Im}(f)$.
+Let $x_0 \in \text{Im}(f)$ such that $c(x_0) = 0$. Then $f(x_0) = x_0$. The inequality $\frac{f(x_0) + y}{2} \ge \sqrt{x_0 f(y)}$ implies $f(y) \le \frac{(x_0 + y)^2}{4x_0}$, so $c(y) \le \frac{(x_0 - y)^2}{4x_0}$ for all $y > 0$.
+If $c(y) > 0$ for some $y$, then $y_n = y + nc(y) \in \text{Im}(f)$ for all $n \in \mathbb{N}$. The inequality $c(y_n) \le \frac{(x_0 - y_n)^2}{4x_0}$ must hold for all $n$, meaning $|x_0 - y_n| \ge \sqrt{4x_0 c(y)}$. However, the distance from $x_0$ to the set $\{y + nc(y) : n \in \mathbb{N}\}$ is at most $c(y)$. Thus $c(y) \ge \sqrt{4x_0 c(y)} \implies c(y) \ge 4x_0$.
+But $c(y) \le \frac{(x_0 - y)^2}{4x_0}$ for all $y$. For $y \in (x_0 - 4x_0, x_0 + 4x_0)$, we have $c(y) < 4x_0$, forcing $c(y) = 0$. Thus $c(y) = 0$ for all $y \in (0, 5x_0)$. By repeating this argument with $x_1 = 4x_0$, we find $c(y) = 0$ for all $y \in (0, 20x_0)$, and by induction, $c(y) = 0$ for all $y > 0$.
+
+In all cases, $c(x)$ is constant on $\text{Im}(f)$. Since $c(y) = c(f(y))$ and $f(y) \in \text{Im}(f)$, $c(y)$ is a constant $c \ge 0$ for all $y > 0$. Thus $f(x) = x + c$.
+
+**4. Final Verification**
+Substituting $f(x) = x + c$ into the original inequalities:
+- $\sqrt{\frac{x^2 + (y+c)^2}{2}} \ge \frac{x+c+y}{2} \iff 2x^2 + 2(y+c)^2 \ge (x+y+c)^2 \iff (x - (y+c))^2 \ge 0$.
+- $\frac{x+c+y}{2} \ge \sqrt{x(y+c)} \iff (x+y+c)^2 \ge 4x(y+c) \iff (x - (y+c))^2 \ge 0$.
+Both are satisfied for any $c \ge 0$.
+
+The functions are $f(x) = x + c$ for any constant $c \ge 0$.

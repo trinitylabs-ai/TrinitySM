@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "fa5aa23ba26de98c1c504f0f55a9b33ec5df4172735ecf137169804f2bddafaa",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "088d3afcd2b32f63d1fcf86d1e3a11acc90fec041153495bbeda7614299588e1",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "98f49c0576e9a63ed4f81b8681b976b071411012d7b827b190b891cc65550746",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proof's decisive step merely asserts that the angle conditions force \\(\\vec O\\cdot\\vec B=c^2/4+\\delta\\) and \\(\\vec O\\cdot\\vec C=b^2/4+\\delta\\), without deriving these identities. Their difference is exactly the conclusion already identified at the start, so this is an unsupported central inference under Rule E.",
+    "summary": "The submission correctly reduces the desired distance equality to a dot-product identity and records several valid sine-law, cosine-law, and circumcenter equations. However, it never connects those equations and the remaining angle conditions to the required dot-product identity. The final appeal to symmetry simply restates the target through an unspecified common \\(\\delta\\), leaving the main content of the problem unproved.",
+    "strengths": [
+      "Correctly derives that \\(OM=ON\\) is equivalent to \\(\\vec O\\cdot(\\vec C-\\vec B)=(b^2-c^2)/4\\).",
+      "The displayed sine-law formulas for \\(AK,AL,MK,LN\\) and the cosine-law relations are consistent with the stated angle definitions.",
+      "Correctly uses the circumcenter condition to obtain \\(\\vec O\\cdot\\vec K=AK^2/2\\) and \\(\\vec O\\cdot\\vec L=AL^2/2\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "No calculation or geometric argument shows how the circumcenter equations for \\(K,L\\) imply the required projections onto \\(B,C\\). The claimed common-\\(\\delta\\) relations are equivalent to the desired conclusion rather than a proved intermediate result."
+      },
+      {
+        "severity": "substantial",
+        "description": "The assertion that \\(K\\) and \\(L\\) are uniquely determined for fixed \\(\\alpha\\) is unsupported, and even uniqueness would not imply the stated projection balance or constitute the claimed symmetry."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:02:46.262285+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00052",
+  "native_rejection_count": 0
+}

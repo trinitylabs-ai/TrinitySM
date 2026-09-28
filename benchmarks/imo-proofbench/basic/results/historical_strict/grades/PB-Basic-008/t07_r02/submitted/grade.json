@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T21:46:20.266512+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 8,
+  "problem_id": "PB-Basic-008",
+  "case_id": "PB-Basic-008.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/problems/PB-Basic-008.json",
+  "reference_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/references/PB-Basic-008.md",
+  "proof_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/proofs/PB-Basic-008/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+  "reference_sha256": "ad671ff51b719ad08d069a872df41c8f8b089a5976e753f040ea64b9b784dfb8",
+  "proof_sha256": "e69dfcb4802a3ca305e749a0fac80485c796dd1d910dafa97100d4e62985f72f",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "4310784e5fc3c310ebaaa7de17e98ba61275c55b46669bf5d8cdcf19d9bea15b",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The compactness argument, classification of interior critical points, one-variable analysis, and boundary analysis together correctly prove the inequality and identify the equality case.",
+    "strengths": [
+      "Correctly reduces every interior critical point to the two-equal-variable case.",
+      "Establishes the global minimum in that case through a valid derivative and root-counting analysis.",
+      "Handles all boundary cases and obtains strict positivity there."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

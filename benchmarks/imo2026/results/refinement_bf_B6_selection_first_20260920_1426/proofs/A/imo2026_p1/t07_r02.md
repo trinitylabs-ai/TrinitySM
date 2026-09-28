@@ -1,0 +1,33 @@
+To solve the problem, we analyze the operation performed on the integers on the blackboard.
+
+### Part (1): Termination and Final State
+
+Let the integers on the blackboard at any time be represented by the set $S = \{x_1, x_2, \dots, x_{2026}\}$. A move consists of choosing two integers $m, n \in S$ such that $m > 1$ and $n > 1$, and replacing them with $g = \gcd(m, n)$ and $L = \frac{\text{lcm}(m, n)}{\gcd(m, n)}$.
+
+We first prove that the process terminates in finitely many moves. Define a potential function $\Phi(S) = (P(S), N(S))$, where $P(S) = \prod_{i=1}^{2026} x_i$ is the product of all integers on the board and $N(S)$ is the number of integers $x_i > 1$. We order these pairs lexicographically.
+
+In a move $(m, n) \to (g, L)$, the product $P$ changes as follows:
+$$P_{new} = P_{old} \cdot \frac{g \cdot L}{m \cdot n} = P_{old} \cdot \frac{\gcd(m, n) \cdot \frac{\text{lcm}(m, n)}{\gcd(m, n)}}{m \cdot n} = P_{old} \cdot \frac{\text{lcm}(m, n)}{m \cdot n} = \frac{P_{old}}{\gcd(m, n)}$$
+Since $m, n > 1$, we consider two cases:
+1. If $\gcd(m, n) > 1$, then $P_{new} < P_{old}$. Thus, $\Phi(S)$ strictly decreases.
+2. If $\gcd(m, n) = 1$, then $P_{new} = P_{old}$. In this case, $g = 1$ and $L = \text{lcm}(m, n) = mn$. Since $m, n > 1$, $L$ is still greater than 1. The number of integers greater than 1, $N(S)$, decreases by exactly 1 (because $m$ and $n$ were both $>1$, and now only $L$ is $>1$). Thus, $\Phi(S)$ strictly decreases.
+
+Since $P(S)$ is a positive integer and $N(S)$ is a non-negative integer, the process must terminate. Termination occurs when no more moves are possible, which happens if and only if $N(S) \le 1$.
+
+We now show that the process ends with exactly one integer $M > 1$. A move requires $m, n > 1$. For $N(S)$ to become 0, a move $(m, n)$ would have to result in both $g=1$ and $L=1$. This would imply $\text{lcm}(m, n) = \gcd(m, n) = 1$, which contradicts the condition $m, n > 1$. Thus, $N(S)$ can decrease by at most 1 in each move. Starting from $N(S) = 2026$, the process must terminate at $N(S) = 1$.
+
+### Part (2): Invariance of the Final Value $M$
+
+Let $p$ be an arbitrary prime. For any integer $x$, let $v_p(x)$ denote the exponent of $p$ in the prime factorization of $x$. Let the exponents of $p$ for the integers on the board be $e_1, e_2, \dots, e_{2026}$.
+In a move $(m, n) \to (g, L)$, the exponents $v_p(m)$ and $v_p(n)$ are replaced by:
+$$v_p(g) = v_p(\gcd(m, n)) = \min(v_p(m), v_p(n))$$
+$$v_p(L) = v_p\left(\frac{\text{lcm}(m, n)}{\gcd(m, n)}\right) = v_p(\text{lcm}(m, n)) - v_p(\gcd(m, n)) = \max(v_p(m), v_p(n)) - \min(v_p(m), v_p(n))$$
+Let $a = v_p(m)$ and $b = v_p(n)$. The operation on the exponents is $(a, b) \to (\min(a, b), |a - b|)$. A fundamental property of this operation is that it preserves the greatest common divisor:
+$$\gcd(\min(a, b), |a - b|) = \gcd(a, b)$$
+Therefore, for every prime $p$, the value $G_p = \gcd(v_p(x_1), v_p(x_2), \dots, v_p(x_{2026}))$ is invariant throughout the process.
+
+When the process terminates, exactly one integer $M$ is greater than 1, and all other integers are 1. For any prime $p$, the exponents on the board are $(v_p(M), 0, 0, \dots, 0)$. The invariant $G_p$ must therefore satisfy:
+$$G_p = \gcd(v_p(M), 0, \dots, 0) = v_p(M)$$
+Thus, the final integer $M$ is uniquely determined by the initial values:
+$$M = \prod_{p} p^{\gcd(v_p(x_1), v_p(x_2), \dots, v_p(x_{2026}))}$$
+This value depends only on the initial set of integers and not on the choices made by Confucius.

@@ -1,0 +1,56 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t07_r02",
+  "group": "tool_rewrite",
+  "grader_candidate": "tool_rewrite_t07_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/tool_rewrite_t07_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+  "v1_score": 6,
+  "v1_grade": "docs/public_release/evidence/grades/3fef3da994eaab0fc6e77f6c3a1268d27090b01a36544439dca658fc2be8dd6c.json",
+  "v1_reconstructed_prompt_sha256": "f550f30736ac9f89b8ab0a79ef60b8f147ca6f7a7094376a6a349ab223f907aa",
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t07_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:30:43.276840+00:00",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The conversion of the three unsigned angle equalities into E1, E2, E3 uses the false identity cot(angle(u,v))=(u·v)/(u×v) with a signed determinant; the correct denominator is |u×v|. The proof neither fixes an orientation nor explicitly verifies that the two determinants in each comparison have the same sign.",
+    "summary": "The circumcenter calculation, reduction to T=0, and explicit algebraic certificate are coherent. However, the polynomial equations feeding that certificate are obtained through a false load-bearing signed-angle formula. Interiority does make the relevant determinant pairs have matching signs, so the proof can be repaired by a short affine-coordinate sign check, but that check is not actually supplied; the later generic reference to “correct sides” does not establish the three needed comparisons. Rule C therefore caps the score at 5.",
+    "strengths": [
+      "Correctly proves that A,K,L are noncollinear and writes the circumcenter coordinates.",
+      "Correctly reduces OM=ON to the explicit polynomial identity T=0.",
+      "Provides a fully specified finite algebraic certificate showing that E1=E2=E3 together with the two stated guards implies T=0."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The central angle-to-polynomial translation omits absolute values in the cotangent formula and does not prove the necessary matching orientation signs. Thus the hypotheses E1=E2=E3 used by the certificate are not validly derived as submitted."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "5f35280d4178e8178e14da6b463f88209e45eb6ae79d49bbf41f08ddd2dcbd1b",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

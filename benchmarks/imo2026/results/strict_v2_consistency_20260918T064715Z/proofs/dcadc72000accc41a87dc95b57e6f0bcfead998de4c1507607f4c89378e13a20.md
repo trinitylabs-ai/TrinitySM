@@ -1,0 +1,38 @@
+To solve the problem, we analyze the evolution of the integers on the blackboard under the specified operation.
+
+### Part (1): Termination of the Process
+
+Let $n = 2026$. Let the integers on the blackboard at any given time be $a_1, a_2, \dots, a_n$. Confucius chooses two integers $m, n > 1$ and replaces them with $g = \gcd(m, n)$ and $h = \frac{\text{lcm}(m, n)}{\gcd(m, n)}$.
+
+We define a potential function to track the progress of the system. Let $\Omega(k)$ denote the total number of prime factors of $k$ counted with multiplicity (e.g., $\Omega(12) = \Omega(2^2 \cdot 3) = 3$, and $\Omega(1) = 0$). Let $\Omega_{\text{total}} = \sum_{i=1}^n \Omega(a_i)$ and let $N(a)$ be the number of integers on the blackboard greater than 1.
+
+Consider the effect of one move replacing $m, n > 1$ with $g$ and $h$. We use the identity $\text{lcm}(m, n) \cdot \gcd(m, n) = m \cdot n$.
+The sum of the prime factor counts for the new pair is:
+\[ \Omega(g) + \Omega(h) = \Omega(\gcd(m, n)) + \Omega\left(\frac{\text{lcm}(m, n)}{\gcd(m, n)}\right) = \Omega(\text{lcm}(m, n)). \]
+The sum for the original pair was:
+\[ \Omega(m) + \Omega(n) = \Omega(m \cdot n) = \Omega(\text{lcm}(m, n)) + \Omega(\gcd(m, n)). \]
+Therefore, the change in $\Omega_{\text{total}}$ is:
+\[ \Delta \Omega_{\text{total}} = \Omega(g) + \Omega(h) - (\Omega(m) + \Omega(n)) = -\Omega(\gcd(m, n)). \]
+
+We analyze two cases for the move:
+1.  If $\gcd(m, n) > 1$, then $\Omega(\gcd(m, n)) \ge 1$, so $\Omega_{\text{total}}$ strictly decreases.
+2.  If $\gcd(m, n) = 1$, then $\Omega_{\text{total}}$ remains constant. However, in this case, $g = 1$ and $h = \text{lcm}(m, n) = mn$. Since $m, n > 1$, we have $h > 1$. The pair $(m, n)$ is replaced by $(1, mn)$, which reduces the number of integers greater than 1, $N(a)$, by exactly 1.
+
+We define the potential of the system as the pair $(\Omega_{\text{total}}, N(a))$. Under every possible move, this potential strictly decreases in lexicographical order. Since $\Omega_{\text{total}} \ge 0$ and $N(a) \ge 0$, the process must terminate in finitely many moves. Termination occurs when no two integers $m, n > 1$ can be chosen, meaning $N(a) \le 1$. 
+
+Since the initial $\Omega_{\text{total}} \ge n > 0$ and the total count of prime factors $\Omega_{\text{total}}$ only decreases when $g > 1$ (and $h = \text{lcm}(m, n) > 1$ always), $\Omega_{\text{total}}$ remains at least 1 throughout the process. Thus, the final state must satisfy $N(a) = 1$, meaning exactly one integer $M > 1$ remains on the blackboard.
+
+### Part (2): Invariance of the value $M$
+
+For any prime $p$, let $v_p(k)$ denote the exponent of $p$ in the prime factorization of $k$. The operation $(m, n) \to (g, h)$ transforms the exponents $x = v_p(m)$ and $y = v_p(n)$ as follows:
+\[ v_p(g) = v_p(\gcd(m, n)) = \min(x, y), \]
+\[ v_p(h) = v_p\left(\frac{\text{lcm}(m, n)}{\gcd(m, n)}\right) = v_p(\text{lcm}(m, n)) - v_p(\gcd(m, n)) = \max(x, y) - \min(x, y) = |x - y|. \]
+This transformation $(x, y) \to (\min(x, y), |x - y|)$ is the fundamental step of the subtractive Euclidean algorithm. A key property of this algorithm is that it preserves the greatest common divisor of the operands:
+\[ \gcd(x, y) = \gcd(\min(x, y), |x - y|). \]
+Consequently, for any prime $p$, the value $G_p = \gcd(v_p(a_1), v_p(a_2), \dots, v_p(a_n))$ is invariant under the operation.
+
+At the end of the process, only one integer $M > 1$ remains, while all other $a_i = 1$. For any prime $p$, the set of exponents is $\{v_p(M), 0, 0, \dots, 0\}$. The GCD of this final set is:
+\[ \gcd(v_p(M), 0, \dots, 0) = v_p(M). \]
+By the invariance of $G_p$, we must have:
+\[ v_p(M) = \gcd(v_p(a_1), v_p(a_2), \dots, v_p(a_n)). \]
+This value depends only on the initial integers $a_1, \dots, a_n$ and is independent of the choices made by Confucius. Thus, $M = \prod_p p^{G_p}$ is invariant. $\square$

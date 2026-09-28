@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T21:45:57.275698+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 8,
+  "problem_id": "PB-Basic-008",
+  "case_id": "PB-Basic-008.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/problems/PB-Basic-008.json",
+  "reference_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/references/PB-Basic-008.md",
+  "proof_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/proofs/PB-Basic-008/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+  "reference_sha256": "ad671ff51b719ad08d069a872df41c8f8b089a5976e753f040ea64b9b784dfb8",
+  "proof_sha256": "bbc36248f270b6a1527791c50deb43a765ccbf2883739093d844d0413729ce2b",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "4310784e5fc3c310ebaaa7de17e98ba61275c55b46669bf5d8cdcf19d9bea15b",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The one-variable minimum classification omits the endpoint \\(x=0\\), which is also a one-sided local minimum; its positive value is only implicitly covered later by the boundary analysis.",
+    "summary": "The compactness, Lagrange-multiplier reduction, equal-variable analysis, and boundary argument correctly establish the inequality. The derivative sign analysis is terse but sufficient; the omitted endpoint check is minor and does not undermine the global conclusion.",
+    "strengths": [
+      "Correctly reduces every interior critical point to a case with at least two equal variables.",
+      "The derivative structure shows that the symmetric point is the only interior local minimum on the equal-variable slice.",
+      "The boundary is correctly reduced to a concave one-variable function with positive endpoint values."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The list of one-variable local minima omits \\(x=0\\), where \\(f(0)=1\\); this is repaired directly by the subsequent boundary computation."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

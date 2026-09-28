@@ -1,0 +1,66 @@
+{
+  "problem_id": "imo2026_p6",
+  "submission_id": "proof_99c087893fe0810da64f08befbc92d7b",
+  "pass_index": 2,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the false assertion that, when A = P(a_{n+1}) is a minimal member of G_{n+1}, every q in A has an old S_q with A ∩ S_q = {q}. Minimality among G_n ∪ {A} does not make A an inclusion-minimal hitting set. For example, starting with a_1=18 gives a_2=20, G_1={{2,3}}, and A={2,5}; A is minimal in G_2, but q=5 has no such witness, and P_2 strictly contains P_1. Thus P_n is not shown to be non-increasing and the central stabilization claim collapses. This is an unsupported decisive structural inference under Rule E, giving a ceiling of 3.",
+    "summary": "The support/hitting-set reformulation and the conditional argument after stabilization are useful progress, but the proof of stabilization is invalid and replaces the central part of the problem. Moreover, the submission concludes only a_{n+T}=a_n+L for n≥N, with no argument extending this to every positive n; Rule D independently caps the score at 3. Repairing these issues requires a new finiteness/compatibility idea rather than a local calculation.",
+    "strengths": [
+      "Correctly reformulates the gcd conditions using prime-support hitting sets and describes the update of the minimal-support antichain.",
+      "Obtains a bounded-gap observation from the bounded nondecreasing minimum product of a hitting set.",
+      "Correctly observes that, if G_n eventually became constant with finite prime union, its accepted integers would form a periodic set modulo the product of those primes, yielding affine periodicity on the tail."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "From P(a_1) hitting G_n it does not follow merely by definition that some S∈G_n is contained in P(a_1). The containment is true for a different reason—G_n consists of minimal members of a family containing P(a_1)—so this is locally repairable."
+      },
+      {
+        "severity": "major",
+        "description": "Minimality of P(a_{n+1}) as an element of G_n∪{P(a_{n+1})} is confused with minimality as a hitting set. Consequently the claimed witnesses S_q and the deduction P(a_{n+1})⊆P_n are false, so P_n need not be non-increasing."
+      },
+      {
+        "severity": "major",
+        "description": "The P-smooth-number argument does not establish stabilization. Even if gaps between consecutive P-smooth numbers eventually grow, a_{n+1} being within m of the arbitrary, possibly non-P-smooth integer a_n gives no contradiction. The stated exception involving containment in an old member is also unsupported."
+      },
+      {
+        "severity": "major",
+        "description": "The final conclusion holds only for n≥N. No argument shows that a single translation period also matches the finite initial segment, as required for every positive n; this is precisely the unhandled-range defect covered by Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "proof_sha256": "99c087893fe0810da64f08befbc92d7b99c755a6eb80f5c1aeb575e372f13af9",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "evidence_sha256": "6e049cff6ee9f32c86dd4917f68f04556e51d24adb2b0888aee16fc08137dff4",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p6/t10_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "d81c6036ea93af585e4b6c394a93d7ad97fcd80b0013fde5f34aeee2144ae615",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "92470cb4c1e53331ccfaf8bc78b8fe9b355a0a67003306c93f3e6cee09fd01a4",
+    "raw_response_1.txt": "6f65bf50f3ead97af2da497e20f95c1da065bab9192c4fa6bab62159bac86a60",
+    "summary.json": "c1858d5856e7889c54ffe35bbab8b0472ed9870fb416a29910047b30c76d4e2e"
+  }
+}

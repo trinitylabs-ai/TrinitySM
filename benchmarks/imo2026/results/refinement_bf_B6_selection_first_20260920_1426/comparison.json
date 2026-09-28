@@ -1,0 +1,3152 @@
+{
+  "state": "completed",
+  "schema": "refinement-bf-published-comparison-v1",
+  "completed_at": "2026-09-20T15:37:48.196165+00:00",
+  "primary_metric": "Average two grades per proof, then all four candidates per problem; equal weight across six problems.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "A_grades_reused": 48,
+  "B_new_grade_invocations": 48,
+  "B_grader_process_attempts": 48,
+  "retry_errors": [],
+  "new_proofs_additional_five": 20,
+  "p4_regenerated": false,
+  "timing_comparable": false,
+  "summary": {
+    "A": {
+      "equal_weight_problem_mean": 4.041666666666667,
+      "sum_per_problem_best_by_pass": [
+        29,
+        29
+      ],
+      "sum_per_problem_best_two_pass_mean": 29.0,
+      "both_passes_7_count": 5,
+      "fallback_count": 2,
+      "disagreement_count": 4
+    },
+    "B": {
+      "equal_weight_problem_mean": 4.395833333333333,
+      "sum_per_problem_best_by_pass": [
+        30,
+        30
+      ],
+      "sum_per_problem_best_two_pass_mean": 30.0,
+      "both_passes_7_count": 8,
+      "fallback_count": 1,
+      "disagreement_count": 1
+    },
+    "mean_delta": 0.3541666666666661
+  },
+  "run_id": "refinement_bf_B6_selection_first_20260920_1426",
+  "lanes": [
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "A",
+      "candidate_id": "t10_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 2381.362573,
+      "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+      "proof_file_sha256": "797c61d622de03d1aa928c2f5c50a327c9d2b6cba04bdf97d9530f5ab4192c47",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "None.",
+        "None; the proof is complete and correct."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p1/t10_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p1/t10_r01/pass_1.json",
+        "grades/A/imo2026_p1/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+          "proof_file_sha256": "797c61d622de03d1aa928c2f5c50a327c9d2b6cba04bdf97d9530f5ab4192c47",
+          "elapsed_seconds": 772.99159,
+          "started_at": "2026-09-14T19:08:57.426204+00:00",
+          "completed_at": "2026-09-14T19:21:50.417794+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/input/lazy_checked_baseline/t10_r01.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+          "proof_file_sha256": "797c61d622de03d1aa928c2f5c50a327c9d2b6cba04bdf97d9530f5ab4192c47",
+          "elapsed_seconds": 702.686,
+          "started_at": "2026-09-14T19:22:41.733513+00:00",
+          "completed_at": "2026-09-14T19:34:24.419513+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/input/lazy_checked_baseline/t10_r01.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+          "proof_file_sha256": "797c61d622de03d1aa928c2f5c50a327c9d2b6cba04bdf97d9530f5ab4192c47",
+          "elapsed_seconds": 905.684983,
+          "started_at": "2026-09-15T16:47:10.088707+00:00",
+          "completed_at": "2026-09-15T17:02:15.773690+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p1_c3_t10r01_20260915T164615Z/generation/run/input/t10_r01.R1-C2.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "A",
+      "candidate_id": "t10_r02",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_1",
+      "fallback": {
+        "stage": "refinement_2",
+        "error": "RuntimeError: fusion_t04 failures: {\"imo2026_p1.t10_r02\": \"FusionAcceptanceCertificationError: RuntimeError: audit_fusion_acceptance exhausted recovery caps (49152, 49152, 49152): CERTIFIED requires NONE in all three defect fields\"}",
+        "original_stage": "R1-C2"
+      },
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 791.551645,
+      "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+      "proof_file_sha256": "7d469be4a94433b38efb41238358e54fc4b723a6cb94ac0b50af5caf5282e342",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect. The parenthetical claim that h=lcm(m,n)>1 always is false (for example, m=n=2 gives h=1), but it is extraneous: the preceding case analysis already shows that g>1 in the first case and h=mn>1 in the coprime case. Thus the Rule C deletion test is satisfied.",
+        "No decisive defect or grading cap applies. The parenthetical suggesting that h equals lcm(m,n) “always” is literally inaccurate, but the preceding case analysis already proves that at least one replacement entry exceeds 1, so the deletion-test carve-out makes this non-load-bearing."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p1/t10_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p1/t10_r02/pass_1.json",
+        "grades/A/imo2026_p1/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+          "proof_file_sha256": "7d469be4a94433b38efb41238358e54fc4b723a6cb94ac0b50af5caf5282e342",
+          "elapsed_seconds": 791.551645,
+          "started_at": "2026-09-14T19:08:57.409149+00:00",
+          "completed_at": "2026-09-14T19:22:08.960794+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/input/lazy_checked_baseline/t10_r02.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "A",
+      "candidate_id": "t07_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3154.619702,
+      "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+      "proof_file_sha256": "ed0c7d3766e64578fc183ee9a10deceec538654588db7a4551cbde8cb9b988f1",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect; none of Rules A–F applies.",
+        "No decisive defect."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p1/t07_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p1/t07_r01/pass_1.json",
+        "grades/A/imo2026_p1/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "289aa4e91d6b07b764946ef74a274351edaa8593b6460b2c6990c643d9aabd0f",
+          "proof_file_sha256": "906a77d37e992e943ebdf5555ca4c86454d23435a0c6e9efc8155fde6fd445e8",
+          "elapsed_seconds": 800.496196,
+          "started_at": "2026-09-14T19:08:57.427954+00:00",
+          "completed_at": "2026-09-14T19:22:17.924150+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/input/lazy_checked_baseline/t07_r01.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "289aa4e91d6b07b764946ef74a274351edaa8593b6460b2c6990c643d9aabd0f",
+          "proof_file_sha256": "906a77d37e992e943ebdf5555ca4c86454d23435a0c6e9efc8155fde6fd445e8",
+          "elapsed_seconds": 958.746416,
+          "started_at": "2026-09-14T19:22:41.749262+00:00",
+          "completed_at": "2026-09-14T19:38:40.495678+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/input/lazy_checked_baseline/t07_r01.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+          "proof_file_sha256": "ed0c7d3766e64578fc183ee9a10deceec538654588db7a4551cbde8cb9b988f1",
+          "elapsed_seconds": 1395.37709,
+          "started_at": "2026-09-15T16:47:10.042087+00:00",
+          "completed_at": "2026-09-15T17:10:25.419177+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p1_c3_t07r01_20260915T164615Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p1.t07_r01/resolver/temperature_0_4/gpu0/p1/t07_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "A",
+      "candidate_id": "t07_r02",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3100.524477,
+      "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+      "proof_file_sha256": "d9c01f5ce2c0d9d200fa60aaa2cc54229253bea57903f5a919239a91773724aa",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect; no grading cap applies.",
+        "No decisive defect."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p1/t07_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p1/t07_r02/pass_1.json",
+        "grades/A/imo2026_p1/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+          "proof_file_sha256": "d9c01f5ce2c0d9d200fa60aaa2cc54229253bea57903f5a919239a91773724aa",
+          "elapsed_seconds": 824.264247,
+          "started_at": "2026-09-14T19:08:57.427906+00:00",
+          "completed_at": "2026-09-14T19:22:41.692153+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+          "proof_file_sha256": "d9c01f5ce2c0d9d200fa60aaa2cc54229253bea57903f5a919239a91773724aa",
+          "elapsed_seconds": 1386.391305,
+          "started_at": "2026-09-14T19:22:41.744659+00:00",
+          "completed_at": "2026-09-14T19:45:48.135964+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p1/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+          "proof_file_sha256": "d9c01f5ce2c0d9d200fa60aaa2cc54229253bea57903f5a919239a91773724aa",
+          "elapsed_seconds": 889.868925,
+          "started_at": "2026-09-15T16:47:10.017089+00:00",
+          "completed_at": "2026-09-15T17:01:59.886014+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p1_c3_t07r02_20260915T164615Z/generation/run/input/t07_r02.R1-C2.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "B",
+      "candidate_id": "t10_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3869.320187377045,
+      "completed_checkpoint_seconds": 3869.320187377045,
+      "proof_sha256": "9e54f66dc5e7621bc37c2e51de6db57349246cefef176fae7f738ef08c68d771",
+      "proof_file_sha256": "187867751e3e9e101c8b41dae19b5e4bf634540168f567971d8cced2434be644",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "None; no grading-rule defect applies.",
+        "No decisive defect."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p1/t10_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p1/t10_r01/pass_1.json",
+        "grades/B/imo2026_p1/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "c6dbe067802b0130dfbb1f3da4db94d94734fec84a479f7181b30672377eda4e",
+          "elapsed_seconds": 1457.5686536479043
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "9e54f66dc5e7621bc37c2e51de6db57349246cefef176fae7f738ef08c68d771",
+          "elapsed_seconds": 1069.7595850350335
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "9e54f66dc5e7621bc37c2e51de6db57349246cefef176fae7f738ef08c68d771",
+          "elapsed_seconds": 1341.9919486941071
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "B",
+      "candidate_id": "t10_r02",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3287.1206353130983,
+      "completed_checkpoint_seconds": 3287.1206353130983,
+      "proof_sha256": "b5c61024c942d118f0041c9eef04eb68a863c24287a57600f729c66f79df10bc",
+      "proof_file_sha256": "d42ce95df96750d181a2a419898fbff84c5420cfe3a2e53a9f1d172b250dc13d",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect; none of Rules A–F imposes a cap.",
+        "No decisive defect."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p1/t10_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p1/t10_r02/pass_1.json",
+        "grades/B/imo2026_p1/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "b5c61024c942d118f0041c9eef04eb68a863c24287a57600f729c66f79df10bc",
+          "elapsed_seconds": 1102.0789825170068
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "b5c61024c942d118f0041c9eef04eb68a863c24287a57600f729c66f79df10bc",
+          "elapsed_seconds": 775.0823991260258
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "b5c61024c942d118f0041c9eef04eb68a863c24287a57600f729c66f79df10bc",
+          "elapsed_seconds": 1409.9592536700657
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "B",
+      "candidate_id": "t07_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3767.9745798500953,
+      "completed_checkpoint_seconds": 3767.9745798500953,
+      "proof_sha256": "909b371cce26d1ff3ec8d274f0ae8f989318516b75c1803040f93ced00f10839",
+      "proof_file_sha256": "9471cbc0e0120d59fc44a2375eeaec60665441440faf56074989133c8274f9e3",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "None; the proof is complete and correct.",
+        "No decisive defect; no grading rule imposes a cap."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p1/t07_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p1/t07_r01/pass_1.json",
+        "grades/B/imo2026_p1/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "a884a90fc0cfd7daa6dc7ed7cf0cddfb823f9b45c13427b3bd92bdba66b1050a",
+          "elapsed_seconds": 1525.9405225380324
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "909b371cce26d1ff3ec8d274f0ae8f989318516b75c1803040f93ced00f10839",
+          "elapsed_seconds": 926.9854765690397
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "909b371cce26d1ff3ec8d274f0ae8f989318516b75c1803040f93ced00f10839",
+          "elapsed_seconds": 1315.0485807430232
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "arm": "B",
+      "candidate_id": "t07_r02",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3401.29917626502,
+      "completed_checkpoint_seconds": 3401.29917626502,
+      "proof_sha256": "76d4c3a1b565ff1225650798f114ca47e9bacecd288af7b736e0dd92ccb3f798",
+      "proof_file_sha256": "1cd5c7c94c6a004c004f57e026bb68e7d0c4ab5291cf1adf42e35845ec3002c0",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "None; the proof is complete and correct, so no grading-rule cap applies.",
+        "No decisive defect; no grading rule imposes a deduction."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p1/t07_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p1/t07_r02/pass_1.json",
+        "grades/B/imo2026_p1/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+          "elapsed_seconds": 1444.0922245739494
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "f01926c2f97d69959f1f8a782e700f94119b6c7236014e050ee7d1200196d4e9",
+          "elapsed_seconds": 844.2582628270611
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "76d4c3a1b565ff1225650798f114ca47e9bacecd288af7b736e0dd92ccb3f798",
+          "elapsed_seconds": 1112.9486888640095
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "A",
+      "candidate_id": "t10_r01",
+      "scores": [
+        4,
+        4
+      ],
+      "mean_score": 4.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3493.309268,
+      "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+      "proof_file_sha256": "2aa08745ee64577eec39a33b885631b8f82c9ffd31fe0061deab2fdf33cb928a",
+      "verdicts": [
+        "substantial_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "After correctly reducing the conclusion to the displayed identity involving AK, AL, b, c, and the angles, the submission merely asserts that the remaining angle conditions force this identity. No derivation is supplied; uniqueness, even if proved, would not imply the identity. This is the decisive missing calculation under Rule B.",
+        "After reducing the goal to the displayed trigonometric identity, the submission merely asserts that the angle conditions force that identity. The claimed uniqueness of K and L is unproved and, even if true, would not imply the identity. Thus the central compatibility/elimination argument is missing."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p2/t10_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p2/t10_r01/pass_1.json",
+        "grades/A/imo2026_p2/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "af57a809f997d7072881d69f85f61e266f32ca08e3eda06791be8617a3e5ccbe",
+          "proof_file_sha256": "9dc900fff775cd4ca6bf36e962081e26a0ef7f2896a30ee0ddcab252bfacd81c",
+          "elapsed_seconds": 1428.813054,
+          "started_at": "2026-09-14T20:00:33.240693+00:00",
+          "completed_at": "2026-09-14T20:24:22.053747+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "eab5df4d155db41ed7c46972b2c991dedab4c7f69e5805ff84b504ba9b1b2648",
+          "proof_file_sha256": "0e81fbf40b70c7b14dad10b04b744fc7351e0f9dd7b5e3f35758d8e5488ecca1",
+          "elapsed_seconds": 1315.241854,
+          "started_at": "2026-09-14T20:26:48.041866+00:00",
+          "completed_at": "2026-09-14T20:48:43.283720+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+          "proof_file_sha256": "2aa08745ee64577eec39a33b885631b8f82c9ffd31fe0061deab2fdf33cb928a",
+          "elapsed_seconds": 749.25436,
+          "started_at": "2026-09-15T06:49:06.660769+00:00",
+          "completed_at": "2026-09-15T07:01:35.915129+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p2_c3_t10r01_then_v327_20260915T063548Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "A",
+      "candidate_id": "t10_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3369.199772,
+      "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+      "proof_file_sha256": "732234ac22d13fd7194a060f0e0e7cc771dfdb74f167fa53ca1a0ff1e155e4bc",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The circumcircle argument incorrectly states that ∠ANM=B and ∠AMN=C; in fact they are C and B, respectively. Hence the claimed conditions θ_K=γ−B and θ_L=β−C are false. This is a load-bearing false assertion under Rule C.",
+        "The decisive break occurs when the circumcircle ω is introduced. From MN ∥ BC one has ∠ANM = C and ∠AMN = B, not the reverse, so the stated cyclicity criteria and resulting formulas for θ_K and θ_L are incorrect. More fundamentally, the proof then assumes K,L ∈ ω without deriving this from the hypotheses; this is an unsupported central inference under Rule E."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p2/t10_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p2/t10_r02/pass_1.json",
+        "grades/A/imo2026_p2/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "4a19b18f8eaf35418e1a2e96e57fcec95a078019f69cd7c5b06be49d0d289d80",
+          "proof_file_sha256": "e2d233fec520c9639488691a7220a1d9391c383574129c59c297f2d14072f623",
+          "elapsed_seconds": 666.193327,
+          "started_at": "2026-09-14T20:00:33.222014+00:00",
+          "completed_at": "2026-09-14T20:11:39.415341+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p2.t10_r02/resolver/temperature_0_4/gpu0/p2/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "7551c4f602d0ce24d8277b4d7aee17dffcef08cb928159d85a0d15ab06e6d344",
+          "proof_file_sha256": "62d3e358cd3d19f5d77b8d44674a23137cb131d245ef43e86d3edd8146fcc8c4",
+          "elapsed_seconds": 1478.37454,
+          "started_at": "2026-09-14T20:26:48.063236+00:00",
+          "completed_at": "2026-09-14T20:51:26.437776+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p2.t10_r02/resolver/temperature_0_4/gpu0/p2/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+          "proof_file_sha256": "732234ac22d13fd7194a060f0e0e7cc771dfdb74f167fa53ca1a0ff1e155e4bc",
+          "elapsed_seconds": 1224.631905,
+          "started_at": "2026-09-15T07:44:46.436301+00:00",
+          "completed_at": "2026-09-15T08:05:11.068206+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p2_c3_t10r02_then_v327_20260915T063548Z/generation/run/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p2.t10_r02/resolver/temperature_0_4/gpu0/p2/t10_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "A",
+      "candidate_id": "t07_r01",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 4548.271648,
+      "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+      "proof_file_sha256": "1dbe902b90379a80c8b2d0e9c384c450021c09cf35c7b7b2c027c18f493d7474",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first load-bearing error is a sign reversal when expanding P·(b−c): the correct c-dependent terms are +kc sin(phi_L)−lc sin(A−theta_K), whereas the submission obtains their negatives. This is a false load-bearing calculation under Rule C.",
+        "The expansion of P·(b−c) has both mixed c-terms with reversed signs. Its numerator should contain +kc sin(phi_L)−lc sin(A−theta_K), not −kc sin(phi_L)+lc sin(A−theta_K). This is a false load-bearing calculation under Rule C."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p2/t07_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p2/t07_r01/pass_1.json",
+        "grades/A/imo2026_p2/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "f97c8297358f675f2676cba8ce57f6d2dbac5b29b7af984b59764dccdecd29db",
+          "proof_file_sha256": "96348fbd5cd6a5df153cbcfeec977c604075914efa98afd6195617108bcbda37",
+          "elapsed_seconds": 1301.507448,
+          "started_at": "2026-09-14T20:00:33.237303+00:00",
+          "completed_at": "2026-09-14T20:22:14.744751+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "23feec1ac75e7a6215585ec3ac95fa9a83af9be6723a251621bc688c79c9dfd9",
+          "proof_file_sha256": "abc972abec88b1f5f088e1a1b07e8aa249fefc59ccfa9deee7e8c1412ce26ee9",
+          "elapsed_seconds": 1812.38099,
+          "started_at": "2026-09-14T20:26:48.047171+00:00",
+          "completed_at": "2026-09-14T20:57:00.428161+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+          "proof_file_sha256": "1dbe902b90379a80c8b2d0e9c384c450021c09cf35c7b7b2c027c18f493d7474",
+          "elapsed_seconds": 1434.38321,
+          "started_at": "2026-09-15T09:07:59.332070+00:00",
+          "completed_at": "2026-09-15T09:31:53.715280+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p2_c3_t07r01_then_v327_20260915T063548Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "A",
+      "candidate_id": "t07_r02",
+      "scores": [
+        3,
+        4
+      ],
+      "mean_score": 3.5,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 4440.007801,
+      "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+      "proof_file_sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c",
+      "verdicts": [
+        "major_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "The decisive final step is only asserted: the solution never converts the remaining conditions ∠LBK=β and ∠LCK=γ into equations or proves that the displayed trigonometric expression equals (b²−c²)/4.",
+        "The final assertion that the displayed trigonometric expression simplifies to \\(\\tfrac14(b^2-c^2)\\) is not derived: the remaining angle constraints are never converted into compatibility equations or used in an elimination."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p2/t07_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p2/t07_r02/pass_1.json",
+        "grades/A/imo2026_p2/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "39169d752c862c843063caaaa26033465184291b3700e47b11e4535062c60b9c",
+          "proof_file_sha256": "d968a0264cd4ae7c5557e18f5f07d086de5a34c1b332c39da84e2e168b1c9bf1",
+          "elapsed_seconds": 1574.747693,
+          "started_at": "2026-09-14T20:00:33.238777+00:00",
+          "completed_at": "2026-09-14T20:26:47.986470+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "db4ac9df8903e543f252acb4f69e3361178b956fc246b249b79968669cf0761a",
+          "proof_file_sha256": "7daa0031718760d603fa71cece1a2dfe5a3fdddf56291d50453879f25aeed794",
+          "elapsed_seconds": 1515.826373,
+          "started_at": "2026-09-14T20:26:48.062977+00:00",
+          "completed_at": "2026-09-14T20:52:03.889350+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p2/02_r1_cycles/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+          "proof_file_sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c",
+          "elapsed_seconds": 1349.433735,
+          "started_at": "2026-09-15T05:45:11.705372+00:00",
+          "completed_at": "2026-09-15T06:07:41.139107+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/generation/run/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "B",
+      "candidate_id": "t10_r01",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4461.850162135903,
+      "completed_checkpoint_seconds": 4461.850162135903,
+      "proof_sha256": "d945c5f2451f73799f914bb9bd2d865b667c8ec60795e64f2b64b832857a06fa",
+      "proof_file_sha256": "f34efaa32470ca1e15d8ff21ba765e4e6fab7318eaf17ea80dd2a11f0e7e8c91",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The final paragraph invokes symmetry to assert the required real-part identity, but the symmetry merely interchanges OM and ON; it does not imply that these two quantities are equal in the original configuration.",
+        "The final appeal to symmetry is an unsupported decisive inference: exchanging \u0000B,M,\u0000\u0000 with \u0000C,N\u0000\u0000 and \u0000\u0000beta\u0000\u0000 with \u0000\u0000gamma\u0000\u0000 only exchanges \u0000OM\u0000 and \u0000ON\u0000 in the transformed configuration; it does not prove their equality in the original configuration. This is a central gap under Rule E."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p2/t10_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p2/t10_r01/pass_1.json",
+        "grades/B/imo2026_p2/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "258c0d5598947923204fa9343c96a0a641862f47f9935791c368e34e6b65e408",
+          "elapsed_seconds": 1370.5060767569812
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "8fbeb325804c15db8a1e6454fe423adb0ab1d7cbcf75678b481c6d39856d7492",
+          "elapsed_seconds": 1278.184560596943
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "d945c5f2451f73799f914bb9bd2d865b667c8ec60795e64f2b64b832857a06fa",
+          "elapsed_seconds": 1813.1595247819787
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "B",
+      "candidate_id": "t10_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3302.81980946206,
+      "completed_checkpoint_seconds": 3302.81980946206,
+      "proof_sha256": "5b8ba6821659ebe9d37a07e0216a3ce16d01d9b960e50961a81a33904a65b80a",
+      "proof_file_sha256": "d1b93fb6df942c841591f442e1ea18fd391af775ce7c785ea4b953de860d2248",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect occurs in the treatment of triangle LNC. Since N lies on AC, the rays CN and CA coincide, so ∠LCN=∠LCA=∠ACL=α, not α−γ. Moreover, with angles α and β at C and N, the sine law gives LN=(b/2)sinα/sin(α+β), not (b/2)sin(α−γ)/sinβ. Thus the asserted formula for cot θ_L is false and load-bearing (Rule C).",
+        "The first decisive defect is the claim that ∠LCN = α−γ. Since N lies on AC, the ray CN is exactly the ray CA, so ∠LCN = ∠LCA = α. This false load-bearing angle relation invalidates the ensuing sine-law and cotangent formulas, invoking Rule C."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p2/t10_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p2/t10_r02/pass_1.json",
+        "grades/B/imo2026_p2/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "3b15950679e6833489034df6de747213269233af6b02771ff55c185d35d517da",
+          "elapsed_seconds": 699.9116302899783
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "8676c8488e67b6a46221065a3157f196ee9337a2cb02e7603c24437cfa4a8f63",
+          "elapsed_seconds": 1036.9568750410108
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "5b8ba6821659ebe9d37a07e0216a3ce16d01d9b960e50961a81a33904a65b80a",
+          "elapsed_seconds": 1565.951304131071
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "B",
+      "candidate_id": "t07_r01",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3740.758125416003,
+      "completed_checkpoint_seconds": 3740.758125416003,
+      "proof_sha256": "108d77e2116d1fdfc5dbf8b11f1d8007d0e2acd774df97d9f8191733c8ef7ac4",
+      "proof_file_sha256": "dea59347cc2ecc28bb19f5c87aa50ac9cb9b0b2a73dcbd7cbf08057e981d8dbf",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect is the claim that symmetry under exchanging B and C forces β=γ. Such invariance only sends a configuration with parameters (β,γ) to a swapped configuration with parameters (γ,β); it does not imply that the original configuration is fixed by the swap. No argument from the angle conditions establishes β=γ. This is an unsupported central structural inference, so Rule E caps the score at 3.",
+        "The first decisive defect is the claim that symmetry under exchanging B and C forces β=γ. That symmetry sends a configuration to another swapped configuration; it does not make every configuration fixed under the exchange. No argument from the angle and incidence conditions establishing β=γ is supplied. This is an unsupported central structural inference, so Rule E caps the score at 3."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p2/t07_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p2/t07_r01/pass_1.json",
+        "grades/B/imo2026_p2/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "3f1073fec3b34d43fe7785cbcd1c9c3672135da5308198ec4949dcc5c44e319b",
+          "elapsed_seconds": 1714.4734444229398
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "951dcc0f66c88a4bf3616d6d18ebbd2019fa827bbd4423a0c480c46c38528e93",
+          "elapsed_seconds": 822.2007609390421
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "108d77e2116d1fdfc5dbf8b11f1d8007d0e2acd774df97d9f8191733c8ef7ac4",
+          "elapsed_seconds": 1204.0839200540213
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "arm": "B",
+      "candidate_id": "t07_r02",
+      "scores": [
+        4,
+        4
+      ],
+      "mean_score": 4.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3428.1548857198795,
+      "completed_checkpoint_seconds": 3428.1548857198795,
+      "proof_sha256": "c82a39cf41f3dcb21ad765e493ece7a6c3fe59ac4e598739ec63b68f1312a53d",
+      "proof_file_sha256": "e52248945e5100437610b04e79977e2dd30b15b677b217a99672450cb513f49d",
+      "verdicts": [
+        "substantial_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "The final displayed trigonometric identity is never derived from the two cross-angle conditions. The assertion that uniqueness and the preceding relations “ensure” it does not constitute a proof; uniqueness would not itself imply the identity. This is a substantial missing derivation governed by Rule B.",
+        "The final trigonometric identity is simply asserted to follow from ∠LBK=β and ∠LCK=γ. The claimed uniqueness of K and L neither proves nor explains this compatibility identity. This is the substantial load-bearing derivation missing under Rule B."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p2/t07_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p2/t07_r02/pass_1.json",
+        "grades/B/imo2026_p2/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "075969bdd4e31d6f596f7f93e1ee44e9c9b7ee6169b5dfbcea605dce4cb990f1",
+          "elapsed_seconds": 958.8224815930007
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "20783628025481278dc805ad5de5b89d93e3d55a516f62ec9f167f46a26f128b",
+          "elapsed_seconds": 1082.2523410079302
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "c82a39cf41f3dcb21ad765e493ece7a6c3fe59ac4e598739ec63b68f1312a53d",
+          "elapsed_seconds": 1387.0800631189486
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "A",
+      "candidate_id": "t10_r01",
+      "scores": [
+        1,
+        1
+      ],
+      "mean_score": 1.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 4636.870208,
+      "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+      "proof_file_sha256": "8932f2ea7698b495ae70c359ad22aa5bff4e183756ae1a7541055d11ab402ca1",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The asserted “known property” expressing the alternating sorted sum as a maximum over balanced sign assignments is false. For example, for lengths 0.5, 0.3, 0.2, the alternating sum is 0.4, whereas the stated maximum is 0.5+0.3-0.2=0.6. Thus the subsequent Val_i optimization does not bound the actual payoff. This is a central invalid inference under Rule E; additionally, the incorrect final answer invokes Rule A.",
+        "The claimed characterization of the sorted alternating sum as a maximum over arbitrary sign assignments is false. For example, for lengths (0.4,0.4,0.1,0.1), the alternating sum is 0, whereas the maximum with two positive and two negative signs is 0.6. Thus the central lower-bound argument does not follow."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p3/t10_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p3/t10_r01/pass_1.json",
+        "grades/A/imo2026_p3/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "a43393f2de71cc6666c029e9d7010e8a7bdd0a6a9e20f9b5e9c2165270edd540",
+          "proof_file_sha256": "a4d7ab8dd87302d2b88cc34385da957b61e87cd9b42ffd0b20c2b8cc9592c9ba",
+          "elapsed_seconds": 1588.328217,
+          "started_at": "2026-09-14T21:17:00.030690+00:00",
+          "completed_at": "2026-09-14T21:43:28.358907+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p3.t10_r01/resolver/temperature_0_4/gpu0/p3/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "2e59f2cd24464278f1a78cb19a280afa8795c24e0a1c3cf7022c4fe3d1f8fd9f",
+          "proof_file_sha256": "09a41ad9b798b2879d0f823d23d44f8a81449b76c5fc6df12d64d34fd64bdeaa",
+          "elapsed_seconds": 1719.211794,
+          "started_at": "2026-09-14T21:48:21.802508+00:00",
+          "completed_at": "2026-09-14T22:17:01.014302+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p3.t10_r01/resolver/temperature_0_4/gpu0/p3/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+          "proof_file_sha256": "8932f2ea7698b495ae70c359ad22aa5bff4e183756ae1a7541055d11ab402ca1",
+          "elapsed_seconds": 1329.330197,
+          "started_at": "2026-09-15T17:10:30.315772+00:00",
+          "completed_at": "2026-09-15T17:32:39.645969+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p3_c3_t10r01_20260915T164615Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p3.t10_r01/resolver/temperature_0_4/gpu0/p3/t10_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "A",
+      "candidate_id": "t10_r02",
+      "scores": [
+        2,
+        2
+      ],
+      "mean_score": 2.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 5704.9139780000005,
+      "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+      "proof_file_sha256": "db371b9c4514666491e5d4df76edd1c6f3d0282e306a40020b79bad6bcdfdd94",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "Rule A applies: the claimed value is false. Already for n=2 the actual value is 4/7, not the claimed 3/5. The first decisive proof failure is the unsupported assertion that equalizing all pieces minimizes Liu's payoff.",
+        "The lower-bound claim that equalizing the pieces is Xiang's best response is unsupported and false. For n=2, Liu's proposed lengths are 3/5, 1/5, 1/5; Xiang can split the 3/5 piece into 1/4, 1/4, 1/10, leaving sorted lengths 1/4, 1/4, 1/5, 1/5, 1/10. Liu then receives 11/20, less than the claimed 3/5."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p3/t10_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p3/t10_r02/pass_1.json",
+        "grades/A/imo2026_p3/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "b90fc385c94728a404b433250372f47981c2ae87561889b365de27aec2b27aff",
+          "proof_file_sha256": "ac91b1f808d9c7105d3bef16fe2c88c5e13e1f4c405936b89b3eabe3d32ed159",
+          "elapsed_seconds": 1881.682047,
+          "started_at": "2026-09-14T21:17:00.048779+00:00",
+          "completed_at": "2026-09-14T21:48:21.730826+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p3.t10_r02/resolver/temperature_0_4/gpu0/p3/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "0b7b8665c4643251b37cdd632f21154c0a8409c2ad4651118ae956b2c50126b3",
+          "proof_file_sha256": "a4fd550963e9682174579287b22955f0d43bdcc9d29d1c48e200b869757cfe0d",
+          "elapsed_seconds": 1851.248496,
+          "started_at": "2026-09-14T21:48:21.798489+00:00",
+          "completed_at": "2026-09-14T22:19:13.046985+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p3.t10_r02/resolver/temperature_0_4/gpu0/p3/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+          "proof_file_sha256": "db371b9c4514666491e5d4df76edd1c6f3d0282e306a40020b79bad6bcdfdd94",
+          "elapsed_seconds": 1971.983435,
+          "started_at": "2026-09-15T17:10:30.397687+00:00",
+          "completed_at": "2026-09-15T17:43:22.381122+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p3_c3_t10r02_20260915T164615Z/generation/run/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p3.t10_r02/resolver/temperature_0_4/gpu0/p3/t10_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "A",
+      "candidate_id": "t07_r01",
+      "scores": [
+        2,
+        1
+      ],
+      "mean_score": 1.5,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3745.722761,
+      "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+      "proof_file_sha256": "2b9388ba1931ec52639cb6db051c249bb7cd30327f751c44cfb3c643de0afbf8",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The first decisive defect is the false lower-bound claim for the proposed construction. For n=2, Liu's gaps are 3/5, 1/5, 1/5; Xiang may use just one mark to bisect the 3/5 gap, producing 3/10, 3/10, 1/5, 1/5, from which Liu receives only 1/2, not 3/5.",
+        "The first load-bearing defect is the unsupported assertion that Xiang minimizes Liu's payoff by dividing each original piece equally (Rule E). The subsequent lower-bound analysis consequently does not cover arbitrary responses and soon makes a false claim: for n=2, the proposed partition (3/5,1/5,1/5) is defeated when Xiang bisects the 3/5 piece, producing (3/10,3/10,1/5,1/5), from which Liu receives only 1/2."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p3/t07_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p3/t07_r01/pass_1.json",
+        "grades/A/imo2026_p3/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "16ced43f60743b320d1a0a1196bce73b5a28d958d3cad15a50a15c7cb0e114f9",
+          "proof_file_sha256": "993af1a368e929efb4e3b7b51c2c73674553761b9dfa600949b47ccabe46c95f",
+          "elapsed_seconds": 1864.934689,
+          "started_at": "2026-09-14T21:17:00.044828+00:00",
+          "completed_at": "2026-09-14T21:48:04.979517+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p3.t07_r01/resolver/temperature_0_4/gpu0/p3/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "4e3eab01590f6f2c94388a4496465d6cbbb0cd0bb7762d702141b421d2b1f298",
+          "proof_file_sha256": "1137f8cd2204a709a8db231bab55eff7f91ee3bb4833cc8dd956f28f50d615f8",
+          "elapsed_seconds": 1011.485176,
+          "started_at": "2026-09-14T21:48:21.797387+00:00",
+          "completed_at": "2026-09-14T22:05:13.282563+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p3.t07_r01/resolver/temperature_0_4/gpu0/p3/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+          "proof_file_sha256": "2b9388ba1931ec52639cb6db051c249bb7cd30327f751c44cfb3c643de0afbf8",
+          "elapsed_seconds": 869.302896,
+          "started_at": "2026-09-15T17:10:30.334502+00:00",
+          "completed_at": "2026-09-15T17:24:59.637398+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p3_c3_t07r01_20260915T164615Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p3.t07_r01/resolver/temperature_0_4/gpu0/p3/t07_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "A",
+      "candidate_id": "t07_r02",
+      "scores": [
+        2,
+        2
+      ],
+      "mean_score": 2.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 5280.0730269999995,
+      "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8",
+      "proof_file_sha256": "82f41532a7f47d82c9b2ec6ed1e3a98c753540e4adb7b46d9aa1696be557e1fd",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The first decisive defect is the false central assertion that, for Liu's equal partition, Xiang minimizes the alternating sum by splitting n intervals into equal halves. For n=2, Liu's three intervals have length 1/3, and Xiang may split just one into two pieces of length 1/6. The sorted lengths are 1/3,1/3,1/6,1/6, so Liu receives 1/2<3/5. Thus the proposed lower-bound strategy already fails.",
+        "The first decisive defect is the unsupported and false assertion that Xiang minimizes the alternating sum by placing one midpoint cut in each of n equal intervals. For n=2, Liu's three equal intervals can be answered by using both cuts to trisect one interval, producing lengths 1/3, 1/3, 1/9, 1/9, 1/9 and Liu receives 5/9<3/5. This is a false central inference under Rule E; moreover, the incorrect final answer invokes Rule A's score ceiling of 2."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p3/t07_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p3/t07_r02/pass_1.json",
+        "grades/A/imo2026_p3/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "45e68fef9738a025f98454f117d26052f006584fe1740d420b9ffc7d8232cc6c",
+          "proof_file_sha256": "233a410ec50d3b9583d02698597bc2ec7d92e866133560e3649e93a202153f33",
+          "elapsed_seconds": 1830.516176,
+          "started_at": "2026-09-14T21:17:00.029813+00:00",
+          "completed_at": "2026-09-14T21:47:30.545989+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p3.t07_r02/resolver/temperature_0_4/gpu0/p3/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "8800eaf49a5ff22c01bc46360f593ecb783991a55bf62426b319955bc413805e",
+          "proof_file_sha256": "671bf32c82d6ea71510a7ea5529bf7954f495edbdaa320fd576adc645c72dfa9",
+          "elapsed_seconds": 1601.955953,
+          "started_at": "2026-09-14T21:48:21.805156+00:00",
+          "completed_at": "2026-09-14T22:15:03.761109+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p3/02_r1_cycles/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p3.t07_r02/resolver/temperature_0_4/gpu0/p3/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8",
+          "proof_file_sha256": "82f41532a7f47d82c9b2ec6ed1e3a98c753540e4adb7b46d9aa1696be557e1fd",
+          "elapsed_seconds": 1847.600898,
+          "started_at": "2026-09-15T17:10:30.289341+00:00",
+          "completed_at": "2026-09-15T17:41:17.890239+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p3_c3_t07r02_20260915T164615Z/generation/run/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p3.t07_r02/resolver/temperature_0_4/gpu0/p3/t07_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "B",
+      "candidate_id": "t10_r01",
+      "scores": [
+        1,
+        1
+      ],
+      "mean_score": 1.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5403.734270432964,
+      "completed_checkpoint_seconds": 5403.734270432964,
+      "proof_sha256": "0c05a1cf0d084c9f4b19c4c2ed58c2f4c4ae5a91dcc367c88bdd180769cec386",
+      "proof_file_sha256": "8acf31fb7507cdff46fb371d69f66a15d24a11779874bd80be88b833b18c17cd",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The lower-bound inference that an uncut piece of length a implies L >= (1+a)/2 is false. For n=2, the proposed partition is (3/5,1/5,1/5); Xiang may bisect the 3/5 segment, producing (3/10,3/10,1/5,1/5), for which Liu receives only 1/2, not 3/5. This is a false load-bearing step under Rule C; moreover the final answer is false, so Rule A governs the score.",
+        "The lower-bound argument makes an invalid comparison of alternating sums: the concatenated local sign patterns generally have more than one extra positive sign and hence are not among the sign patterns defining S. The subsequent simplified inference is also false. For n=2, the proposed gaps are 3/5,1/5,1/5; Xiang can bisect the 3/5 gap, producing 3/10,3/10,1/5,1/5, so Liu receives only 1/2<3/5."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p3/t10_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p3/t10_r01/pass_1.json",
+        "grades/B/imo2026_p3/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "013a145681b7a278119a00b39d27f6d304a3037fb6024e9986acba7685b49311",
+          "elapsed_seconds": 1718.2838107239222
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "686bc2fea3632feac1444c2b9747468317d5bfae5b4d824efed4e5fef5e75a31",
+          "elapsed_seconds": 1975.4075443289476
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "0c05a1cf0d084c9f4b19c4c2ed58c2f4c4ae5a91dcc367c88bdd180769cec386",
+          "elapsed_seconds": 1710.0429153800942
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "B",
+      "candidate_id": "t10_r02",
+      "scores": [
+        1,
+        1
+      ],
+      "mean_score": 1.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 6100.098797846935,
+      "completed_checkpoint_seconds": 6100.098797846935,
+      "proof_sha256": "597d8ef1b5bc6801f125cacf5d5f02936739246b99fbf7cb5cc0ce982287978b",
+      "proof_file_sha256": "c18303176e1aa994ebbdaf4674d5b5ff92290815e33c3218e94f680fb438a687",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The asserted “known property” comparing the globally sorted alternating sum with the sum of the within-parent alternating sums is false. For n=2, let Liu create three equal thirds and let Xiang trisect one third. The global list is (1/3,1/3,1/9,1/9,1/9), whose discrepancy is 1/9, whereas the sum of the three within-parent discrepancies is 7/9.",
+        "The claimed inequality comparing the globally sorted alternating sum with the sum of the within-parent alternating sums is false. For n=1, with two initial pieces of length 1/2 and no Xiang mark, the global discrepancy is 0, whereas the two within-parent discrepancies sum to 1. This is a central false inference under Rule E."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p3/t10_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p3/t10_r02/pass_1.json",
+        "grades/B/imo2026_p3/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "f7719d11003aeba412bd8343bc3a7769eb6f0104f8cefc0033343c9cd9761ff3",
+          "elapsed_seconds": 2056.2106146940496
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "2f8a7abe4e678d1b09185f68a64f289b4bcbbe81837c552abecca417283e92ff",
+          "elapsed_seconds": 2067.8564898979384
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "597d8ef1b5bc6801f125cacf5d5f02936739246b99fbf7cb5cc0ce982287978b",
+          "elapsed_seconds": 1976.0316932549467
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "B",
+      "candidate_id": "t07_r01",
+      "scores": [
+        1,
+        1
+      ],
+      "mean_score": 1.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5848.050391842029,
+      "completed_checkpoint_seconds": 5848.050391842029,
+      "proof_sha256": "9a7ec53e98d9c9d8768064a484e9588877e181fc994e643b2dd4e979ebb313d6",
+      "proof_file_sha256": "d6b9084329321605aca0577acc45ef07f50aeb5eea379f35d708c27dc58f94a4",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The claimed lower-bound strategy already fails for n=2: Liu creates lengths 1/5, 2/5, 2/5, and Xiang can split the 1/5 piece into two 1/10 pieces. The sorted lengths are 2/5, 2/5, 1/10, 1/10, so Liu receives only 1/2<3/5. Thus the construction does not establish the claimed guarantee.",
+        "The proposed lower-bound strategy already fails for n=2: its initial lengths are 1/5, 2/5, 2/5, and Xiang can bisect the 1/5 piece, leaving sorted lengths 2/5, 2/5, 1/10, 1/10. Liu then receives only 1/2, not the claimed 3/5. Moreover, the actual n=2 value is 4/7, so the final classification is demonstrably false and Rule A applies."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p3/t07_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p3/t07_r01/pass_1.json",
+        "grades/B/imo2026_p3/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "d66a40942dfca6de44cf89ad7f1918f0ef755247b315856d168489434cf0a573",
+          "elapsed_seconds": 1814.5280103950063
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "3b164ddf6044a0f1518c0769ef968983a8207c1ffe096fd6ce0d6cbe166094bb",
+          "elapsed_seconds": 2099.233390178997
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "9a7ec53e98d9c9d8768064a484e9588877e181fc994e643b2dd4e979ebb313d6",
+          "elapsed_seconds": 1934.2889912680257
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "arm": "B",
+      "candidate_id": "t07_r02",
+      "scores": [
+        2,
+        2
+      ],
+      "mean_score": 2.0,
+      "selected_stage": "refinement_1",
+      "fallback": {
+        "stage": "refinement_2",
+        "error_type": "RuntimeError",
+        "error": "fusion_t04 failures: {\"imo2026_p3.t07_r02\": \"TimeoutRecoveryFailure: recovery request hit a token or time limit; fail closed\"}",
+        "at": "2026-09-20T11:51:10.822607+00:00"
+      },
+      "elapsed_seconds": 4150.060778275016,
+      "completed_checkpoint_seconds": 1896.913369441987,
+      "proof_sha256": "4555660e8718cf16d54e3f0da28fdc0dbbf32d2a7435a994360bf84ef46a14c7",
+      "proof_file_sha256": "65bb0655b0005cafa2d9814dad02b80457d9bf6c73bf84e570551338c6d365ba",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The claimed general lower bound is asserted after analyzing only the special case in which Xiang puts all cuts in one interval. It is false even for n=2: Liu's proposed gaps are 2/5, 2/5, 1/5, and Xiang may bisect the 1/5 gap using one mark, producing lengths 2/5, 2/5, 1/10, 1/10. Liu then receives only 1/2, not the claimed 3/5.",
+        "The general lower-bound claim is false. For n=2, the proposed gaps are 2/5, 2/5, 1/5; Xiang may use just one mark to bisect the 1/5 gap. The sorted pieces are 2/5, 2/5, 1/10, 1/10, so Liu receives only 1/2, not the claimed 3/5. Consequently Rule A applies."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p3/t07_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p3/t07_r02/pass_1.json",
+        "grades/B/imo2026_p3/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "4555660e8718cf16d54e3f0da28fdc0dbbf32d2a7435a994360bf84ef46a14c7",
+          "elapsed_seconds": 1896.913369441987
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "A",
+      "candidate_id": "t10_r01",
+      "scores": [
+        2,
+        2
+      ],
+      "mean_score": 2.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 4591.01337,
+      "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+      "proof_file_sha256": "490ab99f41964d41ec3628a938fd661e67ee85b3b6ad867157b36300fab8f375",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The necessity argument first fails when it claims that an equality 180°=(2^k+2^m)θ forces θ to belong to one of the two listed families. For example, k-m=2 gives 2^k+2^m=5·2^m, which is neither a power of 2 nor three times a power of 2. Thus θ=36° is not excluded. This makes the final classification false, so Rule A caps the score at 2.",
+        "The claimed classification is false, so Rule A applies. For example, θ=36°=180°/5 is a valid winning value but belongs to neither submitted family."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p4/t10_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p4/t10_r01/pass_1.json",
+        "grades/A/imo2026_p4/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "aa36355cb9716d2748cf84ad2fe89e2a48062b10a946b80ec37492e248bd8199",
+          "proof_file_sha256": "34c2e99b333849047ba2e89dfca56faf9dce6d07d104b12353e2c119606da1c8",
+          "elapsed_seconds": 1619.000785,
+          "started_at": "2026-09-14T22:29:20.365302+00:00",
+          "completed_at": "2026-09-14T22:56:19.366087+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "ec528072bc7845cc69e2fd9265b9707aef186cc257799cdb14742be83299dedf",
+          "proof_file_sha256": "05dd53588fb81c8dc53f61137d1b3b8fbf993fde38e0909f6db1d952894a4348",
+          "elapsed_seconds": 1584.53822,
+          "started_at": "2026-09-14T22:58:30.726132+00:00",
+          "completed_at": "2026-09-14T23:24:55.264352+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+          "proof_file_sha256": "490ab99f41964d41ec3628a938fd661e67ee85b3b6ad867157b36300fab8f375",
+          "elapsed_seconds": 1387.474365,
+          "started_at": "2026-09-15T14:46:55.106098+00:00",
+          "completed_at": "2026-09-15T15:10:02.580463+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p4_c3_t10r01_20260915T144230Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "A",
+      "candidate_id": "t10_r02",
+      "scores": [
+        3,
+        6
+      ],
+      "mean_score": 4.5,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 2556.438843,
+      "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+      "proof_file_sha256": "5b8e002769da667027603f1322b380b781a77c907f4c92920483bacb1f6da80e",
+      "verdicts": [
+        "major_gap",
+        "minor_gap"
+      ],
+      "first_issues": [
+        "The sufficiency proof claims that repeatedly cutting with P close to C forces the minimum angle below θ, but it only analyzes the child BPC containing the newly created small angle. Shan-Yu may instead retain ABP, and no invariant or finite-termination argument for that branch is supplied.",
+        "In the sufficiency proof, the assertion that a near-vertex cut can be repeated to force the minimum angle below θ does not explicitly account for Shan-Yu retaining the other child or prove finite termination. This is a minor, directly repairable omission under the 6-point category, not a Rule E central gap: repeatedly bisecting a chosen angle makes both children contain half that angle, so finitely many repetitions suffice."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p4/t10_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p4/t10_r02/pass_1.json",
+        "grades/A/imo2026_p4/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "22c4b023fd4f41fae68445f31d3cdd85ca03be29370fc2714a22ac4341a338c3",
+          "proof_file_sha256": "19db43193ec4a91dac25e38670a4e7baed6a3a65a82625aaf075d862598323bb",
+          "elapsed_seconds": 878.991877,
+          "started_at": "2026-09-14T22:29:20.380263+00:00",
+          "completed_at": "2026-09-14T22:43:59.372140+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p4.t10_r02/resolver/temperature_0_4/gpu0/p4/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "5319f4fd3f5599d6a2b825dc2c7bbdd417d4fea2b8ba68be44f19f8713269034",
+          "proof_file_sha256": "b63b026614acfc7acd209bb0ffab1d2e6847e8560a21a22d58865801be16c002",
+          "elapsed_seconds": 939.507332,
+          "started_at": "2026-09-14T22:58:30.722919+00:00",
+          "completed_at": "2026-09-14T23:14:10.230251+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p4.t10_r02/resolver/temperature_0_4/gpu0/p4/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+          "proof_file_sha256": "5b8e002769da667027603f1322b380b781a77c907f4c92920483bacb1f6da80e",
+          "elapsed_seconds": 737.939634,
+          "started_at": "2026-09-15T14:46:54.966330+00:00",
+          "completed_at": "2026-09-15T14:59:12.905964+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p4_c3_t10r02_20260915T144230Z/generation/run/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p4.t10_r02/resolver/temperature_0_4/gpu0/p4/t10_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "A",
+      "candidate_id": "t07_r01",
+      "scores": [
+        6,
+        6
+      ],
+      "mean_score": 6.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3071.1721850000004,
+      "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+      "proof_file_sha256": "0cd79f13e9da1266b2483ff5eaf2b7ac57bcbf6b9518e3610734a7c276fe92a6",
+      "verdicts": [
+        "minor_gap",
+        "minor_gap"
+      ],
+      "first_issues": [
+        "In the converse, the submission proves that every triangle having no angle in S is losing, but never explicitly establishes that such a starting triangle exists. This is repaired immediately by taking angles θ/2, θ/2, and 180°−θ; the last is not a positive multiple of θ because 180°/θ is nonintegral. This is a minor directly checkable omission under the score scale, not a Rule E central-idea gap.",
+        "In the converse, the proof shows that every triangle having no angle in S is losing, but it never explicitly establishes that such a starting triangle exists when 180°/θ is nonintegral. This is needed because Shan-Yu must choose an actual counterexample starting triangle. It is a directly repairable minor omission, not a Rule E central gap: the equilateral triangle works, since 60°=mθ would imply 180°/θ=3m is an integer."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p4/t07_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p4/t07_r01/pass_1.json",
+        "grades/A/imo2026_p4/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "f4cefcf013c7f37133ec6f6c786d280d81234f3827329a88eaf1f7fd6df7a73a",
+          "proof_file_sha256": "3000ae182f1b888448e63d0bec510b54d5a8d49346972a52e654c22a72434a1d",
+          "elapsed_seconds": 1171.979832,
+          "started_at": "2026-09-14T22:29:20.379132+00:00",
+          "completed_at": "2026-09-14T22:48:52.358964+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p4.t07_r01/resolver/temperature_0_4/gpu0/p4/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+          "proof_file_sha256": "0cd79f13e9da1266b2483ff5eaf2b7ac57bcbf6b9518e3610734a7c276fe92a6",
+          "elapsed_seconds": 914.047801,
+          "started_at": "2026-09-14T22:58:30.725912+00:00",
+          "completed_at": "2026-09-14T23:13:44.773713+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p4.t07_r01/resolver/temperature_0_4/gpu0/p4/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+          "proof_file_sha256": "0cd79f13e9da1266b2483ff5eaf2b7ac57bcbf6b9518e3610734a7c276fe92a6",
+          "elapsed_seconds": 985.144552,
+          "started_at": "2026-09-15T14:46:54.993412+00:00",
+          "completed_at": "2026-09-15T15:03:20.137964+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p4_c3_t07r01_20260915T144230Z/generation/run/input/t07_r01.R1-C2.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "A",
+      "candidate_id": "t07_r02",
+      "scores": [
+        6,
+        5
+      ],
+      "mean_score": 5.5,
+      "selected_stage": "refinement_1",
+      "fallback": {
+        "stage": "refinement_2",
+        "error": "RuntimeError: fresh_reviewer_2 failures: {\"imo2026_p4.t07_r02.reviewer_2\": \"TimeoutRecoveryFailure: recovery request hit a token or time limit; fail closed\"}",
+        "original_stage": "R1-C2"
+      },
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 1750.279111,
+      "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+      "proof_file_sha256": "c255c1d4d254725a5e852d530cb072be1daaefc4dec3c06f0531927f6bf69e16",
+      "verdicts": [
+        "minor_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "In the sufficiency argument for k≥3, the claim that every open interval of length at least θ contains a multiple of θ is false when its length is exactly θ and its endpoints are consecutive multiples. Here the only problematic case is k=3 and α=60°, which forces the triangle to be equilateral and hence already terminal. Adding this case split repairs the proof directly; no Rule A–F ceiling applies.",
+        "In the sufficiency argument for k≥3, the assertion that every open interval of length at least θ contains a multiple of θ is false when the length equals θ. For example, with θ=60°, the interval (60°,120°) contains no such multiple. This is a load-bearing false assertion, so Rule C caps the score at 5, although the repair is direct: equality forces k=3 and an equilateral triangle, which already contains θ; otherwise the interval has length strictly greater than θ."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p4/t07_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p4/t07_r02/pass_1.json",
+        "grades/A/imo2026_p4/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+          "proof_file_sha256": "c255c1d4d254725a5e852d530cb072be1daaefc4dec3c06f0531927f6bf69e16",
+          "elapsed_seconds": 1750.279111,
+          "started_at": "2026-09-14T22:29:20.381046+00:00",
+          "completed_at": "2026-09-14T22:58:30.660157+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "B",
+      "candidate_id": "t10_r01",
+      "scores": [
+        2,
+        2
+      ],
+      "mean_score": 2.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5966.487786057987,
+      "completed_checkpoint_seconds": 5966.487786057987,
+      "proof_sha256": "6791ee65b4b3a539ea7b840a67144e10c4b641d414a127e9a37798be0445b90b",
+      "proof_file_sha256": "e71d14b18e9f9390d546708984e2d85525668b7f8d8ac5ec15d3f2581665779b",
+      "verdicts": [
+        "incorrect",
+        "incorrect"
+      ],
+      "first_issues": [
+        "The first decisive defect is the claimed admissibility in the “plus” construction: after forcing a right triangle, θ₁<180° does not imply that φ=θ₁ lies in (C,180°−B). For example, from an equilateral triangle the forced-right-angle move leaves a 30°–60°–90° triangle. With p=4,q=0, θ₁=2880°/17≈169.4°, but every labeling has 180°−B≤150°, so the proposed cut is illegal. This is a false load-bearing statement under Rule C; the subsequently incorrect final classification invokes the stricter Rule A ceiling of 2.",
+        "The first decisive defect occurs in the claimed sufficiency of the “plus” family: from a right triangle it is not enough that θ₁<180° to ensure C<θ₁<180°−B. For θ=36° (p=2,q=0), a current 45°-45°-90° triangle gives θ₁=144°, but the admissible interval is (45°,135°), so the proposed cut is illegal. This is a false load-bearing feasibility assertion under Rule C."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p4/t10_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p4/t10_r01/pass_1.json",
+        "grades/B/imo2026_p4/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "86d5c3cd7954e2af983a0b587acf3d2f836d7812b84f628d59729ce9a8a915c7",
+          "elapsed_seconds": 1043.3938548259903
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "12a4f8bf8a9eaff9f0625e1c079655748d96479d6c7d8419f573272de0068e76",
+          "elapsed_seconds": 3272.852385275997
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "6791ee65b4b3a539ea7b840a67144e10c4b641d414a127e9a37798be0445b90b",
+          "elapsed_seconds": 1650.2415459559998
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "B",
+      "candidate_id": "t10_r02",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4927.749293404049,
+      "completed_checkpoint_seconds": 4927.749293404049,
+      "proof_sha256": "f6a802f5de11cd153b160c36092d3ea4e6050ca68e027567411ad99be5ff3554",
+      "proof_file_sha256": "c873644fb7ec13d2d1021df07a7d06ac16c27f584c07cb0550d642a576de9e7f",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect; none of Rules A–F applies.",
+        "No decisive defect; none of Rules A–F applies."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p4/t10_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p4/t10_r02/pass_1.json",
+        "grades/B/imo2026_p4/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "1fe74418251299830831986f10b8509352dfa6ee80e2d1cd5b1b7106f1a89e7e",
+          "elapsed_seconds": 1857.135303899995
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "f6a802f5de11cd153b160c36092d3ea4e6050ca68e027567411ad99be5ff3554",
+          "elapsed_seconds": 1818.6021221680567
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "f6a802f5de11cd153b160c36092d3ea4e6050ca68e027567411ad99be5ff3554",
+          "elapsed_seconds": 1252.0118673359975
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "B",
+      "candidate_id": "t07_r01",
+      "scores": [
+        7,
+        6
+      ],
+      "mean_score": 6.5,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4604.7136738889385,
+      "completed_checkpoint_seconds": 4604.7136738889385,
+      "proof_sha256": "86ec13e22ef290ac2a9f545f5efbe9a33721b69d1b2a9cc562233730f00b6bc7",
+      "proof_file_sha256": "5ffa30a6bedcb6c68d93336a9e58a8142df9f03c6af0a3f23a18561fd1b3876d",
+      "verdicts": [
+        "pass",
+        "minor_gap"
+      ],
+      "first_issues": [
+        "No decisive defect; none of Rules A–F imposes a cap.",
+        "In the necessity direction, the proof assumes a starting triangle with no angle in W_theta but does not explicitly establish that such a triangle exists. This is a minor, directly repairable omission rather than a Rule E central gap: take the equilateral triangle, since 60°=mθ would imply 180°=3mθ, contrary to the hypothesis."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p4/t07_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p4/t07_r01/pass_1.json",
+        "grades/B/imo2026_p4/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "b12d753f4ac6015bcd564e55ce664d82a163374bef69ec931ff5984b20f212c8",
+          "elapsed_seconds": 1890.2091618940467
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "86ec13e22ef290ac2a9f545f5efbe9a33721b69d1b2a9cc562233730f00b6bc7",
+          "elapsed_seconds": 1505.0014198999852
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "86ec13e22ef290ac2a9f545f5efbe9a33721b69d1b2a9cc562233730f00b6bc7",
+          "elapsed_seconds": 1209.5030920949066
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "arm": "B",
+      "candidate_id": "t07_r02",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5373.889005924924,
+      "completed_checkpoint_seconds": 5373.889005924924,
+      "proof_sha256": "712cd38455de80050f13fc2201f1184e51a90c15781c91cf6b421d8b4d79306d",
+      "proof_file_sha256": "2e514e1fa45a21805472cccfd6154dd3d47b3f541f1dba7c0d34103750805dc6",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect; no grading-rule cap applies.",
+        "No decisive defect; none of Rules A–F imposes a cap."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p4/t07_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p4/t07_r02/pass_1.json",
+        "grades/B/imo2026_p4/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "17e950913c7f06dd08fc13a64a110b9f00e2665a6251f1693b5a1d2c84390493",
+          "elapsed_seconds": 2053.935004891013
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "6cc8a2841e739eb942fe5fb4b42292c6889676ce84dddc32230c8f81990bba32",
+          "elapsed_seconds": 1878.15903944592
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "712cd38455de80050f13fc2201f1184e51a90c15781c91cf6b421d8b4d79306d",
+          "elapsed_seconds": 1441.7949615879916
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "A",
+      "candidate_id": "t10_r01",
+      "scores": [
+        5,
+        5
+      ],
+      "mean_score": 5.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 4029.9739500000005,
+      "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+      "proof_file_sha256": "e46e1076eeab6d8570dcdb0b1260e301ba755286a690aa573882b3836325b2e7",
+      "verdicts": [
+        "substantial_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "In Case 3, the ordered partition into S_0 and S_{c_1} does not imply the asserted endpoint assignment S_0=(0,b] and S_{c_1}=(b,∞); the alternative S_0=(0,b), S_{c_1}=[b,∞) is unhandled. The final contradiction depends on b belonging to S_0, so this is a false load-bearing structural assertion, invoking Rule C's ceiling of 5.",
+        "In Case 3, the proof does not justify the jump from the orbit-exclusion observations to the structural assertion that S_0=(0,b] and S_{c_1}=(b,∞). Boundedness of S_0 alone does not imply this, and the statement that an orbit tending to infinity must start to the right of a forbidden interval omits the necessary no-jumping argument and quantifier clarification."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p5/t10_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p5/t10_r01/pass_1.json",
+        "grades/A/imo2026_p5/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "962643a0b145855022dc5ea24391d0cbae7d7e520b93084ce21410093e60ed61",
+          "proof_file_sha256": "bc27ce28476827ad609275285d3be19ad2e8fe64b7a5695371a478ad2ec820ba",
+          "elapsed_seconds": 1577.98619,
+          "started_at": "2026-09-14T23:37:23.029988+00:00",
+          "completed_at": "2026-09-15T00:03:41.016178+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p5.t10_r01/resolver/temperature_0_4/gpu0/p5/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "bd0bc7e1ec2a230c0407f07952f07530b33de70aeb6c3a445baea0920a611509",
+          "proof_file_sha256": "e19d6096c24261745286e34301e6a829be8b7827abf67a6e412cc261f4f3cc96",
+          "elapsed_seconds": 1028.712882,
+          "started_at": "2026-09-15T00:03:41.086011+00:00",
+          "completed_at": "2026-09-15T00:20:49.798893+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p5.t10_r01/resolver/temperature_0_4/gpu0/p5/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+          "proof_file_sha256": "e46e1076eeab6d8570dcdb0b1260e301ba755286a690aa573882b3836325b2e7",
+          "elapsed_seconds": 1423.274878,
+          "started_at": "2026-09-15T15:10:05.305984+00:00",
+          "completed_at": "2026-09-15T15:33:48.580862+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p5_c3_t10r01_20260915T144230Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p5.t10_r01/resolver/temperature_0_4/gpu0/p5/t10_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "A",
+      "candidate_id": "t10_r02",
+      "scores": [
+        5,
+        5
+      ],
+      "mean_score": 5.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3409.629108,
+      "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+      "proof_file_sha256": "904ac98ba2dd10ce6e62706558edff7f2b5d1ae9b46418e746c2e916cc097d43",
+      "verdicts": [
+        "substantial_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "In Step 3, the claim that for every n one can choose m∈N with |(z1+nc1)−(z2+mc2)|<c2 is false: the second progression may initially lie entirely above the first point. For example, for the admissible f(t)=t+1, take z1=2, z2=101 and n=1. This is the approximation step supporting constancy of g, so Rule C applies. It becomes correct by replacing “for any n” with “for all sufficiently large n,” after which a nearest-integer choice of m works.",
+        "In Step 3, the claim that for every n one can choose a nonnegative integer m with |(z_1+nc_1)-(z_2+mc_2)|<c_2 is false when the first progression is initially far below z_2. Only sufficiently large n admit such an m. This approximation is load-bearing for proving equality of the positive values of g, so Rule C caps the score at 5."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p5/t10_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p5/t10_r02/pass_1.json",
+        "grades/A/imo2026_p5/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "41c11b460d5b0f27dc3bbf1c65bab07d8ea28a1bebd4d6670c8943166761e65f",
+          "proof_file_sha256": "8d34207931c690b1a72aa5490a96e729aa88f02fe3bcd14d4dfe26ae5143f1bc",
+          "elapsed_seconds": 679.093207,
+          "started_at": "2026-09-14T23:37:23.025522+00:00",
+          "completed_at": "2026-09-14T23:48:42.118729+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "ad7ac12a5bd14b675c3e628a08926fb9f48346d8d636fac43804ef977e4e9bff",
+          "proof_file_sha256": "1dcc350b0810cbbb39218d28440ba333f9fed38c4cca8bd5129b4f4c07a64aaf",
+          "elapsed_seconds": 1166.261941,
+          "started_at": "2026-09-15T00:03:41.085697+00:00",
+          "completed_at": "2026-09-15T00:23:07.347638+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+          "proof_file_sha256": "904ac98ba2dd10ce6e62706558edff7f2b5d1ae9b46418e746c2e916cc097d43",
+          "elapsed_seconds": 1564.27396,
+          "started_at": "2026-09-15T15:10:05.337212+00:00",
+          "completed_at": "2026-09-15T15:36:09.611172+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p5_c3_t10r02_20260915T144230Z/generation/run/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "A",
+      "candidate_id": "t07_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 2931.933381,
+      "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+      "proof_file_sha256": "6478f5e1c056b1776938e525d2a7c138cc74db2f1f0cb76223113c419b1fea61",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect. The argument that all positive values of g on Ran(f) coincide is terse but valid: a positive-defect orbit makes Ran(f) unbounded, and the displayed estimate gives the same limit along it.",
+        "No decisive defect. The comparison argument on the range, followed by connectedness, correctly proves that the nonnegative defect g(x)=f(x)-x is constant."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p5/t07_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p5/t07_r01/pass_1.json",
+        "grades/A/imo2026_p5/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "e384980567ac7f5020821668f88e36730d3b0f123bd7159e60e080cffe9e78e0",
+          "proof_file_sha256": "edd34d709f82fee3c76539e749bc11bc82638c7678358dc41dce3262f8183696",
+          "elapsed_seconds": 1040.099725,
+          "started_at": "2026-09-14T23:37:23.017386+00:00",
+          "completed_at": "2026-09-14T23:54:43.117111+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "95027e98a503d613bc5842cdab99698d8be8458ef8e918cc66aadaed461a625d",
+          "proof_file_sha256": "a0a0fce111185de12e061cd394f0e9f8fd6c4e5038fcce129afabd5c712e7195",
+          "elapsed_seconds": 911.252226,
+          "started_at": "2026-09-15T00:03:41.088696+00:00",
+          "completed_at": "2026-09-15T00:18:52.340922+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+          "proof_file_sha256": "6478f5e1c056b1776938e525d2a7c138cc74db2f1f0cb76223113c419b1fea61",
+          "elapsed_seconds": 980.58143,
+          "started_at": "2026-09-15T15:10:05.386754+00:00",
+          "completed_at": "2026-09-15T15:26:25.968184+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p5_c3_t07r01_20260915T144230Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "A",
+      "candidate_id": "t07_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3226.744079,
+      "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+      "proof_file_sha256": "208604419739d305a51a005057eb028b7510e8b9d9df7e0d8537ec26b88ac9c2",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "In Case 2, the claim that the distance from x0 to the forward progression {y+n c(y): n∈N} is at most c(y) is false when y>x0; for example, the first point of the progression may already lie arbitrarily far to the right of x0. Consequently, the deduction c(y)≥4x0 and the ensuing elimination of mixed zero and positive defect values are unsupported. This is the decisive compatibility argument, so Rule E caps the score at 3.",
+        "In Case 2, the assertion that the distance from x0 to {y+n c(y): n∈N} is at most c(y) is false when y>x0; the forward orbit then lies entirely to the right of y, so its distance from x0 can be much larger than c(y). Consequently, c(y)≥4x0 is not established."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p5/t07_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p5/t07_r02/pass_1.json",
+        "grades/A/imo2026_p5/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "d25e3aed58b867cf7c5bedfa5eafdad204bcdcffd916ba6fafe7f33e70289037",
+          "proof_file_sha256": "e0558fc1eb5bbe49538f4eaccdf088259034dcd6d10889c8f7fa8f4dad3c6a57",
+          "elapsed_seconds": 1061.680289,
+          "started_at": "2026-09-14T23:37:23.031764+00:00",
+          "completed_at": "2026-09-14T23:55:04.712053+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "3371e732f6df67951955a62b0fa7d8bf640592bc9331c60430481d6e4450fb3c",
+          "proof_file_sha256": "3f1e24f9f8b322aa07245af10d1f9c943452906f457b486a15206bfac3031fb8",
+          "elapsed_seconds": 933.011636,
+          "started_at": "2026-09-15T00:03:41.091311+00:00",
+          "completed_at": "2026-09-15T00:19:14.102947+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p5/02_r1_cycles/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+          "proof_file_sha256": "208604419739d305a51a005057eb028b7510e8b9d9df7e0d8537ec26b88ac9c2",
+          "elapsed_seconds": 1232.052154,
+          "started_at": "2026-09-15T15:10:05.316776+00:00",
+          "completed_at": "2026-09-15T15:30:37.368930+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p5_c3_t07r02_20260915T144230Z/generation/run/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "B",
+      "candidate_id": "t10_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4389.959428102011,
+      "completed_checkpoint_seconds": 4389.959428102011,
+      "proof_sha256": "836a79ab9ed2a1eba296e948c8f75c4c024244c5530830da25e11148f1eea61a",
+      "proof_file_sha256": "8c375e13d77c1a6ec4267342f0b9e539e8da6ea1ed3cc005d93137a1b3858b08",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "No decisive defect; none of Rules A–F imposes a cap.",
+        "None. The proof contains no decisive defect, so none of Rules A–F imposes a cap."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p5/t10_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p5/t10_r01/pass_1.json",
+        "grades/B/imo2026_p5/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "b3ffe17c3f010a61427a09d82451a67179316e7ebabbbb2f1ab1adac449b9648",
+          "elapsed_seconds": 1622.9361930040177
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "836a79ab9ed2a1eba296e948c8f75c4c024244c5530830da25e11148f1eea61a",
+          "elapsed_seconds": 1292.5691087140003
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "836a79ab9ed2a1eba296e948c8f75c4c024244c5530830da25e11148f1eea61a",
+          "elapsed_seconds": 1474.4541263839928
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "B",
+      "candidate_id": "t10_r02",
+      "scores": [
+        6,
+        6
+      ],
+      "mean_score": 6.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 3838.704084265046,
+      "completed_checkpoint_seconds": 3838.704084265046,
+      "proof_sha256": "df22cb04cd3f04e9f938e57006ee0020958e7a8ee920a5604a700320901d050c",
+      "proof_file_sha256": "55d69e007bfe7f3074b0c008c45b9abdaff15792fa7925c07d5adfe060c41f57",
+      "verdicts": [
+        "minor_gap",
+        "minor_gap"
+      ],
+      "first_issues": [
+        "In Step 3, C=sup g is treated as a finite real number before boundedness of g has been established. The proof's own liminf-and-orbit argument readily rules out C=+∞, but this case is not explicitly discharged. This is a minor omission, not a central gap, so no Rules A–F ceiling applies.",
+        "In Step 3, C=sup g is treated as a finite real without explicitly ruling out C=+∞. The displayed tail estimate and orbit invariance do rule this out directly: an unbounded range would force g(t)→∞, contradicting the constant positive value of g along an orbit tending to infinity. This is a minor omitted clarification, not a Rule E central gap."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p5/t10_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p5/t10_r02/pass_1.json",
+        "grades/B/imo2026_p5/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "6473da9948d97a3eb6e553eca381587a7ef558f1a76733600b48af29520738b9",
+          "elapsed_seconds": 1169.2044107160764
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "7acc3f0f9902f2165af4e2e0a4b99e00e50c27ee4dfccd6887f75d601021c33a",
+          "elapsed_seconds": 1189.2044745329767
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "df22cb04cd3f04e9f938e57006ee0020958e7a8ee920a5604a700320901d050c",
+          "elapsed_seconds": 1480.2951990159927
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "B",
+      "candidate_id": "t07_r01",
+      "scores": [
+        7,
+        7
+      ],
+      "mean_score": 7.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4755.054194725002,
+      "completed_checkpoint_seconds": 4755.054194725002,
+      "proof_sha256": "67415abdd69757dca427b5fa5c71156a1460ea87d666981eb74012102f2af824",
+      "proof_file_sha256": "83f5c95c6f4cc12ac295c3c6b6a7139a1a742dddd9f49a845bb29ef35bba02ac",
+      "verdicts": [
+        "pass",
+        "pass"
+      ],
+      "first_issues": [
+        "None; the proof is complete and no grading-rule defect applies.",
+        "No decisive defect."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p5/t07_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p5/t07_r01/pass_1.json",
+        "grades/B/imo2026_p5/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "3c1bae9f5b42d9d17f21ebdbe5d9952b0f7ee96147dab0682b7a562959f5f1be",
+          "elapsed_seconds": 1555.9133138119942
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "ed17e9af194b8e2bd5cc38b0cc8b6f2a3e4b12c2d914ac49a57811905279114a",
+          "elapsed_seconds": 1598.6693480239483
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "67415abdd69757dca427b5fa5c71156a1460ea87d666981eb74012102f2af824",
+          "elapsed_seconds": 1600.4715328890597
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "arm": "B",
+      "candidate_id": "t07_r02",
+      "scores": [
+        5,
+        5
+      ],
+      "mean_score": 5.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4243.240482497029,
+      "completed_checkpoint_seconds": 4243.240482497029,
+      "proof_sha256": "b9fb449d4fc945b1b4ae88147984b3ffa2568821b288d487a20612ee0cf13548",
+      "proof_file_sha256": "2aef9f52e35b3f098816c18cf0ef3a6de71ab662f431365ea0ea391043595534",
+      "verdicts": [
+        "substantial_gap",
+        "substantial_gap"
+      ],
+      "first_issues": [
+        "In Step 3, the assertion that for every n one can choose m∈N with |z_n-w_m|≤D is false: if z_n<w-D, no nonnegative m works. Only sufficiently large n have this property. Since this claim is used to prove uniqueness of the positive value of c, Rule C applies.",
+        "In Step 3, the assertion that for every n one can choose m∈N with |z+nC-(w+mD)|≤D is false. For example, even for the valid solution f(t)=t+1, taking z=2, w=100, and n=0 makes this impossible. This approximation is load-bearing for proving equality of the positive defect values, so Rule C applies."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p5/t07_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p5/t07_r02/pass_1.json",
+        "grades/B/imo2026_p5/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "a2873f99b42f46a30484e9e2b52d46ed0b028438ea7f6bfae04de69b0952a9ff",
+          "elapsed_seconds": 1087.5130851189606
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "9e45945e3b9f9e37a1a8a6cdc7d4a7ba013381ccf840014591d77c473021c420",
+          "elapsed_seconds": 1675.5563632199774
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "b9fb449d4fc945b1b4ae88147984b3ffa2568821b288d487a20612ee0cf13548",
+          "elapsed_seconds": 1480.171034158091
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "A",
+      "candidate_id": "t10_r01",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3546.403358,
+      "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+      "proof_file_sha256": "530893d3f18fe036054471e2fe59e6c06aa9144b791fe82c766f2c3fad786fa0",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first score-determining defect is the false inference that, when a witness set P_i with i>N meets P(m) and H∩P_i={p}, one must have p∈P(m). The common prime in P_i∩P(m) need not belong to H. This invalidates the central finiteness argument, so Rule E caps the score at 3.",
+        "The first cap-driving defect is the inference that, if a witness set satisfies H∩P_i={p} and P_i∩P(m)≠∅, then p∈P(m). The prime in P_i∩P(m) may be a different prime omitted from H. Thus H⊆H_N∪P(m) is unsupported, so the claimed finiteness and stabilization of the sets S_n do not follow. This is a false decisive inference under Rule E, giving a ceiling of 3."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p6/t10_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p6/t10_r01/pass_1.json",
+        "grades/A/imo2026_p6/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "8fcb3ad1bbffce6682f3205c1590225ac6e15ac2ed764e253abd979ee68c7529",
+          "proof_file_sha256": "449f7e295b3dd6b823196643aacbd0d671febee073bb5de76ae31c0198e66b52",
+          "elapsed_seconds": 1913.719639,
+          "started_at": "2026-09-15T00:34:48.606171+00:00",
+          "completed_at": "2026-09-15T01:06:42.325810+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p6.t10_r01/resolver/temperature_0_4/gpu0/p6/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "eb787ec0f2dd452a3c3208676b0631d0a375c22d8f723d026b143e7073972a90",
+          "proof_file_sha256": "2dc4d16d5a24ccf507472b5add1aa7ba596c210be8985641d4db349431c3e6ff",
+          "elapsed_seconds": 970.116968,
+          "started_at": "2026-09-15T01:06:42.381106+00:00",
+          "completed_at": "2026-09-15T01:22:52.498074+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p6.t10_r01/resolver/temperature_0_4/gpu0/p6/t10_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+          "proof_file_sha256": "530893d3f18fe036054471e2fe59e6c06aa9144b791fe82c766f2c3fad786fa0",
+          "elapsed_seconds": 662.566751,
+          "started_at": "2026-09-15T17:43:25.776690+00:00",
+          "completed_at": "2026-09-15T17:54:28.343441+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p6_c3_t10r01_20260915T164615Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p6.t10_r01/resolver/temperature_0_4/gpu0/p6/t10_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "A",
+      "candidate_id": "t10_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 5350.047761,
+      "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+      "proof_file_sha256": "5e3b49cf36259d3fe9cf9797aa028274c8f66e7d994438729039cd3ae30fb8f9",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect is the claim that the union P of all prime divisors of the terms is finite. The asserted implication that infinitely many such primes would force some a_{n+1} to contain a prime p>a_n+M is false. For example, if a_1=2, then a_n=2n, so P contains every prime and is infinite. Thus the central finiteness argument is false and Rule E caps the score at 3.",
+        "The claimed finiteness of P is false and is the first decisive defect. For a_1=2, the rule gives a_n=2n, so every prime q occurs in a_q=2q and P is infinite. The inference that a new prime p>M forces (a_n+M)/p<2 for large n is invalid. This false claim replaces the central argument, so Rule E caps the score at 3."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p6/t10_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p6/t10_r02/pass_1.json",
+        "grades/A/imo2026_p6/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "6bd9c44ea4a9b9af5d52f35854c9935bd757ab1d2b25d718d544b98b75f3b091",
+          "proof_file_sha256": "d9bf1ca2eaf86cea40f3bc98321f15a86ae1a6f191a533badc98c79844b21656",
+          "elapsed_seconds": 1668.334436,
+          "started_at": "2026-09-15T00:34:48.598552+00:00",
+          "completed_at": "2026-09-15T01:02:36.932988+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p6.t10_r02/resolver/temperature_0_4/gpu0/p6/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "60e1e5bdc6f1285afadeb194cf47e5b18536c23822ffb086be49a0b0436e378b",
+          "proof_file_sha256": "dceb3db35f682707a00488eae81e9d10099c9169151e28b87d135ad03a4fa8f2",
+          "elapsed_seconds": 2098.284319,
+          "started_at": "2026-09-15T01:06:42.359760+00:00",
+          "completed_at": "2026-09-15T01:41:40.644079+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p6.t10_r02/resolver/temperature_0_4/gpu0/p6/t10_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+          "proof_file_sha256": "5e3b49cf36259d3fe9cf9797aa028274c8f66e7d994438729039cd3ae30fb8f9",
+          "elapsed_seconds": 1583.429006,
+          "started_at": "2026-09-15T17:43:25.840316+00:00",
+          "completed_at": "2026-09-15T18:09:49.269322+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p6_c3_t10r02_20260915T164615Z/generation/run/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p6.t10_r02/resolver/temperature_0_4/gpu0/p6/t10_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "A",
+      "candidate_id": "t07_r01",
+      "scores": [
+        2,
+        2
+      ],
+      "mean_score": 2.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 3991.870274,
+      "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+      "proof_file_sha256": "83fe2d9a53ab7d5f30447d3baf1c960e2fe00d88da2ff9372ed732d4d1698c59",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect is the false load-bearing claim that S, the union of all prime divisors of the terms, is finite. For a_1=2, the greedy sequence is a_n=2n, so S contains every prime. This false structural inference replaces the central argument, invoking Rule E and capping the score at 3.",
+        "Step 1's claim that S is finite is false and is the first decisive defect. For example, if a_1=2, the greedy sequence is a_n=2n, so every prime divides some term and S contains all primes. The argument merely suggests that the accompanying prime q may be bounded; this is compatible with arbitrarily large p (here q=2 always). Thus the central finiteness inference fails, invoking Rule E's maximum of 3."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p6/t07_r01.md",
+      "grade_paths": [
+        "grades/A/imo2026_p6/t07_r01/pass_1.json",
+        "grades/A/imo2026_p6/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "efd7949e6a00b165459bf6e4447f88e1dad7d264008688db09b4d0cb6773cd2d",
+          "proof_file_sha256": "02a8ab2450243a336167e497662cab7deff9507103931cd07ddeb12093e5638e",
+          "elapsed_seconds": 1671.149413,
+          "started_at": "2026-09-15T00:34:48.612535+00:00",
+          "completed_at": "2026-09-15T01:02:39.761948+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p6.t07_r01/resolver/temperature_0_4/gpu0/p6/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "a526566b8cbd66e1a6a8332480aaa67dc27be6eb0010aaddd362c913cd58490b",
+          "proof_file_sha256": "486198cb787c53b1398246ad67f57802cc5eccd02ce73133ac69f8374012a05a",
+          "elapsed_seconds": 841.955641,
+          "started_at": "2026-09-15T01:06:42.381434+00:00",
+          "completed_at": "2026-09-15T01:20:44.337075+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p6.t07_r01/resolver/temperature_0_4/gpu0/p6/t07_r01/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+          "proof_file_sha256": "83fe2d9a53ab7d5f30447d3baf1c960e2fe00d88da2ff9372ed732d4d1698c59",
+          "elapsed_seconds": 1478.76522,
+          "started_at": "2026-09-15T17:43:25.833599+00:00",
+          "completed_at": "2026-09-15T18:08:04.598819+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p6_c3_t07r01_20260915T164615Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p6.t07_r01/resolver/temperature_0_4/gpu0/p6/t07_r01/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "A",
+      "candidate_id": "t07_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": null,
+      "completed_checkpoint_seconds": 4590.764845000001,
+      "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+      "proof_file_sha256": "4cfe88ec3b99b2d1ed1e6aadd93d09f512cf8f0a42db2eba914fb18c9b5cf533",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect is the unsupported claim that, after the minimum product stabilizes, only a fixed finite set of hitting sets can determine future terms. Finiteness of the minimum-product family does not imply that events with a larger hitting set can occur only finitely often: such a hitting set may intersect the persistent minimum hitting set and remove none of it, while the alternative bound m(H)≤(a_n+m*)/2 is not uniform. This is an unsupported central structural inference under Rule E, so the score is capped at 3.",
+        "The first decisive defect is the unsupported inference that stabilization of the minimum hitting-set product implies that all future steps are determined by a fixed finite family of hitting sets of bounded product. The claim that the case a_{n+1}=m(H)>m^* can occur only finitely often does not follow from finiteness of \\mathcal M_n and is false: for the admissible sequence 2,4,6,8,\\ldots, the full prime support H=P_{n+1} gives m(H)=a_{n+1}>2 for infinitely many squarefree terms while removing no minimum hitting set. This leaves the central finiteness assertion unproved, so Rule E caps the score at 3."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/A/imo2026_p6/t07_r02.md",
+      "grade_paths": [
+        "grades/A/imo2026_p6/t07_r02/pass_1.json",
+        "grades/A/imo2026_p6/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "02682a7ec87c5c35ced098f621d255a8fb6bb8af92ddaa244bb318f8873736c0",
+          "proof_file_sha256": "3e71b1f35df81141bb25c49173983d4c1c16e22bc7783ac35c70199bef4be570",
+          "elapsed_seconds": 1020.086495,
+          "started_at": "2026-09-15T00:34:48.620438+00:00",
+          "completed_at": "2026-09-15T00:51:48.706933+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p6.t07_r02/resolver/temperature_0_4/gpu0/p6/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "b2a0891517dc95c6cc8b710b604ece190268f449bd27f9cf294321c00d129793",
+          "proof_file_sha256": "c8aeea3026eacc97fff4ba1a027e4a10fb07882c805fd4eaf7457a421a0b9e48",
+          "elapsed_seconds": 1813.959344,
+          "started_at": "2026-09-15T01:06:42.379367+00:00",
+          "completed_at": "2026-09-15T01:36:56.338711+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p6/02_r1_cycles/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p6.t07_r02/resolver/temperature_0_4/gpu0/p6/t07_r02/resolved_proof.md"
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+          "proof_file_sha256": "4cfe88ec3b99b2d1ed1e6aadd93d09f512cf8f0a42db2eba914fb18c9b5cf533",
+          "elapsed_seconds": 1756.719006,
+          "started_at": "2026-09-15T17:43:25.832055+00:00",
+          "completed_at": "2026-09-15T18:12:42.551061+00:00",
+          "archived_proof_path": "source_workspace/benchmarks/imo2026/results/p6_c3_t07r02_20260915T164615Z/generation/run/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p6.t07_r02/resolver/temperature_0_4/gpu0/p6/t07_r02/resolved_proof.md"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "B",
+      "candidate_id": "t10_r01",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 4397.240294163115,
+      "completed_checkpoint_seconds": 4397.240294163115,
+      "proof_sha256": "b8fb4b981a6a86076f2792fdda5c6a663673f59e08c19522253c67f85a8d84a4",
+      "proof_file_sha256": "c7884142164e9a1e1c30ae9cb48b062abbc4a51edafa8502ac47e5a456d754d0",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The decisive induction step is invalid: W_{n,p} is defined from an arbitrary subcollection of the original prime-support sets and is not associated with any sequence satisfying the same greedy rule with an initial term having k-1 prime factors. Thus the inductive hypothesis cannot be applied. This leaves eventual stabilization of V_n—the central structural claim—unproved, so Rule E caps the score at 3.",
+        "Rule E applies at the inductive step: the induction hypothesis concerns V-sets arising from a sequence satisfying the original greedy rule, but W_{n,p} comes merely from a subcollection of the supports S_i. No sequence satisfying that rule, with an initial term having at most k-1 prime factors, is constructed. Thus the asserted stabilization of W_{n,p}, and hence of V_n, is unsupported."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p6/t10_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p6/t10_r01/pass_1.json",
+        "grades/B/imo2026_p6/t10_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "8473f2699b2c7aa8495cf1643aa2305666694520adcff73e24b50586963c96a4",
+          "elapsed_seconds": 1872.4476772210328
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "d8d2b629996fea0269f11a7f5c2774d3059ef619694ec422d4b63bea4d2f4de9",
+          "elapsed_seconds": 924.5115384140518
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "b8fb4b981a6a86076f2792fdda5c6a663673f59e08c19522253c67f85a8d84a4",
+          "elapsed_seconds": 1600.2810785280308
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "B",
+      "candidate_id": "t10_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5669.262075691135,
+      "completed_checkpoint_seconds": 5669.262075691135,
+      "proof_sha256": "f3dccd6a93148903e098a30fa8f92bf7f7467691a23f1d61a7a2c7535702aa8d",
+      "proof_file_sha256": "ecf3018893b363a2b7e931cd9ea79f7ad0b75075a0aa78f39b99a82446bfc3d8",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect is the claimed bound that every inclusion-minimal hitting set of \\(\\mathcal G_n\\) has size at most \\(|\\mathcal P(a_1)|\\) merely because \\(\\mathcal P(a_1)\\) is itself a hitting set. This implication is false in general and does not establish the bounded-rank premise needed for stabilization. Thus the central stabilization argument is unsupported, invoking Rule E and capping the score at 3.",
+        "The claimed uniform bound on the sizes of members of \\(\\mathcal G_n\\) is false. For the admissible start \\(a_1=35\\), one gets \\(a_2=40\\) and \\(a_3=42\\), so \\(m=2\\) but \\(\\mathcal G_3=\\{\\{5,7\\},\\{2,5\\},\\{2,3,7\\}\\}\\) contains a 3-element set. In particular, the assertion that every member of \\(\\mathcal G_n\\) is a minimal hitting set of \\(\\mathcal G_{n-1}\\) is false (for example, \\(\\{5,7\\}\\) is not minimal because \\(\\{5\\}\\) already hits \\(\\mathcal G_2\\)). This is a false load-bearing assertion under Rule C, and because it removes the central stabilization argument, Rule E's ceiling of 3 applies."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p6/t10_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p6/t10_r02/pass_1.json",
+        "grades/B/imo2026_p6/t10_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "e609dd52164ab3272b888fbe11ea6533b9b9d3191d8b44c1e46d62ad9e33b6e9",
+          "elapsed_seconds": 1386.7947009380441
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "b0f005a001557a9fb261ba23d152823816bdcd315306af8758c07ea8f40ee59f",
+          "elapsed_seconds": 2431.362714151037
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "f3dccd6a93148903e098a30fa8f92bf7f7467691a23f1d61a7a2c7535702aa8d",
+          "elapsed_seconds": 1851.1046606020536
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "B",
+      "candidate_id": "t07_r01",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5212.790764806909,
+      "completed_checkpoint_seconds": 5212.790764806909,
+      "proof_sha256": "d0f3af838119b828bc52f8ba5c2dfa89060571a8bd071e0daafecacac808fbc6",
+      "proof_file_sha256": "2d7e7fcd0ef7c2db4f6e482d212a7f47cca1b3f3ed197261ef637dba3f16003d",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The first decisive defect is the unsupported claim that the whole family M_n must stabilize. An inclusion-minimal hitting set need not have size at most that of another hitting set: for Q_1={2,3}, Q_2={2,5}, Q_3={2,7}, the set {3,5,7} is an inclusion-minimal hitting set larger than Q_1. Moreover, boundedness of the minimum element of M_n gives no bound such as m·p ≤ ∏_{p∈Q_1}p for all other minimal hitting sets. Thus stabilization of m_min(n) does not imply stabilization of M_n. This is an unsupported central structural inference, invoking Rule E and capping the score at 3.",
+        "The first decisive defect is the false claim that every inclusion-minimal hitting set of \\(\\mathcal F_n\\) has size at most \\(|Q_1|\\). For the admissible start \\(a_1=35\\), the greedy sequence begins \\(35,40,42,45\\), with supports \\(\\{5,7\\},\\{2,5\\},\\{2,3,7\\},\\{3,5\\}\\). Then \\(\\{2,3,7\\}\\) is a minimal hitting set of size 3, whereas \\(|Q_1|=2\\). Thus the claimed bound, and likewise the asserted product bound by \\(\\prod_{p\\in Q_1}p\\), is false."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p6/t07_r01.md",
+      "grade_paths": [
+        "grades/B/imo2026_p6/t07_r01/pass_1.json",
+        "grades/B/imo2026_p6/t07_r01/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "3a3e1f1d4a8e44711dfec9b23ffde20a374dd3c46c9c726bfdeed4b86f9ea54c",
+          "elapsed_seconds": 1597.4619146919576
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "37443ddbbbcc55b874c112b4c767f54961cf547b66c0d80be37638a9b3234daf",
+          "elapsed_seconds": 1819.507574341027
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "d0f3af838119b828bc52f8ba5c2dfa89060571a8bd071e0daafecacac808fbc6",
+          "elapsed_seconds": 1795.8212757739238
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "arm": "B",
+      "candidate_id": "t07_r02",
+      "scores": [
+        3,
+        3
+      ],
+      "mean_score": 3.0,
+      "selected_stage": "refinement_3",
+      "fallback": null,
+      "elapsed_seconds": 5138.011439768015,
+      "completed_checkpoint_seconds": 5138.011439768015,
+      "proof_sha256": "87c977a495e98dfc21360ea8ec09d2a432df466043f105805e6085a634852a37",
+      "proof_file_sha256": "04676d095d7ca0e481b680bd79471879871ac23270061fc77847262e43ad9692",
+      "verdicts": [
+        "major_gap",
+        "major_gap"
+      ],
+      "first_issues": [
+        "The decisive claim that every syndetic set which is an intersection of periodic sets must itself be periodic is false. For example, 6Z union {2} is syndetic and equals the intersection over r of the periodic sets 6Z union (2+r!Z), but it has no positive period. Thus Rule E applies: the central periodicity inference is invalid, giving a maximum score of 3.",
+        "The decisive step claiming that every syndetic intersection of periodic sets is periodic is false. For example, as a subset of the positive integers, 2ℤ∪{1} has bounded gaps and equals an intersection of periodic sets, but has no positive period. Thus the argument does not establish that M is periodic. This is an unsupported and false central inference, so Rule E caps the score at 3."
+      ],
+      "contract_consistent": [
+        true,
+        true
+      ],
+      "proof_path": "proofs/B/imo2026_p6/t07_r02.md",
+      "grade_paths": [
+        "grades/B/imo2026_p6/t07_r02/pass_1.json",
+        "grades/B/imo2026_p6/t07_r02/pass_2.json"
+      ],
+      "checkpoint_timings": [
+        {
+          "stage": "refinement_1",
+          "proof_sha256": "56c311b0a7a164d52808c590bb599f9045c241448fac396a4a2a9600fa7e7c1c",
+          "elapsed_seconds": 2026.2485083469655
+        },
+        {
+          "stage": "refinement_2",
+          "proof_sha256": "c02e50669dac82a1501b3d2e4b9036fe2e057227b53590e991afc1ecc5bb3aaf",
+          "elapsed_seconds": 2153.8699989090674
+        },
+        {
+          "stage": "refinement_3",
+          "proof_sha256": "87c977a495e98dfc21360ea8ec09d2a432df466043f105805e6085a634852a37",
+          "elapsed_seconds": 957.8929325119825
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "imo2026_p1",
+      "A": {
+        "mean_score": 7.0,
+        "score_vectors": {
+          "1": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "2": [
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          7,
+          7
+        ],
+        "best_two_pass_mean": 7.0,
+        "both_passes_7_count": 4,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 3,
+          "refinement_1": 1
+        },
+        "fallback_count": 1,
+        "wall_seconds": null
+      },
+      "B": {
+        "mean_score": 7.0,
+        "score_vectors": {
+          "1": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "2": [
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          7,
+          7
+        ],
+        "best_two_pass_mean": 7.0,
+        "both_passes_7_count": 4,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": 4005.770200743922
+      },
+      "delta": 0.0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "A": {
+        "mean_score": 3.375,
+        "score_vectors": {
+          "1": [
+            4,
+            3,
+            3,
+            3
+          ],
+          "2": [
+            4,
+            3,
+            3,
+            4
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          4,
+          4
+        ],
+        "best_two_pass_mean": 4.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 1,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": null
+      },
+      "B": {
+        "mean_score": 3.25,
+        "score_vectors": {
+          "1": [
+            3,
+            3,
+            3,
+            4
+          ],
+          "2": [
+            3,
+            3,
+            3,
+            4
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          4,
+          4
+        ],
+        "best_two_pass_mean": 4.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": 4805.913689873996
+      },
+      "delta": -0.125
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "A": {
+        "mean_score": 1.625,
+        "score_vectors": {
+          "1": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "2": [
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          2,
+          2
+        ],
+        "best_two_pass_mean": 2.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 1,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": null
+      },
+      "B": {
+        "mean_score": 1.25,
+        "score_vectors": {
+          "1": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "2": [
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          2,
+          2
+        ],
+        "best_two_pass_mean": 2.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 3,
+          "refinement_1": 1
+        },
+        "fallback_count": 1,
+        "wall_seconds": 6285.4756876890315
+      },
+      "delta": -0.375
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "A": {
+        "mean_score": 4.5,
+        "score_vectors": {
+          "1": [
+            2,
+            3,
+            6,
+            6
+          ],
+          "2": [
+            2,
+            6,
+            6,
+            5
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          6,
+          6
+        ],
+        "best_two_pass_mean": 6.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 2,
+        "stage_counts": {
+          "refinement_3": 3,
+          "refinement_1": 1
+        },
+        "fallback_count": 1,
+        "wall_seconds": null
+      },
+      "B": {
+        "mean_score": 5.625,
+        "score_vectors": {
+          "1": [
+            2,
+            7,
+            7,
+            7
+          ],
+          "2": [
+            2,
+            7,
+            6,
+            7
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          7,
+          7
+        ],
+        "best_two_pass_mean": 7.0,
+        "both_passes_7_count": 2,
+        "disagreement_count": 1,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": 6977.123296604026
+      },
+      "delta": 1.125
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "A": {
+        "mean_score": 5.0,
+        "score_vectors": {
+          "1": [
+            5,
+            5,
+            7,
+            3
+          ],
+          "2": [
+            5,
+            5,
+            7,
+            3
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          7,
+          7
+        ],
+        "best_two_pass_mean": 7.0,
+        "both_passes_7_count": 1,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": null
+      },
+      "B": {
+        "mean_score": 6.25,
+        "score_vectors": {
+          "1": [
+            7,
+            6,
+            7,
+            5
+          ],
+          "2": [
+            7,
+            6,
+            7,
+            5
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          7,
+          7
+        ],
+        "best_two_pass_mean": 7.0,
+        "both_passes_7_count": 2,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": 4899.048896441003
+      },
+      "delta": 1.25
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "A": {
+        "mean_score": 2.75,
+        "score_vectors": {
+          "1": [
+            3,
+            3,
+            2,
+            3
+          ],
+          "2": [
+            3,
+            3,
+            2,
+            3
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          3,
+          3
+        ],
+        "best_two_pass_mean": 3.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": null
+      },
+      "B": {
+        "mean_score": 3.0,
+        "score_vectors": {
+          "1": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "2": [
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "candidate_order": [
+          "t10_r01",
+          "t10_r02",
+          "t07_r01",
+          "t07_r02"
+        ],
+        "best_score_by_pass": [
+          3,
+          3
+        ],
+        "best_two_pass_mean": 3.0,
+        "both_passes_7_count": 0,
+        "disagreement_count": 0,
+        "stage_counts": {
+          "refinement_3": 4
+        },
+        "fallback_count": 0,
+        "wall_seconds": 6308.812783980975
+      },
+      "delta": 0.25
+    }
+  ],
+  "source_comparison_sha256": "5f3a4fc73ec39167c36db4e1d0a94b71c196b5afce7864050db591fa0ee4d66c",
+  "path_base": "Paths in lanes are relative to this result archive root.",
+  "selection_results_included": false,
+  "post_selection_recovery_included": false
+}

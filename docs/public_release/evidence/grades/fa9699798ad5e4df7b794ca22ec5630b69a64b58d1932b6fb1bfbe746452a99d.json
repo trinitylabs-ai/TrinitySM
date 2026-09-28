@@ -1,0 +1,56 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p6",
+  "grader_candidate_id": "t10_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+  "proof": "evidence/proofs/f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1.md",
+  "completed_at": "2026-09-15T18:28:58.552241+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The central assertion that \\(P=\\bigcup_n\\mathcal P(a_n)\\) is finite is false. For example, starting with \\(a_1=6\\) produces \\(6,8,10,12,\\ldots\\), whose terms collectively have infinitely many prime divisors.",
+    "summary": "The submission correctly obtains bounded gaps and introduces the globally admissible set \\(C\\), but its decisive finiteness argument concerns a set of primes that need not be finite. The claim that infinitely many primes force a new prime exceeding \\(a_n+M\\) is invalid, as is the subsequent asymptotic inequality. Consequently, periodicity of \\(C\\) is not established. The final passage from eventual behavior to periodicity for every index is also unsupported.",
+    "strengths": [
+      "Correctly proves that every term belongs to \\(C\\) and that the gaps satisfy \\(a_{n+1}-a_n\\le M\\).",
+      "Correctly observes that a finite prime universe would make the admissibility conditions periodic."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed finiteness of all prime divisors appearing among the sequence terms is false and is essential to the proof."
+      },
+      {
+        "severity": "major",
+        "description": "Infinitude of \\(P\\) does not imply that some newly appearing prime satisfies \\(p>a_n+M\\); new primes can appear gradually below the current term."
+      },
+      {
+        "severity": "substantial",
+        "description": "The assertion \\((a_n+M)/p<2\\) “for \\(a_n\\) large enough” is backwards for fixed \\(p\\)."
+      },
+      {
+        "severity": "substantial",
+        "description": "Eventual stabilization of \\(C_n\\) would not by itself justify periodicity at all earlier indices; the required exact-enumeration argument is not given."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p6_c3_t10r02_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p6/t10_r02/summary.json",
+    "native_record_file_sha256": "fa9699798ad5e4df7b794ca22ec5630b69a64b58d1932b6fb1bfbe746452a99d",
+    "selected_record": "benchmarks/imo2026/results/p6_c3_t10r02_20260915T164615Z/grades/imo2026_p6/t10_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "06d36c96331257316bae517744eae89485bdfbe48083368572e8afd3bbb4768a",
+    "proof": "benchmarks/imo2026/results/p6_c3_t10r02_20260915T164615Z/proofs/imo2026_p6/t10_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c"
+}

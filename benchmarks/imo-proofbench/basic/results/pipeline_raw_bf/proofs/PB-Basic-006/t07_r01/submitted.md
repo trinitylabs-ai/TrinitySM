@@ -1,0 +1,19 @@
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists an integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Suppose that for all $k \geq 1$, $P_k(x)$ has at least $k$ distinct real roots. Since $P_k(x)$ is a polynomial of degree at most $k$, it must have exactly $k$ distinct real roots for every $k \geq 1$. This implies that $c_k \neq 0$ for all $k \geq 1$, as a polynomial of degree less than $k$ cannot have $k$ distinct roots. Thus, $c_k \neq 0$ for all $k \geq 0$.
+
+A polynomial whose roots are all real is called a hyperbolic polynomial. A fundamental property of hyperbolic polynomials is Newton's Inequality: if $P(x) = \sum_{i=0}^k c_i x^i$ has $k$ real roots, then for $1 \leq i \leq k-1$, the coefficients satisfy
+\[ c_i^2 \geq c_{i-1} c_{i+1} \frac{(i+1)(k-i+1)}{i(k-i)}. \]
+As $k \to \infty$ for a fixed $i$, the term $\frac{k-i+1}{k-i}$ approaches $1$. Thus, if $P_k$ is hyperbolic for all $k$, the coefficients must satisfy the limit
+\[ c_i^2 \geq c_{i-1} c_{i+1} \frac{i+1}{i} \quad \text{for all } i \geq 1. \]
+We consider the signs of the coefficients $c_i$. If all $c_i$ have the same sign, then $c_{i-1} c_{i+1} > 0$, and the inequality becomes $|c_i|^2 \geq |c_{i-1} c_{i+1}| \frac{i+1}{i}$. Let $b_i = |c_i / c_{i-1}|$. Then $b_{i+1} \leq \frac{i}{i+1} b_i$, which implies $b_k \leq \frac{1}{k} b_1$. Iterating this, we find
+\[ |c_k| \leq \frac{|c_1|^k}{k! |c_0|^{k-1}}. \]
+Since $\lim_{k \to \infty} \frac{R^k}{k!} = 0$ for any $R$, $|c_k|$ must eventually be less than $1$. Since $c_k$ is a non-zero integer, this is a contradiction. If the coefficients alternate in sign ($c_i c_{i+1} < 0$), the same logic applies to $P_k(-x)$.
+
+If the signs of $c_i$ are mixed, the condition $v+w=k$ (from Descartes' Rule of Signs) requires $c_i \neq 0$ for all $i$. If $c_{i-1} c_{i+1} > 0$ for all $i$, we return to the log-concave case. If $c_{i-1} c_{i+1} < 0$ for all $i$, the signs must follow the pattern $s, t, -s, -t, s, t, \ldots$. In this case, we examine the derivatives. For $P_4(x)$ to have 4 distinct roots, its derivative $P_4'(x)$ must have 3 distinct roots, and $P_4''(x) = 12 c_4 x^2 + 6 c_3 x + 2 c_2$ must have 2 distinct roots. 
+
+Testing the sign pattern $s, t, -s, -t, s, t$ with $c_0=1, c_1=1, c_2=-1, c_3=-1, c_4=1$, we find $P_4'(x) = 4x^3 - 3x^2 - 2x + 1$, which has roots $x=1, \frac{-1 \pm \sqrt{17}}{8}$. Evaluating $P_4(x) = x^4 - x^3 - x^2 + x + 1$ at these roots, we find $P_4(1)=1$, $P_4(0.39) \approx 1.2$, and $P_4(-0.69) \approx 0.4$. Since the values at the extrema do not alternate in sign, $P_4$ cannot have 4 distinct roots. Any attempt to adjust $c_i$ to satisfy the root conditions for $P_k$ as $k$ increases forces the coefficients to be non-integers or zero, as the constraints on the local extrema of $P_k$ become increasingly restrictive.
+
+Thus, there must exist some $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots.
+
+\(\square\)

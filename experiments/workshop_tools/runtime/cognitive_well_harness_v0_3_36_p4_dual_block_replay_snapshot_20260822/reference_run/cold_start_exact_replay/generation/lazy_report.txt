@@ -1,0 +1,1 @@
+- "We checked the four possibilities for $\alpha_1, \phi, \alpha_2, 180^\circ - \phi$. Every scenario leads to the requirement that $T$ must already have an angle $n\theta$ or $\theta$ must be $180^\circ/m$." (Omitted derivation/lazy phrase).

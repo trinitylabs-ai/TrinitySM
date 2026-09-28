@@ -1,0 +1,40 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T09:58:03.380576+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 1,
+  "problem_id": "imo2026_p1",
+  "case_id": "imo2026_p1.explicit.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r02/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None.",
+    "summary": "The submission gives a complete and correct proof. The lexicographically decreasing pair consisting of the total prime-exponent sum and the number of entries greater than 1 proves termination, while each move preserves at least one entry greater than 1. Primewise, the gcd of all valuation exponents is invariant under the Euclidean-algorithm transformation, and at a terminal board it equals the corresponding valuation of the unique remaining integer, determining that integer uniquely from the initial board.",
+    "strengths": [
+      "Correctly computes the valuation transformation as (e,f) -> (min(e,f), |e-f|).",
+      "Uses a valid well-founded lexicographic descent to prove termination.",
+      "Correctly establishes that a move can never replace two eligible entries by two 1s.",
+      "Proves the load-bearing primewise gcd invariant, including the zero-exponent cases.",
+      "Correctly reconstructs the terminal integer from its prime valuations and thereby proves choice-independence."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

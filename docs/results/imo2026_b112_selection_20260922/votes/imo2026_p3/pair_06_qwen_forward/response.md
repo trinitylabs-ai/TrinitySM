@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Liu can guarantee $V_L \ge 1/2$ (trivial consequence of $V_L \ge V_X$ for any cut configuration).
+Claim gap: The proof claims $c = \frac{n+1}{2n+1}$ but fails to establish the lower bound for the proposed strategy and fails to prove the upper bound for general Liu strategies. The derivation incorrectly assumes a specific pairing bounds $V_X$ from above, and ignores cases where Xiang cuts the smallest piece.
+Qualifications and supplied repairs: The proof relies on the false premise that $V_X$ is the minimum sum of minimums over pairings (Step 10). In reality, for sorted pieces $l_{(1)} \ge l_{(2)} \ge \dots$, $V_X = \sum l_{(2k)}$ is the *maximum* such sum over all pairings. Consequently, the pairing argument in Steps 10-21 provides a lower bound on $V_X$, not an upper bound, invalidating the derivation of $V_X \le nL$. The upper bound section (Steps 24-27) only analyzes the specific case where Liu plays the proposed optimal strategy, ignoring general strategies and point constraints.
+Decisive checks: Step 10 is a demonstrated defect. For pieces $\{10, 9, 8, 1\}$, $V_X = 9+1=10$. The pairing $(10, 8), (9, 1)$ yields sum of mins $8+1=9$. Since $10 > 9$, $V_X$ is not the minimum; it is the maximum. Step 22's heuristic that splitting a piece in $V_L$ does not increase $V_X$ is false (e.g., splitting the smallest piece in $\{0.4, 0.4, 0.2\}$ increases $V_X$ from $0.4$ to $0.5$, breaking the claimed bound).
+
+## Proof B
+Established theorem: For the specific case where Xiang distributes cuts such that each of Liu's large pieces is cut once and the small piece is untouched, $S_{Xiang} \le nx$ (Steps 9-34), implying $S_{Liu} \ge (n+1)x$.
+Claim gap: The lower bound proof does not cover all possible Xiang moves (e.g., cutting the small piece $x$), which can reduce Liu's score below the target. The upper bound proof (Steps 36-54) is a heuristic sketch that acknowledges point constraints (Step 48) but fails to construct a rigorous strategy for Xiang against arbitrary Liu moves.
+Qualifications and supplied repairs: The pairing argument in Steps 31-33 assumes that sorted pieces $p_{2j}$ and $p_{2n-2j+2}$ originate from the same segment to sum to $2x$; this alignment is not guaranteed by sorting alone, making the bound heuristic. However, the algebraic inequality in Step 21 ($2 S_{Xiang} \le 1 - p_{2n+1}$) is valid and correctly applied. The proof correctly identifies the point constraint issue in the upper bound (Step 48), unlike Proof A.
+Decisive checks: Step 21 is a verified fact ($2p_{2j} \le p_{2j-1} + p_{2j}$ sums to $1 - p_{2n+1}$). Step 32 is an unresolved check (heuristic pairing). The proof restricts its lower bound analysis to a specific cut distribution (Step 9), which is a gap in completeness rather than a logical falsehood.
+
+## Decision
+Winner: B
+Reason: Proof B is mathematically stronger because its algebraic steps (e.g., Step 21) are valid where applied, and it correctly identifies and attempts to address point constraints (Step 48). Proof A contains a fundamental logical error in Step 10, claiming $V_X$ is the minimum pairing sum when it is actually the maximum, which inverts the direction of the inequality needed for the proof. While both proofs are incomplete regarding the general case (neither covers the counter-move where Xiang cuts the smallest piece), Proof B's errors are gaps in scope rather than false lemmas, making its derivation more rigorous and reliable.

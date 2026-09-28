@@ -1,0 +1,27 @@
+To find all non-negative integers $n$ such that $A_n = 1 + 3^{20(n^2+n+1)} + 9^{14(n^2+n+1)}$ is a prime number, we begin by simplifying the expression for $A_n$.
+
+Let $k = n^2+n+1$. Since $n$ is a non-negative integer ($n \ge 0$), the minimum value of $k$ occurs at $n=0$, giving $k=1$. Thus, $k$ is always a positive integer.
+The expression for $A_n$ becomes:
+\[ A_n = 1 + 3^{20k} + (3^2)^{14k} = 1 + 3^{20k} + 3^{28k} \]
+To analyze the primality of $A_n$, we look for a factorization. Let $x = 3^{4k}$. Substituting this into the expression, we have:
+\[ A_n = 1 + (3^{4k})^5 + (3^{4k})^7 = 1 + x^5 + x^7 \]
+We test for polynomial factors of $f(x) = x^7 + x^5 + 1$. A common technique is to check if the primitive cube root of unity $\omega = e^{2\pi i / 3}$ is a root.
+\[ f(\omega) = \omega^7 + \omega^5 + 1 = \omega + \omega^2 + 1 = 0 \]
+Since $f(\omega) = 0$, the polynomial $x^2 + x + 1$ must be a factor of $x^7 + x^5 + 1$. Performing polynomial division:
+\[ x^7 + x^5 + 1 = (x^2 + x + 1)(x^5 - x^4 + x^3 - x + 1) \]
+We verify this by expanding the product:
+\[ (x^2 + x + 1)(x^5 - x^4 + x^3 - x + 1) = x^2(x^5 - x^4 + x^3 - x + 1) + x(x^5 - x^4 + x^3 - x + 1) + 1(x^5 - x^4 + x^3 - x + 1) \]
+\[ = (x^7 - x^6 + x^5 - x^3 + x^2) + (x^6 - x^5 + x^4 - x^2 + x) + (x^5 - x^4 + x^3 - x + 1) \]
+\[ = x^7 + (-x^6 + x^6) + (x^5 - x^5 + x^5) + (x^4 - x^4) + (-x^3 + x^3) + (x^2 - x^2) + (x - x) + 1 \]
+\[ = x^7 + x^5 + 1 \]
+Thus, $A_n$ can be written as the product of two integers:
+\[ A_n = (x^2 + x + 1)(x^5 - x^4 + x^3 - x + 1) \]
+For $A_n$ to be prime, one of these factors must be equal to 1.
+1.  Consider the first factor $x^2 + x + 1$. Since $x = 3^{4k}$ and $k \ge 1$, we have $x \ge 3^4 = 81$. Thus, $x^2 + x + 1 \ge 81^2 + 81 + 1 = 6643$, which is clearly greater than 1.
+2.  Consider the second factor $g(x) = x^5 - x^4 + x^3 - x + 1$. We can rewrite this as:
+    \[ g(x) = x^4(x - 1) + x(x^2 - 1) + 1 \]
+    For $x \ge 81$, both $(x-1)$ and $(x^2-1)$ are positive. Therefore, $g(x) > 1$.
+
+Since $A_n$ is the product of two integers both strictly greater than 1 for all $n \ge 0$, $A_n$ is always composite. Therefore, there are no non-negative integers $n$ such that $A_n$ is prime.
+
+There are no such non-negative integers $n$. \(\square\)

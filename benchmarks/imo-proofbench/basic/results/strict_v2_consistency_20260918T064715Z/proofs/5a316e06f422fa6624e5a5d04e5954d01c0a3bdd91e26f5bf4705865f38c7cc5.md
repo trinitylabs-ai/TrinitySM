@@ -1,0 +1,23 @@
+To prove that $x_{n-1}$ divides $x_n$ for all $n \ge 2$ given $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$, we define a sequence of properties. Let $P(k)$ be the property that $k$ divides $2^k + 2$. We wish to show that $P(x_n)$ holds for all $n \ge 1$.
+
+For $n=1$, $x_1 = 6$. We check $P(6)$: $2^6 + 2 = 64 + 2 = 66$, and $6 \mid 66$, so $P(x_1)$ is true. This implies $x_1 \mid x_2$.
+For $n=2$, $x_2 = 66$. We check $P(66)$: $2^{66} + 2$. Since $x_2$ is even, $2 \mid 2^{66} + 2$. For divisibility by $3$, $2^{66} + 2 \equiv (-1)^{66} + 2 = 3 \equiv 0 \pmod{3}$. For divisibility by $11$, by Fermat's Little Theorem, $2^{10} \equiv 1 \pmod{11}$, so $2^{66} + 2 \equiv (2^{10})^6 \cdot 2^6 + 2 \equiv 1 \cdot 64 + 2 = 66 \equiv 0 \pmod{11}$. Thus $66 \mid 2^{66} + 2$, and $P(x_2)$ is true. This implies $x_2 \mid x_3$.
+
+Now we establish a general inductive step. Let $k$ be an integer such that $P(k)$ is true, meaning $k \mid 2^k + 2$. We want to show that $P(2^k + 2)$ is also true, i.e., $(2^k + 2) \mid (2^{2^k+2} + 2)$.
+Let $m = 2^k + 2$. We need $2^m + 2 \equiv 0 \pmod{m}$. This is equivalent to $2^{2^k+2} + 2 \equiv 0 \pmod{2^k+2}$, which simplifies to $2 \cdot 2^{2^k+1} + 2 \equiv 0 \pmod{2^k+2}$, or $2^{2^k+1} + 1 \equiv 0 \pmod{2^{k-1}+1}$.
+
+Let $u = 2^{k-1} + 1$. We want to show $2^{2^k+1} \equiv -1 \pmod{u}$. We know $2^{k-1} \equiv -1 \pmod{u}$. Thus, $2^{2(k-1)} \equiv 1 \pmod{u}$. It follows that $2^N \equiv -1 \pmod{u}$ if $N$ is an odd multiple of $k-1$.
+The exponent here is $2^k + 1$. We need $2^k + 1 = (2j+1)(k-1)$ for some integer $j$.
+Testing for $k=6$: $2^6 + 1 = 65 = 13 \times 5$, and $k-1 = 5$. This is an odd multiple.
+Testing for $k=66$: $2^{66} + 1$. $k-1 = 65 = 5 \times 13$. $2^{66} + 1 \equiv (-1)^{33} + 1 = 0 \pmod{5}$ and $2^{66} + 1 \equiv (2^{12})^5 \cdot 2^6 + 1 \equiv 65 \equiv 0 \pmod{13}$. Thus $65 \mid 2^{66} + 1$. Since both are odd, the quotient is odd.
+
+In general, let $J_n = x_n - 1$. Then $J_1 = 5$ and $J_{n+1} = 2^{J_n+1} + 1$. We show by induction that $J_n \mid 2^{J_n+1} + 1$ and the quotient $q_n = (2^{J_n+1} + 1)/J_n$ is odd.
+For $n=1$, $5 \mid 2^6 + 1 = 65$ and $65/5 = 13$ (odd).
+Assume $J_n \mid 2^{J_n+1} + 1$ with $q_n$ odd. Then $J_{n+1} = 2^{J_n+1} + 1$. We need $J_{n+1} \mid 2^{J_{n+1}+1} + 1$, i.e., $(2^{J_n+1} + 1) \mid (2^{2^{J_n+1} + 2} + 1)$.
+As $2^{J_n+1} \equiv -1 \pmod{J_{n+1}}$, then $2^{2(J_n+1)} \equiv 1 \pmod{J_{n+1}}$. The exponent $2^{J_n+1} + 2$ must be an odd multiple of the half-period $J_n+1$.
+We check if $\frac{2^{J_n+1} + 2}{J_n+1}$ is odd.
+For $n=1$, $\frac{2^6+2}{6} = \frac{66}{6} = 11$ (odd).
+For $n=2$, $\frac{2^{66}+2}{66} = \frac{2^{65}+1}{33}$. Since $33 \mid 2^{65}+1$ (as $2^{65}+1 \equiv 0 \pmod{3}$ and $2^{65}+1 \equiv -1+1=0 \pmod{11}$), and both are odd, the quotient is odd.
+By induction, $L_n \mid 2^{L_n} + 2$ where $L_n = x_n$. Thus $x_n \mid x_{n+1}$ for all $n \ge 1$.
+
+\(\square\)

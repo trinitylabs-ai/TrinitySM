@@ -1,0 +1,113 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Find all strictly increasing functions $g:\mathbb{R} \to \mathbb{R}$ such that:
+ (a) $g$ is surjective
+ (b) $g(g(x))=g(x)+20x.$
+
+**GROUND-TRUTH SOLUTION**
+
+Note that the function is bijective, so setting $x=0$ gives $g(0)=0$ and since it is strictly increasing, we further derive $g(x)>0$ for $x>0$ and $g(x)<0$ for $x<0$.
+
+ Consider the sequence $u_0 = x, u_{n+1} = g(u_n)$, we have that $u_{n+1} = u_n + 20u_{n-1}$, which gives $u_n = a (-4)^n + b 5^n$ for some real number $a, b$. Moreover, since $g$ is a bijective, there exists a real number $r$ such that $u_{-1} = r$, and so the sequence is well-defined for negative integer $n$ by defining the sequence backward. And since the sequence is increasing, $u_0 > 0$ implies $u_n > 0$ for all integer $n$.
+
+ We will show that $a = 0$, which implies $g(x) = u_1 = 5u_0 = 5x$.
+
+ Indeed, assume that $a > 0$, if $u_0 = x > 0$ then we choose a sufficiently small odd negative integer $n$ such that $(-4/5)^n < -b/a$, this gives $u_n < 0$. However, since $g$ is increasing and $u_0 > 0$, we must have that $u_n > 0$, which is a contradiction. Similarly, if $u_0 = a+b < 0$ then we must have $b < 0$ given $a > 0$, and so for a sufficiently small negative even integer $n$, we have $(-4/5)^n > -b/a$, which gives $u_n > 0$, which is a contradiction. Thus, we must have $a \leq 0$.
+
+ Similarly, we can show that $a < 0$ will lead to a contradiction, and so, we must have $a \geq 0$.
+
+ Together, this implies that $a = 0$. Hence proved.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved $g(0)=0$
+ 2. Constructed the sequence $u_n =g^{(n)}(x)$ and the recurrence relation.
+(Almost)
+ 1. Solved correctly, but did not check that the candidates are indeed the solutions to given equation.
+
+**PROPOSED SOLUTION**
+
+To find all strictly increasing surjective functions $g: \mathbb{R} \to \mathbb{R}$ such that $g(g(x)) = g(x) + 20x$, we proceed as follows:
+
+1.  **Linear Recurrence Relation**:
+    Let $x \in \mathbb{R}$ be arbitrary. Define a sequence by $a_0 = x$ and $a_{n+1} = g(a_n)$ for $n \geq 0$. The given functional equation $g(g(x)) = g(x) + 20x$ translates to the linear recurrence:
+    \[ a_{n+2} = a_{n+1} + 20a_n \]
+    The characteristic equation for this recurrence is $r^2 - r - 20 = 0$. Factoring gives $(r-5)(r+4) = 0$, so the roots are $r_1 = 5$ and $r_2 = -4$. The general solution for $a_n$ is:
+    \[ a_n = A(x) 5^n + B(x) (-4)^n \]
+    Using $n=0$ and $n=1$, we find:
+    \[ a_0 = A(x) + B(x) = x \implies B(x) = x - A(x) \]
+    \[ a_1 = g(x) = 5A(x) - 4B(x) = 5A(x) - 4(x - A(x)) = 9A(x) - 4x \]
+    Thus, $A(x) = \frac{g(x) + 4x}{9}$ and $B(x) = \frac{5x - g(x)}{9}$.
+
+2.  **Monotonicity Constraint**:
+    Since $g$ is strictly increasing, the iterates $g^{(n)}(x) = a_n$ must also be strictly increasing for all $n \in \mathbb{N}$. For any $x < y$, we must have $a_n(x) < a_n(y)$ for all $n$:
+    \[ A(x) 5^n + B(x) (-4)^n < A(y) 5^n + B(y) (-4)^n \]
+    Dividing by $5^n$ and taking the limit as $n \to \infty$:
+    \[ \lim_{n \to \infty} \left( A(x) + B(x) \left(-\frac{4}{5}\right)^n \right) \leq \lim_{n \to \infty} \left( A(y) + B(y) \left(-\frac{4}{5}\right)^n \right) \implies A(x) \leq A(y) \]
+    If $A(x) = A(y)$ for some $x < y$, then for all $n$, $B(x) (-4)^n < B(y) (-4)^n$. For $n=1$, $-4B(x) < -4B(y) \implies B(x) > B(y)$. For $n=2$, $16B(x) < 16B(y) \implies B(x) < B(y)$. This is a contradiction, so $A(x)$ must be strictly increasing.
+
+3.  **Analyzing $B(x)$**:
+    We have $B(g(x)) = \frac{5g(x) - g(g(x))}{9} = \frac{5g(x) - (g(x) + 20x)}{9} = \frac{4g(x) - 20x}{9} = -4 \frac{5x - g(x)}{9} = -4B(x)$.
+    If $B(x)$ is not identically zero, there exists $x_0$ such that $B(x_0) \neq 0$. Then $B(g^{(n)}(x_0)) = (-4)^n B(x_0)$. As $n \to \infty$, $|B(g^{(n)}(x_0))|$ grows as $4^n$, while $g^{(n)}(x_0) = A(x_0) 5^n + B(x_0) (-4)^n$ grows as $5^n$.
+    Let $f(x) = B(x)/x$ for $x \neq 0$. Then $f(g(x)) = \frac{B(g(x))}{g(x)} = \frac{-4B(x)}{g(x)}$. As $x \to \infty$, $g(x) \sim 5x$ (since $B(x)$ grows slower than $A(x)$), so $f(g(x)) \approx -\frac{4}{5} f(x)$.
+    Repeating this, $f(g^{(n)}(x)) \approx (-\frac{4}{5})^n f(x) \to 0$. However, if we look at the behavior as $x \to 0^+$, the values of $B(x)$ must oscillate and grow in magnitude relative to $x$. Specifically, if $B(x) \neq 0$, the recurrence $\epsilon(g(x)) = \frac{-4\epsilon(x)}{5 + 9\epsilon(x)}$ (where $\epsilon(x) = B(x)/x$) would imply that $\epsilon(x)$ eventually reaches a value that makes $g(x) = x(5+9\epsilon(x)) = 0$ for some $x > 0$, contradicting the fact that $g$ is strictly increasing and $g(0)=0$.
+
+4.  **Conclusion**:
+    Therefore, we must have $B(x) = 0$ for all $x$. This implies $g(x) = 5x$. Checking this in the original equation: $g(g(x)) = 5(5x) = 25x$ and $g(x) + 20x = 5x + 20x = 25x$. The function $g(x) = 5x$ is strictly increasing and surjective.
+
+The only such function is $g(x) = 5x$. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

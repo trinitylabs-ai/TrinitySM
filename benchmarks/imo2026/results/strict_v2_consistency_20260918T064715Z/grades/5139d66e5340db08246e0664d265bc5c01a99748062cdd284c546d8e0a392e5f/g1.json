@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "5139d66e5340db08246e0664d265bc5c01a99748062cdd284c546d8e0a392e5f",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "00dba3085cbc3c5696a587acc39ea371799f5744ed67b21236a171993663d9ba",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The circumcircle argument incorrectly states that ∠ANM=B and ∠AMN=C; in fact they are C and B, respectively. Hence the claimed conditions θ_K=γ−B and θ_L=β−C are false. This is a load-bearing false assertion under Rule C.",
+    "summary": "The two initial sine-law computations and resulting cotangent identities are useful correct progress. However, the entire route to the conclusion then fails: the medial-triangle angles are swapped, and, more fundamentally, the proof only considers what would follow if K and L lay on the circle through A,M,N without proving that such a cyclic configuration exists or corresponds to the given points. The final uniqueness assertion cannot supply this missing existence/compatibility argument. This is an unsupported central inference under Rule E, giving a ceiling of 3.",
+    "strengths": [
+      "Correctly derives cot(θ_K)=2cot(γ)+cot(α) from triangles BKM and AMK.",
+      "Correctly obtains the analogous identity cot(θ_L)=2cot(β)+cot(α).",
+      "Recognizes that concyclicity of A,M,K,L,N would be sufficient for the desired conclusion."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The angles of triangle AMN are reversed: ∠ANM=C and ∠AMN=B, invalidating all subsequent proposed cyclicity equations."
+      },
+      {
+        "severity": "major",
+        "description": "No implication from the given hypotheses to K,L∈ω is proved. Statements beginning with “If K,L∈ω” give only conditional consequences, and the final uniqueness claim does not establish a cyclic candidate satisfying the same data."
+      },
+      {
+        "severity": "major",
+        "description": "The purported verification of the remaining constraints is circular: the sine-law ratio uses ∠LBK=β and ∠LCK=γ, precisely the conditions it claims to verify."
+      },
+      {
+        "severity": "substantial",
+        "description": "The phrase asserting that symmetry and the cotangent equations ensure the required ratio replaces the essential compatibility calculation; the displayed product-to-sum identity alone does not prove that ratio."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:46:36.480473+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

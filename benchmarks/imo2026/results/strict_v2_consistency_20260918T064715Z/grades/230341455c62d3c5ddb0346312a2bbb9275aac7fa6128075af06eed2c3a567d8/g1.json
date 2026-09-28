@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "230341455c62d3c5ddb0346312a2bbb9275aac7fa6128075af06eed2c3a567d8",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "e18df56a50806eefe574dbffd2dcf9c3c0f49b66bb8fb278a927e0e5baed62ad",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F imposes a cap. The statement that the terminal set S_p^* always has one element is only a harmless wording imprecision: when p does not divide M it is empty, and the explicitly declared empty-gcd convention gives g_p=v_p(M)=0.",
+    "summary": "The submission completely proves termination using the well-founded lexicographic behavior of the product P and the number C of entries greater than 1. It then proves that the gcd of the positive p-adic exponents is invariant under each move and reconstructs the unique terminal entry prime by prime, establishing independence of all choices.",
+    "strengths": [
+      "Correctly distinguishes the coprime and non-coprime cases: P stays fixed while C decreases in the former, and P strictly decreases in the latter.",
+      "Correctly proves that at least one entry greater than 1 persists, so a terminal board has exactly one such entry.",
+      "Correctly identifies the transformation of p-adic exponents and proves invariance of their nonzero gcd, which uniquely determines every exponent of M."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "For primes p not dividing the terminal M, S_p^* is empty rather than a singleton containing v_p(M)=0. The submission's empty-set convention makes the ensuing equality correct, so this does not create a proof gap."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:45:05.890500+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00001",
+  "native_rejection_count": 0
+}

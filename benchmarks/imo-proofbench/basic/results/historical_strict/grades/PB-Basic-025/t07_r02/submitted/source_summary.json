@@ -1,0 +1,42 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T03:07:51.044032+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 25,
+  "problem_id": "PB-Basic-025",
+  "case_id": "PB-Basic-025.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T030704085066Z/inputs/p25/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T030704085066Z/inputs/p25/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T030704085066Z/inputs/p25/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "d8922a3c0a8de2c6cb247e5ef836f61b3d0d514396c2c747c9af0bc8f8494cd5",
+  "reference_sha256": "ed6d11b10bdd16ad529ad7d96a36b7790b2c33fcd65605408d26be7ded0b21c8",
+  "proof_sha256": "da735b14ba32ab236e6f14c1f615508a8b7fcd5cb3f340228dfd495b81f1074e",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T030704085066Z/inputs/tasks.json",
+  "task_manifest_sha256": "81b55668f5127b9ccacf8442be64531f1ce91adab4212cebb5fecbb8bbd87e1b",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The vector computation is complete and correct: the submitted solution derives \\(\\vec{MN}\\), uses the correct barycentric formula for \\(\\vec{OI}\\), and verifies their dot product is zero, yielding \\(\\gamma/2=45^\\circ\\).",
+    "strengths": [
+      "All load-bearing vector identities and algebraic cancellations are explicitly and correctly supplied.",
+      "The solution independently establishes \\(MN\\perp OI\\) through a valid approach equivalent to the reference."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

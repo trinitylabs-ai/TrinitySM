@@ -1,0 +1,49 @@
+To prove that the target state $S_f$ cannot be reached from the initial state $S_0$, we use an invariant from the theory of 3-colorings of cycle graphs.
+
+### 1. Formal Representation
+Let the 101 stones be vertices of a cycle graph $C_{101}$, with vertices $V = \{1, 2, \dots, 101\}$ and edges $E = \{(1, 2), (2, 3), \dots, (100, 101), (101, 1)\}$. A coloring is a function $f: V \to \{0, 1, 2\}$, where the colors $0, 1, 2$ correspond to Red, White, and Blue, respectively. A coloring is valid if $f(u) \neq f(v)$ for all $(u, v) \in E$.
+
+The initial state $S_0$ is given by:
+- $f(101) = 2$ (Blue)
+- $f(i) = 0$ (Red) if $i$ is even, $i \in \{2, 4, \dots, 100\}$
+- $f(i) = 1$ (White) if $i$ is odd, $i \in \{1, 3, \dots, 99\}$
+
+The target state $S_f$ is given by:
+- $f(101) = 2$ (Blue)
+- $f(i) = 1$ (White) if $i$ is even, $i \in \{2, 4, \dots, 100\}$
+- $f(i) = 0$ (Red) if $i$ is odd, $i \in \{1, 3, \dots, 99\}$
+
+### 2. The Winding Number Invariant
+For any valid 3-coloring $f$, we define the difference $\delta_i$ for each edge $(i, i+1)$ (with $101+1 \equiv 1$) as follows:
+\[ \delta_i = \begin{cases} 1 & \text{if } f(i+1) - f(i) \equiv 1 \pmod 3 \\ -1 & \text{if } f(i+1) - f(i) \equiv 2 \pmod 3 \end{cases} \]
+Since $f(i) \neq f(i+1)$, $\delta_i$ is always well-defined. The sum $S = \sum_{i=1}^{101} \delta_i$ must be a multiple of 3 because:
+\[ \sum_{i=1}^{101} \delta_i \equiv \sum_{i=1}^{101} (f(i+1) - f(i)) \equiv 0 \pmod 3 \]
+The winding number is defined as $W = \frac{1}{3} \sum_{i=1}^{101} \delta_i$.
+
+### 3. Invariance under Modifications
+A modification consists of changing the color of one stone $f(k) \to f'(k)$ while maintaining validity. For $f'(k)$ to be different from both $f(k-1)$ and $f(k+1)$, and for $f(k)$ to have been different from both, it must be that $f(k-1) = f(k+1)$.
+If $f(k-1) = f(k+1) = a$, then $f(k)$ and $f'(k)$ must be the other two colors $b$ and $c$. The differences involved in the sum are $\delta_{k-1}$ and $\delta_k$:
+\[ \delta_{k-1} + \delta_k = (f(k) - f(k-1) \pmod 3) + (f(k+1) - f(k) \pmod 3) \]
+Since $f(k-1) = f(k+1)$, we have $\delta_{k-1} + \delta_k = 0$ (one must be $1$ and the other $-1$). After the modification, $\delta'_{k-1} + \delta'_k = (f'(k) - a \pmod 3) + (a - f'(k) \pmod 3) = 0$. Thus, the sum $\sum \delta_i$ and the winding number $W$ remain unchanged.
+
+### 4. Calculation for $S_0$ and $S_f$
+For $S_0$:
+- $\delta_1 = f(2) - f(1) = 0 - 1 \equiv 2 \pmod 3 \implies \delta_1 = -1$
+- $\delta_2 = f(3) - f(2) = 1 - 0 \equiv 1 \pmod 3 \implies \delta_2 = 1$
+- $\delta_3 = f(4) - f(3) = 0 - 1 \equiv 2 \pmod 3 \implies \delta_3 = -1$
+- ...
+- $\delta_{99} = f(100) - f(99) = 0 - 1 \equiv 2 \pmod 3 \implies \delta_{99} = -1$
+- $\delta_{100} = f(101) - f(100) = 2 - 0 \equiv 2 \pmod 3 \implies \delta_{100} = -1$
+- $\delta_{101} = f(1) - f(101) = 1 - 2 \equiv 2 \pmod 3 \implies \delta_{101} = -1$
+The sum is $\sum_{i=1}^{99} \delta_i + \delta_{100} + \delta_{101} = (-1 + 1) \times 49 - 1 - 1 - 1 = -3$. Thus, $W_0 = -1$.
+
+For $S_f$:
+- $\delta_1 = f(2) - f(1) = 1 - 0 \equiv 1 \pmod 3 \implies \delta_1 = 1$
+- $\delta_2 = f(3) - f(2) = 0 - 1 \equiv 2 \pmod 3 \implies \delta_2 = -1$
+- ...
+- $\delta_{99} = f(100) - f(99) = 1 - 0 \equiv 1 \pmod 3 \implies \delta_{99} = 1$
+- $\delta_{100} = f(101) - f(100) = 2 - 1 \equiv 1 \pmod 3 \implies \delta_{100} = 1$
+- $\delta_{101} = f(1) - f(101) = 0 - 2 \equiv 1 \pmod 3 \implies \delta_{101} = 1$
+The sum is $\sum_{i=1}^{99} \delta_i + \delta_{100} + \delta_{101} = (1 - 1) \times 49 + 1 + 1 + 1 = 3$. Thus, $W_f = 1$.
+
+Since $W_0 \neq W_f$, it is impossible to reach state $S_f$ from $S_0$. \(\square\)

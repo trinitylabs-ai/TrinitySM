@@ -1,0 +1,125 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Determine all functions $f: \mathbb{Z} \rightarrow \mathbb{Z}$ such that, for all $x, y \in \mathbb{Z}$, we have \[ f(2x)+2f(y)=f(f(x+y)).\]
+
+**GROUND-TRUTH SOLUTION**
+
+By taking $x = 0$, we get $f(0) + 2f(y) = f(f(y))$ for all $y\in \mathbb{Z}$. So, the problem becomes:
+ $$ f(2x) + 2f(y) = f(0) + 2f(x + y) $$
+ Taking $x = 1$ for this one, we quickly obtain that $2(f(y+1) - f(y)) = f(2) - f(0) \Leftrightarrow f(y+1)-f(y) = (f(2)-f(0))/2$, so $f$ is linear, that is there exists $k,c$ such that $f(x) = kx+c$. Plug this back into the original equation, we see $f(x) = 2x+c$ and $f(x)=0$ are all possible solutions, and these indeed satisfy the given condition
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the solution correctly
+ 2. Proved $f(f(y)) = 2f(y) + f(0)$ and $f(2x) + 2f(0) = f(f(x))$
+(Almost)
+ 1. Solved correctly, but did not check that the finding candidates are indeed the solutions to the given equation.
+
+**PROPOSED SOLUTION**
+
+To determine all functions $f: \mathbb{Z} \rightarrow \mathbb{Z}$ such that $f(2x) + 2f(y) = f(f(x+y))$ for all $x, y \in \mathbb{Z}$, we proceed as follows:
+
+### 1. Proving Linearity
+Let $x+y = s$ for some constant $s \in \mathbb{Z}$. Then $y = s - x$. Substituting this into the original equation, we get:
+\[ f(2x) + 2f(s-x) = f(f(s)). \]
+For any fixed $s$, the value of $f(f(s))$ is a constant. Thus, the expression $f(2x) + 2f(s-x)$ must be independent of $x$.
+Specifically, for $s=0$ and $s=1$, we have:
+1.  $f(2x) + 2f(-x) = f(f(0))$
+2.  $f(2x) + 2f(1-x) = f(f(1))$
+
+Subtracting the first equation from the second gives:
+\[ 2f(1-x) - 2f(-x) = f(f(1)) - f(f(0)). \]
+Let $z = -x$. Since $x$ can be any integer, $z$ can also be any integer. The equation becomes:
+\[ 2(f(z+1) - f(z)) = f(f(1)) - f(f(0)). \]
+Since $f(z+1)$ and $f(z)$ are integers, the difference $f(z+1) - f(z)$ must be a constant, say $d$. Then:
+\[ 2d = f(f(1)) - f(f(0)). \]
+This implies that $f(z+1) - f(z) = d$ for all $z \in \mathbb{Z}$, which means $f$ is an arithmetic progression. Thus, $f$ must be a linear function of the form:
+\[ f(n) = dn + b \]
+for some constants $d, b \in \mathbb{Z}$.
+
+### 2. Determining Constants $d$ and $b$
+We substitute $f(n) = dn + b$ back into the original functional equation:
+\[ f(2x) + 2f(y) = d(2x) + b + 2(dy + b) = 2dx + 2dy + 3b. \]
+The right-hand side is:
+\[ f(f(x+y)) = f(d(x+y) + b) = d(d(x+y) + b) + b = d^2x + d^2y + db + b. \]
+Equating the two sides:
+\[ 2dx + 2dy + 3b = d^2x + d^2y + (d+1)b. \]
+For this to hold for all $x, y \in \mathbb{Z}$, the coefficients of $x$ and $y$ and the constant terms must be equal:
+1.  $2d = d^2 \implies d(d-2) = 0 \implies d = 0$ or $d = 2$.
+2.  $3b = (d+1)b \implies b(d-2) = 0$.
+
+**Case 1: $d = 0$**
+Substituting $d=0$ into the constant term equation:
+\[ b(0-2) = 0 \implies -2b = 0 \implies b = 0. \]
+This gives the solution $f(x) = 0x + 0 = 0$.
+
+**Case 2: $d = 2$**
+Substituting $d=2$ into the constant term equation:
+\[ b(2-2) = 0 \implies 0 = 0. \]
+This is true for any $b \in \mathbb{Z}$. This gives the solution $f(x) = 2x + b$.
+
+### 3. Verification
+- If $f(x) = 0$:
+  $f(2x) + 2f(y) = 0 + 0 = 0$ and $f(f(x+y)) = f(0) = 0$. (Correct)
+- If $f(x) = 2x + b$:
+  $f(2x) + 2f(y) = (4x + b) + 2(2y + b) = 4x + 4y + 3b$.
+  $f(f(x+y)) = f(2(x+y) + b) = 2(2x + 2y + b) + b = 4x + 4y + 3b$. (Correct)
+
+The functions satisfying the given condition are $f(n) = 0$ and $f(n) = 2n + b$ for any $b \in \mathbb{Z}$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

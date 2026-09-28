@@ -1,0 +1,12 @@
+{
+  "schema": "imo-experiment-v1",
+  "run_id": "advanced001_030_v263_v290_frozen_run01",
+  "benchmark": "imo-proofbench/advanced",
+  "state": "historical_archive_of_active_run",
+  "source_run": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01",
+  "snapshot_phase": "retrospective",
+  "source_launch_timestamp": "2026-09-13T01:56:17.958785+00:00",
+  "source_harness": "v263/v290 original frozen entry point",
+  "equivalent_engine_release": "IMO Proof Pipeline 1.0.0",
+  "native_files_modified": false
+}

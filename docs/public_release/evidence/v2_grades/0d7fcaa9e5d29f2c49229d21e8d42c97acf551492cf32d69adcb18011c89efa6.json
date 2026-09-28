@@ -1,0 +1,67 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "63c3267f98630acf174dc4bf2468c28aadb74445d250d0a3c86f94d1c9ce33cb",
+  "problem_id": "imo2026_p3",
+  "repeat": 1,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "bf9a9d7e57b1b7f0a72748154f3e1674a079615d37cfd875a486685eda724be6",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "1650bd732cd54aa2acfc0c7aedd52d92a84a43e990679c8cfde295a7caa6a24e",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The submission unjustifiably replaces Xiang's allowance of at most n marks by the condition sum k_i=n. This is not without loss of generality. For n=2, its first construction gives gaps 1/5,1/5,3/5; Xiang may use only one mark to bisect the 3/5 gap, producing 3/10,3/10,1/5,1/5, so Liu receives only 1/2, not the alleged guaranteed 3/5.",
+    "summary": "The claimed classification is false: already for n=2 it gives 2/3, whereas the correct value is 4/7. Thus Rule A caps the score at 2; only limited correct preliminary progress merits 1 point. The assertions about Xiang's optimal splitting are unsupported and false, and neither proposed Liu strategy establishes a universal guarantee.",
+    "strengths": [
+      "Correctly identifies that optimal alternating selection from fixed pieces gives Liu the sum of the odd-ranked lengths.",
+      "Correctly describes Xiang's marks as subdividing Liu's initial pieces."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "It assumes Xiang uses exactly n marks, although using fewer can give Liu a smaller payoff."
+      },
+      {
+        "severity": "major",
+        "description": "The statement that Xiang minimizes Liu's payoff by making pieces as equal as possible is neither proved nor true in the form used; only a few highly restricted splitting patterns are considered."
+      },
+      {
+        "severity": "major",
+        "description": "The dominant-piece construction fails. For n=2 and initial lengths ε,ε,1−2ε, Xiang can split the large piece into ε,(1−3ε)/2,(1−3ε)/2, giving Liu (1+ε)/2, well below 2/3 for small ε."
+      },
+      {
+        "severity": "substantial",
+        "description": "An arbitrarily close limiting payoff from ε→0 would not by itself prove that any fixed legal marking guarantees the limiting value."
+      },
+      {
+        "severity": "major",
+        "description": "The final parity-dependent answer disagrees with the verified value 2^n/(2^(n+1)−1) for every n≥2."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:42:44.938171+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

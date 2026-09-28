@@ -1,0 +1,27 @@
+To prove that Adrian's procedure terminates and results in the cars being sorted in increasing order of width, we proceed in two main steps: proving termination and proving the property of the final state.
+
+### 1. Proof of Termination
+Let the cars be denoted by $C_1, C_2, \dots, C_n$. Each car $C_i$ has a length $l_i$ and a width $w_i$. Initially, the cars are arranged such that $l_{p_1} < l_{p_2} < \dots < l_{p_n}$, where $p$ is the initial permutation.
+An operation consists of swapping two adjacent cars $C_{p_j}$ and $C_{p_{j+1}}$ if $l_{p_j} < l_{p_{j+1}}$ and $w_{p_j} > w_{p_{j+1}}$.
+
+Consider the number of inversions in the lengths of the cars. An inversion is a pair of indices $(j, k)$ such that $j < k$ but $l_{p_j} > l_{p_k}$.
+Initially, the cars are sorted by length, so the number of inversions in length is 0.
+Each swap operation takes two cars $C_{p_j}, C_{p_{j+1}}$ with $l_{p_j} < l_{p_{j+1}}$ and swaps them. After the swap, the new lengths at these positions are $l'_{p_j} = l_{p_{j+1}}$ and $l'_{p_{j+1}} = l_{p_j}$, so $l'_{p_j} > l'_{p_{j+1}}$. This increases the total number of length-inversions by exactly 1.
+The maximum number of inversions in a sequence of $n$ elements is $\binom{n}{2}$. Since the number of inversions increases with every step and is bounded above, the procedure must eventually terminate.
+
+### 2. Proof of Final State
+Let the final state be the sequence of cars $C_{q_1}, C_{q_2}, \dots, C_{q_n}$. This state is terminal if and only if for all $i \in \{1, \dots, n-1\}$, the condition ($l_{q_i} < l_{q_{i+1}}$ and $w_{q_i} > w_{q_{i+1}}$) is false. This implies that for every adjacent pair:
+\[ l_{q_i} > l_{q_{i+1}} \quad \text{or} \quad w_{q_i} < w_{q_{i+1}}. \]
+
+We wish to show that $w_{q_1} < w_{q_2} < \dots < w_{q_n}$. Suppose, for the sake of contradiction, that the final state is not sorted by width. Then there exists at least one pair $(i, k)$ such that $i < k$ and $w_{q_i} > w_{q_k}$. Among all such pairs, choose one with the minimum distance $k-i$.
+
+If $k-i > 1$, then for any $j \in \{i, \dots, k-1\}$, we must have $w_{q_j} < w_{q_{j+1}}$. If there were any $j$ such that $w_{q_j} > w_{q_{j+1}}$, then $(j, j+1)$ would be a width-inversion with distance 1, which is smaller than $k-i$, contradicting our choice of $(i, k)$. However, if $w_{q_j} < w_{q_{j+1}}$ for all $j \in \{i, \dots, k-1\}$, then by transitivity $w_{q_i} < w_{q_k}$, which contradicts our assumption that $w_{q_i} > w_{q_k}$.
+Thus, we must have $k-i = 1$.
+
+For $k-i=1$, we have $w_{q_i} > w_{q_{i+1}}$. According to the terminal condition, this implies $l_{q_i} > l_{q_{i+1}}$.
+Now, consider the two cars $X = C_{q_i}$ and $Y = C_{q_{i+1}}$. Initially, since all cars were sorted by length, the car with the shorter length was to the left of the car with the longer length. Let $L_{short}$ and $L_{long}$ be the cars. Since $l_{q_i} > l_{q_{i+1}}$, $X$ is the longer car and $Y$ is the shorter car. To end up in the order $(X, Y)$, they must have swapped at some point, as their initial relative order was $(Y, X)$.
+A swap between two cars $A$ and $B$ (with $l_A < l_B$) occurs if and only if they are adjacent and $w_A > w_B$. After the swap, the order becomes $(B, A)$, and the car on the left ($B$) is now the one with the larger length. Crucially, after this swap, the car on the left is $B$ (with width $w_B$) and the car on the right is $A$ (with width $w_A$). Since the swap required $w_A > w_B$, we now have $w_{left} = w_B < w_A = w_{right}$.
+Furthermore, once two cars are in the order $l_{left} > l_{right}$, they can never be swapped again, because the swap condition $l_{left} < l_{right}$ is now permanently violated for that pair.
+Thus, if $X$ and $Y$ ended up in the order $l_{q_i} > l_{q_{i+1}}$, they must have swapped exactly once, and the resulting order must satisfy $w_{q_i} < w_{q_{i+1}}$. This contradicts our assumption that $w_{q_i} > w_{q_{i+1}}$.
+
+Consequently, no width-inversions can exist in the final state. The cars must be sorted in increasing order of width. \(\square\)

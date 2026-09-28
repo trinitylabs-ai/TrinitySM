@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-024",
+  "grader_candidate_id": "t10_r01__R1-C2",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "110efadb4073397ad24abd80f055318099c77229ed4951f31c0dda599ecc9843",
+  "proof": "evidence/proofs/110efadb4073397ad24abd80f055318099c77229ed4951f31c0dda599ecc9843.md",
+  "completed_at": "2026-09-13T05:46:12.479936+00:00",
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/lazy_c1_c2_20260913/grades/PB-Basic-024/t10_r01/R1-C2/result.json",
+    "native_record_file_sha256": "34a10ee4bc77719d86152aff78f13e7ab74a095526c5148a91bbbd855804503d",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/lazy_c1_c2_20260913/grades/PB-Basic-024/t10_r01/R1-C2/result.json",
+    "selected_record_file_sha256": "34a10ee4bc77719d86152aff78f13e7ab74a095526c5148a91bbbd855804503d",
+    "proof": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-024/02_r1_cycles/lanes/t10_r01/03_r1_cycle_3/cases/PB-Basic-024.t10_r01/resolver/temperature_0_4/gpu0/p24/t10_r01/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "bb8255c6aff440e9647ad547707654e42dd1b6b2a6d0ef3f028768e0ee3f6975",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "b877ed06eb41fc0374b3de6df9b511304721211861597aeaee5a1dab7fbc84b9",
+  "reference_sha256": "16087540df0968e6371b77787f32ca89238b593f9142bc3dbd96b81449774f41",
+  "guidelines_sha256": "c92b8a34d705bdcffee2ca735fb0589c935e34000d546d43b2e0fe4d153d41fd",
+  "response_sha256": "cc4c4742a43539656df226beba8a93454747b14a0a22cde5888748a38f253066",
+  "isolation_verified": true
+}

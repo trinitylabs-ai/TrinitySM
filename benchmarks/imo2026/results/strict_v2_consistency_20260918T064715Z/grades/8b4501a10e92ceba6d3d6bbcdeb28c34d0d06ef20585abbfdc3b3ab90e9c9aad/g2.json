@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "8b4501a10e92ceba6d3d6bbcdeb28c34d0d06ef20585abbfdc3b3ab90e9c9aad",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "dd2169ad131d5740a5a6960ac41c0dad1a8b6413d7c4fbed9aac87d9af02708e",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete and correct.",
+    "summary": "The lexicographically decreasing measure (total number of prime factors counted with multiplicity, number of entries greater than 1) proves termination and leaves exactly one nonunit. Primewise, each move applies the Euclidean transformation (x,y)↦(min(x,y),|x−y|), preserving the gcd of all p-adic exponents. At termination this invariant equals v_p(M), uniquely determining M from the initial board.",
+    "strengths": [
+      "The termination measure strictly decreases in every possible move.",
+      "The argument correctly proves that at least one entry greater than 1 persists.",
+      "The primewise exponent transformation is computed correctly.",
+      "The gcd invariant determines every prime exponent of the terminal value, proving independence of choices."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:49:44.023465+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

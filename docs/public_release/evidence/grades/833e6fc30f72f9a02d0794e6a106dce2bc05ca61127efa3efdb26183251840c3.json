@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Advanced-020",
+  "grader_candidate_id": "t10_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79",
+  "proof": "evidence/proofs/60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79.md",
+  "completed_at": "2026-09-17T04:02:04.808492+00:00",
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/advanced/results/advanced020_t10_r02_r1c2_v353_resume_20260917T035234Z/grades/PB-Advanced-020/t10_r02/tool_rewrite/result.json",
+    "native_record_file_sha256": "833e6fc30f72f9a02d0794e6a106dce2bc05ca61127efa3efdb26183251840c3",
+    "selected_record": "benchmarks/imo-proofbench/advanced/results/advanced020_t10_r02_r1c2_v353_resume_20260917T035234Z/grades/PB-Advanced-020/t10_r02/tool_rewrite/result.json",
+    "selected_record_file_sha256": "833e6fc30f72f9a02d0794e6a106dce2bc05ca61127efa3efdb26183251840c3",
+    "proof": "benchmarks/imo-proofbench/advanced/results/advanced020_t10_r02_r1c2_v353_resume_20260917T035234Z/proofs/PB-Advanced-020/t10_r02/tool_rewrite.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "34ef9192698bd2de37b74bdcf44543e54c25073a5afea481e21bb9fbdd062870",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "01d4e69408f00327ae6282d2ec31f0ea2c508de38b2df348109c72ec6f63b487",
+  "reference_sha256": "15cef60a7f4c45f212560a601983366887ead8d7966834577ac0c461faf7f272",
+  "guidelines_sha256": "da9e155e3855c28f32d01620dd49b583909e0d117e0ead8ca6432ad9ae50eee4",
+  "response_sha256": "9f9cc778e11d358549b5751453a2798cffaea5baff8f48d6507dba896e7128de",
+  "isolation_verified": true
+}

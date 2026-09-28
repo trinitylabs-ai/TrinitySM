@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For the specific parameter choices $X=G$ and $X=H_{\text{ortho}}$, the point $T$ lies on the Nine-Point Circle (NPC) of $\triangle ABC$. The geometric derivations for these cases correctly identify the positions of $K, P, Q$ and verify that $\omega_1$ and $\omega_2$ coincide with or intersect the NPC at the required points.
+Claim gap: The proof fails to establish the locus for a general point $X$ on the line $OG$. Steps 10-12 rely on an inductive leap from two discrete cases to a continuous locus, and the projective assertion in step 12 is unsubstantiated. Furthermore, the conclusion that the fixed circle is the NPC is mathematically inconsistent with the problem's quantifiers: since $\omega_2$ varies with $X$ but always passes through the fixed points $H$ and $M$ (which lie on the NPC), $\omega_2 \cap \text{NPC} = \{H, M\}$. If $T$ were constrained to the NPC and to $\omega_2$, $T$ would be fixed at $H$ or $M$, contradicting the requirement that $T$ moves along a circle as $X$ varies.
+Qualifications and supplied repairs: NONE. The arithmetic and geometric identifications in steps 5-8 are verified as written. No external lemmas or repairs are introduced.
+Decisive checks: 
+- Lines 5-6: Verified. $X=G \implies P,Q$ are midpoints. $K$ correctly identified as $H_C$. $\omega_1, \omega_2$ both pass through three distinct NPC points $\implies \omega_1=\omega_2=\text{NPC}$. Correct.
+- Lines 8: Verified. $X=H_{\text{ortho}} \implies P=H_B, Q=H_C$. $\omega_2$ passes through $H_B, H, M \in \text{NPC} \implies \omega_2=\text{NPC}$. Since $T \in \omega_2$, $T \in \text{NPC}$. Correct.
+- Lines 10-12: Demonstrated defect. Two points on a locus do not determine a circle, nor do they prove invariance under continuous parameter change. The claim that the radical axis "always intersects the NPC at $T$" is a restatement of the conclusion with no geometric or algebraic justification. The NPC identification also conflicts with the domain of $X$ (variable $\omega_2$ vs fixed NPC intersection).
+
+## Proof B
+Established theorem: Correct coordinate setup for $A, B, C, P, Q, K$. Correct identification of the radical axes for $(C_2, N)$ as line $BC$ and for $(C_1, C_2)$ as line $PT$. Correct definition of $S = PT \cap BC$ as the radical center of $C_1, C_2, N$.
+Claim gap: The proof contains a fatal geometric contradiction and algebraic inconsistencies. Step 17 claims $M \in C_1$ for all $X \in OG$, but the algebraic verification in step 16 fails (substituting $p=q=1/2$ into the derived expression does not yield zero). More critically, steps 19-22 deduce $S=M$, which implies $M$ lies on line $PT$. Since $P, T, M$ all lie on circle $C_2$, collinearity forces $T=P$ or $T=M$, contradicting the definition of $T$ as the distinct second intersection. The power formula in step 20 is unjustified and misapplied to force $Power_N(T)=0$. The conclusion that $T \in N$ rests entirely on these broken steps.
+Qualifications and supplied repairs: NONE. The coordinate framework and radical axis definitions are valid as written. The core deduction is left as stated; no repair is supplied.
+Decisive checks:
+- Lines 5-6: Verified. Coordinates and center $x_0$ are correctly derived from the reflection and projection definitions.
+- Lines 14-16: Demonstrated defect. Substituting $p=q=1/2$ into line 14 yields $\frac{1}{2}(b^2+c^2) + 2bc\cos A \neq 0$. The claim that the power vanishes for $X=G$ is arithmetically false under the stated formula.
+- Lines 19-22: Demonstrated defect. $S=M \implies M \in PT \implies P,T,M$ collinear. Three distinct points on a circle cannot be collinear. The radical center argument collapses. Step 20's formula $Power_N(T) = \frac{Power_N(S)}{SP^2} Power_N(P)$ has no basis in circle geometry and is incorrectly applied to force the conclusion.
+
+## Decision
+Winner: A
+Reason: Both proofs incorrectly identify the fixed circle as the Nine-Point Circle, which is geometrically inconsistent with the problem's variable configuration (since $\omega_2 \cap \text{NPC} = \{H,M\}$ would fix $T$). However, Proof A's verified special-case computations are arithmetically and geometrically correct, and it contains no internal contradictions. Proof B's central argument collapses: its algebraic verification fails, and its radical center deduction forces a geometric impossibility ($P,T,M$ collinear on a circle). Proof A's gap is a lack of general derivation, whereas Proof B's gap is a demonstrable logical contradiction in its core mechanism. A is mathematically stronger.

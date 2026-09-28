@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: James can guarantee reaching the last row with at most 3000 penalties, establishing the upper bound $n \le 3001$.
+Claim gap: The lower bound argument fails to prove that James cannot succeed with fewer than 3000 penalties. It incorrectly assumes Peter can block all column switches in known rows by placing obstacles between columns, ignoring that James can safely switch columns in row 1 (which contains no obstacles) or navigate around single obstacles in known rows using the 2D grid structure.
+Qualifications and supplied repairs: NONE. The gap is substantive; the adversary argument lacks a rigorous construction and overlooks geometric freedoms available to James. No repair was supplied.
+Decisive checks: Lines 3-5 correctly establish the upper bound via sequential column testing. Lines 14-21 attempt a lower bound but contain a demonstrated defect: the claim that switches in $R_{known}$ are blocked by placing $c_p$ between $c$ and $c'$ is false because James can route horizontally in row 1 or detour around $c_p$ in $R_{known}$ rows. The argument does not account for the safety of row 1, which allows free column transitions, breaking the claimed impossibility of safe paths for $k < 3000$. The adversary's dynamic placement claim also conflates Peter's fixed pre-game selection with adaptive play, weakening the minimax justification.
+
+## Proof B
+Established theorem: James can guarantee success with at most 3000 penalties ($n \le 3001$), and for any strategy, there exists a configuration of obstacles forcing at least 3000 penalties ($n \ge 3001$). Thus $n = 3001$.
+Claim gap: NONE. The proof is complete and rigorous.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Lines 3-4 correctly establish the upper bound. Lines 5-18 establish the lower bound by fixing Peter's strategy to $c_r = r-1$. The argument correctly deduces that to guarantee safety in unknown rows, James must restrict horizontal movement to columns in $C_P$. Lines 10-17 perform a rigorous induction on the column sequence $c^{(i)}$ used between known rows. The constraint that horizontal paths in row $r_i$ must avoid $x_i$ forces $c^{(i-1)}$ and $c^{(i)}$ to lie on the same side of $x_i$. The induction correctly shows $c^{(i)} \in \{x_{i+1}, \dots, x_k\}$, leading to $c^{(k-1)} = x_k$, which contradicts the requirement $c^{(k-1)} < x_k$ for the final transition. This contradiction proves no safe path exists for $k < 3000$. The logic correctly handles quantifiers, domains, and the distinction between known/unknown rows.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, rigorous lower bound using a concrete obstacle configuration and a tight inductive argument on column indices, correctly accounting for the constraints of horizontal movement in unknown versus known rows. Proof A's lower bound is fundamentally flawed: it hand-waves the adversary's ability to block switches and ignores that row 1 is entirely safe, allowing James to switch columns freely. Since B's argument is mathematically sound and fully justifies the claimed value, while A's lower bound contains a demonstrated geometric oversight, B is strictly superior.

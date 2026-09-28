@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:11:18.204003+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 13,
+  "problem_id": "PB-Basic-013",
+  "case_id": "PB-Basic-013.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p13/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p13/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p13/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "07f975e5449f566f33434746f69d3ec2720e776c97e82aebb330ca38ca6c51d3",
+  "reference_sha256": "15c8b8ab464de13b112ed964b40d9cfc6b39ac48a66e7bac459b58ae1265063d",
+  "proof_sha256": "6e1876d40228875e18cb8ad94198ebb8aac808c70967a9e94eac57eabeec3062",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly double-counts shared colors, rigorously minimizes the resulting convex sum at multiplicities \\(2\\) and \\(3\\), and applies pigeonhole to obtain two boxes sharing at least two colors.",
+    "strengths": [
+      "Correctly establishes \\(\\sum n_r=48\\) and \\(S=\\sum_r\\binom{n_r}{2}=\\sum_{i<j}|B_i\\cap B_j|\\).",
+      "The convexity argument yields the sharp lower bound \\(S\\ge 30>28\\).",
+      "The final translation from two shared colors to the required pair occurring together twice is valid."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

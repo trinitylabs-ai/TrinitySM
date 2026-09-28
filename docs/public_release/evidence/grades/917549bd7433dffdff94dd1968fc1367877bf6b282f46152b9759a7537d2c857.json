@@ -1,0 +1,47 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p4",
+  "grader_candidate_id": "t07_r02__R1-C1",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+  "proof": "evidence/proofs/bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278.md",
+  "completed_at": "2026-09-14T23:28:25.725046+00:00",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The assertion that every open interval of length at least \\(\\theta\\) contains a multiple of \\(\\theta\\) is false when its length is exactly \\(\\theta\\) and both endpoints are consecutive multiples. Here the only relevant exception is \\(k=3\\) with an equilateral triangle, which is already terminal and should be handled separately.",
+    "summary": "The submitted solution gives the correct characterization and essentially valid strategies in both directions. The sufficiency argument has a minor endpoint oversight, while the necessity argument correctly establishes the invariant that every cut of a triangle avoiding all positive multiples of \\(\\theta\\) has a child with the same property. The existence of an initial such triangle is asserted rather than exhibited, but is repaired immediately by choosing the equilateral triangle.",
+    "strengths": [
+      "Correctly identifies all and only \\(\\theta=180^\\circ/k\\) with integers \\(k\\ge2\\).",
+      "Gives a valid induction reducing an angle \\(n\\theta\\) to \\(\\theta\\).",
+      "The four-case analysis in the necessity direction correctly proves the safe-triangle invariant."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The open-interval multiple claim overlooks its equality endpoint case; the exceptional triangle is already winning."
+      },
+      {
+        "severity": "minor",
+        "description": "The existence of an initial triangle avoiding \\(W\\) is asserted without justification, though \\((60^\\circ,60^\\circ,60^\\circ)\\) works immediately under the stated assumption."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/grading/work/batches/imo2026_p4/scores/p4/t07_r02__R1-C1/summary.json",
+    "native_record_file_sha256": "917549bd7433dffdff94dd1968fc1367877bf6b282f46152b9759a7537d2c857",
+    "proof": "benchmarks/imo2026/results/imo2026_ipp170_retry450_20260914T182216Z/generation/run/problems/imo2026_p4/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb"
+}

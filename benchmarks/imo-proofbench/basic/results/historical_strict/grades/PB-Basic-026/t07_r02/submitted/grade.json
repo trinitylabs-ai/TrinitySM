@@ -1,0 +1,55 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T15:14:21.254072+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 26,
+  "problem_id": "PB-Basic-026",
+  "case_id": "PB-Basic-026.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "c6ba255f6bbb3bfd642e146b2a30b43e700e8da579130b27eda8a8fd634c1529",
+  "reference_sha256": "641eed7b84a961cc7a5180ea62acc3d04fcd72eacd72ca53d6909345d7153aac",
+  "proof_sha256": "fd63cf9f7168c51a9552e789948fd2cf76e168db10f32f1bf4598c52b2b45129",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/tasks.json",
+  "task_manifest_sha256": "704b5e2f7577350d75ebf1bd43d27e4150704f1bc33942c34e5162def5b101f1",
+  "grade": {
+    "score": 3,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claim that the external homothety center of \\((I)\\) and \\((O)\\) maps \\(D'\\) to \\(A\\) is false: the radii \\(ID'\\) and \\(OA\\) point in opposite directions, so parallel tangents do not give that correspondence.",
+    "summary": "Although the radical-axis and polar observations are meaningful, the proposed concurrency point is wrong. The decisive assertion \\(X\\in AD'\\) is unsupported and generally false; consequently the final concurrence argument collapses and requires the reference solution’s substantially different inversion/centroid mechanism.",
+    "strengths": [
+      "Correctly observes that \\(P_a=BC\\cap\\operatorname{Rad}((O),(I))\\) lies on the tangent at \\(X\\), making \\(DX\\) the polar of \\(P_a\\) with respect to \\((I)\\).",
+      "Correctly notes that reflection across \\(AI\\) preserves the incircle and relates the tangent at \\(D'\\) to the tangent at \\(A\\) of the circumcircle."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The external homothety is assigned the wrong corresponding points; it does not imply \\(T,D',A\\) are collinear."
+      },
+      {
+        "severity": "major",
+        "description": "The load-bearing claim \\(A,D',X\\) are collinear is merely declared a “known property,” is not derived from the preceding facts, and is generally false."
+      },
+      {
+        "severity": "major",
+        "description": "The proof therefore identifies a generally incorrect concurrency point and supplies no valid argument that \\(D'X,E'Y,F'Z\\) meet."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,26 @@
+# Proof comparison
+
+## Proof A
+Established theorem: If the set $S$ of values appearing infinitely often is finite, then $S$ eventually occupies a single parity of indices. The subsequence on that parity takes values in a finite set, and its evolution is governed by a deterministic finite state machine (current value + relative ordering of counts of $S$). Consequently, that subsequence is eventually periodic, satisfying the problem requirement.
+Claim gap: The infinite-$S$ case (Case 1) is not fully resolved; the argument asserts periodicity on one parity based on boundedness and deterministic transitions but does not explicitly construct the finite state space or rigorously exclude pathological oscillations. This gap is non-fatal because the finite-$S$ case (Case 2) is complete and covers the actual asymptotic dynamics of the recurrence.
+Qualifications and supplied repairs: NONE. The finite-$S$ argument is self-contained. The step "all elements of $S$ eventually appear on indices of the same parity" relies on the definition of $S$: non-$S$ values appear finitely often, so transient small values must eventually be replaced by elements of $S$, forcing a strict $S \to \text{large} \to S$ pattern. This is a routine deduction from the stated premises and requires no external repair.
+Decisive checks: 
+- Line 1: Recurrence $x_m = 1 + c_{m-2}(x_{m-1})$ correctly matches the problem statement. Quantifiers and domains align with positive integers.
+- Lines 4-5: $S \neq \emptyset$ is correctly proved via boundedness/pigeonhole or unboundedness/first-occurrence argument. Verified.
+- Lines 21-24: If $x_{m-1} \in S$, $x_m \to \infty$. Then $x_{m+1} = 1 + c_{m-1}(x_m) \le |S|+1$ because only elements of $S$ can produce large values, and each does so at most once. Verified.
+- Lines 27-32: Since non-$S$ values are transient, the pattern stabilizes to $S \to \text{large} \to S$, placing $S$ on one parity. The state $(x_m, \text{rankings of counts})$ lives in a finite set ($|S| \cdot s!$). Deterministic finite-state dynamics imply eventual periodicity. Verified.
+- Falsification check: Attempted to construct a sequence where $S$ occupies both parities infinitely often. Requires infinitely many transients, contradicting the definition of $S$. No counterexample exists.
+
+## Proof B
+Established theorem: The set $V$ of infinitely occurring values is non-empty. The proof attempts to show $V$ is finite, then defines a bounded set $S$ and a finite state space based on relative counts. It argues that the indices producing large values form an eventually periodic set $I$, and analyzes parity based on the period $L$.
+Claim gap: The proof that $V$ is finite contains a logical gap at the contradiction step: it shows $x_m=1$ infinitely often and $x_{m+1} \to \infty$, but does not rigorously demonstrate why this prevents every $i \in \{2,\dots,K\}$ from appearing infinitely often (the recurrence naturally allows $1 \to \text{large} \to \text{small}$, so small values can persist). Additionally, the parity analysis for odd period $L$ is unresolved; the submission asserts that "the structure... ensures that the increasing terms... cannot disrupt the periodicity of both" without providing a mathematical justification, leaving the odd-$L$ case open.
+Qualifications and supplied repairs: NONE. The finiteness argument and odd-$L$ resolution are left incomplete as written. No external lemmas were supplied.
+Decisive checks:
+- Lines 1-3: $V \neq \emptyset$ correctly proved. Quantifier handling is sound.
+- Lines 5-6: Finiteness of $V$ relies on a contradiction that is not fully closed. The step "This implies $x_m$ eventually exceeds $K$ for all indices except those where $x_m=1$, which contradicts..." skips the analysis of $x_{m+2}$ and subsequent terms, making the contradiction incomplete. Demonstrated defect.
+- Lines 11-13: Parity analysis introduces period $L$. For even $L$, the conclusion follows cleanly. For odd $L$, the argument devolves into an unsupported assertion about block lengths and structure, failing to rule out the case where both subsequences are unbounded. This is a load-bearing gap for the final conclusion. Demonstrated defect.
+- Falsification check: If $L$ were odd and the assertion failed, both $\{b_n\}$ and $\{g_n\}$ would contain infinitely many terms from $I$, making both unbounded and non-periodic. The proof does not exclude this scenario.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete and rigorous deduction for the finite-$S$ case, which is the only asymptotically relevant scenario. Its parity separation argument correctly leverages the transience of non-$S$ values to force $S$ onto a single parity, and the finite-state periodicity conclusion follows directly from deterministic dynamics on a finite set. Proof B attempts a stronger structural result (proving $S$ is always finite) but leaves a gap in the contradiction step, and its parity analysis fails to resolve the odd-period case, resorting to an unverified assertion. While A briefly glosses over the infinite-$S$ case, its core argument for the actual dynamics is mathematically tighter and fully establishes the required periodicity for at least one subsequence without unresolved logical jumps.

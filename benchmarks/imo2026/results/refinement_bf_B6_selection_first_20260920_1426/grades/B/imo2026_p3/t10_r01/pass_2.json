@@ -1,0 +1,57 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p3",
+  "submission_id": "proof_eea0211bebf3aa8070eec2ba",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "0c05a1cf0d084c9f4b19c4c2ed58c2f4c4ae5a91dcc367c88bdd180769cec386",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "33b5a8727f2b3a3bd2a0b0064aaee49bdfbdbfd7b86ced90e82a761c524a3765",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The lower-bound argument makes an invalid comparison of alternating sums: the concatenated local sign patterns generally have more than one extra positive sign and hence are not among the sign patterns defining S. The subsequent simplified inference is also false. For n=2, the proposed gaps are 3/5,1/5,1/5; Xiang can bisect the 3/5 gap, producing 3/10,3/10,1/5,1/5, so Liu receives only 1/2<3/5.",
+    "summary": "The claimed answer is false: already for n=2 it gives 3/5, whereas the correct value is 4/7. Thus Rule A caps the score at 2. The proposed lower-bound construction fails explicitly, and the upper bound is not proved: it treats only a special equal-gap situation, uses inadmissible zero-length pieces, and ends with an unsupported assertion. Only the preliminary sorted-piece formulation and alternating-sum identity constitute meaningful correct progress, warranting 1 point.",
+    "strengths": [
+      "Correctly represents optimal play by the sum of the odd-ranked piece lengths.",
+      "Correctly records the identity L=(1+S)/2 for total length 1.",
+      "Correctly observes that at least one of Liu's n+1 initial segments remains uncut when Xiang uses at most n marks."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed lower bound is false for the submitted construction; the n=2 bisection counterexample gives Liu only 1/2 instead of 3/5."
+      },
+      {
+        "severity": "major",
+        "description": "The final formula (n+1)/(2n+1) is incorrect; the correct value is 2^n/(2^{n+1}-1), giving 4/7 rather than 3/5 when n=2. Rule A applies."
+      },
+      {
+        "severity": "major",
+        "description": "The upper-bound section does not handle arbitrary initial segment lengths and merely asserts that an adjustment can achieve the desired bound."
+      },
+      {
+        "severity": "major",
+        "description": "The proposed pieces of length zero cannot arise from distinct interior marks, since all resulting pieces must have positive length."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T12:27:03.043047+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p3/pass_2/p3/proof_eea0211bebf3aa8070eec2ba"
+}

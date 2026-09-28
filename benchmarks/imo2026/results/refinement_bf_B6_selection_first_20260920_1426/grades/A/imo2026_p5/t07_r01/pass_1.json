@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "fc36e7ffd433666d7b0b9962ba173fd9e76e84c99b4b3ee7e761d2585092f9ec",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9553f13ff48b093bd69959c4e7a1186c11928304c88c832defed5683a1e45b5f",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect. The argument that all positive values of g on Ran(f) coincide is terse but valid: a positive-defect orbit makes Ran(f) unbounded, and the displayed estimate gives the same limit along it.",
+    "summary": "The submission correctly proves that the solutions are exactly f(x)=x+c with c≥0. It verifies the construction, derives defect invariance and nonnegativity through iteration, proves injectivity, shows all positive defect values coincide using the range estimate, and excludes coexistence of zero and positive defects through a valid connectedness argument.",
+    "strengths": [
+      "Correctly verifies both original inequalities for f(x)=x+c.",
+      "Correctly obtains f(f(y))=2f(y)-y, hence g(f(x))=g(x), f^n(x)=x+ng(x), and g(x)≥0.",
+      "The symmetric estimate on Ran(f) validly forces all positive values of g to be equal.",
+      "The openness arguments for D_0 and D_c are correctly derived from the right-hand inequality and complete the classification."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:48:50.202361+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00036",
+  "native_rejection_count": 0
+}

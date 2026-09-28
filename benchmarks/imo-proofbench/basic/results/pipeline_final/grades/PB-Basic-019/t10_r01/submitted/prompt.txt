@@ -1,0 +1,115 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+For any positive integer $n$, let $\delta(n)$ be the largest odd divisor of $n$. Prove for any $N>0$ that we have
+ \[
+ \left| \sum_{n=1}^N \frac{\delta(n)}{n}- \frac{2}{3}N \right| <1.
+ \]
+
+**GROUND-TRUTH SOLUTION**
+
+Observe the following: If the greatest power of $2$ that divides $n$ is $2^k$, the greatest odd divisor dividing $n$ is $\frac{n}{2^k}$.
+
+ Let $\sum_{n=1}^N \frac{\delta(n)}{n}$ be $S(N)$.
+
+ Let the greatest power of $2$ smaller or equal to $N$ be $2^k$. Then, $2^k \leq N <2^{k+1}$ holds. Using the observation, we get the following equation:
+ $\sum_{n=1}^{2^k} \frac{\delta(n)}{n} = \sum_{i=0}^{k-1} \frac{2^{k-1-i}}{2^i} + \frac{1}{2^k} = 2^{k-1}(\frac{1-\frac{1}{4^{k}}}{\frac{3}{4}}) + \frac{1}{2^k}$
+
+ Now observe that for $2^k < n <2^{k+1}$, $\frac{\delta(n)}{n} = \frac{\delta(n-2^k)}{n-2^k}$. Therefore, we have that $S(N)= S(N-2^k)+ (\frac{2^{k+1}}{3})(1-\frac{1}{4^{k}}) + \frac{1}{2^k}$
+
+ Using this, we have that $S(N) - \frac{2N}{3} = S(N-2^k) - \frac{2(N-2^k)}{3} + \frac{1}{3\cdot 2^k}$
+
+ Therefore, $|S(N) - \frac{2N}{3}|\leq \sum_{k=0}^\infty \frac{1}{3\cdot 2^k} \leq 1$
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Expressed $\sum \delta(n)/n$ as negative powers of 2's and attempted to rearrange the summation.
+(Almost)
+ 1. Successfully rearranged the summation, and counted $2^{-k}$ correctly.
+
+**PROPOSED SOLUTION**
+
+To prove the inequality $\left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1$ for any $N > 0$, where $\delta(n)$ denotes the largest odd divisor of $n$, we proceed as follows.
+
+Let $M = \lfloor N \rfloor$. The sum is defined as $S(M) = \sum_{n=1}^M \frac{\delta(n)}{n}$. For any positive integer $n$, we can uniquely write $n = 2^{v_2(n)} \cdot \delta(n)$, where $v_2(n)$ is the exponent of the highest power of $2$ dividing $n$. It follows that
+\[ \frac{\delta(n)}{n} = \frac{\delta(n)}{2^{v_2(n)} \delta(n)} = \frac{1}{2^{v_2(n)}}. \]
+Thus, for $M \ge 1$, the sum is $S(M) = \sum_{n=1}^M 2^{-v_2(n)}$. We evaluate this sum by grouping terms according to the value of $v_2(n)$. Let $k$ be a non-negative integer. The number of integers $n \in \{1, 2, \dots, M\}$ such that $v_2(n) = k$ is the number of odd integers $m$ such that $2^k m \le M$. This count, denoted $C(k)$, is given by:
+\[ C(k) = \left\lfloor \frac{M}{2^k} \right\rfloor - \left\lfloor \frac{M}{2^{k+1}} \right\rfloor. \]
+Let $K = \lfloor \log_2 M \rfloor$. Then $S(M)$ is the sum over $k$ from $0$ to $K$:
+\[ S(M) = \sum_{k=0}^K \frac{1}{2^k} \left( \left\lfloor \frac{M}{2^k} \right\rfloor - \left\lfloor \frac{M}{2^{k+1}} \right\rfloor \right). \]
+Expanding the sum, we obtain:
+\[ S(M) = \left\lfloor \frac{M}{1} \right\rfloor - \left\lfloor \frac{M}{2} \right\rfloor + \frac{1}{2} \left\lfloor \frac{M}{2} \right\rfloor - \frac{1}{2} \left\lfloor \frac{M}{4} \right\rfloor + \frac{1}{4} \left\lfloor \frac{M}{4} \right\rfloor - \frac{1}{4} \left\lfloor \frac{M}{8} \right\rfloor + \dots + \frac{1}{2^K} \left\lfloor \frac{M}{2^K} \right\rfloor - \frac{1}{2^K} \left\lfloor \frac{M}{2^{K+1}} \right\rfloor. \]
+Since $M$ is an integer, $\lfloor M \rfloor = M$, and since $2^{K+1} > M$, $\lfloor M/2^{K+1} \rfloor = 0$. The sum simplifies via telescoping to:
+\[ S(M) = M - \sum_{k=1}^K \frac{1}{2^k} \left\lfloor \frac{M}{2^k} \right\rfloor. \]
+Using the identity $\lfloor x \rfloor = x - \{x\}$, where $\{x\}$ is the fractional part of $x$, we have:
+\[ S(M) = M - \sum_{k=1}^K \frac{1}{2^k} \left( \frac{M}{2^k} - \left\{ \frac{M}{2^k} \right\} \right) = M - M \sum_{k=1}^K \frac{1}{4^k} + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\}. \]
+The geometric series $\sum_{k=1}^K (1/4)^k$ sums to $\frac{1/4(1 - (1/4)^K)}{1 - 1/4} = \frac{1}{3}(1 - 4^{-K})$. Substituting this into the expression for $S(M)$:
+\[ S(M) = M - \frac{M}{3}(1 - 4^{-K}) + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\} = \frac{2}{3} M + \frac{M}{3 \cdot 4^K} + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\}. \]
+Let $g(M) = S(M) - \frac{2}{3}M$. Then $g(M) = \frac{M}{3 \cdot 4^K} + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\}$.
+Since $M \ge 1$, the term $\frac{M}{3 \cdot 4^K}$ is strictly positive, and since $\{ \frac{M}{2^k} \} \ge 0$, we have $g(M) > 0$. For the upper bound, we use $M < 2^{K+1}$ and $\{ \frac{M}{2^k} \} < 1$:
+\[ g(M) < \frac{2^{K+1}}{3 \cdot 4^K} + \sum_{k=1}^K \frac{1}{2^k} < \frac{2}{3 \cdot 2^K} + \left( 1 - \frac{1}{2^K} \right) = 1 - \frac{1}{3 \cdot 2^K} < 1. \]
+Thus, for any integer $M \ge 1$, we have $0 < S(M) - \frac{2}{3}M < 1$.
+
+Now consider any $N > 0$. Let $M = \lfloor N \rfloor$ and $N = M + \epsilon$, where $0 \le \epsilon < 1$.
+If $M = 0$, then $0 < N < 1$. The sum $\sum_{n=1}^0 \frac{\delta(n)}{n}$ is empty and equals $0$. Then
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| = \left| 0 - \frac{2}{3}N \right| = \frac{2}{3}N < \frac{2}{3} < 1. \]
+If $M \ge 1$, then
+\[ \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N = S(M) - \frac{2}{3}(M + \epsilon) = \left( S(M) - \frac{2}{3}M \right) - \frac{2}{3}\epsilon = g(M) - \frac{2}{3}\epsilon. \]
+Since $0 < g(M) < 1$ and $0 \le \frac{2}{3}\epsilon < \frac{2}{3}$, we have:
+\[ 0 - \frac{2}{3} < g(M) - \frac{2}{3}\epsilon < 1 - 0, \]
+which means $-\frac{2}{3} < \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N < 1$. This implies
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1. \]
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

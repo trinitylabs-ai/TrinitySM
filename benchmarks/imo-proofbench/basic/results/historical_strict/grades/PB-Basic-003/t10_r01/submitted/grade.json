@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T14:34:06.331708+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 3,
+  "problem_id": "PB-Basic-003",
+  "case_id": "PB-Basic-003.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/problems/PB-Basic-003.json",
+  "reference_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/references/PB-Basic-003.md",
+  "proof_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/proofs/PB-Basic-003/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "16462e4803bedfc97a953b1a9c8f6f9e16ec677093b9e8d65333fdfcac01c177",
+  "reference_sha256": "1e4a8c99a55a3f90754e4d740d058bf6fd392ac6897e955daa646ad1c9001667",
+  "proof_sha256": "67e7dfb8498ef9183f0a251e0d05b37fcc502c39880a0c3707013cf26d8cc474",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "5c6c59ab7923c1836314a3f0571a75282ff4dfe8144f5538e5463dcc07744719",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The statement that taking all real values makes \\(f\\) bijective establishes only surjectivity; injectivity is not explicitly justified.",
+    "summary": "The classification and case analysis are correct. The sole material omission is directly repaired from \\(f(x+f(b))=k(b-x)\\): if \\(f(b_1)=f(b_2)\\), then \\(k(b_1-x)=k(b_2-x)\\), hence \\(b_1=b_2\\).",
+    "strengths": [
+      "Correctly derives and verifies \\(f(x)=c-x\\) when \\(f(0)\\ne0\\).",
+      "Correctly eliminates all nonzero functions having an additional zero when \\(f(0)=0\\).",
+      "Explicitly verifies the resulting solution family."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Surjectivity is incorrectly cited as sufficient for bijectivity, although the missing injectivity argument is an immediate one-line consequence of the displayed identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

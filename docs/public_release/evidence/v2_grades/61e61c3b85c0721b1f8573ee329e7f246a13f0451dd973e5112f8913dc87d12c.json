@@ -1,0 +1,49 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "44f1200c808c99b3f3af50f655b887ff95c5a983054f10022845b04567cd36b3",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "30ab4796df29697b7f6689d3e5e1643b04665e59550ccf0d512880af0e52c264",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2815a2a0537c1c5c6da92cc6906d613a12b9c214490529db76871361086eaebe",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None.",
+    "summary": "The submission gives a complete and correct proof of both termination and choice-independence. The lexicographic descent using the total product and the number of entries greater than 1 is valid, and the primewise gcd of valuation exponents is correctly shown to be invariant and to determine the unique terminal entry.",
+    "strengths": [
+      "Correctly distinguishes the cases gcd(m,n)>1 and gcd(m,n)=1 to obtain a well-founded descent.",
+      "Correctly proves that at least one entry greater than 1 remains, so a terminal board has exactly one such entry.",
+      "Correctly computes the valuation transformation as (x,y) to (min(x,y),|x-y|).",
+      "Correctly establishes invariance of the gcd of all p-adic exponents, including cases involving zero exponents.",
+      "Correctly reconstructs the terminal integer prime by prime, proving independence from all choices."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:49:14.186733+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

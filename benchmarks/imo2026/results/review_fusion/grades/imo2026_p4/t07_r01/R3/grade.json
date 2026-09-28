@@ -1,0 +1,51 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T18:43:25.330379+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "case_id": "imo2026_p4.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the case θ=90°, the proof says to drop AP perpendicular to BC without ensuring that the perpendicular foot lies on the side segment BC; this fails for an arbitrary choice of vertex A in an obtuse triangle. One must choose A so that the other two angles are acute, which is always possible unless the triangle is already right.",
+    "summary": "The characterization θ=180°/k is correct, and both directions are substantially proved. The peeling strategy and the invariant using angles that are not positive multiples of θ are valid. The remaining defects are directly repairable: the 90° case needs the correct choice of altitude, existence of an initial triangle with no multiple-of-θ angle is asserted rather than demonstrated, and one displayed calculation has a harmless sign reversal.",
+    "strengths": [
+      "Correctly identifies all and only the values θ=180°/k for integers k≥2.",
+      "For k≥3, gives a valid procedure to create an angle below θ, convert it into the multiple (k−1)θ, and peel that multiple down to θ.",
+      "The necessity argument correctly checks the four possible ways both children could contain multiples of θ, establishing that Shan-Yu can preserve the stated invariant."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The θ=90° altitude argument omits the required choice of a vertex whose altitude meets the opposite side internally."
+      },
+      {
+        "severity": "minor",
+        "description": "The existence of a valid starting triangle having no angle equal to a positive multiple of θ is asserted without an example or argument; for instance, (θ/2, θ/2, 180°−θ) supplies one when 180°/θ is not an integer."
+      },
+      {
+        "severity": "cosmetic",
+        "description": "In the third case of the necessity calculation, the equation implies C=(n−m)θ, not C=(m−n)θ. Positivity still yields the intended contradiction."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

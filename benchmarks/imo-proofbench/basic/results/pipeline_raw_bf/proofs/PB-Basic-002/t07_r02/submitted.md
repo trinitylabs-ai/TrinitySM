@@ -1,0 +1,34 @@
+To show that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for any positive real numbers $x, y, z, t$ that satisfy $2(x + y + z + t) \ge xyzt$, we proceed as follows:
+
+Let $S = x + y + z + t$ and $P = xyzt$. The given condition is:
+\[ 2S \ge P \]
+
+First, we use the Arithmetic Mean-Geometric Mean (AM-GM) Inequality on the four positive real numbers $x, y, z, t$:
+\[ \frac{x + y + z + t}{4} \ge \sqrt[4]{xyzt} \]
+Substituting $S$ and $P$ into this inequality, we have:
+\[ \frac{S}{4} \ge P^{1/4} \implies S \ge 4P^{1/4} \]
+
+Using the given condition $P \le 2S$, we can combine these two inequalities to find an upper bound for $P$:
+\[ P \le 2S \le 2(4P^{1/4}) = 8P^{1/4} \]
+Since $x, y, z, t$ are positive real numbers, $P > 0$. We divide both sides by $P^{1/4}$:
+\[ P^{3/4} \le 8 \]
+Raising both sides to the power of $4/3$, we obtain:
+\[ P \le 8^{4/3} = (8^{1/3})^4 = 2^4 = 16 \]
+Thus, the condition $2(x + y + z + t) \ge xyzt$ implies that $xyzt \le 16$.
+
+Next, we consider the expression $x^2 + y^2 + z^2 + t^2$. By the AM-GM Inequality applied to the four positive real numbers $x^2, y^2, z^2, t^2$:
+\[ \frac{x^2 + y^2 + z^2 + t^2}{4} \ge \sqrt[4]{x^2 y^2 z^2 t^2} \]
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{xyzt} = 4\sqrt{P} \]
+
+We now compare this lower bound for the sum of squares with the product $P$. We want to determine if $4\sqrt{P} \ge P$. Consider the difference:
+\[ 4\sqrt{P} - P = \sqrt{P}(4 - \sqrt{P}) \]
+Since we established that $P \le 16$, it follows that $\sqrt{P} \le 4$. Therefore, $4 - \sqrt{P} \ge 0$, which implies:
+\[ 4\sqrt{P} \ge P \]
+
+Combining the results from the AM-GM inequality and the bound on $P$, we have:
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{P} \ge P = xyzt \]
+Equality holds if and only if $x=y=z=t$ (for the AM-GM equalities to hold) and $P=16$ (for $4\sqrt{P}=P$ to hold), which occurs when $x=y=z=t=2$. In this case, $2(2+2+2+2) = 16$ and $2 \cdot 2 \cdot 2 \cdot 2 = 16$, so the given condition is satisfied.
+
+Thus, we have shown that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for all positive real numbers $x, y, z, t$ satisfying $2(x + y + z + t) \ge xyzt$.
+
+\(\square\)

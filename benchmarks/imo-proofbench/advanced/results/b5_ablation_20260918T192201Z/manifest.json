@@ -1,0 +1,974 @@
+{
+  "schema": "workshop-b5-ablation-grading-v1",
+  "run_id": "b5_ablation_20260918T192201Z",
+  "policy": "imobench-proof-autograder-b5-v1",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "repeats": 1,
+  "benchmark": "imo-proofbench/advanced",
+  "tasks": 120,
+  "task_manifest": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/grading/tasks.json",
+  "output": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/grading/work/b5",
+  "bindings": [
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-001/t10_r01.md",
+      "proof_sha256": "ee03ab9652863b683c233ccf9813bb8ad93001fe9967ad9960891e4edf23df5e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e23f4c2d1cb3d1b9c1089de6530c334093f889d51fa017bf9b41c8291933dd10.md"
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-001/t10_r02.md",
+      "proof_sha256": "d3d58ea33aae9114fb88c42569ffcff3d96859241aaac1f17dbbf3762525caa0",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e0cae1807c608e9859a29b42882a12b1032bc7589e68b710a9c5bd492eede353.md"
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-001/t07_r01.md",
+      "proof_sha256": "2f9c5ac1156f06c45f0e0112fca260721ce4fc8dcba2c08bb2f7669c6030ad41",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/096cee4c433b857ea5869f06fada9bebffa73c79aea74d49dd34896562acd508.md"
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-001/t07_r02.md",
+      "proof_sha256": "5881ab9c95b9bc497a1a7a3837b6d794360c32527725a67bcf2b9c4f50f85138",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/2e21157b365ff47e61805395143276d612cfd16d9b4ce0c2815ba079505531ee.md"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-002/t10_r01.md",
+      "proof_sha256": "60deda8dbdefdbba3f9a24984d39ed6d85f0622cd6fa59f65c8c033cd3321401",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/3851e7171f42c7c1321344f40b515eb47b071c0a5f6ba99e7376a972c000f958.md"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-002/t10_r02.md",
+      "proof_sha256": "a3820c54e31ef8185f527e3f9ce5d3a6cbc11ba3cdc74d41e626a8f6def3d835",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/6cf1d8140f6f63f99b7d7da669273094b0446614d0f259133197df774b7872e1.md"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-002/t07_r01.md",
+      "proof_sha256": "776ed36cb85813253a2bc0580dd9caef7c576a913596aa79d53366bf4fd1339e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/c03997a44c027d572c2b4a0899030cc1a9871809f67cfe51d137f0f57ff95264.md"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-002/t07_r02.md",
+      "proof_sha256": "ee8b3a1521cbde9cf175f8890173b04e61c90ce66e0582357a05c0e893a15c6e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/1b0ee5bf55c94a1253a7a2ab80946baa5de5390c348eb9f97efb1c53b0ee0db6.md"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-003/t10_r01.md",
+      "proof_sha256": "fbc22a464815bce8255ddec7bbc086f9e0d3a509d29591878d08545d20fb40c1",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/9cba6d930ec3dd8b7762c55588d0d32458a7b32ece21be9faafcba50216f14fd.md"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-003/t10_r02.md",
+      "proof_sha256": "b99112d49c791b8e3123afd0f9bd2a3a53a5f8177c94c220d54e4047a64ccf59",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e4e61117b9dec9b60b722a770f4ceacb80a6f74343f2441c5d33dd46823e1086.md"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-003/t07_r01.md",
+      "proof_sha256": "af953f3850d636f74ed93edae9b024c44ae3bc98bfc42a5404d686fa6db6d413",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/be17905e39c4406856004e54c09d3c06b6766a67a59ced4808805fa986b99c48.md"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-003/t07_r02.md",
+      "proof_sha256": "c48be5b6401796374125dae43d3d928ca502dbff728c144ba5f615c77d1e7d5d",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/fa2bb39d0733ff37b13668dc969b6f60f1da00b2edca8b774e2b77e646486f15.md"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-004/t10_r01.md",
+      "proof_sha256": "44bfa8db2700bd85040e9976eb051e710f9a0752e2e8cc9bfb6bbbddfbbc9d46",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/ff360a5bb05a8083dd2edef91159b521d4bdbcc5c1e831048226578f3d989abf.md"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-004/t10_r02.md",
+      "proof_sha256": "d75e99039f4d4b9cd326f88567bc054779aee54a8d704eb7b8dce4838c9c66f3",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/de245a3a9efe79e23d47cc927a49b9ecf3d2c7f49a10d703943b70b90e3ffd5f.md"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-004/t07_r01.md",
+      "proof_sha256": "b6cb51865a7b7f499e67272c9c03e7b2f8cf0294ba8f438a405a3d41548fb202",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/b40ffa500d7a1682fa61924663d953b7cd24235871f87ae1952c40c18a5e22bc.md"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-004/t07_r02.md",
+      "proof_sha256": "343ee2e71bd9b5143faf3b695a3385d1a705bdaa3b0c85a80549cf13f64c8b07",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/139f4e5074915bbc011b403b49793b9c7ed1f9ed1a279ad6e687b9c63ef6c0a0.md"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-005/t10_r01.md",
+      "proof_sha256": "7b8fd582bc95a602a02ee9ae2dbb425754d273608f49a3acf7fa522dc7551701",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/31d6de9a5280df252a5aeb2703f112b1cb15287c055416bb95b9dcd5d4cf1284.md"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-005/t10_r02.md",
+      "proof_sha256": "d7b53dcc6b7053e99660bacd48f2d84bb6d1dc16fa5bdcbe320dc1673c6efa7f",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/ba9fba7db17aa5dd3370a05c5d7569b609c9b1a4324251526167ad1a13bb0495.md"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-005/t07_r01.md",
+      "proof_sha256": "8307ce6ade80651fc18a96ecc02110897202a1f78049ccc75d2ceb1d24b99925",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/169360cff3a563053cd6721f30973d6cb23b45686ed04c2ccbdc3c2e3b153b57.md"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-005/t07_r02.md",
+      "proof_sha256": "9bd87c201ef9b1cb9241b4de7e104c0fbcda164db58da44c84a79e8238df7ecd",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/4bcaa9371f71963f1d108b4bcd927efce56678d25823b368e371e3b4f90bc4af.md"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-006/t10_r01.md",
+      "proof_sha256": "c0627298c934d46bf662a230c5ffe0936a7f68931dcdd962cce8941e21e60dc9",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/74d70402d89e5c6b27a84e3c8ebd3435fbdaed8083315a404d83b6768609a652.md"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-006/t10_r02.md",
+      "proof_sha256": "45af14719268d7cfb20837503c7eae3b87af5223bc3e5324392dbb4ad937f7da",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/c1bb133f069cf60d8b68635816f21b56317ffb6a305aab935e7e592d3f7d8bab.md"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-006/t07_r01.md",
+      "proof_sha256": "d2237e758f088e0dbb03e8be30741c6e3b59a44b04bd1064c98063b43a95e276",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/787e116fff907fd3a5f940d21169bae1771f6febd74e48bd7d887435581e766c.md"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-006/t07_r02.md",
+      "proof_sha256": "2038dffa079e777574c753d7317d3b36fda853734d7bfe8d3d5fdbeb96d34a64",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e05d98ecedda129d02e82bd49dd8a7a5c981dc018e01d48764989d83379f1eec.md"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-007/t10_r01.md",
+      "proof_sha256": "f026b7e778b25f63749b157cd179d99c1dce258830a7b06981978d82a91fe7fb",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/ceb3b5f573a6b5203dd812dd3d8f99137920c9083454ef06e570b1d5b6f18136.md"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-007/t10_r02.md",
+      "proof_sha256": "d67e3ffb8a6f9292c00fc49d886f46f89a900194e7870b9713f58b17d043a85e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/37fc1a0b3dca424f9f32060af2badc3a27af373901bd5def716010344a56d8fa.md"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-007/t07_r01.md",
+      "proof_sha256": "981026b876b94b1e85cd396b3f567c505a2f816c01c2694ec0a991540b145728",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/91ae2896fc306440eb62ef36a4d7a097f8f277bbe22d90ed3ddee396b9b88866.md"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-007/t07_r02.md",
+      "proof_sha256": "f2b6f476303963b357a80b83becf2385ec3a8b3bac40873413e09aede9abe1b6",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/74d3d3bd48acba74b69bfd8c6dd9c4e70bb3bdda9e5916ab2ce4b596f498c8b4.md"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-008/t10_r01.md",
+      "proof_sha256": "d2e97b512e0239ab8f8e393520ded6cb89f596082cd0b5a993498f9605ee02f3",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8a02a444f27939cc1fbb3a5f2c05ed2c525278adbc091f0609013fd4c3c6df73.md"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-008/t10_r02.md",
+      "proof_sha256": "e27df98ab1683079b717827657e14fa2c49c7f28530ed93527278442f6891570",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/6c70bf3b438294f494650cb0d5e0379a76d4aaf5e337d356fc6c22dd46d5a436.md"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-008/t07_r01.md",
+      "proof_sha256": "b01be707b8d2e390f7ac2c7cf198abac8da8b78b67415f27dddccd542d60b9d0",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/fc284be58b3df4411f553d8f112f53d3856e181f884e5b031bdccc399a0fe985.md"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-008/t07_r02.md",
+      "proof_sha256": "cad6c20e64c86216cf06ab2b00d5035f6af0b1c4f4faf5a7d5c67e31e52a6921",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/486302d1cef7e6ef20d1a52a6cad52093e5461e3066c7383db504e5637c1caf6.md"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-009/t10_r01.md",
+      "proof_sha256": "a6a15da117f263876728e6d0ed7ae22d99cc43632baa1f852dc750e85094ebc6",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/7f1d661183425c765b53ab8ced15b4f3667bf3bad2d74bd8e25db6a4f0a4416a.md"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-009/t10_r02.md",
+      "proof_sha256": "c422ee9af77de859d596b0b2ceae9a173226609b6f033a38e6cbf85529269ef0",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/b5898963ec429aabd1b17e6031f571fb5d5597d1a56f19c83c0830bb09df65f9.md"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-009/t07_r01.md",
+      "proof_sha256": "1a9d9d52c2cad2960b814ecdedad61e14ba09b9677db5de97bda56ed69f226b4",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/6bf6fa361a39aee517755f258e340761af60dfb84698c718187f7d37ed5a5814.md"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-009/t07_r02.md",
+      "proof_sha256": "0fa52d8766279e0b229224bc328ad6d26f54499a7ed7896f68d251eb0913c1b1",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/f8e94cde0486eda0dcba00c3b860ad259686ac800aa107becdbebe8d8e3d13c4.md"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-010/t10_r01.md",
+      "proof_sha256": "dbdc6295b7c8591e4bcbd69cb378c73bf603c784f38ceb5651ece36aa3ad31b7",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/0d78a275792e3d52254fad89a248d6dce7f64ab105d335c3081d704603aa4146.md"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-010/t10_r02.md",
+      "proof_sha256": "3f0618af10045743c7950e4d1cb0ef3324e3316681718d1a3b15f8764dd2ac53",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/da763f5e88b34798749b60408041444ad1ee3c337ca09228ceadd07a041ad79f.md"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-010/t07_r01.md",
+      "proof_sha256": "bf466f1dc575bc21e3d4a84611d0882b6e9de078fc9b86dcb366d49c00677119",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/b64551c3fa07d178fd84c71011fe1faa36d5d56e558bfeb87decf1a263421692.md"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-010/t07_r02.md",
+      "proof_sha256": "932f050ea7d2020ae0f654f47b8c08273bf4610d466e30bcc8ab18274797c200",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a777fe5803754cd9b778c8160a0bbddf6584610e4a43345b86da410fd1a9036e.md"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-011/t10_r01.md",
+      "proof_sha256": "f2531e4016a73f9ff399dfa81fc3eedfdf527ab6cc7ac045b94830d56291e8db",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/44c921d37cc2840f63b2cc09f39727d5a6c8c54f68d3a56485efe4cdc4bd1836.md"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-011/t10_r02.md",
+      "proof_sha256": "1fb273ebc2525dfe01af8bf209bc5737b6bbeb92b291e0b44f7718eac88a8c2c",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a30a28f97baa27c93f0d1df753e1d9bbaf5eafe7cd8dff184860629b109625a1.md"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-011/t07_r01.md",
+      "proof_sha256": "39bac61d423b1c694f3ffd0a617c5639382848ef5b2074ca7a82b1d03410325e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/4e9f88946ef95d6dcfd744ccfe94ce92b2f78e140cbb7b048ce12b02e43a7d49.md"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-011/t07_r02.md",
+      "proof_sha256": "69a0275c5830602c1d858f7afe240b46fdc1b0aa62c3d509675e960d928e93d2",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/ab0eec9b18d4c9a2ec41b06f128333737009c9e57f036882ba1f35fa91068e7e.md"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-012/t10_r01.md",
+      "proof_sha256": "fe72c289711e21dd410c329cd834dab8eb916ce4594e02a3056461b521526fc5",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/3000d6bcd08746eb5ca262940c3785809e4c3c4ecfe33e1ba931e6ebe072aa84.md"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-012/t10_r02.md",
+      "proof_sha256": "da813e151404fb90028c9178c67cccfe416887cc8d781a721f07182a89a86add",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/007c4d8234b477eee2da052e041cfd7f3ce74254d8adee929f60a3270fda91b9.md"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-012/t07_r01.md",
+      "proof_sha256": "c91aeea0438388fc8b7917d32b8861f353de0a9d20a88f03375c8ba3422090d9",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/29edacbdae88f7ab3f7dcb852388b956c9aa954c90e2c023951b86ba6e26138d.md"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-012/t07_r02.md",
+      "proof_sha256": "2f0f3c4b5f6262ca6e774368157c7810a619d437b9af7113956b23d1892a191c",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8b5b2a28b215e2eaebd696e67d57df0e4931a9c56f7d895e923f59b3bb6828e0.md"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-013/t10_r01.md",
+      "proof_sha256": "5be91eba39252445f595080a8298333e643107db733676cdb9c904455831ce28",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/57a44268543713dbfd9c98baef0091d1efc5c908b19b4aea3ce4098a1a1ac8da.md"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-013/t10_r02.md",
+      "proof_sha256": "4a69c4d55d1a3c2b624509031f85eb6034af6b0d4582731f4c29ea8cb68f21de",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/0dd7c17eaa4d8979483c8221edbe7686f2cf05abd5241a4ccde89db98da0b731.md"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-013/t07_r01.md",
+      "proof_sha256": "a2402cc39e48c9373619d274d446cc64f113e0ff77b21e20bb83cea0586871ff",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/4c71ee9625cbffb9a95d5d96e201b17f002fc700c345db42aedeb6736d4dc774.md"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-013/t07_r02.md",
+      "proof_sha256": "1e24a0eeef717d6a9bf631da2b3f473a1bd3dd53bddd40ddf9fb9cfc2f9b842c",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/5a82e70acaab2c399a4e935d73c5cbfeb1f3c48693006f8264f211002133b40c.md"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-014/t10_r01.md",
+      "proof_sha256": "7f02a07eff85f01a17d470db6a30d5efbf5d793cdd4278e49de503e481e69a77",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/c80c90241557ae7d55bdb34ffb6e1639691faa549df4133d23b1ebfdf596c747.md"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-014/t10_r02.md",
+      "proof_sha256": "c74aea2939190618f2052d9600238541f56263ac0ef92ab1cf66af9931aff0d8",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/b6a4746ec3420504aabe4e5335534d4d9166890f0fef8037eadf53d842d577de.md"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-014/t07_r01.md",
+      "proof_sha256": "9b87390b35dbfd8c931023829388e879f7381cdf0a3a927a244a6e9c030ef379",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8fce4e1a4982e552a15075b0376a2e3badbb67457cd76adced9d7193679310c3.md"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-014/t07_r02.md",
+      "proof_sha256": "4dc6944e58b43b769ff02366e213e69539e16ab8515a2fa2458184c0ae5337d7",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/5ee9e8007780c60d7758bd94118d29a8ae6123e369535aedf1b3481da352214e.md"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-015/t10_r01.md",
+      "proof_sha256": "c415732a9c4447377466215343d84067cbba48d35a8ca8eba158fd397735509d",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a47b6b03231a06c8b74c484d1bcc802ff0f483ab4ab937696fa34ce1b5e7a129.md"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-015/t10_r02.md",
+      "proof_sha256": "5300edf60177dce08896c6d7c820ff58ab6488bbadfdb8cff1db91297d493551",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/bc1dbbe0dccee249642e09c1b96277e9c45b2ec5fcf633536ddb3164a0e45302.md"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-015/t07_r01.md",
+      "proof_sha256": "eb6d0c8d780197ad4da6947932680db286d4699dc6da7e68ba58af69d0e7c5ea",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/3c48d6882cb9227744e39ad3887dc48b4a14d67db50b7732c68b07ed91cd3abd.md"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-015/t07_r02.md",
+      "proof_sha256": "469752ba8ceabecc9e3ad558076c4d03565f756dd331e1f63393c71d5a08c181",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/ce89c4019fe766071f273a9c95e862f4de4d2651b15c16f9434156dd29a17997.md"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-016/t10_r01.md",
+      "proof_sha256": "a4ffbd9e4235c44e3be74377bfa159cff78ec64301e3424c5834386e6554daea",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a8709f7176b61af685a30a0c156bac9886376f25ad2e69d613c09c387a30f161.md"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-016/t10_r02.md",
+      "proof_sha256": "223cb13cea2a15b69f210d10b41428be1b5a6dd42df2fb936d3402cf401b8c0c",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e6d099f377a7cbf6daef9bf99928e46b0233fd0522946e2004393638c615a87c.md"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-016/t07_r01.md",
+      "proof_sha256": "1c377b420c6391aab8480db0e5bbaf09b66579d9867a4610ff40847d92528b43",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/60d059a97a94f3b95ed7d516417bd02528f57e4f021350869e9032b31af786b5.md"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-016/t07_r02.md",
+      "proof_sha256": "15cc095f191a10bf1e59476caffb48ae021c1bec0833c183262273fb9b4795fb",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/c645c6c4f94d15f2ac29da8d6c085a3ce97e892072e8563961985292bfa7610b.md"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-017/t10_r01.md",
+      "proof_sha256": "921aa0b4bb4d2ed23f00e2b03ad1fc855c86f67aa8c25d0581d6c9c48fa591f7",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/603693d0d59db3d910a5ce870158c2c75c33d35789fcec29e30a8800e92f5608.md"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-017/t10_r02.md",
+      "proof_sha256": "244c94bd642f78d3fd86d67d3e180fd2409b67df5545a5365184753b5f97755e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/df064a61978ed1c51063019700374c3854b864f61bbbac7343f618db512298f4.md"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-017/t07_r01.md",
+      "proof_sha256": "432c142860f17ca8a16983c65dbc24170f4fcba00df495a9d34bd6bbbc39e9d4",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/4318c6e2278356fa856f19ea1461312a51c5f9ab9e2f8c275f831f686b209276.md"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-017/t07_r02.md",
+      "proof_sha256": "57f996d1dc62a999dcb689543192a96d6998193adc278db42b399e46e8a41d57",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/049d4a9cf6d7d1e91df21d265f2202b045233b57aae6b7c2ab95a2a27870799b.md"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-018/t10_r01.md",
+      "proof_sha256": "ffafbbd7e12cef022539e690bc5f0ccb0cdc1f2d2609106683cc4e618ab8cb87",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/9ebcb5259221aecf1a4bf05c4fbf484609d01f5f892ce50de15d2478ab8d9870.md"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-018/t10_r02.md",
+      "proof_sha256": "8795331ad75b649c9cf7750a6ea8127fab7b1a98aca63668b72954c5e6fb5453",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/961c2be21430b3ce9d2993bcfa97cade58b83d2f4c36312cc2547c1efcc9547a.md"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-018/t07_r01.md",
+      "proof_sha256": "2dad72f02a7ea68325ead6c3ed14fea7440573412f952f40bf452b40b22a703a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/4acdd2084f0a57a54cae22e7a6deff411b0a4ebad18522a0e96046b51d7e92c9.md"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-018/t07_r02.md",
+      "proof_sha256": "c38ff70117c610bedba17bacbd8886dbfa4850772a28cc81551ad661cc09b38a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/362b2e1a6719d71ed05538e75ba8822f85609cc8b53d3ed456fdd59fff489d9a.md"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-019/t10_r01.md",
+      "proof_sha256": "32f8b5f4b14aadf78985043a001f101c8430e39da1255ce4fb1dc43c0f0f1955",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/26843b3a8a7aebadba132f16b6cc3f9d8e542ca30a46b801023ab29248846047.md"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-019/t10_r02.md",
+      "proof_sha256": "cc40194482e2f30c842f07f170dcd69b25f17d3b0fefe6a58554a6c3fd9babc0",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8cf8e8dc1969b290395eec7cc893730e8ce24fde0eea667556bce6a623dde1a1.md"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-019/t07_r01.md",
+      "proof_sha256": "5fa7c47c1155f35ed6772c7730d9b5a165f8510842bea98ee721f299744d7efb",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/75bee03b8f827bf244b38c6b9a520fa3511a2f74008266ded1875599415d88b2.md"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-019/t07_r02.md",
+      "proof_sha256": "9f8b7c0aa08a4ca49a6dc2d328662b9b1f2b2e5d77f8288debb0d4e3ec589b42",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/596845b081b4ea4c68fec4abd2ebadd8a8207a16d1a26962957bce2cad079aee.md"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-020/t10_r01.md",
+      "proof_sha256": "aedbfdbc1c0a5ef0ffa4eba997bb7323aec802ac7cb1aec893ca0b03ba44f74a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/21f68e6d1c5705d9834ebd08afbd04a051fb39f6318db0bbf5a2607381773d5d.md"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-020/t10_r02.md",
+      "proof_sha256": "93bc25af1582e47c6f3850cd4b52956bfad22d22424dff38a0ca2ae7d476f22f",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/d38850ac1c67e0caa73061de16ae1ebaef46fa56cb31f2800fdfd2fe33d9f8d2.md"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-020/t07_r01.md",
+      "proof_sha256": "fd3341d901561552e63211ff18ca6e168e621640e8de53d26b98fd3e831a18ca",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/ed8ad4735c43998e1a4511bdaf629f15c0098136e63abfa8f038b2a213b2c146.md"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-020/t07_r02.md",
+      "proof_sha256": "ff1fc1a5092c903ba11b4c2fd6a9c7f62683814d7bcf57eb88dc93d90cfd8f5e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/1fef233e03c5bb02968b5f8db7a97845f1a506fafaa7771886d2a2b96a806f13.md"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-021/t10_r01.md",
+      "proof_sha256": "6d2da5361bde1e52d43e9934b91c27ea69b0da2c7ddf2feebc7bd50ea4a796ce",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a819ff793ead6b00c3ddf1a22d0d779225542475b5ee7c3446fb4b652a23d025.md"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-021/t10_r02.md",
+      "proof_sha256": "80fa086c273e903b5427722d440b7f587dd2c51cac0e625229aa0f015beae71f",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8b24c3db58a14535cbbf608c4f194e7d9efbd67f86e8c1efb3141c4704efd519.md"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-021/t07_r01.md",
+      "proof_sha256": "1ee88bbf133c7eb1716cb65d946e475bd0c46552d72299414d31b54b94236519",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/068c4e4fdd6eacbd2835973b2fd1ad510f715cfbd943499c362f4e8ffc74d538.md"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-021/t07_r02.md",
+      "proof_sha256": "43798d61ba673da8189101fed526ab8cf5146c73500cf9b4e9b85caa154404a7",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/c3afdaea17b5e611d29e461437b36c100bf6049cfdfe69b92407bc6f331a10bc.md"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-022/t10_r01.md",
+      "proof_sha256": "d7411309c33d0f47d74a3816e5acd6b11f37a64f95ae09642ecad173038069ac",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/2b6a356036764144080370545a7112ee77d518c8e5eb646736198563ec3afe12.md"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-022/t10_r02.md",
+      "proof_sha256": "e777a71ca979998b20936d4dde4b06f6f695e39e97fcf6b65e782ef109c35c48",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a7e2f0672c79438f88c0f6eb12fd6fbf64f3917e8bd0ef7dd123ead3f66ea580.md"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-022/t07_r01.md",
+      "proof_sha256": "ca1d6a929ee4d023dd928d55202db1ed15da40379662e1b9f6f23d3e2892f6f6",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a85c20bbfd7989bb9d89cdf86f137272686c06928bce5e55c1b6b09c2f1afc3d.md"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-022/t07_r02.md",
+      "proof_sha256": "a65fc0f0e9b1420d262271eda7341b95e9c3b68d02595acd7f05225fdd4bf4fa",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/2b5f6bba0b67284a040eb1722e8405f3c02ada464ff36174411e4af654ca21da.md"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-023/t10_r01.md",
+      "proof_sha256": "56e211cc83537b29ed5f42f5fc71927b7f04660ab985509842f75462f9edac81",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/37c0c11775709c62f7941e23ac267ab50b6020112c92c03b0be55ce1f67929ef.md"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-023/t10_r02.md",
+      "proof_sha256": "6915d9b5639e174fa71eace1c48d6062937b5f9a8460f87d0e693cbd64f7e663",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/66720d07e9c27bcaf710089480c02fbdae210e130318eed4b4926bb596757740.md"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-023/t07_r01.md",
+      "proof_sha256": "4cde5f755d0d651d423c08bb8720c4e3e2bece4a01b545b0c31b2adc7f747cba",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/612f8a27ee422b43b271ed3d33430736bd7890835adcc5d195da022f0a607a9f.md"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-023/t07_r02.md",
+      "proof_sha256": "c331964aa52cf063359b147e1c739285f98f4bee2e35c15d815ef421186d7898",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/75b7855641c06f0cf694c5b2762dce0ff5389173c8d42172f03e4f8b12ba2374.md"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-024/t10_r01.md",
+      "proof_sha256": "f8fb7add927e375961ea74413da1806e72069b03fb62c639036450be47c841ef",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/523db18a5f674fca18108fd8e84a12ff2a1dcd1f261ce2d105112e79ea4c6337.md"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-024/t10_r02.md",
+      "proof_sha256": "a6976e2e8257a0f3e0038c363c6ea014f40780e3f1422369612c12a3e25ed2f1",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/c201792d67a94493226d52e8b9751dd6d6778ed097e25889dbb036e1d508ea19.md"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-024/t07_r01.md",
+      "proof_sha256": "5fe6736cafc8730dec2ac4a269bfeed5c89f9769cdbc1a6dda3fcf4468645d4c",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/d75e4b24d33b76d292d1803f9aadb515fe43435b60413455d536a01463a7b785.md"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-024/t07_r02.md",
+      "proof_sha256": "4ce009bfaf212595d47ec86001d36a78edbe99567bf8e14de0906bc3841cfdf9",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/3ff65cb9d7a7605fde6ac5cee8d9c516a3922b7a99e7261ad90dcca85c6bf577.md"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-025/t10_r01.md",
+      "proof_sha256": "3cc1e7e257658eafed63a631f60140453e46c63ae20fa0776219cb7315f5d68a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/89c7a68266f7469e8e3269e348765651aaab01f24d6e3df197a1de363007c8bd.md"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-025/t10_r02.md",
+      "proof_sha256": "c9ac76f3e3df4a6ff45fd26e08825432cbe83c1f6479740888bfd296604f8b8e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/31b38c7da748a46bd6ee9e440c496a8ffe418fc4b09a21f5fc3be25afbb4b575.md"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-025/t07_r01.md",
+      "proof_sha256": "41fd2c2299a0ce6162767238cb6776b9da28f2e1859a09488ffc9340cd4dddcf",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e38ab7eafea7101ac31f98bb21a0e2fe90811a304a694616e82ff3abee6e02ef.md"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-025/t07_r02.md",
+      "proof_sha256": "dce92329a949983cd747e099940216db0b92d08c31afedd426d4b9ed3ff5f1ac",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/b6ffe057eb02f2be18f0ffb796d86f25c06b709d3b0e86bb74e70c1002c6870d.md"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-026/t10_r01.md",
+      "proof_sha256": "eaf88f744e7d61df81b05aaa56a7cb3acce69c3e2c42ce668c3cba76ece5cfa8",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/0eac9ef84ab0729e8869fb269d4faa990f5bb81bef842dfbda9526acde74a1e4.md"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-026/t10_r02.md",
+      "proof_sha256": "ca4f6da5023bf43d268f354344af2ac392a250521db70e85dfe010ca823ef3b4",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/60dc0b80f018fb8d95e282746bf9d03f6669c3b1ba7780396140633cbb5d7fbb.md"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-026/t07_r01.md",
+      "proof_sha256": "b1a4ea3fd8b5a6d1ab7e4af838f84536ab662dc068dd7869fed555cad24b0570",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/673aafb61c5eca1f2f2e8b6e936b17f75221b899db0a575297a4cdad971dc73f.md"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-026/t07_r02.md",
+      "proof_sha256": "f08e1e18460cf8402349296d0b314afd0d5f81307c9c09a90caeea87667c3ceb",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e20c0e25aaeee25e842f2f181ce35c8add0694ae1af3e6fc999acb1f641cd76c.md"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-027/t10_r01.md",
+      "proof_sha256": "c3f5fbc0cf23c67e0cb4f8f96e55c76d7cca35b6a50b1bb37788cb3620ef8f45",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/fc18371d9cf14d589535b1e13f567d32733572298bc274435ed7dbccf38dd614.md"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-027/t10_r02.md",
+      "proof_sha256": "8ea0781769b14bfe0e0317d743254a6460a12b285290cce0db7d42d48f14d1c3",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8f0880665dd8c31e242bac3065542a3c0dccec10c47c07a02cc46f8c11a506c2.md"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-027/t07_r01.md",
+      "proof_sha256": "d69d4f1d42a6d0bb3442ef0588167ac448ca771dbe0d3f91fd3ccb928f4e5283",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/b557775c8b3b32604c1344246083f79b0a0a42497f7d1c56fc94b8c701358d6c.md"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-027/t07_r02.md",
+      "proof_sha256": "5a988970b708ab96cba7d515f5751e8e327b1c06cfa533300f716f127f6c0e4d",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/3f796e768df1c933a51153fe42cff7808cc0d1a5081ef04c3977f1fc8671e5da.md"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-028/t10_r01.md",
+      "proof_sha256": "de637b6b981fd3b83db40e2f9cdaad35e1be6e2736bd5c45c57eff26e7714b21",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/bf1cc4b74fd1561237e24d6d320c840d03992d0acb190db374c8569b49e26832.md"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-028/t10_r02.md",
+      "proof_sha256": "7f8b53d9b8180ec5a97819d2b12d839bb45f8b514bc0ea70f4f6d4996757d280",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/97e44b8ef81ec5bd1a76ab7e0ff007abaf0d96647848c8964e76cdd62ee333a7.md"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-028/t07_r01.md",
+      "proof_sha256": "a4d6772226c27909e60df49a225c5e0de4aab1694cceb76803266b513c7ebb46",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/bc097c2818fea45ca68920c7f0164da0ae4a301d93076f93c33f3ab4c010afd0.md"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-028/t07_r02.md",
+      "proof_sha256": "9d6fd07d40e04afa7050a867867154ab850620c200a868944aa80af0ca55227f",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/a0808fc5798894121fe0bf62e25b66910fa4d9df2b4389a699ead7111283dec0.md"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-029/t10_r01.md",
+      "proof_sha256": "51e25ea6153a81636743c8add5dc1676e2330ddeadbfd24ff5061c8d49c44260",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/8d9dea785cf8ec67591fa56b1d3f30ce1a6bdf51bc37f6e7642d1d49b0796357.md"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-029/t10_r02.md",
+      "proof_sha256": "8f74f2aa249179498e012970dcca5a28a038e9c22549041446443dae2262124e",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/2eb807919f0b510896372316f4af41ab3badd37b2c935ee8c7415d43ad54d747.md"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-029/t07_r01.md",
+      "proof_sha256": "ea409f403604fdce916346bd6248bac607a11169d896a876c52e37fc81b999d2",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/95c68875d2db4b2c999948d3da27508bde6894fb5243d81809972325a5237fdc.md"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-029/t07_r02.md",
+      "proof_sha256": "13ed2c3a5eef3e6df6f8af2c8b4ef934843abedacf664d5a2885446bf2b8c667",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/0f3029a0137ae34e0ce001d11c71919d049956a01a33293b55bf0b18cae97d4d.md"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-030/t10_r01.md",
+      "proof_sha256": "a80c482663f4aecf2ffbf8e3ad0c8d149c0ad80ca305e3f197efad4198ec2529",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/0a6ee09b746b46410f573585fd9d80427f2cabf8c74077bbf8de74bcf5bbb883.md"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-030/t10_r02.md",
+      "proof_sha256": "90fd1f4d7780929e82efff111f0685b07f4e6158ab28c7a8bfb6392c2ffb74a8",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/9ee0bd07c108b536e8910e4bb73aaef86e800c84e4fa3e3acd2e4f7f431276eb.md"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-030/t07_r01.md",
+      "proof_sha256": "06e58456ebe22f8f58a346bed28cbc3894638fe1d5ef3d4d9fbeef84f7c7d990",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/beec452c062fc2f11969cd9a1f21d04e1062ad06ee7ec755ea78262c2128504a.md"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/advanced/results/b5_ablation_20260918T192201Z/proofs/PB-Advanced-030/t07_r02.md",
+      "proof_sha256": "e2f9b69182c1fd72235e995e46980279d8ef95c3302e3f129284e621b735a51a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/strict_v2_consistency_20260918T064715Z/proofs/e3429e1f32bd725b9acc5cdaf9aa4f9aa3e3e19fc5b41a1e0cee2c4003099a3c.md"
+    }
+  ]
+}

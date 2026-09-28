@@ -1,0 +1,23 @@
+{
+  "schema": "imobench-proof-autograder-b5-v1-result",
+  "problem_id": "PB-Basic-013",
+  "candidate_id": "t07_r01",
+  "selection": "explicit",
+  "source_proof": "/opt/proof-workshop/runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z/gpu0/problems/PB-Basic-013/candidates/t07_r01/draft_proof.md",
+  "problem_sha256": "07f975e5449f566f33434746f69d3ec2720e776c97e82aebb330ca38ca6c51d3",
+  "reference_sha256": "15c8b8ab464de13b112ed964b40d9cfc6b39ac48a66e7bac459b58ae1265063d",
+  "guidelines_sha256": "0546a235de7a282453a79ea84d900e9d1a9492e7031c47d9076e9ad9c05a34aa",
+  "proof_sha256": "ba722711c9f82e25bd6273ae4d875a42dc2be8668d463a03e378a40f40b00717",
+  "cache_key": "090c44e0ec9c7e57010458478bd55c06db84fdb5eeff18972691b33085dd98ca",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "isolation_config_sha256": "a5917c07a3db6bc066bc7a358c0afa8351a57a289dfcfafaff37f80e68287b09",
+  "disabled_skill_paths_sha256": "118f0ada081aea2c4c8773990a4686122c73fb9c2ee696e54f043d956d531e91",
+  "evaluator_instructions_sha256": "015e67bb885a2531c0aa51431d404c9d479d6676a024dca2a24df0a332f2587c",
+  "state": "running",
+  "started_at": "2026-09-13T01:36:04.945090+00:00",
+  "prompt_sha256": "507d91bb9f58bdfb8743ca0860b18625ed9ae54d7f0dbd08c9d06c4a5b2a9d03"
+}

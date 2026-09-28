@@ -1,0 +1,2354 @@
+{
+  "schema_version": 1,
+  "benchmark": "imo2026",
+  "experiment": "review_fusion",
+  "archived_at": "2026-09-13T04:25:56.557862+00:00",
+  "source_summary": "runs/imo2026_review_fusion_strict_matrix_20260913/matrix.json",
+  "source_summary_sha256": "18a91826902f9e2682b76f58ef54a7800a0ab807bc497424bffde144aa1e944a",
+  "snapshot_count": 69,
+  "pending_or_unavailable": [
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "gate"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C1",
+      "state": "gate"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C2",
+      "state": "gate"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "gate"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R2",
+      "state": "not_run"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R3",
+      "state": "not_run"
+    }
+  ],
+  "harness_note": "Historical v257/v108/v97 raw/lazy source, v290 with parent v263, then R1-C1/C2/C3, v98 post-R1 gate, v103 R2, and v105 R3 with v263 recovery; separate recovered C1 runs. Saved run manifests identify the actual policy. No verified complete source snapshot for this older R2/R3 experiment is asserted: later v290 and composite freezes use changed policies.",
+  "rows": [
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p1/t10_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p1/t10_r01/R1-C1",
+      "score": 7,
+      "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p1/t10_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p1/t10_r01/R1-C2",
+      "score": 7,
+      "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p1/t10_r01/R1-C3.md",
+      "grade_directory": "grades/imo2026_p1/t10_r01/R1-C3",
+      "score": 7,
+      "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p1/t10_r01/R2.md",
+      "grade_directory": "grades/imo2026_p1/t10_r01/R2",
+      "score": 7,
+      "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r01/05_resolver2/cases/imo2026_p1.t10_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p1/t10_r01/R3.md",
+      "grade_directory": "grades/imo2026_p1/t10_r01/R3",
+      "score": 7,
+      "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r01/06_resolver3/cases/imo2026_p1.t10_r01/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p1/t10_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p1/t10_r02/R1-C1",
+      "score": 7,
+      "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p1/t10_r02/R1-C2.md",
+      "grade_directory": "grades/imo2026_p1/t10_r02/R1-C2",
+      "score": 7,
+      "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p1/t10_r02/R1-C3.md",
+      "grade_directory": "grades/imo2026_p1/t10_r02/R1-C3",
+      "score": 7,
+      "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p1/t10_r02/R2.md",
+      "grade_directory": "grades/imo2026_p1/t10_r02/R2",
+      "score": 7,
+      "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r02/05_resolver2/cases/imo2026_p1.t10_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p1/t10_r02/R3.md",
+      "grade_directory": "grades/imo2026_p1/t10_r02/R3",
+      "score": 7,
+      "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r02/06_resolver3/cases/imo2026_p1.t10_r02/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p1/t07_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p1/t07_r01/R1-C1",
+      "score": 6,
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p1/t07_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p1/t07_r01/R1-C2",
+      "score": 6,
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p1/t07_r01/R1-C3.md",
+      "grade_directory": "grades/imo2026_p1/t07_r01/R1-C3",
+      "score": 6,
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p1/t07_r01/R2.md",
+      "grade_directory": "grades/imo2026_p1/t07_r01/R2",
+      "score": 6,
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r01/05_resolver2/cases/imo2026_p1.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p1/t07_r01/R3.md",
+      "grade_directory": "grades/imo2026_p1/t07_r01/R3",
+      "score": 6,
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r01/06_resolver3/cases/imo2026_p1.t07_r01/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p1/t07_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p1/t07_r02/R1-C1",
+      "score": 7,
+      "proof_sha256": "940cfe58a4c7c31fd8e541a7171f4e69b0184eb15c4d9efbe434fdaf6fa0bd99",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r02.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p1/t07_r02/R1-C2.md",
+      "grade_directory": "grades/imo2026_p1/t07_r02/R1-C2",
+      "score": 7,
+      "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p1/t07_r02/R1-C3.md",
+      "grade_directory": "grades/imo2026_p1/t07_r02/R1-C3",
+      "score": 7,
+      "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p1/t07_r02/R2.md",
+      "grade_directory": "grades/imo2026_p1/t07_r02/R2",
+      "score": 7,
+      "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/05_resolver2/cases/imo2026_p1.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p1/t07_r02/R3.md",
+      "grade_directory": "grades/imo2026_p1/t07_r02/R3",
+      "score": 7,
+      "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/06_resolver3/cases/imo2026_p1.t07_r02/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p2/t10_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p2/t10_r01/R1-C1",
+      "score": 3,
+      "proof_sha256": "51b99dae6103e0a337d96023eca9fa2f2934642e36c84710e217ebf4721437ac",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p2/t10_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p2/t10_r01/R1-C2",
+      "score": 3,
+      "proof_sha256": "bca3c901fd41469ae92d08c17166a0f67cd150f7711e83c112ad6e0704b0405e",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p2/t07_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p2/t07_r01/R1-C1",
+      "score": 3,
+      "proof_sha256": "6fe8c0123d1eb83abf9559ae005868a59690dcd21f82c04115f0404dafbc4bc8",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p2/t07_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p2/t07_r01/R1-C2",
+      "score": 4,
+      "proof_sha256": "218a6fdb9717141046e23880f2fcf1dc2513c9e3feafceecbdf303d7341054b4",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p2/t07_r01/R1-C3.md",
+      "grade_directory": "grades/imo2026_p2/t07_r01/R1-C3",
+      "score": 4,
+      "proof_sha256": "dadf9e9aacf7e24603aaa23110e85995613680ce112faba196a128c4e03de2b1",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p2/t07_r01/R2.md",
+      "grade_directory": "grades/imo2026_p2/t07_r01/R2",
+      "score": 4,
+      "proof_sha256": "31d3aa64197a55dd74497d7720ddccc8028e932c6c1f276fa24dd65f68f851fb",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/05_resolver2/cases/imo2026_p2.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p2/t07_r01/R3.md",
+      "grade_directory": "grades/imo2026_p2/t07_r01/R3",
+      "score": 3,
+      "proof_sha256": "65d7d0fde854f947285c85099276610479acef7fd671d411e23545f9079cbfc0",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/06_resolver3/cases/imo2026_p2.t07_r01/third_ungrouped_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p2/t07_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p2/t07_r02/R1-C1",
+      "score": 3,
+      "proof_sha256": "f92288ff1ae160ef24da6c3ea53c62637cc422ee8128f69090e8d47bd05b0ebb",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p2/t07_r02/R1-C2.md",
+      "grade_directory": "grades/imo2026_p2/t07_r02/R1-C2",
+      "score": 3,
+      "proof_sha256": "512d53a6080cebf98c944399f7ab33efc453ac7d5fa011b909e0ed0f49e01231",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p2/t07_r02/R1-C3.md",
+      "grade_directory": "grades/imo2026_p2/t07_r02/R1-C3",
+      "score": 3,
+      "proof_sha256": "9ac9429947234642de7b417b984b190a34c1c876d4613ea6ef9967a1b80148b1",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p2/t07_r02/R2.md",
+      "grade_directory": "grades/imo2026_p2/t07_r02/R2",
+      "score": 3,
+      "proof_sha256": "a61555204742b510e6bfd325aec585aab16db792ea41acb6a49e45382036985f",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/05_resolver2/cases/imo2026_p2.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p2/t07_r02/R3.md",
+      "grade_directory": "grades/imo2026_p2/t07_r02/R3",
+      "score": 3,
+      "proof_sha256": "24b502cb6b5e2c1db2cd78fdf567bb0e635c0446ea432d2b65923bb5321770c7",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/06_resolver3/cases/imo2026_p2.t07_r02/third_ungrouped_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p3/t10_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p3/t10_r01/R1-C1",
+      "score": 2,
+      "proof_sha256": "14020e1e604ec17ce7272a41529720b9022af14c0213a59d65e827567b340fbe",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p3.t10_r01/resolver/temperature_0_4/gpu0/p3/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p3/t10_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p3/t10_r02/R1-C1",
+      "score": 2,
+      "proof_sha256": "aed3f9f27a8177f8d8d2c24408e7e793da784b28bef0a14d4ff5c4a6c21a06fb",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t10_r02/resolver/temperature_0_4/gpu0/p3/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p3/t07_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p3/t07_r01/R1-C1",
+      "score": 1,
+      "proof_sha256": "9604fe13ea70f38af96ca160b637a0acd846f3456bcaf66fe6b34b771b1e4dad",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t07_r01/resolver/temperature_0_4/gpu0/p3/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p3/t07_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p3/t07_r02/R1-C1",
+      "score": 2,
+      "proof_sha256": "510a835111e1e9b4e9fdc393534a02d2ec619f4acceefc66b04d01f2d1fa6e29",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t07_r02/resolver/temperature_0_4/gpu0/p3/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p4/t10_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p4/t10_r01/R1-C1",
+      "score": 3,
+      "proof_sha256": "87caeae2d1ce58c5cdae53be32606fb0d91b63d39a9df3499d053e3727f5c8fd",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p4/t10_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p4/t10_r01/R1-C2",
+      "score": 3,
+      "proof_sha256": "091b8c955e1798f61fd1f5aab81ea88c43fb50bf22c5171883fb04b0170420a4",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p4/t10_r01/R1-C3.md",
+      "grade_directory": "grades/imo2026_p4/t10_r01/R1-C3",
+      "score": 3,
+      "proof_sha256": "b25f698d5ac018d1f5a0191545a1ce228e7f59fb951d5c9b32a5783393751420",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p4/t10_r01/R2.md",
+      "grade_directory": "grades/imo2026_p4/t10_r01/R2",
+      "score": 3,
+      "proof_sha256": "09d0ce1bade2d3756287ea257e1bf6e9a76d9ea54769c7beb0fefa5ab85d0fc9",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/05_resolver2/cases/imo2026_p4.t10_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p4/t10_r01/R3.md",
+      "grade_directory": "grades/imo2026_p4/t10_r01/R3",
+      "score": 3,
+      "proof_sha256": "8e260fab58564bbf2db27db29b5627ed89165684c293542c48924a80139d7d6a",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/06_resolver3/cases/imo2026_p4.t10_r01/third_ungrouped_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p4/t10_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p4/t10_r02/R1-C1",
+      "score": 2,
+      "proof_sha256": "8cccd632870b387aa3965ec0445d244fd0124e4ccb9b30a6b13766700f1f36e7",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p4.t10_r02/resolver/temperature_0_4/gpu0/p4/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p4/t07_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p4/t07_r01/R1-C1",
+      "score": 6,
+      "proof_sha256": "1fcc43601af78d86b1fbc493ec6071d700962e95af2dea7c291b23b8af90f5d5",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/input/lazy_checked_baseline/t07_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p4/t07_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p4/t07_r01/R1-C2",
+      "score": 6,
+      "proof_sha256": "1fcc43601af78d86b1fbc493ec6071d700962e95af2dea7c291b23b8af90f5d5",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/input/lazy_checked_baseline/t07_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p4/t07_r01/R1-C3.md",
+      "grade_directory": "grades/imo2026_p4/t07_r01/R1-C3",
+      "score": 6,
+      "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p4.t07_r01/resolver/temperature_0_4/gpu0/p4/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p4/t07_r01/R2.md",
+      "grade_directory": "grades/imo2026_p4/t07_r01/R2",
+      "score": 6,
+      "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/05_resolver2/cases/imo2026_p4.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p4/t07_r01/R3.md",
+      "grade_directory": "grades/imo2026_p4/t07_r01/R3",
+      "score": 6,
+      "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/06_resolver3/cases/imo2026_p4.t07_r01/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p4/t07_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p4/t07_r02/R1-C1",
+      "score": 3,
+      "proof_sha256": "268d18adb39500c8fc3d51edded3aa17e03601f3e143faebeadef006d77330cd",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p4/t07_r02/R1-C2.md",
+      "grade_directory": "grades/imo2026_p4/t07_r02/R1-C2",
+      "score": 3,
+      "proof_sha256": "268d18adb39500c8fc3d51edded3aa17e03601f3e143faebeadef006d77330cd",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p4/t07_r02/R1-C3.md",
+      "grade_directory": "grades/imo2026_p4/t07_r02/R1-C3",
+      "score": 3,
+      "proof_sha256": "7ef38987bf43b9e6693efe143f6a149a5cc96eda449ee64934234cebaae150d3",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p4/t07_r02/R2.md",
+      "grade_directory": "grades/imo2026_p4/t07_r02/R2",
+      "score": 3,
+      "proof_sha256": "03f58221b4ba564525c0f8a67aba120320432f6addb53c630b0a777bac221de0",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/05_resolver2/cases/imo2026_p4.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p4/t07_r02/R3.md",
+      "grade_directory": "grades/imo2026_p4/t07_r02/R3",
+      "score": 3,
+      "proof_sha256": "de10ebc3d1a981800998ab3b24c0d0e8f4bfbf16b7197558dd7aa84c5f7740a3",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/06_resolver3/cases/imo2026_p4.t07_r02/third_ungrouped_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p5/t10_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p5/t10_r01/R1-C1",
+      "score": 3,
+      "proof_sha256": "6192634914cc9e90ff2b92ac38050af2fddc9c90c9c51f924a1595e142da10c8",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p5.t10_r01/resolver/temperature_0_4/gpu0/p5/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p5/t10_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p5/t10_r02/R1-C1",
+      "score": 3,
+      "proof_sha256": "19e0842f9da03d571ea5f58ad0841727db1dc7f5a113e18836b7c953f9957260",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p5/t10_r02/R1-C2.md",
+      "grade_directory": "grades/imo2026_p5/t10_r02/R1-C2",
+      "score": 3,
+      "proof_sha256": "e43220e816e803e3450ba6d1f6eac6d9edabdd77b8826ce9fb878bce1ab33b1c",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p5/t10_r02/R1-C3.md",
+      "grade_directory": "grades/imo2026_p5/t10_r02/R1-C3",
+      "score": 3,
+      "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p5/t10_r02/R2.md",
+      "grade_directory": "grades/imo2026_p5/t10_r02/R2",
+      "score": 3,
+      "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/05_resolver2/cases/imo2026_p5.t10_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p5/t10_r02/R3.md",
+      "grade_directory": "grades/imo2026_p5/t10_r02/R3",
+      "score": 3,
+      "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/06_resolver3/cases/imo2026_p5.t10_r02/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p5/t07_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p5/t07_r01/R1-C1",
+      "score": 3,
+      "proof_sha256": "53122980d795d192e722bfcf9390c27555ce6cb809b51c53e52e66e1c27c8430",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p5/t07_r01/R1-C2.md",
+      "grade_directory": "grades/imo2026_p5/t07_r01/R1-C2",
+      "score": 6,
+      "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/imo2026_p5/t07_r01/R1-C3.md",
+      "grade_directory": "grades/imo2026_p5/t07_r01/R1-C3",
+      "score": 6,
+      "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R2",
+      "proof": "proofs/imo2026_p5/t07_r01/R2.md",
+      "grade_directory": "grades/imo2026_p5/t07_r01/R2",
+      "score": 7,
+      "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/05_resolver2/cases/imo2026_p5.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R3",
+      "proof": "proofs/imo2026_p5/t07_r01/R3.md",
+      "grade_directory": "grades/imo2026_p5/t07_r01/R3",
+      "score": 6,
+      "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/06_resolver3/cases/imo2026_p5.t07_r01/promoted_unchanged/third_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p5/t07_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p5/t07_r02/R1-C1",
+      "score": 3,
+      "proof_sha256": "54a30ec37ef9533df62c673797aeb5216303138033d3b73e8e4197ce9b83ef50",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C2",
+      "proof": "proofs/imo2026_p5/t07_r02/R1-C2.md",
+      "grade_directory": "grades/imo2026_p5/t07_r02/R1-C2",
+      "score": 3,
+      "proof_sha256": "768cc88f92dfe933e60806ce70e6367c79bf161ccb4ea03a870427ab5935083b",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p6/t10_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p6/t10_r01/R1-C1",
+      "score": 2,
+      "proof_sha256": "31754efffdff90e0580e40f24e17d7195b7dd502ab2f04f1f450719bfc86f426",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t10_r01/resolver/temperature_0_4/gpu0/p6/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p6/t10_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p6/t10_r02/R1-C1",
+      "score": 3,
+      "proof_sha256": "9bff7d3bd750f092048183db4af424bcbc775dff3c5b07a4587fe1609f599d80",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t10_r02/resolver/temperature_0_4/gpu0/p6/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p6/t07_r01/R1-C1.md",
+      "grade_directory": "grades/imo2026_p6/t07_r01/R1-C1",
+      "score": 3,
+      "proof_sha256": "fa45003e1a40603c6467c4fc4ac0eb0e1d707580c478686147dde27ee64cfc96",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t07_r01/resolver/temperature_0_4/gpu0/p6/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C1",
+      "proof": "proofs/imo2026_p6/t07_r02/R1-C1.md",
+      "grade_directory": "grades/imo2026_p6/t07_r02/R1-C1",
+      "score": 3,
+      "proof_sha256": "963c4e8881c4157c5984abec55814c39a3c3ca9f8fd703a50b62bc135a6eccb2",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t07_r02/resolver/temperature_0_4/gpu0/p6/t07_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": true
+    }
+  ],
+  "copied_artifact_inventory": {
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+      "sha256": "ed4f033fe9343857b0aa5a58d5c74eeb9f415e98ac7d680e7bb431df49c6db31"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r01/score/summary.json",
+      "sha256": "720f4f3b340e525109faa87b392d301689f9bf210b60eafca58d57672ff39493"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r01/score/p1/t10_r01/manifest.json",
+      "sha256": "ea6d24884d633e4238887d80d04a74299fce7e90c0cfaa604c26f555061f2932"
+    },
+    "imo2026/results/review_fusion/grading/rubric.txt": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r02/score/p6/t07_r02/grading_policy.txt",
+      "sha256": "4c8c354e97adfdc7b0c31b0ebc3d10edc6f985fa1485486917ebcaf1067cd3f7"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p1/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+      "sha256": "662ac2cc92f984f365ab4291c8cf54c1acf5fb371a4dae58b8e796841479fd9e"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p1/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+      "sha256": "d9e74e1c0fb98ddd6b65c7beb80ff1d6dcdbcaff7fb7dd0a426cd709774cbe5c"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r01/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+      "sha256": "ed4f033fe9343857b0aa5a58d5c74eeb9f415e98ac7d680e7bb431df49c6db31"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t10_r01/score/summary.json",
+      "sha256": "6faf5a2e136a38c10bb8f975d5d16f6a3c53ea2abbde07785ed18ba2cbc302ab"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t10_r01/score/p1/t10_r01/manifest.json",
+      "sha256": "96b7b3b569d2738fa0c685fe9d6dcb0d416f69e994453beeb34a41c28546ba67"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r01/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+      "sha256": "ed4f033fe9343857b0aa5a58d5c74eeb9f415e98ac7d680e7bb431df49c6db31"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r01/score/summary.json",
+      "sha256": "01e43b90fe51c2db0a68d63cac05a42359c93000829fb4073aac6df11986d671"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r01/score/p1/t10_r01/manifest.json",
+      "sha256": "ccdfd7ed20b1cb5871aaa591ae85317fe444643b3d9b28c1cfc45a13b6452cce"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r01/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r01/05_resolver2/cases/imo2026_p1.t10_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "ed4f033fe9343857b0aa5a58d5c74eeb9f415e98ac7d680e7bb431df49c6db31"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t10_r01/score/summary.json",
+      "sha256": "bf95924027deaf25d4bf78b0a841a160f55127e833da7885ab3c9d1ac88d49a9"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t10_r01/score/p1/t10_r01/manifest.json",
+      "sha256": "8f806307264c904e0a5b6f3086ca6a9aad6da216a06e272f58225051ae46e63f"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r01/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r01/06_resolver3/cases/imo2026_p1.t10_r01/promoted_unchanged/third_proof.md",
+      "sha256": "ed4f033fe9343857b0aa5a58d5c74eeb9f415e98ac7d680e7bb431df49c6db31"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t10_r01/score/summary.json",
+      "sha256": "c761a6034c3288912a4f01cde179dc989762145e17fd614a19e5e305d56c85f4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r01/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t10_r01/score/p1/t10_r01/manifest.json",
+      "sha256": "a60331d6752b954124260e222046a902cd4fc73a212ff0edc911e6643241ac60"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r02/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+      "sha256": "a373a28903ce3cf6d32444b14739b5a775f17c37f01abe7f10f0e9090f30b173"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r02/score/summary.json",
+      "sha256": "bb303de8e4558d94162ca629a952269d4727e191fb2985014a9ef5e9d374dc5a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r02/score/p1/t10_r02/manifest.json",
+      "sha256": "2fcd50ba72d62d3b292f2d2d695abec83362c888bf19b5822321b07011dff961"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r02/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+      "sha256": "a373a28903ce3cf6d32444b14739b5a775f17c37f01abe7f10f0e9090f30b173"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t10_r02/score/summary.json",
+      "sha256": "8139582603f00114c5f45611ffcfa889ef6b09bae7dde236d922d8f4863f7fd3"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t10_r02/score/p1/t10_r02/manifest.json",
+      "sha256": "a4a5de1f2a9073febb7e8b42a7df76727bd1679fff82337a59dea0aa16f5fbf8"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r02/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+      "sha256": "a373a28903ce3cf6d32444b14739b5a775f17c37f01abe7f10f0e9090f30b173"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r02/score/summary.json",
+      "sha256": "9905f90aa153f3b7753a78d7f5957835c850a5f0669eb92e7ff32c762e1fb04e"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r02/score/p1/t10_r02/manifest.json",
+      "sha256": "6d716c96b615419f64071daea0e89a6ce7e426c02ef3a43cd55471356c0006e1"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r02/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r02/05_resolver2/cases/imo2026_p1.t10_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "a373a28903ce3cf6d32444b14739b5a775f17c37f01abe7f10f0e9090f30b173"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t10_r02/score/summary.json",
+      "sha256": "34a9a05058b4d883bc8239c27cbcb75b199b3cba50f0766282710827c00541b1"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t10_r02/score/p1/t10_r02/manifest.json",
+      "sha256": "2d82fb546270a31ac3a01b34aeffc9dc0a38f91d5c511cac7eafd557dca1d866"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t10_r02/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r02/06_resolver3/cases/imo2026_p1.t10_r02/promoted_unchanged/third_proof.md",
+      "sha256": "a373a28903ce3cf6d32444b14739b5a775f17c37f01abe7f10f0e9090f30b173"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t10_r02/score/summary.json",
+      "sha256": "9e48a522d18e6b28a06fb9fda1f7801fa1ed1185fbbaa0907b1c2bc24a845925"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t10_r02/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t10_r02/score/p1/t10_r02/manifest.json",
+      "sha256": "8fdf75dfccef02cb57bf46551c2cbed2ccb9167bb6a67ee1d2e02d4105c7c2ef"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+      "sha256": "d7eb72ec7986b6721dc55d9e7806e5edec3afbbdbc172f857c403d1dc1b1a92a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r01/score/summary.json",
+      "sha256": "fe73570a76b8762594c979b728a20e76888b77bb809e9521bc43ce141b398152"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r01/score/p1/t07_r01/manifest.json",
+      "sha256": "164cee9ec64d7b93e28e7a6d0704728c68358debb68b1fd6d9f41a923c3bc966"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r01/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+      "sha256": "d7eb72ec7986b6721dc55d9e7806e5edec3afbbdbc172f857c403d1dc1b1a92a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r01/score/summary.json",
+      "sha256": "59f57b02f76cdb46bc826b41a66f8ce7182580187c38b2a97cfd0106a4e5b3e8"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r01/score/p1/t07_r01/manifest.json",
+      "sha256": "9eaf58afbd972aadbde034e066788aa2d660e0985d2b8b6e8d5dc1c2cb21ae9f"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r01/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+      "sha256": "d7eb72ec7986b6721dc55d9e7806e5edec3afbbdbc172f857c403d1dc1b1a92a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r01/score/summary.json",
+      "sha256": "7a3524769eeba15e5f19a25ed2dd416fd17e54795b163a78d0baa2794288a767"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r01/score/p1/t07_r01/manifest.json",
+      "sha256": "27fa0ec587647e04b07db396cda9b3a4e611d64c8158d0df6aed465af7d4876f"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r01/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r01/05_resolver2/cases/imo2026_p1.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "d7eb72ec7986b6721dc55d9e7806e5edec3afbbdbc172f857c403d1dc1b1a92a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t07_r01/score/summary.json",
+      "sha256": "26016d784f3e569ab79f0005663ab272914dde6cf77720624cd9a9e918af5f13"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t07_r01/score/p1/t07_r01/manifest.json",
+      "sha256": "9efff34de8f04412ccebac3f23d903fa3e67baaeae2a9f590f37b4014a6f73f6"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r01/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r01/06_resolver3/cases/imo2026_p1.t07_r01/promoted_unchanged/third_proof.md",
+      "sha256": "d7eb72ec7986b6721dc55d9e7806e5edec3afbbdbc172f857c403d1dc1b1a92a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r01/score/summary.json",
+      "sha256": "ed8d143dbc7246cb4f7d4cc32ff569f6c68b14f0636bb7b7f34c0f9b7fbdf7ec"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r01/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r01/score/p1/t07_r01/manifest.json",
+      "sha256": "5c12b0ba24bceade2bc46fc74e0ee4249d390c31092c67927e9b02ae52c58faa"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r02/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r02.md",
+      "sha256": "aada79fc42558077ccaab2b805211ecd4f1e369f2f1916fa3f557f50b2bbe541"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r02/score/summary.json",
+      "sha256": "c7fbb340e691e0db2dfd77b8c9f13c142dd11cea447e8189d8f6652e640832b7"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r02/score/p1/t07_r02/manifest.json",
+      "sha256": "5d787223ee314beea6b39c13a4861310c28a4b2efa86e4a5157f68ae93920631"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r02/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md",
+      "sha256": "46caefb4d26c4ff99cc148278d927224ef1de529ed09ed345a63114d97c899de"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r02/score/summary.json",
+      "sha256": "1cb34e1f37e4afe904b7c4b59fd614a69bbbb0cb0f166301abc80d066b305638"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r02/score/p1/t07_r02/manifest.json",
+      "sha256": "a34b56b9b82e74821ae33f00e3e81459ff987a67e4dd57b10221031c65f3a8fa"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r02/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md",
+      "sha256": "46caefb4d26c4ff99cc148278d927224ef1de529ed09ed345a63114d97c899de"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r02/score/summary.json",
+      "sha256": "fcf00f77402f4a063bb59e60d7d50bd24b39b44d9c33f9860370a13bfdd00d6d"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r02/score/p1/t07_r02/manifest.json",
+      "sha256": "b7136f8d93d7cd3f4d28da2a29d56e41230d7c9655144300ec9fcba03116bdbc"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r02/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/05_resolver2/cases/imo2026_p1.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "46caefb4d26c4ff99cc148278d927224ef1de529ed09ed345a63114d97c899de"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t07_r02/score/summary.json",
+      "sha256": "2df9dfdab90dd94521820d290429e894a757433164a82d3998372eb42777022f"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t07_r02/score/p1/t07_r02/manifest.json",
+      "sha256": "f4170e4b0f8a807a90677a549761f4a8614861206619c9fa666f66776e505f66"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p1/t07_r02/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/06_resolver3/cases/imo2026_p1.t07_r02/promoted_unchanged/third_proof.md",
+      "sha256": "46caefb4d26c4ff99cc148278d927224ef1de529ed09ed345a63114d97c899de"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r02/score/summary.json",
+      "sha256": "f8ba52df51ecf239ee479f5aa4b55a8e2791096f8d485134603931a6f5d50ad1"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p1/t07_r02/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r02/score/p1/t07_r02/manifest.json",
+      "sha256": "d0ab73b5dff04afa8f896a3396bd35287f273ae657b23f2f48e6f8363ef5b716"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t10_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md",
+      "sha256": "ff0115038509bcf7f9fe2ea586cbbd96709b9d55d0e1bd0cf28b7c913529d678"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t10_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t10_r01/score/summary.json",
+      "sha256": "7eaafd3bccae8eb11ad29ec2fa616ae1ac3c452c95ff60319925fcacab959bfe"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t10_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t10_r01/score/p2/t10_r01/manifest.json",
+      "sha256": "e99749e3bb16b3a7f8139bb19481121fdc5c67f1e128afca7cda05fba5b290e2"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p2/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q2_solution.txt",
+      "sha256": "839e329d7b3b37b1b63a224df28b16c133ba083240e32eeb0b9ed205f1d9e9bc"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p2/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+      "sha256": "72506ae4ab955d23b3f9434753231978603ff123ba3065d2155ff34eac3685d8"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t10_r01/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md",
+      "sha256": "2963638b2dad8bcc283133131b465120148b80d3afbeab0d9fcf3df796fdc4b9"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t10_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t10_r01/score/summary.json",
+      "sha256": "f72f4893ad6256b6c8e9a88cd4df86b88f3d1bd64381673fb86fd36ba726ecd1"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t10_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t10_r01/score/p2/t10_r01/manifest.json",
+      "sha256": "5fde309f52469a9e6aa7e905a3d62011a0533e28e10431a8c4384a525c877247"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "sha256": "0fbdd7c92534a57c58e3c7c168939cf0971c1ea5de8b2c65f88e8bfd0415e23e"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r01/score/summary.json",
+      "sha256": "9e274131205ad761e544a076b87c29b84caf5ec8be20c6c81060fdc0ec3fa79f"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r01/score/p2/t07_r01/manifest.json",
+      "sha256": "a9e52c4b52055bf9b73f717fbd3bc6544a8a86ea8f370360167b044641437c85"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r01/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "sha256": "eb7240d0efaa6237a84e76d67da09ba5599f7ff6b4f3a0d9ea2bdba8823153bb"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r01/score/summary.json",
+      "sha256": "b570f2323236330743dc67767e09123629cd135d125f0c8c16ea5a3ac1335bd4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r01/score/p2/t07_r01/manifest.json",
+      "sha256": "9c8ba452e7c7bcb5f185cdc136040493b415e495e378daf2f602b889a6b1da64"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r01/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "sha256": "9d97746ae71d2accf96eefb6d2188fcc303015a33fb811542aa559cfa67bb5c1"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C3/t07_r01/score/summary.json",
+      "sha256": "26c266b82c9677f49335bc238ead0c816e13f4e99ad1ba2807d3732b42f06839"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C3/t07_r01/score/p2/t07_r01/manifest.json",
+      "sha256": "af60d10681850ab7c3871b5ee388b1140ba75ecd8c6479a66328a78f765ebf60"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r01/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/05_resolver2/cases/imo2026_p2.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "502ba1fe4c8538ad1f684663c6f4813e5838230e79dc46191437d4b1afa00788"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r01/score/summary.json",
+      "sha256": "959fa168ea5ce9a5af83d9ddfd614b0d11e61b6d1f6d52d2f198820364d89252"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r01/score/p2/t07_r01/manifest.json",
+      "sha256": "90bb546301e56e3d23d61f9252188650fc46924e182c80499ce29074e280187f"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r01/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/06_resolver3/cases/imo2026_p2.t07_r01/third_ungrouped_resolve/resolved_proof.md",
+      "sha256": "01aa0ab4afc5e1c06b0c68825cdce8924ee1ab8465a965e8f29ba9c6796f118d"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R3/t07_r01/score/summary.json",
+      "sha256": "19b52d1d74de2798240cbf10a11da5697752a7d99b55c52ff83a0b18fe981c00"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r01/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R3/t07_r01/score/p2/t07_r01/manifest.json",
+      "sha256": "47ce4f1c8ab45ccf9b79a63f3063cacf86b9b0d3dce7165a5bba89b5d508a797"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r02/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+      "sha256": "c3e8e8043b459d171e2f106ef46ec9fcf7b451de88dcb167e7fd03888684e84c"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r02/score/summary.json",
+      "sha256": "1e7640e4aba3e70433112222c88b636bd4af85846475f6b3e40a2c34d1161e4a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r02/score/p2/t07_r02/manifest.json",
+      "sha256": "d843756dda4d40cf86823a602970087e1173fe5e8f17e3b16198e6c99e7eb487"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r02/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+      "sha256": "143f406c9ce7743bbb6a7018bb9230d55b3a8844735b25da70fd3fc2d3e63574"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r02/score/summary.json",
+      "sha256": "5b0787a52cce5e3039b56d1b312f0c21152e71a41e798dc3063a6d75703bb105"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r02/score/p2/t07_r02/manifest.json",
+      "sha256": "af9d003bf961ed0b49ed7994090f5f430408583144cd8b6b693699f4ad94eb83"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r02/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+      "sha256": "ef792b1fb813d03a799246935f5a2b25fe5652481fdb52cb851c45f6ea1d777a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C3/t07_r02/score/summary.json",
+      "sha256": "2994c1df3632568d3b23200813ce410ec8b5b8d238a895ae888726e39830224f"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C3/t07_r02/score/p2/t07_r02/manifest.json",
+      "sha256": "e014e842896f7be2fe182fc37f7a6b1890b01bfbaceed9a38a56dec861c7a8f7"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r02/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/05_resolver2/cases/imo2026_p2.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "461626f83265b898945756990bfced9da9dc9332734c3a7f65efe056a1551684"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r02/score/summary.json",
+      "sha256": "396950315c90e28146da276187a402542826f467c53ccc27ef95657d1b35c38a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r02/score/p2/t07_r02/manifest.json",
+      "sha256": "126c5ab463240afaa83b3e64849ff4aca5aa9e4c38ced3af53c56723decbed73"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p2/t07_r02/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/06_resolver3/cases/imo2026_p2.t07_r02/third_ungrouped_resolve/resolved_proof.md",
+      "sha256": "5c6ac5766b6d0c20b2d270deaa76d90183116ebd3faaf76824420ec201b223ac"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R3/t07_r02/score/summary.json",
+      "sha256": "fabf17dcc4a21e8aaea462dbeb055fdeba56efb5ca3d2f4b08dd77269a338cb0"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p2/t07_r02/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R3/t07_r02/score/p2/t07_r02/manifest.json",
+      "sha256": "355d2ee012cfcc297b791afc1745896d50351f71cd0a61d9367aaaaef7507696"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p3/t10_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p3.t10_r01/resolver/temperature_0_4/gpu0/p3/t10_r01/resolved_proof.md",
+      "sha256": "fb030208b3bc50f8d897c4a9370e760e8dd39bd2c27b80fc5cc2d1d1e11b948e"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t10_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/strict_scores/R1-C1/t10_r01/score/summary.json",
+      "sha256": "f6ba93698590fa274e6e19c915e1ed85a3b24f81f13b414015779fd5383b10a3"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t10_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/strict_scores/R1-C1/t10_r01/score/p3/t10_r01/manifest.json",
+      "sha256": "c4c5ca940520c7fe74050292cb994e117cf946e27c0b914bac9ab6151ac379a3"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p3/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q3_solution.txt",
+      "sha256": "026551dba2af8e70e0ccf4075f52706182effe250a7b80963c0edb312189b987"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p3/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p3.json",
+      "sha256": "f968b62b69a9a617b4831ec9ef7c2fdd721b4389b8b95b7d6b3064dbbb1c2033"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p3/t10_r02/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t10_r02/resolver/temperature_0_4/gpu0/p3/t10_r02/resolved_proof.md",
+      "sha256": "7a76bc1e43cdf5ea866d3c7b10ceabf763a1650dad202dc021ddb730b96a78b2"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t10_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t10_r02/score/summary.json",
+      "sha256": "35c2db4aeaa286c6ccc2ae35b00935ead0809abc8b3436e47eb5942fcface6cb"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t10_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t10_r02/score/p3/t10_r02/manifest.json",
+      "sha256": "daa981732bf3515079c2d9b8b4c549ac31220912583e5b3eaeac9d80235aca67"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p3/t07_r01/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t07_r01/resolver/temperature_0_4/gpu0/p3/t07_r01/resolved_proof.md",
+      "sha256": "c352ce8498eabf303b7e121398494a77d4d621fdc648d4d21df7a7cd24b856d8"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t07_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r01/score/summary.json",
+      "sha256": "f6f75ef5f78a2f520e33a899b146b69b9a0efdcdc0e3ac09694e130c9af8e059"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t07_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r01/score/p3/t07_r01/manifest.json",
+      "sha256": "99399cc9708596ca04964f55ec9afdf9f6e7342675f1651776ff788317fc6918"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p3/t07_r02/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t07_r02/resolver/temperature_0_4/gpu0/p3/t07_r02/resolved_proof.md",
+      "sha256": "60a6490676dc8de04c951ab9081f2c73a57293f20fdf50d153c1b1ab9c93d80b"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t07_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r02/score/summary.json",
+      "sha256": "6ef516dfce14d4300be07f76e2f5ae6a4b31da472675c7939345dada999db5b4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p3/t07_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r02/score/p3/t07_r02/manifest.json",
+      "sha256": "5c26e0daaef24a54ab5413d8d4b5302aa168db296ff11110933a3bf631fd7a56"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t10_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+      "sha256": "3c0e72822b43096f9d971ca3b9629f2a35b81752efe8bb670d16043cf5a0f26f"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t10_r01/score/summary.json",
+      "sha256": "e99d088f8ff74e57d5b1c3c50fa8d9162a6d8f4266dbe0320eb7aa93767d26e8"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t10_r01/score/p4/t10_r01/manifest.json",
+      "sha256": "2fedea8f6d21f7595904ec0c53b91e82c64ebee6a77c387d0c52feffb95a42d9"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p4/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+      "sha256": "52c3658873cc87f532294dbd6291a8a8804b2244c87d61f805c8e9d5c274deae"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p4/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+      "sha256": "e162c62ade5f5ec9bb407232b2211d2f59d60aca2fc6a2f994043c90f77f199e"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t10_r01/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+      "sha256": "84e4d3796c55373645650af1b4c4fbfaac786a998433f87f512fb56d78f3e72c"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t10_r01/score/summary.json",
+      "sha256": "a338c8d099c699047696a38967a8b61d075bd2b574fe29e9ae05adeb8fdf9291"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t10_r01/score/p4/t10_r01/manifest.json",
+      "sha256": "8887270fb60c532af68a68839094c3243a14433c8db123f078e13261bb65513b"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t10_r01/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+      "sha256": "85fda380c757ae4deb763a20f6492e40e9f0487af850d46c9b17e45ec99292b7"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t10_r01/score/summary.json",
+      "sha256": "d168fd18841edbbc2ef6adfa4143758a9b5e76f05a9fc076c249b1568bf711a1"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t10_r01/score/p4/t10_r01/manifest.json",
+      "sha256": "b71e6b1ce5c6891bcb74c1a5453f9d3c375fa196c4ae4d5d5cb4c3f080610bcb"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t10_r01/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/05_resolver2/cases/imo2026_p4.t10_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "bdc2b7d6467fcc0e525dd4579cb0fb9be37d582ad37327f0af62955b0145f662"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t10_r01/score/summary.json",
+      "sha256": "91ae4071758a135c097dbfcbec88c14719d46cb4f3ecbd785b965efe68c304a5"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t10_r01/score/p4/t10_r01/manifest.json",
+      "sha256": "c8fd6f0d947aaa8ba74c258b6f1742f7e83fa46e0b30d6d4ea5ac336463e53e1"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t10_r01/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/06_resolver3/cases/imo2026_p4.t10_r01/third_ungrouped_resolve/resolved_proof.md",
+      "sha256": "347c80ca7650affbccd704d007c482c18bae7a4d17d0ecb51f7038237f0a65f9"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t10_r01/score/summary.json",
+      "sha256": "0578edf2f3abf57cc3199bbb087a6e2bb5d26d67ffb9d8023dd3b6022aa7c0e2"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r01/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t10_r01/score/p4/t10_r01/manifest.json",
+      "sha256": "2b5f9c1a9a0fdd40c6f944e6f4e5adc9fac41b443c15dcbcb47283fb9b4cf4ac"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t10_r02/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p4.t10_r02/resolver/temperature_0_4/gpu0/p4/t10_r02/resolved_proof.md",
+      "sha256": "4ec52fa57ede97f6a8d2f8b1e8642fa573cb0a40b32f8d04a5b78b9971a1a1d4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p4.t10_r02/score/summary.json",
+      "sha256": "a24b220f17f872ec3cbcfa8fda2eebffc9cec45345637eadcd0520da0dc7cf8e"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t10_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p4.t10_r02/score/p4/t10_r02/manifest.json",
+      "sha256": "61f93eeb0d0bb78b5678369f4d5983152426ce842df4b94def93dcd2b60c785e"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r01/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/input/lazy_checked_baseline/t07_r01.md",
+      "sha256": "a9f7e75756278cffdf1e529ee11b185903b33bc90071462bd366c172987feb77"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r01/score/summary.json",
+      "sha256": "263efc61328a647bc5f762f426aef90442b0d3fc490e4761e98e3191231b9ca3"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r01/score/p4/t07_r01/manifest.json",
+      "sha256": "b4c59f0c32a5e3acb2cfb205d81b81834060487c7633eaf2e33c144a9cab24d7"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r01/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/input/lazy_checked_baseline/t07_r01.md",
+      "sha256": "a9f7e75756278cffdf1e529ee11b185903b33bc90071462bd366c172987feb77"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r01/score/summary.json",
+      "sha256": "96d9aa4df7e2515ec6d58c43186029d0e739e994abc8b5efee45fcc80242de40"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r01/score/p4/t07_r01/manifest.json",
+      "sha256": "6b027d3887eca25493a313c53380071fa8a88a30a8b570df9bd755ba7eb7c2d1"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r01/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p4.t07_r01/resolver/temperature_0_4/gpu0/p4/t07_r01/resolved_proof.md",
+      "sha256": "5f12995b23f8d0c04450a6377ae22a621640789aba8ad20ae82bb29123c9dd07"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t07_r01/score/summary.json",
+      "sha256": "051eb00c90f0f7320a4fe6c1e655a5d851fdc2334b2bf2b8c253ec4124f57fcc"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t07_r01/score/p4/t07_r01/manifest.json",
+      "sha256": "4c578d0fd9c1dce33e62c331c2202595570440ebe28e12270efba80c0a24116c"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r01/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/05_resolver2/cases/imo2026_p4.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "5f12995b23f8d0c04450a6377ae22a621640789aba8ad20ae82bb29123c9dd07"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r01/score/summary.json",
+      "sha256": "301604c605c0e10e5cc9d49135e87a8f30cb5bf74d7e300a171ceff9c0ba89fd"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r01/score/p4/t07_r01/manifest.json",
+      "sha256": "4de8edad1a7d48ae7f7c1945b68ee6ee67bd7f5af6a8c6503fc25f7e78d92e64"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r01/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/06_resolver3/cases/imo2026_p4.t07_r01/promoted_unchanged/third_proof.md",
+      "sha256": "5f12995b23f8d0c04450a6377ae22a621640789aba8ad20ae82bb29123c9dd07"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r01/score/summary.json",
+      "sha256": "d85f7938f3a382c62ba86dcffd6cdfc84e41b93bd7816752177be392871f707b"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r01/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r01/score/p4/t07_r01/manifest.json",
+      "sha256": "36e9470b493d28c572c1fa0951af9356fb142861fcda20933dff78616620e85b"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r02/R1-C1.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+      "sha256": "b2c5613f339ad7c13ef95cf4970b561360664fe2034043d292e9833e4e72e4f4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r02/score/summary.json",
+      "sha256": "c245ac440988974346d459f5065936149ff603d8dc327cad6b09a539c8ed3e81"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r02/score/p4/t07_r02/manifest.json",
+      "sha256": "b41a57924889d981b8933e533c2e1778ba93f6484cbb8a0c9dd920ca54d3e2d3"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r02/R1-C2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+      "sha256": "b2c5613f339ad7c13ef95cf4970b561360664fe2034043d292e9833e4e72e4f4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R1-C2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r02/score/summary.json",
+      "sha256": "28ff4e9eedeb3bdb585e238120a8c9d160ffe0fcf5b76d65c37709be13e80f92"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R1-C2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r02/score/p4/t07_r02/manifest.json",
+      "sha256": "a1ad013c033bc12aaffa26cd36fea3724101b6870ff8de8df29c7f9f8360aa8c"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r02/R1-C3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+      "sha256": "5ee9dbad5e013a68708542bf236815663e763c6642adfa09bebc4787bf51543a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R1-C3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t07_r02/score/summary.json",
+      "sha256": "0a0b27922a68710e276bb367ba7a17beb1e8a923ec9d639b0082404ce842456e"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R1-C3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t07_r02/score/p4/t07_r02/manifest.json",
+      "sha256": "9e3c2cc86aad642c06ad075cd1ab7dac5c85cb0ac06acd6b56232480e7645e5d"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r02/R2.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/05_resolver2/cases/imo2026_p4.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "b2dccaf1004fc9969511690712fdb8224f234a62b7e2c0eaed131f5fa987acb2"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R2/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r02/score/summary.json",
+      "sha256": "393a1d002560c5d0e77d4fc82edf568eb62d39629bd2ed5008366a41685262e3"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R2/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r02/score/p4/t07_r02/manifest.json",
+      "sha256": "5cbda6a9a08af11edc68641988bc4676528365af725f30294a7a3af5abf6faba"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p4/t07_r02/R3.md": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/06_resolver3/cases/imo2026_p4.t07_r02/third_ungrouped_resolve/resolved_proof.md",
+      "sha256": "f2dedbca72b958a93dff440b3b69118bf49c3ef827ece77851d19cb93a7e9e98"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R3/source_summary.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r02/score/summary.json",
+      "sha256": "9fcd5fe1bd6ec8c73adcd8be741dc8b62f7721405c960708dc85688f3fc006a2"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p4/t07_r02/R3/manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r02/score/p4/t07_r02/manifest.json",
+      "sha256": "a79990951b0faabf22602a1f9599ee2d2b4ad5a0f8090de53919299b0522ecb0"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t10_r01/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p5.t10_r01/resolver/temperature_0_4/gpu0/p5/t10_r01/resolved_proof.md",
+      "sha256": "b2f1e45d758bf1f665b5d9ec84e689199fe883d67090b0199fd56a47be257995"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p5.t10_r01/score/summary.json",
+      "sha256": "46568e94c02913e4218f9d181d4792e78e92b0d6011c32d12a2b4d7d75316e82"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p5.t10_r01/score/p5/t10_r01/manifest.json",
+      "sha256": "796b326bad87cfd7533b1625080203b1f00498e6e3d5ad6033d3bba6fa14204e"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p5/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q5_solution.txt",
+      "sha256": "cba581e8e19cffaff70274137f1e6dc5e15399a5dbf1aac5336213c80faef073"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p5/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+      "sha256": "328d256dc6816a4873be280c43c1e0eca22bc8e4aff64f897b76af41aa44ad54"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t10_r02/R1-C1.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+      "sha256": "b8297ba8a7f8806ed974e799c194948e5f8b852549797614480d11123a0af1c6"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t10_r02/score/summary.json",
+      "sha256": "5cc3f3ccc299c021cc82a1611f9be2e60ac6cb4ca2381a922f08777137a594b1"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t10_r02/score/p5/t10_r02/manifest.json",
+      "sha256": "07dd00dc4950886a6eb2988c7352a9b935e07d5516e9f38d93e468d51a640a03"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t10_r02/R1-C2.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+      "sha256": "67d8a93e560dcc37dbc2b4941a6bc53312410b102705cb98e227ccdbf1af9628"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R1-C2/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t10_r02/score/summary.json",
+      "sha256": "77376e913cc7c07602fb7a55446bc74f8caa73af0ab8f90454f08e3c2068da4f"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R1-C2/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t10_r02/score/p5/t10_r02/manifest.json",
+      "sha256": "e9497685b6ab7dff90db3e8c7ecf6467ee7a6975507c9b0c9dd239fe83f7cb2a"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t10_r02/R1-C3.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+      "sha256": "205c5d36ffb79d2cf06918d5003372532bc96f7a7dd8625385fbd808fb9ce640"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R1-C3/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C3/t10_r02/score/summary.json",
+      "sha256": "b1d7d64bb76a6df1246bdcb55378809a9f3c51652befe20230022ee355e4f92a"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R1-C3/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C3/t10_r02/score/p5/t10_r02/manifest.json",
+      "sha256": "4089515d353e9697226d14ba2c7c5d909b16b93f6fdab726953df805ac7d9dc9"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t10_r02/R2.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/05_resolver2/cases/imo2026_p5.t10_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "205c5d36ffb79d2cf06918d5003372532bc96f7a7dd8625385fbd808fb9ce640"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R2/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R2/t10_r02/score/summary.json",
+      "sha256": "a7b87bc7aa176054130771ec78f7a1c3adf88bb2e1ab95af3306b9672548dea4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R2/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R2/t10_r02/score/p5/t10_r02/manifest.json",
+      "sha256": "546cc6f145048e96cfb9e60062840d4bb73f17e82d4d1507cab78aae7d4cfcc8"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t10_r02/R3.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/06_resolver3/cases/imo2026_p5.t10_r02/promoted_unchanged/third_proof.md",
+      "sha256": "205c5d36ffb79d2cf06918d5003372532bc96f7a7dd8625385fbd808fb9ce640"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R3/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t10_r02/score/summary.json",
+      "sha256": "672c8638c9ab06419b7722b1463e3b8564fa21f00eea9970ede9ddb7784744c0"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t10_r02/R3/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t10_r02/score/p5/t10_r02/manifest.json",
+      "sha256": "12f6ec163acea48ed1d9b4fdeeb986f99d6d4bbbc15633af3cf5de4dfe5e69e9"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r01/R1-C1.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+      "sha256": "b1937325b441e351fc632caa4d52e91e95d4fb28e05b4c95ab53478d0d426a77"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r01/score/summary.json",
+      "sha256": "385f11e54d2fe7876956634a25776469ff704a473562772373b5aa77879868a7"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r01/score/p5/t07_r01/manifest.json",
+      "sha256": "202831a0261f41b0f4a9631d0da66af7afc5df6587392e2aa6632b46f009cbc7"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r01/R1-C2.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+      "sha256": "7fcc52fed97250c91a761cdadb241139c3c05f699887e57bebe9c82dd9bd30c4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R1-C2/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r01/score/summary.json",
+      "sha256": "1e3c30e97a48d53581e30b80d95ae3adcc9b91a50ce5e05002762a3b83f60ba0"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R1-C2/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r01/score/p5/t07_r01/manifest.json",
+      "sha256": "d3e9dde49f247de8c265dd71113dc8148b431bbf1c954fe0f73c916cbfc1e57b"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r01/R1-C3.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+      "sha256": "7fcc52fed97250c91a761cdadb241139c3c05f699887e57bebe9c82dd9bd30c4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R1-C3/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C3/t07_r01/score/summary.json",
+      "sha256": "1185da3f384b99de1c5b75a30b6d2336c60d1ad4405a5bb20c1abff7514aa96d"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R1-C3/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C3/t07_r01/score/p5/t07_r01/manifest.json",
+      "sha256": "50ed7ef376b12b0c107c19075fc0273831868cf83b3dbea0853df492d09c94dd"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r01/R2.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/05_resolver2/cases/imo2026_p5.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+      "sha256": "7fcc52fed97250c91a761cdadb241139c3c05f699887e57bebe9c82dd9bd30c4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R2/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R2/t07_r01/score/summary.json",
+      "sha256": "80769ccd48798c3ec33d30bbb7fa1b923011fae7085f332f76ac08b385b932dd"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R2/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R2/t07_r01/score/p5/t07_r01/manifest.json",
+      "sha256": "79c40ab7198c14a4272c21132f75e9fffe2e1c26c24c48f1f15f4b09970a1651"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r01/R3.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/06_resolver3/cases/imo2026_p5.t07_r01/promoted_unchanged/third_proof.md",
+      "sha256": "7fcc52fed97250c91a761cdadb241139c3c05f699887e57bebe9c82dd9bd30c4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R3/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t07_r01/score/summary.json",
+      "sha256": "2f68faaa1791ef3e30d1f3b4068f215d605f00421f8c9926ce5c755aa985d241"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r01/R3/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t07_r01/score/p5/t07_r01/manifest.json",
+      "sha256": "ddb058c689a221b2171a8a4d603c136be356e5d35f4f5215cbe247fed28fbf92"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r02/R1-C1.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md",
+      "sha256": "cb0445540a432a6ca10233d750c7a021ce1e09bff836f0723613050f8ae4fea0"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r02/score/summary.json",
+      "sha256": "41668a0ec157eb2fe74c1a3b827297eddfac63e214e073abdbb08ca4befc71cc"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r02/score/p5/t07_r02/manifest.json",
+      "sha256": "c948a726c9310169531c8f79f4ba8ba48143695a5a1a6f524e57da6a3c99b1f1"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p5/t07_r02/R1-C2.md": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md",
+      "sha256": "7332f4cced0f9c3978a3cd784fb9ae53d62ab62b3d8048245f078600c0619ec4"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r02/R1-C2/source_summary.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r02/score/summary.json",
+      "sha256": "4e34c48d92c94c9bcb8e46362c1b4336d2c07784f0a955d87ed04b86abd2f87b"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p5/t07_r02/R1-C2/manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r02/score/p5/t07_r02/manifest.json",
+      "sha256": "1870462b11f13e541b8fad34cfa575e52e63c326dbf763970f71c9b38681eb24"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p6/t10_r01/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t10_r01/resolver/temperature_0_4/gpu0/p6/t10_r01/resolved_proof.md",
+      "sha256": "88567a5df5fb55d1406e3123515dbd5828ed165627abec0190bceb0fc15e0f18"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t10_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r01/score/summary.json",
+      "sha256": "2f21455e90b666a6e8c39b256ad83a599596d1093eb754b14a287f0def9205b9"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t10_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r01/score/p6/t10_r01/manifest.json",
+      "sha256": "506bef5a7c1dd6b55f95609212c7d352c1689a6af5f1ea44fd5bc4c478aba015"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p6/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q6_solution.txt",
+      "sha256": "001e420b5eb6396e919a458f4b13056d060ffcda94d5268010c23b0330baae3a"
+    },
+    "imo2026/results/review_fusion/grading/problems/imo2026_p6/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p6.json",
+      "sha256": "65f8cbbaa55c4c7c298108056264fccfe0d8c4e8cfaf51738e6c930f31644930"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p6/t10_r02/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t10_r02/resolver/temperature_0_4/gpu0/p6/t10_r02/resolved_proof.md",
+      "sha256": "a37f260a07f8286c35dadd33e49543e49ecdcaa9424414ad29ef85e41c086181"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t10_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r02/score/summary.json",
+      "sha256": "c5326ada7a4d5c2031e9707a3099eb36c61c38ac50588d7b17ebd6753ebf3c59"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t10_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r02/score/p6/t10_r02/manifest.json",
+      "sha256": "6f92b765da011bbe825a0e2134e4a9b2d0326be6a419d33376f93e658bc9d06e"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p6/t07_r01/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t07_r01/resolver/temperature_0_4/gpu0/p6/t07_r01/resolved_proof.md",
+      "sha256": "ffce6344a9a988cd81b485d47fb6d5588adaca05ffad97571356c2de6e22447b"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t07_r01/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r01/score/summary.json",
+      "sha256": "d57a2d2b7e946fbf1467414d4d2f2e1fbc07215daf24702a315d4c9a392ad134"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t07_r01/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r01/score/p6/t07_r01/manifest.json",
+      "sha256": "dadf625c8a1d9b5d6b5ee125850283dca6b2bdd501fe07fb297f110e887b8fcb"
+    },
+    "imo2026/results/review_fusion/proofs/imo2026_p6/t07_r02/R1-C1.md": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t07_r02/resolver/temperature_0_4/gpu0/p6/t07_r02/resolved_proof.md",
+      "sha256": "5e454f2bc7de92233033acc50d7afa70b7b5f926cf2981f666b7654470fce32c"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t07_r02/R1-C1/source_summary.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r02/score/summary.json",
+      "sha256": "be6afb28774dffe9a724ecb27ac95ac14a054f2886f61886f680693ec67a34e8"
+    },
+    "imo2026/results/review_fusion/grades/imo2026_p6/t07_r02/R1-C1/manifest.json": {
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r02/score/p6/t07_r02/manifest.json",
+      "sha256": "531b698ab249392820707ecfeba6e745c4fa687269c7ca63db9854d0b8d45169"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p1/backend_manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/manifest.json",
+      "sha256": "c4a5655c5897fcb39095234f0a4d94b22a8bb55459238351761a94852a5b1031"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p1/frontend_manifest.json": {
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904/p1/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "0f94aa7d9da909b77fea1610de696efa396126a7b5e027a027fffed14a7381da"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p2/backend_manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/manifest.json",
+      "sha256": "d51bd203c869c614b04281d92dbc9904dbfe2662e72e3a18ad06c64381212e98"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p2/frontend_manifest.json": {
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904/p2/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "397bdd739bfe53dffadc8688c3b90056fcfc795698d17eabc3286be422d98e00"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p3/backend_manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/model/manifest.json",
+      "sha256": "988ecc28cccb5df3b4523c4e3b353e455e384bb1cc13aea7a5253e13fa65e255"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p3/frontend_manifest.json": {
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904/p3/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "46692e92affb071cfe4bdc8e74a9cb2ac84191d48208984360553e19cabd7220"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p4/backend_manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/manifest.json",
+      "sha256": "0c9eabef266683e0a10902ef365082b197881473165fed4ec2377290649716a2"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p4/frontend_manifest.json": {
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904/p4/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "4b9a97b2093d950aab37be428b365399d5b6c92f1d96cf833eb757d21faa9207"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p5/backend_manifest.json": {
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/manifest.json",
+      "sha256": "ba54a2252d3f6d22559d789302daebbde96d1be2e7c3b4b2ba862e3988c1965a"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p5/frontend_manifest.json": {
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904/p5/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "60254b69e6cdcd02c0846a5d1b70d1484274e39c14ac2fd68256909dc8ef7119"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p6/backend_manifest.json": {
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908/p6/model/manifest.json",
+      "sha256": "1383b98fb9a71f1f7050561603ef27903f58e10ff33134e838fdf8e70e1328c1"
+    },
+    "imo2026/results/review_fusion/generation/records/imo2026_p6/frontend_manifest.json": {
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904/p6/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "e9cf04fce03b39c72f542e0d8fa6a869a6b7c74c57b6a0d9c56901317a4d5511"
+    }
+  }
+}

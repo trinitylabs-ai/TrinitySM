@@ -1,0 +1,31 @@
+To prove that there are two colors that occur together in more than one box, we can use a counting argument based on the number of colors shared between pairs of boxes.
+
+**1. Definitions and Notation**
+Let $B_1, B_2, \dots, B_8$ be the sets of colors in each of the 8 boxes. According to the problem:
+- Each box contains 6 balls of distinct colors, so $|B_i| = 6$ for $i = 1, \dots, 8$.
+- There are 22 available colors in total. Let $C$ be the set of these colors, so $|C| = 22$.
+- For each color $c \in C$, let $n_c$ be the number of boxes in which color $c$ appears.
+
+**2. Counting Pairs of Boxes sharing a Color**
+Consider the set of triples $S = \{ (c, i, j) : c \in C, 1 \le i < j \le 8, c \in B_i, c \in B_j \}$. This set represents all instances where a color $c$ is shared between two different boxes $B_i$ and $B_j$. We can calculate the size of $S$ in two different ways:
+
+- **Summing over colors:** For a fixed color $c$, the number of pairs of boxes $(B_i, B_j)$ that both contain $c$ is $\binom{n_c}{2}$. Therefore,
+  \[ |S| = \sum_{c \in C} \binom{n_c}{2} \]
+- **Summing over pairs of boxes:** For a fixed pair of boxes $B_i$ and $B_j$, the number of colors they share is $|B_i \cap B_j|$. Therefore,
+  \[ |S| = \sum_{1 \le i < j \le 8} |B_i \cap B_j| \]
+
+**3. Lower Bound for $|S|$**
+We know that the total number of balls is $8 \times 6 = 48$, so $\sum_{c \in C} n_c = 48$. To find the minimum possible value for $|S| = \sum_{c \in C} \binom{n_c}{2}$, we distribute the 48 occurrences among the 22 colors as evenly as possible (since $\binom{n}{2}$ is a convex function).
+Dividing 48 by 22 gives $48 = 2 \times 22 + 4$. Thus, the sum is minimized when 4 colors appear in 3 boxes each and $22 - 4 = 18$ colors appear in 2 boxes each:
+\[ |S| \ge 4 \binom{3}{2} + 18 \binom{2}{2} = 4(3) + 18(1) = 12 + 18 = 30 \]
+
+**4. Upper Bound for $|S|$ if No Two Colors are Repeated**
+Assume for contradiction that no two colors occur together in more than one box. This means that for any two boxes $B_i$ and $B_j$, they can share at most one color:
+\[ |B_i \cap B_j| \le 1 \quad \text{for all } 1 \le i < j \le 8 \]
+The number of pairs of boxes is $\binom{8}{2} = \frac{8 \times 7}{2} = 28$. If each pair shares at most one color, then:
+\[ |S| = \sum_{1 \le i < j \le 8} |B_i \cap B_j| \le 28 \times 1 = 28 \]
+
+**5. Conclusion**
+We have found that $|S| \ge 30$ and $|S| \le 28$, which is a contradiction. Therefore, our assumption must be false. There must exist at least one pair of boxes $B_i$ and $B_j$ such that $|B_i \cap B_j| \ge 2$. This means there are at least two colors that appear in both boxes $B_i$ and $B_j$, and thus these two colors occur together in more than one box.
+
+\(\square\)

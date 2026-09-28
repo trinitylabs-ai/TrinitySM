@@ -1,0 +1,78 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T07:47:51.964815+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "per_problem": {
+    "5": {
+      "scores": [
+        3
+      ],
+      "mean": 3.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T07:47:51.963408+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "case_id": "imo2026_p5.explicit.t07_r02",
+      "candidate_id": "t07_r02",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q5_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r02/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "768cc88f92dfe933e60806ce70e6367c79bf161ccb4ea03a870427ab5935083b",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The claim that continuity of g at f(y), together with g(f(y))=g(y), implies continuity of g at y is unjustified and false in general; equality of function values does not transfer neighborhood behavior.",
+        "summary": "The classification is correct, and the proof validly establishes the candidate family, the iterate identity, nonnegativity of g, and a quadratic local estimate at points in the image of f. However, the decisive extension of this local regularity to every positive point relies on an invalid continuity inference. The subsequent argument that h(epsilon) tends to zero and must lie near the smaller quadratic root therefore lacks its necessary premise, so constancy of g is not proved as submitted.",
+        "strengths": [
+          "Correctly verifies every function f(x)=x+c with c>=0.",
+          "Correctly derives f(f(y))=2f(y)-y, invariance g(f(x))=g(x), the iterate formula, and g(x)>=0.",
+          "The Taylor estimates do establish continuity and derivative zero at each point belonging to the image of f."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "Continuity at f(y) cannot be pulled back to continuity at y merely from g(f(y))=g(y). This is load-bearing because the proof then uses h(epsilon)->0 to apply the local quadratic estimate at f(y) and select the small solution branch."
+          },
+          {
+            "severity": "minor",
+            "description": "The final quadratic-root discussion is informal; once continuity at y is separately proved, the stated O(epsilon^2) conclusion can be made rigorous by a short smallness argument."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

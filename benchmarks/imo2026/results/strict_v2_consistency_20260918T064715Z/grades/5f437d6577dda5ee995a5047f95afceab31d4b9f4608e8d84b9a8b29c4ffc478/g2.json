@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "5f437d6577dda5ee995a5047f95afceab31d4b9f4608e8d84b9a8b29c4ffc478",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "8456b19dccfc32261c663b0f9ec660aa04acedc6693ba4ee6a9d0d6ced38c6ee",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "d2a83ed6660105d5cd0f2853e861168d450e6a97da7a70a90a70911bf2ceea67",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive assertion that the prime sets P_n eventually stabilize is not proved. The discussion of probabilities and the alleged density of P_n-smooth numbers supplies neither a valid bound nor a deterministic argument; indeed, smooth numbers over a fixed finite prime set have density zero. This is the central finiteness step, so Rule E caps the score at 3.",
+    "summary": "The hitting-set formulation and the conditional argument that stabilization would yield eventual periodicity are meaningful progress. However, the proof omits the central argument establishing stabilization of the prime factors. It also proves at most eventual translation-periodicity and merely asserts that this extends backward; determinism alone does not justify that implication, so the required range of all positive n is unhandled under Rule D.",
+    "strengths": [
+      "Correctly characterizes admissible next terms using minimal prime hitting sets.",
+      "Derives the appropriate minimum-over-multiples formula for a_{n+1}.",
+      "Recognizes that stabilization on a finite prime set would reduce admissibility to a finite periodic residue pattern."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The boundedness/stabilization of P_n is supported only by heuristic claims about growth, probability, and smooth-number density. No quantitative or deterministic result is proved, and the assertion that growth of P_n would require all candidates to introduce new primes is logically false."
+      },
+      {
+        "severity": "major",
+        "description": "The residue argument establishes, at best, a_{n+T}=a_n+L for n beyond some N. The statement that eventual behavior extends backward because the construction is deterministic is unsupported; eventual periodicity of a deterministic process does not generally imply pure periodicity from its initial term."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:00:24.468579+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00047",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": "PB-Basic-019",
+  "candidate_id": "t10_r02",
+  "pass_index": 2,
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "proof_sha256": "d517517c42637d59aaf68db495acd6f785b29572d9c6cab385de38d3695f3292",
+  "problem_sha256": "00c21aeff0854d1a045f7260fb4cab6487e5a4586d65d2177dd8d55422e8dfe3",
+  "reference_sha256": "22341fbfa5b1be4d043f86519f346329f13786ede1e24f33d5ea0966194d0106",
+  "guidelines_sha256": "351b07b0c2b94b2b0903ab312e8e2862c21f5057f53b919b1d5d35167b2cd35f",
+  "prompt_sha256": "aad67b64855f1b1929daa18d6327ebd75a110587dd3f98a47ecb490eb3f89587",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "response_sha256": "6bd9783bcea36a882e45804a4a0e33bc33feee7065bb28edf1c4b7b98b666b9b",
+  "cache_key": "a4056eae0533221ad7e7bbdf18e6ceed6b47fde787563214636de7abe5480cd1",
+  "isolation_verified": true,
+  "isolation_config_sha256": "a5917c07a3db6bc066bc7a358c0afa8351a57a289dfcfafaff37f80e68287b09",
+  "response": "grades/PB-Basic-019/t10_r02_pass2/response.md",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "completed_turns": 1,
+    "item_types": [
+      "agent_message"
+    ],
+    "startup_diagnostics": [
+      "Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `tools.view_image` is ignored.",
+      "Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `tools.view_image` is ignored.",
+      "Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."
+    ]
+  },
+  "source_record_sha256": "339605d92bbe43c359465bc81c21d96f6e0efebbd4922f514773139f41ebb37d"
+}

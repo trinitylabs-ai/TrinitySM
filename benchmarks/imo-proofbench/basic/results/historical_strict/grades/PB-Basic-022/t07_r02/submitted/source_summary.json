@@ -1,0 +1,60 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T23:36:10.150364+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 22,
+  "problem_id": "PB-Basic-022",
+  "case_id": "PB-Basic-022.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "1efea3a9dd6c26c80e0fbe5bf4d31b3a340d8a46fe300c0f17f18033217e5cf8",
+  "reference_sha256": "88f4d123bb4de7af98dc52cc35cdf7c94c2a6dcc73184ef23e250bc4abc71e68",
+  "proof_sha256": "2814bab48a5dfa43237a9e8330fe9a99eb25876f3d75be9cef9f3c738a1154b0",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/tasks.json",
+  "task_manifest_sha256": "02253172db52a934d2fc8810880f2cbedd41a93efcf73a52ee6440114f9f3a4b",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The finite-difference argument is invalid: an arbitrary \\(O(1)\\) error term need not have higher differences tending to zero, so \\(\\Delta^m w_n\\to0\\) does not follow.",
+    "summary": "The final classification is correct, and the asymptotic setup provides some meaningful structural progress. However, the central inference that \\(w_n\\) is eventually polynomial rests on a false claim about finite differences of bounded sequences. Everything afterward—including the polynomial composition identity and classification—depends on that inference, so the submitted proof does not establish its answer.",
+    "strengths": [
+      "Correctly excludes constant polynomials and observes that solution preimages must become unbounded.",
+      "Obtains a plausible asymptotic relation between \\(x_n\\) and \\(n^{2024/d}\\).",
+      "States the correct final family, including the necessary restriction for a negative leading sign."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "From \\(w_n=Cn^r+O(1)\\), it does not follow that \\(\\Delta^m w_n\\to0\\); bounded error sequences may oscillate indefinitely."
+      },
+      {
+        "severity": "major",
+        "description": "Consequently, the asserted eventual polynomial representation \\(w_n=R(n)\\) and the resulting identity \\(P(L(y))=y^{2024}\\) are unsupported."
+      },
+      {
+        "severity": "substantial",
+        "description": "The claim that a rational polynomial taking square values at all sufficiently large integers must be a polynomial square is invoked without proof and is nontrivial."
+      },
+      {
+        "severity": "substantial",
+        "description": "The coefficient comparison allegedly forcing every intermediate coefficient of \\(L\\) to vanish is not demonstrated."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

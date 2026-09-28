@@ -1,0 +1,186 @@
+{
+  "schema": "cognitive-well-v084-trace-resolution-corpus-v1",
+  "problem_json": "experiments/p5_v0328_two_iteration_terra_appendix_20260819/problem.json",
+  "cases": [
+    {
+      "case_id": "v051_injectivity_vs_false_continuity",
+      "class": "MIXED_VALID_AND_FALSE_TRACE",
+      "expected_signals": ["injectivity", "reject_global_continuity", "reject_unproved_image_interval"],
+      "collected_trace_spans": [
+        {"start_line": 426, "end_line": 427, "proof_search": "f(f(y)) = 2f(y) - y"},
+        {"start_line": 429, "end_line": 452, "proof_search": "constant on the range"}
+      ],
+      "user_prompt": "runs/v051_reviewer3_certifier_all36_gemma4_bf16_mtp4_t04_gpu0_b4_16k_20260823_1302/reviews/temperature_0_4/gpu0/p5/t10_r03/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v051_reviewer3_certifier_all36_gemma4_bf16_mtp4_t04_gpu0_b4_16k_20260823_1302/reviews/temperature_0_4/gpu0/p5/t10_r03/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v051_reviewer3_certifier_all36_gemma4_bf16_mtp4_t04_gpu0_b4_16k_20260823_1302/reviews/temperature_0_4/gpu0/p5/t10_r03/final.txt"
+    },
+    {
+      "case_id": "v081_preimage_independence",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["preimage_independence", "injectivity"],
+      "collected_trace_spans": [
+        {"start_line": 263, "end_line": 278, "proof_search": "Let $h(v)"}
+      ],
+      "user_prompt": "runs/v081_p5_two_iteration_dual_memory_20260825/iteration_1/05_pre_refinement_audit/reviewer_1/reviews/temperature_0_4/gpu0/p5/statement_only/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v081_p5_two_iteration_dual_memory_20260825/iteration_1/05_pre_refinement_audit/reviewer_1/reviews/temperature_0_4/gpu0/p5/statement_only/reviewer1.reasoning.txt",
+      "reviewer_final": "runs/v081_p5_two_iteration_dual_memory_20260825/iteration_1/05_pre_refinement_audit/reviewer_1/reviews/temperature_0_4/gpu0/p5/statement_only/final.txt"
+    },
+    {
+      "case_id": "v082_preimage_and_nonnegative_orbit",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["preimage_independence", "nonnegative_defect_orbit"],
+      "collected_trace_spans": [
+        {"start_line": 25, "end_line": 32, "proof_search": "Let $h(v)"},
+        {"start_line": 289, "end_line": 321, "proof_search": "hypotheses of Lemma B"}
+      ],
+      "user_prompt": "runs/v082_p5_all_six_stage5_to9_only_20260826/05_first_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/statement_only/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v082_p5_all_six_stage5_to9_only_20260826/05_first_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/statement_only/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v082_p5_all_six_stage5_to9_only_20260826/05_first_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/statement_only/final.txt"
+    },
+    {
+      "case_id": "v082_fresh_preimage_squeeze_qwen",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["preimage_squeeze"],
+      "collected_trace_spans": [
+        {"start_line": 25, "end_line": 43, "proof_search": "injective"}
+      ],
+      "user_prompt": "runs/v082_p5_all_six_stage5_to9_only_20260826/07_fresh_full_proof_audit/reviewer_2/reviews/temperature_0_2/gpu1/p5/evidence_only/reviewer2.user_prompt.txt",
+      "reasoning": "runs/v082_p5_all_six_stage5_to9_only_20260826/07_fresh_full_proof_audit/reviewer_2/reviews/temperature_0_2/gpu1/p5/evidence_only/reviewer2.reasoning.txt",
+      "reviewer_final": "runs/v082_p5_all_six_stage5_to9_only_20260826/07_fresh_full_proof_audit/reviewer_2/reviews/temperature_0_2/gpu1/p5/evidence_only/final.txt"
+    },
+    {
+      "case_id": "v082_fresh_preimage_direct_gemma",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["preimage_direct_proof"],
+      "collected_trace_spans": [
+        {"start_line": 251, "end_line": 259, "proof_search": "injective"}
+      ],
+      "user_prompt": "runs/v082_p5_all_six_stage5_to9_only_20260826/07_fresh_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/evidence_only/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v082_p5_all_six_stage5_to9_only_20260826/07_fresh_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/evidence_only/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v082_p5_all_six_stage5_to9_only_20260826/07_fresh_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/evidence_only/final.txt"
+    },
+    {
+      "case_id": "v081_endpoint_union",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["endpoint_safe_union", "endpoint_limits"],
+      "collected_trace_spans": [
+        {"start_line": 215, "end_line": 243, "proof_search": "expands to cover"}
+      ],
+      "user_prompt": "runs/v081_p5_two_iteration_dual_memory_20260825/iteration_1/05_pre_refinement_audit/reviewer_1/reviews/temperature_0_4/gpu0/p5/evidence_location/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v081_p5_two_iteration_dual_memory_20260825/iteration_1/05_pre_refinement_audit/reviewer_1/reviews/temperature_0_4/gpu0/p5/evidence_location/reviewer1.reasoning.txt",
+      "reviewer_final": "runs/v081_p5_two_iteration_dual_memory_20260825/iteration_1/05_pre_refinement_audit/reviewer_1/reviews/temperature_0_4/gpu0/p5/evidence_location/final.txt"
+    },
+    {
+      "case_id": "v082_endpoint_union",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["endpoint_safe_union", "left_fixed_point"],
+      "collected_trace_spans": [
+        {"start_line": 132, "end_line": 146, "proof_search": "expands to cover"}
+      ],
+      "user_prompt": "runs/v082_p5_all_six_stage5_to9_only_20260826/05_first_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/evidence_location/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v082_p5_all_six_stage5_to9_only_20260826/05_first_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/evidence_location/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v082_p5_all_six_stage5_to9_only_20260826/05_first_full_proof_audit/reviewer_3/reviews/temperature_0_2/gpu0/p5/evidence_location/final.txt"
+    },
+    {
+      "case_id": "v083_endpoint_union_narrow_terse",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["endpoint_safe_union", "endpoint_limits"],
+      "collected_trace_spans": [
+        {"start_line": 185, "end_line": 204, "proof_search": "union"}
+      ],
+      "user_prompt": "runs/v083_p5_latest_proof_r1_t01_terseness_ablation_20260826/narrow_terseness/generation/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v083_p5_latest_proof_r1_t01_terseness_ablation_20260826/narrow_terseness/reasoning.txt",
+      "reviewer_final": "runs/v083_p5_latest_proof_r1_t01_terseness_ablation_20260826/narrow_terseness/final.txt"
+    },
+    {
+      "case_id": "v083_endpoint_union_remove_terse",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["endpoint_safe_union", "component_propagation"],
+      "collected_trace_spans": [
+        {"start_line": 250, "end_line": 280, "proof_search": "union"}
+      ],
+      "user_prompt": "runs/v083_p5_latest_proof_r1_t01_terseness_ablation_20260826/remove_terseness/generation/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v083_p5_latest_proof_r1_t01_terseness_ablation_20260826/remove_terseness/reasoning.txt",
+      "reviewer_final": "runs/v083_p5_latest_proof_r1_t01_terseness_ablation_20260826/remove_terseness/final.txt"
+    },
+    {
+      "case_id": "v083_endpoint_union_compressed_retry",
+      "class": "USEFUL_TRACE",
+      "expected_signals": ["endpoint_safe_union", "monotone_endpoint_recursion"],
+      "collected_trace_spans": [
+        {"start_line": 103, "end_line": 117, "proof_search": "union"}
+      ],
+      "user_prompt": "runs/v083_p5_latest_proof_r1_t01_gemma_compressed_retry_20260826/pass_1_retry2/generation/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v083_p5_latest_proof_r1_t01_gemma_compressed_retry_20260826/pass_1_retry2/reasoning.txt",
+      "reviewer_final": "runs/v083_p5_latest_proof_r1_t01_gemma_compressed_retry_20260826/pass_1_retry2/final.txt"
+    },
+    {
+      "case_id": "v083_endpoint_as_center_false_lead",
+      "class": "FALSE_LEAD_CONTROL",
+      "expected_signals": ["reject_open_endpoint_as_center", "do_not_rewrite_from_explicit_orbit_sync"],
+      "collected_trace_spans": [
+        {"start_line": 80, "end_line": 110, "proof_search": "Let $x_0 = y"}
+      ],
+      "user_prompt": "runs/v083_p5_trace_gap_repair_t01_r1_20260826/generation/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v083_p5_trace_gap_repair_t01_r1_20260826/reasoning.txt",
+      "reviewer_final": "runs/v083_p5_trace_gap_repair_t01_r1_20260826/final.txt"
+    },
+    {
+      "case_id": "v082_fixed_interval_orbit_false_lead",
+      "class": "FALSE_LEAD_CONTROL",
+      "expected_signals": ["reject_positive_orbit_enters_every_fixed_interval"],
+      "collected_trace_spans": [
+        {"start_line": 321, "end_line": 347, "proof_search": "sequence must eventually enter"}
+      ],
+      "user_prompt": "runs/v082_p5_all_six_stage5_to9_only_20260826/09_contextual_surgical_repair_clean/02_contextual_full_proof_repair/location_aware/02_rewrite_attempt_1/03_full_proof_review_fusion/reviewer_3/reviews/temperature_0_2/gpu0/p5/location_aware/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v082_p5_all_six_stage5_to9_only_20260826/09_contextual_surgical_repair_clean/02_contextual_full_proof_repair/location_aware/02_rewrite_attempt_1/03_full_proof_review_fusion/reviewer_3/reviews/temperature_0_2/gpu0/p5/location_aware/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v082_p5_all_six_stage5_to9_only_20260826/09_contextual_surgical_repair_clean/02_contextual_full_proof_repair/location_aware/02_rewrite_attempt_1/03_full_proof_review_fusion/reviewer_3/reviews/temperature_0_2/gpu0/p5/location_aware/final.txt"
+    },
+    {
+      "case_id": "v068_local_constancy_false_lead",
+      "class": "FALSE_LEAD_CONTROL",
+      "expected_signals": ["reject_convergence_implies_local_constancy"],
+      "collected_trace_spans": [
+        {"start_line": 74, "end_line": 164, "proof_search": "constant"}
+      ],
+      "user_prompt": "runs/v068_imo2026_p5_fresh_20260824_r1/tree/01_v067_six_track_generation_review_resolution/reviewer_3/reviews/temperature_0_2/gpu0/p5/t10_r01/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v068_imo2026_p5_fresh_20260824_r1/tree/01_v067_six_track_generation_review_resolution/reviewer_3/reviews/temperature_0_2/gpu0/p5/t10_r01/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v068_imo2026_p5_fresh_20260824_r1/tree/01_v067_six_track_generation_review_resolution/reviewer_3/reviews/temperature_0_2/gpu0/p5/t10_r01/final.txt"
+    },
+    {
+      "case_id": "v049_density_and_derivative_false_lead",
+      "class": "FALSE_LEAD_CONTROL",
+      "expected_signals": ["reject_unproved_dense_image", "reject_derivative_on_noninterval"],
+      "collected_trace_spans": [
+        {"start_line": 275, "end_line": 330, "proof_search": "constant on the range"}
+      ],
+      "user_prompt": "runs/v049_reviewer1_temp02_temp04_all36_gemma4_bf16_mtp4_2gpu_b4_12k_20260823_1016/reviews/temperature_0_4/gpu1/p5/t10_r03/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v049_reviewer1_temp02_temp04_all36_gemma4_bf16_mtp4_2gpu_b4_12k_20260823_1016/reviews/temperature_0_4/gpu1/p5/t10_r03/reviewer1.reasoning.txt",
+      "reviewer_final": "runs/v049_reviewer1_temp02_temp04_all36_gemma4_bf16_mtp4_2gpu_b4_12k_20260823_1016/reviews/temperature_0_4/gpu1/p5/t10_r03/final.txt"
+    },
+    {
+      "case_id": "control_complete_proof_reviewer1",
+      "class": "NO_USEFUL_TRACE_CONTROL",
+      "expected_signals": ["no_action", "proof_must_remain_byte_identical"],
+      "user_prompt": "runs/v081_p5_contextual_surgical_lemma_b_repair_20260826/03_whole_proof_review_fusion/reviewer_1/reviews/temperature_0_4/gpu0/p5/contextual_surgical_repair/reviewer1.user_prompt.txt",
+      "reasoning": "runs/v081_p5_contextual_surgical_lemma_b_repair_20260826/03_whole_proof_review_fusion/reviewer_1/reviews/temperature_0_4/gpu0/p5/contextual_surgical_repair/reviewer1.reasoning.txt",
+      "reviewer_final": "runs/v081_p5_contextual_surgical_lemma_b_repair_20260826/03_whole_proof_review_fusion/reviewer_1/reviews/temperature_0_4/gpu0/p5/contextual_surgical_repair/final.txt"
+    },
+    {
+      "case_id": "control_complete_proof_reviewer3",
+      "class": "NO_USEFUL_TRACE_CONTROL",
+      "expected_signals": ["no_action", "proof_must_remain_byte_identical"],
+      "user_prompt": "runs/v081_p5_contextual_surgical_lemma_b_repair_20260826/03_whole_proof_review_fusion/reviewer_3/reviews/temperature_0_2/gpu0/p5/contextual_surgical_repair/reviewer3.user_prompt.txt",
+      "reasoning": "runs/v081_p5_contextual_surgical_lemma_b_repair_20260826/03_whole_proof_review_fusion/reviewer_3/reviews/temperature_0_2/gpu0/p5/contextual_surgical_repair/reviewer3.reasoning.txt",
+      "reviewer_final": "runs/v081_p5_contextual_surgical_lemma_b_repair_20260826/03_whole_proof_review_fusion/reviewer_3/reviews/temperature_0_2/gpu0/p5/contextual_surgical_repair/final.txt"
+    },
+    {
+      "case_id": "control_visible_defect_no_hidden_repair",
+      "class": "NO_HIDDEN_REPAIR_CONTROL",
+      "expected_signals": ["do_not_claim_trace_supplied_a_repair"],
+      "user_prompt": "runs/v082_p5_second_half_random_stage5_20260826/05_first_full_proof_audit/reviewer_2/reviews/temperature_0_2/gpu1/p5/evidence_only/reviewer2.user_prompt.txt",
+      "reasoning": "runs/v082_p5_second_half_random_stage5_20260826/05_first_full_proof_audit/reviewer_2/reviews/temperature_0_2/gpu1/p5/evidence_only/reviewer2.reasoning.txt",
+      "reviewer_final": "runs/v082_p5_second_half_random_stage5_20260826/05_first_full_proof_audit/reviewer_2/reviews/temperature_0_2/gpu1/p5/evidence_only/final.txt"
+    }
+  ]
+}

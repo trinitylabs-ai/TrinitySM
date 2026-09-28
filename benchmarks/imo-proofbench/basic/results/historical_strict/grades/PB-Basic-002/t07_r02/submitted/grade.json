@@ -1,0 +1,42 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T14:32:43.614099+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 2,
+  "problem_id": "PB-Basic-002",
+  "case_id": "PB-Basic-002.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/problems/PB-Basic-002.json",
+  "reference_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/references/PB-Basic-002.md",
+  "proof_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/proofs/PB-Basic-002/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "3e6f192de66f30f331c23cbd58666dcd7876c11e2d600f55987a1882b97229d3",
+  "reference_sha256": "e8da5f8fef2755f9cc890a1dc55114bf7f6d8c80cee54a81a6315a7b33774011",
+  "proof_sha256": "81be8308d9e25e6251a9df187992a41df2b0d3857424b587169c3cfb1d83e191",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "5c6c59ab7923c1836314a3f0571a75282ff4dfe8144f5538e5463dcc07744719",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The two-case proof is complete and correct: AM-GM handles \\(P\\le16\\), while Cauchy–Schwarz combined with \\(S\\ge P/2\\) handles \\(P>16\\). The equality analysis is also valid.",
+    "strengths": [
+      "Correctly identifies the threshold \\(P=16\\) and rigorously proves the desired inequality in both ranges.",
+      "Correctly establishes that equality occurs only at \\(x=y=z=t=2\\)."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

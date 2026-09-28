@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof correctly establishes that $a \equiv b \pmod 2$ is a necessary condition. It also correctly derives that if a solution exists for odd $a, b$, then $a \equiv b \pmod 4$ is necessary. The derivation of the modular constraint $3^{k_2} b - 3^{k_1} a \equiv 2(k_2 - k_1) \pmod 4$ (Lines 23–24) is mathematically sound.
+Claim gap: The proof fails to establish sufficiency. It asserts that "all even pairs work" and "odd pairs work if and only if $a \equiv b \pmod 4$" based solely on the necessary conditions derived. It does not demonstrate that for any pair satisfying these modular constraints, there exist synchronized step counts $n$ and operation sequences that actually reach equality. The claim in Lines 16–17 ("By choosing $Z$ to be sufficiently large... condition... satisfied") is an unsubstantiated heuristic that does not prove the existence of valid $n, k_1, k_2, S_1, S_2$ simultaneously satisfying the parity and magnitude constraints for both numbers.
+Qualifications and supplied repairs: NONE. The gap is substantive; the proof treats necessary modular conditions as sufficient without construction or existence proof.
+Decisive checks: The parity invariance and base-3 sum representation properties (Lines 3–15) are verified. The modular arithmetic derivation (Lines 20–27) is verified as a correct necessary condition. The logical leap from necessary to sufficient in Lines 30–33 is a demonstrated defect.
+
+## Proof B
+Established theorem: The proof establishes that $a \equiv b \pmod 2$ is necessary. For odd integers, it proves $a \equiv b \pmod 4$ is necessary and sufficient. For even integers, it proves that any pair of distinct even integers can be made equal.
+Claim gap: NONE. The proof provides explicit, terminating algorithms for both the odd and even cases that guarantee equality while preserving all domain constraints (positivity, parity, difference invariants).
+Qualifications and supplied repairs: NONE. The reduction of the even case to operations $x' \to x'+1$ and $x' \to 3x'$ (Line 27) is rigorously valid. The strategy for the odd case (Lines 19–24) and the even case (Lines 29–39) are verified to maintain invariants and terminate at equality.
+Decisive checks: The odd-case strategy (Lines 19–24) is verified: applying $(f, g)$ when $x > d/2 + 1$ ensures $x_{new} \le d_{new}/2 + 1$ because $d \ge 4$ (Line 23), and $(f, f)$ correctly marches $x$ to the target while preserving $d$. The even-case strategy (Lines 29–39) is verified: the reduction to $a', b'$ is exact, and the manipulation of $h = d' - 2a'$ using $(f', f')$ and $(f', g')$ correctly reaches $h = -1$ in finite steps, after which $(g', f')$ yields $d' = 0$. All quantifier and domain transitions are justified.
+
+## Decision
+Winner: B
+Reason: Proof B is a complete and rigorous solution, providing constructive algorithms that verify sufficiency for both odd and even cases while correctly handling all invariants and domain constraints. Proof A correctly derives necessary modular conditions but commits a fundamental logical defect by asserting sufficiency without proof, relying on an unjustified heuristic about large values rather than demonstrating a valid synchronized operation sequence. Proof B's explicit constructions decisively establish the result where Proof A leaves the core obligation unmet.

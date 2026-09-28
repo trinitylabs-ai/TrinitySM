@@ -1,0 +1,65 @@
+{
+  "schema": "public-release-basic-ablation-v1",
+  "benchmark": "imo-proofbench/basic",
+  "full_harness_selection": "baseline",
+  "raw_sources": [
+    {
+      "label": "Raw without budget forcing",
+      "manifest": "benchmarks/imo-proofbench/basic/results/raw_no_bf/manifest.json",
+      "sha256": "3e3f106a57e9dd892e13ca73695bac699ad71d540e4e46088a5687a62f334ef0"
+    },
+    {
+      "label": "Raw with budget forcing",
+      "manifest": "benchmarks/imo-proofbench/basic/results/pipeline_raw_bf/manifest.json",
+      "sha256": "1dbd4e3f61ef975a8482264e2a479b3520ae9acada617697815277078643de72"
+    }
+  ],
+  "raw_seed_offset_differences": [
+    "PB-Basic-009",
+    "PB-Basic-026"
+  ],
+  "summary": [
+    {
+      "group": "Basic",
+      "problems": 30,
+      "scored_lanes": 120,
+      "possible_lanes": 120,
+      "maximum_points": 210,
+      "before_average_score": 4.341666666666667,
+      "before_best_score": 5.133333333333334,
+      "before_average_points": 130.25,
+      "before_best_points": 154,
+      "before_average_percent": 62.023809523809526,
+      "before_best_percent": 73.33333333333333,
+      "label": "Raw without budget forcing"
+    },
+    {
+      "group": "Basic",
+      "problems": 30,
+      "scored_lanes": 120,
+      "possible_lanes": 120,
+      "maximum_points": 210,
+      "before_average_score": 4.75,
+      "before_best_score": 5.666666666666667,
+      "before_average_points": 142.5,
+      "before_best_points": 170,
+      "before_average_percent": 67.85714285714286,
+      "before_best_percent": 80.95238095238095,
+      "label": "Raw with budget forcing"
+    },
+    {
+      "group": "Basic",
+      "problems": 30,
+      "scored_lanes": 120,
+      "possible_lanes": 120,
+      "maximum_points": 210,
+      "before_average_score": 5.6,
+      "before_best_score": 5.933333333333334,
+      "before_average_points": 168.0,
+      "before_best_points": 178,
+      "before_average_percent": 80.0,
+      "before_best_percent": 84.76190476190476,
+      "label": "BF + full harness"
+    }
+  ]
+}

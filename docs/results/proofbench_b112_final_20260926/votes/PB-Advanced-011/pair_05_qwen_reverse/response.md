@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: $f(x) = 1/x$ is a solution. The proof attempts to establish injectivity by assuming $f(y_1) = f(y_2)$ and deriving a contradiction. It correctly shows that if $a_n = f(k^n y_2)$ is not constant, $f$ becomes periodic on a ray, which contradicts the growth/decay constraints of the equation.
+Claim gap: The contradiction fails when $a_n$ is constant. The proof claims that $f(k^n y_2 z + 1) = k^{-n} f(y_2 z + 1) \to 0$ implies $f(k^n y_2) \to 0$, contradicting $f(k^n y_2) = a_0 > 0$. This is a logical non-sequitur: the decay $f(w) \to 0$ is only established for arguments of the specific form $w = k^n y_2 z + 1$. There is no justification that the sequence $k^n y_2$ falls into this set or that the decay extends to it. Thus, the injectivity proof is incomplete.
+Qualifications and supplied repairs: NONE. The limit argument cannot be repaired without additional unproven assumptions about the range of $f$ or continuity.
+Decisive checks: Line 26 contains a demonstrated defect. The set $\{k^n y_2 z + 1\}$ and the sequence $\{k^n y_2\}$ are disjoint in general. Claiming $f(k^n y_2) \to 0$ based on decay on the former set is invalid. The contradiction collapses, leaving injectivity unproven.
+
+## Proof B
+Established theorem: $f(x) = 1/x$ is the unique solution. The proof establishes injectivity by assuming $f(x_1) = f(x_2)$, deducing periodicity of $f$ on a ray, and constructing $h(y) = f(y f(x) + 1)$. It rigorously shows $h(y+T) = \frac{y}{y+T} h(y)$ and that $h$ is periodic with another period $T_h$. Taking $m \to \infty$ forces $h(y) = 0$, contradicting the codomain $\mathbb{R}^+$. The subsequent substitution $f(x) = 1/x + C$ correctly yields $C=0$.
+Claim gap: Line 14's justification that the periodicity set contains an interval $(a', \infty)$ is slightly imprecise; it conflates the range of arguments in the original equation with the fixed-shift set $\{1/x_1 + f(y)\}$. However, the unboundedness of $f$ (easily derived from the equation) ensures the periodicity set is unbounded, which is sufficient for the $h(y)$ limit argument to hold for large $y$. This is a minor notational/justification gap that does not break the logical chain.
+Qualifications and supplied repairs: NONE. The core contradiction $h(y)=0$ stands on its own once periodicity on an unbounded set is accepted, which is standard in this context.
+Decisive checks: Lines 16-27 form a verified, airtight derivation. The relation $h(y+T) = \frac{y}{y+T} h(y)$ combined with $T_h$-periodicity correctly forces $h(y) = 0$ via limits. The algebraic verification of $f(x) = 1/x + C$ in lines 35-43 is correct and complete.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete and rigorous injectivity argument. Its construction of the auxiliary function $h(y)$ and the limit contradiction is mathematically sound and correctly handles the periodicity implications. Proof A's injectivity proof contains a fatal logical defect at line 26, where it incorrectly assumes a decay property on a specific set implies decay on an unrelated sequence, failing to establish the necessary contradiction. While B has a minor imprecision in justifying the exact interval of periodicity, it does not undermine the valid contradiction derived thereafter, making B decisively stronger.

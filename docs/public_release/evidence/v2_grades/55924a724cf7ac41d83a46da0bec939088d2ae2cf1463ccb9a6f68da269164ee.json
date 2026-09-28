@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7c79c17c4bdf24c71c115d082b86063a7d3baf22104fbb0e3ff2c6e6f3344fe8",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "ff8b82a5cde2aaca8b9c698ea041bdeb19deefb6bda7c9533d427cd40e53da98",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "d279cb719669dd48438528057526e276375edb2e768027ca790f0d2be60a9457",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first score-controlling defect is the necessity argument in Step 4. The assertion that Mulan can only create angles of the form φ+mθ+k·180° is neither defined nor proved and is not justified when each cut parameter is an arbitrary real number. Merely choosing initial angles outside a countable set does not show that Shan-Yu can preserve avoidance of θ after every possible cut. This omits the central adversarial invariant/response argument, so Rule E caps the score at 3.",
+    "summary": "The final classification θ=180°/n for integers n≥2 is correct. The peeling construction for an angle nθ is also correct, and the sufficiency strategy has the right main idea. However, Move B is not admissible merely from γ<θ: with α1=180°−β−θ=α+γ−θ one also needs α+γ>θ (for example, θ=60° and (α,β,γ)=(10°,150°,20°) gives α1<0). This can be repaired locally by choosing the larger of the other two angles as the apex. The decisive problem is necessity: no valid invariant or strategy for Shan-Yu is established, and the countability statement cannot replace the required proof that every cut has a safe child. Supplying that marked-angle lemma and its four-case verification is a new central argument, not a routine omission.",
+    "strengths": [
+      "States the correct complete set of values.",
+      "Correctly computes the angle triples resulting from a cut.",
+      "Correctly observes that an angle nθ can be peeled to (n−1)θ while the other child contains θ.",
+      "Contains the main framework of a valid sufficiency strategy."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "Move B is falsely claimed to be legal whenever γ<θ; positivity of α1 additionally requires α+γ>θ. This is a load-bearing but locally repairable Rule C error."
+      },
+      {
+        "severity": "major",
+        "description": "The necessity direction rests on an undefined and unsupported affine/countability claim. It does not prove that Shan-Yu has a legal safe response to every cut, so the exclusion of all θ not dividing 180° is unproved. Rule E applies."
+      },
+      {
+        "severity": "substantial",
+        "description": "The statement for θ<60° that repeated Move A can first produce an angle below θ is not actually demonstrated or qualified for the case where repeated subtraction reaches θ exactly, although this portion could be repaired by a short induction."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:40:40.101976+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

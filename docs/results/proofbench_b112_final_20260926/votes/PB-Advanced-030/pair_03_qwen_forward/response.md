@@ -1,0 +1,21 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof correctly models scores as atomless measures $\mu_i$, applies the Stromquist-Woodall theorem to obtain contiguous intervals $J_1,\dots,J_n$ with $\mu_i(J_i) \ge 1$, and sets up a shifting argument over $\theta \in [0,1)$. It correctly derives the integral identity $\int_0^1 f_{i,k}(\theta) d\theta = \mu_i(J_k)$ and notes that row sums satisfy $\sum_k f_{i,k}(\theta) = \mu_i(\text{Circle}) \ge n$.
+Claim gap: Step 17 claims that because $\int_0^1 f_{i,i}(\theta) d\theta \ge 1$ and $\sum_k f_{i,k}(\theta) \ge n$, there must exist some $\theta$ where the threshold bipartite graph $G_\theta$ (edges where $f_{i,k}(\theta) \ge 1$) contains a perfect matching. This implication is false and unjustified. Averaging properties do not guarantee the simultaneous satisfaction of threshold conditions required for a perfect matching.
+Qualifications and supplied repairs: NONE. The gap is load-bearing; no routine justification bridges the leap from integral averages to the existence of a threshold perfect matching.
+Decisive checks: 
+- Verified: Steps 1-3, 5, 7-11 are mathematically sound. The measure construction is atomless, Stromquist-Woodall applies, and the shifting integral identity is correct.
+- Demonstrated defect: Step 17. Consider $n=2$. Let $f_{1,1}(\theta)=2$ on $[0,0.5)$ and $0$ on $[0.5,1)$; $f_{1,2}(\theta)=0$ on $[0,0.5)$ and $2$ on $[0.5,1)$. Let $f_{2,2}(\theta)=0$ on $[0,0.5)$ and $2$ on $[0.5,1)$; $f_{2,1}(\theta)=2$ on $[0,0.5)$ and $0$ on $[0.5,1)$. Then $\int f_{1,1}=\int f_{2,2}=1$, row sums are constantly $2$, yet for every $\theta$, at most one diagonal entry is $\ge 1$, and off-diagonals are $0$ in those regions. No $\theta$ yields a perfect matching in $G_\theta$. The claim fails without additional structural constraints on $f_{i,k}$, which are not provided or justified.
+
+## Proof B
+Established theorem: The proof correctly reduces the problem to finding a rainbow matching of size $n$ in circular interval hypergraphs $\mathcal{F}_1,\dots,\mathcal{F}_n$, where $\mathcal{F}_i$ contains all contiguous blocks with score $\ge 1$ for person $i$. It correctly observes that the hypothesis implies $\nu(\mathcal{F}_i) \ge n$ for each $i$, and cites the established combinatorial result that for circular interval hypergraphs, $\nu(\mathcal{F}_i) \ge n$ for all $i$ guarantees a rainbow matching of size $n$. The disjoint sets $S_i$ from the matching satisfy the score condition, and remaining cupcakes can be distributed arbitrarily without decreasing scores (non-negativity).
+Claim gap: NONE supported by checks. The reduction is exact, and the cited theorem is a valid result in hypergraph theory (Aharoni-Berger type results for circular intervals).
+Qualifications and supplied repairs: NONE. The argument relies on a correctly stated and applicable theorem. The step from disjoint high-score blocks to a full distribution is routine given non-negative scores.
+Decisive checks:
+- Verified: Step 3-6 correctly translate the partition hypothesis into $\nu(\mathcal{F}_i) \ge n$. Step 7 correctly identifies the goal as a rainbow matching. Step 9 correctly notes the linear Aharoni-Berger condition would be trivially satisfied. Step 11 correctly invokes the circular extension, which is a known theorem: for circular interval hypergraphs, the rainbow matching number equals $\min_i \nu(\mathcal{F}_i)$.
+- Falsification check: No counterexample exists to the cited theorem; it is a standard result in combinatorial matching theory. The reduction preserves all hypotheses and quantifiers.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, logically sound reduction to a known combinatorial theorem (rainbow matchings in circular interval hypergraphs) and correctly applies it. Proof A contains a fatal gap in Step 17: it incorrectly asserts that average diagonal scores $\ge 1$ and row sums $\ge n$ guarantee a shift $\theta$ yielding a perfect matching in a threshold graph. This implication is false in general (as shown by a simple disjoint-support counterexample) and lacks any topological or combinatorial justification in the text. While Proof A's continuous setup is elegant, its decisive step fails, whereas Proof B's argument is rigorous and complete as written.

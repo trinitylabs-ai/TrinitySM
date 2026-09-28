@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2d077d971e0646917433e56d61e910cbea9886380dbcf811e7aa4c1fc9c3c4b9",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "9b68a094f3cd4d03116d61e98b12ae73b7c8708dfde7edee0a43fae16308c176",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3853165d1b67a9cfa642b3323641a9b27bad81f79305c3010eea77c6cfd18c1b",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Section 2 asserts that the prime sets P_n eventually stabilize, but this central claim is false. For a_1=2, induction gives a_n=2n, so P_n continually acquires new primes. Thus the finite-state reduction rests on a false decisive inference, invoking Rule E's ceiling of 3; the limited correct progress warrants only 2.",
+    "summary": "The hitting-set characterization and formula for the next term are correct, but the proof's central finiteness assertion is demonstrably false. Moreover, even eventual periodicity would not by itself imply the required translation law for every positive n; the initial range is simply dismissed, contrary to Rule D. Establishing the theorem requires a fundamentally different finiteness argument, such as working with minimal globally accepted squarefree divisors rather than all prime factors appearing in the terms.",
+    "strengths": [
+      "Correctly characterizes admissible integers using minimal prime hitting sets.",
+      "Correctly expresses a_{n+1} as the least suitable multiple among the associated squarefree products.",
+      "Recognizes that a genuinely finite stabilized residue condition would lead to periodic gaps on a tail."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that P_n cannot grow indefinitely is false. With a_1=2 the sequence is 2,4,6,8,..., whose terms introduce infinitely many prime divisors."
+      },
+      {
+        "severity": "major",
+        "description": "The claimed passage from eventual periodicity to a relation a_{n+T}=a_n+L for every n is unsupported and false as a general inference. Choosing T and L large does not automatically absorb an arbitrary preperiod."
+      },
+      {
+        "severity": "substantial",
+        "description": "The collection of minimal hitting sets is not generally a non-increasing family under addition of new constraints; only the family of all hitting subsets of a fixed finite universe has that monotonicity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:42:00.587108+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

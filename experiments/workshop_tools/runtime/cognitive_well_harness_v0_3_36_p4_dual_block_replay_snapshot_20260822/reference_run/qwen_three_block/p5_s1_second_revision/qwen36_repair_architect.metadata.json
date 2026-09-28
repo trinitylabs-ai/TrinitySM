@@ -1,0 +1,45 @@
+{
+  "stage": "qwen36_repair_architect",
+  "started_at": "2026-08-23T03:58:57.176534+00:00",
+  "completed_at": "2026-08-23T04:06:10.739602+00:00",
+  "latency_seconds": 433.5630609728396,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8027/v1",
+  "model": "Qwen/Qwen3.6-27B",
+  "prompt_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+  "user_prompt_sha256": "bcde4c2668348bee6885959d9ddf039052b682994100fbae92f4910a8b3c1927",
+  "request_sha256": "c836c06af307e8acf34ac60b477bb9ae648e96aa531b62b06519ad0b90003964",
+  "response_id": "chatcmpl-86abfe1e49433a16",
+  "finish_reason": "length",
+  "usage": {
+    "prompt_tokens": 2789,
+    "total_tokens": 14789,
+    "completion_tokens": 12000,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 12000,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 1608434677,
+    "thinking_token_budget": null,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 14400
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "continuation": false,
+  "prior_generation_sha256": null,
+  "system_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_three_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_repair_architect.prompt.txt",
+  "user_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_three_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_repair_architect.user_prompt.txt",
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_three_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_repair_architect.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_three_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_repair_architect.reasoning.txt"
+}

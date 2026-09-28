@@ -1,0 +1,114 @@
+{
+  "schema": "cognitive-well-v0290-p5-iterated-review-fusion-manifest-v1",
+  "harness_version": "0.3.290",
+  "parent_harness_version": "0.3.263",
+  "problem_id": "PB-Basic-030",
+  "problem_number": 30,
+  "source_run": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/01_source",
+  "input_checkpoint": "lazy_checked",
+  "output_dir": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles",
+  "candidate_ids": [
+    "t10_r01",
+    "t10_r02",
+    "t07_r01",
+    "t07_r02"
+  ],
+  "r1_cycle_count": 3,
+  "pipeline_policy": "r1_three_cycles_terminal_v1",
+  "stage_order": [
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "runtime": {
+    "gemma_endpoint": "http://127.0.0.1:8030/v1",
+    "qwen_endpoint": "http://127.0.0.1:8027/v1",
+    "workers_per_endpoint": 4,
+    "resolve_workers": 2,
+    "seed_namespace": "v263-v290:problem-only:PB-Basic-030:r1",
+    "model_timeout_sec": 600
+  },
+  "transport_policy": {
+    "reviewer2_http_timeout_floor_sec": 2400,
+    "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+    "qwen_max_output_tokens": 49152,
+    "qwen_retry_on_output_cap": false,
+    "single_model": null,
+    "budget_forcing": true,
+    "reasoning_effort": null
+  },
+  "repair_brief_boundary": {
+    "mandatory_every_r1_cycle": true,
+    "accepting_fusion_audit_mandatory": true,
+    "rejected_acceptance_returns_to_fusion": true,
+    "max_acceptance_reconsiderations": 2,
+    "audit_model": "Qwen/Qwen3.6-27B",
+    "rewrite_model": "google/gemma-4-31B-it",
+    "audit_original_then_every_rewrite": true,
+    "max_rewrite_rounds": 2,
+    "token_caps": [
+      32768,
+      49152,
+      65536
+    ],
+    "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+    "output_format": "Markdown",
+    "mutation": "replace exactly resolver_brief only",
+    "uncertified_route": "synthesize_with_rejected_brief",
+    "optional_exact_evidence": {
+      "enabled_for_every_repair_brief_audit": false,
+      "operation_policy": "generic allowlist only",
+      "no_tool_or_failure": "contained; audit continues without evidence",
+      "finite_no_witness_is_global_proof": false
+    }
+  },
+  "parallel_lanes": 4,
+  "model_inputs_exclude": [
+    "reference_solution",
+    "v0139_proof",
+    "strict_score",
+    "Codex_feedback",
+    "human_repair_brief_audit"
+  ],
+  "strict_scoring": {
+    "inside_model_pipeline": false,
+    "targets_written_after_each_checkpoint": true,
+    "scores_must_not_control_selection_or_stopping": true
+  },
+  "frozen_inputs": {
+    "problem_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles/input/problem.json",
+    "problem_text_sha256": "9df25b989257154b597796edadee9d65a13dc44a8a827c5b670b4c08317e3d22",
+    "problem_file_sha256": "4bb5b0aa313544d2b6915f9b66b8207a2d7519e443e6be93345ceeea28ed6281",
+    "lanes": [
+      {
+        "candidate_id": "t10_r01",
+        "proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles/input/lazy_checked_baseline/t10_r01.md",
+        "proof_sha256": "8b535b4d1675ab4471a0fc3da8c177585c9eeeb4eb1e85c7af284f60424c802c",
+        "source_proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/01_source/p30/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p30/candidates/t10_r01/checked_proof.md",
+        "source_proof_sha256": "8b535b4d1675ab4471a0fc3da8c177585c9eeeb4eb1e85c7af284f60424c802c"
+      },
+      {
+        "candidate_id": "t10_r02",
+        "proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles/input/lazy_checked_baseline/t10_r02.md",
+        "proof_sha256": "1db0d3f2e65d22b22dc753aedefb991cf5254fd09784fc3ce09a91dbe7d5fafa",
+        "source_proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/01_source/p30/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p30/candidates/t10_r02/checked_proof.md",
+        "source_proof_sha256": "1db0d3f2e65d22b22dc753aedefb991cf5254fd09784fc3ce09a91dbe7d5fafa"
+      },
+      {
+        "candidate_id": "t07_r01",
+        "proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles/input/lazy_checked_baseline/t07_r01.md",
+        "proof_sha256": "1ae92dda04290eab0e656296acfbcf04803d7d001d1bd91019fc920dbdd45671",
+        "source_proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/01_source/p30/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p30/candidates/t07_r01/checked_proof.md",
+        "source_proof_sha256": "1ae92dda04290eab0e656296acfbcf04803d7d001d1bd91019fc920dbdd45671"
+      },
+      {
+        "candidate_id": "t07_r02",
+        "proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles/input/lazy_checked_baseline/t07_r02.md",
+        "proof_sha256": "d1d6b416c438ecae6b434e43e6ef0358b99d7cc46b20b91373608d4f37164982",
+        "source_proof_path": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/01_source/p30/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p30/candidates/t07_r02/checked_proof.md",
+        "source_proof_sha256": "d1d6b416c438ecae6b434e43e6ef0358b99d7cc46b20b91373608d4f37164982"
+      }
+    ]
+  }
+}

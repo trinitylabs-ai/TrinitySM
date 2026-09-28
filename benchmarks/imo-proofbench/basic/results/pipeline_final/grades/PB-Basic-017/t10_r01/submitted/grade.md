@@ -1,0 +1,22 @@
+The solution is complete and correct.
+
+- Setting \(k=n^2+n+1\) gives \(k\ge 1\), and \(z=3^{4k}\ge81\).
+- The expression is correctly transformed into
+  \[
+  A_n=z^7+z^5+1.
+  \]
+- The factorization
+  \[
+  z^7+z^5+1=(z^2+z+1)(z^5-z^4+z^3-z+1)
+  \]
+  is correctly derived and explicitly verified.
+- Both factors are integers greater than \(1\). In particular,
+  \[
+  z^5-z^4+z^3-z+1=z^4(z-1)+z(z^2-1)+1>1
+  \]
+  for \(z\ge81\).
+- Hence \(A_n\) is composite for every non-negative integer \(n\), so there are no solutions.
+
+The observation that \(k\) is odd is unnecessary but correct and does not affect the proof.
+
+<points>7 out of 7</points>

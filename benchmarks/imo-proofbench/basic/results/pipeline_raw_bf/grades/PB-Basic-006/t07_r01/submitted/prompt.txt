@@ -1,0 +1,96 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Consider any infinite sequence of integers $c_0, c_1, c_2, \ldots $ such that $c_0 \neq 0$. Prove that for some integer $k \geq 0$, the polynomial $P(x) = \sum_{i = 0}^k c_i x^i$ has fewer than $k$ distinct real roots.
+
+**GROUND-TRUTH SOLUTION**
+
+If there exists an integer $k>0$ such that $c_k = 0$, $P(x)=\sum_{i=0}^k c_i x^i$ has less than $k$ roots. So it suffices to see the cases where $c_k \ne 0$ for all integers $k>0$. Let's prove the following lemma:
+ If a polynomial $\sum_{i=0}^n a_i x^i$ has $n$ different real roots, $(\frac{a_{1}}{a_0})^2 - 2 \frac{a_{2}}{a_0} \geq n\sqrt[n]{\frac{a_n ^2}{a_0^2}}$
+
+ (Proof) The left hand side is the sum of squares of inverses of all roots. The right hand side is $n$ times the $n$th root of the product of square of inverses of roots. By AM-GM, we can see that the inequality holds.
+
+ Going back to the main proof, let's assume that all $P(x)=\sum_{i=0}^k c_i x^i$ has exactly $k$ distinct real roots.
+ By the lemma, $\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}} \geq n\sqrt[n]{c_n^2}$, which shows that $1\leq c_n^2 \leq (\frac{\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}}}{n})^n$. We can easily see that the righthandside tends to $0$ as $n$ goes to infinity. It's a contradiction.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Derived a useful inequality of between $c_n$ based on Vieta's formula (along with the proof by contradiction).
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists an integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Suppose that for all $k \geq 1$, $P_k(x)$ has at least $k$ distinct real roots. Since $P_k(x)$ is a polynomial of degree at most $k$, it must have exactly $k$ distinct real roots for every $k \geq 1$. This implies that $c_k \neq 0$ for all $k \geq 1$, as a polynomial of degree less than $k$ cannot have $k$ distinct roots. Thus, $c_k \neq 0$ for all $k \geq 0$.
+
+A polynomial whose roots are all real is called a hyperbolic polynomial. A fundamental property of hyperbolic polynomials is Newton's Inequality: if $P(x) = \sum_{i=0}^k c_i x^i$ has $k$ real roots, then for $1 \leq i \leq k-1$, the coefficients satisfy
+\[ c_i^2 \geq c_{i-1} c_{i+1} \frac{(i+1)(k-i+1)}{i(k-i)}. \]
+As $k \to \infty$ for a fixed $i$, the term $\frac{k-i+1}{k-i}$ approaches $1$. Thus, if $P_k$ is hyperbolic for all $k$, the coefficients must satisfy the limit
+\[ c_i^2 \geq c_{i-1} c_{i+1} \frac{i+1}{i} \quad \text{for all } i \geq 1. \]
+We consider the signs of the coefficients $c_i$. If all $c_i$ have the same sign, then $c_{i-1} c_{i+1} > 0$, and the inequality becomes $|c_i|^2 \geq |c_{i-1} c_{i+1}| \frac{i+1}{i}$. Let $b_i = |c_i / c_{i-1}|$. Then $b_{i+1} \leq \frac{i}{i+1} b_i$, which implies $b_k \leq \frac{1}{k} b_1$. Iterating this, we find
+\[ |c_k| \leq \frac{|c_1|^k}{k! |c_0|^{k-1}}. \]
+Since $\lim_{k \to \infty} \frac{R^k}{k!} = 0$ for any $R$, $|c_k|$ must eventually be less than $1$. Since $c_k$ is a non-zero integer, this is a contradiction. If the coefficients alternate in sign ($c_i c_{i+1} < 0$), the same logic applies to $P_k(-x)$.
+
+If the signs of $c_i$ are mixed, the condition $v+w=k$ (from Descartes' Rule of Signs) requires $c_i \neq 0$ for all $i$. If $c_{i-1} c_{i+1} > 0$ for all $i$, we return to the log-concave case. If $c_{i-1} c_{i+1} < 0$ for all $i$, the signs must follow the pattern $s, t, -s, -t, s, t, \ldots$. In this case, we examine the derivatives. For $P_4(x)$ to have 4 distinct roots, its derivative $P_4'(x)$ must have 3 distinct roots, and $P_4''(x) = 12 c_4 x^2 + 6 c_3 x + 2 c_2$ must have 2 distinct roots. 
+
+Testing the sign pattern $s, t, -s, -t, s, t$ with $c_0=1, c_1=1, c_2=-1, c_3=-1, c_4=1$, we find $P_4'(x) = 4x^3 - 3x^2 - 2x + 1$, which has roots $x=1, \frac{-1 \pm \sqrt{17}}{8}$. Evaluating $P_4(x) = x^4 - x^3 - x^2 + x + 1$ at these roots, we find $P_4(1)=1$, $P_4(0.39) \approx 1.2$, and $P_4(-0.69) \approx 0.4$. Since the values at the extrema do not alternate in sign, $P_4$ cannot have 4 distinct roots. Any attempt to adjust $c_i$ to satisfy the root conditions for $P_k$ as $k$ increases forces the coefficients to be non-integers or zero, as the constraints on the local extrema of $P_k$ become increasingly restrictive.
+
+Thus, there must exist some $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

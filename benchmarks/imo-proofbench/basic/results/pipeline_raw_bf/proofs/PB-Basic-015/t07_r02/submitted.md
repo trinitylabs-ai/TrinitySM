@@ -1,0 +1,30 @@
+To prove that the procedure eventually terminates and that the cars end up sorted in increasing order of width, we analyze the relative ordering of the cars based on their lengths and widths.
+
+### 1. Termination of the Procedure
+
+Let the $n$ cars be denoted by $C_1, C_2, \dots, C_n$, where the index $i$ refers to the car's initial position. Since the cars are initially arranged in increasing order of length, we have $L_1 < L_2 < \dots < L_n$. Thus, for any two cars $C_a$ and $C_b$, the condition $L_a < L_b$ is equivalent to $a < b$.
+
+A swap occurs between two adjacent cars $C_a$ and $C_b$ (where $C_a$ is currently to the left of $C_b$) if and only if $L_a < L_b$ and $W_a > W_b$. In terms of initial indices, this means $a < b$ and $W_a > W_b$.
+
+We define a "mixed inversion" as a pair of cars $(C_a, C_b)$ such that $a < b$, $C_a$ is currently to the left of $C_b$, and $W_a > W_b$. Let $M$ be the set of all such mixed inversions, and let $|M|$ be the number of such pairs.
+
+Whenever Adrian performs a swap on adjacent cars $C_a$ and $C_b$ (with $C_a$ on the left), the conditions for the swap are precisely that $a < b$ and $W_a > W_b$. After the swap, $C_b$ is to the left of $C_a$. This specific pair $(C_a, C_b)$ is no longer a mixed inversion. Since the swap only changes the relative order of $C_a$ and $C_b$, the relative order of any other pair of cars remains unchanged. Thus, each swap reduces the value of $|M|$ by exactly 1. Since $|M|$ is a non-negative integer, the procedure must eventually terminate.
+
+### 2. Final State of the Cars
+
+The procedure terminates when no further swaps are possible. This happens if and only if no two adjacent cars $C_i, C_{i+1}$ satisfy $L_i < L_{i+1}$ and $W_i > W_{i+1}$. This implies that $|M| = 0$, meaning for all pairs $(a, b)$ with $a < b$ and $W_a > W_b$, the car $C_b$ must be to the left of $C_a$ in the final arrangement.
+
+To show that the final arrangement is sorted by width, we consider any two cars $C_a$ and $C_b$ and assume without loss of generality that $W_a > W_b$. We must prove that $C_b$ is to the left of $C_a$ in the final state.
+
+**Case 1: $a < b$**
+In this case, $L_a < L_b$. Since $W_a > W_b$, the pair $(C_a, C_b)$ is a mixed inversion if $C_a$ is to the left of $C_b$. However, at termination, $|M| = 0$, so $C_a$ cannot be to the left of $C_b$. Thus, $C_b$ must be to the left of $C_a$.
+
+**Case 2: $a > b$**
+In this case, $L_a > L_b$. Initially, since the cars are sorted by length, $C_b$ is to the left of $C_a$. For $C_a$ to move to the left of $C_b$, they must at some point be adjacent and swap. A swap between two adjacent cars $C_L$ and $C_R$ occurs if $L_L < L_R$ and $W_L > W_R$.
+- If $C_b$ is on the left and $C_a$ is on the right: we have $L_b < L_a$, but we assumed $W_a > W_b$, so $W_b < W_a$. The condition $W_L > W_R$ is not met.
+- If $C_a$ is on the left and $C_b$ is on the right: the condition $L_L < L_R$ is not met because $L_a > L_b$.
+Thus, $C_a$ and $C_b$ can never swap. Their relative order remains the same as the initial state, so $C_b$ remains to the left of $C_a$.
+
+In both cases, if $W_a > W_b$, then $C_b$ ends up to the left of $C_a$. This implies that the final arrangement of cars is sorted in increasing order of width from left to right.
+
+$\square$

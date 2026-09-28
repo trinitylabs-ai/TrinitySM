@@ -1,0 +1,2048 @@
+{
+  "schema_version": 1,
+  "benchmark": "imo-proofbench/advanced",
+  "experiment": "pipeline_raw_r1c3",
+  "archived_at": "2026-09-13T04:25:58.034021+00:00",
+  "source_summary": "runs/advanced_raw_r1c3_imobench_incremental_20260913/summary.json",
+  "source_summary_sha256": "a358088525f817424c9aa6a526589850ddd4e41daadbaed65a38853d739d8246",
+  "snapshot_count": 14,
+  "pending_or_unavailable": [
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_reached"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "not_reached"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-003",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-004",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-005",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-006",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-007",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-008",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-009",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-011",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-012",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-013",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-014",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-015",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-016",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-019",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-021",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-022",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-023",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-024",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-025",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-026",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-027",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-028",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-029",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    },
+    {
+      "problem_id": "PB-Advanced-030",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "state": "waiting_for_problem_completion"
+    }
+  ],
+  "harness_note": "The existing Advanced run uses this exact frozen engine, later packaged without engine changes as IMO Proof Pipeline 1.0.0. Original entry point and launch records remain authoritative.",
+  "rows": [
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-001/t10_r01/raw.md",
+      "grade_directory": "grades/PB-Advanced-001/t10_r01/raw",
+      "score": 6,
+      "proof_sha256": "89e20b5db88d7d2c026fb3c5cdfad03b87896c0bca5e04dde57fcd48c9c23fd6",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/01_source/p1/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p1/candidates/t10_r01/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-001/t10_r02/raw.md",
+      "grade_directory": "grades/PB-Advanced-001/t10_r02/raw",
+      "score": 7,
+      "proof_sha256": "fb4670319d1e288e8f1b9b2daebe5b90ebac3c059e95c555b5e42164cb33ff31",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/01_source/p1/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p1/candidates/t10_r02/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-001/t07_r01/raw.md",
+      "grade_directory": "grades/PB-Advanced-001/t07_r01/raw",
+      "score": 6,
+      "proof_sha256": "36b599055eec36b0224aed98cc3865dc54fec47f89947df4fd617d0e4393b155",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/01_source/p1/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p1/candidates/t07_r01/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-001/t07_r02/raw.md",
+      "grade_directory": "grades/PB-Advanced-001/t07_r02/raw",
+      "score": 7,
+      "proof_sha256": "0b8e4b40068b28bf094d949985b23e856f652c3d764f3511f7c82d78a8b408e6",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/01_source/p1/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p1/candidates/t07_r02/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/PB-Advanced-001/t10_r01/R1-C3.md",
+      "grade_directory": "grades/PB-Advanced-001/t10_r01/R1-C3",
+      "score": 7,
+      "proof_sha256": "1649ce5d5ed7345f1925ad109f328a47417e81fedb6892b13bd48e7437a4980a",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/PB-Advanced-001.t10_r01/resolver/temperature_0_4/gpu0/p1/t10_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/PB-Advanced-001/t07_r01/R1-C3.md",
+      "grade_directory": "grades/PB-Advanced-001/t07_r01/R1-C3",
+      "score": 6,
+      "proof_sha256": "36b599055eec36b0224aed98cc3865dc54fec47f89947df4fd617d0e4393b155",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/02_r1_cycles/input/lazy_checked_baseline/t07_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/result.json",
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/PB-Advanced-001/t07_r02/R1-C3.md",
+      "grade_directory": "grades/PB-Advanced-001/t07_r02/R1-C3",
+      "score": 7,
+      "proof_sha256": "0b8e4b40068b28bf094d949985b23e856f652c3d764f3511f7c82d78a8b408e6",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/02_r1_cycles/input/lazy_checked_baseline/t07_r02.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/result.json",
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-002/t10_r01/raw.md",
+      "grade_directory": "grades/PB-Advanced-002/t10_r01/raw",
+      "score": 1,
+      "proof_sha256": "9a59eaa7f373ecc9f2cc3bf3047e878086a4f2b0c9f4512190f3ab8453bf7bd8",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/01_source/p2/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p2/candidates/t10_r01/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-002/t10_r02/raw.md",
+      "grade_directory": "grades/PB-Advanced-002/t10_r02/raw",
+      "score": 6,
+      "proof_sha256": "6fb7d9d38c150dedbdfa3096e6cd6d0ebf753670d997a2fc3576309a266db2f4",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/01_source/p2/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p2/candidates/t10_r02/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-002/t07_r01/raw.md",
+      "grade_directory": "grades/PB-Advanced-002/t07_r01/raw",
+      "score": 1,
+      "proof_sha256": "f5a4468f6fb71bcf8dea622d357c6163e2ac352f874f09da8704a6d454a0dba1",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/01_source/p2/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p2/candidates/t07_r01/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "proof": "proofs/PB-Advanced-002/t07_r02/raw.md",
+      "grade_directory": "grades/PB-Advanced-002/t07_r02/raw",
+      "score": 1,
+      "proof_sha256": "371230a55e708024b3f8a08275aecaf2590154f6980c553c4c6fd8872bd2bbd7",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/01_source/p2/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p2/candidates/t07_r02/draft_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/PB-Advanced-002/t10_r01/R1-C3.md",
+      "grade_directory": "grades/PB-Advanced-002/t10_r01/R1-C3",
+      "score": 1,
+      "proof_sha256": "497ecacf3bf9ad70f7e9ef267b4e3352f1a6274822ad015b5d48e97f9db8c2f7",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/02_r1_cycles/input/lazy_checked_baseline/t10_r01.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/PB-Advanced-002/t10_r02/R1-C3.md",
+      "grade_directory": "grades/PB-Advanced-002/t10_r02/R1-C3",
+      "score": 1,
+      "proof_sha256": "85f5995500dc7098570ceb71053be8d8e663ac9777b24dd4375466cbf95f3898",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/02_r1_cycles/lanes/t10_r02/03_r1_cycle_3/cases/PB-Advanced-002.t10_r02/resolver/temperature_0_4/gpu0/p2/t10_r02/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "proof": "proofs/PB-Advanced-002/t07_r01/R1-C3.md",
+      "grade_directory": "grades/PB-Advanced-002/t07_r01/R1-C3",
+      "score": 1,
+      "proof_sha256": "395b1ea74237d87685b0ece2fb8da17988cb4b8b87bce01a18b9299a67b6f20a",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/02_r1_cycles/lanes/t07_r01/02_r1_cycle_2/cases/PB-Advanced-002.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "imobench-proof-autograder-b5-v1",
+      "reused_from": null,
+      "recovery": false
+    }
+  ],
+  "copied_artifact_inventory": {
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t10_r01/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/proof.md",
+      "sha256": "218cc3ee947e12bfc909c88abc8c9a45816a1b061a26f6f9d6157b76ab53690b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/grade.md",
+      "sha256": "7629ef92df9dc099674824cf59601ce6bdc67265f6ce9137b161ebc57239a8ef"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/result.json",
+      "sha256": "5ab0ac92face095becab7bd20493e4f1bf1421cb980aab3d15f42028ab0935a9"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/manifest.json",
+      "sha256": "9488c574dc66d978aaf336e0112e1324b6780158e299cf799736132ae17e46fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/prompt.txt",
+      "sha256": "079dcede70f7af23ccaccca3800a8352c9bc2a19049b4c587e4136da243284a5"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/problems/PB-Advanced-001/problem.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/problem.md",
+      "sha256": "50fcc51b909f6e8d2952467c44f7a6b1d2cd219f1ec09f76e2a0dc8ce1ece6c8"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/problems/PB-Advanced-001/reference.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/reference.md",
+      "sha256": "1d80c0fb795f752e50c6d2b38dd6b0af569eafeddf4ce2e4eaad310bd2a15349"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/problems/PB-Advanced-001/guidelines.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/guidelines.md",
+      "sha256": "e5990afab082fa2699d106852d1afcd232f681fb058175d053a097d700e087c9"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/rubric.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/prompt_template.txt",
+      "sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/prompt_source.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/prompt_source.json",
+      "sha256": "9a8b8c2038248b6dadafbf4476548431f7db9913111ddd74865a03b6575be8bb"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/SKILL.md": {
+      "source": "skills/imobench-scoring/SKILL.md",
+      "sha256": "16e1d347814625b6c454190f81e501a3233f3377759163d886de5bf2ebeb1c01"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/references/source.json": {
+      "source": "skills/imobench-scoring/references/source.json",
+      "sha256": "9a8b8c2038248b6dadafbf4476548431f7db9913111ddd74865a03b6575be8bb"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/references/proof_autograder_prompt.txt": {
+      "source": "skills/imobench-scoring/references/proof_autograder_prompt.txt",
+      "sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/references/evaluator_instructions.txt": {
+      "source": "skills/imobench-scoring/references/evaluator_instructions.txt",
+      "sha256": "015e67bb885a2531c0aa51431d404c9d479d6676a024dca2a24df0a332f2587c"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/references/input-format.md": {
+      "source": "skills/imobench-scoring/references/input-format.md",
+      "sha256": "bb0b4f346462a2d9913fbac7f6c370f14c510fd6b45718bcb9e2da73e11b4867"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/references/provenance.md": {
+      "source": "skills/imobench-scoring/references/provenance.md",
+      "sha256": "d276f640fb77b9b57084f0cb7840b525c561a37a1ed02016d9ffd4973301909b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/agents/openai.yaml": {
+      "source": "skills/imobench-scoring/agents/openai.yaml",
+      "sha256": "5c49841de2c939a8c170ab043c9bc7b399633d579ff439dd7ec9e8cf5b4ffe26"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/scorer/scripts/score.py": {
+      "source": "skills/imobench-scoring/scripts/score.py",
+      "sha256": "ff0ec706ca68604bda672f0aca7d7390c757d888366b605c1e22a1b8c14b52ab"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t10_r02/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/proof.md",
+      "sha256": "e2fb20a3407d600781956c0f268a91d8279b688e1ca41b9a1cd2d9d2108aa74e"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r02/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/grade.md",
+      "sha256": "8b941845b5cfa635082a1159d0718192b23da08b70e1b04a03765808897090de"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r02/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/result.json",
+      "sha256": "f4f273590007912e550553f373eff57ac6141b141b3348ed41b7fed37647ae09"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r02/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/manifest.json",
+      "sha256": "df0032d46c6ab157e555ae7f5a1aa869d819fac2d15e71afa08927d41a23123b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r02/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/prompt.txt",
+      "sha256": "9fe449e88bbc898ec73cab75d2dbeef4a5483197ae0ab78e4eca1dbd14bc2f0d"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r02/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t07_r01/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/proof.md",
+      "sha256": "926bf1437219cef511ac98405236222f60758e4aaa753def0cc2912ae412aa1f"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/grade.md",
+      "sha256": "d8ec05b979ba3cca824a0f88521425a587e34ba3d7ceadf104697be8c1ee3e91"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/result.json",
+      "sha256": "0d659401249f99a4a9cd61055480b2aca6e091ed63963ab8ccc996318ac2c909"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/manifest.json",
+      "sha256": "d2cb582d4b4a814272cf5c1d79009c1d227c627bf3b3b190d548852450906506"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/prompt.txt",
+      "sha256": "5aa50df9a36fa0dd8d89bd1abe2a4264e4e790955ab71e2a5785f9ce8d923bf2"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t07_r02/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/proof.md",
+      "sha256": "7617b9a11d384793fdb1cd4c807b9d2ef9921ae54978410e5fafba6725b99ffb"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/grade.md",
+      "sha256": "a122e1b8168b86e8cd46f12741d15529a58cc816ec89cab98d990e8d7cb9f059"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/result.json",
+      "sha256": "f4b7b650418aac17b3208d2ce61958aeab7a1554fcce4437cda4e80d153151f2"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/manifest.json",
+      "sha256": "ff7a0d99e66ea6e6e5dc2773fe2c6f87b15d0c8fc1c57c258ae0cb43650021cb"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/prompt.txt",
+      "sha256": "d03fadc71a1cf1831a9345a854a0bb944edc5ad2a84358c9585490899361dd5d"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t10_r01/R1-C3.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/proof.md",
+      "sha256": "d22b01e9e50c7a6918699da328b9026a2a2eb3e0e5bf7e149470077205cb7371"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/R1-C3/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/grade.md",
+      "sha256": "4bed5165dd9cbd0d0ca56981439c10e6be633e2e5dabd5e1fa71866c07680187"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/R1-C3/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/result.json",
+      "sha256": "373839ea3f34b709637799ebdaa2371616d53b1b6fdca21b5f4a8b568d1376fd"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/R1-C3/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/manifest.json",
+      "sha256": "76d9d1ad19792a68235f77203e4e10a5cdf328b106f9c79b6edb0c102ff00b7e"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/R1-C3/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/prompt.txt",
+      "sha256": "240cfe12ab4caeb7fc4edcf5e89a72fbe995dd1fbd756df8766b5f942ca08718"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t10_r01/R1-C3/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t07_r01/R1-C3.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/proof.md",
+      "sha256": "926bf1437219cef511ac98405236222f60758e4aaa753def0cc2912ae412aa1f"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/R1-C3/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/grade.md",
+      "sha256": "d8ec05b979ba3cca824a0f88521425a587e34ba3d7ceadf104697be8c1ee3e91"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/R1-C3/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/result.json",
+      "sha256": "8e989c0f65eeb0b931b0b1fcb1d0d730827c58a1f36ca2a1d84021af99f7c06e"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/R1-C3/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/manifest.json",
+      "sha256": "dd961955c98ccc65cbda3e87ceeb8493f4a99adfc148e46861b31d410450c7d5"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/R1-C3/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/prompt.txt",
+      "sha256": "5aa50df9a36fa0dd8d89bd1abe2a4264e4e790955ab71e2a5785f9ce8d923bf2"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r01/R1-C3/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-001/t07_r02/R1-C3.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/proof.md",
+      "sha256": "7617b9a11d384793fdb1cd4c807b9d2ef9921ae54978410e5fafba6725b99ffb"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/R1-C3/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/grade.md",
+      "sha256": "a122e1b8168b86e8cd46f12741d15529a58cc816ec89cab98d990e8d7cb9f059"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/R1-C3/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/result.json",
+      "sha256": "971a8aabee50e48217069884a264ae353525255a934572030d591c306aab2841"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/R1-C3/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/manifest.json",
+      "sha256": "0b9d9763af33bdda37cd118a159cc62aeccd8d64d1bff7fce3a9be1dad29ca17"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/R1-C3/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/prompt.txt",
+      "sha256": "d03fadc71a1cf1831a9345a854a0bb944edc5ad2a84358c9585490899361dd5d"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-001/t07_r02/R1-C3/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t10_r01/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/proof.md",
+      "sha256": "566454e261730aa69989db6eae7ba6d07ed39d643dd8afce9aa905886cd00409"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/grade.md",
+      "sha256": "3facfc6b38eb8946631b5840da9c4c5df15d9c5c9b3299380503e731cd5d6805"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/result.json",
+      "sha256": "0c2b5fce2ad4cff73e16be0fe45c7da60b4c836f6abce0e768f3df2e785c207b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/manifest.json",
+      "sha256": "acf42d7a333c8516c31fc65a952b6e4763cf88be89c948c7e57d727286aa073d"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/prompt.txt",
+      "sha256": "8aae3998dd5afc77f43c9b367ea262cc7895858807eccc2a6cbd6cbb3bec07a7"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/problems/PB-Advanced-002/problem.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/problem.md",
+      "sha256": "c9c004f8f46424fea842c0b4bcd32b871606513e77923e039ab98ad9fc4b893e"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/problems/PB-Advanced-002/reference.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/reference.md",
+      "sha256": "c0931171087373dd84c95b9d33eede75561f17b088ee865195e235d75e489493"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/problems/PB-Advanced-002/guidelines.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/guidelines.md",
+      "sha256": "e0390d38c4a67eddbb741ccfd32a6c8a6a7988e2e7c84b23b392c41b401bbb0b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t10_r02/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/proof.md",
+      "sha256": "da98e0c8bd00e28716b10392914fe7f86dc43d6890e0458c6c1fe2abaa952d85"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/grade.md",
+      "sha256": "eb5c4c19ab70619503211e8f7b2005c0c5da0cf644f5858711012f78829a68e7"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/result.json",
+      "sha256": "bd4e6c783a53e8f3dcbb4f977d543eec617837cda660863c90e8a67ab150422c"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/manifest.json",
+      "sha256": "3cb668a61fed5293d30f5874dc23b7d82713656507f0d009a70d68e5e929432c"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/prompt.txt",
+      "sha256": "8dd86ae2661870555b7f0c2424f19521b1f349d50de2e73c19540b38474ae173"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t07_r01/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/proof.md",
+      "sha256": "4cce4adbe6583201913618704681a25f83c3bb5c47c483b5df8df95a51b75433"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/grade.md",
+      "sha256": "d31c5c5479ac2c1f32b57d2134539d9fb0543688f7676bd64f4077f5d605e303"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/result.json",
+      "sha256": "59c311ac2b0877d0a8d9922c5ab305e774cc542f46bd2637a7c4ad344085ba02"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/manifest.json",
+      "sha256": "a718a1e8d43c7778a1f9a308c1aa94001ef4b6182100551394223a9da92f8fdf"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/prompt.txt",
+      "sha256": "4df2749b4d247b840fbb91efdaa45d3610c477bd854ddd8d3fb836654b5b8268"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t07_r02/raw.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/proof.md",
+      "sha256": "5a39116bd0f30d3452861534d6310b470621d1dba24cf424145793c66392a88f"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r02/raw/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/grade.md",
+      "sha256": "28565a2cd3d516d23b78a1bdf4950aca1c4046543d7349f9ffc9097bfee7488d"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r02/raw/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/result.json",
+      "sha256": "86f5ebf89c4412958ea82efb932765c32afc5fc6624ddf2396d943b00d11aeed"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r02/raw/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/manifest.json",
+      "sha256": "33e2e44e85626e4855728f9fc9bdace50cf7494dbc8a19a24dacdb9856cb8501"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r02/raw/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/prompt.txt",
+      "sha256": "abd09b923b58dac45f1c1c0e1b833968c495b272fe4311c3a7e9bd9d0fc9a25b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r02/raw/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t10_r01/R1-C3.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/proof.md",
+      "sha256": "448bf507ed80ed57c7abf132d21ea7cd7c622dfcf35c3d30819019719e17c388"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/R1-C3/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/grade.md",
+      "sha256": "37be64cf61986c28cf331697fcc0ce964af5f73e8f4bdd0a5d5308ff36b9cf25"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/R1-C3/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/result.json",
+      "sha256": "eeaa9325474e4c3c13284b4d744cead0cb37233568b95fe3f02d5f72b205c1c6"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/R1-C3/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/manifest.json",
+      "sha256": "247087e6b9b54e81fce01198317e52ed7be9e4ab34ae0e2f13a8b674b0e480a6"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/R1-C3/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/prompt.txt",
+      "sha256": "c23be363e2284c860064ce1f72087a7e23f5110384b011d8e817c3bb9aaa79c3"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r01/R1-C3/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t10_r02/R1-C3.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/proof.md",
+      "sha256": "aca649024846fe17bbe373b30a81357ee4fe4a26eea2df37c4e93db359347dbf"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/R1-C3/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/grade.md",
+      "sha256": "20fe7703259d01e9f1cd68833c8790a4e52676190a3b0e2ea09a046805b9f352"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/R1-C3/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/result.json",
+      "sha256": "55b21d0c00403d7182b856d8eae0a2a275cc940350703721eeceec6645221931"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/R1-C3/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/manifest.json",
+      "sha256": "644cbecfa28e8b82de3adf6c4e4de8d9806317aba07b1a2c636f5003c38a6932"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/R1-C3/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/prompt.txt",
+      "sha256": "ca6b0e7797a3f079b77f01df9a5936234c5d3ed7c3a0922df28a1118dd3a4b52"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t10_r02/R1-C3/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/proofs/PB-Advanced-002/t07_r01/R1-C3.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/proof.md",
+      "sha256": "6e713bc0866cb66f424de7b84cb1d02940a59ba9c9b668534641c73fa8c38f63"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/R1-C3/grade.md": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/grade.md",
+      "sha256": "ff339da5bf0d495d3c2a0d1e6a5f60fe5525b8d350dd512a1c52f9a07ab20d14"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/R1-C3/result.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/result.json",
+      "sha256": "a92b8e95cf5e0de87f13bdd8a685f471e655de79164b780414b669dd095d4295"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/R1-C3/manifest.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/manifest.json",
+      "sha256": "9a20960a8293d2f3a9b3584ccb91b6b3c90f9b8a4c3bd98dece2b03d753b453b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/R1-C3/prompt.txt": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/prompt.txt",
+      "sha256": "7690210ff54a58202fddbca115f8e73fdffc4e20924446fa4ce73a544bafa894"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grades/PB-Advanced-002/t07_r01/R1-C3/isolation_audit.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/isolation_audit.json",
+      "sha256": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/run_manifests/0001.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/manifest.json",
+      "sha256": "ae2ab902690cdf48b3e0bff16bc78a12073b909b27538bf0ebb32d12d1cbcd37"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/run_manifests/0002.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/manifest.json",
+      "sha256": "c52edbbfd8c88e9b9a94176b9aca171c41a1f3df5806232e77367b89f340c4c9"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/run_manifests/0003.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/manifest.json",
+      "sha256": "61c22b06036575c93d35bca716a5f11454e3ef24015e702bb7fa25c61df38290"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/grading/run_manifests/0004.json": {
+      "source": "runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/manifest.json",
+      "sha256": "04f6b23fb280249d4e5a51e55c9471dbcc289d7b7786afc3c0c41322bee71c5b"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/records/PB-Advanced-001/backend_manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/02_r1_cycles/manifest.json",
+      "sha256": "8fa6c104a1d813d7bb7d3559ae833e76118213b4ed5dfd804c0835f68aa3f37d"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/records/PB-Advanced-001/frontend_manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-001/01_source/p1/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "b1f3c6a06b382f20664d6c62dbed90063cd49366f6e1b4961181a77d8433386c"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/records/PB-Advanced-001/queue_manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/manifest.json",
+      "sha256": "5362468de54306bd67747c3909e98bb44a207d1b2386401c5c2aaf706e8ad2ab"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/records/PB-Advanced-002/backend_manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/02_r1_cycles/manifest.json",
+      "sha256": "cd2eb82e821c502a86565f531d26180fa314d67e5b6cd9c1f22eb05efb25e094"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/records/PB-Advanced-002/frontend_manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/problems/PB-Advanced-002/01_source/p2/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/manifest.json",
+      "sha256": "9dea0f288044a827589dd37e4e2d95fa10e47ab6137e93f6571589825fc89767"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/records/PB-Advanced-002/queue_manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/manifest.json",
+      "sha256": "5362468de54306bd67747c3909e98bb44a207d1b2386401c5c2aaf706e8ad2ab"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/actual_launch.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/actual_launch.json",
+      "sha256": "bfc3146682728cd6fc8cd7022e679bd9af4954a90a8effa0a27f4d535d53b18a"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/launch.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/launch.json",
+      "sha256": "e36d8d197f593ba3a8bed617215472865c6d8c66cd53309ee09374cc8a2b7707"
+    },
+    "imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/manifest.json": {
+      "source": "runs/advanced001_030_v263_v290_frozen_run01/manifest.json",
+      "sha256": "5362468de54306bd67747c3909e98bb44a207d1b2386401c5c2aaf706e8ad2ab"
+    }
+  }
+}

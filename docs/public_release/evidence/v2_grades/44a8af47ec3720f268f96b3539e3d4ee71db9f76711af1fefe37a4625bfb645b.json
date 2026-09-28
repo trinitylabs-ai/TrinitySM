@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "f7e24d644e7dc5720411b6d2152f8e69c631bbdbc94b12a9e230c437f54bd96e",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "91a304398793e44986c2098228b3ede5e0d2ad5bef48a3acb9e14d8ae115d4cf",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "a5cdec317f06f9795e0e2ce8f8ff0ff12da98ae11d67c1a8c22e0dd7b808e61f",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In the uniqueness argument, the two transformed inequalities are combined incorrectly. Correct elimination of the terms involving ε(x) gives (x-y)^2+ε(y)^2≥2(x-y)ε(y), namely ((x-y)-ε(y))^2≥0, not the claimed restrictive quadratic.",
+    "summary": "The claimed classification is false. For every c≥0, f(t)=t+c is admissible: the two original inequalities are exactly RMS–AM and AM–GM applied to x and y+c. Thus f(t)=t+1 is a direct counterexample to the assertion that only f(t)=t works, so Rule A caps the score at 2. The submission earns limited credit for correctly squaring the inequalities and verifying the c=0 solution, but its central uniqueness argument begins with an invalid algebraic inference and cannot be locally repaired into the correct classification.",
+    "strengths": [
+      "Correctly squares and reformulates both inequalities using positivity.",
+      "Correctly verifies that f(x)=x is an admissible solution."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer omits all valid solutions f(x)=x+c with c>0; for these functions both inequalities follow from the standard RMS–AM–GM inequalities."
+      },
+      {
+        "severity": "major",
+        "description": "The elimination of ε(x) is algebraically invalid. The actual consequence is the tautology ((x-y)-ε(y))^2≥0, so it provides no restriction on ε(y)."
+      },
+      {
+        "severity": "major",
+        "description": "Later, the proof passes from the existence of one nonzero ε(y) to an argument assuming f(y)≤y/2 for all y, which was not established. Its subsequent minimization over x is also unjustified because ε(x)=0 was assumed only for a particular x, not for every x over which the minimum is taken."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:15:37.836158+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00007",
+  "native_rejection_count": 0
+}

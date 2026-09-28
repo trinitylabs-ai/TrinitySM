@@ -1,0 +1,48 @@
+To find all non-negative integers $a, b, c$ such that $20^a + b^4 = 2024^c$, we analyze the equation by considering various cases for the variables.
+
+**Case 1: One or more variables are zero.**
+- If $c=0$, the equation becomes $20^a + b^4 = 2024^0 = 1$. Since $a, b \ge 0$, the only possibility is $a=0$ and $b=0$. This gives the solution $(a, b, c) = (0, 0, 0)$. If $a \ge 1$, then $20^a + b^4 \ge 20 > 1$, so no further solutions exist here.
+- If $a=0$, the equation becomes $1 + b^4 = 2024^c$.
+    - If $c=0$, we have $1 + b^4 = 1 \implies b=0$, yielding $(0, 0, 0)$.
+    - If $c=1$, we have $b^4 = 2023$. Since $6^4 = 1296$ and $7^4 = 2401$, there is no integer solution for $b$.
+    - If $c \ge 2$, we consider the equation modulo 5. Since $2024 \equiv -1 \pmod 5$, we have $b^4 \equiv (-1)^c - 1 \pmod 5$.
+        - If $c$ is odd, $b^4 \equiv -2 \equiv 3 \pmod 5$. However, fourth powers modulo 5 are $0$ or $1$. No solution.
+        - If $c$ is even, let $c=2k$. Then $b^4 = (2024^k)^2 - 1^2 = (2024^k-1)(2024^k+1)$. Since $\gcd(2024^k-1, 2024^k+1) = \gcd(2024^k-1, 2) = 1$, both factors must be fourth powers. Let $2024^k-1 = u^4$ and $2024^k+1 = v^4$. Then $v^4 - u^4 = 2$, which has no solutions for non-negative integers $u, v$ because the smallest difference between distinct positive fourth powers is $2^4 - 1^4 = 15$.
+- If $b=0$, the equation becomes $20^a = 2024^c$.
+    - If $c=0$, then $20^a = 1 \implies a=0$, yielding $(0, 0, 0)$.
+    - If $c \ge 1$, then $20^a = (2^3 \cdot 11 \cdot 23)^c$. This implies $20^a$ must be divisible by $11$ and $23$, which is impossible since $20 = 2^2 \cdot 5$.
+
+**Case 2: $a, b, c \ge 1$.**
+We examine the equation $20^a + b^4 = 2024^c$ modulo $11$.
+Since $2024 = 11 \times 184$, we have $2024 \equiv 0 \pmod{11}$.
+The equation reduces to $20^a + b^4 \equiv 0 \pmod{11}$.
+Given $20 \equiv 9 \pmod{11}$, this becomes $9^a + b^4 \equiv 0 \pmod{11}$, or $b^4 \equiv -9^a \pmod{11}$.
+We list the possible values of $b^4 \pmod{11}$ for $b \in \{0, 1, \dots, 10\}$:
+- $0^4 \equiv 0$
+- $1^4 \equiv 1$
+- $2^4 = 16 \equiv 5$
+- $3^4 = 81 \equiv 4$
+- $4^4 = 256 = 11 \times 23 + 3 \equiv 3$
+- $5^4 = 625 = 11 \times 56 + 9 \equiv 9$
+- $6^4 \equiv (-5)^4 \equiv 9$
+- $7^4 \equiv (-4)^4 \equiv 3$
+- $8^4 \equiv (-3)^4 \equiv 4$
+- $9^4 \equiv (-2)^4 \equiv 5$
+- $10^4 \equiv (-1)^4 \equiv 1$
+The set of fourth powers modulo $11$ is $S_1 = \{0, 1, 3, 4, 5, 9\}$.
+
+Now we calculate the values of $-9^a \pmod{11}$ for $a \ge 1$:
+- $a=1: -9^1 = -9 \equiv 2 \pmod{11}$
+- $a=2: -9^2 = -81 \equiv -4 \equiv 7 \pmod{11}$
+- $a=3: -9^3 = -729 = 11 \times (-67) + 8 \equiv 8 \pmod{11}$
+- $a=4: -9^4 = -6561 = 11 \times (-597) + 6 \equiv 6 \pmod{11}$
+- $a=5: -9^5 = -59049 = 11 \times (-5369) + 10 \equiv 10 \pmod{11}$
+Since $9^5 \equiv 1 \pmod{11}$ (by Fermat's Little Theorem, $9^{10} \equiv 1$, but $9^5 \equiv (-2)^5 = -32 \equiv 1 \pmod{11}$), the values cycle every 5.
+The set of values for $-9^a \pmod{11}$ is $S_2 = \{2, 6, 7, 8, 10\}$.
+Comparing $S_1$ and $S_2$, we see that $S_1 \cap S_2 = \emptyset$. Thus, there are no solutions for $a, b, c \ge 1$.
+
+The only solution found is $(0, 0, 0)$.
+
+The non-negative integers $a, b, c$ that satisfy $20^a + b^4 = 2024^c$ are $(0, 0, 0)$.
+
+\(\square\)

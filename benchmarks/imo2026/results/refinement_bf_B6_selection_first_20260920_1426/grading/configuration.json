@@ -1,0 +1,14 @@
+{
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy": "Strict Olympiad v2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "passes_per_proof": 2,
+  "A_saved_grades_reused": 48,
+  "B_new_grade_invocations": 48,
+  "B_grader_process_attempts": 48,
+  "B_retry_errors": 0,
+  "selection_rule": "First valid numerical judgment, including metadata disagreement.",
+  "reference_bodies_included": false,
+  "raw_grader_requests_included": false
+}

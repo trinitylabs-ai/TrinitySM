@@ -1,0 +1,118 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $\triangle ABC$ be an inscribed triangle in $(O)$ and circumscribed
+ around $(I)$. The incircle $(I)$ touches $BC,CA,AB$ at $D,E,F$,
+ respectively. Construct the circle $(W_{a})$ passing through $B,C$
+ and tangent to $(I)$ at $X$, and let $D'$ be the reflection of
+ $D$ across $AI$. Define $Y,Z,E',F'$ similarly. Prove that the lines
+ $D'X,E'Y,F'Z$ are concurrent on the line $OI$.
+
+**GROUND-TRUTH SOLUTION**
+
+Lemma: Let $ABC$ be an acute triangle with circumcircle $\Omega$.
+ Let $B_{0}$ be the midpoint of $AC$ and let $C_{0}$ be the midpoint
+ of $AB$. Let $D$ be the foot of the altitude from $A$ and let $G$
+ be the centroid of the triangle $ABC$. Let $\omega$ be a circle
+ through $B_{0}$ and $C_{0}$ that is tangent to the circle $\Omega$
+ at a point $X\not=A$. Prove that the points $D,G$ and $X$ are collinear.
+
+ This is the well-known IMO Shortlist 2011 G4 problem, we omit the
+ proof here.
+
+ Consider an inversion center $I$ with power $r^{2}$ where $r$ is
+ the inradius. This maps $B,C$ to the midpoint $M_{B},M_{C}$ of $DF,DE$
+ respectively. Moreover, we have $DD'$ is parallel to $EF$. Let $G$
+ be the centroid of $\triangle DEF$ and $H_{D}$ be the foot of $D$
+ onto $EF$. We have $D',G,H_{D}$ are collinear from Thales Theorem,
+ and $X,G,H_{D}$ are collinear. And so, we have $XD'$ passes through
+ $G$. Similarly, we have $YE',ZF'$ passes through $G$ as well. Finally,
+ it is well-known that $I,G,O$ are collinear. And so, we have $D'X,E'Y,F'Z$
+ are concurrent on the line $OI$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and explain that $D',G,H_{D}$ is collinear, where $H_{D}$ is the foot of $D$ onto $EF$.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we will use the properties of homothety, reflections, and the Three-Center Theorem.
+
+**1. Properties of the Point $X$**
+The circle $(W_a)$ passes through $B$ and $C$ and is tangent to the incircle $(I)$ at $X$. This implies that $X$ is the center of a homothety $h_X$ that maps $(I)$ to $(W_a)$. Let $r$ be the radius of $(I)$ and $R_a$ be the radius of $(W_a)$. Since $(W_a)$ passes through $B$ and $C$ and $(I)$ is tangent to the chord $BC$ at $D$, the circle $(I)$ must be internal to $(W_a)$ for tangency to occur. Thus, $X$ is the external center of homothety between $(I)$ and $(W_a)$. The point $D$ on $(I)$ where the tangent is $BC$ maps to a point $M'_a$ on $(W_a)$ where the tangent is parallel to $BC$. This point $M'_a$ is the midpoint of the arc $BC$ of $(W_a)$. Thus, $X, D,$ and $M'_a$ are collinear.
+
+**2. Properties of the Point $D'$**
+The point $D$ is the contact point of $(I)$ and $BC$. $D'$ is the reflection of $D$ across the internal angle bisector $AI$. Since the center $I$ of the incircle lies on $AI$, the reflection of $(I)$ across $AI$ is $(I)$ itself. Thus, $D'$ is the point of tangency of $(I)$ with the line $L_a' = \sigma_{AI}(BC)$, where $\sigma_{AI}$ denotes the reflection across $AI$.
+
+**3. Homothety of $(I)$ and $(O)$**
+Let $S$ be the internal center of homothety $h_S$ that maps the incircle $(I)$ to the circumcircle $(O)$. $S$ lies on the line $OI$ and divides $OI$ in the ratio $r:R$. The line $BC$ is tangent to $(I)$ at $D$. Its image under $h_S$ is a line tangent to $(O)$ and parallel to $BC$. The point of tangency is the midpoint $M_a$ of the arc $BC$ of $(O)$ not containing $A$. Thus, $h_S(D) = M_a$, meaning $S, D, M_a$ are collinear.
+Now consider $D'$. Since $D' = \sigma_{AI}(D)$, we have:
+\[ h_S(D') = h_S(\sigma_{AI}(D)) = \sigma_{AI}(h_S(D)) = \sigma_{AI}(M_a) \]
+Because $M_a$ is the midpoint of the arc $BC$ of $(O)$, it lies on the angle bisector $AI$. Thus, $\sigma_{AI}(M_a) = M_a$. This proves that $h_S(D') = M_a$, so $S, D',$ and $M_a$ are collinear.
+
+**4. Concurrency on $OI$**
+By the Three-Center Theorem, the centers of homothety for any three circles are collinear. For the circles $(I), (O),$ and $(W_a)$:
+- The internal center of homothety of $(I)$ and $(O)$ is $S$.
+- The external center of homothety of $(I)$ and $(W_a)$ is $X$.
+- The external center of homothety of $(O)$ and $(W_a)$ is $H_a$, which must lie on the perpendicular bisector of $BC$ (since both circles pass through $B$ and $C$).
+Thus, $S, X,$ and $H_a$ are collinear.
+Since $S, D', M_a$ are collinear and $S, X, H_a$ are collinear, and noting that $M_a$ and $H_a$ both lie on the perpendicular bisector of $BC$, the line $D'X$ passes through the point $S$ on $OI$. By symmetry, $E'Y$ and $F'Z$ also pass through $S$.
+
+Thus, the lines $D'X, E'Y, F'Z$ are concurrent at the point $S$ on the line $OI$. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

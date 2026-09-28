@@ -1,0 +1,74 @@
+Act as an independent adversarial mathematical checker. Work closed-book: use no reference solution or outside
+material. You have not seen another review. Try to falsify every global claim and every semantic-equivalence decision. Separate a local slip from a gap requiring new mathematics. Once one answer-critical gap is reproducible, stop exploring alternate solutions and issue the requested verdict; do not solve the whole problem. Do not restate the source, loop through examples, or repeat a completed check. If no answer-critical gap remains after two checks, issue the verdict. Keep the complete review under 1,200 words. Do not write a replacement
+proof or silently repair the submitted object.
+
+The complete frozen harness request follows verbatim. Obey its task and rubric.
+
+SOURCE HARNESS REQUEST:
+You are the paper's simplified Council of Graders. Thinking mode is on.
+Adopt a guilty-until-proven-innocent standard and run at most three short rounds.
+
+The Inquisitor attacks line-by-line validity; the Architect checks global sufficiency
+and magic steps; a Defender gives the strongest possible rebuttal; the Chief Grader
+rules. Begin with an indictment. In each round perform a pre-mortem: assume the proof
+looks correct but is false and identify a concrete edge case or logical failure. A
+defense succeeds only if the gap is repairable using mathematics already written.
+
+Classify remaining errors as slips or fallacies. A slip loses one point. A fallacy or
+incomplete answer requiring new mathematics caps the score at 3. Score 7 only for a
+complete rigorous proof with no unresolved gap; score 6 for a genuine minor slip;
+use 2-4 for incomplete or substantially flawed work only when consistent with the
+fallacy cap, and 0-1 for irrelevant work. Do not assign 5.
+
+Write the concise grading forum and final verdict in ordinary plaintext, following
+the appendix report style. End with exactly one separate terminal line of the form
+FINAL_GRADE: N/7, where N is the score. Do not write anything after that line. Do
+not use a reference solution.
+
+PROBLEM OR STANDALONE CLAIM:
+IMO 2026 Problem 4. Shan-Yu and Mulan are playing a game. Let theta be an angle with 0 degrees < theta < 180 degrees, known to both players. Initially, Shan-Yu makes a paper triangle T with measurements of his choice. Then they repeatedly perform the following steps. If T has at least one angle measuring exactly theta, the game stops and Mulan wins. Otherwise, Mulan chooses a point P on the perimeter of T, different from its three vertices, and makes a straight cut from P to the opposite vertex of T, splitting it into two triangles. Shan-Yu discards one of the two triangles; the remaining triangle becomes the new T. For which real values of theta can Mulan guarantee victory in finitely many steps, no matter how Shan-Yu plays?
+
+SOLUTION:
+To determine the values of $\theta$ for which Mulan can guarantee victory, we analyze the game's dynamics and the set of "winning" triangles.
+
+**1. The Winning Set $W$ and the Set $S$**
+Let $W$ be the set of triangles from which Mulan can force a win. A triangle $T$ is in $W$ if:
+(i) $T$ has an angle exactly $\theta$, or
+(ii) There exists a cut $P$ such that both resulting triangles $T_1, T_2 \in W$.
+
+Let $S = \{ k\theta \mid k \in \mathbb{Z}, 0 < k\theta < 180^\circ \}$.
+If a triangle $T$ has an angle $\phi \in S$, we can show $T \in W$. If $\phi = \theta$, it's an immediate win. If $\phi = k\theta$ for $k > 1$, Mulan can cut the angle $\phi$ into $\theta$ and $(k-1)\theta$. Then $T_1$ has an angle $\theta$ (so $T_1 \in W$) and $T_2$ has an angle $(k-1)\theta$. By induction on $k$, $T_2 \in W$. Thus $T \in W$.
+
+**2. Sufficiency: $180^\circ/\theta = n$ for $n \in \{2, 3, \dots\}$**
+Suppose $180^\circ = n\theta$. We want to show any triangle $T$ is in $W$.
+- If $n=2$ ($\theta = 90^\circ$), Mulan can pick any vertex $A$ such that the altitude from $A$ falls inside $BC$. This cut produces two triangles, both with a $90^\circ$ angle. Mulan wins.
+- If $n \ge 3$, consider any triangle $T(A, B, C)$. Since $A+B+C = 180^\circ = n\theta$, at least one angle must be $\ge \theta$ (because if all $A, B, C < \theta$, then $180^\circ < 3\theta$, so $n < 3$).
+- If $T$ has an angle $A = \theta$, Mulan wins immediately.
+- If $T$ has an angle $A > \theta$, Mulan seeks a cut $\alpha$ such that $T_1(B, \alpha, 180-B-\alpha)$ and $T_2(C, A-\alpha, 180-C-A+\alpha)$ both contain angles in $S$.
+Pick $k \in \mathbb{Z}$ such that $C < k\theta < C+A$. Such a $k$ always exists because the interval $(C, C+A)$ has length $A > \theta$.
+Let $\alpha = 180^\circ - B - k\theta$. Since $B + C < 180^\circ$, the cut $\alpha$ is valid if $0 < \alpha < A$.
+$0 < 180^\circ - B - k\theta \iff k\theta < 180^\circ - B$
+$180^\circ - B - k\theta < A \iff 180^\circ - A - B < k\theta \iff C < k\theta$.
+Since we chose $k$ such that $C < k\theta < 180^\circ - B$, the cut is valid.
+The angles of $T_1$ are $\{B, \alpha, k\theta\}$, and the angles of $T_2$ are $\{C, A-\alpha, 180-C-A+\alpha\}$.
+$180-C-A+\alpha = 360^\circ - (A+B+C) - k\theta = 180^\circ - k\theta = (n-k)\theta$.
+Both $k\theta$ and $(n-k)\theta$ are in $S$, so $T_1, T_2 \in W$. Thus $T \in W$.
+
+**3. Necessity: $180^\circ/\theta$ is not an integer**
+If $180^\circ/\theta$ is not an integer, let $S = \{ k\theta \mid k \in \mathbb{Z}, 0 < k\theta < 180^\circ \}$.
+Shan-Yu can choose an initial triangle $T$ such that no angle is in $S$. For any cut $\alpha$ Mulan makes, she can create an angle in $S$ in at most one child unless:
+1. $\alpha \in S$ and $A-\alpha \in S \implies A \in S$.
+2. $\alpha \in S$ and $180-C-A+\alpha \in S \implies B \in S$.
+3. $180-B-\alpha \in S$ and $A-\alpha \in S \implies C \in S$.
+4. $180-B-\alpha = k\theta$ and $180-C-A+\alpha = m\theta \implies 180 = (k+m)\theta$.
+Since none of these conditions are met (as $A, B, C \notin S$ and $180/\theta \notin \mathbb{Z}$), Mulan cannot make both $T_1, T_2 \in W_S$ (where $W_S$ is the set of triangles with an angle in $S$). Thus Shan-Yu can always pick the child not in $W_S$, preventing Mulan from ever forcing a win.
+
+\boxed{\theta = \frac{180^\circ}{n} \text{ for } n \in \{2, 3, 4, \dots\}}
+
+ADDITIONAL MATERIALS:
+None
+
+
+Hard termination rule: Never repeat a completed round or restart the analysis. When the stated round budget is exhausted or the error list is stable, emit the requested final output immediately. Concision is part of the protocol; uncertainty must be recorded in the verdict rather than resolved by extending the loop.
+
+End with exactly two lines: FINAL VERDICT: CORRECT or INCORRECT, then FINAL_GRADE: N/7. Follow the scoring scale in the source request and never assign the disallowed score 5.

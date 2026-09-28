@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "36753d18d3d151e24d5f0959cb273275ce5f04a31a8d914d09cdb86a244feaa3",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "861c18188a5be788a212b15d5f2804d56484645d9f354a3107f48c712dad40de",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4e3128d88426cc66fb4dc7ea36bc8c10e549f2f127b2db0b7cc4456895e0057f",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "After correctly writing the two circumcentre equations, the submission gives an undefined and generally incorrect formula for O and never derives the required dot-product identity; it merely attributes it to “symmetry.” This is an unsupported central inference under Rule E.",
+    "summary": "The solution makes meaningful analytic progress: it correctly reduces OM=ON to a linear identity involving O, B, and C, obtains useful sine-law relations for the directions of K and L, and states the correct linear circumcentre equations. However, it does not perform the essential compatibility/elimination showing that the angle conditions force the required identity. The closing assertion that O lies on the perpendicular bisector of MN is essentially the desired conclusion rather than a proof. Thus Rule E caps the score at 3.",
+    "strengths": [
+      "Correctly derives that OM=ON is equivalent to O·(C-B)=(|C|^2-|B|^2)/4.",
+      "Correctly states 2O·k=|k|^2 and 2O·l=|l|^2 from the circumcentre condition.",
+      "The sine-law computations leading formally to cot(theta_K)=2cot(gamma)+cot(alpha) and cot(theta_L)=2cot(beta)+cot(alpha) provide relevant partial progress."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "No proof is supplied that the derived angle and length relations imply the required dot-product identity. The appeal to symmetry does not establish this highly nontrivial compatibility statement."
+      },
+      {
+        "severity": "substantial",
+        "description": "The displayed purported formula for O uses an undefined vector n-hat, has both terms in the same direction, and is not a valid general solution of the two circumcentre equations."
+      },
+      {
+        "severity": "substantial",
+        "description": "The final geometric description invokes an undefined point P and an unexplained coordinate component, so it cannot justify that O lies on the perpendicular bisector of MN."
+      },
+      {
+        "severity": "minor",
+        "description": "The intermediate tangent formulas divide by tangents without treating admissible right-angle cases, although the corresponding cotangent identities can be derived without those divisions."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:42:56.098402+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

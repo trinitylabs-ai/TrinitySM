@@ -1,0 +1,63 @@
+# Problem
+
+IMO 2026 Problem 4. Shan-Yu and Mulan are playing a game. Let theta be an angle with 0 degrees < theta < 180 degrees, known to both players. Initially, Shan-Yu makes a paper triangle T with measurements of his choice. Then they repeatedly perform the following steps. If T has at least one angle measuring exactly theta, the game stops and Mulan wins. Otherwise, Mulan chooses a point P on the perimeter of T, different from its three vertices, and makes a straight cut from P to the opposite vertex of T, splitting it into two triangles. Shan-Yu discards one of the two triangles; the remaining triangle becomes the new T. For which real values of theta can Mulan guarantee victory in finitely many steps, no matter how Shan-Yu plays?
+
+# Proof A
+
+1: We seek to determine all $\theta \in (0^\circ, 180^\circ)$ such that Mulan can guarantee victory in finitely many steps. Let $W = \{n\theta \mid n \in \mathbb{N}, n\theta < 180^\circ\}$ be the set of angles that are positive integer multiples of $\theta$.
+2: 
+3: First, we show that if a triangle $T$ has an angle $\phi \in W$, Mulan can force a win. If $\phi = \theta$, Mulan wins immediately. If $\phi = n\theta$ for $n > 1$, Mulan can cut the vertex with angle $\phi$ into two angles $\theta$ and $(n-1)\theta$. The resulting triangles $T_1$ and $T_2$ then have angles $\theta$ and $(n-1)\theta$ respectively. Regardless of which triangle Shan-Yu keeps, the new triangle possesses an angle in $W$ with a strictly smaller coefficient of $\theta$. Thus, the game must terminate in at most $n$ steps.
+4: 
+5: Next, we show that if $\theta = 180^\circ/k$ for some integer $k \ge 2$, Mulan can always force a win. Let the angles of $T$ be $A, B, C$. If any angle is in $W$, Mulan wins as shown above. Suppose no angle is in $W$. Mulan can win in one step if she can choose a vertex (say $A$) and a cut $\alpha \in (0, A)$ such that both resulting triangles $T_1$ (angles $\alpha, B, 180^\circ - B - \alpha$) and $T_2$ (angles $A-\alpha, C, B+\alpha$) have an angle in $W$.
+6: If Mulan picks $\alpha$ such that $B+\alpha = n\theta$ for some $n \in \{1, \dots, k-1\}$, then $T_2$ has angle $n\theta \in W$ and $T_1$ has angle $180^\circ - (B+\alpha) = 180^\circ - n\theta = (k-n)\theta \in W$. This is possible if there exists $n$ such that $B < n\theta < B+A$.
+7: The length of the interval $(B, B+A)$ is $A$. If $A > \theta$, the interval must contain a multiple of $\theta$.
+8: If $A, B, C \le \theta$, then $A+B+C \le 3\theta$. Since $A+B+C = 180^\circ = k\theta$, we have $k\theta \le 3\theta$, so $k \le 3$.
+9: If $k=3$, then $A=B=C=\theta$, which contradicts the assumption that no angle is in $W$.
+10: If $k=2$, then $\theta = 90^\circ$. Since no angle is in $W$, $A, B, C < 90^\circ$. Then $B < 90^\circ$ and $B+A = 180^\circ - C > 90^\circ$, so $n=1$ satisfies $B < 1\cdot 90^\circ < B+A$.
+11: Thus, for any $k \ge 2$, Mulan can force the game into $W$ in at most one step, and then win in finitely many steps.
+12: 
+13: Finally, we show that if $\theta \neq 180^\circ/k$ for any $k \in \mathbb{N}$, Shan-Yu can prevent Mulan from winning. Shan-Yu chooses an initial triangle $T$ such that none of its angles $A, B, C$ are in $W$. Since $W$ is a finite set, such a triangle always exists.
+14: Suppose $T$ has no angle in $W$. Mulan chooses a vertex (say $A$) and a cut $\alpha \in (0, A)$. The resulting triangles are $T_1$ (angles $\alpha, B, 180^\circ - B - \alpha$) and $T_2$ (angles $A-\alpha, C, B+\alpha$).
+15: Mulan wins if she can force both $T_1$ and $T_2$ to have an angle in $W$. Since $B, C \notin W$, $T_1$ has an angle in $W$ if and only if $\alpha \in W$ or $180^\circ - B - \alpha \in W$. Similarly, $T_2$ has an angle in $W$ if and only if $A-\alpha \in W$ or $B+\alpha \in W$.
+16: We check all possible pairs of conditions for both $T_1$ and $T_2$ to have an angle in $W$:
+17: 1. $\alpha = n\theta$ and $A-\alpha = m\theta \implies A = (n+m)\theta \in W$.
+18: 2. $\alpha = n\theta$ and $B+\alpha = m\theta \implies B = (m-n)\theta \in W$.
+19: 3. $180^\circ - B - \alpha = n\theta$ and $A-\alpha = m\theta \implies 180^\circ - B - A = (n-m)\theta \implies C = (n-m)\theta \in W$.
+20: 4. $180^\circ - B - \alpha = n\theta$ and $B+\alpha = m\theta \implies 180^\circ = (n+m)\theta$.
+21: Since $A, B, C \notin W$ and $180^\circ$ is not a multiple of $\theta$ (because $\theta \neq 180^\circ/k$), none of these conditions can be satisfied. Thus, for any cut Mulan makes, at least one of the resulting triangles must have no angle in $W$. Shan-Yu discards the other triangle, maintaining the "safe state" where $T$ has no angle in $W$. Consequently, Mulan can never produce a triangle with an angle $\theta$.
+22: 
+23: The values of $\theta$ for which Mulan can guarantee victory are $\theta = \frac{180^\circ}{k}$ for $k \in \{2, 3, 4, \dots\}$.
+
+# Proof B
+
+1: To determine for which real values of $\theta \in (0^\circ, 180^\circ)$ Mulan can guarantee victory, we analyze the conditions under which she can force an angle of exactly $\theta$ to appear in the triangle $T$.
+2: 
+3: Let the angles of the current triangle $T$ be $\alpha, \beta, \gamma$. Suppose Mulan cuts from vertex $B$ to a point $P$ on the opposite side $AC$. Let $\psi = \angle BPA$. The two resulting triangles $T_1$ and $T_2$ have angles:
+4: - $T_1: \{\alpha, \psi, 180^\circ - \alpha - \psi\}$
+5: - $T_2: \{\gamma, 180^\circ - \psi, \psi - \gamma\}$
+6: Since $P$ is on the segment $AC$ and different from the vertices, $\psi$ can be any value in the open interval $(\gamma, 180^\circ - \alpha)$. Since $\alpha + \beta + \gamma = 180^\circ$, this interval is $(\gamma, \beta + \gamma)$.
+7: 
+8: Let $W = \{k\theta \mid k \in \mathbb{Z}^+, k\theta < 180^\circ\}$ be the set of "winning angles". If $T$ contains an angle $\phi \in W$, Mulan can eventually force an angle $\theta$. Specifically, if $T$ has an angle $\phi = k\theta$ with $k > 1$, Mulan can cut from the vertex with angle $\phi$ such that the cut divides $\phi$ into $\theta$ and $(k-1)\theta$. The resulting triangles $T_1$ and $T_2$ will then contain angles $\theta$ and $(k-1)\theta$ respectively. Both are in $W$. No matter which triangle Shan-Yu discards, the new $T$ will have an angle in $W$ with a smaller multiplier. By induction, Mulan will force an angle $\theta$ in finitely many steps.
+9: 
+10: Now we determine when Mulan can force the game into $W$ if $T$ starts with no angles in $W$. Mulan can do this if she can choose a vertex and a cut angle $\psi$ such that both $T_1$ and $T_2$ have an angle in $W$. Since the original angles $\alpha, \beta, \gamma \notin W$, this requires:
+11: $(\psi \in W \text{ or } 180^\circ - \alpha - \psi \in W) \text{ AND } (180^\circ - \psi \in W \text{ or } \psi - \gamma \in W)$.
+12: 
+13: Case 1: $\theta = 180^\circ/n$ for some integer $n \geq 2$.
+14: In this case, $W = \{\theta, 2\theta, \dots, (n-1)\theta\}$, and $\phi \in W \iff 180^\circ - \phi \in W$.
+15: If $T$ has no angles in $W$, let its angles be $\alpha \leq \beta \leq \gamma$. Mulan cuts from the vertex with the smallest angle $\alpha$. The interval for $\psi$ is $(\beta, \gamma + \beta)$. The length of this interval is $\gamma \geq 60^\circ$.
+16: If $n=2$, $\theta = 90^\circ$. Since $T$ is not right-angled, $\beta < 90^\circ$ and $\gamma + \beta = 180^\circ - \alpha > 90^\circ$. Thus $\psi = 90^\circ \in (\beta, \gamma + \beta)$. Then $T_1$ has $\psi = 90^\circ$ and $T_2$ has $180^\circ - \psi = 90^\circ$.
+17: If $n \geq 3$, $\theta \leq 60^\circ$. Since the interval $(\beta, \gamma + \beta)$ has length $\gamma \geq 60^\circ \geq \theta$, it must contain a multiple of $\theta$ unless $\beta$ is a multiple of $\theta$. But $\beta \notin W$, so there exists $k\theta \in (\beta, \gamma + \beta)$. Picking $\psi = k\theta$ ensures $T_1$ has $\psi \in W$ and $T_2$ has $180^\circ - \psi = (n-k)\theta \in W$.
+18: In both cases, Mulan forces the game into $W$ and thus wins.
+19: 
+20: Case 2: $\theta \neq 180^\circ/n$ for any integer $n \geq 2$.
+21: If $\theta \neq 180^\circ/n$, then for any $\psi \in W$, $180^\circ - \psi \notin W$.
+22: Suppose $T$ has no angles in $W$. For any cut $\psi$, Mulan wins if:
+23: $(\psi \in W \lor 180^\circ - \alpha - \psi \in W) \land (180^\circ - \psi \in W \lor \psi - \gamma \in W)$.
+24: We check the four possible combinations:
+25: 1. $\psi \in W$ and $180^\circ - \psi \in W$: Impossible as $\theta \neq 180^\circ/n$.
+26: 2. $\psi \in W$ and $\psi - \gamma \in W$: This implies $\gamma = \psi - (\psi - \gamma) \in W$, which contradicts $\gamma \notin W$.
+27: 3. $180^\circ - \alpha - \psi \in W$ and $180^\circ - \psi \in W$: This implies $\alpha = (180^\circ - \psi) - (180^\circ - \alpha - \psi) \in W$, which contradicts $\alpha \notin W$.
+28: 4. $180^\circ - \alpha - \psi \in W$ and $\psi - \gamma \in W$: This implies $180^\circ - \alpha - \gamma = (180^\circ - \alpha - \psi) + (\psi - \gamma) \in W$. Since $180^\circ - \alpha - \gamma = \beta$, this contradicts $\beta \notin W$.
+29: Thus, if $T$ has no angles in $W$, Mulan cannot force both resulting triangles to have an angle in $W$. Shan-Yu can always choose the triangle that does not contain an angle in $W$. Since Shan-Yu can choose an initial $T$ with no angles in $W$ (as $W$ is finite), Mulan cannot guarantee victory.
+30: 
+31: Mulan can guarantee victory if and only if $\theta = 180^\circ/n$ for some integer $n \in \{2, 3, 4, \dots\}$.

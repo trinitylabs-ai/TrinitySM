@@ -1,0 +1,70 @@
+{
+  "tasks": [
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t07_r01",
+      "proof_path": "proofs/PB-Advanced-017/t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "b918d6c5ad44757bde0ae77b8dabfbd03ef827d2aabff3ee01f47ba53066bf04",
+        "reference_sha256": "d83ac43e47551005bae8e8a8db4e644ee2ef7298fff4f215508cfba226863ff0",
+        "guidelines_sha256": "385d2fc54ca6c2baa7a3c090c9531a94e8002290b11bfdee02af854a7d10c7ec",
+        "proof_sha256": "dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate_id": "t10_r01",
+      "proof_path": "proofs/PB-Advanced-017/t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "b918d6c5ad44757bde0ae77b8dabfbd03ef827d2aabff3ee01f47ba53066bf04",
+        "reference_sha256": "d83ac43e47551005bae8e8a8db4e644ee2ef7298fff4f215508cfba226863ff0",
+        "guidelines_sha256": "385d2fc54ca6c2baa7a3c090c9531a94e8002290b11bfdee02af854a7d10c7ec",
+        "proof_sha256": "51fe02e23c9b474ea6662f7dedd0f2745874dc9146a1f9fa504da0c886aca20a"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t07_r01",
+      "proof_path": "proofs/PB-Advanced-018/t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "007871958e7b6a1efa382835e524f147f4e612c2a81bb09dba2d6c1dcb463ced",
+        "reference_sha256": "cea0c2df075ed8246adc37d8bf574440c966b69f8b36db62bb793248d83659b7",
+        "guidelines_sha256": "7ff2a144547282ce9980e4463d7b1436afbd43b3bc5b6034f5c47fcfc0aaec0a",
+        "proof_sha256": "26623a7a4d3065f132bdd8ca551250cb737a25f27895feec3a3834cbd0900987"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t07_r02",
+      "proof_path": "proofs/PB-Advanced-018/t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "007871958e7b6a1efa382835e524f147f4e612c2a81bb09dba2d6c1dcb463ced",
+        "reference_sha256": "cea0c2df075ed8246adc37d8bf574440c966b69f8b36db62bb793248d83659b7",
+        "guidelines_sha256": "7ff2a144547282ce9980e4463d7b1436afbd43b3bc5b6034f5c47fcfc0aaec0a",
+        "proof_sha256": "afe09e40df76f541708914dcbeb3c8a7410d6a5440a70392d459ad662418de2b"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t10_r01",
+      "proof_path": "proofs/PB-Advanced-018/t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "007871958e7b6a1efa382835e524f147f4e612c2a81bb09dba2d6c1dcb463ced",
+        "reference_sha256": "cea0c2df075ed8246adc37d8bf574440c966b69f8b36db62bb793248d83659b7",
+        "guidelines_sha256": "7ff2a144547282ce9980e4463d7b1436afbd43b3bc5b6034f5c47fcfc0aaec0a",
+        "proof_sha256": "d0011383f15194dc6914edbe4c75f2dc25235a9ffd5da06f40e95eaf54a133c6"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate_id": "t10_r02",
+      "proof_path": "proofs/PB-Advanced-018/t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "007871958e7b6a1efa382835e524f147f4e612c2a81bb09dba2d6c1dcb463ced",
+        "reference_sha256": "cea0c2df075ed8246adc37d8bf574440c966b69f8b36db62bb793248d83659b7",
+        "guidelines_sha256": "7ff2a144547282ce9980e4463d7b1436afbd43b3bc5b6034f5c47fcfc0aaec0a",
+        "proof_sha256": "f2877495cf0241f57dcaa993162125dc2555be7540671a600a391889d2884f11"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof correctly simplifies the sequence to $a_n = \gcd(x^n+y, y^n+x)$ for $x \neq y$ and identifies $(1,1)$ as a solution for $x=y$. It establishes that if the limit $L$ exists, then $L' = L/\gcd(x,y)$ must divide 2.
+Claim gap: The derivation that $L' \mid 1-u$ and $L' \mid 1-v$ (Lines 26-28) contains a significant algebraic error. It claims $L'$ divides $g^n u^{n+1} + gv$, but $L'$ is only known to divide $g^n u^{n+1} + v$ (from the $n+1$ term of the gcd). The term $g^n u^{n+1} + gv$ is not a multiple of $L'$ unless $L' \mid v(g-1)$, which is not established at that point. Consequently, the deduction that $L' \mid 1-u$ is unjustified. The subsequent contradiction arguments relying on $L' \mid 1-u$ are therefore invalid.
+Qualifications and supplied repairs: To repair the proof, one must correctly derive that $L' \mid g-1$ first (by considering $g(g^n u^{n+1}+v) - (g^{n+1}u^{n+1}+gv)$? No, simpler: $L' \mid g^{n-1}u^n+v$ and $L' \mid g^n u^{n+1}+v \implies L' \mid g(g^{n-1}u^n+v) - u(g^n u^{n+1}+v)$? No. The standard repair involves showing $L' \mid g-1$ and $L' \mid u-1$ via careful linear combinations, which Proof A skips or botches.
+Decisive checks: Line 27 assumes $L' \mid (g^n u^{n+1} + gv)$. This is false in general. For example, if $g=2, u=1, v=2$, $L'$ might be 1 or 2. If $L'=1$, it divides everything. If $L'=2$, $g^n u^{n+1} + v = 2^n(1) + 2$ is even, so $L' \mid$ term. But the proof structure implies this holds for any $L'$ dividing the gcd terms, which is not shown. The logic is circular or missing a step.
+
+## Proof B
+Established theorem: The proof correctly simplifies the sequence and handles the $x=y$ case. It correctly analyzes the $x=1$ or $y=1$ cases, showing oscillation. For $x,y > 1$, it decomposes the limit $L$ into parts coprime to $x$ and parts sharing factors with $x$. It correctly deduces $L \mid 2g$. It then uses a clever construction with $P = ag^2b + 1$ to show that if the limit exists, it leads to a contradiction unless $a=b=1$ (which implies $x=y$, already handled) or specific parity conditions that also lead to contradictions.
+Claim gap: NONE supported by checks. The argument regarding $P = ag^2b + 1$ is rigorous. It shows that for any prime $p \mid P$, $p$ divides $b_n$ for infinitely many $n$. If the limit $L'$ exists, $p \mid L'$. Since $L' \in \{1, 2\}$, $P$ can only have prime factor 2. The analysis of $P=2^m$ leads to $a=g=b=1$, contradicting $a \neq b$. This covers all cases for $x \neq y$.
+Qualifications and supplied repairs: NONE. The steps are logically sound and algebraically verified.
+Decisive checks: Line 19-22 correctly applies Fermat's Little Theorem to show $p \mid b_n$ for a specific arithmetic progression of $n$. Line 25-26 correctly analyzes the modulo 8 constraints for $P=2^m$, leading to the unique solution $ag^2b=1$, which is impossible for distinct positive integers $a,b$.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete and rigorous derivation. Proof A contains a critical algebraic error in Lines 26-28 where it incorrectly assumes a term is divisible by the limit divisor without justification, rendering its main contradiction argument invalid. Proof B's use of the auxiliary number $P$ and modular arithmetic is correct and successfully eliminates all non-equal pairs.

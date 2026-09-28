@@ -1,0 +1,846 @@
+{
+  "run_id": "basic_p008_t10_r01_raw_roots_v344_20260916T155741Z",
+  "source_score": 1,
+  "new_score": null,
+  "result": {
+    "schema": "generic-checked-appendix-proof-harness-v1",
+    "state": "completed",
+    "stage": "proof_synthesis",
+    "samples": [
+      {
+        "sample": 1,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_01",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 3,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_03",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 2,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_02",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 5,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_05",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 7,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_07",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 6,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_06",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 4,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_04",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "superseded_by_verified_candidate"
+            }
+          }
+        ],
+        "exact_verified": true
+      },
+      {
+        "sample": 8,
+        "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08",
+        "state": "completed",
+        "route": "real_root_classification",
+        "cycles": [
+          {
+            "cycle": 1,
+            "stage": "certificate_verified",
+            "exact_verified": true,
+            "root_count": 3,
+            "synthesis": {
+              "state": "completed",
+              "synthesis": {
+                "schema": "v0287-modular-exact-evidence-proof-synthesis-v1",
+                "harness_version": "0.3.344",
+                "state": "completed",
+                "adapter_id": "generic_checked_appendix",
+                "problem_id": "PB-Basic-008",
+                "source_proof_sha256": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+                "codex_model_calls": 0,
+                "gemma_model": "Qwen/Qwen3.6-27B",
+                "proof_rewriter_model": "Qwen/Qwen3.6-27B",
+                "proof_auditor_model": "Qwen/Qwen3.6-27B",
+                "qwen_model": "Qwen/Qwen3.6-27B",
+                "stage_order": [
+                  "evidence_provider_materialization",
+                  "model_whole_proof_rewrite",
+                  "deterministic_contract_lint",
+                  "qwen_whole_proof_audit"
+                ],
+                "protocol_lock": {
+                  "schema": "v0287-modular-exact-proof-protocol-lock-v1",
+                  "operator_interventions": 0,
+                  "manual_candidate_selection": false,
+                  "decision_authority": "qwen_proof_audit_pass_only",
+                  "selection_policy": "first_passing_cycle",
+                  "failure_policy": "fail_closed_after_1_automatic_cycles",
+                  "proof_candidate_policy": "one_model_candidate_per_cycle",
+                  "proof_rewriter_model": "Qwen/Qwen3.6-27B",
+                  "proof_auditor_model": "Qwen/Qwen3.6-27B",
+                  "audit_context_policy": "untrusted_original_source_and_current_replacement",
+                  "audit_repair_policy": "qwen_restoration_feedback_then_model_rewrite_and_reaudit",
+                  "tool_purpose_supplied": true,
+                  "gap_closure_explanation_required": true,
+                  "explicit_update_source_policy": "unique_whitespace_then_paired_dollar_quote_v2",
+                  "connection_derivation_order": "update_block_then_derive_surrounding_connections",
+                  "current_draft_repair_policy": "unique-current-draft-quotation-v1",
+                  "repair_targeting_code_sha256": "6e174a6c954bf6419bcf4d1eb77f86c6b88193fbebb974107cb6e72bba0318d3",
+                  "initial_repair_proof_sha256": null,
+                  "initial_repair_audit_sha256": null,
+                  "token_caps": [
+                    32768,
+                    49152,
+                    65536
+                  ],
+                  "budget_forcing": "mandatory_for_gemma_and_qwen",
+                  "adapter_id": "generic_checked_appendix",
+                  "task": {
+                    "problem_id": "PB-Basic-008",
+                    "theorem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+                    "source_proof_sha256": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+                    "additional_documents_sha256": {
+                      "current_main_proof_to_revise.md": "5d1a0822cd4c568aa2ff657d2578251aac415e8a9e9b3374ad5ed3c63cc0caa7",
+                      "tool_detection.md": "841e2983cd75e3240c986b7dc5f434b2b1dca82eded1c5f2ee9c7344d0403a37",
+                      "tool_matcher.md": "840a573c520d67db6e1915a4ec43f83c325d758f35de260b9fcf85ab85994b26"
+                    }
+                  },
+                  "provider_id": "checked_real_root_classification_v1",
+                  "evidence_verdict": "VERIFIED_SUPPORT",
+                  "evidence_sha256": "59ea6eb73a0156b83fffc4e5bbce264e8ff98176fdbae758f48362337fdc6ae4",
+                  "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+                  "appendix_in_rewriter_prompt": false,
+                  "verification_sha256": "d7f22710a5fa2a5750e3d12cf26eb8e8b1f5216285f63e090b8c77fba5f13b71",
+                  "contract_sha256": "ab5e9bff419b111b050cc4e860652d82dda8c34c49bbbe385176da782f448098",
+                  "rewriter_system_sha256": "111aa66839ce38dfd90266e2a0cf5aea6bf4327a1dd63ba4c5d90e2a10a51b3f",
+                  "auditor_system_sha256": "e1cdaaac142e5b79ee62362784ff6e89ab6b4d7fc5bf75915982e995ed97c423",
+                  "core_prompts_sha256": "93c571eb42803514ae6015ac134d13767e54d895edde07749ecc867fd3d81706",
+                  "tool_purpose_policy_sha256": "e690df3a1018c32592e3ecd8670a801fdaec0690c8af70dbc72aee61d26c7ea4",
+                  "core_validation_sha256": "233770e9e7bc15c2eae38757a89529237d18cc1c214d6e4266f9d25c5122abd9"
+                },
+                "operator_interventions": 0,
+                "selected_cycle": 1,
+                "selection_reason": "first_cycle_with_qwen_proof_audit_pass",
+                "proof_audit_passed": true,
+                "terminal_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/terminal_proof.md",
+                "terminal_proof_sha256": "b036ba9eb6a05d5d1684f4993a40a95b13c3a7c6f5194f2c3156b6fa910452a7",
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "rewrite_call": {
+                      "attempt": 1,
+                      "cap": 32768,
+                      "parser_feedback_supplied": false,
+                      "parser_feedback_count": 0,
+                      "metadata": {
+                        "stage": "modular_exact_evidence_whole_proof_rewrite",
+                        "started_at": "2026-09-16T16:07:32.925477+00:00",
+                        "completed_at": "2026-09-16T16:08:18.583578+00:00",
+                        "latency_seconds": 45.65810460498324,
+                        "transport": "openai-compatible-loopback-http",
+                        "endpoint": "http://127.0.0.1:8027/v1",
+                        "model": "Qwen/Qwen3.6-27B",
+                        "prompt_sha256": "2cccd7a588fbae05ed5208c8a7b66205803d334aafd62efd36ca95a1002f83b5",
+                        "user_prompt_sha256": "1f496fb1a40666d57e493c464202fcadd88015b2fb2339a4711629e1626a1b74",
+                        "request_sha256": "b5001ad710486abba881fd018dded3929425702bbf78d6c9d8dc9e70e8c0b1fc",
+                        "response_id": "chatcmpl-8106cac94dc57f55",
+                        "finish_reason": "stop",
+                        "usage": {
+                          "prompt_tokens": 14531,
+                          "total_tokens": 18187,
+                          "completion_tokens": 3656,
+                          "prompt_tokens_details": null
+                        },
+                        "config": {
+                          "max_tokens": 32768,
+                          "temperature": 0.2,
+                          "top_p": 0.95,
+                          "top_k": 64,
+                          "min_p": null,
+                          "presence_penalty": null,
+                          "repetition_penalty": null,
+                          "repetition_detection": null,
+                          "seed": 3240302138,
+                          "thinking_token_budget": 16384,
+                          "reasoning_effort": null,
+                          "thinking_enabled": true,
+                          "response_format": null,
+                          "structured_outputs": null,
+                          "timeout_seconds": null
+                        },
+                        "message_roles": [
+                          "system",
+                          "user",
+                          "assistant",
+                          "user"
+                        ],
+                        "continuation": true,
+                        "prior_generation_sha256": "16a1818e80899a92ca66cc4e4269eaaceeae51b257bb52a18067bee4fc3f3a27",
+                        "system_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.prompt.txt",
+                        "user_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.user_prompt.txt",
+                        "thinking_enabled": true,
+                        "response_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.raw_response.json",
+                        "reasoning_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.reasoning.txt",
+                        "v0257_budget_forcing": {
+                          "schema": "cognitive-well-v0257-all-call-budget-forcing-event-v1",
+                          "policy": "mandatory_one_semantic_continuation_full_replacement",
+                          "stage": "modular_exact_evidence_whole_proof_rewrite",
+                          "model": "Qwen/Qwen3.6-27B",
+                          "structured": false,
+                          "cue": "Wait. Continue from the viable intermediate reasoning above. Recheck the original task, use the strongest intermediate result to bridge the major remaining gap, and emit one complete replacement response in the original required format. Do not mention this instruction or the earlier draft.",
+                          "cue_sha256": "b93da59bebcbff0539a3cbd9067355da9496d163eabe1eace83e6eecc6264ba2",
+                          "primary_error_recovered": null,
+                          "primary_finish_reason": "stop",
+                          "forced_finish_reason": "stop",
+                          "primary_temperature": 0.2,
+                          "forced_temperature": 0.2,
+                          "raw_temperature_transition_applied": false,
+                          "primary_text_sha256": "eccc06fb46e3dcf7a9bd707bc6f92d296cc455a4db756266817cf5501aa34efe",
+                          "primary_reasoning_sha256": "500a9ecc4995963bfe2562aa8313b79f7b4cea45d3ddbd66f83c569527fbf4ef",
+                          "forced_text_sha256": "eccc06fb46e3dcf7a9bd707bc6f92d296cc455a4db756266817cf5501aa34efe",
+                          "forced_reasoning_sha256": "6d59e4e2f5cfe2be9372c4397f6ac7f8667e9ff3daf01b07ee5811f20c83d9a8",
+                          "canonical_artifacts_are_forced_response": true
+                        }
+                      },
+                      "request_timeout_sec": null
+                    },
+                    "lint": {
+                      "schema": "v0287-modular-proof-contract-lint-v1",
+                      "passed": true,
+                      "provider_id": "checked_real_root_classification_v1",
+                      "verdict": "VERIFIED_SUPPORT",
+                      "marker_count": 1,
+                      "evidence_count": 2,
+                      "appendix_count": 1,
+                      "literal_requirement_count": 0,
+                      "proof_characters": 9775
+                    },
+                    "audit": {
+                      "decision": "PASS",
+                      "checks": {
+                        "The original theorem is fully answered": true,
+                        "The detected load-bearing gap is actually bridged": true,
+                        "The exact result is used with the correct logical polarity": true,
+                        "All formal variables and equations are derived in the proof": true,
+                        "The formal target is explicitly translated back to the theorem quantity": true,
+                        "Every cleared or cancelled factor is justified": true,
+                        "Decisive exact certificate data remains directly inspectable": true,
+                        "All domain, denominator, equality, and branch cases are handled": true,
+                        "No process or tool meta-language appears": true
+                      },
+                      "issues": [],
+                      "passed": true,
+                      "gap_closure": {
+                        "Original gap": "Source asserted uniqueness of $x=1/\\sqrt{3}$ without root classification or extremum verification.",
+                        "Formalization link": "Lemma matches the derived $g'(x)$ expression to certify root locations and sign changes on $(0, 1/\\sqrt{2})$.",
+                        "Certified result": "Lemma identifies exactly three roots, classifying $x_0=1/\\sqrt{3}$ as the sole local minimum via $-1 \\to 1$ sign change.",
+                        "Return to proof": "Proof uses the unique interior minimum and positive endpoints to conclude global minimum is $0$, proving the inequality."
+                      }
+                    },
+                    "audit_call": {
+                      "attempt": 1,
+                      "cap": 32768,
+                      "parser_feedback_supplied": false,
+                      "parser_feedback_count": 0,
+                      "metadata": {
+                        "stage": "modular_exact_evidence_whole_proof_audit",
+                        "started_at": "2026-09-16T16:09:16.455845+00:00",
+                        "completed_at": "2026-09-16T16:09:26.707175+00:00",
+                        "latency_seconds": 10.251331517996732,
+                        "transport": "openai-compatible-loopback-http",
+                        "endpoint": "http://127.0.0.1:8027/v1",
+                        "model": "Qwen/Qwen3.6-27B",
+                        "prompt_sha256": "bfcf8089f840416c98fc82a233a16dbc09b82ccdc30922bdd53fe46d0cd557c2",
+                        "user_prompt_sha256": "765298461ee9e759a148feb503edf085399025789b345a4917fb98c4af326cfa",
+                        "request_sha256": "e039af0e6b7912ee694481467ceac25804aa35b1a0648e1c5669f0af149206cf",
+                        "response_id": "chatcmpl-ab397fac5fffd2f2",
+                        "finish_reason": "stop",
+                        "usage": {
+                          "prompt_tokens": 14402,
+                          "total_tokens": 14985,
+                          "completion_tokens": 583,
+                          "prompt_tokens_details": null
+                        },
+                        "config": {
+                          "max_tokens": 32768,
+                          "temperature": 0.1,
+                          "top_p": 0.95,
+                          "top_k": 64,
+                          "min_p": null,
+                          "presence_penalty": null,
+                          "repetition_penalty": null,
+                          "repetition_detection": null,
+                          "seed": 3145686216,
+                          "thinking_token_budget": 16384,
+                          "reasoning_effort": null,
+                          "thinking_enabled": true,
+                          "response_format": null,
+                          "structured_outputs": null,
+                          "timeout_seconds": null
+                        },
+                        "message_roles": [
+                          "system",
+                          "user",
+                          "assistant",
+                          "user"
+                        ],
+                        "continuation": true,
+                        "prior_generation_sha256": "7371e60e3cc7b7977dc415b27e15602df6f4357d102cb4d406b53cce4c6248d5",
+                        "system_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.prompt.txt",
+                        "user_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.user_prompt.txt",
+                        "thinking_enabled": true,
+                        "response_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.raw_response.json",
+                        "reasoning_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.reasoning.txt",
+                        "v0257_budget_forcing": {
+                          "schema": "cognitive-well-v0257-all-call-budget-forcing-event-v1",
+                          "policy": "mandatory_one_semantic_continuation_full_replacement",
+                          "stage": "modular_exact_evidence_whole_proof_audit",
+                          "model": "Qwen/Qwen3.6-27B",
+                          "structured": false,
+                          "cue": "Wait. Continue from the viable intermediate reasoning above. Recheck the original task, use the strongest intermediate result to bridge the major remaining gap, and emit one complete replacement response in the original required format. Do not mention this instruction or the earlier draft.",
+                          "cue_sha256": "b93da59bebcbff0539a3cbd9067355da9496d163eabe1eace83e6eecc6264ba2",
+                          "primary_error_recovered": null,
+                          "primary_finish_reason": "stop",
+                          "forced_finish_reason": "stop",
+                          "primary_temperature": 0.1,
+                          "forced_temperature": 0.1,
+                          "raw_temperature_transition_applied": false,
+                          "primary_text_sha256": "f43a2d27faeac0a0a88ee945eb7af25f5681676cdf7c11f3c8dbd40e0b38abae",
+                          "primary_reasoning_sha256": "1e3685a1577d0bb2dc2d6bb5b5376525747083feeb6bba307aeeb212cfc53b04",
+                          "forced_text_sha256": "f43a2d27faeac0a0a88ee945eb7af25f5681676cdf7c11f3c8dbd40e0b38abae",
+                          "forced_reasoning_sha256": "43198ed84e8f82c8863817d1e00248eefc4d15ddfddc3127bb46de5806f32065",
+                          "canonical_artifacts_are_forced_response": true
+                        }
+                      },
+                      "request_timeout_sec": null
+                    },
+                    "passed": true
+                  }
+                ],
+                "final_qwen_revision": {
+                  "policy": "checked_appendix_final_qwen_revision_v1",
+                  "state": "completed",
+                  "max_revision_cycles": 1,
+                  "input_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/terminal_proof.md",
+                  "input_proof_sha256": "308338be416451202ffda66cd14c5d906bac3af2705fdece0c05005defa9f963",
+                  "current_main_proof_sha256": "d3f9e890d9d57285ca8aeee0da749dd9efc54e36003af278852617de10185266",
+                  "current_main_proof_characters": 4553,
+                  "revision_document_sha256": "5d1a0822cd4c568aa2ff657d2578251aac415e8a9e9b3374ad5ed3c63cc0caa7",
+                  "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+                  "appendix_in_rewriter_prompt": false,
+                  "supply_prior_grading": false,
+                  "supply_prior_proof_audit": false,
+                  "new_formalization_calls": 0,
+                  "new_singular_calls": 0,
+                  "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision",
+                  "writer_model": "Qwen/Qwen3.6-27B",
+                  "writer_temperature": 0.2,
+                  "auditor_model": "Qwen/Qwen3.6-27B",
+                  "auditor_temperature": 0.1,
+                  "master_seed": 2397481260,
+                  "mandatory_budget_forcing": true,
+                  "request_timeout_seconds": null,
+                  "proof_audit_passed": true,
+                  "terminal_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/terminal_proof.md",
+                  "terminal_proof_sha256": "b036ba9eb6a05d5d1684f4993a40a95b13c3a7c6f5194f2c3156b6fa910452a7"
+                }
+              },
+              "budget_forcing": [
+                {
+                  "phase": "initial_rewrite",
+                  "cycle": 1,
+                  "rewrite_budget_forcing_sha256": "61bb5e75b93bfde02954c969b9bba6c8fe182e5641299599f122265e28a46717",
+                  "audit_budget_forcing_sha256": "c23faaf38e90b00f48f20f5011cc96a07de5de05d341b4ea4381ac0df387aa35"
+                },
+                {
+                  "phase": "final_qwen_revision",
+                  "cycle": 1,
+                  "rewrite_budget_forcing_sha256": "808702b720c3128e507b51ddfd73364712a016f663c1383f6d6dfb58508dad00",
+                  "audit_budget_forcing_sha256": "e052447a8a2b57e19e2fde21efe016125240ad2d4318a17f20299d4f8dc8ebbd"
+                }
+              ],
+              "initial_synthesis_result": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/result.json"
+            }
+          }
+        ],
+        "exact_verified": true
+      }
+    ],
+    "acquisition": {
+      "decision": "CALL_TOOL",
+      "record": {
+        "decision": "CALL_TOOL",
+        "operation": "real_root_classification",
+        "claim": "The complete set of real roots of $f'(x) = 2 - \\frac{2x}{\\sqrt{1-2x^2}} - 12\\sqrt{3}x(1-3x^2) = 0$ within $(0, 1/\\sqrt{2})$, along with the second-derivative test or sign-change analysis classifying each root as a local minimum or maximum.",
+        "fit_rationale": "The desired exact fact requires finding all real roots of a univariate expression containing a square root on a specified finite interval, and classifying each root as a local minimum or maximum. The `real_root_classification` operation is explicitly designed to compute complete real-root sets and classify stationary points for exact one-variable rational or single-square-root expressions on finite intervals, directly fulfilling the certification requirement without numerical approximation.",
+        "call_requested": true,
+        "normalized_markdown": "# Decision\n\nCALL_TOOL\n\n# Operation\n\nreal_root_classification\n\n# Immutable Claim\n\nThe complete set of real roots of $f'(x) = 2 - \\frac{2x}{\\sqrt{1-2x^2}} - 12\\sqrt{3}x(1-3x^2) = 0$ within $(0, 1/\\sqrt{2})$, along with the second-derivative test or sign-change analysis classifying each root as a local minimum or maximum.\n\n# Fit Rationale\n\nThe desired exact fact requires finding all real roots of a univariate expression containing a square root on a specified finite interval, and classifying each root as a local minimum or maximum. The `real_root_classification` operation is explicitly designed to compute complete real-root sets and classify stationary points for exact one-variable rational or single-square-root expressions on finite intervals, directly fulfilling the certification requirement without numerical approximation.",
+        "deterministic_normalization": {
+          "schema": "cognitive-well-v0274-matcher-normalization-v1",
+          "applied": false,
+          "before_sha256": "840a573c520d67db6e1915a4ec43f83c325d758f35de260b9fcf85ab85994b26",
+          "after_sha256": "840a573c520d67db6e1915a4ec43f83c325d758f35de260b9fcf85ab85994b26",
+          "replacements": {
+            "no_tool_operation_placeholders": 0,
+            "no_tool_claim_placeholders": 0,
+            "operation_decision_aliases": 0,
+            "canonical_container_renderings": 0
+          },
+          "applied_rewrite_kinds": [],
+          "allowed_rewrites": [
+            "when Decision is exactly NO_TOOL: Operation -> none",
+            "when Decision is exactly NO_TOOL: Immutable Claim -> NONE",
+            "when Decision exactly equals the same valid non-none allowlisted Operation and Immutable Claim is non-NONE: Decision -> CALL_TOOL",
+            "canonical matcher Markdown headings/container rendering"
+          ]
+        }
+      }
+    },
+    "selected": {
+      "request_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/tools",
+      "state": "completed",
+      "result": {
+        "state": "completed",
+        "synthesis": {
+          "schema": "v0287-modular-exact-evidence-proof-synthesis-v1",
+          "harness_version": "0.3.344",
+          "state": "completed",
+          "adapter_id": "generic_checked_appendix",
+          "problem_id": "PB-Basic-008",
+          "source_proof_sha256": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+          "codex_model_calls": 0,
+          "gemma_model": "Qwen/Qwen3.6-27B",
+          "proof_rewriter_model": "Qwen/Qwen3.6-27B",
+          "proof_auditor_model": "Qwen/Qwen3.6-27B",
+          "qwen_model": "Qwen/Qwen3.6-27B",
+          "stage_order": [
+            "evidence_provider_materialization",
+            "model_whole_proof_rewrite",
+            "deterministic_contract_lint",
+            "qwen_whole_proof_audit"
+          ],
+          "protocol_lock": {
+            "schema": "v0287-modular-exact-proof-protocol-lock-v1",
+            "operator_interventions": 0,
+            "manual_candidate_selection": false,
+            "decision_authority": "qwen_proof_audit_pass_only",
+            "selection_policy": "first_passing_cycle",
+            "failure_policy": "fail_closed_after_1_automatic_cycles",
+            "proof_candidate_policy": "one_model_candidate_per_cycle",
+            "proof_rewriter_model": "Qwen/Qwen3.6-27B",
+            "proof_auditor_model": "Qwen/Qwen3.6-27B",
+            "audit_context_policy": "untrusted_original_source_and_current_replacement",
+            "audit_repair_policy": "qwen_restoration_feedback_then_model_rewrite_and_reaudit",
+            "tool_purpose_supplied": true,
+            "gap_closure_explanation_required": true,
+            "explicit_update_source_policy": "unique_whitespace_then_paired_dollar_quote_v2",
+            "connection_derivation_order": "update_block_then_derive_surrounding_connections",
+            "current_draft_repair_policy": "unique-current-draft-quotation-v1",
+            "repair_targeting_code_sha256": "6e174a6c954bf6419bcf4d1eb77f86c6b88193fbebb974107cb6e72bba0318d3",
+            "initial_repair_proof_sha256": null,
+            "initial_repair_audit_sha256": null,
+            "token_caps": [
+              32768,
+              49152,
+              65536
+            ],
+            "budget_forcing": "mandatory_for_gemma_and_qwen",
+            "adapter_id": "generic_checked_appendix",
+            "task": {
+              "problem_id": "PB-Basic-008",
+              "theorem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+              "source_proof_sha256": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+              "additional_documents_sha256": {
+                "current_main_proof_to_revise.md": "5d1a0822cd4c568aa2ff657d2578251aac415e8a9e9b3374ad5ed3c63cc0caa7",
+                "tool_detection.md": "841e2983cd75e3240c986b7dc5f434b2b1dca82eded1c5f2ee9c7344d0403a37",
+                "tool_matcher.md": "840a573c520d67db6e1915a4ec43f83c325d758f35de260b9fcf85ab85994b26"
+              }
+            },
+            "provider_id": "checked_real_root_classification_v1",
+            "evidence_verdict": "VERIFIED_SUPPORT",
+            "evidence_sha256": "59ea6eb73a0156b83fffc4e5bbce264e8ff98176fdbae758f48362337fdc6ae4",
+            "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+            "appendix_in_rewriter_prompt": false,
+            "verification_sha256": "d7f22710a5fa2a5750e3d12cf26eb8e8b1f5216285f63e090b8c77fba5f13b71",
+            "contract_sha256": "ab5e9bff419b111b050cc4e860652d82dda8c34c49bbbe385176da782f448098",
+            "rewriter_system_sha256": "111aa66839ce38dfd90266e2a0cf5aea6bf4327a1dd63ba4c5d90e2a10a51b3f",
+            "auditor_system_sha256": "e1cdaaac142e5b79ee62362784ff6e89ab6b4d7fc5bf75915982e995ed97c423",
+            "core_prompts_sha256": "93c571eb42803514ae6015ac134d13767e54d895edde07749ecc867fd3d81706",
+            "tool_purpose_policy_sha256": "e690df3a1018c32592e3ecd8670a801fdaec0690c8af70dbc72aee61d26c7ea4",
+            "core_validation_sha256": "233770e9e7bc15c2eae38757a89529237d18cc1c214d6e4266f9d25c5122abd9"
+          },
+          "operator_interventions": 0,
+          "selected_cycle": 1,
+          "selection_reason": "first_cycle_with_qwen_proof_audit_pass",
+          "proof_audit_passed": true,
+          "terminal_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/terminal_proof.md",
+          "terminal_proof_sha256": "b036ba9eb6a05d5d1684f4993a40a95b13c3a7c6f5194f2c3156b6fa910452a7",
+          "cycles": [
+            {
+              "cycle": 1,
+              "rewrite_call": {
+                "attempt": 1,
+                "cap": 32768,
+                "parser_feedback_supplied": false,
+                "parser_feedback_count": 0,
+                "metadata": {
+                  "stage": "modular_exact_evidence_whole_proof_rewrite",
+                  "started_at": "2026-09-16T16:07:32.925477+00:00",
+                  "completed_at": "2026-09-16T16:08:18.583578+00:00",
+                  "latency_seconds": 45.65810460498324,
+                  "transport": "openai-compatible-loopback-http",
+                  "endpoint": "http://127.0.0.1:8027/v1",
+                  "model": "Qwen/Qwen3.6-27B",
+                  "prompt_sha256": "2cccd7a588fbae05ed5208c8a7b66205803d334aafd62efd36ca95a1002f83b5",
+                  "user_prompt_sha256": "1f496fb1a40666d57e493c464202fcadd88015b2fb2339a4711629e1626a1b74",
+                  "request_sha256": "b5001ad710486abba881fd018dded3929425702bbf78d6c9d8dc9e70e8c0b1fc",
+                  "response_id": "chatcmpl-8106cac94dc57f55",
+                  "finish_reason": "stop",
+                  "usage": {
+                    "prompt_tokens": 14531,
+                    "total_tokens": 18187,
+                    "completion_tokens": 3656,
+                    "prompt_tokens_details": null
+                  },
+                  "config": {
+                    "max_tokens": 32768,
+                    "temperature": 0.2,
+                    "top_p": 0.95,
+                    "top_k": 64,
+                    "min_p": null,
+                    "presence_penalty": null,
+                    "repetition_penalty": null,
+                    "repetition_detection": null,
+                    "seed": 3240302138,
+                    "thinking_token_budget": 16384,
+                    "reasoning_effort": null,
+                    "thinking_enabled": true,
+                    "response_format": null,
+                    "structured_outputs": null,
+                    "timeout_seconds": null
+                  },
+                  "message_roles": [
+                    "system",
+                    "user",
+                    "assistant",
+                    "user"
+                  ],
+                  "continuation": true,
+                  "prior_generation_sha256": "16a1818e80899a92ca66cc4e4269eaaceeae51b257bb52a18067bee4fc3f3a27",
+                  "system_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.prompt.txt",
+                  "user_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.user_prompt.txt",
+                  "thinking_enabled": true,
+                  "response_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.raw_response.json",
+                  "reasoning_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.reasoning.txt",
+                  "v0257_budget_forcing": {
+                    "schema": "cognitive-well-v0257-all-call-budget-forcing-event-v1",
+                    "policy": "mandatory_one_semantic_continuation_full_replacement",
+                    "stage": "modular_exact_evidence_whole_proof_rewrite",
+                    "model": "Qwen/Qwen3.6-27B",
+                    "structured": false,
+                    "cue": "Wait. Continue from the viable intermediate reasoning above. Recheck the original task, use the strongest intermediate result to bridge the major remaining gap, and emit one complete replacement response in the original required format. Do not mention this instruction or the earlier draft.",
+                    "cue_sha256": "b93da59bebcbff0539a3cbd9067355da9496d163eabe1eace83e6eecc6264ba2",
+                    "primary_error_recovered": null,
+                    "primary_finish_reason": "stop",
+                    "forced_finish_reason": "stop",
+                    "primary_temperature": 0.2,
+                    "forced_temperature": 0.2,
+                    "raw_temperature_transition_applied": false,
+                    "primary_text_sha256": "eccc06fb46e3dcf7a9bd707bc6f92d296cc455a4db756266817cf5501aa34efe",
+                    "primary_reasoning_sha256": "500a9ecc4995963bfe2562aa8313b79f7b4cea45d3ddbd66f83c569527fbf4ef",
+                    "forced_text_sha256": "eccc06fb46e3dcf7a9bd707bc6f92d296cc455a4db756266817cf5501aa34efe",
+                    "forced_reasoning_sha256": "6d59e4e2f5cfe2be9372c4397f6ac7f8667e9ff3daf01b07ee5811f20c83d9a8",
+                    "canonical_artifacts_are_forced_response": true
+                  }
+                },
+                "request_timeout_sec": null
+              },
+              "lint": {
+                "schema": "v0287-modular-proof-contract-lint-v1",
+                "passed": true,
+                "provider_id": "checked_real_root_classification_v1",
+                "verdict": "VERIFIED_SUPPORT",
+                "marker_count": 1,
+                "evidence_count": 2,
+                "appendix_count": 1,
+                "literal_requirement_count": 0,
+                "proof_characters": 9775
+              },
+              "audit": {
+                "decision": "PASS",
+                "checks": {
+                  "The original theorem is fully answered": true,
+                  "The detected load-bearing gap is actually bridged": true,
+                  "The exact result is used with the correct logical polarity": true,
+                  "All formal variables and equations are derived in the proof": true,
+                  "The formal target is explicitly translated back to the theorem quantity": true,
+                  "Every cleared or cancelled factor is justified": true,
+                  "Decisive exact certificate data remains directly inspectable": true,
+                  "All domain, denominator, equality, and branch cases are handled": true,
+                  "No process or tool meta-language appears": true
+                },
+                "issues": [],
+                "passed": true,
+                "gap_closure": {
+                  "Original gap": "Source asserted uniqueness of $x=1/\\sqrt{3}$ without root classification or extremum verification.",
+                  "Formalization link": "Lemma matches the derived $g'(x)$ expression to certify root locations and sign changes on $(0, 1/\\sqrt{2})$.",
+                  "Certified result": "Lemma identifies exactly three roots, classifying $x_0=1/\\sqrt{3}$ as the sole local minimum via $-1 \\to 1$ sign change.",
+                  "Return to proof": "Proof uses the unique interior minimum and positive endpoints to conclude global minimum is $0$, proving the inequality."
+                }
+              },
+              "audit_call": {
+                "attempt": 1,
+                "cap": 32768,
+                "parser_feedback_supplied": false,
+                "parser_feedback_count": 0,
+                "metadata": {
+                  "stage": "modular_exact_evidence_whole_proof_audit",
+                  "started_at": "2026-09-16T16:09:16.455845+00:00",
+                  "completed_at": "2026-09-16T16:09:26.707175+00:00",
+                  "latency_seconds": 10.251331517996732,
+                  "transport": "openai-compatible-loopback-http",
+                  "endpoint": "http://127.0.0.1:8027/v1",
+                  "model": "Qwen/Qwen3.6-27B",
+                  "prompt_sha256": "bfcf8089f840416c98fc82a233a16dbc09b82ccdc30922bdd53fe46d0cd557c2",
+                  "user_prompt_sha256": "765298461ee9e759a148feb503edf085399025789b345a4917fb98c4af326cfa",
+                  "request_sha256": "e039af0e6b7912ee694481467ceac25804aa35b1a0648e1c5669f0af149206cf",
+                  "response_id": "chatcmpl-ab397fac5fffd2f2",
+                  "finish_reason": "stop",
+                  "usage": {
+                    "prompt_tokens": 14402,
+                    "total_tokens": 14985,
+                    "completion_tokens": 583,
+                    "prompt_tokens_details": null
+                  },
+                  "config": {
+                    "max_tokens": 32768,
+                    "temperature": 0.1,
+                    "top_p": 0.95,
+                    "top_k": 64,
+                    "min_p": null,
+                    "presence_penalty": null,
+                    "repetition_penalty": null,
+                    "repetition_detection": null,
+                    "seed": 3145686216,
+                    "thinking_token_budget": 16384,
+                    "reasoning_effort": null,
+                    "thinking_enabled": true,
+                    "response_format": null,
+                    "structured_outputs": null,
+                    "timeout_seconds": null
+                  },
+                  "message_roles": [
+                    "system",
+                    "user",
+                    "assistant",
+                    "user"
+                  ],
+                  "continuation": true,
+                  "prior_generation_sha256": "7371e60e3cc7b7977dc415b27e15602df6f4357d102cb4d406b53cce4c6248d5",
+                  "system_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.prompt.txt",
+                  "user_prompt_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.user_prompt.txt",
+                  "thinking_enabled": true,
+                  "response_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.raw_response.json",
+                  "reasoning_path": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/04_audit/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_audit.reasoning.txt",
+                  "v0257_budget_forcing": {
+                    "schema": "cognitive-well-v0257-all-call-budget-forcing-event-v1",
+                    "policy": "mandatory_one_semantic_continuation_full_replacement",
+                    "stage": "modular_exact_evidence_whole_proof_audit",
+                    "model": "Qwen/Qwen3.6-27B",
+                    "structured": false,
+                    "cue": "Wait. Continue from the viable intermediate reasoning above. Recheck the original task, use the strongest intermediate result to bridge the major remaining gap, and emit one complete replacement response in the original required format. Do not mention this instruction or the earlier draft.",
+                    "cue_sha256": "b93da59bebcbff0539a3cbd9067355da9496d163eabe1eace83e6eecc6264ba2",
+                    "primary_error_recovered": null,
+                    "primary_finish_reason": "stop",
+                    "forced_finish_reason": "stop",
+                    "primary_temperature": 0.1,
+                    "forced_temperature": 0.1,
+                    "raw_temperature_transition_applied": false,
+                    "primary_text_sha256": "f43a2d27faeac0a0a88ee945eb7af25f5681676cdf7c11f3c8dbd40e0b38abae",
+                    "primary_reasoning_sha256": "1e3685a1577d0bb2dc2d6bb5b5376525747083feeb6bba307aeeb212cfc53b04",
+                    "forced_text_sha256": "f43a2d27faeac0a0a88ee945eb7af25f5681676cdf7c11f3c8dbd40e0b38abae",
+                    "forced_reasoning_sha256": "43198ed84e8f82c8863817d1e00248eefc4d15ddfddc3127bb46de5806f32065",
+                    "canonical_artifacts_are_forced_response": true
+                  }
+                },
+                "request_timeout_sec": null
+              },
+              "passed": true
+            }
+          ],
+          "final_qwen_revision": {
+            "policy": "checked_appendix_final_qwen_revision_v1",
+            "state": "completed",
+            "max_revision_cycles": 1,
+            "input_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/terminal_proof.md",
+            "input_proof_sha256": "308338be416451202ffda66cd14c5d906bac3af2705fdece0c05005defa9f963",
+            "current_main_proof_sha256": "d3f9e890d9d57285ca8aeee0da749dd9efc54e36003af278852617de10185266",
+            "current_main_proof_characters": 4553,
+            "revision_document_sha256": "5d1a0822cd4c568aa2ff657d2578251aac415e8a9e9b3374ad5ed3c63cc0caa7",
+            "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+            "appendix_in_rewriter_prompt": false,
+            "supply_prior_grading": false,
+            "supply_prior_proof_audit": false,
+            "new_formalization_calls": 0,
+            "new_singular_calls": 0,
+            "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision",
+            "writer_model": "Qwen/Qwen3.6-27B",
+            "writer_temperature": 0.2,
+            "auditor_model": "Qwen/Qwen3.6-27B",
+            "auditor_temperature": 0.1,
+            "master_seed": 2397481260,
+            "mandatory_budget_forcing": true,
+            "request_timeout_seconds": null,
+            "proof_audit_passed": true,
+            "terminal_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/terminal_proof.md",
+            "terminal_proof_sha256": "b036ba9eb6a05d5d1684f4993a40a95b13c3a7c6f5194f2c3156b6fa910452a7"
+          }
+        },
+        "budget_forcing": [
+          {
+            "phase": "initial_rewrite",
+            "cycle": 1,
+            "rewrite_budget_forcing_sha256": "61bb5e75b93bfde02954c969b9bba6c8fe182e5641299599f122265e28a46717",
+            "audit_budget_forcing_sha256": "c23faaf38e90b00f48f20f5011cc96a07de5de05d341b4ea4381ac0df387aa35"
+          },
+          {
+            "phase": "final_qwen_revision",
+            "cycle": 1,
+            "rewrite_budget_forcing_sha256": "808702b720c3128e507b51ddfd73364712a016f663c1383f6d6dfb58508dad00",
+            "audit_budget_forcing_sha256": "e052447a8a2b57e19e2fde21efe016125240ad2d4318a17f20299d4f8dc8ebbd"
+          }
+        ],
+        "initial_synthesis_result": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/result.json"
+      }
+    },
+    "proof_audit_passed": true,
+    "strict_score": null,
+    "outcome": "REWRITTEN_AUDIT_PASS",
+    "rewritten_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/rewritten_proof.md",
+    "rewritten_proof_sha256": "b036ba9eb6a05d5d1684f4993a40a95b13c3a7c6f5194f2c3156b6fa910452a7",
+    "final_qwen_revision": {
+      "policy": "checked_appendix_final_qwen_revision_v1",
+      "state": "completed",
+      "max_revision_cycles": 1,
+      "input_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/terminal_proof.md",
+      "input_proof_sha256": "308338be416451202ffda66cd14c5d906bac3af2705fdece0c05005defa9f963",
+      "current_main_proof_sha256": "d3f9e890d9d57285ca8aeee0da749dd9efc54e36003af278852617de10185266",
+      "current_main_proof_characters": 4553,
+      "revision_document_sha256": "5d1a0822cd4c568aa2ff657d2578251aac415e8a9e9b3374ad5ed3c63cc0caa7",
+      "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+      "appendix_in_rewriter_prompt": false,
+      "supply_prior_grading": false,
+      "supply_prior_proof_audit": false,
+      "new_formalization_calls": 0,
+      "new_singular_calls": 0,
+      "output": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision",
+      "writer_model": "Qwen/Qwen3.6-27B",
+      "writer_temperature": 0.2,
+      "auditor_model": "Qwen/Qwen3.6-27B",
+      "auditor_temperature": 0.1,
+      "master_seed": 2397481260,
+      "mandatory_budget_forcing": true,
+      "request_timeout_seconds": null,
+      "proof_audit_passed": true,
+      "terminal_proof": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/05_final_qwen_revision/terminal_proof.md",
+      "terminal_proof_sha256": "b036ba9eb6a05d5d1684f4993a40a95b13c3a7c6f5194f2c3156b6fa910452a7"
+    }
+  },
+  "operator_diagnostics_supplied_to_generation": false
+}

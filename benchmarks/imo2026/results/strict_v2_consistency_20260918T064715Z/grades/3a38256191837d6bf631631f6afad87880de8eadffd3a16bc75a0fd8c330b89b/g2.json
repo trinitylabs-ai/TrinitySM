@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "3a38256191837d6bf631631f6afad87880de8eadffd3a16bc75a0fd8c330b89b",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "e16a1ac07a1aedacd6833f80a34a479575eead369786d3e2a4724835d40b6056",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "940788d886051955a401361c373e7592882c91e1ab91a1692d5507a3d34f847f",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the claim that the prime sets S_n eventually stabilize. This is false even for a_1=2: the greedy sequence is a_n=2n, so primes from the terms 2p enter S_n for arbitrarily large primes p, while the minimum covering LCM remains 2. This false inference replaces the central finiteness argument, so Rule E gives a ceiling of 3 (and Rule C also applies).",
+    "summary": "The submission gives a correct covering-LCM formula and a valid conditional periodicity argument if a fixed finite family of covering moduli were available. However, its asserted route to such a family begins with a demonstrably false stabilization claim. It also does not justify stabilization of the sets L_n, and it proves at most eventual translation-periodicity before asserting without argument that the transient can be absorbed. The latter is independently an unhandled quantifier-range issue under Rule D. Repair requires the new structural finiteness idea supplied by the minimal-leaf argument, not a local correction.",
+    "strengths": [
+      "Correctly reformulates each greedy step as the minimum of the next multiples of covering LCMs.",
+      "Correctly observes that, for a fixed finite family of moduli, the increment function is periodic and the residue dynamics are eventually periodic."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that S_n eventually stabilizes is false; for a_1=2 the sequence consists of all positive even integers and introduces infinitely many new prime factors."
+      },
+      {
+        "severity": "major",
+        "description": "Even under the hypothetical finiteness of S, the stated persistence of one selected L does not prove that the entire family L_n eventually stabilizes."
+      },
+      {
+        "severity": "major",
+        "description": "The finite-state argument establishes only an eventual relation. Uniqueness of the forward greedy construction does not imply that this relation extends backward through the transient, so the required equality for every n remains unproved; this invokes Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:25:51.260231+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00015",
+  "native_rejection_count": 0
+}

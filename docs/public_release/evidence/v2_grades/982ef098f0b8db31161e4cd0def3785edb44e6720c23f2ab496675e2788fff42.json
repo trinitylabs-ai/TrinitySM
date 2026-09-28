@@ -1,0 +1,63 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "f7e24d644e7dc5720411b6d2152f8e69c631bbdbc94b12a9e230c437f54bd96e",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "91a304398793e44986c2098228b3ede5e0d2ad5bef48a3acb9e14d8ae115d4cf",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "a5cdec317f06f9795e0e2ce8f8ff0ff12da98ae11d67c1a8c22e0dd7b808e61f",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The uniqueness argument combines the two inequalities incorrectly. Writing δ=x−y, the valid combination yields δ²+ε(y)²≥2δε(y), i.e. (δ−ε(y))²≥0, not δ²+2ε(y)²≥4δε(y). Thus no restriction forcing ε(y)=0 follows.",
+    "summary": "The claimed classification is false: every f(t)=t+c with c≥0 is a solution, so f(t)=t+1 is a direct counterexample. Rule A therefore caps the score at 2. The central uniqueness inference is also invalid (Rule E), and repairing the solution requires a substantially new classification argument.",
+    "strengths": [
+      "Correctly squares and rewrites the original inequalities using positivity.",
+      "Correctly verifies that f(x)=x is one admissible solution via RMS–AM and AM–GM."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer excludes the valid family f(x)=x+c for every c>0."
+      },
+      {
+        "severity": "major",
+        "description": "The two inequalities involving ε(x) are combined invalidly; the correct consequence is only the tautology (x−y−ε(y))²≥0."
+      },
+      {
+        "severity": "substantial",
+        "description": "Later the proof changes an existential conclusion ('there exists y with f(y)≤y/2') into the unproved universal assumption f(y)≤y/2 for all y."
+      },
+      {
+        "severity": "substantial",
+        "description": "In the mixed-case argument, it minimizes over all x even though the displayed inequality with ε(x)=0 is available only for x belonging to the zero set of ε."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:15:18.291873+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00006",
+  "native_rejection_count": 0
+}

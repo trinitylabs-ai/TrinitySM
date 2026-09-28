@@ -1,0 +1,111 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Show that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for any positive real numbers $x, y, z, t$ that satisfy $2(x + y + z + t) \ge xyzt$.
+
+**GROUND-TRUTH SOLUTION**
+
+Assume the contrary that $xyzt> x^2+y^2+z^2+t^2$. Using AM-GM, we have $xyzt> x^2+y^2+z^2+t^2 \geq 4\sqrt{xyzt}$, which means that $xyzt > 16$. From here, this implies $2(x+y+z+t) >16$ from the condition $2(x+y+z+t) \geq xyzt$.
+ However, from Cauchy-Scwarz, we have $x^2+y^2+z^2+t^2 \ge\frac{1}{4}(x+y+z+t)^2>2(x+y+z+t) \geq xyzt$. This is a contradiction.
+
+ Therefore: $x^2+y^2+z^2+t^2\ge xyzt$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Attempted the "proof by contradiction" and made a positive progress based on it.
+ 2. Applied the AM-GM inequality correctly.
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To show that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for any positive real numbers $x, y, z, t$ that satisfy $2(x + y + z + t) \ge xyzt$, we proceed as follows:
+
+Let $S = x + y + z + t$ and $P = xyzt$. The given condition is:
+\[ 2S \ge P \]
+
+First, we establish two lower bounds for the sum of squares $x^2 + y^2 + z^2 + t^2$.
+By the Arithmetic Mean-Geometric Mean (AM-GM) Inequality applied to the four positive real numbers $x^2, y^2, z^2, t^2$:
+\[ \frac{x^2 + y^2 + z^2 + t^2}{4} \ge \sqrt[4]{x^2 y^2 z^2 t^2} = \sqrt{xyzt} = \sqrt{P} \]
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{P} \]
+
+Second, by the Cauchy-Schwarz Inequality:
+\[ (x^2 + y^2 + z^2 + t^2)(1^2 + 1^2 + 1^2 + 1^2) \ge (x + y + z + t)^2 \]
+\[ 4(x^2 + y^2 + z^2 + t^2) \ge S^2 \]
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \]
+
+We now use the given condition $S \ge P/2$ to compare these lower bounds with the product $P$. We consider two cases for the value of $P$:
+
+Case 1: $P \le 16$.
+In this case, $\sqrt{P} \le 4$. Multiplying both sides by $\sqrt{P}$ (since $P > 0$), we obtain $P \le 4\sqrt{P}$.
+Combining this with the AM-GM bound, we have:
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{P} \ge P \]
+
+Case 2: $P > 16$.
+Using the Cauchy-Schwarz bound and the given condition $S \ge P/2$:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \ge \frac{(P/2)^2}{4} = \frac{P^2}{16} \]
+Since $P > 16$, we have $P^2 > 16P$, which implies $\frac{P^2}{16} > P$.
+Thus:
+\[ x^2 + y^2 + z^2 + t^2 > P \]
+
+In both cases, we have shown that $x^2 + y^2 + z^2 + t^2 \ge P = xyzt$.
+
+Equality holds if and only if $x=y=z=t$ (for the AM-GM and Cauchy-Schwarz equalities to hold) and $P=16$ (to satisfy the boundary between the two cases). This occurs when $x=y=z=t=2$. In this case, $2(2+2+2+2) = 16$ and $2 \cdot 2 \cdot 2 \cdot 2 = 16$, so the given condition is satisfied.
+
+Thus, we have shown that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for all positive real numbers $x, y, z, t$ satisfying $2(x + y + z + t) \ge xyzt$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

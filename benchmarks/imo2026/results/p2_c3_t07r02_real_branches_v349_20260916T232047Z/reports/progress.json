@@ -1,0 +1,102 @@
+{
+  "updated_at": "2026-09-17T00:17:14.731339+00:00",
+  "run_id": "p2_c3_t07r02_real_branches_v349_20260916T232047Z",
+  "supervisor": {
+    "state": "completed",
+    "completed_at": "2026-09-17T00:08:49.105952+00:00",
+    "run_id": "p2_c3_t07r02_real_branches_v349_20260916T232047Z",
+    "outcome": "REWRITTEN_AUDIT_PASS",
+    "grade": {
+      "score": 6,
+      "verdict": "minor_gap",
+      "answer_supported": true,
+      "dependency_impact": "local",
+      "repair_complexity": "routine_direct",
+      "olympiad_treatment": "minor_deduction",
+      "first_issue": "The unsigned-angle equalities are converted to signed cross\u2013dot equations without explicitly proving, for each pair, that the two oriented cross products have the same sign. Interiority gives the required ray orders, but Step 4 only asserts this generically.",
+      "summary": "The coordinate reduction, circumcenter computation, target polynomial T, and explicit algebraic certificate form a correct and essentially complete proof. The appendix supplies a finite verifiable certificate showing that the three angle polynomials and two nonvanishing guards imply T=0. The sole material omission is the short but necessary orientation/branch verification behind the angle-polynomial encoding; this is directly repairable from the convexity hypotheses.",
+      "strengths": [
+        "Correctly reduces OM=ON to the explicit polynomial identity T=0.",
+        "Correctly identifies that A,K,L are noncollinear and gives the circumcenter coordinates.",
+        "Supplies a complete explicit algebraic certificate rather than merely invoking computer algebra.",
+        "The two guards actually used in the appendix follow directly from K\u2208int(BMC) and L\u2208int(BNC)."
+      ],
+      "errors": [
+        {
+          "severity": "minor",
+          "description": "Nondegeneracy and cotangent injectivity alone do not justify the displayed signed cross\u2013dot equations for unsigned angles. The proof should explicitly establish the ray orders BA,BK,BL,BC and CA,CL,CK,CB (and the analogous orders at M and N), or directly show that the paired cross products have matching signs."
+        }
+      ],
+      "contract_consistent": true,
+      "full_credit": false
+    },
+    "report": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/reports/run_summary.json"
+  },
+  "native_state": "completed",
+  "stage": "proof_synthesis",
+  "drafts_checked": 11,
+  "compiled": 8,
+  "semantic_accepted": 7,
+  "exact_certificates": 1,
+  "real_branch_certificates": 0,
+  "active_calls": [],
+  "lanes": [
+    {
+      "sample": "sample_01",
+      "state": "completed",
+      "stage": "certificate_verified",
+      "cycles": 1,
+      "error": null
+    },
+    {
+      "sample": "sample_02",
+      "state": "completed",
+      "stage": "inconclusive",
+      "cycles": 2,
+      "error": null
+    },
+    {
+      "sample": "sample_03",
+      "state": "completed",
+      "stage": "inconclusive",
+      "cycles": 1,
+      "error": null
+    },
+    {
+      "sample": "sample_04",
+      "state": "completed",
+      "stage": "inconclusive",
+      "cycles": 1,
+      "error": null
+    },
+    {
+      "sample": "sample_05",
+      "state": "completed",
+      "stage": "inconclusive",
+      "cycles": 1,
+      "error": null
+    },
+    {
+      "sample": "sample_06",
+      "state": "completed",
+      "stage": "inconclusive",
+      "cycles": 2,
+      "error": null
+    },
+    {
+      "sample": "sample_07",
+      "state": "completed",
+      "stage": "semantic_rejected",
+      "cycles": 2,
+      "error": null
+    },
+    {
+      "sample": "sample_08",
+      "state": "completed",
+      "stage": "inconclusive",
+      "cycles": 1,
+      "error": null
+    }
+  ],
+  "generation_finished": true
+}

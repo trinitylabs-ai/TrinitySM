@@ -1,0 +1,24 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For fixed positive integers $a, c$ and integer $b$, the congruence $a^{F_n} + n \equiv b \pmod c$ is correctly reduced to finding $r \in \{1, \dots, L\}$ and $q \in \mathbb{Z}$ such that $qL \equiv b - r - W(r) \pmod c$, where $W(r) = a^{m_1 + v_1(r)} \pmod c$ and $v_1(r)$ is the stabilized value of $F_n \pmod{m_1}$ for $n \equiv r \pmod L$. The proof correctly establishes that $F_n \pmod{m_i}$ stabilizes to a function of $r = n \pmod L$ for sufficiently large $n$, and correctly identifies the solvability condition for the linear congruence in $q$.
+Claim gap: The proof fails to demonstrate that the map $h(r) = W(r) + r \pmod d$ (where $d = \gcd(L, c)$) is surjective. The argument in lines 21-25 relies on analyzing cosets modulo $g = \gcd(m_1, d)$ and claims surjectivity based on the "flexibility of $v_1(r)$" and a specific comparison of $h(L)$ and $h(1)$. This does not constitute a rigorous proof that $h(r)$ covers all residues modulo $d$ for arbitrary $a, c$.
+Qualifications and supplied repairs: NONE. The surjectivity claim requires a substantive lemma about the distribution of $v_1(r)$ modulo $d$ that is not provided or justified. No repairs were supplied.
+Decisive checks: 
+- Lines 5-12: The stabilization of $F_n \pmod{m_1}$ to $v_1(r)$ depending only on $r = n \pmod L$ is VERIFIED. The recursive application of Euler's theorem along the chain $m_0, m_1, \dots, m_k=1$ correctly shows that for large $n$, the exponent tower modulo $m_1$ depends only on $n \pmod L$.
+- Lines 14-18: The reduction to $qL \equiv b - r - W(r) \pmod c$ is VERIFIED. The condition for solvability is correctly identified as $d \mid (b - r - W(r))$.
+- Lines 21-25: DEMONSTRATED DEFECT. The claim that $h(L)$ and $h(1)$ are distinct modulo $d$ because "$a^{m_1}(a-1) \equiv -1 \pmod d$ has no solution" is false. Counterexample: $a=2, m_1=2, d=3$. Then $a^{m_1}(a-1) - 1 = 4(1) - 1 = 3 \equiv 0 \pmod 3$, so $h(L) \equiv h(1) \pmod d$. The subsequent appeal to "flexibility" does not constitute a proof that $h(r)$ covers all residues modulo $d$ for every $a, c$. The surjectivity obligation remains UNRESOLVED.
+
+## Proof B
+Established theorem: For any positive integers $a, c$ and integer $b$, there exists $n \in \mathbb{Z}^+$ such that $a^{F_n} + n \equiv b \pmod c$. The proof establishes this via strong induction on $c$, leveraging the eventual periodicity of $F_n \pmod m$ and a shift property $g_c(n+L) \equiv g_c(n) + L \pmod c$.
+Claim gap: NONE supported by checks. The induction is correctly structured, the period $L$ is properly defined, the inequality $c' < c$ is rigorously proven, and the linear congruence step correctly matches the induction hypothesis.
+Qualifications and supplied repairs: NONE. All steps follow from standard properties of the Euler totient function, modular arithmetic, and the definition of $F_n$. The handling of "sufficiently large $n$" thresholds is correctly managed by the induction's ability to choose $n_0$ arbitrarily large.
+Decisive checks:
+- Lines 3-8: The period $T(m) = \text{lcm}(m, \phi(m), \dots, 1)$ for $F_n \pmod m$ is VERIFIED. This is a standard result for power towers modulo $m$.
+- Lines 10-12: The shift property $g_c(n+L) \equiv g_c(n) + L \pmod c$ for $L = T(\phi(c))$ is VERIFIED. Since $F_{n+L} \equiv F_n \pmod{\phi(c)}$ for large $n$, Euler's theorem gives $a^{F_{n+L}} \equiv a^{F_n} \pmod c$, and the linear term shifts by $L$.
+- Lines 17-20: The proof that $c' = \gcd(L, c) < c$ is VERIFIED. Let $p$ be the largest prime factor of $c$ with $v_p(c)=k$. Since all prime factors $q$ of $c$ satisfy $q \le p$, we have $v_p(q-1)=0$. Thus $v_p(\phi(c)) = k-1$. Iterating $\phi$ decreases the $p$-adic valuation by 1 each step until 0, so $v_p(L) = k-1$. Hence $v_p(c') = k-1 < k$, proving $c' < c$.
+- Lines 22-27: The inductive step is VERIFIED. $P(c')$ yields $n_0$ with $g_{c'}(n_0) \equiv b \pmod{c'}$. Since $c' \mid c$, $g_c(n_0) \equiv b \pmod{c'}$. The equation $g_c(n_0) + mL \equiv b \pmod c$ is solvable for $m$ iff $\gcd(L,c) \mid (b - g_c(n_0))$, which is exactly $c' \mid (b - g_c(n_0))$, satisfied by construction. The choice $n = n_0 + mL$ meets all conditions.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, rigorous argument using strong induction on $c$. It correctly establishes the shift property $g_c(n+L) \equiv g_c(n) + L \pmod c$ and proves the critical inequality $\gcd(L, c) < c$ via $p$-adic valuation, allowing the induction to close cleanly. Proof A correctly reduces the problem to a linear congruence but fails to prove the surjectivity of $h(r) \pmod d$. Its justification relies on a false claim about the distinctness of $h(L)$ and $h(1)$ (e.g., $a=2, m_1=2, d=3$ yields a collision) and an unsubstantiated appeal to "flexibility." Proof B's induction step is mathematically airtight and directly resolves the existence obligation without gaps.

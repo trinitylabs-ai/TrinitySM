@@ -1,0 +1,28 @@
+To find all polynomials $P(x)$ with integer coefficients such that $P(x) = s$ has an integer solution $x$ for every $s \in S = \{n^{2024} : n \in \mathbb{Z}_{\ge 0}\}$, let $k = 2024$. We are given that for every $n \in \mathbb{N}_0$, there exists $x_n \in \mathbb{Z}$ such that $P(x_n) = n^k$.
+
+1.  **Growth Analysis:**
+    Let $d$ be the degree of $P$. If $d=0$, $P(x) = C$, which cannot equal $n^k$ for all $n$. Thus $d \ge 1$. As $n \to \infty$, $n^k \to \infty$, so $|P(x_n)| \to \infty$, which implies $|x_n| \to \infty$. For large $x$, $P(x) \approx a_d x^d$. Thus $a_d x_n^d \approx n^k$, so $|x_n| \approx |a_d|^{-1/d} n^{k/d}$. If $k/d < 1$, then $x_{n+1} - x_n \to 0$, which for integers implies $x_n$ is eventually constant, a contradiction. Thus $d \le k$.
+
+2.  **Polynomiality of $x_n$:**
+    Since $x_n$ is a sequence of integers and $x_n = O(n^{k/d})$, the $(m+1)$-th difference $\Delta^{m+1} x_n$ (where $m = \lceil k/d \rceil$) must tend to 0 as $n \to \infty$. Since $\Delta^{m+1} x_n \in \mathbb{Z}$, it must be that $\Delta^{m+1} x_n = 0$ for all sufficiently large $n$. This implies that $x_n$ is a polynomial $Q(n)$ for $n \ge N$.
+
+3.  **Functional Equation:**
+    The relation $P(x_n) = n^k$ for $n \ge N$ implies the polynomial identity $P(Q(x)) = x^k$. Over the complex numbers, the only polynomials satisfying $P(Q(x)) = x^k$ are of the form $P(x) = a(x-z)^d$ and $Q(x) = cx^m + z$ where $dm=k$ and $ac^d = 1$.
+
+4.  **Integer Coefficients Constraint:**
+    Since $P \in \mathbb{Z}[x]$, the leading coefficient $a$ must be an integer. From $ac^d = 1$, $a$ must be a divisor of 1 in $\mathbb{Z}$, so $a = \pm 1$.
+    - If $a = 1$, then $c^d = 1$, so $c = \pm 1$.
+    - If $a = -1$, then $c^d = -1$, which requires $d$ to be odd and $c = -1$.
+    Given $P(x) = a(x-z)^d$, the coefficients are $a \binom{d}{i} (-z)^{d-i}$. For $i=d-1$, $adz \in \mathbb{Z}$. For $i=0$, $az^d \in \mathbb{Z}$. Since $a = \pm 1$, $z$ must be a rational $p/q$. Then $q^d$ must divide $a p^d$, implying $q = \pm 1$, so $z \in \mathbb{Z}$.
+
+5.  **Verification of Cases:**
+    - If $P(x) = (x-z)^d$ with $d|k, z \in \mathbb{Z}$:
+      $P(x) = n^k \implies (x-z)^d = n^k \implies x-z = \pm n^{k/d}$ (if $d$ even) or $x-z = n^{k/d}$ (if $d$ odd). In all cases, $x = z \pm n^{k/d}$ is an integer.
+    - If $P(x) = -(x-z)^d$ with $d|k, z \in \mathbb{Z}$:
+      $P(x) = n^k \implies (x-z)^d = -n^k$.
+      If $d$ is even, $-n^k \le 0$, so for $n > 0$, there are no real solutions.
+      If $d$ is odd, $x-z = (-n^k)^{1/d} = -n^{k/d}$, so $x = z - n^{k/d}$ is an integer.
+
+The polynomials are $P(x) = (x-z)^d$ for any $d|2024, z \in \mathbb{Z}$, and $P(x) = -(x-z)^d$ for any odd $d|2024, z \in \mathbb{Z}$.
+
+\(\square\)

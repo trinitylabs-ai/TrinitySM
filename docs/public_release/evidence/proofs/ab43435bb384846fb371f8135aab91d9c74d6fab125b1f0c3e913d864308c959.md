@@ -1,0 +1,44 @@
+To find all functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that for all $a, b \in \mathbb{R}$,
+\[ (b - a)f(f(a)) = a f(a + f(b)), \tag{1} \]
+we analyze the equation step by step.
+
+**1. Constant Solutions**
+If $f(x) = c$ for some constant $c$, the equation becomes $(b - a)c = ac$. For this to hold for all $a, b \in \mathbb{R}$, we must have $c = 0$. Testing $f(x) = 0$ in (1): $(b - a) \cdot 0 = a \cdot 0$, which is $0 = 0$. Thus, $f(x) = 0$ is a solution.
+
+**2. Analysis of $f(0)$**
+Let $P(a, b)$ be the assertion $(b - a)f(f(a)) = a f(a + f(b))$.
+$P(0, b) \implies b f(f(0)) = 0$ for all $b \in \mathbb{R}$. Thus, $f(f(0)) = 0$.
+$P(a, a) \implies 0 = a f(a + f(a))$. For $a \neq 0$, we must have $f(a + f(a)) = 0$.
+
+**3. Case 1: $f(0) = c \neq 0$**
+If $f(0) = c$, then $f(f(0)) = f(c) = 0$.
+Substituting $a = c$ into (1):
+\[ (b - c)f(f(c)) = c f(c + f(b)). \]
+Since $f(c) = 0$, we have $f(f(c)) = f(0) = c$. Thus:
+\[ (b - c)c = c f(c + f(b)) \implies f(c + f(b)) = b - c. \]
+This equation shows that $f$ is a bijection. Since $f$ is a bijection, the condition $f(a + f(a)) = 0$ for $a \neq 0$ implies that $a + f(a)$ must be the unique root of $f$. Since $f(c) = 0$, we have:
+\[ a + f(a) = c \implies f(a) = c - a \text{ for all } a \neq 0. \]
+Given $f(0) = c$, we have $f(x) = c - x$ for all $x \in \mathbb{R}$.
+Checking $f(x) = c - x$:
+LHS: $(b - a)f(f(a)) = (b - a)f(c - a) = (b - a)(c - (c - a)) = (b - a)a$.
+RHS: $a f(a + f(b)) = a f(a + c - b) = a(c - (a + c - b)) = a(b - a)$.
+LHS = RHS, so $f(x) = c - x$ is a solution for any $c \in \mathbb{R}$.
+
+**4. Case 2: $f(0) = 0$**
+If $f(0) = 0$, then $f(f(0)) = 0$.
+Suppose there exists $a \neq 0$ such that $f(a) = 0$. Then $P(a, b)$ gives:
+\[ (b - a)f(f(a)) = a f(a + f(b)) \implies (b - a)f(0) = a f(a + f(b)) \implies 0 = a f(a + f(b)). \]
+Since $a \neq 0$, $f(a + f(b)) = 0$ for all $b \in \mathbb{R}$.
+Let $V = f(\mathbb{R})$ be the range of $f$. Then $a + V \subseteq S$, where $S = \{x : f(x) = 0\}$.
+If $V = \{0\}$, then $f(x) = 0$, which is the solution found in step 1.
+If $V \neq \{0\}$, choose $v \in V \setminus \{0\}$. Then $a + v \in S$.
+For any $x \notin S$, $P(x, b)$ gives $f(x + f(b)) = \frac{f(f(x))}{x}(b - x)$.
+If $f(f(x)) \neq 0$ for some $x \notin S$, then $f$ is injective on the set $x + V$. If $f$ is injective, then $f(0) = 0$ implies $f(x) = -x$ (the case $c=0$ of $f(x) = c - x$).
+If $f(f(x)) = 0$ for all $x \notin S$, then $f(x + f(b)) = 0$ for all $x \notin S, b \in \mathbb{R}$.
+This means $x + V \subseteq S$ for all $x \notin S$.
+If $V$ contains $v \neq 0$, then $x + v \in S$ for all $x \notin S$. This implies $S^c + v \subseteq S$.
+Thus $f$ is zero on $S$ and zero on $S^c + v$. This forces $f(x) = 0$ for all $x$ because $S \cup (S^c + v)$ covers $\mathbb{R}$ (specifically, for any $y \notin S$, if $y - v \notin S$, then $y \in S^c + v$).
+
+Thus, the only solutions are $f(x) = 0$ and $f(x) = c - x$.
+
+The functions $f: \mathbb{R} \rightarrow \mathbb{R}$ satisfying the equation are $f(x) = 0$ and $f(x) = c - x$ for any constant $c \in \mathbb{R}$. \(\square\)

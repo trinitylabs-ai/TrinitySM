@@ -1,0 +1,25 @@
+{
+  "state": "running",
+  "stage": "generation_complete_waiting_for_refine",
+  "generation": {
+    "schema": "p4-v027-nvfp4-generation-replication-v1",
+    "completed_at": "2026-08-23T03:45:12.124176+00:00",
+    "observed": {
+      "draft_seed": 2306781093,
+      "lazy_seed": 809773801,
+      "explicit_resolve_seed": 813872613,
+      "raw_draft_sha256": "e76c5c31e04be3335f30506940705e660a925a1107ddecaca71cd41c724f5ee2",
+      "lazy_report_sha256": "75af7342a29409a24b11476e9c6f68d246c1efd537e4a13aa6d566476d8fff41",
+      "checked_proof_sha256": "5ee412ac4815f578c96dfaaa74d8750aa8267e881e58c745929d6f971008c992",
+      "lazy_triggered": true
+    },
+    "matches_original": {
+      "draft_seed": true,
+      "lazy_seed": true,
+      "explicit_resolve_seed": true,
+      "checked_proof_sha256": false
+    },
+    "exact_generation_match": false
+  },
+  "updated_at": "2026-08-23T03:45:12.124344+00:00"
+}

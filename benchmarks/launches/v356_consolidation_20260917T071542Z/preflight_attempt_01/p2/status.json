@@ -1,0 +1,6 @@
+{
+  "state": "failed",
+  "updated_at": "2026-09-17T07:20:32.011089+00:00",
+  "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+  "error": "AssertionError: Preflight failed"
+}

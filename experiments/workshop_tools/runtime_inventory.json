@@ -1,0 +1,3316 @@
+{
+  "schema": "workshop-tools-runtime-v1",
+  "files": [
+    {
+      "path": "cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/__init__.py",
+      "sha256": "e08a8d4a7fd217f226aebd0349d18ac9e1ebd845d79d7eeeaca3c9bf087ad675"
+    },
+    {
+      "path": "cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/codex_grade_schema.json",
+      "sha256": "1650a5e8c978488b9b628506e491a34c191ffe2e41f15d3d75f48882f12e11ac"
+    },
+    {
+      "path": "cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/core.py",
+      "sha256": "82a866cf2ed51478c13fc1a76603d68e124814273e5aa25a6151a28147a7f5ef"
+    },
+    {
+      "path": "cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/other_three_targets.json",
+      "sha256": "8ee00db216b4fa70ae15f6fdeb85b2b124290eb3d6d6e95d72e2a6deac561e7a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/pipeline.py",
+      "sha256": "56730814a93390650d621d864cad27027659fc6507fc5806d3e0553f9e25f2dc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/prompts.py",
+      "sha256": "3baf094b8eb12b27a9a1eceb5592d3c12c9996ef1d31ed378b74c0af7f119efe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_100_current_semantic_ledger_20260827/__init__.py",
+      "sha256": "e78cc4684cffbce580f41e7ca9751677aff5e470ca3458b0cac0d633b6828822"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_100_current_semantic_ledger_20260827/pipeline.py",
+      "sha256": "38209d119470d40845f8521ed8177c30916d1f1b9e5d80cbb5b7066dcedb8d91"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_101_shared_problem_ledger_resolve_20260827/__init__.py",
+      "sha256": "edcd740ab87b1768bab636decf0817a70fbf2bd63b9754f18292931567973792"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_101_shared_problem_ledger_resolve_20260827/pipeline.py",
+      "sha256": "5260a3803e916af4353969bbf2b873af6e81d3f1d625ba2ad2da65e014d12509"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_103_p5_ungrouped_ledger_resolve_20260827/__init__.py",
+      "sha256": "f50e009412029b53239a15b8918609619db409f64fa49fe1afe174169d3a1478"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_103_p5_ungrouped_ledger_resolve_20260827/pipeline.py",
+      "sha256": "d3adcd05b6a92429d55e0e48c15811e4804755d6ea6360a5b06eb6609378997c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_105_iterated_ungrouped_resolve_20260827/__init__.py",
+      "sha256": "d0b5410389fdb32841626d9a1d55186b57194c9bb90257b7f6a230806656f30e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_105_iterated_ungrouped_resolve_20260827/pipeline.py",
+      "sha256": "158f9d88cdb6a30f80199a3c9294951c9285abf3cd06afe171f6f49e417496a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_106_fresh_seed_audit_memory_bridge_20260828/__init__.py",
+      "sha256": "e3d53d42478b6cd2699f6e210f31fa1af2c35d804d297a4562f45e4216c1e013"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_106_fresh_seed_audit_memory_bridge_20260828/run.py",
+      "sha256": "2f51a4f89e2511451726fe52849075ee746c8b887581d2b4c6cd3d953c0b1fb3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_107_enhanced_reviews_step9_terminal_20260828/__init__.py",
+      "sha256": "ade08149413cc2cbfe0f513466881094086cf862c79a7aa0d7924f1db12c8897"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_107_enhanced_reviews_step9_terminal_20260828/enhanced_audit.py",
+      "sha256": "4aebc9b271b000e745d283192de368750ccf134b32209b0a51580347c8ef40ac"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_107_enhanced_reviews_step9_terminal_20260828/pipeline.py",
+      "sha256": "77cea9b8fe883a4716b9ff0ff87d1b9ae5e641877c042825d0eb91b602601ae5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_108_problem_only_contextual_surgery_20260828/__init__.py",
+      "sha256": "bd6b4a9fa2e8dee2c93b296d95f8dbd1e40f2bcbddb09c867b6436de2b4eb800"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_108_problem_only_contextual_surgery_20260828/pipeline.py",
+      "sha256": "8febb3e190978b423df488455cfe8770e7778b519652d56a4dd2c2d261ed1445"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_140_clean_dual_trace_fusion_20260901/__init__.py",
+      "sha256": "d9f5f4f12104fb463dab8c085e397252c2c620ec3c6d313b2c788ee48c2cb43a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_140_clean_dual_trace_fusion_20260901/pipeline.py",
+      "sha256": "22e8d0087482fdc10be5d76cc35b47603c2d506f2fa82c7acd9881d6d241323d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_142_support_aware_trace_handoff_20260901/__init__.py",
+      "sha256": "a2ce7ff99dcaa1badcc22108677340aa04e58cf1cdb9690d415262b3c436c149"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_142_support_aware_trace_handoff_20260901/pipeline.py",
+      "sha256": "6e06c90eab1e791e447e43f4b207324a857cdc745657106ef25761188ff72e1e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_143_separate_tracing_memory_20260901/__init__.py",
+      "sha256": "930f386773e1d2c2343a32d3f83dab64e4f2d3373a5d1efe9111f18d68b83a66"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_143_separate_tracing_memory_20260901/pipeline.py",
+      "sha256": "8a28cf93d54fee86436fda3d49c8a154869b9239e23f44b7ee21571237f793f9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_147_cumulative_patch_synthesis_20260901/__init__.py",
+      "sha256": "7822de903f4d95f43a3dd153af6ecc08e512535bd945138ff55d72830b34cabb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_147_cumulative_patch_synthesis_20260901/pipeline.py",
+      "sha256": "be65f3b61bbe596dcfc6a792c0f69e5975700bb0db5aef1dd5f34028e8559ad2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_148_review_trace_cumulative_synthesis_20260902/__init__.py",
+      "sha256": "50864d86d410c5af8cedef1160eab1a797edfc1252403dfcf9436f7e36304e85"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_148_review_trace_cumulative_synthesis_20260902/pipeline.py",
+      "sha256": "6b531dc5a12f5eae2d9fa67ab9c47921bcd4caa7afa93cabd7b1267ff4720928"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_149_v108_three_cycle_v148_20260902/__init__.py",
+      "sha256": "c24ef523150d89350b10abc620094d6c6a42e7199a7f1182b4e16d3fb686fb16"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_149_v108_three_cycle_v148_20260902/pipeline.py",
+      "sha256": "bc70ab3ef08781e8686dbe9cb4f42c34137c02595fb0e2e6ad9aac37f4d7a4a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_150_cleanup_gate_20260902/__init__.py",
+      "sha256": "bcf05fb9e0a4c7a081eb93f040c62806a3564be491f56fe266984146c4534d71"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_150_cleanup_gate_20260902/cleanup.py",
+      "sha256": "9b94303d9560c81de410ed106e57bcacba10556b649de16d0691a962348279d6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_171_compact_packet_ce_prescreen_20260903/__init__.py",
+      "sha256": "ebc8de1aa7caf90b07ce90a48fe4fe99cadab1c05c88d7a1ef7590546984dfa3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_171_compact_packet_ce_prescreen_20260903/pipeline.py",
+      "sha256": "4e563a05f82b4ef1393f3dd82ca884eb8558d5f0e26a5c7500ee1fc0dddf7bc7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_171_compact_packet_ce_prescreen_20260903/protocol.py",
+      "sha256": "6b170fdc03ebbc7d58598c54b8b65b71cf7142f05223fbdbaceedfd877df4ca4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_174_fusion_full_validity_prescreen_20260903/__init__.py",
+      "sha256": "d01e0701dfd4456f9d2fbbec3142e2ed07f1db5200be58657bd4c34d60b12510"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_174_fusion_full_validity_prescreen_20260903/fusion.py",
+      "sha256": "ebdf69eb6a51e2ec9924986404d6d2d28fe2cccb34d0b91c7d83dd8af9db0c1b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_175_reasoning_full_validity_prescreen_20260903/__init__.py",
+      "sha256": "1b8831cf395013c64818307830be1c4555d9ad8fe1293d34a43d4d0e5f77a322"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_175_reasoning_full_validity_prescreen_20260903/pipeline.py",
+      "sha256": "8b88bf328a11ce617724ace71d954c5be94a24bc960e643b2cacdd8f9d94de6b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_249_v108_third_resolve_all_call_budget_forcing_20260904/__init__.py",
+      "sha256": "c409a1be12f9969847e4aef45f30b5bd61edb8ede43025600918ac727cc27aa4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_249_v108_third_resolve_all_call_budget_forcing_20260904/budget_forcing.py",
+      "sha256": "e0d49c8eddcb902e8166eb37e5fbf03c29bdff01808d21c89e2cd78194b49f50"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_257_v108_third_resolve_raw_t10_bf_temp07_20260904/__init__.py",
+      "sha256": "b77bb040d06ca19a9a4f9cf88c1ac1d8d7920fb96369e14a968185e4b94d8641"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_257_v108_third_resolve_raw_t10_bf_temp07_20260904/budget_forcing.py",
+      "sha256": "6292af25f2866f61a0c45cfa68cb4f8f7d5d548e1960eba35bf3e23bfaaf4b1a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_257_v108_third_resolve_raw_t10_bf_temp07_20260904/pipeline.py",
+      "sha256": "ccbc3e921c8ad76974e162ace71f51e3ca1da539df662eca107e70eb4cd4ff79"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_258_v108_third_resolve_lazy16k_20260904/__init__.py",
+      "sha256": "66328490e4aeccca5d85bd47db07240b0a19f0f3eba8eb63e9bb6ab9e9ff4ee2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_258_v108_third_resolve_lazy16k_20260904/pipeline.py",
+      "sha256": "9146c77e704c9af158966265180c253e23dcb83becff4413568f377ef47f3f15"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_260_v258_bf32k_floor_20260905/__init__.py",
+      "sha256": "96aa672c1c51c496ec96b8a55a65b86e4ebb331ea03a9e7a8fa4e14383f0e64f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_260_v258_bf32k_floor_20260905/pipeline.py",
+      "sha256": "b8620d6848e3bfa79f913c90ed56e16dda6e81a38cfb418157c0e9265628a85b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_263_v260_unified_recovery_20260905/__init__.py",
+      "sha256": "b761d922aee4db150ae8f4a412a48d5e452170ade762eb77f588f78d89f2df83"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_263_v260_unified_recovery_20260905/pipeline.py",
+      "sha256": "de9718a33e560293b76946efb042c589edd3bc8c56022f7cb04fb394311f0411"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_266_p5_repair_brief_certification_20260905/__init__.py",
+      "sha256": "1e08d49d3e4c9e5abc4513980c34fcd2a7bf4f73e7e63d0f7ccf2753b790dfc5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_266_p5_repair_brief_certification_20260905/pipeline.py",
+      "sha256": "70913b1fbc21711a72f2c157dd066a21b3274f64e7a22621870185585e2c6388"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_274_generic_compression_portfolio_bridge_20260905/__init__.py",
+      "sha256": "746152ea00cf0b40983499e049109a75cee72a956193d2fc138a9329ddc03a39"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_274_generic_compression_portfolio_bridge_20260905/exact_tools.py",
+      "sha256": "224552f8eb99f0dc1f169781b9604114aacdb2a8565f66ab1ba11f90805bbfee"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_274_generic_compression_portfolio_bridge_20260905/pipeline.py",
+      "sha256": "ca92a0e1983909290091903e63e61cacdc0a1ff74ea7e77a7fbb6791b3cc0ba8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_274_generic_compression_portfolio_bridge_20260905/protocol.py",
+      "sha256": "79139755cd2496cd75178bdf600529c0b631a3b38efdb4b9f4ff42dfebe4abc5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_275_generic_audited_ledger_compression_20260905/__init__.py",
+      "sha256": "ea8b8ea929c490a5545a8aa83715b07b8ace9e79ad8bc3207c9f6464d8baa17a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_275_generic_audited_ledger_compression_20260905/singular_transformation_backend.py",
+      "sha256": "b6c34d6532fe0c9b37956235c532e84f3b19262a09dc54de662d20ee4e34f208"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_275_generic_audited_ledger_compression_20260905/transformation_validation.py",
+      "sha256": "f531351c8225452858dd1adf5eed6719eb85451de15d2cb45a3ec77a4c160a8a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_282_unit_circle_laurent_elimination_20260905/__init__.py",
+      "sha256": "bce53ad3e5be18e36226dddcc4ba7453eea64876c3b66b6733a93a36fc433b0f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_282_unit_circle_laurent_elimination_20260905/gaussian_backend.py",
+      "sha256": "1613d277994e382e9ed15b26ba8a27bdae6c8bb89df70c7860a5f4e1689c1ae3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_282_unit_circle_laurent_elimination_20260905/integration.py",
+      "sha256": "cd3397606440b469da1bec93ec2eb4462c0cd84cdd38e3577e8cf6d43109813b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_282_unit_circle_laurent_elimination_20260905/laurent_elimination.py",
+      "sha256": "53025b093f461208cec55cfd7bd97f24921ae03b9e82fa3a9d37df74b2425940"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_282_unit_circle_laurent_elimination_20260905/symbol_safety.py",
+      "sha256": "67875e12d811d3a9f027cb3b3bfc3ce931ca49c343c8fa0a686225f671557257"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_282_unit_circle_laurent_elimination_20260905/test_integration.py",
+      "sha256": "63899281d5e1148e41dc9f6e0cb2dc62ba1500b49e4af5603d95435b4dd3f124"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/__init__.py",
+      "sha256": "882d3bbdb26c4f3edda5c307a9cf61ee7568dc20e3ce670d7b299a801f09d8f4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/contracts.py",
+      "sha256": "9fd2e248833f5022994b90830f327347b1c47792e2a09113a0f91d12fd20a5e6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/pipeline.py",
+      "sha256": "ca8f332d4de0361f2601db8ef469f34ce999b95bffce25e89189e394dbd0fdf7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/prompts.py",
+      "sha256": "93c571eb42803514ae6015ac134d13767e54d895edde07749ecc867fd3d81706"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/repair_targeting.py",
+      "sha256": "6e174a6c954bf6419bcf4d1eb77f86c6b88193fbebb974107cb6e72bba0318d3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/tool_purpose.py",
+      "sha256": "86c44d4f221a3e193b32ccd3cc0e26bee0b3ca5835449d0dde47fbf82f368661"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_287_modular_exact_proof_synthesis_20260906/validation.py",
+      "sha256": "233770e9e7bc15c2eae38757a89529237d18cc1c214d6e4266f9d25c5122abd9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/__init__.py",
+      "sha256": "065694ebe9541363f2c0eb4de3e79069ddd1b4d548dc7d24608123d692975daf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/contracts.py",
+      "sha256": "6673a3283ad56d484e6734e8efacc7849896b702024fab7aa78d00c96853b5ed"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/pipeline.py",
+      "sha256": "a23fe874ac4df0c49e167827479eaf7d13ffdbf8e752232621a5fa361e51919a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/prompts.py",
+      "sha256": "b99342c2032e29dfb5c742afc7ef0b9531655e7ee351ba7ae19f2be8a56146b8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/gemma_body.schema.json",
+      "sha256": "8382bc8130013fbe209e408c35061071fda4b7ad4ea4db0cf2d4c97203bc6776"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/gemma_child.schema.json",
+      "sha256": "051f5f096bd2385353afcc5f0ced4fa9c1f727f2cae28c905ae09f18920833e9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/gemma_exact_negation_repair.schema.json",
+      "sha256": "22fbfe9fc969ec20e3ef9f70b59f32d13b19227c60e4c069c336903ed164eac9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_child_gate.schema.json",
+      "sha256": "cdb980ea9d2e20080d99a3e92cbda1a090b46dbb486019c5e9ababcac264eac7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_exact_negation_gate.schema.json",
+      "sha256": "d379bd4c92877efeee2eb32de2952e9c47da0e7c782f4ac788e1654cdf586f9c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_global.schema.json",
+      "sha256": "08b423761a43c98393fae12b1b4a95fe595d728aee9d176adedb1df98d2b543e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_paired.schema.json",
+      "sha256": "831197586fb7d26b1f5c2279d3adeadd10679d6649cb0736b00cbe164230b69c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_phase_one_diversity.schema.json",
+      "sha256": "0f6b7c892b87d9dbb1f0a4c1e1453248ac286f59f9a5a4c38590e2113a433662"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_phase_one_score.schema.json",
+      "sha256": "1a216dd5f317cfa1c34f6b9ca2b3c53d11b78a1f3cc3c4d2acdc1a875004fd16"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/schemas/terra_side.schema.json",
+      "sha256": "c0400f581c76f723eb894f2084658a1d17682c5d48d8dad933440958c4129983"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/terra_runtime.py",
+      "sha256": "7e81e7008ae25ab316fa907407f5e7baf94c66c377a61a476b2a114e043dd589"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_28_two_iteration_terra_appendix_20260819/verification.py",
+      "sha256": "0e09445bd0e02b493e0dbd3765da52c9d8acf536c3aa87b938eeef7b460b6952"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_290_p5_iterated_review_fusion_20260906/__init__.py",
+      "sha256": "58eda6206aa8da08c31efec1e2f25f342f29ae2db84d636e0f5166e1bd47afb2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_290_p5_iterated_review_fusion_20260906/exact_evidence.py",
+      "sha256": "15cb334a3de94b8331a5f9867adec0ae91933e94cb1a8fae57efddd144f25b93"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_290_p5_iterated_review_fusion_20260906/repair_boundary.py",
+      "sha256": "e7b193a940d4bce66cccd5baf3bff8a90839322d02df59a2f72bf49113bef760"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_29_scaled_phase1_20260819/__init__.py",
+      "sha256": "ab48ae8c4d5a9c8e5887bb2d6075e20a44b9d72f1ca10301b583c2d0f787e31f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_29_scaled_phase1_20260819/contracts.py",
+      "sha256": "ffcceb3468f2f9c32b6e3fedc8495f91849f396386d792e71fefa7b4b5acf22a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_29_scaled_phase1_20260819/pipeline.py",
+      "sha256": "ce11ebd81f56c6f45847f7d5da9bc554910a7b30ad05114ce7aefd392b4be7d0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_309_guarded_formalization_direct_laurent_20260906/__init__.py",
+      "sha256": "05be23194bdbef81ef79543ba324f609d6286becb469213b040cf4f9294375c7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_309_guarded_formalization_direct_laurent_20260906/pipeline.py",
+      "sha256": "0e2a659229bfcf73ad2d837b0066f91fcf16fcf2b6d13ae2e27ec2f7d8ade51c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_309_guarded_formalization_direct_laurent_20260906/resume_first_promoted_synthesis.py",
+      "sha256": "c1520cc2d9d009188c2f29ac1aa28bcd9e632f89557a3fcf0ff4260950802efc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_309_guarded_formalization_direct_laurent_20260906/test_harness.py",
+      "sha256": "4a5d741a474a87cec16110249b51cffc84c79f20aa85a15b090034c8991edd2a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_30_terra_score_backend_20260819/__init__.py",
+      "sha256": "743158d81b9328e016640822a53de421b8567c0ffe1d60386fd762fd0768d529"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_30_terra_score_backend_20260819/contracts.py",
+      "sha256": "82340777881fb8d91e81708327c20a5390a291be3aa504e83ed748e14554bb75"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_30_terra_score_backend_20260819/pipeline.py",
+      "sha256": "8055c3d8d729b85ab979cd21719f620ee0586843ed61d17a83162630d313a764"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_30_terra_score_backend_20260819/schemas/terra_score.schema.json",
+      "sha256": "9ebff3ea69028693880351663992ad301c93dcf94054fcb6053a3b10218c1265"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_31_external_hypothesis_metadata_20260819/__init__.py",
+      "sha256": "4e85c792f8480d126460412792d5d8397b9e3cf960652def6a1b8504d962c0ff"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_31_external_hypothesis_metadata_20260819/contracts.py",
+      "sha256": "eeb0d74e177a369e057aed5bdee6cd7d846ef2e3b7ad85f9d3f494bbe1194889"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_31_external_hypothesis_metadata_20260819/pipeline.py",
+      "sha256": "9ac5ec3dd1fc8975461fe45be82de364ee38c169a4e909b5e29c2f033e896c18"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_31_external_hypothesis_metadata_20260819/schemas/terra_side_math.schema.json",
+      "sha256": "2c4c1fa76d7cb3c963e2993e159305d2b4c97dbc0c17e4d3f73cd31cb7c7dde8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_325_single_model_problem_pipeline_20260909/__init__.py",
+      "sha256": "9a690a9cf165ef1d07c8d33369a2ea6df91f5340af684946f4859437dd61b49e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_325_single_model_problem_pipeline_20260909/runtime.py",
+      "sha256": "af8fec5ffddffdc64631973e84804903e4315cc28d8117d38733518653c72bc8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/__init__.py",
+      "sha256": "5da0f80b2498a5d9749faf597955ccf80d3a027d21e1e6a75b700ab97049b639"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/contracts.py",
+      "sha256": "34676d2a6876165477d7b1a4043160274124301c0f1a4bb378b0a962fce6ad69"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/pipeline.py",
+      "sha256": "4d4f2af8af2636c2461d7ca1d7e4aa105d10783ee6bbe0cf2eabbf445e2e1221"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/schemas/terra_child_math.schema.json",
+      "sha256": "595d6212cce23b478ebce6f36ac05c7196ee962542bbcb3f32ee060a5d2d426f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/schemas/terra_exact_negation_math.schema.json",
+      "sha256": "13c4e1e78ddf4ec1a80f872b39b762bdfdb206031a05e9269e4089b5787e1666"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/schemas/terra_paired_math.schema.json",
+      "sha256": "affe772724a8df5a42ff8f2645c0630bb5b31c3e8cca15aa24a717157952b3ef"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_32_clean_terra_metadata_20260819/schemas/terra_phase_one_diversity_index.schema.json",
+      "sha256": "4c353e728a57b7cdf1d23c7583d138f6a44be0a21860b25ec11ddff981bb4a96"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/__init__.py",
+      "sha256": "7c2542d0a1947247bb57330d36cfe2f5b16bcbb407114114c57ae3c37c91c84e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/contracts.py",
+      "sha256": "e338d9e9df1c4d47f37cab21fec2d60a8995a1c918ea2767fba430c0965e6c2f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/pipeline.py",
+      "sha256": "6c54471c11489a0c26297c5cc7dee2bb37137aba4928937cbee259fe9760c4d8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/schemas/terra_phase_one_anchor_tiebreak.schema.json",
+      "sha256": "7043a951d40620253037e2cf89b5c1b475c1292fc128490c130a80f1e7fe5221"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/schemas/terra_phase_one_final_score.schema.json",
+      "sha256": "45697889d5fdd5228cca156c21554bfd72a0272200d39d58f54645a2f4b9e776"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/schemas/terra_phase_one_refinement.schema.json",
+      "sha256": "849f3fd4f1a51a394b6964b54c1ad2f54fdb6d1aeea22ea81c381b6b738f4475"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_33_terra_structural_phase1_refinement_20260819/schemas/terra_phase_one_supplement_comparison.schema.json",
+      "sha256": "e8405eb0f0885d5495ca4782d34150945499f592113bd13179186f2300176776"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/__init__.py",
+      "sha256": "81146dcc779c083de97f4a080df527d6abe4f6d988c87b167496816f10762214"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/auxiliary_geometry.py",
+      "sha256": "fd846386246ff2bf943f64a7bbc1c3c633246edf89d8bba7fc82374f877dfe4f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/backend_comparison.py",
+      "sha256": "a22c8f852ffee64e80aae81be35d743ec05e35b0194466965399a7eb74e94c2f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/certificate.py",
+      "sha256": "dbcf95c50df7be815fb1e37bb8a101fe2622715afff58c3064825d16a623de21"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/division_experiment.py",
+      "sha256": "cb1b817efac43993c52e1c66e1620aee32fe599d338ae5cbb47067f2f1f59d8c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/domain_ledger.py",
+      "sha256": "ffe78f9222f71b3172f8fed37e6ba953bfc33f5f9c8e203f8d62c173c8a1892e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/explicit_certificate.py",
+      "sha256": "65b2609e6a0047db312062a7b3959cac422b1871487b69bcbb5d9e424b8b5a1d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/gaussian_backend.py",
+      "sha256": "c5e17e2f202ca8aa68b82833981e607e4aa2138af1f8d60f90333a327c414bfe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/geometry_declarations.py",
+      "sha256": "dbbd5a17da4e268635d54f8c330c4d1f4554f810983e52f9533ed61ac65bf749"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/geometry_normalization.py",
+      "sha256": "a64aeb8c282366890e1766da44abd12ff3a8af95e4a24b190bd3f540f68cf075"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/geometry_program.py",
+      "sha256": "816b6dae1b25001d7d3f89a673034a9fdea758d78599feae941aebf67a1fbbd1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/geometry_types.py",
+      "sha256": "437520eb4233df041e4983a6db01b55af203c4bd9f58d94e2c38cfe4b6a755a6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/guard_closure.py",
+      "sha256": "d7cb768d24defc2259c12fc552e4c3ac32595c34ff39c18a3aaa5a3fed1ab11e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/matched_expression.py",
+      "sha256": "6e51ab4c1cd63b5ba667f02d70f657a42ca3fc1a763d776cba151c44cd193ee1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/pipeline.py",
+      "sha256": "89e1fdc546e8a3eb8039e98c31c4b06173f4ac38f8a35d62de154123af9b2b93"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/polynomial_export.py",
+      "sha256": "4ef36e37dc32c41be9609a258d9e402aafd714db82a5c41155494c223ddfc4c3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/positive_multiple.py",
+      "sha256": "41403d2f2a3709100e432f2cfe33fce64f7b68d186d3eaef352ec4111b4c1270"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/protocol.py",
+      "sha256": "c0c3084668d6aa690ff4eb3774da67547daf29b2d11a45769134741cd499cc4a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/radical_certificate.py",
+      "sha256": "3a7c99b263771daf141764a43c88d1de391d5f6a1ceb36f53386edea99711583"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/rational_division.py",
+      "sha256": "05484660373e89d3f3cc96957141d797c9c34d4df64f7f1435c9c3604fafbe71"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/rational_geometry.py",
+      "sha256": "5f38b96dd61ca5d246fad30d3429ee8f742c50a008e47ac40a6910d5b9540ad5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/relative_sign.py",
+      "sha256": "1af394535ad40b0ea33dd5493f7d05dfeac437cbc5826869715ce91f39ac99d0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/rewrite.py",
+      "sha256": "141a51cfc90b5c9ac8307080b13a567544dd289d8e04f4d28a29be3092763523"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/saved_witness.py",
+      "sha256": "2d7ef5a28d2b83550c495684b88b424edd1d97c48e217f03880bb2d4463b0590"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/source_binding.py",
+      "sha256": "0ed5b4d4df000507423830f7ce965196e91f64a876d267f1f0d12eca206fa746"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/sum_of_squares.py",
+      "sha256": "c3f579a9a023b57b1b2c2a703d7c59dc5a4a36077bddcbff0f597c0bc989bf7c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/__init__.py",
+      "sha256": "7c1667966e76c92ae34bbdb13f41f6764df0455ae806259041516e52f2c7b490"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/contracts.py",
+      "sha256": "9fd2e248833f5022994b90830f327347b1c47792e2a09113a0f91d12fd20a5e6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/pipeline.py",
+      "sha256": "ca8f332d4de0361f2601db8ef469f34ce999b95bffce25e89189e394dbd0fdf7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/prompts.py",
+      "sha256": "93c571eb42803514ae6015ac134d13767e54d895edde07749ecc867fd3d81706"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/repair_targeting.py",
+      "sha256": "6e174a6c954bf6419bcf4d1eb77f86c6b88193fbebb974107cb6e72bba0318d3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/tool_purpose.py",
+      "sha256": "e690df3a1018c32592e3ecd8670a801fdaec0690c8af70dbc72aee61d26c7ea4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_347_positive_multiple_domains_20260916/synthesis_core/validation.py",
+      "sha256": "233770e9e7bc15c2eae38757a89529237d18cc1c214d6e4266f9d25c5122abd9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/GEOMETRY_PROGRAM.md",
+      "sha256": "7a98c09f24fe8750692eb1caead12d4dbe6dea7d95673c2348417f31c9e735ec"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/INHERITED_ADAPTER.md",
+      "sha256": "f7121b9ab815a742385e43c112db7c74ed2bd03c6d8a60b54242025c3a181902"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/MATCHED_TOOLS.md",
+      "sha256": "0eb49b8e915d90900ae0c0315c2d82fe5aa40b2326ded564a1001a2cfc6d7cef"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/README.md",
+      "sha256": "33dfb4c31e6984ede38135dda0538cb02b12c580864465b1bc18480adf301381"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/ROOT_PROGRAM.md",
+      "sha256": "478176f5a567652a72d60e5f92516f9b15f7ddd4b222889b64170e4983228953"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/__init__.py",
+      "sha256": "dda164282abe01182592cff2c4f03e2424d6f2450c4c885ef4334cf384dd8dcc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/after_fusion.py",
+      "sha256": "205e146079371c585ba0429e845d87a597164aa042a097986d4626969547dd31"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/algebra_cascade.py",
+      "sha256": "29f13af301700e801737a1703188f3fa13dd14561d1bf694d7f071c929722bd3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/algebra_workflow.py",
+      "sha256": "2ff0cd6a5e89c3987e3cbb8aaba9a786760dbb05b12033c7a004357f4550a690"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/appendix_synthesis.py",
+      "sha256": "e18759415d16140d4f24e2701d9a4ef283641ecb240f45cf1b68179749993ddf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/author_guided_replay.py",
+      "sha256": "dbbc6d4ddd11997fe715f56f02487e9827eaed595b9808e96fe7fa9822d735fa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/auxiliary_geometry.py",
+      "sha256": "fd846386246ff2bf943f64a7bbc1c3c633246edf89d8bba7fc82374f877dfe4f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/backend_comparison.py",
+      "sha256": "a22c8f852ffee64e80aae81be35d743ec05e35b0194466965399a7eb74e94c2f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/certificate.py",
+      "sha256": "dbcf95c50df7be815fb1e37bb8a101fe2622715afff58c3064825d16a623de21"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/change_audit.py",
+      "sha256": "67c3e4a4e141f480006450e882aa6f78d6760b4d9889494c52857853f6737f3e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/compact_audit.py",
+      "sha256": "eaaf3c92bf4c7786f8f3cf311a7bb8e1a1935bd008110c27b4da1edd9870562d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/composite_identity.py",
+      "sha256": "02e9a44f388e3d168cd0553d9147f9e6f13b1b4b2f3bef556c3dfda37f95c45b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/discrete_certificates.py",
+      "sha256": "d3eed6c449260c91316abfbd010da14d1fafa4685ed1bb9e2e7f0f4a2fda56b0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/discrete_resume.py",
+      "sha256": "7f5e01349c3968a2fbecd3f784632f3b5a4fe7ec359adc59e891835a9ffd452b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/discrete_workflow.py",
+      "sha256": "a692e41065714ea3ce94babfb15b03489addb258036f1c4338cfe2c797768809"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/division_audit_repair.py",
+      "sha256": "bcdba1f3c23cbff55151269355803e500305d33515f446c5aa81bfa370e4faf5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/division_batch.py",
+      "sha256": "aff01bbf89d14abe6b8fceb6801cbf8c02ef2e5a22263dc892a77054c1ed4764"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/division_experiment.py",
+      "sha256": "cb1b817efac43993c52e1c66e1620aee32fe599d338ae5cbb47067f2f1f59d8c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/division_fresh_audited.py",
+      "sha256": "028279998d4b155e1dd7ae6c52476e4e41049125e45543cdcaec2b2a8fb04e1b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/division_tool_feedback_resume.py",
+      "sha256": "f579653fa5e547af96559a92018a27d2a707a9c048392274c7b82a0d6e10ebb8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/domain_ledger.py",
+      "sha256": "ffe78f9222f71b3172f8fed37e6ba953bfc33f5f9c8e203f8d62c173c8a1892e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/experiment.py",
+      "sha256": "724d698ac93c9dfd311c0bbc6b21eff78dc50f9b8a6d992c28bc7b70ab90f509"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/explicit_certificate.py",
+      "sha256": "65b2609e6a0047db312062a7b3959cac422b1871487b69bcbb5d9e424b8b5a1d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/final_revision.py",
+      "sha256": "2e28e83cd6e6e9a8e6b556f5ecbafdced4348682b99059af1b9451246135beb2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/first_rewrite.py",
+      "sha256": "dfa46bb8bc954c482683d788b845b913a8d8fbc90a816fe98cf7c0899c4448d6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/fresh_formalizations.py",
+      "sha256": "019a202a307318b5c0683b59db057bc0977236466d85f594be5bfb6fa2397c66"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/gaussian_backend.py",
+      "sha256": "c5e17e2f202ca8aa68b82833981e607e4aa2138af1f8d60f90333a327c414bfe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/geometry_declarations.py",
+      "sha256": "dbbd5a17da4e268635d54f8c330c4d1f4554f810983e52f9533ed61ac65bf749"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/geometry_domain_feedback.py",
+      "sha256": "349efea2e4a46f45d37c94e65e9831c5cc1ee9a8230f1d1070da2be14f8f6822"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/geometry_normalization.py",
+      "sha256": "a64aeb8c282366890e1766da44abd12ff3a8af95e4a24b190bd3f540f68cf075"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/geometry_program.py",
+      "sha256": "7e7bf8d328c380ff4275dced0500dbf0fe0ad826036bc69eaf7f7b83af8dabdb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/geometry_types.py",
+      "sha256": "437520eb4233df041e4983a6db01b55af203c4bd9f58d94e2c38cfe4b6a755a6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/geometry_workflow.py",
+      "sha256": "3b5512dfbea52d8a85a21e748aad7affd367219be263a7dedd6983dadee574bd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/guard_closure.py",
+      "sha256": "d7cb768d24defc2259c12fc552e4c3ac32595c34ff39c18a3aaa5a3fed1ab11e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/input_context.py",
+      "sha256": "3286347b11d871406b940339fd284d2586332b4546050a1a9c03b5c63a6e051d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/linear_evidence.py",
+      "sha256": "024d32b2bb8e52ed8a1e53da3169b5dc683ad95ffe84cf5a8853977181edd441"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/local_evidence_experiment.py",
+      "sha256": "835e0f3514f9ff244c0bf555ea42aec1332dfe2acc8a9448c1199c63c17d7296"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/local_evidence_reconsider.py",
+      "sha256": "b2f01856e2effd0ee478123c2f32eadc995f166ad015e15fc249b310d5585aaa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/matched_expression.py",
+      "sha256": "6e51ab4c1cd63b5ba667f02d70f657a42ca3fc1a763d776cba151c44cd193ee1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/matched_tools.py",
+      "sha256": "74b09a341123f3b525843287644a60662b0042c2e41deb23745cba0a2e3139c7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/parser_feedback.py",
+      "sha256": "cdb15a0d76041e408ccacd4ccee74f3e4ee7057140bb9952efd5f94c39c37490"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/pipeline.py",
+      "sha256": "89e1fdc546e8a3eb8039e98c31c4b06173f4ac38f8a35d62de154123af9b2b93"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/polynomial_export.py",
+      "sha256": "4ef36e37dc32c41be9609a258d9e402aafd714db82a5c41155494c223ddfc4c3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/positive_multiple.py",
+      "sha256": "41403d2f2a3709100e432f2cfe33fce64f7b68d186d3eaef352ec4111b4c1270"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/proof_harness.py",
+      "sha256": "0d6fc936273dffdb656f8c6e5fad52288a40ef2bba70f5daecc7776803dd6754"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/protocol.py",
+      "sha256": "c0c3084668d6aa690ff4eb3774da67547daf29b2d11a45769134741cd499cc4a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/radical_certificate.py",
+      "sha256": "3a7c99b263771daf141764a43c88d1de391d5f6a1ceb36f53386edea99711583"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/radical_packaging_trial.py",
+      "sha256": "79c549dbafbc481beb044b1eb5888c1bd6b40a3bb22f1f6ba7cd249a2a544af6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/radical_resume_synthesis.py",
+      "sha256": "3f13c239a179f43f2db96c9d30051229647ecbd5f1fd81d7bb51afce039d4108"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/rational_division.py",
+      "sha256": "05484660373e89d3f3cc96957141d797c9c34d4df64f7f1435c9c3604fafbe71"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/rational_geometry.py",
+      "sha256": "5f38b96dd61ca5d246fad30d3429ee8f742c50a008e47ac40a6910d5b9540ad5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/real_branches.py",
+      "sha256": "b16d2de72f0be47d8275e654a90e0647b972c6e7dfb543d30079c044e7750580"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/recovery.py",
+      "sha256": "d4f4ffc384a4d8544c881117e3307dffef20e2be66a5511a60c75a9f0e778bdf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/relative_sign.py",
+      "sha256": "1af394535ad40b0ea33dd5493f7d05dfeac437cbc5826869715ce91f39ac99d0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/release.json",
+      "sha256": "9b8ad22e94514afec3db4f5447b410c691ccbd560e86ec3ddb12820c4b686db0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/resume_algebra_workflow.py",
+      "sha256": "5ec3e60c06ee45baf0d6564a55c0ef13f98c0fd905d9fe73becdf771308a2f46"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/resume_proved_exact.py",
+      "sha256": "386ca94d3bf8b0a0ab77890fbb29b4b5c0f2a79f66e05d1d7c16252f02e883ee"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/resume_saved.py",
+      "sha256": "b5fd8dea12561bdc24c5c5fdc1798b804812f635de17a70bb930a0b1dbe3f627"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/resume_saved_witness.py",
+      "sha256": "795cc1d9a641c3bafa7f40484c74939bca9d28467e2ed1ecabcf580d10e06cc9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/resume_selected_division.py",
+      "sha256": "82b5b2284ab9c51478bdfd501425d5b91b83b8209c531448cd65fcfd44e6885b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/rewrite.py",
+      "sha256": "141a51cfc90b5c9ac8307080b13a567544dd289d8e04f4d28a29be3092763523"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/root_classification.py",
+      "sha256": "4af1cdb6206063d6797ccf26415814cc2dc3ab2c7f034e45b89e48267e06b703"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/root_normalization.py",
+      "sha256": "3f4c26aabc2b2aa83b22047315fe99150c2a138742d99aa9ef221fbd7a627bff"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/root_workflow.py",
+      "sha256": "31d7d4987ffa366d58d3c4d38519a320df5b2630e61ba4f85f86b9f3f958491e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/saved_repair.py",
+      "sha256": "f8485fcf3e0bf1845459b2e63d95b96b33326097a6df8a16ec3903790afece74"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/saved_witness.py",
+      "sha256": "2d7ef5a28d2b83550c495684b88b424edd1d97c48e217f03880bb2d4463b0590"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/score_when_ready.py",
+      "sha256": "949a1644db0d068a58dd0492a749c66664b5d28abba9c53e05e46bf96f3e2750"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/selected_resume.py",
+      "sha256": "26c0a312960868f88a7486c00b1706e56c9019f1b967fafe1a5485b98eb7bd94"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/shared_feedback.py",
+      "sha256": "8ecefea63ebaaadba9abe752e45984ad6d1e1951209353a27c1b4109ba8458d7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/source_binding.py",
+      "sha256": "0ed5b4d4df000507423830f7ce965196e91f64a876d267f1f0d12eca206fa746"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/sum_of_squares.py",
+      "sha256": "c3f579a9a023b57b1b2c2a703d7c59dc5a4a36077bddcbff0f597c0bc989bf7c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/__init__.py",
+      "sha256": "7c1667966e76c92ae34bbdb13f41f6764df0455ae806259041516e52f2c7b490"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/contracts.py",
+      "sha256": "9fd2e248833f5022994b90830f327347b1c47792e2a09113a0f91d12fd20a5e6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/pipeline.py",
+      "sha256": "ca8f332d4de0361f2601db8ef469f34ce999b95bffce25e89189e394dbd0fdf7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/prompts.py",
+      "sha256": "93c571eb42803514ae6015ac134d13767e54d895edde07749ecc867fd3d81706"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/repair_targeting.py",
+      "sha256": "6e174a6c954bf6419bcf4d1eb77f86c6b88193fbebb974107cb6e72bba0318d3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/tool_purpose.py",
+      "sha256": "a324a395b5ceb4f43237c1b2cb409b4e9af255bb7347344e5b4f240a883ad385"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/synthesis_core/validation.py",
+      "sha256": "233770e9e7bc15c2eae38757a89529237d18cc1c214d6e4266f9d25c5122abd9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_acquisition_reuse.py",
+      "sha256": "095a15c85952966794735be818a792b53e4fd07491f64108cef408de63910fbe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_after_fusion.py",
+      "sha256": "db8ae6811137bc731adba2e5627afb9ffb74ed624a42a1e6e5329cdef02841f9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_algebra_cascade.py",
+      "sha256": "20da666113ea371549b054bd03ce86b7491b22bcd6ce35d9897f36d35a28e5d7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_annotated_source_syntax.py",
+      "sha256": "d87ef0a36932accf5b5667cc144b0d76c75e3c9bfa1b749c9dbb3031d9077f2a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_appendix.py",
+      "sha256": "99b96e9e96ab36ea719562383eda6564775fc65d36d2e9f827acac55d120e86d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_author_guided_replay.py",
+      "sha256": "aeb46545ab1401c037258d4c256402a8cdd72bfd2bd7a53f3538b5fd9b300ce6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_auxiliary_geometry.py",
+      "sha256": "7cd64d687c85b62f22b3174d4e4281d5de9052018978196b2aebe3f4f8164f02"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_backend_comparison.py",
+      "sha256": "600da28d2e4ca7932887e6551c22d2c3da273ef16c95b311b5e46af4c618ed45"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_change_audit.py",
+      "sha256": "c8a6775f7d59a075f5d3442060d58509f0359c09f52a3b416aae0ff93ad8284c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_compact_audit.py",
+      "sha256": "cbe46ad69fb100acbaa8d8b36351f0d31d71e179a9934d732009f7d65e95c6bf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_consolidation.py",
+      "sha256": "bd31b8d80e7edae4618c2088181ec3d4a45cd44313cf9a2976e0c5d51565e11d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_detector_quote_binding.py",
+      "sha256": "d3a903ac45440ac191267489a5f1273d5ddf24b382e18d2e70e0280383b307ff"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_discrete_certificates.py",
+      "sha256": "2cce4336b63ed519b0b7ef6f4fa230014254799219870effaead16097e99ef8c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_discrete_synthesis.py",
+      "sha256": "7b0780d8e0fda7b5c4bbf3412009adcdd06ee9ef56cb4eb2af58492bb29a17fa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_division_audit_repair.py",
+      "sha256": "2fa183299817f6f0e9fe818642b421f6d0a26f15e05617fb9302fda029222c45"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_division_fresh_audited.py",
+      "sha256": "d813f75123ce329426d737bc32cd7d5dfce7b21c2b49f12e77ec264494046b95"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_domain_ledger.py",
+      "sha256": "2492fbac62f00b84702d2aba64f0f7dfbd5f53de6189a94f2e8106d5394fe997"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_executable_matcher_menu.py",
+      "sha256": "ab071cebebfc82688ad4763d8495a5fbef3db4126b8bd2281087d54e981d737d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_experiment_portfolio.py",
+      "sha256": "71538c4c820bd3a52270ba89c547c5e1f7ece564d2261930cdfdb23e957aa816"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_final_revision.py",
+      "sha256": "a8b55f5703b7ec9919697bd10919337b4e2b4ebbb9db503e9d3da94c6750a8f1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_first_rewrite.py",
+      "sha256": "493bd4ed51159d061e93523a982aa6a0417f9a71ffb40e602573ba15d8dff331"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_generic_rewrite.py",
+      "sha256": "87703981839de31f6e448d76a2561e475d07adaef7cd8b3d6b5ad7ab4251d30f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_geometry_declarations.py",
+      "sha256": "5bc35b47085c153af36ef3d07348e8cea84fe0f343557fb0f7b49c8e65f9792d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_geometry_domain_feedback.py",
+      "sha256": "8ab352f984625b8be9a7365131b5eb549076e79288b77f6a9272fb4796a509bb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_geometry_normalization.py",
+      "sha256": "9fd8c6d4ef68d7e1b507b9acfd242522e7a2dff1d65d3a41c6777108e047878e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_geometry_program.py",
+      "sha256": "5536896f9231ad93742a56387c391cc29a36ca378311c0e1cbf00b346b4655a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_geometry_workflow.py",
+      "sha256": "89023e8f33d6c9db0fb714a8ddf36d3893317101d0aeb2d70b830515581b6374"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_guard_closure.py",
+      "sha256": "16099e279ef78333d17542a8ecf9ede6010e6c93db14fab45c5085902e29866e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_harness.py",
+      "sha256": "842e53ddfd09c75e92d8a42130581846ad542e36ad5159264ab0e27ca28de070"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_input_context.py",
+      "sha256": "d46d2c74b5339d5e78a61fa42643647f0b14b34265137e2a80dfa4b858f58175"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_linear_evidence.py",
+      "sha256": "42d134626256d8491a507dcf6871dab6db069968696fb97512219983659cb2ad"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_matched_tools.py",
+      "sha256": "b33e6a7d04533cba64b53b5b4255116238c2ea17cb77fc621edcfd9719f59317"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_missing_target_label.py",
+      "sha256": "3c569b021e2b40dea3ddf8c4f5dc2824dedeed28e8859299ef2c6139093f2b59"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_parser_feedback.py",
+      "sha256": "966e1abd6f73759a1aa49116a3efb2b2dcb7acb1e2ad5b4dc1f22d84938e5880"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_polynomial_export.py",
+      "sha256": "3aac645009e8afff342c6f1122b5b1ed711cc8829b292b481f9536dbf9921849"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_positive_multiple.py",
+      "sha256": "60f40ac8e593e51d9c2b9c63a6966eb1ffa0cb79076a9ac2bc7001a3baee4f83"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_premise_annotations.py",
+      "sha256": "178b339c3942650b8df98d0c783f1cd2abec14d129a7c34b6161cef65871c31a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_proof_harness.py",
+      "sha256": "5e98e36addb66de104f67d1460a3c7dd274d94507881de03d03e78ebf1d54553"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_radical_certificate.py",
+      "sha256": "4a9bd8914782603779c13517f3e94627bf3a6537fcd698f3f2d33b82f782be0f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_radical_packaging.py",
+      "sha256": "8b6db4fe7e30efb87d9881c6b898cfd15773e55b358d7029a274b33bd3d82a1c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_rational_division.py",
+      "sha256": "2c2c3b750e50bdee231d30c0d7696385b6db951cd1acfbd428be606e0dbd0698"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_rational_premises.py",
+      "sha256": "c3eda8690b38220b3d48793b2858fdbc4b2e2220246cf2ea71e1ecc524d06f8a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_real_branch_workflow.py",
+      "sha256": "94cb0404d37519384ff0248b6afa0ae276a668efefc290d62487c3dfad338b67"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_real_branches.py",
+      "sha256": "4475734be507082121ea813454dd6900c95efe63ec6a36a96b511b9db7790a04"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_recovery.py",
+      "sha256": "26e01d58f09cd16235b65353f5036e7ed274bb81c4a75a8d30d588bf5415b2b2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_relative_sign.py",
+      "sha256": "2231dd7dfcf63dc9f1530fa346725de7926f306bcbf3a44eaf8b62d4d784c449"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_resume_algebra_workflow.py",
+      "sha256": "261ae056529bc3fa6be20ffd317574374583d5da0652143212de0e689ed9032f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_resume_proved_exact.py",
+      "sha256": "4d7e27a194c6b92e72fa7743c203eed85f684ce4593b5eb65763b27828be2f50"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_retained_descriptions.py",
+      "sha256": "e7c21331283a7478797207ee179e83a1f185720a09a784c31b80ba33ad246b02"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_root_classification.py",
+      "sha256": "a0949daa43a9d247885b06b5d9e4d37d0735e31c947d8e23bf21e31588c8da64"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_root_normalization.py",
+      "sha256": "f9b143855724a5028698e268b4f8b0f54dd1f4c350f019d941a484e06cf4e1aa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_root_workflow.py",
+      "sha256": "c73886b4ea4633c4d6d2d1c97b2f9ba36e3649ada103735fb90459368d381396"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_saved_repair.py",
+      "sha256": "1e98a5359e74eb05b98ebf452e4e2da2c1cbddda10cd885845b20a90c0141b2d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_saved_witness.py",
+      "sha256": "a7207cf267089131d51333e409461e35bd4d27cea941b04baf7549dea39b3ee2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_shared_feedback.py",
+      "sha256": "c702754bc8df3bd5aaa3d77ea442139e32bf34e7f0172fae100dd2047f061542"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_source_binding.py",
+      "sha256": "135da8aeac53c23595849777b4db2f879a4b226024acdbfb47ce48b5f293a440"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_structural_geometry_syntax.py",
+      "sha256": "6018f5454bede39c75d51ef3d87f181ef6fda101f93905f75fe95efe6dfdf1a5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_sum_of_squares.py",
+      "sha256": "a7785bc444b412c235a022fefcef8274f3f13274eb8fed6d9d37b8a920f7e953"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_trig_composite.py",
+      "sha256": "b8048b227146bf08bd179207eeeeefa2e02248190eec1686233953da1b924989"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_typed_rational_geometry.py",
+      "sha256": "2d10cf3dc5a24b5eaa74a15d1c7951a5b418a8496ca5bd0b267c47bb362c7618"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/test_version.py",
+      "sha256": "d4bb60eb6a1abe7f60b3fbc99bf119a91831e958e80203da29d1b6b12ccc0ca1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/trig_experiment.py",
+      "sha256": "cd01827bb074b9ad79f4f004858d05ebd1bb416e58ad9f044c2b67d98e1b8dea"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/trig_formalization.py",
+      "sha256": "e0ece2de9cd3228b879af3d6456816e8015ecfc79a7174dc052614d16672af40"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/__init__.py",
+      "sha256": "1fcb3791caf26134171ea9a5f1a1a97241260d76f3e576a6671593fad87f0ac1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/cap_recovery.py",
+      "sha256": "795f246612a0636fc331d9f0b11aa46fef1a574b1025e7cb2af1d75221bd3a99"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/contracts.py",
+      "sha256": "2e501e6dc323292f6f1878197d8b99833de1a548de00124228eeb37671432d34"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/feedback_runtime.py",
+      "sha256": "5c9ac984e4ce404918e5ef6de0c7a9a64d832fed4536981272857b9719b9f152"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/launch_gemma4_bf16_mtp4.sh",
+      "sha256": "6ee5cf7fec1279cb6e6e5c940d6cb89ff46657e2d7643ec874e1123bade5a87b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/launch_qwen36_bf16_reviewer_room.sh",
+      "sha256": "c7d0efc5c0b48e81ba9d4ca31ec0db21160a2c75f1467f66d34f6400679d6597"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/pipeline.py",
+      "sha256": "928527511b99b9699e168fc386ff0706e39676bfcb50b8cec7ced9a277198895"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822/protocol.py",
+      "sha256": "d2f279042cd2bcb9eeb6bedc4eed23f5f75a8befef42e0eb7ad0c084f3a3d5e0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/SHA256SUMS",
+      "sha256": "ebea04e7636eef38432ce66291b66d4010183bc9a4b96ecad3b7787cec43b326"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/__init__.py",
+      "sha256": "e73899ccb7906d50c1d9b35922a6a596071d3bccc7fc2ef71a26da4c00d36595"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/cold_prompts.py",
+      "sha256": "3baf094b8eb12b27a9a1eceb5592d3c12c9996ef1d31ed378b74c0af7f119efe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/exact_seed_plan.json",
+      "sha256": "c468e57b6ccd25b36fe5c74c20661bf77c05668235ba5a0ea4acf330d1dfa89a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/gold/codex_grade_schema.json",
+      "sha256": "1650a5e8c978488b9b628506e491a34c191ffe2e41f15d3d75f48882f12e11ac"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/gold/problem.json",
+      "sha256": "e162c62ade5f5ec9bb407232b2211d2f59d60aca2fc6a2f994043c90f77f199e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/problem/imo2026_p4.json",
+      "sha256": "e162c62ade5f5ec9bb407232b2211d2f59d60aca2fc6a2f994043c90f77f199e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/prompts/fusion_three_block.md",
+      "sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/prompts/fusion_two_block.md",
+      "sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/prompts/repair_architect.md",
+      "sha256": "7b4a0e3496000854331e97e7fb99c841a91acf30a1671edac07622fbe7000ee1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/prompts/repair_resolver.md",
+      "sha256": "805d0c29ba6e6b09f03c63b5680e453432a9b20eebadb854f4965f3b52391197"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/packages/cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/codex_grade_schema.json",
+      "sha256": "1650a5e8c978488b9b628506e491a34c191ffe2e41f15d3d75f48882f12e11ac"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/packages/cognitive_well_harness_v0_2_7_failed_reasoning_memory_20260812/other_three_targets.json",
+      "sha256": "8ee00db216b4fa70ae15f6fdeb85b2b124290eb3d6d6e95d72e2a6deac561e7a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/packages/cognitive_well_harness_v0_2_7_terra_backend_only_20260820/failed_lemma_screen.schema.json",
+      "sha256": "7dbe34eb0a2b69cfe61891458f9b9c411296f6647b0afa98e96a9f562a421dd1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/scripts/launch_gemma4_bf16_mtp4_exact_branch_replay_20260822.sh",
+      "sha256": "2ae9d09b55d6f963236ccf28d8ddfdedd29dae16a10040df6e54271fa725e837"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/scripts/launch_qwen36_bf16_exact_branch_replay_20260822.sh",
+      "sha256": "3b47a0ca2daa6745aa27bb5f46224538f0b552fe16642308939b767989f2d26f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/final_report.txt",
+      "sha256": "7c17b3ffeb5f08764c15cafd0b406fab05720c6a81c857d7357353abef6095bf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/fusion.metadata.json",
+      "sha256": "7c956ead656b190431043cc9f337d415f24dc5ce3cc5bf77e4c4c38711a1afd7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/fusion.prompt.txt",
+      "sha256": "af66fd39f5f85c0f12b9fe7ccb8a04035ec444503e958edda874579a690ce05c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/fusion.raw_response.json",
+      "sha256": "c05215409df900ab63b2ab598207e79b49344623121c43b094b07f1a49fc5c82"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/fusion.reasoning.txt",
+      "sha256": "b8505a0992b044d72b68d6d2a44730d23eead4cf5871517a07caecefd2069e0c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/gptoss.metadata.json",
+      "sha256": "eb43ea03f263d7e32527ff70b551df0e2c0ef9734be973f1dd8df660b6ba22f1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/gptoss.prompt.txt",
+      "sha256": "a408a1e880d49d8fc4ed94fe8f14bacedc48a09c4c0123fc9516bda3e5b57a7f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/gptoss.txt",
+      "sha256": "8a44ff9e5b63d2df3a82a50d69848904830885d032e03f17266e5b3a341bab01"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/opc.metadata.json",
+      "sha256": "7a7bc82c1d5f53ebf15ec42311c137aaa2b73ae9e2a37ca53dc99ee759979c5b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/opc.prompt.txt",
+      "sha256": "9c3c3f7b8bfa378746198d446ca7601bf81ed25142dac9ba51c7798facdbdf0e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/opc.txt",
+      "sha256": "56a5560194f3dc49e88a573e6aba8ac0e81513b15f3d8713f0121929e8e62844"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/request.json",
+      "sha256": "dd0ea28bfbf2634363f229f1a263b5356490f1f7338b50a4b318dbc8865570b3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/source_prompt.txt",
+      "sha256": "a50b8ba10c37e3e6eab26bb17a3108dc0449e025b29918c84ace25f5c17e8b9e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p1_s2_first_revision/status.json",
+      "sha256": "fafb5c271599359cf1738a564f4ab2ce9892b7faea6c18d10615fac2a32c4993"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/final_report.txt",
+      "sha256": "63d7da62b9aa74538cdcfb0c3e6aadb0e26e7a0926f51c0d8459d620d3a69bf6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/fusion.metadata.json",
+      "sha256": "8b924966d1b21e8dcca10602adc0271216cac6acea01e05e1cd8f1e303411563"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/fusion.prompt.txt",
+      "sha256": "47ddd65596447c7f59faecbec9213cd47e6e3d9a7996eb811fcdc005cbb2d7cc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/fusion.raw_response.json",
+      "sha256": "492a771dd098575d7182c0e9c60fd3ee4fd5375062bac829c4c9ff67140e77e6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/fusion.reasoning.txt",
+      "sha256": "fd226b129813d803767ceda5e7a881a2863d7fc08418e07f0c76c1b44d48e0fe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/gptoss.metadata.json",
+      "sha256": "b1e0e8e63e38e2e6e146e2ba8022ac603b4fc4f73974e06eec86ce510e1c701e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/gptoss.prompt.txt",
+      "sha256": "78312de087f7a0d813497e70d0a42970837a614536f0ae1900924c398d32428d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/gptoss.txt",
+      "sha256": "e650ac08407ca0513194dd36ad312cf6697e8a0c0dc913460469e6aa461e26cb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/opc.metadata.json",
+      "sha256": "8f79731710774973e1e997822e51775faeb4e4e1f120c31f33c6f75ec6cf048f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/opc.prompt.txt",
+      "sha256": "711355dc18bfa018db6e0c36caf5626ada9616024222d92027bd56dcf31d2f0e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/opc.txt",
+      "sha256": "07b658c401cd80bab8ef7088a438aa2cc15dfe1b986b9668539604736266344c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/request.json",
+      "sha256": "750e439afc6e9ad274fbfa8f15f13e8dddaf3cd4560418ca956a5af74d1c0633"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/source_prompt.txt",
+      "sha256": "e6edbb340b895d0c34861a8b0d230bc3f77d2ffe56339e2ad52b017e2e839e26"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p4_s2_first_revision/status.json",
+      "sha256": "8cdaa9f1096c53c3b7b417ae7add62d95930601e244c9f05a9d524a5c05d527a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/final_report.txt",
+      "sha256": "2d61b2d56d14b0f7bcff8e8414bcf17662a1e2eff6f04521f6cd6ede6fdb4d8d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/fusion.metadata.json",
+      "sha256": "3d1ac02e09ca57e4ad56a0aaff30d06b860eac616ad5766a0e794b9feca7b8d2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/fusion.prompt.txt",
+      "sha256": "a19b4a434abccd178cb4c54403185d9e53f94427d43b858551275b854f7baccb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/fusion.raw_response.json",
+      "sha256": "b740647dfcb94a0ae665dfc6aef5e8a643795765a017df9209b8e0f11534fc76"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/fusion.reasoning.txt",
+      "sha256": "9458458cd46c19d4dd8cb6f94640e502ca7a1c38800d67fc70e47e5d560295b0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/gptoss.metadata.json",
+      "sha256": "9ac5f2bb09d080949203e7ad5875e2fd454e1d83ebc195ae822a4719975f681e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/gptoss.prompt.txt",
+      "sha256": "64614cac68b3990b094b73e68f8d6b6a01b666a881852711f39dadc900c7ae4c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/gptoss.txt",
+      "sha256": "9531ef94de98facd8eb1f67b4b50e19ba7d5190fec8303505b34f1804e8da3ad"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/opc.metadata.json",
+      "sha256": "238c3db24ac978a0bd2dab3ce9e3b77de1cd274bffe921147bfc520c43b49a59"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/opc.prompt.txt",
+      "sha256": "e02fb1f990dbf8ff3dffd81ce524a75f772964f76fcb0998450d86775b0044db"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/opc.txt",
+      "sha256": "198f0f59f0587074dfca02fe4f8d854f729ea468eb08a2f5a08976eb7d4da3d7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/request.json",
+      "sha256": "713a81b9d887e31c348c77826db110be625ac4878413f6c1c077e96112b66b9b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/source_prompt.txt",
+      "sha256": "4423b05926b7982bbdbeb4163625562eebde622334a2df54732488e87b5187d7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/provenance/source_materials/p5_s1_second_revision/status.json",
+      "sha256": "0bc5e1ec9d6df43b4caad3914a56559b75ea7c43653ffcb80fb3fa8a2f7c3d8b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/launch_gemma4_bf16_mtp4.sh",
+      "sha256": "65854d3a5dfe5c58156d9c45a8b88b6c6693096ed61c16be824ec70f5f1c3d4a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/launch_gemma4_nvfp4.sh",
+      "sha256": "9ad0a0e8748bda8ccd58d2efd01839125b43b1d6e2b5a1832fa055934ba52366"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/launch_qwen36_bf16.sh",
+      "sha256": "f9efc7cd30255fbce9840b577163d5f4f471b16f7ce2ce50bb3ad9c85af1f201"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/checked_draft.txt",
+      "sha256": "79664c533f3d09d7f1451be0e88af93774092e7c5dfe9cb744bef4cd2801fe14"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/lazy_report.txt",
+      "sha256": "26017f1b0055482be53d4783b52705c1b594e2cee4ad9896f1d18455f62aa3de"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/raw/p1_i1_zero_draft_1_attempt1.json",
+      "sha256": "cf25b77f972f9192fcba86b49a1c598c2dcae09d2385d33b9c16aaf8f6379be9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/raw/p1_i1_zero_explicit_resolve_1_attempt1.json",
+      "sha256": "4e73df2bf7e62920985314be6ea4f20ee8421a33fc02dee0b62d38673891a3af"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/raw/p1_i1_zero_lazy_1_attempt1.json",
+      "sha256": "61ec38f0e5ece63ca017ef38c3eb143617cef5ff679d3ecfac0b968e8a9cf38a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/raw_draft.txt",
+      "sha256": "5c832439500066041d66f39f9df5d8024e78c0469ed8d0c440ac0e1bb5ae86ff"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/generation/summary.json",
+      "sha256": "ea957c5d6f7cc1a213acebe279c818e693048a322d19857b21b3785e77c97599"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/manifest.json",
+      "sha256": "818bf602b090d87f81c8157bf468c83e6a0ea2dfaa384b692245d887ce78e41a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_exact_replay/status.json",
+      "sha256": "84fa1ee185d3df431d2058faa2d1e8d3fa5d5f4eaeff9b4c6e5a99163f5c506e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/comparison.json",
+      "sha256": "f14e02943462fdfce84da30401138dd502824e2cc311e3e8644c06bc292ea214"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_initial_grade.json",
+      "sha256": "a3efa5bffb8cde4ad62320a801359069ff4574a64a5ad94b61e8134e5bc94371"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_initial_report.txt",
+      "sha256": "52631117fc8f4fc582ddeefb5e245be4553a903fd933e62b5db37c6300f11df3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_refine_prompt.txt",
+      "sha256": "0945764215f91d30a3db8e5da93bfab585407c7497c627e0d648b706bb583d0d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_revised_proof.txt",
+      "sha256": "7667cbc5d68c2db99af2c887342447ee8a45056e7dfdbeb2a2002f92862a8a97"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_revision_blind_prompt.txt",
+      "sha256": "84180b90057d6e46c4c65ed246f66b58256b8356389780d898e3c1e27d5c1c11"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_revision_ensemble_regrade.json",
+      "sha256": "d9439b7f60a8ee876963d59a2c17df53b7873bc42f3526cdee1f26cc4e05e214"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/ensemble_revision_terra_regrade.json",
+      "sha256": "eaca815ce6c899eb5af38559873493aa3482d8de218ae1b58cd58735056801a7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/gemma_raw/http_transport/gemma_refine_3395916590.metadata.json",
+      "sha256": "ac795eb315f549a2e939a96a0dbade77401fdd78899dc550715ba65e721f54ee"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/gemma_raw/http_transport/gemma_refine_3395916590.prompt.txt",
+      "sha256": "86cb46505990e1cb79f8b72453e3ed68ff1ce5591596ab1a88a780a067186de1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/gemma_raw/http_transport/gemma_refine_3395916590.raw_response.json",
+      "sha256": "964012a4b543c339348d90f01831419f546b8919fc8e2b62a571a5e47a181503"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/gemma_raw/http_transport/gemma_refine_3395916590.reasoning.txt",
+      "sha256": "68d9a02a87a08ea0ef79778ea62a84dc41e06a5a221f557c522ff518a9f2282a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/gemma_raw/p1_i1_zero_refine_1_attempt1.json",
+      "sha256": "9e51ca31cf38c01ac0b90751386ce99bf45c5b7913e237e3ae2ddf1049ce84dd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/gemma_raw/p1_i1_zero_refine_1_attempt1_resume.json",
+      "sha256": "a4909145c97a8b26bc977f85515f665cca49f828a6a7642b2a4d15e96e0cc6a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/initial_grader_prompt.txt",
+      "sha256": "1c0f3160f67b099012ba03c82691d090b7b9bbfbe916148dca4bb37c5f2001a6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.json",
+      "sha256": "20d77d42a821d9e349bfcc198aa25adf59cc17076353fff2e3e068518ed9029a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/final_report.txt",
+      "sha256": "63d7da62b9aa74538cdcfb0c3e6aadb0e26e7a0926f51c0d8459d620d3a69bf6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/fusion.metadata.json",
+      "sha256": "8b924966d1b21e8dcca10602adc0271216cac6acea01e05e1cd8f1e303411563"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/fusion.prompt.txt",
+      "sha256": "47ddd65596447c7f59faecbec9213cd47e6e3d9a7996eb811fcdc005cbb2d7cc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/fusion.raw_response.json",
+      "sha256": "492a771dd098575d7182c0e9c60fd3ee4fd5375062bac829c4c9ff67140e77e6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/fusion.reasoning.txt",
+      "sha256": "fd226b129813d803767ceda5e7a881a2863d7fc08418e07f0c76c1b44d48e0fe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/gptoss.metadata.json",
+      "sha256": "b1e0e8e63e38e2e6e146e2ba8022ac603b4fc4f73974e06eec86ce510e1c701e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/gptoss.prompt.txt",
+      "sha256": "78312de087f7a0d813497e70d0a42970837a614536f0ae1900924c398d32428d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/gptoss.txt",
+      "sha256": "e650ac08407ca0513194dd36ad312cf6697e8a0c0dc913460469e6aa461e26cb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/opc.metadata.json",
+      "sha256": "8f79731710774973e1e997822e51775faeb4e4e1f120c31f33c6f75ec6cf048f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/opc.prompt.txt",
+      "sha256": "711355dc18bfa018db6e0c36caf5626ada9616024222d92027bd56dcf31d2f0e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/opc.txt",
+      "sha256": "07b658c401cd80bab8ef7088a438aa2cc15dfe1b986b9668539604736266344c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/request.json",
+      "sha256": "750e439afc6e9ad274fbfa8f15f13e8dddaf3cd4560418ca956a5af74d1c0633"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/source_prompt.txt",
+      "sha256": "e6edbb340b895d0c34861a8b0d230bc3f77d2ffe56339e2ad52b017e2e839e26"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1.local_fusion/status.json",
+      "sha256": "8cdaa9f1096c53c3b7b417ae7add62d95930601e244c9f05a9d524a5c05d527a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_ensemble_revision_regrade_0_attempt1_resume.json",
+      "sha256": "a4909145c97a8b26bc977f85515f665cca49f828a6a7642b2a4d15e96e0cc6a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.json",
+      "sha256": "941856cb95d824f3a2f55021255f93aa1148b556d1328cc1823488a6f6e4e34b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/final_report.txt",
+      "sha256": "52631117fc8f4fc582ddeefb5e245be4553a903fd933e62b5db37c6300f11df3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/fusion.metadata.json",
+      "sha256": "0980243b8f3d37a6144f3184ebc0846c0c0c65c9d46862e97a29f388ce9ebf9f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/fusion.prompt.txt",
+      "sha256": "5c20894b372d2375b86ba8ec740d1300a00fe1a3c63857d8a25fa9e4a0c119c1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/fusion.raw_response.json",
+      "sha256": "4d66dfd3f9439ce1c2bdebc33e5a742297ba4d3553f4c342c94212f68b1488ee"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/fusion.reasoning.txt",
+      "sha256": "6b510affffb0c8575b2313b12d34aa22330238fc725d6b8e4573114869737b7d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/gptoss.metadata.json",
+      "sha256": "556c65f0e6bc3e9fbf9222669fc8535b739c45d1b8e33f1693d8194c5120967e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/gptoss.prompt.txt",
+      "sha256": "a281b82cb4ff449799b916734cbdc3c7280dc2f4b89b27a65a9ac0a494c91e57"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/gptoss.txt",
+      "sha256": "1d005da3c5dc25cfe176929582a474da57913b971c2f0c5a2f124397e4f5177c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/gptoss_bounded_retry.metadata.json",
+      "sha256": "838c9f08670a515991eaad4a26b59ac4fb14be599094bdcdf0507e2360307531"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/gptoss_bounded_retry.prompt.txt",
+      "sha256": "a281b82cb4ff449799b916734cbdc3c7280dc2f4b89b27a65a9ac0a494c91e57"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/opc.metadata.json",
+      "sha256": "269026a5d26061e1ee6d90e5f96234db6095f46b4b18b9b99e526b94ab819a86"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/opc.prompt.txt",
+      "sha256": "945d004745256f47a1543d5bc0cae1a219907a4f962c3ffb1b580449eb3b94a8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/opc.txt",
+      "sha256": "ad5c76db73d082ff978d8259a53e5084272fda8c19a90d50efdd764f8510470a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/request.json",
+      "sha256": "6c3fe7b6ad7d568a2bbeabebfdd74cfa98b8fcc3518b4249a6daf46932821bf6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/source_prompt.txt",
+      "sha256": "35b5ac81330524eb3c1164fa0d64052c2d9577489515e01b55a953964c9d4407"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1.local_fusion/status.json",
+      "sha256": "fe372d11afa995ba709e739cc14671d03652470db967905a795318c0a3ddf01f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_initial_grade_0_attempt1_resume.json",
+      "sha256": "a4909145c97a8b26bc977f85515f665cca49f828a6a7642b2a4d15e96e0cc6a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.json",
+      "sha256": "f97bcc692dfd989e3336ac8eae6194f78efd4b7076d51d6bc80c2b3e12231360"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/final_report.txt",
+      "sha256": "c69f7e9222fbcc7230d2e8056e9cf384627783d844e67fd172dd303836af161a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/fusion.metadata.json",
+      "sha256": "07c48cac1b9c1addcb4da5299df954b7e97263746efa6d49c6913e9ff4a27cdc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/fusion.prompt.txt",
+      "sha256": "e248d61b08d7fcf0d964137795283bceff65145b6a79e9cfba6cfac32463e59c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/fusion.raw_response.json",
+      "sha256": "a8283f69184e99167df315c90ef8d564d3e08e83288ca82fb8c06f28ce5f1cff"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/fusion.reasoning.txt",
+      "sha256": "877c05fb4364a2cdef8ff7e4acdf4a059d96149e8262cc8cd82f4cac6cdd5afc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/gptoss.metadata.json",
+      "sha256": "b2f0c426ba4df61e76761ec545c1e255cf70b9367472f393fa5906ba1ecd0c9b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/gptoss.prompt.txt",
+      "sha256": "0a032426d15c16685abb6d92440c08d428f0c4d74d07c23b1b6428a66d0f9afe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/gptoss.txt",
+      "sha256": "f3802dbdfb863121f27ac175691db4dbcd8f431d11bc3121b61e1e3deafd0745"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/opc.metadata.json",
+      "sha256": "c5ee5aff8baf1b920e94980e06a4d57ea10d433226bb6654dfb097a33915ffca"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/opc.prompt.txt",
+      "sha256": "95721e79888e3f235edcd0f815663c57f7e3a150b2002a8f70be8e8eeefa15e3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/opc.txt",
+      "sha256": "4ca096e314aaf21cda156620b40faa92df86cde7584e3d9e9e413b28d823a46a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/request.json",
+      "sha256": "5ac29158b1555644be799719eff4ca789deaa0485f254c091593c239230ccecd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/source_prompt.txt",
+      "sha256": "c316878fb26e9ecdc013fde4d7f37f2a74066573763b0b087604a81249a65c95"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1.local_fusion/status.json",
+      "sha256": "2ddfc9e3d5fb4119df107878325c38b80301a78d9f3d0294e64f2684bb3f4f70"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/local_raw/p4_s2_terra_revision_regrade_0_attempt1_resume.json",
+      "sha256": "a4909145c97a8b26bc977f85515f665cca49f828a6a7642b2a4d15e96e0cc6a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/original_checked_proof.txt",
+      "sha256": "d6dadbbea8757b6ae69d005e553558cad2ae943bb43515f2de3f105ea59c557d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/preserved_terra_inputs.json",
+      "sha256": "ef9bd78effea9fee587ed4d17459f23e4100a0793c6396ac1008d0b7b862e3f3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/status.json",
+      "sha256": "1f61a617e1d09ed8fbd604991331faf910f3561df6ac9d2a691d340a063eeaa5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_raw/p4_s2_ensemble_revision_regrade_0_attempt1.json",
+      "sha256": "653af5b957eefa1c52b564612dfa05ccbd49df3a1cdad7dd6bb8702be34e9f27"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_raw/p4_s2_ensemble_revision_regrade_0_attempt1.terra.partial.txt",
+      "sha256": "5f35dfa1a3373d13a06288785ecab255127c52549722404df584055696426d82"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_raw/p4_s2_ensemble_revision_regrade_0_attempt1.terra.request.json",
+      "sha256": "59660f8bb1d95530590c05dbf969a8baa08ccb4d1b2acdd2825fbed19fd4e434"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_raw/p4_s2_ensemble_revision_regrade_0_attempt1.terra.source_prompt.txt",
+      "sha256": "84180b90057d6e46c4c65ed246f66b58256b8356389780d898e3c1e27d5c1c11"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_raw/p4_s2_ensemble_revision_regrade_0_attempt1.terra.transport_prompt.txt",
+      "sha256": "e6e78d00869335d52d1841c674b4668f4185ee96792190b182f61ccbaebaf815"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_raw/p4_s2_ensemble_revision_regrade_0_attempt1_resume.json",
+      "sha256": "a4909145c97a8b26bc977f85515f665cca49f828a6a7642b2a4d15e96e0cc6a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_revised_proof.txt",
+      "sha256": "6e7557eaf519254988c56be1094204886a01b6f0697d6c22e700ddd20cdefead"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_revision_blind_prompt.txt",
+      "sha256": "9bb4d2200429b67f065019b71558f01f165e820f2deee397b9465eac05cf07f0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/cold_start_original/terra_revision_ensemble_regrade.json",
+      "sha256": "58fa8e996bd59aef1312045447136cea44641175d3a5d6359a5c1aee7e5ddc7f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_three_block/gemma4_p4_three_block_full_proof_resolver.metadata.json",
+      "sha256": "39c46fd8892c3de392c4ba966c5d112015541e1e20cee8a1bc83073a1fd85832"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_three_block/gemma4_p4_three_block_full_proof_resolver.prompt.txt",
+      "sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_three_block/gemma4_p4_three_block_full_proof_resolver.raw_response.json",
+      "sha256": "742b896813bd126e2caac0c56ff3e9ead578e6db3a3c459873c994ae744f42a2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_three_block/gemma4_p4_three_block_full_proof_resolver.reasoning.txt",
+      "sha256": "c0111c23adfa5762f30dee3951d44b2eb417472ef885eb9782be6f4a9d7de47a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_three_block/gemma4_p4_three_block_full_proof_resolver.user_prompt.txt",
+      "sha256": "2750d97cbbf4a680aecf639f00914f046775674c78e5ee6d8922817e3085af12"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_three_block/resolution_generation.json",
+      "sha256": "d56eb67076136b56cbb0c236ace105068fdc45bb6666e0ad553951debea4f07a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_two_block/gemma4_p4_two_block_full_proof_resolver.metadata.json",
+      "sha256": "8f232f836a17a8ba22e4f0f0d8ddc3acfc022e22d445c19e6a3b749d4164b21f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_two_block/gemma4_p4_two_block_full_proof_resolver.prompt.txt",
+      "sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_two_block/gemma4_p4_two_block_full_proof_resolver.raw_response.json",
+      "sha256": "be1a7c8418ddb134d9457b9e1a4c92f1908c119dbf7bf94b89d93de1ab11fe5e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_two_block/gemma4_p4_two_block_full_proof_resolver.reasoning.txt",
+      "sha256": "cac31bd1fb3fedc77247572ed2a6125efdccc8e78554f435e9be86fdb675ef10"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_two_block/gemma4_p4_two_block_full_proof_resolver.user_prompt.txt",
+      "sha256": "f96e0b378e45849fc12d2d02b71285dbd6d7f0fd12361aa70338b9448770311a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/p4_two_block/resolution_generation.json",
+      "sha256": "655e47cc7fafa6ad1ff5e18ffd29bcc90d36a082d610f6553d750e74b1d35912"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gemma_rewrites/summary.json",
+      "sha256": "4fa2506db8087b3374d4de4425efe0b0315186f1f0310ea5eb1f61db443e0626"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gold_codex_audit/audit_summary.json",
+      "sha256": "8a30ebbdea849d536d202fe9c795c384352d2a8dc3b21b59f48c25f809d8be23"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gold_codex_audit/manifest.json",
+      "sha256": "f81e89065f234d35e989a82108c7fcf1729833458e7f343e04dd08416c244df0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gold_codex_audit/replay.p4_three_block/grades/a48a0979495b4365d5b9f1ee058f02a7b24e3e275da3e9fbecfa6ad607e13584.json",
+      "sha256": "191b39d3d155e22ab84eb2eccd85f740b587fd3999125370ff94ad5bda4c76e9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/gold_codex_audit/replay.p4_two_block/grades/53cb108773decfa9539fb9b15ed2539d1b5e8d03e446e9667ff8db9eca51ade3.json",
+      "sha256": "4c9c6c6d886b87366e3d587a4c247d7177538ec29103b2693d392bbcc4a8e0a0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_three_block_p4/gemma4_p4_three_block_full_proof_resolver.metadata.json",
+      "sha256": "bccb03b49ab974f28326fd39b719bad88e76478badfeeefdf86ef7d1256a702e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_three_block_p4/gemma4_p4_three_block_full_proof_resolver.prompt.txt",
+      "sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_three_block_p4/gemma4_p4_three_block_full_proof_resolver.raw_response.json",
+      "sha256": "a810e5c3af4e57a8624f91b850ba4d572ea927c532cc1fa47e5a97be7c439640"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_three_block_p4/gemma4_p4_three_block_full_proof_resolver.reasoning.txt",
+      "sha256": "dbc941cb3b5a08b8a59c9d66e461a53e494f27e0737b9a001ff0b421b14810d8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_three_block_p4/gemma4_p4_three_block_full_proof_resolver.user_prompt.txt",
+      "sha256": "2f0ded81ed55f2300df9a87ee344f4d3423741e3f0905b82ddaca13d58d3a033"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_three_block_p4/resolution_generation.json",
+      "sha256": "00f496698a89f20ff4d37fba9be94b8ca520614dc74905440f471865cc67816f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_two_block_p4/gemma4_p4_two_block_full_proof_resolver.metadata.json",
+      "sha256": "45cf695622850434482add970e382fb00df1206fac4372d83015b00e90506b7b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_two_block_p4/gemma4_p4_two_block_full_proof_resolver.prompt.txt",
+      "sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_two_block_p4/gemma4_p4_two_block_full_proof_resolver.raw_response.json",
+      "sha256": "8e3d931082164967b28cb21c74919e3ee3a19bf23fb6d016413096d09d07f7a7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_two_block_p4/gemma4_p4_two_block_full_proof_resolver.reasoning.txt",
+      "sha256": "e155eb13b3b5ed5c2f2bfc29722f07c9fd528036a1afe0b66fb97dbe332720f6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_two_block_p4/gemma4_p4_two_block_full_proof_resolver.user_prompt.txt",
+      "sha256": "2dcc96d72711e642542c524312da6041d8b56c900ef20f86e8015d993c1088ef"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/gemma_two_block_p4/resolution_generation.json",
+      "sha256": "ca47b78ee4143abaf7efb01c714e64f548cd2291e85a7cdcfda376d321b4a93d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/fusion_parsed.json",
+      "sha256": "bed1be835d0a9340a1bed0cd51edfcc9d1fe9e3cc876bfe20651956ad508c32d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "e77a41b035143f7644cc134745e3555950b4b5c128e8d73bdf9c091eaaa658c2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "44337ed9a68770b7f4046b5fa18ad70d96e0cd79c3db50a30ecdf6d196ca8074"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "763f9c776fd7fba2fce1b9ba0a6dd0c7c4e9601b9e9cea9717dafe1b669f84d3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "457c87f4c3642b474d50cfa388aa3f254198ce3af646b544d24953b3563ccf19"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_repair_architect.metadata.json",
+      "sha256": "ffd8cc6b8c7fbe527183f42f8467c207df20124bfe6405dd409950c94148936c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_repair_architect.prompt.txt",
+      "sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_repair_architect.raw_response.json",
+      "sha256": "4515ee36ab75c4d804a1748bf623638d5b963e07ee01d0d65bafdac7b8c9ba13"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_repair_architect.reasoning.txt",
+      "sha256": "06102a4539c84a60d5d75d3848f3f86648a215e9a63d56bf8cee641ff815e161"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/qwen36_repair_architect.user_prompt.txt",
+      "sha256": "67557895c45e732fe7a59fbf0923ac455429e47ad5e30066699bcd9d5b77fa58"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/repair_parsed.json",
+      "sha256": "f22a6f08b31d6658e419795f6aa77e51424ddda7a5e8378d92cbea96e0d4726b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/result.json",
+      "sha256": "819c9fc63837533d53675a978edf5c1ccf91fc3ea76839cc209670ab30686b03"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_three_block_p4/source_identity.json",
+      "sha256": "c76fcb9f62ec4f41e67b6312811b75add63cca14bbf581d727c62b1c874e3eb1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/fusion_parsed.json",
+      "sha256": "bed1be835d0a9340a1bed0cd51edfcc9d1fe9e3cc876bfe20651956ad508c32d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "5bf956152ac2608b3b61ed29526e9feda4fcb54ab74c4fabd985e90818362ddf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "678e42c9eacee6cdb87fe28624bb4f76edd02df5f49e91c74916f97ff793b246"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "dd52a907df36b7ecf484b73e6f9bc49b1320b254929c1c579b93e298f1887e24"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "15c01488d79887d54b035377a5db7d5e3ecb1b506f4e4d2867bd8677d51eec20"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_repair_architect.metadata.json",
+      "sha256": "a4f33a36b6ec3eaaea38948464752bbaa6bf64f68d09cec46c9313de5929d08d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_repair_architect.prompt.txt",
+      "sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_repair_architect.raw_response.json",
+      "sha256": "01f9b39129d771dcffe0b6c9193f40685a83496a61c03a57fcf5d687458fa40c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_repair_architect.reasoning.txt",
+      "sha256": "fad2c732d24cb6aeb92d1357193fc4a3bac990c93220da3e97a853ee877bdf16"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/qwen36_repair_architect.user_prompt.txt",
+      "sha256": "7921a32c6e9a40c82cb39eb91b9559a57bbd8ff5ff8f721e52cba9c23a9469cf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/repair_parsed.json",
+      "sha256": "f22a6f08b31d6658e419795f6aa77e51424ddda7a5e8378d92cbea96e0d4726b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/result.json",
+      "sha256": "71f30bf2897792703ff5dd0170a6aad7c5f07f4df63ad3086f4778b17292b9ac"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/historical/qwen_two_block_p4/source_identity.json",
+      "sha256": "550733de0d8b3cc8da08e8abd32a4cf0972741a7c38570b5227b6ac71ab65b59"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/manifest.json",
+      "sha256": "9b37d940ca9ad42e6bb4528a3f3a1a0b3ba4492e49cc6aa0219c6a6e3802e1b1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/fusion_parsed.json",
+      "sha256": "eb69101780964014640f453301e469d1d209ee1c74283949af958b2c3b7f2fa1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "c96e0a64309cd23141d469c8dc8f747f27c0fd43de7adc329b6eeeb739f1163c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "43da61736d2a0e5cc10ab366e26a9ebe6e7a4d72147c28180bd1be84f56fa6b0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "93bc081d4b0ec892b65f4b3804e4fff5357ddbecf20616b0aeb5be6628751d22"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "715aebecc9a08ff67e9142f0fe1f41bfd2e7b567dcc30286d5fa974504ae1ecc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/result.json",
+      "sha256": "88de0211e960919d841950d32f501b32b073ec8b980cf679dd661673a6195023"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p1_s2_first_revision/source_identity.json",
+      "sha256": "b037246ead87c99f57ca4830b859f4bae794a9b471bcbfaf323470b1cda8979d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/fusion_parsed.json",
+      "sha256": "98a040daa59969b84e1b4bd9f16598ed99114cc63c7e15f4942d6841ba010b85"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "9385ed7286d0a18781dc1bdc1fae561056080048878fc1dfcc787225dec44862"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "41aa5d0fa059ed935f02400b2ad60c215e7ce7db8ecf8878b1ad25f8d900def1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "3f0ebe04d1dd9ecc7a9f5c02f6a531b28785db26f45f019ad35e33444c2f221c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "457c87f4c3642b474d50cfa388aa3f254198ce3af646b544d24953b3563ccf19"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_repair_architect.metadata.json",
+      "sha256": "de3489ac8bf2b0a2715775f0d7c34bfb2c319a2c3a861a7983edeb726b592bf6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_repair_architect.prompt.txt",
+      "sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_repair_architect.raw_response.json",
+      "sha256": "f0ac14d1ada6831eea558fb2c809a01237b69bed09f365dbbf27df20b45264ef"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_repair_architect.reasoning.txt",
+      "sha256": "365993c56baa80c42f69a1b5146e3de921a5d2cc73b45b121318e764745638f3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/qwen36_repair_architect.user_prompt.txt",
+      "sha256": "c676eda5776a4ac4bbed56ec22a760edefcfd78e2dff0021a7f1a4626df7d756"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/repair_parsed.json",
+      "sha256": "f22a6f08b31d6658e419795f6aa77e51424ddda7a5e8378d92cbea96e0d4726b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/result.json",
+      "sha256": "a67d916d520f9afbd6a18402233888215af55903d972a3e4c59f927aeb53fa9d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p4_s2_first_revision/source_identity.json",
+      "sha256": "52e99b8f4aee611ee01192a6693de805e1af92c955df874c4d30b94715305e0c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/fusion_parsed.json",
+      "sha256": "355763a8d38ad789fbcd07ecc654b0c5a62c8e72c6f62d23a1e5de84a74fa9b6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "24f15e6c33d66463fe5a304cabd17cdb36ad1c9d2370669d06bd13921bf72152"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "06c3830d21a63cbff309198144cad85f5f520e7496bc0d01cae505eca74b5d22"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "307a272649dcbf5371be8b41e440c188f3f15f605cb10e1a86342789217f9719"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "d03c1ad3b75e6a7b9df2c3d470065def862336533f6843fc00336deb8c0505e0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_repair_architect.metadata.json",
+      "sha256": "8425d4dfb3d0df4ce9736dd0a3e9a34e9e4c0c4dc12f67d41082e8cf79bf32d5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_repair_architect.prompt.txt",
+      "sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_repair_architect.raw_response.json",
+      "sha256": "724a2f95a003328e19ccd6354d0150bb93d8b69bf16ede20d5a7b97355de7527"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_repair_architect.reasoning.txt",
+      "sha256": "4b9b7aa9743e67325ec0af4758e26e9dde5161132a6865c32083036e870ed28b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/qwen36_repair_architect.user_prompt.txt",
+      "sha256": "bcde4c2668348bee6885959d9ddf039052b682994100fbae92f4910a8b3c1927"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/repair_parsed.json",
+      "sha256": "f6af7292717738cdc771534be3a5542d63e70d3642603f05f480d61904099bc5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/result.json",
+      "sha256": "fa9ac86c596f939c8ba3c77dd9bf25d24574eb64e762e180d26735b060fd1ea0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/p5_s1_second_revision/source_identity.json",
+      "sha256": "9b124bd0671c36ac2f703bf7c1d67052e20f61d9066149628422b86daeb8ae5c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_three_block/summary.json",
+      "sha256": "a8a70f5b99db6ee3628bae93f41678924bd7c6068361cba3e61a6f73c406cf12"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/manifest.json",
+      "sha256": "eb09cfe4e72efefaea317bab655d385e130cf8ac30aeb63a656df6ae4f37a0c2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/fusion_parsed.json",
+      "sha256": "eb69101780964014640f453301e469d1d209ee1c74283949af958b2c3b7f2fa1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "914e97469071ee169fe7cad25c8b104ddc60655a66f4a33c9b99136a196836cd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "7705a0ea6d302102562d7a24d18839cd8fe0157e49fd35a2c87351723c7ae127"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "07c501c31a1e820268e93d30558ebed71939008b8439b61ecd77e400c8812ebb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "1104da84cd0fe42262439be5d2c8cbedbafa9be87f4e013fd886698f0c7572e7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/result.json",
+      "sha256": "76084e26236709419f2f0394fb9c473b2433577451fbc05438547d7e3274ffc0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p1_s2_first_revision/source_identity.json",
+      "sha256": "0e3f982df54d50a2bb61cfb71ad9143f4152c86b87aa88947b6f14ecc98860fe"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/fusion_parsed.json",
+      "sha256": "98a040daa59969b84e1b4bd9f16598ed99114cc63c7e15f4942d6841ba010b85"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "3f7a2d838ac848b4e9817b34860750bbd5de6c752099c0a3a1db67a61fd2244d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "2badcc76405d641630bf996de9ec4efcc327ff0f1dfa060d7e7ab8c424e87c38"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "d8f0dd1cc999b942eff5f1b5b515e9c986b1d7a225926caef900d73ded17835b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "15c01488d79887d54b035377a5db7d5e3ecb1b506f4e4d2867bd8677d51eec20"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_repair_architect.metadata.json",
+      "sha256": "20e892641554108aab5c3f8f0d38ebb69985ede60b63a366ebe034811a4b9b38"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_repair_architect.prompt.txt",
+      "sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_repair_architect.raw_response.json",
+      "sha256": "9cefc7f22556585032b396b4507c1ff15c01f366469c2174b1b5ab80cf7b10e7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_repair_architect.reasoning.txt",
+      "sha256": "2527a138d34a78332f3126eb2e540833c86230494d10f5ed38d86ab6e4d2a0b2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/qwen36_repair_architect.user_prompt.txt",
+      "sha256": "d29f154a24124eda56e328d1fb6bafdac9aca4094dbb39c5167f3ebbf6e5ece6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/repair_parsed.json",
+      "sha256": "f22a6f08b31d6658e419795f6aa77e51424ddda7a5e8378d92cbea96e0d4726b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/result.json",
+      "sha256": "9b585174fa8dc07fbd24044e613a723a143d7ece203edb17c54383cd6cb5a453"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p4_s2_first_revision/source_identity.json",
+      "sha256": "550733de0d8b3cc8da08e8abd32a4cf0972741a7c38570b5227b6ac71ab65b59"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/fusion_parsed.json",
+      "sha256": "355763a8d38ad789fbcd07ecc654b0c5a62c8e72c6f62d23a1e5de84a74fa9b6"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "8413c0b883f8e5196f89c273f55000508c216ed18e4a195b93d6596694af511e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "42795a8de1b8aced55cc8799f05c3da14967f1af6f54225070b25f91f6a18e5e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "6280017964c9af5fe88d41eca0d49b238f2b7f9c60b52bb176dfa1fceff1414e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "1d04617288959fb9b6fe8b0f6c2f14257dc64b07b9beb9bf9e8dbc26a38713e4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_repair_architect.metadata.json",
+      "sha256": "b7b26614da74139ed0b525898e46b6adab391cb30e0e8134e1d287117a779d19"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_repair_architect.prompt.txt",
+      "sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_repair_architect.raw_response.json",
+      "sha256": "5c3c84af887f458a09776e1b35ce0cfb1d61172489a3363c7185be5ac32b884d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_repair_architect.reasoning.txt",
+      "sha256": "090cde62beea6eb847c73773b2b01fbf0540943fce18894c91c6e4ab0b539dc2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/qwen36_repair_architect.user_prompt.txt",
+      "sha256": "54176e5a72eb770691c776736a69e235d0fded929c336c2512de82a33103b908"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/repair_parsed.json",
+      "sha256": "42dc35f2506f823456708c37b6c52fcf6deda031afb084c9ace6a44a054928ae"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/result.json",
+      "sha256": "17f1de244102fb11c6652e69e4aacc07a4c3a0e4a6aaf77104a363f93334fda3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/p5_s1_second_revision/source_identity.json",
+      "sha256": "48ea64468fefaa9e270f14d3f6a1745ec2c67a27ab861d2dd59c9d6a36ee99b0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/qwen_two_block/summary.json",
+      "sha256": "05af4e39907582c351d493303eaa98df5229a3c18745c087b0938a299e4326ea"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/gemma4_p4_three_block_full_proof_resolver.metadata.json",
+      "sha256": "a8fd27f9e04b1f0d18be2e482cf43af3ee1accaa7fdffeef1a61bef3aab97c5b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/gemma4_p4_three_block_full_proof_resolver.prompt.txt",
+      "sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/gemma4_p4_three_block_full_proof_resolver.raw_response.json",
+      "sha256": "921a98705862e106b7e87d007fe5366648c6fa3449d0acc76052cdfcd378054f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/gemma4_p4_three_block_full_proof_resolver.reasoning.txt",
+      "sha256": "67b21c7159d63f676de7b81822b02c78f4507544ffa84fc5afc91d6f088d126a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/gemma4_p4_three_block_full_proof_resolver.user_prompt.txt",
+      "sha256": "2f0ded81ed55f2300df9a87ee344f4d3423741e3f0905b82ddaca13d58d3a033"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/resolution_generation.json",
+      "sha256": "821342d5a052a66d911756e5fdc808545f10e2c9d909386370cbb2d34b4fd100"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.metadata.json",
+      "sha256": "6b6417278ffd77502e058c858827c856678fc72db9625f43f6462abc3d5a9338"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.prompt.txt",
+      "sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.raw_response.json",
+      "sha256": "17fca73f12d95961c15a37e981a7d529c11b51e1245f2351378b98853f366b7d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.reasoning.txt",
+      "sha256": "7823bc4705556c9574297d47d2b82b2c441af088e11e31929a4da66b70d07c70"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.user_prompt.txt",
+      "sha256": "2dcc96d72711e642542c524312da6041d8b56c900ef20f86e8015d993c1088ef"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/resolution_generation.json",
+      "sha256": "87c0948e8f74a78e76aefdb4848ae59fdff482209d723449d9a7a086290ed054"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/gemma4_saved_handoffs_summary.json",
+      "sha256": "ffe5e02077c7ead7085a7502babc9bfab57ded7d498a1d7f69ebc561ceda0ca4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/fusion_parsed.json",
+      "sha256": "98a040daa59969b84e1b4bd9f16598ed99114cc63c7e15f4942d6841ba010b85"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "3309add064bb5d7908a7a78227f1d6aab6dcf7118b95887222bb77211fd552ff"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "d4ca9dddcd8772bec74a4b74b34446d330b6617b6f2ada44b8f754c2d5a24931"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "059c3b1e7d7290c9d1b52d16e72e81ddc43bde908fa9a09e34e755cd03826ac1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "457c87f4c3642b474d50cfa388aa3f254198ce3af646b544d24953b3563ccf19"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/three_block/p4_s2_first_revision/source_identity.json",
+      "sha256": "52e99b8f4aee611ee01192a6693de805e1af92c955df874c4d30b94715305e0c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/fusion_parsed.json",
+      "sha256": "db81a5c3aed81074b682dd6af20b890b29e0e7ac0c2997e57d248fa2cfc4abab"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.metadata.json",
+      "sha256": "4ceec485620c7cd32bbaf8d0b74f837cbac6e7868b576c5009442929e7c70f41"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+      "sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+      "sha256": "88c8dd3b672351e894adb066cf47b364df9ed19f66c6517eb9437a8fce26fe9c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt",
+      "sha256": "abe9aedb6acdeedfd7136830fd877bffefd41444e9dcf778399c2c8112811606"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+      "sha256": "15c01488d79887d54b035377a5db7d5e3ecb1b506f4e4d2867bd8677d51eec20"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/qwen36/two_block/p4_s2_first_revision/source_identity.json",
+      "sha256": "550733de0d8b3cc8da08e8abd32a4cf0972741a7c38570b5227b6ac71ab65b59"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control/status.json",
+      "sha256": "97e8c4eea83ee611038a2c8d906ea49542f7482423a63541ba701ad853ffabbf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control_gold_codex_audit/audit_summary.json",
+      "sha256": "6a866cec26ed35bf7264482432222606983e117e430bf7a10d471087d5e73502"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control_gold_codex_audit/manifest.json",
+      "sha256": "b6b9c3afce3af7af3ca6fb91f1cae14191a48fe1dda550fe10955dbb11177bf8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control_gold_codex_audit/replay.p4_three_block/grades/13f58a927a37b2d8f60a67d26a0af2bf630262d3820e1e00954a4b360b00f1c7.json",
+      "sha256": "169be8b5879eb38f12370f0aeb926ce6f539c063e4916ba4a57ce65404083510"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/reference_run/saved_handoff_control_gold_codex_audit/replay.p4_two_block/grades/457c9f964ad249ce7ad00d1fb12b8a941f25bcffed0bfb16147c2dee16a31282.json",
+      "sha256": "767aa07cfe500e5e1803568ac4e0c826afcb0887b24fd6fe14b8495a2c1572f4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/snapshot_manifest.json",
+      "sha256": "5ce29aa2062875c392f69c0dbb7a031357079d9418a361a8127f2f2ed920e01a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_37_bf16_gemma_two_block_stage12_20260822/__init__.py",
+      "sha256": "fb039719cceced6089e6a2509a40df10571b32aba6467dbb1a9d674ee5dcaa52"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_37_bf16_gemma_two_block_stage12_20260822/pipeline.py",
+      "sha256": "28ff5acaef78c6d9dd4c0ae5c132e01e9b2839d77a8cd5e92aaad47762c77076"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_37_bf16_gemma_two_block_stage12_20260822/problems/imo2026_p4.json",
+      "sha256": "2e964a45b0cae292439e29d49a39d67062727ee15484838b7571b6dbe0b4a4aa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_37_bf16_gemma_two_block_stage12_20260822/protocol.py",
+      "sha256": "6eac7af8ca353a73a9bcc90852fd3c8848a71e4ede1f70f956d64ab50893b9af"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_37_bf16_gemma_two_block_stage12_20260822/runtime.py",
+      "sha256": "840ec87faddd20b3510810ada2553a1b5ab52ec9b7c7686b5585fa6db10f2a4b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_38_qwen36_three_persona_review_fusion_20260822/__init__.py",
+      "sha256": "595784b096440889dda0afb30fd0c990e83221689a6cf563f0f3e5944cf95694"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_38_qwen36_three_persona_review_fusion_20260822/launch_gemma4_bf16_mtp4.sh",
+      "sha256": "64e9f31a5b46cae01ac48729167bc8de2ce7918c7a1443ff3a641f82420d8497"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_38_qwen36_three_persona_review_fusion_20260822/launch_qwen36_bf16_thinking.sh",
+      "sha256": "f9efc7cd30255fbce9840b577163d5f4f471b16f7ce2ce50bb3ad9c85af1f201"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_38_qwen36_three_persona_review_fusion_20260822/protocol.py",
+      "sha256": "4b22cfac486d1850d80b7efbfe4e67206d60c71e19ec6448b50c467cd8937e51"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_42_gemma4_dual_prompt_max_thinking_coldsolve_20260823/__init__.py",
+      "sha256": "18db4a7c7ff6e06fd938446a858548b1d3744158d8a16fac166fa9aab73e90e5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_42_gemma4_dual_prompt_max_thinking_coldsolve_20260823/run.py",
+      "sha256": "0ab85dd126ac482863453318f64dffa0ad579201dded7134ef903c2bf9e8821f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_43_gemma4_replaced_proof_contract_coldsolve_20260823/__init__.py",
+      "sha256": "6a456126f995c02817ae7d0ffe2aa4d98eee4572e110f6c32fe2479bd252fe04"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_43_gemma4_replaced_proof_contract_coldsolve_20260823/run.py",
+      "sha256": "3cef44b9c68f67a47300b2ee1182bd80d1a0c6fcda65e6f1b8ab1f33d398540c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_44_gemma4_high_stakes_gate_coldsolve_20260823/__init__.py",
+      "sha256": "15cd636e0d1ed725c1708d716ed800e1066032bf8a5f73e8718b3b3faec7f1cd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_44_gemma4_high_stakes_gate_coldsolve_20260823/run.py",
+      "sha256": "b7c3cee1dd1f9d41a3c6408a64d1ca8367f70d9609a979f28dd3e48bc1e35a95"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_45_gemma4_high_stakes_no_checklist_coldsolve_20260823/__init__.py",
+      "sha256": "3b686b77cbf8bc5cda704e738e2d628c2411f91365e362afcd4df1c7d3d44925"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_45_gemma4_high_stakes_no_checklist_coldsolve_20260823/run.py",
+      "sha256": "ce2604fe1c223ef140574100d3ca232d5eae9bc8c96e9706cc82a7ea5b6b7e84"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_46_gemma4_temperature_portfolio_20260823/__init__.py",
+      "sha256": "ad9fc1540b49b5f2fb7ac836574c97f79e31d33af25ccb8d05e549c0c3cba894"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_46_gemma4_temperature_portfolio_20260823/run.py",
+      "sha256": "c02d41311197f096bbcb3df4afc6d966064072f315de3c45ceb32397a2911861"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/__init__.py",
+      "sha256": "77e085edbfb06c2ded719044c55df03ad567336c830271d8e32a687ff4dddc51"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/contracts.py",
+      "sha256": "4bd3849a5af74815e54bfb0f994eede289a8ec1a0159863db480ece43e318590"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/lazy_expansion.py",
+      "sha256": "fa64e72516b39dd42ce62e1bc071964c2d0c86e6634dff68188baa97f45a26ea"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/numeric_classification.py",
+      "sha256": "c84c7eddfebc92a197c861e8fc91e2a74c9072b5d2627c3e0406298f21091848"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/prompts/lazy_in_place_proof_expansion_v1_20260823.md",
+      "sha256": "205d804d5572c9b0b5ee756e29ba949a6e7754036d21b6fd8109cf4ccd50cc52"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/run_six_candidate_lazy_test.py",
+      "sha256": "409f548edc897f0211353528a27d676d5157efee761c7e7878be563e195fc3ec"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_48_multi_problem_six_candidate_20260823/__init__.py",
+      "sha256": "91f896bc3cdba2118ece8ab0d4156e4d6654b463b9b82210610e88869ff94e9e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_48_multi_problem_six_candidate_20260823/run.py",
+      "sha256": "822e9bdb3c54fd1cc8f6aa5f2af36da136d1a85d522fef88e63307d62d5e1db0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_49_reviewer1_temperature_ablation_20260823/__init__.py",
+      "sha256": "b35c1dd6cee2b99f16bc79a180cc99d92bc0c16b097d179489f9bbb45ad46845"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_49_reviewer1_temperature_ablation_20260823/protocol.py",
+      "sha256": "0088a37c39159f8a23a9a13ce6d68b283979bcd2acd0a018a7dc2adecf54d518"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_49_reviewer1_temperature_ablation_20260823/run.py",
+      "sha256": "f1add78a1187384439e9f388e9462f7c292d9f583fab90a505e573f9f1f49d20"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_50_reviewer2_adversarial_20260823/__init__.py",
+      "sha256": "11c1876f3bc45ddbf87365e49737f13b67b334d99cb354932592f6962ec74522"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_50_reviewer2_adversarial_20260823/handoff_qwen_t04_gpu0.sh",
+      "sha256": "05825c3060afbc62e50198f1292828e889668a1952281556ae169dfe2f066056"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_50_reviewer2_adversarial_20260823/protocol.py",
+      "sha256": "5aef28d9aa4785ca7e3854b73c20c54910d4ccddc5709025ff373ce0c1e262d0"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_50_reviewer2_adversarial_20260823/run.py",
+      "sha256": "bce3737e250279b43533049f687eeb3fca16775396306d2d3f36b35905e37eac"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_51_reviewer3_certifier_20260823/__init__.py",
+      "sha256": "aa9244c59dbf9260dd78ecc049ee66d88061d94321d518ea1b2b0ae9412ab4f7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_51_reviewer3_certifier_20260823/protocol.py",
+      "sha256": "eccb6918c5464d2b64f396bcf782d89d99818399d7922dcfc151226f660a8879"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_51_reviewer3_certifier_20260823/run.py",
+      "sha256": "2a50a37fc83923e647036a7be02e3afc876cebb189467456614660e8854e1ce4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_52_fusion_20260823/__init__.py",
+      "sha256": "44650e0bb4be324a5bbbafc5b7efc6af9a5769c2abb4a7442d4c4142679d4124"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_52_fusion_20260823/protocol.py",
+      "sha256": "ccb74e5bfc28f72766f36208b0a9d1be3941b3c0994f69422b00e7020a995725"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_52_fusion_20260823/run.py",
+      "sha256": "3ef6bd2056bd6263f765a52708e7d52d78fc25610a5a6d41d4f8f626da8b9d24"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_53_fusion_20260823/__init__.py",
+      "sha256": "3ec9441c919ad567029a0ddcf5ee8258fedb3a38a61dbec33358eaa1309ce83f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_53_fusion_20260823/protocol.py",
+      "sha256": "82200768ec47b6c0167aabf5aab47f2706d80aad0d1384a513f33cac5b7b6f64"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_53_fusion_20260823/run.py",
+      "sha256": "066bfa3c739983a7e6d05a9458f46ed9f002e68f0514d6e00d60fa5987bd086a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_54_resolver_20260823/__init__.py",
+      "sha256": "e12b9a020b36e46cd4e5aeb882aa8fd8d77138e9877fc76bf0c8042ec5c97835"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_54_resolver_20260823/protocol.py",
+      "sha256": "ee1c019ff3f8ad6e2b87d6b16e1cab995936eccb688606047cc57ae9aac58780"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_54_resolver_20260823/run.py",
+      "sha256": "c931793eb6c30434c852a1b0ae74d4dbe52591e8e4246b3c14a36eae8436d35a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_57_v030_cross_model_pair_dossier_ab_20260824/__init__.py",
+      "sha256": "a82104c949c18c812f9aecc0df98f8b902e26d316a70ecc9997ca73917387271"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_57_v030_cross_model_pair_dossier_ab_20260824/protocol.py",
+      "sha256": "81968020e4c2ba772d3ad783235fe89f7fcd68628b26a01d28393207704a9431"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_57_v030_cross_model_pair_dossier_ab_20260824/run_arm.py",
+      "sha256": "64068d8059108c5847b15822d40d16e918caf198b82c508dfa07927096764860"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_62_dynamic_terminal_composition_20260824/__init__.py",
+      "sha256": "ee733c1e73e592df7574db0484a7747e39f24ea670e8242c6d262f2a8b75c2cf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_62_dynamic_terminal_composition_20260824/protocol.py",
+      "sha256": "5f61382316dfb4bfb2b5c4f6d124cb2e1228c28e83d47e4db5eaa09aa868acfc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_62_dynamic_terminal_composition_20260824/run.py",
+      "sha256": "b05b047d239ebf0dcb31546e1c8fb4e6bc870a35e089d980a4be6fa5941ca0a2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_63_deterministic_lemma_appendix_20260824/__init__.py",
+      "sha256": "8d44162ee466a2c1f4da08ba64bcdf082d81ba4f4edc20a8f9af86ad819360a2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_63_deterministic_lemma_appendix_20260824/protocol.py",
+      "sha256": "2b613abf0378c744852c9bef91e0c11fd5357010fe48690043deaf8df9fa3e0a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_63_deterministic_lemma_appendix_20260824/run.py",
+      "sha256": "9688bb3f1cdbd70ebd3b6fbe9e924ec6f1c3658fdea7785f3e95057f13a692e9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_63_deterministic_lemma_appendix_20260824/run_failure_guided_salvage_surgical.py",
+      "sha256": "ea433b7e03f4a1ecfde7a8b1909e1bb69067082a0dc6f741de2081eb6b806762"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/__init__.py",
+      "sha256": "fccd3ad353c35e1c3cf617a5f29c47ca6fb0c3287330732f637f748d8a8dad1e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/contracts.py",
+      "sha256": "8f3a5167729209722a94db513f110ae8cc030d9cfba044bd2dc25524b087d6cc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/extraction.py",
+      "sha256": "0df18dec32844ff6e47c96d03b67f07d2982919b1a4fdcc411fe0eeeeec8e304"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/gate.py",
+      "sha256": "1205b1608d50ad5f997f9ee8c0025e3d7d3f191e6bbe98517c58cccc6678ddfc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/input.example.json",
+      "sha256": "5210b26ac3c4ea693e36f65f86c42990b32d746e93c44b6f8464aa0c60d0a7a9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/lemma_proving.py",
+      "sha256": "809306c3d79059e9006299059cdc22690425a802da4214e3fde3ea47441ec0ca"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/model_runtime.py",
+      "sha256": "d940dd7caa9f0b247bae7640b37ab7b0ec71657bb1c1bba617c71a6662ebc998"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/pipeline.py",
+      "sha256": "a41d6cf74cb716a0a7af5e7a7cc55977d2d50c9871573dc42e07ce7c460deab9"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/prompts.py",
+      "sha256": "a5bf34f46e3a7a6b2da5c0e9dfbcc73a835c50c89e4339b36b1011a3b127aa4d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_64_modular_two_proof_synthesis_20260824/synthesis.py",
+      "sha256": "b93dc854700aba26289b1398da18f6c90b449feae6b68b2353609f88a24baeb1"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_66_modular_six_to_two_proof_selection_20260824/__init__.py",
+      "sha256": "16d89dcb2f25328ca67dafebbda3940d634351b2d65aa1c4c343e762afc5c66b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_66_modular_six_to_two_proof_selection_20260824/contracts.py",
+      "sha256": "4410f4e547e3cdbeb3936eabbf3a63d3600f4d1f4b0643d9b8bc185ea04ed882"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_66_modular_six_to_two_proof_selection_20260824/input.example.json",
+      "sha256": "fa4b353e3cbcb09fd9c92077eda7ebaa3b41a3d502c5263d5a97bac9fa75f611"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_66_modular_six_to_two_proof_selection_20260824/pipeline.py",
+      "sha256": "f6b3dfc1cd8309900ca0b6f439e2936829cf2ca76dfa55421ebc7ef359593c15"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_66_modular_six_to_two_proof_selection_20260824/prompts.py",
+      "sha256": "79e97d0971808f8637adc4a0c2120d90160472fe787637f2bc563f2a27f2db83"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_67_modular_six_track_generation_review_resolution_20260824/__init__.py",
+      "sha256": "851d7a86ac1e7184f3debcf820140b9df0267f2b3b39f6e75c7f7eb2637b8e01"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_67_modular_six_track_generation_review_resolution_20260824/contracts.py",
+      "sha256": "0d367db87fbcead6c4aad80fea6571978d1af33811739d58bb913646d492ca54"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_67_modular_six_track_generation_review_resolution_20260824/input.example.json",
+      "sha256": "49670a385dcd14ce7546ede10658c67697a6de1919ecf34e7a12018b4d05cdab"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_67_modular_six_track_generation_review_resolution_20260824/pipeline.py",
+      "sha256": "dd9b10c22de4247a0fccbf9980ef38d0d7a6576379c5cc1ec75c6cf31cd45489"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_67_modular_six_track_generation_review_resolution_20260824/snapshot.py",
+      "sha256": "5e4d7b4de8b678173513ffd6a1d8dc37bb92a60aeb3b24d7b2aa98b2fa770f88"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_69_modular_post_v067_compact_json_recovery_20260824/__init__.py",
+      "sha256": "5aee205c90de15b2dddd228c580ef65453e983283aa4fa72bdb5de6161a15526"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_69_modular_post_v067_compact_json_recovery_20260824/contracts.py",
+      "sha256": "756acd41a52e58ee69f357637618c2a2762db00df8aa7b9a7f4ce0f303e2fed7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_70_modular_post_v067_compact_json_cleanup_20260824/__init__.py",
+      "sha256": "83d321f7a892837dfec3ffe2e3ecd3ea45970aee0d7ebfc09cc11ceb7db07e10"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_70_modular_post_v067_compact_json_cleanup_20260824/contracts.py",
+      "sha256": "db16ac2d31480cb256a5dae30f85400062b56a612430ac0c229572034e06e51b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_70_modular_post_v067_compact_json_cleanup_20260824/recovery.py",
+      "sha256": "3b332a2e31addc9d49d6891dff2124185afad6afb3cfdec645d37f53ab41b597"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_71_modular_shared_lemma_memory_recovery_20260824/__init__.py",
+      "sha256": "7292d7b410b6270d9b0e2d414bfc77f01b89b1a146357240390a66d394accfc3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_71_modular_shared_lemma_memory_recovery_20260824/runtime.py",
+      "sha256": "1ce2858630c53fe8e264c975fa791230e2de98297954e2880c43b6274c2706c8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/__init__.py",
+      "sha256": "bba38d0673102dce9f3af092514de60190bd35185fbe322b2d9810b1122b4aaa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/contracts.py",
+      "sha256": "493ac0288516cc7be6c33967683c72a53267b9c31a99358bc5500d6da7fc6311"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/extraction.py",
+      "sha256": "315b7fae0d3c282a579961f40094854503b886155469e1ddb0556298b1b05048"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/gate.py",
+      "sha256": "6348eb235e9582223f2cbb7f88cf3f1422c576bcca0b5e51d2f7bb911888be95"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/lemma_proving.py",
+      "sha256": "3f825bd04aa81c87cb337a23f4e94012d4d944d8e8a820dd5ac48c72db6f1d47"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/memory.py",
+      "sha256": "029560bebeb0fd1d52f36a7021a6438c878ddb77ec86899398b75284d4785e8c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/prompts.py",
+      "sha256": "8dbc708f6098f3b9da2b3538c4f477af0932f460431bcfd1a4cafed717862dd4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/runtime.py",
+      "sha256": "75bbd3791fd78fbfb2de4c3f5e77bd1e66d6d6cb3e8bc3b98aebc36066cae474"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/split_verifier.py",
+      "sha256": "7ee7018fe7421a306a27ac0a623e81e3f646b01046445abced86ac8d796edd67"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_72_modular_location_aware_split_verifier_20260824/synthesis.py",
+      "sha256": "bc50b3b10483c9b614481cf9f69b327f458856ccc0cba273afc705135181be0e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_73_modular_full_lemma_body_synthesis_20260825/__init__.py",
+      "sha256": "db9df2c5d2dd2b6f3d9675ce5ea4deb32d53fa37aa3e63c18c7619fa38984fbf"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_73_modular_full_lemma_body_synthesis_20260825/contracts.py",
+      "sha256": "29ee608980a73a7fcae336360550e44be2189c8f968eda8f7f58a7e9618ac934"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_73_modular_full_lemma_body_synthesis_20260825/prompts.py",
+      "sha256": "45d9dd8492385b247c7cb730ef211c5f9834e5192308bb33fbfc65d0584b49e2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_73_modular_full_lemma_body_synthesis_20260825/synthesis.py",
+      "sha256": "90846a8f8fb01b3759ab4141108aa796326b85c8ff746056d097aa6e9d366e25"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/__init__.py",
+      "sha256": "9bafe4a58cfdfa4694827903a2ded39174edb485a55e82e81fb8ff50ab7a409e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/contracts.py",
+      "sha256": "0102adaf8948e68e00f5eb19ce06583272dc67becded35625483f93ce42191b4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/memory.py",
+      "sha256": "86950ed4eb7b5647eab2e44dc999f2294742edfa9c5987bc6cfe831356d28cfa"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/prompts.py",
+      "sha256": "86ce9742543ac6440e7f59bce7ec0e77363c81272eb3293feac23e96f498acad"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/salvage.py",
+      "sha256": "0ffd9530759afb3e3f378892949aa46e5c8fc1b6c6637d28e6b60c6b360b07a5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/shared_leaf.py",
+      "sha256": "cd6d4b20de7cc938310431d4506b9316a7b53ba8a07c5a4f42c031190e52e327"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_78_modular_failure_salvage_statement_only_20260825/synthesis.py",
+      "sha256": "f34c2cf8b6af942fe70833b7b2da6974413494ea13f9f7466b58ed300b6aa35a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/__init__.py",
+      "sha256": "63c2118ddfb48aca32c8ebdaaa781207f3268720ec4078edec994447eadb7095"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/full_leaf.py",
+      "sha256": "2a7ea54a7700123aad146a9886ae77a06bd0238632e9120de551f752dfc28e55"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/full_pipeline.py",
+      "sha256": "2c587e0b64d99614c495e84fb5d106208f1735d6657e775f70cd84a6f75c442e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/retry.py",
+      "sha256": "479ee7e82810deb49781a348a42657c4371be0238c79c6e81fd51270e3a97457"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/run_enriched_high_stakes_resolver_2.py",
+      "sha256": "105d88866f6f9d10488752b9384d8cbe083b110cfe7d198ccb81ce76469f9c38"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/run_gemma_repair_qwen_rejected_full_body_4.py",
+      "sha256": "0976146c96477722069b59be8dace8bac9fbc1643a4b6c5af6a0bae54c167708"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/runtime.py",
+      "sha256": "22ab9f9b6194b14772be0bc2104637099aef6521c2ed795de74db7dfd96ff1ba"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_79_modular_singleton_atomic_retry_20260825/salvage.py",
+      "sha256": "4815891bc080400391625aa9d8e550a1909d238acf8da20a45601bbc78e9e360"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_81_iterative_dual_memory_loop_20260825/__init__.py",
+      "sha256": "a02476fb3bf43792c8ec917561d3e3c074130164becc760e253ecfdb43a267a7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_81_iterative_dual_memory_loop_20260825/pipeline.py",
+      "sha256": "1661672fcd2ca65959a3eb5e9d6ac524d14aba1e1b9ae767ad77523c35ea09cc"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_81_iterative_dual_memory_loop_20260825/prompts.py",
+      "sha256": "acd6efa53db45e0cbfe2294675c5fb5ca0a902178d7586734f9441672b11d8de"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_82_contextual_surgical_memory_20260826/__init__.py",
+      "sha256": "97098e2e6b8ae79d3c95a5d87095aa20e5ecfa4c6e26f1c906d267e40403cea8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_82_contextual_surgical_memory_20260826/contracts.py",
+      "sha256": "65753f62f4194b3f6c34b7f8563824242dea60dccc398b4c35b5924b332660a5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_82_contextual_surgical_memory_20260826/pipeline.py",
+      "sha256": "b3493fe38e4ff145fc3f2a64706ad75796e31f44ccfa83ea2a0a8e3b12fd662b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_82_contextual_surgical_memory_20260826/prompts.py",
+      "sha256": "e55514dd1757d674ceb488d3a1d20ef6e31ba57b52b2a78a77f40cd5d52fd072"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_83_batched_dependency_dag_20260826/__init__.py",
+      "sha256": "321f26d30cbcc8ec2df77176b46cd14eab1c8bce663c04c90c81c07fd621c523"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_83_batched_dependency_dag_20260826/batching.py",
+      "sha256": "defa8fc95a56b6b9931f92db6fff8df1e5503b7b55a7b580bb5f2f78da775217"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_83_batched_dependency_dag_20260826/pipeline.py",
+      "sha256": "557d70359c5c7e9769fbf96fd2aff54fd2bf3a1a34403b8c8fc335075c5edbed"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_83_batched_dependency_dag_20260826/run_gemma_trace_gap_extractor.py",
+      "sha256": "eea53a3e5a6b952c07c947b6bcd5d5199d17206a53e391aca77c0605b2de9d0b"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_83_batched_dependency_dag_20260826/run_reviewer1_thinking_augmentation.py",
+      "sha256": "91afd034f4273308535b117a85e4e6574c61dd21011814f1e09a30658062005f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_84_trace_resolution_batch_20260827/__init__.py",
+      "sha256": "6a9f0b0647a300b7067a8f79b15cb63822b0351a37fe4d1264a419194c06a8c3"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_84_trace_resolution_batch_20260827/corpus.json",
+      "sha256": "c4caf76e6f8f6c72599cf29cd6454c690733160b22705e91ec4b71bb8ef0fcbb"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_84_trace_resolution_batch_20260827/pipeline.py",
+      "sha256": "65cb3a0f5b0bb9a5b1bb372d3795b8a61146983283bf48ce331e0946df39a016"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_85_nvfp4_single_trace_resolver_20260827/__init__.py",
+      "sha256": "c6cdaa5812f373ee1baafc96f96ccce2b1273cfe90ea5b27cc84406906a1dc9c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_85_nvfp4_single_trace_resolver_20260827/launch_gemma4_nvfp4_mtp1_xgrammar.sh",
+      "sha256": "83aef5ef4480a8896102fdaca61433fe3d380eb16464bfc79d5d0f6b385ec0fd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_85_nvfp4_single_trace_resolver_20260827/launch_gemma4_nvfp4_mtp4.sh",
+      "sha256": "df5af3c5c1828bb4e199e5025050e479388ca77c4ec04f6fe5072e44c3bb59dd"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_85_nvfp4_single_trace_resolver_20260827/launch_gemma4_nvfp4_xgrammar_no_mtp.sh",
+      "sha256": "e1b840d8eaf3f2d62935d1063e481df7da6c27222aca2354c2ab0953aef8ff4f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_85_nvfp4_single_trace_resolver_20260827/pipeline.py",
+      "sha256": "68b249d11dcc8c3f011c226b21bb116d8c5eae607adf7be520629dd7d64d6da5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_87_markdown_trace_extractor_20260827/__init__.py",
+      "sha256": "84c2b5bc866388ff811e4b516843a85c8cd7cbdc3e09706af3ad1ffc1dc3eade"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_87_markdown_trace_extractor_20260827/handoff_mtp2_after_mtp4.sh",
+      "sha256": "0733e71355e74925d21faae95656e2e5ce0107924240dd46b000d1aac6cb8587"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_87_markdown_trace_extractor_20260827/launch_gemma4_bf16_mtp1_xgrammar.sh",
+      "sha256": "a568f0dd30c6afebac5be7a00d89535a6749161003d88007a7018c65a3173dc2"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_87_markdown_trace_extractor_20260827/launch_gemma4_bf16_mtp_ab.sh",
+      "sha256": "d4378304f7334974769a36fa07f1956de724f8af81f3605318945a3b45d01aea"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_87_markdown_trace_extractor_20260827/launch_gemma4_nvfp4_mtp_ab.sh",
+      "sha256": "9b0a978c7fe1478ace1459d66ca6093fda9d28fbb190e241c8385c1629bfb5f5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_87_markdown_trace_extractor_20260827/pipeline.py",
+      "sha256": "0faa60640e63130a4bb1cb6222e60d0d5f82436932e1f4bd8ca92798e24ade50"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_88_bf16_mtp4_trace_gate_selector_20260827/__init__.py",
+      "sha256": "c36eec29a0e7f8e7b3a5a0a3a6f4e9eae265a8c4c2c74258cbb04151749be79f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_88_bf16_mtp4_trace_gate_selector_20260827/pipeline.py",
+      "sha256": "616ff9505c4c0878c185b2aa3dea71602d15884c83a22345966ee685bec428e4"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_88_bf16_mtp4_trace_gate_selector_20260827/run_reviewer3_audit_after_main.sh",
+      "sha256": "7ef5df7d362fa1d35ff8370e5dbc41ba9464057d4fdda32d1b77d15c50106cf7"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_89_conditional_gap_selector_20260827/__init__.py",
+      "sha256": "1b76f76e1742c4a40903bb24922fe15b4cd18568344d433f7dcfc634f8fd417d"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_89_conditional_gap_selector_20260827/pipeline.py",
+      "sha256": "cb67fce545179bd2d4d888b28296b61b4c8617bbcf7440a109ba54a7fa21dd47"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_92_scope_matched_gap_selector_20260827/__init__.py",
+      "sha256": "739c76c677d2b8d4b297c1c92c0b71884d53558fffb46d78b10cae71064c133f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_92_scope_matched_gap_selector_20260827/pipeline.py",
+      "sha256": "3256a701da2892ee469b62e9deb75179d2c741c61df895748c905aca2085b11e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_96_generic_enhanced_review_fusion_resolver_20260827/__init__.py",
+      "sha256": "542c82ceaad1ffb402810cc1520a7ef18bb86b3943eb7eec78848ca06023da9c"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_96_generic_enhanced_review_fusion_resolver_20260827/examples/p2_t10_r02_replay.json",
+      "sha256": "891ff763e159141d01bbb42028048802136736917997fc8ec1ede454638b3fb8"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_96_generic_enhanced_review_fusion_resolver_20260827/generic_adapters.py",
+      "sha256": "1d291e2c4ca80926469bfe4e86bfd79053ca1ee72a4acdf67d7118467a2598b5"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_96_generic_enhanced_review_fusion_resolver_20260827/run.py",
+      "sha256": "808782605544553c68ea944aa450e90beccf481318ef2c77e08cbd4a30f55f80"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_97_four_proof_raw_lazy_enhanced_pipeline_20260827/__init__.py",
+      "sha256": "6f53dd27825a2f27ea8a38542eadf4ec4a360e4c3c25939c091ea2799528359e"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_97_four_proof_raw_lazy_enhanced_pipeline_20260827/run.py",
+      "sha256": "ed7fd1a0446baed9649ce10c0966b7d6fd1142d92c2fe2f49b95e6d6f668081a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_98_batched_post_resolver_gate_20260827/__init__.py",
+      "sha256": "9a0aac9606b26ea2ead7e85242fc20032944f4d990fad28f9d3f4d0de6641b96"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_98_batched_post_resolver_gate_20260827/run.py",
+      "sha256": "890931321760fe451812ef37e20623d9d534be2d3607fcd7c07642f57ad07746"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_99_semantic_obligation_grouping_20260827/__init__.py",
+      "sha256": "570273dc237af00f9b5c3d40fd743e86815d58b8aa8da145cf34f850b8f0f18f"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_99_semantic_obligation_grouping_20260827/pipeline.py",
+      "sha256": "e27ea5ecef2fa1ae92ec1d14d9c7a529debf05d7c5dfa32cb1d9b12659b6cf74"
+    },
+    {
+      "path": "experiments/local_math_verifier/frontend_portfolio.py",
+      "sha256": "8416579b562e075d88b0624caa083bbe1309ca61c67fb14014535a6b4cb4ea07"
+    },
+    {
+      "path": "experiments/local_math_verifier/runtime.py",
+      "sha256": "eeb85a5a9d5a354456e7f9e53d09868686203bfaa90b27305bb843e55155a1c1"
+    },
+    {
+      "path": "prompts/fusion_diagnosis_proof_submitted_v1_20260822.md",
+      "sha256": "e768019eb107146ee8a177edb69d49824ae2c7436895574e665d46eccfa789c5"
+    },
+    {
+      "path": "prompts/repair_architect_frozen_handoff_v1_20260822.md",
+      "sha256": "7b4a0e3496000854331e97e7fb99c841a91acf30a1671edac07622fbe7000ee1"
+    },
+    {
+      "path": "prompts/repair_resolver_full_proof_v1_20260822.md",
+      "sha256": "805d0c29ba6e6b09f03c63b5680e453432a9b20eebadb854f4965f3b52391197"
+    },
+    {
+      "path": "scripts/run_imo2026_p1_p4_cutoff_gold_codex_audit_20260817.py",
+      "sha256": "528e3639a90d6b3e6daeb9488696e9239bdf4784ec6fbbf31589c91ee7f06537"
+    },
+    {
+      "path": "scripts/run_v0164_nh_groupwise_multicycle_cleanup_20260902.py",
+      "sha256": "a2d3e8ab881ddb8ea862f8a4ce1f83c2e00cc54d01631ce9580cbdcfc066a531"
+    },
+    {
+      "path": "scripts/run_v0167_fusion_nh_cap6_three_full_cycles_20260902.py",
+      "sha256": "eadd77060b25ba329a20d07490a64946ae830351379d0589e7013deb9c75aa72"
+    },
+    {
+      "path": "scripts/run_v0176_full_validity_prescreens_then_v0167_three_cycles_20260903.py",
+      "sha256": "b89d9aff793e828f64b97301470b417aee228d5a93d9c37b411bd5bf2dd981bd"
+    },
+    {
+      "path": "scripts/run_v0183_gemma_bridge_certificate_portfolio_20260904.py",
+      "sha256": "b80c3a426c25b948a51c5ef4e5e760713072a0c91d8ec3bca248426748d542bd"
+    },
+    {
+      "path": "scripts/run_v0184_gemma_s1_bridge_budget_forcing_20260904.py",
+      "sha256": "71a1b4e3e455381cbaf662715d3f91a85d861e0b2fc308c8822012a09bb514d1"
+    },
+    {
+      "path": "scripts/run_v0220_gemma_global_tool_budget_20260904.py",
+      "sha256": "1339a7c3aaedb58fe414c1bb12611318f4a8a30460212c55f6ce309f0e6b701f"
+    },
+    {
+      "path": "scripts/run_v0221_gemma_constrained_tool_router_budget_20260904.py",
+      "sha256": "249549f950eb0cb52184e10c7276e7563db54efa5aa7229a853382e77d40baff"
+    },
+    {
+      "path": "scripts/run_v0237_gemma_markdown_tool_budget_cascade_20260904.py",
+      "sha256": "4ac4b9932d0f3d7230a1d625cfb61c518d79ff808997ab942cdb54443ee45e20"
+    },
+    {
+      "path": "scripts/v0236_markdown_protocol.py",
+      "sha256": "bf2d54620f1079a935b9e1e4cf6338e720994d547bf0442e1870e98f16aa1a18"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/__init__.py",
+      "sha256": "d144ff5535aaa340979abeaacfc399b843023396261603331779caf7ceed6476"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/__init__.py",
+      "sha256": "7d7827fa68f76ae6deae3d4b1d012db757f079ade91a4a4e0273c3aaaa7bbcfe"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/arguments.py",
+      "sha256": "16a006a1c1677a95e38ed459cf354197d1148f1c980386f95453dddbeba84f54"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/__init__.py",
+      "sha256": "fc2dd5271430dcc968e7dbdf0b15cecd2a228ddf4a84a68b5efab4964d1950db"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/base.py",
+      "sha256": "db88439ab1b3882cd4437774244a697e2664225470b54172bb6cbd45907483b2"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/branch_system.py",
+      "sha256": "18a8769983b66ea0756c50f153729d1ba8228aade32e6472f122a1ab5120cb68"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/coverage.py",
+      "sha256": "27f49b39e2fc680bdc2289e870c51e81ba27926c5dbbdc55027851215aff1456"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/exact_cover.py",
+      "sha256": "402b806f5f0ff110ddf05f497a350529961ad92fc3c71989a16b7e625d1c307e"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/finite_search.py",
+      "sha256": "f97d1473af708d97b9b5039601449246a4b02610c1d1ffc51d4969eefde5057c"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/newclid_geometry.py",
+      "sha256": "99f62e737864f0d7328b2fbfd1445060754c06f0922f80b98ddc0da318842fca"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/piecewise.py",
+      "sha256": "33290eae0026ceea0f306ba9426c2928d6bde12d8763fc345dfeb63099669305"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/sympy_exact.py",
+      "sha256": "30ed7ed600e20b369fb543fe3745cea769ef5762382888574349e819e7592269"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/backends/sympy_generic.py",
+      "sha256": "d641df246295e5102f8ab0b04b58cf39ef3d3051be44191ed7903a609b55a2a6"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/executor.py",
+      "sha256": "93610e5702587dd14aded2cdbc767059c86f50da4d6032928b97dc98eb6f8edf"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/expressions.py",
+      "sha256": "dac60734ae5011a9445413da407b24772624ab416b406e7e010935a602222b13"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/finite_expressions.py",
+      "sha256": "bc1db69a4c4d4aeac3bd083190283fbdc3bd16079aed37d5497fc7491d7cb354"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/policy.py",
+      "sha256": "b9557703e1513e29fa6b0ed1c259c6358e92c3bd883148a1dd1f5dd7cd12aca7"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/registry.py",
+      "sha256": "2fc4714a38cda4c7ae8d135962bf80ce908ed344a3e488c203cdc67cd13207d6"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/schemas.py",
+      "sha256": "b561ccc9575a2258c0fb8c1fd2c7befec755eaebfe35eafb2ca9e93700fa9ea6"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/__init__.py",
+      "sha256": "b38f51bc87c50c4fb8b48ced7b265f40f9ce3edafce14397e988e782f93b902c"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/branch_system.py",
+      "sha256": "5df2bbe0cf73096bf73d9a99113b2ff6fc02c7fc15000bc033f549151ed9ada3"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/coverage.py",
+      "sha256": "cc25ff11231aa291251062a0b95401a9bb8a3668cae923ee70e2e42c2479e659"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/exact_cover.py",
+      "sha256": "2f2db20365c10ddc4199829e0f3c1b734cc4bad284714bd4176b4fba682fb988"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/finite_search.py",
+      "sha256": "db631ed3cebe67efc24a897abf19016a705f0c0463cbc41c6b5d906f0e09b6ec"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/newclid_geometry.py",
+      "sha256": "7747b6ba1bad4421646307b8ee7315e7a467077758eb90712806ceb6a4c4ef61"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/piecewise.py",
+      "sha256": "b093479adf8168377f51795490e9ac6073fd64161d0a3dc237c9806773d1f81d"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/symbolic.py",
+      "sha256": "7f0d976643defd97b017b76e80e89d115433110578df3ec49e1079bf367b3523"
+    },
+    {
+      "path": "tir_sab_v0_1_4_2_4/frozen_source/math_harness/tools/validators/symbolic_generic.py",
+      "sha256": "47c9d8b8f01e2e9e88ff89360343fcc29aec87256d0735a19abb74b5a8faad49"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917/consolidation_hashes.json",
+      "sha256": "8288538b1ba860b5308ae517fa91d6838b9872f96008cefadced5f7de20f1e9a"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_343_real_root_classification_20260916/__init__.py",
+      "sha256": "d0639ccbf9080960652496b56c2ebe339eef5dd6d792644a56514ec4f8b93656"
+    },
+    {
+      "path": "cognitive_well_harness_v0_3_343_real_root_classification_20260916/rational_division.py",
+      "sha256": "05484660373e89d3f3cc96957141d797c9c34d4df64f7f1435c9c3604fafbe71"
+    }
+  ],
+  "excluded_reference_files": [
+    {
+      "path": "cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/gold/Q4_solution.txt",
+      "sha256": "52c3658873cc87f532294dbd6291a8a8804b2244c87d61f805c8e9d5c274deae",
+      "reason": "External grading reference omitted from the distributed tree; historical provenance only."
+    }
+  ]
+}

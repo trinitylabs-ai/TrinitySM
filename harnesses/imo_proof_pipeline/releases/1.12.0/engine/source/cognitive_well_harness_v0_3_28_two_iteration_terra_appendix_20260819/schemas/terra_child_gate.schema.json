@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "obligation_id",
+    "parent_claim_id",
+    "aligned_with_first_break",
+    "load_bearing_for_parent_route",
+    "strictly_narrower_than_parent",
+    "independently_checkable",
+    "exact_negation_valid",
+    "dependencies_allowed",
+    "verdict",
+    "first_issue",
+    "external_information_used"
+  ],
+  "properties": {
+    "obligation_id": {"type": "string", "minLength": 1},
+    "parent_claim_id": {"type": "string", "minLength": 1},
+    "aligned_with_first_break": {"type": "boolean"},
+    "load_bearing_for_parent_route": {"type": "boolean"},
+    "strictly_narrower_than_parent": {"type": "boolean"},
+    "independently_checkable": {"type": "boolean"},
+    "exact_negation_valid": {"type": "boolean"},
+    "dependencies_allowed": {"type": "boolean"},
+    "verdict": {"type": "string", "enum": ["pass", "fail"]},
+    "first_issue": {"type": ["string", "null"]},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

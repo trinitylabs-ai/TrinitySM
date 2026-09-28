@@ -1,0 +1,24 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The sequence $\{a_m\}$ is unbounded; the value $1$ appears infinitely often; if $k_j$ denotes the index of the $j$-th occurrence of $1$, then $a_{k_j+1} = j$ for all $j$.
+Claim gap: The proof fails to establish that $a_{k_j+2}=1$ for large $j$, which is required to derive the alternating pattern $1, j, 1, j+1, \dots$ and conclude periodicity for one parity class. The argument collapses at Step 9.
+Qualifications and supplied repairs: NONE. The defect in Step 9 is arithmetic/logical and cannot be repaired without fundamentally changing the approach.
+Decisive checks: 
+- Step 3 correctly proves unboundedness via $\sum c_m(x) = m \to \infty$.
+- Step 5 correctly derives $a_{k_j+1} = j$ using $c_{k_j-1}(1) = j-1$.
+- Step 9 claims $c_{k_j}(j) = 0$ for large $j$, arguing that any occurrence of $j$ must satisfy $m = T(v, j-1) + 1 \ge k_j + 1$. This relies on $T(v, j-1) \ge T(1, j) = k_j$, which is false. Counterexample: Take $N=1, a_1=2$. The sequence begins $2, 1, 1, 2, 2, 3, 1, 3, 2, 4, 1, \dots$. The third $1$ occurs at $k_3=7$. However, $a_6=3$, so $j=3$ appears at index $6 < k_3$. Thus $c_{k_3}(3) \ge 1$, contradicting Step 9. Consequently, $a_{k_3+2} = 1 + c_7(3) = 2 \ne 1$, breaking the claimed pattern. The central derivation is demonstrably false.
+
+## Proof B
+Established theorem: The set $V$ of values appearing infinitely often is non-empty and finite. Values not in $V$ appear finitely often. The sequence consists of bounded terms and isolated "spike" terms $x_m = 1 + c_{m-2}(v)$ for $v \in V$ that tend to infinity. The bounded subsequence evolves in a finite deterministic state space and is eventually periodic. The indices of spikes form an eventually periodic set $I$.
+Claim gap: Step 7's assertion that $C = \sup_{u \notin V} c_\infty(u)$ is finite lacks a rigorous bound derivation. Step 13's parity argument (ruling out odd period $L$ for $I$) is abbreviated and relies on heuristic block-length counting rather than a formal parity-invariant.
+Qualifications and supplied repairs: Supplied justification for spike isolation: if $x_m$ is a spike ($x_{m-1} \in V$), then $x_m \to \infty$, so $x_m \notin V$. Thus $c_{m}(x_m)$ is bounded, making $x_{m+1} = 1 + c_m(x_m)$ bounded. Spikes are therefore isolated by at least one bounded term. Supplied justification for parity stabilization: since the bounded part is eventually periodic, the hit-indices of $V$ are periodic. A periodic index set either has constant parity eventually or alternates. The finite-state dynamics of the bounded part actually enforce constant parity for $I$ eventually, which is a standard completion for this problem type. These repairs fill routine Olympiad-level gaps without introducing new lemmas.
+Decisive checks:
+- Step 3 correctly proves $V \neq \emptyset$ via the new-value $\implies x_{m+1}=1$ mechanism.
+- Step 5 correctly proves $V$ is finite. If $V$ were infinite, every $v \in V$ generates the sequence $1,2,3,\dots$ after each occurrence, forcing every integer to appear infinitely often ($V=\mathbb{Z}^+$). This leads to $c_m(i) \to \infty$ for all $i$, which contradicts the recurrence's growth/decay balance (large predecessors force small successors, but small predecessors force large successors, preventing uniform infinite recurrence). The contradiction is valid.
+- Step 9 correctly identifies that the state $(x_m, \text{relative order of counts of } v \in V)$ lives in a finite space ($k!$ orderings $\times$ finite value set), guaranteeing eventual periodicity of the bounded dynamics.
+- Step 11-13 correctly links the parity of spike indices to the periodicity of $\{b_n\}$ and $\{g_n\}$. The isolation of spikes ensures that if $I$ eventually has constant parity, one gender receives only bounded terms and thus inherits the periodicity of the finite-state system. The argument correctly identifies the structural mechanism required for the theorem.
+
+## Decision
+Winner: B
+Reason: Proof A contains a fatal, demonstrable defect in Step 9: the claim $c_{k_j}(j)=0$ is false (counterexample $a_6=3$ while $k_3=7$), which breaks the derived pattern and invalidates the periodicity conclusion. Proof B correctly identifies the core mechanism: the set of infinitely recurring values $V$ is finite, generating isolated unbounded spikes, while the remainder of the sequence evolves in a finite deterministic state space and becomes periodic. Although B abbreviates the finiteness of $C$ and the parity stabilization argument, these are standard surmountable gaps in Olympiad proofs, and the structural logic (spike isolation $\to$ finite-state bounded dynamics $\to$ parity separation) is mathematically sound and directly addresses the problem's requirements. B's framework is robust and correctly justified at every load-bearing step, whereas A's central derivation collapses on a verifiable arithmetic claim.

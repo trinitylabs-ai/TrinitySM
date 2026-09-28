@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "f34dba456a3b4eaeef3f0aaedca4936f7ac8a2ef2381b0d5c247b4948c26ac92",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "6a25875711199f4cc50fb479bbfe04f4fb52728353552ff078e1ab1ecd8ffe2c",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Case 3, the proof does not justify the jump from the orbit-exclusion observations to the structural assertion that S_0=(0,b] and S_{c_1}=(b,∞). Boundedness of S_0 alone does not imply this, and the statement that an orbit tending to infinity must start to the right of a forbidden interval omits the necessary no-jumping argument and quantifier clarification.",
+    "summary": "The proposed family f(x)=x+c is verified correctly. The identities g(f(y))=g(y), the iterate formula, and g≥0 are correct, and the argument excluding two distinct positive values of g is essentially sound. The remaining mixed-value case contains a load-bearing gap: the interval structure and boundary membership of the two level sets are asserted rather than proved. This is nevertheless a localized repair using ideas already present: start the first orbit argument at an arbitrary p∈S_{c_1}; since its forbidden interval has length greater than c_1, obtain p>z for every z∈S_0. This gives an initial/final cut, after which both possible assignments of the boundary are contradicted by the displayed inequalities. Under Rule F this merits 5 rather than full credit; the required repair is bounded but not written.",
+    "strengths": [
+      "Correctly verifies every function f(x)=x+c with c≥0 by RMS-AM-GM.",
+      "Correctly derives f(f(y))=2f(y)-y, invariance of g along forward orbits, and nonnegativity of g.",
+      "The comparison of two positive defect values uses the right squared inequalities and a valid bounded-distance orbit strategy.",
+      "The mixed-value case introduces a promising forbidden-interval argument that contains the core idea needed for repair."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The mixed zero/positive defect case relies on an unproved structural conclusion about the level sets. The proof must explicitly apply the orbit argument to every positive-defect starting point, derive the global ordering of the two sets, and handle both possible memberships of the cut point."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:38:21.222796+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00023",
+  "native_rejection_count": 0
+}

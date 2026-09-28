@@ -1,0 +1,56 @@
+{
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_f7efb05eff762bd058098c95ebeedeb5",
+  "pass_index": 1,
+  "score": 6,
+  "verdict": "minor_gap",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In Step 3, the assertion that for every n one can choose a nonnegative orbit index m with |u_n-v_m|≤c_2 is false when u_n lies well below z_2. It should say “for all sufficiently large n.” This is a minor quantifier overstatement, not a Rule C load-bearing falsehood, because only the large-n sequence is used and the corrected claim follows immediately by rounding.",
+    "summary": "The submitted solution correctly obtains the iterate identity, proves g≥0, compares positive-defect orbits to show all positive values of g coincide, excludes coexistence of defects 0 and c, and verifies every translation f(x)=x+c. Apart from the harmless finite-prefix quantifier error in the orbit comparison, the proof is coherent and complete.",
+    "strengths": [
+      "Correctly derives f(f(y))=2f(y)-y and hence invariance of g along forward orbits.",
+      "Uses positivity of all iterates to establish g(x)≥0.",
+      "The bounded-distance orbit comparison correctly forces any two positive values of g to be equal.",
+      "The neighborhood-propagation argument rules out simultaneous zero and positive defect values.",
+      "The converse is verified correctly using RMS–AM and AM–GM."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The bounded-distance choice of m is guaranteed only once u_n is at least z_2, not for every n as stated. Restricting to sufficiently large n repairs the argument without changing its limit conclusion."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "proof_sha256": "f7efb05eff762bd058098c95ebeedeb50ce87c60f6c8d8cfbbcd15d89faba81c",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "evidence_sha256": "5f542c56fcb4ff9ec122241a752e1d22177ed94101747d93a4d8c6912234d1b2",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p5/t07_r01_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "773a224262362b958521c3d5e1867fff0d0ba6a907b2dd26448f0f1932aedc5f",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "f1de2a6ba5305cdfa9f2740ef60b31a6cf27877fbce4f085a6f61678b9ce3f85",
+    "raw_response_1.txt": "341a087e0fa4d9ffe4debe5e5d253c36fa151642c3711371c5c269787d9d5c64",
+    "summary.json": "6a8d96994904f7539a75f0a4e87c294d12381ddc2f669e94f79bc36ef765dc59"
+  }
+}

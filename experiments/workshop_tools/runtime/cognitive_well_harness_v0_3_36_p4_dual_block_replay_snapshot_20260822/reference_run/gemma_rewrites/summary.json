@@ -1,0 +1,48 @@
+{
+  "schema": "p4-qwen36-full-scheduling-handoffs-gemma-replay-v1",
+  "completed_at": "2026-08-23T04:19:07.854762+00:00",
+  "model": "google/gemma-4-31B-it",
+  "endpoint": "http://127.0.0.1:8026/v1",
+  "dtype": "bfloat16",
+  "mtp_speculative_tokens": 4,
+  "reference_solution_access": false,
+  "gold_information_in_resolver_input": false,
+  "rows": {
+    "p4_two_block": {
+      "seed": 2040359711,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 3176,
+        "total_tokens": 12690,
+        "completion_tokens": 9514,
+        "prompt_tokens_details": null
+      },
+      "latency_seconds": 118.56292144209146,
+      "proof_sha256": "53cb108773decfa9539fb9b15ed2539d1b5e8d03e446e9667ff8db9eca51ade3",
+      "resolver_system_sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c",
+      "resolver_user_sha256": "f96e0b378e45849fc12d2d02b71285dbd6d7f0fd12361aa70338b9448770311a",
+      "diagnosis_sha256": "3ba9b3f1890223f042f39c4d776dac44e81f54f32c60c34c56afbbbeca1d8da5",
+      "repair_sha256": "0acff7d3b33d3dfd8b26975572d839fc65b2e06c1eeb18fb47f1a201ba019bc7",
+      "reference_solution_access": false,
+      "gold_information_in_resolver_input": false
+    },
+    "p4_three_block": {
+      "seed": 2040359711,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 3397,
+        "total_tokens": 12222,
+        "completion_tokens": 8825,
+        "prompt_tokens_details": null
+      },
+      "latency_seconds": 110.65482153836638,
+      "proof_sha256": "a48a0979495b4365d5b9f1ee058f02a7b24e3e275da3e9fbecfa6ad607e13584",
+      "resolver_system_sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c",
+      "resolver_user_sha256": "2750d97cbbf4a680aecf639f00914f046775674c78e5ee6d8922817e3085af12",
+      "diagnosis_sha256": "2ded92d2f2504bb3f98245c6d80d655fd287466ab0f0b313b670a15fc63d72e1",
+      "repair_sha256": "ef8c74855345046946aef1836ac57f273a8542ae3496ed1b70f7a107ae04a8f3",
+      "reference_solution_access": false,
+      "gold_information_in_resolver_input": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The submission correctly shows that *if* $f$ is injective, then $f(x) = 1/x + a$, and substitution into the original equation forces $a=0$, yielding $f(x)=1/x$. The final verification step is correct.
+Claim gap: The proof of injectivity contains a fatal logical gap. On line 18, the argument claims that for the sequence $y_n = (w_n-1)/f(x)$, one can "choose $y_n$ such that $f(y_n) \to 0$ (by picking $y_n$ from the sequence $w_m$)." This directly contradicts the definition of $y_n$ on line 17, which rigidly ties $y_n$ to $w_n$ via $y_n f(x) + 1 = w_n$. The sequence $y_n$ cannot be arbitrarily reselected. Furthermore, even though $f(w_n) \to 0$ is established, this does not imply $f(y_n) \to 0$ without continuity or asymptotic assumptions not present in the problem. The claim that $\text{Im}(f)$ contains an interval (line 14) is also asserted without justification.
+Qualifications and supplied repairs: NONE. The limit argument cannot be repaired without introducing unproven assumptions about the asymptotic behavior of $f$ or the topological structure of its image.
+Decisive checks: Line 18's limit step is a demonstrated defect. The equality $f(1/x) = L/f(x)$ relies on $\lim_{n\to\infty} f(1/x + f(y_n)) = f(1/x)$, which requires $f(y_n) \to 0$. Since $y_n$ is fixed by $w_n$, and $f(w_n) \to 0$ does not transfer to $f(y_n)$, the implication fails. The injectivity claim remains unverified, breaking the chain needed to derive the functional form.
+
+## Proof B
+Established theorem: The submission rigorously proves $f$ is injective, derives the general form $f(x) = 1/x + C$, determines $C=0$ via substitution, and verifies $f(x)=1/x$ is the unique solution.
+Claim gap: NONE supported by checks. The argument is complete and logically sound.
+Qualifications and supplied repairs: NONE. The periodicity argument on line 14 contains a minor phrasing imprecision (attributing interval coverage to varying $x$ rather than $y$), but the mathematical conclusion is correct: $f(1/x_2 + T + f(y)) = f(1/x_2 + f(y))$ for all $y$ implies $f(z+T)=f(z)$ for all $z \in 1/x_2 + \text{Im}(f) \subseteq (1/x_2, \infty)$, establishing periodicity on a tail interval. This is sufficient for the subsequent contradiction.
+Decisive checks: Lines 16-27 correctly define $h(y) = f(yf(x)+1)$, establish its periodicity $T_h = T/f(x)$ for large $y$, and combine it with the scaling relation $h(y+T) = \frac{y}{y+T}h(y)$ derived from the functional equation. Taking $m \to \infty$ in $h(y+mT_h+T) = \frac{y+mT_h}{y+mT_h+T}h(y)$ correctly yields $h(y+T) = h(y)$, which forces $h(y)=0$, contradicting the codomain $\mathbb{R}^+$. This cleanly establishes injectivity. The subsequent algebraic derivation and verification are routine and correct.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, rigorous proof of injectivity using a clean periodicity-and-scaling contradiction argument, whereas Proof A's injectivity proof relies on a flawed limit step that incorrectly redefines a fixed sequence and assumes unproven asymptotic behavior. Proof B's derivation and verification are standard and correct, making it mathematically superior and fully justified. The minor phrasing imprecision in B's periodicity setup does not affect logical validity, while A's gap breaks the central chain of implications required to reach the solution.

@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7dee95328ede0ca992702f794e7e8c2520c9672ab3fe17aba536859566cafe2b",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "907667221e9e989932b615b07878dd12ca0cafec9ce6fa9b6045816fcb939b29",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "ed443836d522ad78a1937f50cdff12729490e4cb80f33cbdd4cf5642a2e1b15e",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the unsupported claim that boundedness of the hitting number and finiteness of each individual prime support force the families H_n to stabilize or cycle. The possible primes and hitting-set families do not lie in any established finite state space, and bounded minimum cardinality does not control the collection of all minimal hitting sets. This is a central structural claim, so Rule E applies and caps the score at 3.",
+    "summary": "The hypergraph reformulation and the recurrence using minimal hitting sets are useful and largely correct. Conditional on eventual stabilization of H_n, the modular argument does establish eventual translation-periodicity. However, stabilization is precisely a major unproved part of the problem, and the subsequent attempt to extend an eventual relation to every index is also unsupported; uniqueness of the greedy sequence does not make an arbitrary transient periodic. Thus the proof does not establish the required pure translation-periodicity.",
+    "strengths": [
+      "Correctly reformulates the gcd condition as a hitting-set condition on prime supports.",
+      "Derives an appropriate formula for the next term using products associated with minimal hitting sets.",
+      "Correctly observes that, for a fixed finite family L, the induced map satisfies f(x+M)=f(x)+M and hence yields eventual periodic behavior modulo M."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that H_n eventually stabilizes or cycles does not follow from bounded hitting number or from each S_n being finite. No common finite universe of primes or finite collection of possible states is established."
+      },
+      {
+        "severity": "major",
+        "description": "The argument proceeds only under stabilization, without treating the claimed possibility of a nontrivial cycle of H_n."
+      },
+      {
+        "severity": "major",
+        "description": "The extension from an eventual identity a_{n+T}=a_n+L to the identity for every n is merely asserted. Taking a multiple of an eventual period does not generally absorb a nonperiodic initial segment, so this is also an unhandled-range defect under Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T08:59:38.596176+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

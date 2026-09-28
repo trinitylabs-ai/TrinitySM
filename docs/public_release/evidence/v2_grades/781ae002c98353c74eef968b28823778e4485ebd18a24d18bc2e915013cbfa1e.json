@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "6d86e5fb95c870e11a0e4968b9b7a1972f48c9bf4d2413ba5a3a06050416abcf",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "a7f83077237464afc10cc84f3e9512329650bebb922ccbe59eca3e64be1fe9dc",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "6500ca622e0e6ef50cdfb3a4faf456521ede40bff4eb2730d7f73983f59d0474",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Step 3, the assertion that the families of minimal hitting sets eventually stabilize is not proved. The stated observations do not imply stabilization, and establishing the requisite finiteness/stability is a central structural part of the problem. This is an unsupported central inference under Rule E.",
+    "summary": "The hitting-set formulation is useful, and conditional on a fixed finite family, the translation-equivariant successor map does yield eventual periodicity. However, the proof omits both the central stabilization argument and a valid passage from eventual to pure periodicity. Rule E and independently Rule D cap the score at 3.",
+    "strengths": [
+      "Correctly interprets admissible next terms through prime hitting sets and multiples of their products.",
+      "Correctly observes that, for a fixed finite family of moduli, the successor map is equivariant under translation by their least common multiple.",
+      "Provides a coherent conditional argument for eventual periodicity once stabilization is assumed."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claim that `MinM_n` eventually becomes a fixed finite family is merely asserted. Neither hitting the prime factors of the first term nor the vague statement that later prime factors are constrained establishes this. Proving an appropriate finite global family is the main structural difficulty."
+      },
+      {
+        "severity": "major",
+        "description": "Step 4 does not justify extending an eventual identity backward to every index. Determinism and cumulative constraints do not make the successor dynamics invertible, and an eventual translational recurrence can generally have a preperiod. The claimed contradiction with greedy minimality is not demonstrated, leaving an unhandled required range under Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:40:15.838205+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

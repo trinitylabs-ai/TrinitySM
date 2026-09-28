@@ -1,0 +1,1 @@
+Find all pairs of primes $(a, b)$ such that $a^2 - ab - b^3 = 1$.

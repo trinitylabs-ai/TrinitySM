@@ -1,0 +1,47 @@
+To find all pairs of primes $(a, b)$ such that $a^2 - ab - b^3 = 1$, we begin by rearranging the equation as a quadratic in $a$:
+\[ a^2 - ab - (b^3 + 1) = 0 \]
+Using the quadratic formula to solve for $a$, we have:
+\[ a = \frac{b \pm \sqrt{b^2 + 4(b^3 + 1)}}{2} = \frac{b \pm \sqrt{4b^3 + b^2 + 4}}{2} \]
+For $a$ to be an integer, the discriminant $D = 4b^3 + b^2 + 4$ must be a perfect square. Let $D = k^2$ for some integer $k$. 
+
+Alternatively, we can factor the equation as:
+\[ a(a - b) = b^3 + 1 = (b + 1)(b^2 - b + 1) \]
+Since $a$ is a prime number, it must divide the product on the right-hand side. By Euclid's Lemma, $a$ must divide at least one of the factors:
+1. $a \mid (b + 1)$
+2. $a \mid (b^2 - b + 1)$
+
+**Case 1: $a \mid (b + 1)$**
+Let $b + 1 = ma$ for some positive integer $m$. Substituting this into the equation $a(a - b) = (b + 1)(b^2 - b + 1)$, we get:
+\[ a(a - b) = ma(b^2 - b + 1) \implies a - b = m(b^2 - b + 1) \implies a = m(b^2 - b + 1) + b \]
+Substituting this expression for $a$ back into $b + 1 = ma$:
+\[ b + 1 = m(m(b^2 - b + 1) + b) = m^2 b^2 - m^2 b + m^2 + mb \]
+Rearranging this into a quadratic in $b$:
+\[ m^2 b^2 - (m^2 - m)b + (m^2 - 1) = 0 \]
+For $b$ to be a real number, the discriminant $D_b$ must be non-negative:
+\[ D_b = (m^2 - m)^2 - 4(m^2)(m^2 - 1) = m^2(m - 1)^2 - 4m^2(m^2 - 1) = m^2(m^2 - 2m + 1 - 4m^2 + 4) = m^2(-3m^2 - 2m + 5) \]
+We require $-3m^2 - 2m + 5 \ge 0$. The roots of $-3m^2 - 2m + 5 = 0$ are $m = \frac{2 \pm \sqrt{4 - 4(-3)(5)}}{-6} = \frac{2 \pm 8}{-6}$, giving $m = 1$ or $m = -5/3$. For $m \in \mathbb{Z}^+$, the only possibility is $m = 1$.
+If $m = 1$, the equation becomes $1^2 b^2 - (1-1)b + (1-1) = 0 \implies b^2 = 0$, so $b = 0$, which is not prime.
+
+**Case 2: $a \mid (b^2 - b + 1)$**
+Let $b^2 - b + 1 = na$ for some positive integer $n$. Substituting this into the equation $a(a - b) = (b + 1)(b^2 - b + 1)$, we get:
+\[ a(a - b) = (b + 1)na \implies a - b = n(b + 1) \implies a = n(b + 1) + b = (n + 1)b + n \]
+Substituting this expression for $a$ back into $b^2 - b + 1 = na$:
+\[ b^2 - b + 1 = n((n + 1)b + n) = (n^2 + n)b + n^2 \]
+Rearranging this into a quadratic in $b$:
+\[ b^2 - (n^2 + n + 1)b + (1 - n^2) = 0 \]
+The discriminant of this quadratic is:
+\[ D_n = (n^2 + n + 1)^2 - 4(1 - n^2) = n^4 + 2n^3 + 3n^2 + 2n + 1 - 4 + 4n^2 = n^4 + 2n^3 + 7n^2 + 2n - 3 \]
+We test small values of $n$:
+- If $n = 1$, $D_1 = 1 + 2 + 7 + 2 - 3 = 9 = 3^2$. Then $b = \frac{3 \pm 3}{2}$, so $b = 3$ or $b = 0$. Since $b$ is prime, $b = 3$. Then $a = (1+1)3 + 1 = 7$, which is prime. This gives the pair $(7, 3)$.
+- If $n = 2$, $D_2 = 16 + 16 + 28 + 4 - 3 = 61$, which is not a square.
+- For $n \ge 3$, we bound $D_n$ between two consecutive squares:
+  $(n^2 + n + 2)^2 = n^4 + 2n^3 + 5n^2 + 4n + 4$
+  $(n^2 + n + 3)^2 = n^4 + 2n^3 + 7n^2 + 6n + 9$
+  Comparing $D_n$ to these:
+  $D_n - (n^2 + n + 2)^2 = 2n^2 - 2n - 7$. For $n \ge 3$, $2n(n-1) - 7 \ge 2(3)(2) - 7 = 5 > 0$.
+  $(n^2 + n + 3)^2 - D_n = 4n + 12 > 0$ for all $n \ge 1$.
+  Thus, for $n \ge 3$, $(n^2 + n + 2)^2 < D_n < (n^2 + n + 3)^2$, meaning $D_n$ cannot be a perfect square.
+
+Checking the solution $(7, 3)$: $7^2 - 7(3) - 3^3 = 49 - 21 - 27 = 1$.
+
+The only pair of primes is $(7, 3)$. \(\square\)

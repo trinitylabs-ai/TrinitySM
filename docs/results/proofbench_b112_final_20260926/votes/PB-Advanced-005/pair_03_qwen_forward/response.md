@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Under the stated coordinate parameterization, the condition that $\tan(\angle BDC)$ is constant for all valid pairs $(B,C)$ algebraically forces $D=A$. The derivation correctly models the concyclic condition $Y,B,A,C$ and the linear relation $b=mu+n$ between the ray parameters, and rigorously solves the coefficient-matching system to show $D=A$ is the unique solution.
+Claim gap: The submission fails to justify the existence of $D \neq A$. The final assertion (line 27) that reflecting $A$ across the angle bisector yields a constant $\angle BDC$ is unsupported and mathematically incomplete; it also fails when $A$ lies on the bisector (where the reflection coincides with $A$, violating $D \neq A$).
+Qualifications and supplied repairs: NONE. The algebraic derivation is verified as written; the geometric leap is left as an unproved assertion. No repair is supplied.
+Decisive checks: Lines 9-25 are verified. Computing $N(u)$ and $M(u)$ as quadratics in $u$ and enforcing $N(u)=\lambda M(u)$ for constant $\tan\theta$ correctly yields $\lambda=-\tan\alpha$ from the $u^2$ coefficients. Matching $u$ and constant coefficients rigorously leads to $x=x_A$ and $y=y_A$, confirming $D=A$. This algebraic chain is sound. The unresolved check is whether a different angle convention (e.g., undirected angle or orientation flip) could allow $D \neq A$, but the submission provides no justification for this.
+
+## Proof B
+Established theorem: Correctly identifies that $\angle BAC = \alpha$ implies $Y,B,A,C$ are concyclic and that the circle center lies on the perpendicular bisector of $YA$.
+Claim gap: The central claim that $D$ (reflection of $Y$ across $A$) yields a constant $\angle BDC = \pi - \alpha$ is false. The verification (lines 18-21) is omitted and replaced with an appeal to "known properties" that do not apply to this configuration.
+Qualifications and supplied repairs: NONE. A concrete counterexample demonstrates the defect: take $\alpha=90^\circ$, $Y=(0,0)$, $A=(1,1)$. Then $D=(2,2)$. For a circle through $Y,A$ intersecting rays at $B=(0,-u)$ and $C=(u+2,0)$, direct computation gives $\cos\angle BDC = 4/\sqrt{((u+2)^2+4)(u^2+4)}$, which varies with $u$. Thus $\angle BDC$ is not constant. The claim is falsified.
+Decisive checks: Lines 14-16 correctly set up vector relations for $B$ and $C$ in terms of the circle center $\mathbf{o}$. However, lines 19-21 skip the actual dot product calculation and assert $\angle BDC = \pi - \alpha$ without proof. The counterexample above verifies that the proposed $D$ does not satisfy the problem's condition, making the central implication invalid.
+
+## Decision
+Winner: A
+Reason: Proof A provides a rigorous, verified algebraic derivation that correctly models the problem's geometric constraints and demonstrates that the proportionality condition for constant $\tan(\angle BDC)$ forces $D=A$. While it leaves the $D \neq A$ requirement unjustified, its substantive mathematical progress is sound and internally consistent. Proof B proposes a specific construction ($D=2A$) and asserts a constant angle property that is demonstrably false (e.g., $\alpha=90^\circ, A=(1,1)$ yields a varying $\angle BDC$). A's careful coefficient matching and correct identification of the concyclic locus outweigh B's unsupported and incorrect geometric claim.

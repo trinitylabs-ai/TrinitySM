@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof correctly establishes that if all roots are real, then $n \le 2k-2$. It provides a rigorous algebraic contradiction for the boundary case $n=2k-2$ by comparing products of roots and ratios of coefficients, showing that distinctness is violated.
+Claim gap: The proof lacks a general derivation for the intermediate cases $k < n < 2k-2$. Step 16 relies on heuristic claims that the conditions are "even more restrictive" and provides a specific example for $k=3$, but does not formally extend the argument to arbitrary $k$.
+Qualifications and supplied repairs: Both proofs silently assume that denominators like $b_m$ or $e_{j-1}(U)$ are non-zero when forming ratios. This is justified for polynomials with real, non-zero roots (consecutive elementary symmetric polynomials cannot vanish simultaneously by Newton's inequalities), but neither proof explicitly states this routine fact. No substantive repairs were supplied.
+Decisive checks: Step 14's derivation $p_1^2 = q_1^2$ is verified. The symmetry argument extending this to all indices is valid. The contradiction for $n=2k-2$ is mathematically sound. The gap in the general intermediate case remains unresolved within the text.
+
+## Proof B
+Established theorem: The proof correctly establishes $n \le 2k-2$ and provides a rigorous contradiction for $n=2k-2$ using a clean inequality argument ($z_1 > e_1(X)$) that exploits the sum of positive roots. It also correctly identifies a hereditary property of the condition, reducing the problem to the minimal case $n=k+1$.
+Claim gap: The proof handles the reduced case $n=k+1$ explicitly for $k=3$ but relies on a heuristic "over-determined" claim for $k>3$. Step 23 contains a specific algebraic relation ($r_1 = -2r_2$) that appears to be a calculation artifact or typo, though the final conclusion (contradiction) is correct.
+Qualifications and supplied repairs: The same silent assumption regarding non-vanishing denominators applies here. The reduction in Step 20 is a valid logical step (if a counterexample of size $n$ exists, a counterexample of size $k+1$ exists). The specific equation in Step 23 is treated as a minor text defect in an otherwise correct contradiction path; no repairs were supplied.
+Decisive checks: Step 18's inequality $z_1 > e_1(X)$ is verified and provides a robust contradiction for $n=2k-2$ without relying on index symmetry. The hereditary reduction in Step 20 is verified. The contradiction for $n=k+1$ is verified for $k=3$. The gap for $k>3$ is heuristic but structurally smaller due to the reduction.
+
+## Decision
+Winner: B
+Reason: Proof B is mathematically stronger due to its superior structure and rigor in the main case. Proof B's handling of $n=2k-2$ uses a direct inequality argument ($z_1 > \sum X$) that is more transparent and robust than Proof A's product-symmetry manipulation. Furthermore, Proof B correctly identifies the hereditary nature of the divisor condition (Step 20), validly reducing the problem to the minimal case $n=k+1$. This structural insight makes the remaining heuristic gap significantly smaller and more manageable than Proof A's direct but vague treatment of intermediate cases. While both proofs contain minor imprecisions in their heuristic sections, Proof B's core arguments are more rigorous and logically cohesive.

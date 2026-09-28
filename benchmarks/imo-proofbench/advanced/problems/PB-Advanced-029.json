@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-029",
+  "problem": "Determine, with proof, all positive integers $k$ such that\n \\[\n \\frac{1}{n+1}\\sum_{i=0}^{n}\\binom{n}{i}^{k}\n \\]\n is an integer for every positive integer $n$."
+}

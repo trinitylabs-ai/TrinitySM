@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:11:57.850272+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 14,
+  "problem_id": "PB-Basic-014",
+  "case_id": "PB-Basic-014.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p14/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p14/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p14/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "ff6f3bf8f5d8b896babc81f461ec8c0a366026a2c871fc88052c60d5746253cf",
+  "reference_sha256": "670930ab666534527fd6ba7d838c7cc4696ffa1e709fc2b980c854f4318f9004",
+  "proof_sha256": "cddb8f768a5690218bf84ea2236dab31c377cc8c0877830df6e4f4dfcc60c939",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly converts the hypothesis into the absence of three pairwise disjoint flag sets. Its case analysis produces a hitting set of at most five or ten colors, and pigeonhole counting then guarantees a color held by at least 405 or 203 Googlers. The reasoning is complete and even proves a stronger bound than required.",
+    "strengths": [
+      "Correctly formalizes the triple condition using pairwise-disjoint sets.",
+      "Handles empty flag sets and both possible nonempty matching-number cases.",
+      "Applies the hitting-set and pigeonhole arguments rigorously."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

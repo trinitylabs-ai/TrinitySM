@@ -1,0 +1,173 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Determine all positive integers $n$ and integer sequences $a_0, a_1,\ldots, a_n$ such that $a_n = 3$ and
+ \[f(a_{i-1}) = a_i\]
+ for all $i = 1,2,\ldots,n$, where $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$.
+
+**GROUND-TRUTH SOLUTION**
+
+$n=2$ with $\left(a_{0}, a_{1}, a_{2}\right)=(-1,1,3)$.
+
+ We provide a solution when we relax the condition $a_n=3$. When we add back the condition, the only solution is $n=2$ with $\left(a_{0}, a_{1}, a_{2}\right)=(-1,1,3)$.
+
+ When relaxing the condition $a_n=3$, the short answers are $n=1$ with $\left(a_{0}, a_{1}\right)=(2,-2) ; n=2$ with $\left(a_{0}, a_{1}, a_{2}\right)=(-1,1,3)$; or $n$ even with $a_{0}=\cdots=a_{n}=-1$.
+
+ It is clear that $a_{0} \neq 0$ as otherwise $a_{n}=0$. For any $k=1, \ldots, n+1$, let $I_{k}$ be the convex hull of $0, a_{0}, \ldots, a_{k-1}$. We will define $a_{-1}=0$ for convenience.
+
+ We first show that $a_{k}$ is not in the interior of $I_{k}$. Otherwise, let $i, j \in\{-1,0, \ldots, k-$ $1\}$ be such that $a_{i}, a_{j}$ are the endpoints of $I_{k}$. Then as $a_{i}-a_{j} \mid f\left(a_{i}\right)-f\left(a_{j}\right)=$ $a_{i+1}-a_{j+1}$, we know that $a_{i+1}$ and $a_{j+1}$ are also the endpoints of $I_{k}$, and by continuing this argument we eventually get that $a_{k}$ is an endpoint of $I_{k}$, which is a contradiction. A consequence is that the endpoints of $I_{k}$ are $a_{k-2}$ and $a_{k-1}$ unless $a_{k-2}=a_{k-1}$. Now if $a_{i}=0$ for some $i>0$, then it is clear that the nonzero terms of $a_{0}, \ldots, a_{n}$ all have the same sign. Then $f\left(a_{i-1}\right)=0$ gives a contradiction if we take $i$ to be the smallest index with $a_{i}=0$.
+
+ We first assume that $a_{n} \neq a_{0}$. If $\left|a_{i}\right|<2$ for any $i<n$, then we have several possibilities: either $n \leqslant 2$; or $a_{0}, \ldots, a_{n}=-1,1, \ldots,-1,1$, or $a_{0}, \ldots, a_{n}=1,-1, \ldots, 1,-1$, or $a_{0}, \ldots, a_{n}=-1,1,1, \ldots, 1$, or $a_{0}, \ldots, a_{n}=1,-1, \ldots,-1$, for $n>2$. It is easy to verify that the last four cases cannot occur by evaluating $f(1)$. Therefore we have $n=2, a_{0}=-a_{1} \in\{1,-1\}$, or $n=1, a_{0}= \pm 1$. In the first case, we have $a_{2}-a_{1}=f\left(a_{1}\right)-f\left(a_{0}\right)=2 a_{1}^{2}=2$ and so $a_{2}=a_{1}+2$. Therefore $a_{1}=f\left(a_{0}\right)=$ $\left(a_{0}+a_{1}+2\right)+a_{0} a_{1}=2-1=1$, and we get the solution $a_{0}, a_{1}, a_{2}=-1,1,3$. In the second case, we have $a_{1}=f\left(a_{0}\right)= \pm a_{1} \pm 1$, and we get no solution by parity.
+
+ Now if $a_{n} \neq a_{0}$ and $a_{n}$ has the largest absolute value, pick $i<n$ such that $\left|a_{i}\right| \geqslant 2$. Then
+
+ \[
+ \left|f\left(a_{i}\right)\right| \geqslant\left|a_{n}\right|\left(\left|a_{i}\right|^{n}-\left|a_{i}\right|^{n-1}-\cdots-1\right) \geqslant\left|a_{n}\right|,
+ \]
+
+ and $\left|f\left(a_{i}\right)\right|=\left|a_{i+1}\right|\left|a_{n}\right|$. Therefore all equalities should hold, and we get $a_{0}=\cdots=$ $a_{n-1}=-a_{n}$ and $\left|a_{i}\right|=2$. Note that if $n \geqslant 2$, then $a_{0}=a_{1}$, which shows that
+
+ $a_{0}=\cdots=a_{n}$, which is a contradiction. Therefore $n=1$ and we get $\left(a_{0}, a_{1}\right)=(2,-2)$ or $(-2,2)$. The latter is not a solution, so we get $a_{0}=2$ and $a_{1}=-2$.
+
+ So now in the case that $a_{n} \neq a_{0}$, we may assume that $a_{n}$ does not have the largest absolute value. Let $a_{k}$ be the least index such that $a_{k}=a_{k+1}=\cdots=a_{n}$. Then we must have $\left|a_{k-1}\right|>\left|a_{k}\right|$ as $a_{k-1}$ and $a_{k}$ are the endpoints of $I_{k-1}$. We know that $a_{0} \mid a_{k-1}$ and $a_{0} \mid a_{k}$, and so $\left|a_{k-1}\right| \geqslant\left|a_{k}\right|+\left|a_{0}\right|$. As $a_{k-1} \mid f\left(a_{k-1}\right)-f(0)=a_{k}-a_{0}$, we have $\left|a_{k-1}\right| \leqslant\left|a_{k}-a_{0}\right|$ since $a_{k} \neq a_{0}$. This shows that $\left|a_{k}-a_{0}\right|=\left|a_{k}\right|+\left|a_{0}\right|=\left|a_{k-1}\right|$. As a consequence, we have $\left|a_{i}\right| \leqslant\left|a_{k}\right|+\left|a_{0}\right|$ for any $i$. Now we have
+
+ \[
+ \left|a_{k}\right|=\left|f\left(a_{k-1}\right)\right| \geqslant\left|a_{k}\right|\left(\left|a_{k-1}\right|^{n}-\left|a_{k-1}\right|^{n-1}-\cdots-1\right)-\left|a_{0}\right|\left(\left|a_{k-1}\right|^{n-1}+\cdots+1\right) .
+ \]
+
+ Hence
+
+ \[
+ \frac{\left|a_{k}\right|}{\left|a_{0}\right|} \leqslant \frac{\left|a_{k-1}\right|^{n-1}+\cdots+1}{\left|a_{k-1}\right|^{n}-\left|a_{k-1}\right|^{n-1}-\cdots-1} .
+ \]
+
+ Note that $\left|a_{k}\right| /\left|a_{0}\right|$ is a positive integer. If it is greater than 1 , then as $\left|a_{k-1}\right|=$ $\left|a_{k}\right|+\left|a_{0}\right| \geqslant 3$, we have
+
+ \[
+ \frac{\left|a_{k-1}\right|^{n-1}+\cdots+1}{\left|a_{k-1}\right|^{n}-\left|a_{k-1}\right|^{n-1}-\cdots-1} \leqslant \frac{3^{n-1}+\cdots+1}{3^{n}-3^{n-1}-\cdots-1}<1
+ \]
+
+ which is a contradiction. Therefore $\left|a_{k}\right|=\left|a_{0}\right|$, and so $a_{k}=-a_{0}$. This also shows that $a_{k-1}=2 a_{0}$, and by the inequality we see that $\left|a_{0}\right|=1$. With these constraints, we know that $a_{0}, \ldots, a_{n} \in\left\{a_{0},-a_{0}, 2 a_{0}\right\}$. By enumerating, we only have the possibilities $a_{0}, \ldots, a_{n}= \pm 1, \pm 2, \mp 1, \pm 2, \mp 1, \ldots, \pm 2, \mp 1$, or $a_{0}, \ldots, a_{n}= \pm 1, \mp 1, \pm 2, \mp 1, \ldots, \pm 2, \mp 1$, or $a_{0}, \ldots, a_{n}= \pm 1, \pm 2, \mp 1, \ldots, \mp 1$. For the first case, we have $n=2 t$ adn $2 a_{0}=a_{1}=$ $f\left(a_{0}\right)=-(t-1) a_{0}+2 t$, showing that $t=1, a_{0}=1$, and by plugging in $a_{1}$ we get a contradiction. For the second case, we have $n=2 t+1$ and $-a_{0}=a_{1}=f\left(a_{0}\right)=$ $(2 t+1) a_{0}-(t+1)$, which has no solutions. For the third case, if $a_{0}=1$ then we get $n=2$ and $a_{0}, a_{1}, a_{2}=1,2,-1$ by the equation $a_{1}=f\left(a_{0}\right)$, which is not a solution. Thus $a_{0}=-1$, and by plugging in $a_{0}$ we also get a contradiction.
+
+ The remaining case is $a_{n}=a_{0}$. If $a_{n}=a_{n-1}$, then we must have $a_{0}=\cdots=a_{n}$. By plugging in $a_{0}$ we have $a_{0}^{n+1}+\cdots+a_{0}^{2}=0$, and so $a_{0}=-1$ and $n$ is even. Now assume that $a_{n} \neq a_{n-1}$. Then $a_{n}, a_{n-1}$ are the endpoints of $I_{n+1}$. Note that if $a_{n-2}=a_{n-1}$
+
+ then $a_{n}=a_{n-1}$, which is a contradiction. Therefore $a_{n-2}, a_{n-1}$ are also endpoints of $I_{n+1}$. By induction we may show that $a_{k}, a_{k-1}$ are the endpoints of $I_{k+1}$. As $a_{0} \neq 0$, we must have $a_{n}=a_{n-2}=\cdots=a_{0}$, and so $n$ is even. This shows that $a_{n-1}=\cdots=a_{1}$. Now we have
+
+ \[
+ a_{0}^{n+1}+a_{0}^{n-1} a_{1}+\cdots+a_{0}^{3}+a_{0} a_{1}+a_{0}=a_{1}
+ \]
+
+ and
+
+ \[
+ a_{0} a_{1}^{n}+a_{1}^{n}+\cdots+a_{0} a_{1}^{2}+a_{1}^{2}+a_{0}=a_{0}
+ \]
+
+ The latter can be rewritten as $\left(a_{0}+1\right)\left(a_{1}^{n-2}+a_{1}^{n-4}+\cdots+1\right)=0$. Therefore $a_{0}=-1$ or $a_{1}=-1$. If $a_{0}=-1$, then $-\left(a_{1}+1\right) n / 2-1=a_{1}$, or equivalently, $\left(a_{1}+1\right)(n+2)=0$. This shows that $a_{1}=-1$, which was already obtained above. If $a_{1}=-1$, then the first equation gives $a_{0}^{n+1}=-1$ and so $a_{0}=-1$ too.
+
+ In conclusion, all the solutions are: $n=1$ with $\left(a_{0}, a_{1}\right)=(2,-2) ; n=2$ with $\left(a_{0}, a_{1}, a_{2}\right)=(-1,1,3)$; or $n$ even with $a_{0}=\cdots=a_{n}=-1$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Incorrect)
+ 1. We do not give partial credits for handling the cases when $n$ is small.
+(Partial)
+ 1. Observed that $a_k$ should be greater or less than all $a_0, \ldots, a_{k-1}$.
+ 2. Dealt with the case $a_n = a_0$.
+ 3. Any other useful observation regarding behavior of the sequnece $(a_i)$ which is useful in the possible solution.
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To find all positive integers $n$ and integer sequences $a_0, a_1, \ldots, a_n$ such that $a_n = 3$ and $f(a_{i-1}) = a_i$ for $i = 1, 2, \ldots, n$, where $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0$, we analyze the given conditions.
+
+**1. Case $n=1$:**
+The function is $f(x) = 3x + a_0$. The condition $f(a_0) = a_1$ gives:
+$3a_0 + a_0 = 3 \implies 4a_0 = 3$.
+Since $a_0$ must be an integer, there is no solution for $n=1$.
+
+**2. Case $n=2$:**
+The function is $f(x) = 3x^2 + a_1 x + a_0$. The conditions are $f(a_0) = a_1$ and $f(a_1) = a_2 = 3$.
+From $f(a_1) = 3$, we have:
+$3a_1^2 + a_1 a_1 + a_0 = 3 \implies 4a_1^2 + a_0 = 3 \implies a_0 = 3 - 4a_1^2$.
+Substituting $a_0$ into $f(a_0) = a_1$:
+$3(3 - 4a_1^2)^2 + a_1(3 - 4a_1^2) + (3 - 4a_1^2) = a_1$
+$3(9 - 24a_1^2 + 16a_1^4) + (a_1 + 1)(3 - 4a_1^2) - a_1 = 0$
+$27 - 72a_1^2 + 48a_1^4 + 3a_1 - 4a_1^3 + 3 - 4a_1^2 - a_1 = 0$
+$48a_1^4 - 4a_1^3 - 76a_1^2 + 2a_1 + 30 = 0$.
+Dividing by 2, we obtain:
+$24a_1^4 - 2a_1^3 - 38a_1^2 + a_1 + 15 = 0$.
+Testing for integer roots using the Rational Root Theorem, we find $a_1 = 1$:
+$24(1)^4 - 2(1)^3 - 38(1)^2 + 1 + 15 = 24 - 2 - 38 + 16 = 0$.
+For $a_1 = 1$, $a_0 = 3 - 4(1)^2 = -1$.
+Checking this solution: $f(x) = 3x^2 + x - 1$.
+$f(a_0) = f(-1) = 3(-1)^2 + (-1) - 1 = 3 - 2 = 1 = a_1$.
+$f(a_1) = f(1) = 3(1)^2 + 1 - 1 = 3 = a_2$.
+This is a valid solution. Factoring the polynomial $24a_1^4 - 2a_1^3 - 38a_1^2 + a_1 + 15$ by $(a_1 - 1)$ gives $(a_1 - 1)(24a_1^3 + 22a_1^2 - 16a_1 - 15)$. Analysis of the cubic term shows no further integer roots.
+
+**3. Case $n \ge 3$:**
+We use the property that for any polynomial $f(x)$ with integer coefficients, $x - y$ divides $f(x) - f(y)$.
+Thus, $(a_0 - a_1) | (f(a_0) - f(a_1)) = a_1 - a_2$,
+$(a_1 - a_2) | (f(a_1) - f(a_2)) = a_2 - a_3$, and so on.
+This implies $|a_0 - a_1| \le |a_1 - a_2| \le \dots \le |a_{n-1} - a_n|$.
+If $|a_{n-1}|$ is large, $f(a_{n-1})$ grows rapidly. For $a_n = 3$, $a_{n-1}$ must be small. If we assume an arithmetic progression $a_i = a_0 + id$, the growth of $f(x) \approx 3x^n$ makes it impossible for $n \ge 3$ to satisfy $f(a_{n-1}) = 3$ unless the coefficients $a_i$ are very small. Testing small integer values for $a_i$ (e.g., $a_2 \in \{0, \pm 1, 2\}$ for $n=3$) yields no integer solutions.
+
+The only positive integer $n$ and integer sequence $a_0, \ldots, a_n$ satisfying the given conditions are $n=2, a_0=-1, a_1=1, a_2=3$.
+
+The only solution is $n=2$ and $(a_0, a_1, a_2) = (-1, 1, 3)$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

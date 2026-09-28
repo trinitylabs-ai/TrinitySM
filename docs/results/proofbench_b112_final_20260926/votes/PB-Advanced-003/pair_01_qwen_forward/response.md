@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The three circumcircles $\mathcal{C}_A, \mathcal{C}_B, \mathcal{C}_C$ share a common radical axis equal to the line $IO$. The external center of similitude $X_{ext}$ lies on this axis by virtue of lying on the pairwise radical axes $AT_A, BT_B, CT_C$. The internal center of similitude $Y_{int}$ is claimed to have equal power with respect to all three circles, placing it on the same radical axis. The incenter $I$ lies on $IO$ and has negative power with respect to $\mathcal{C}_A$, proving the radical axis intersects each circle at two distinct real points $X$ and $Y$ common to all three.
+Claim gap: The derivation of equal power for $Y_{int}$ in step 8 contains a demonstrated defect: it computes power as $\vec{Y_{int}A} \cdot \vec{Y_{int}K_A}$, which is only valid if $Y_{int}, A, K_A$ are collinear. They are not generally collinear, so the formula misapplies the definition of power. This leaves the equal-power claim for $Y_{int}$ unjustified as written.
+Qualifications and supplied repairs: NONE. The defect in step 8 is noted as a local failure of justification. The cited concurrence of $AT_A, BT_B, CT_C$ at $X_{ext}$ and the tangency of $\mathcal{C}_A$ to the incircle are standard mixtilinear lemmas; their applicability is assumed per the submission. No substantive repair is supplied.
+Decisive checks: 
+- Step 3: Verified. $\mathcal{C}_A$ and $\omega$ intersect at $A$ and $T_A$, so their radical axis is line $AT_A$. Since $X_{ext} \in AT_A$, $\mathcal{P}_{\mathcal{C}_A}(X_{ext}) = \mathcal{P}_\omega(X_{ext})$. Symmetry extends this to all three circles, correctly placing $X_{ext}$ on the common radical axis.
+- Step 8: Demonstrated defect. Power of a point requires collinear secant segments. $Y_{int}, A, K_A$ are not collinear, so the dot product does not equal the power. The homothety scaling argument is stated but the algebraic execution is invalid.
+- Step 13: Verified. $\vec{IA} \cdot \vec{ID} < 0$ because $I$ lies strictly between $A$ and $D$. A point on the radical axis with negative power lies inside the circle, guaranteeing the radical axis intersects the circle at two real points. The coaxial intersection conclusion follows rigorously from this.
+
+## Proof B
+Established theorem: Correctly computes $T_A I = AI$ via power of a point (step 7) and correctly places the external center of similitude $Y$ on line $AT_A$ using Monge's theorem (step 11).
+Claim gap: Fails to prove that $X$ and $Y$ lie on the three circles. Step 13 asserts the conclusion without derivation. Additionally, the collinearity of $T_A, I, M$ (step 5) is derived from a false premise, and the power calculation in step 9 yields no useful incidence property.
+Qualifications and supplied repairs: NONE. The false claim in step 3 and the assertion in step 13 are left as stated. No repairs are supplied.
+Decisive checks:
+- Step 3: Demonstrated defect. Claims $I$ is the midpoint of chord $M_A N_A$. The distance from $A$ to the midpoint is $r_A/\sin(A/2)$, while $AI = r/\sin(A/2)$. Since $r_A \neq r$ for non-degenerate triangles, $I$ is not the midpoint.
+- Step 5: The collinearity $T_A, I, M$ is a true known lemma, but the proof derives it from the false midpoint claim and an unverified orthocenter configuration. The derivation is invalid as written.
+- Step 13: Demonstrated defect. The statement "By symmetry, X and Y lie on all three circles" is a restatement of the problem's conclusion, not a proof. No power calculation, radical axis argument, or angle chase is provided to verify incidence. The main obligation remains entirely unmet.
+
+## Decision
+Winner: A
+Reason: Proof A establishes a complete radical axis framework, correctly identifies $X_{ext}$ on the common radical axis, and rigorously proves the intersection points are real via the negative power of $I$. Although step 8 contains a demonstrated defect in computing the power of $Y_{int}$ (misapplying the collinear secant formula), the overall logical structure correctly reduces the problem to coaxiality and real intersection, which are properly verified. Proof B contains a false geometric claim (step 3), an invalid derivation of a key collinearity (step 5), and completely fails to prove the main incidence claim, resorting to an assertion in step 13. Proof A's structural completeness and correct verification of real intersection make it decisively stronger despite the local calculation gap.

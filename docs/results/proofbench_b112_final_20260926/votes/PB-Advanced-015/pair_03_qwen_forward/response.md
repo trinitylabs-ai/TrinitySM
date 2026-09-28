@@ -1,0 +1,21 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The condition that segment $EF$ is tangent to the incircle is equivalent to $r = 2R \cos A$ (or $s \cos A = s-a$). The coordinates of $O, I, K, D$ and the algebraic expression for $X$ (in terms of $Q$) are derived correctly within the chosen coordinate system.
+Claim gap: The proof relies on the false geometric property that the incenter $I$ is the midpoint of the segment connecting the mixtilinear incircle touch point $Y$ and the midpoint of the arc $BC$ not containing $A$ ($M_A$). This property is false (it implies $Y$ lies on the angle bisector $AI$, which is generally not true for the mixtilinear incircle touch point). Consequently, the coordinates of $Y$ are incorrect, and the final collinearity check is based on invalid data.
+Qualifications and supplied repairs: The derivation of the tangency condition $r = 2R \cos A$ is verified and correct. The coordinate setup for $O, I, K$ is consistent. The algebraic derivation of $X$ from $Q$ and $D$ is formally correct but depends on the correct location of $Q$ and $Y$.
+Decisive checks: 
+1. Verification of $r = 2R \cos A$: Correct.
+2. Verification of $Y$'s property: False. In an equilateral triangle, $Y$ coincides with $M_A$ (midpoint of arc $BC$ not containing $A$) only if the mixtilinear circle degenerates or is defined differently; generally, $Y$ is not on $AI$, so $I$ cannot be the midpoint of $Y M_A$ (since $I, M_A \in AI$). Thus $Y$ is not on the circumcircle in the proof's construction.
+
+## Proof B
+Established theorem: The condition that segment $EF$ is tangent to the incircle is equivalent to $r = 2R \cos A$. The point $K$ is correctly identified as the touch point of the $A$-excircle on $BC$.
+Claim gap: The proof claims that the points $I$ (incenter), $H_0$ (foot of altitude from $A$), and $M_{top}$ (midpoint of arc $BAC$) are collinear. This claim is false for non-isosceles triangles. The proof uses this false collinearity to determine the location of $Q$ (intersection of $IH_0$ with circumcircle) as the intersection of $M_{top}I$ with the circumcircle. Since $Q$ is incorrectly located, the subsequent determination of $X$ and the collinearity argument fail. Additionally, the proof interprets the circle touching rays $AB, AC$ and externally tangent to the circumcircle as the $A$-mixtilinear excircle, which contradicts the "rays" constraint (mixtilinear excircles touch lines/extensions, not rays starting at $A$ inside the circumcircle).
+Qualifications and supplied repairs: The derivation of the condition $r = 2R \cos A$ is correct. The identification of $K$ is correct. The property used for $Y$ (collinearity with $K$ and $M_{top}$) is valid for the mixtilinear excircle, but the object identification is questionable given the problem statement.
+Decisive checks:
+1. Verification of $I, H_0, M_{top}$ collinearity: False. Calculated slopes of $IH_0$ and $IM_{top}$ have opposite signs in a standard coordinate setup for a scalene triangle, proving they are not collinear.
+2. Verification of $Q$'s location: Incorrect due to the false collinearity.
+
+## Decision
+Winner: A
+Reason: Both proofs contain fatal mathematical errors. Proof A relies on a false geometric property for the location of $Y$ ($I$ is midpoint of $Y M_A$), which places $Y$ outside the circumcircle. Proof B relies on a false geometric collinearity ($I, H_0, M_{top}$ are collinear) to locate $Q$, which is demonstrably false for non-isosceles triangles. Proof A is preferred because its coordinate geometry setup is consistent, its derivation of the necessary condition ($r = 2R \cos A$) is more rigorous (checking cases), and its algebraic treatment of $X$ is formally correct given the inputs. Proof B contains calculation errors in slope derivation and misinterprets the problem's circle definition (rays vs lines). Proof A's error is a single incorrect lemma citation, whereas Proof B's error invalidates the construction of a primary point $Q$ through a false geometric claim.

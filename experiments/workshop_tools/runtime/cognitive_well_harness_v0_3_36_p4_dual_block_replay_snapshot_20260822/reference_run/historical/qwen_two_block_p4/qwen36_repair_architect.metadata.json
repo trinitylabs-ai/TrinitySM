@@ -1,0 +1,43 @@
+{
+  "stage": "qwen36_repair_architect",
+  "started_at": "2026-08-22T18:24:21.475529+00:00",
+  "completed_at": "2026-08-22T18:29:05.208425+00:00",
+  "latency_seconds": 283.73288651555777,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8027/v1",
+  "model": "Qwen/Qwen3.6-27B",
+  "prompt_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+  "user_prompt_sha256": "7921a32c6e9a40c82cb39eb91b9559a57bbd8ff5ff8f721e52cba9c23a9469cf",
+  "request_sha256": "d957cfc322d8b7a09d73cc1471a1aec2b0be368157aa904aae2d48c7b1f07734",
+  "response_id": "chatcmpl-8ced5a5bb9afa87e",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3032,
+    "total_tokens": 11067,
+    "completion_tokens": 8035,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 12000,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 2190888492,
+    "thinking_token_budget": null,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 14400
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "system_prompt_path": "/opt/proof-workshop/math_harness_runs/qwen36_27b_three_case_two_block_fusion_repair_20260822/p4_s2_first_revision/qwen36_repair_architect.prompt.txt",
+  "user_prompt_path": "/opt/proof-workshop/math_harness_runs/qwen36_27b_three_case_two_block_fusion_repair_20260822/p4_s2_first_revision/qwen36_repair_architect.user_prompt.txt",
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/qwen36_27b_three_case_two_block_fusion_repair_20260822/p4_s2_first_revision/qwen36_repair_architect.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/qwen36_27b_three_case_two_block_fusion_repair_20260822/p4_s2_first_revision/qwen36_repair_architect.reasoning.txt"
+}

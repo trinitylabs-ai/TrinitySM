@@ -1,0 +1,42 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_6b602602730b7452c849e0a6",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "9e54f66dc5e7621bc37c2e51de6db57349246cefef176fae7f738ef08c68d771",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "f8c0e0ebd80a9f07d96e17f80d0e27d204b7bad1ece12e906f303d99dcbd38e5",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The proof is complete and correct. The lexicographically decreasing pair consisting of the total number of prime factors and the number of entries greater than 1 proves termination with exactly one nonunit remaining. Primewise, the gcd of all valuations is invariant under the Euclidean transformation, uniquely determining the terminal integer.",
+    "strengths": [
+      "Correctly computes that the total Ω-value decreases by Ω(gcd(m,n)), with the number of nonunit entries decreasing in the coprime case.",
+      "Uses a valid well-founded lexicographic descent to rule out infinite play.",
+      "Correctly proves that at least one entry greater than 1 is preserved, so a terminal board has exactly one such entry.",
+      "Correctly identifies and proves invariance of the gcd of the p-adic valuations for every prime p.",
+      "Correctly reconstructs the unique terminal value from the invariant valuations."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T09:20:56.930448+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p1/pass_2/p1/proof_6b602602730b7452c849e0a6"
+}

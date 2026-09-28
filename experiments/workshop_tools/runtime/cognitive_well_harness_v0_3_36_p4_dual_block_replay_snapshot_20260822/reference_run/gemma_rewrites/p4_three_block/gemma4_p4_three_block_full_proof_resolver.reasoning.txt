@@ -1,0 +1,272 @@
+*   Game: Shan-Yu makes a triangle $T$.
+    *   Winning condition for Mulan: $T$ has an angle exactly $\theta$.
+    *   Mulan's move: Choose a point $P$ on the perimeter (not a vertex) and cut from $P$ to the opposite vertex.
+    *   Shan-Yu's move: Discard one of the two resulting triangles.
+    *   Goal: Find $\theta \in (0^\circ, 180^\circ)$ such that Mulan can guarantee victory in finitely many steps.
+
+    *   Let $W$ be the set of triangles from which Mulan can force a win.
+    *   $T \in W$ if:
+        1.  $T$ has an angle $\theta$.
+        2.  Mulan can make a cut such that both resulting triangles $T_1, T_2 \in W$.
+    *   Wait, the definition of $W$ in the submitted proof is slightly different: "A triangle $T$ is in $W$ if (i) $T$ has an angle $\theta$, or (ii) there exists a cut... such that both $T_1 \in W$ and $T_2 \in W$." This is a recursive definition.
+
+    *   Let $S = \{k\theta \mid k \in \mathbb{Z}^+, 0 < k\theta < 180^\circ\}$.
+    *   Claim: Any triangle with an angle in $S$ is in $W$.
+    *   Proof by induction on $k$:
+        *   $k=1$: Angle is $\theta$, so $T \in W$.
+        *   Assume triangles with angles $m\theta$ ($m < k$) are in $W$.
+        *   If $T$ has an angle $k\theta$, Mulan can cut this angle into $\theta$ and $(k-1)\theta$.
+        *   The two resulting triangles $T_1, T_2$ will have angles $\theta$ and $(k-1)\theta$ respectively.
+        *   Since $\theta \in S$ and $(k-1)\theta \in S$, $T_1, T_2 \in W$.
+        *   Thus $T \in W$.
+    *   *Self-Correction:* Is this cut always possible? If $T$ has an angle $\angle C = k\theta$, Mulan cuts from $C$ to the opposite side $AB$. Let the cut be $CP$. The angles created at $C$ are $\angle ACP$ and $\angle BCP$. She can choose $P$ such that $\angle ACP = \theta$ and $\angle BCP = (k-1)\theta$. This is always possible as long as $k\theta$ is the angle at $C$ and $P$ is between $A$ and $B$.
+    *   Wait, the resulting triangles $T_1$ and $T_2$ also have other angles.
+        *   $T_1$ has angles $\angle A, \angle ACP = \theta, \angle APC$.
+        *   $T_2$ has angles $\angle B, \angle BCP = (k-1)\theta, \angle BPC$.
+        *   Since $T_1$ has angle $\theta$, $T_1 \in W$.
+        *   Since $T_2$ has angle $(k-1)\theta$, $T_2 \in W$ by the inductive hypothesis.
+        *   Thus $T \in W$.
+    *   This part is sound.
+
+    *   Now we need to show that *any* triangle $T$ is in $W$ if $180^\circ/\theta = n \in \{2, 3, \dots\}$.
+    *   If $T$ already has an angle in $S$, $T \in W$.
+    *   If $T$ has no angle in $S$, Mulan needs to make a cut such that both $T_1, T_2 \in W$.
+    *   A sufficient condition for $T_1, T_2 \in W$ is that they both have angles in $S$.
+    *   Let the cut be from vertex $C$ to side $AB$ at point $P$.
+    *   The angles created at $P$ are $\phi = \angle APC$ and $180^\circ - \phi = \angle BPC$.
+    *   If $\phi \in S$ and $180^\circ - \phi \in S$, then $T_1$ and $T_2$ both have angles in $S$, so $T_1, T_2 \in W$.
+    *   Since $180^\circ = n\theta$, if $\phi = k\theta$ for some $k \in \{1, \dots, n-1\}$, then $180^\circ - \phi = (n-k)\theta$, which is also in $S$.
+    *   So Mulan just needs to be able to choose $P$ such that $\angle APC = k\theta$ for some $k \in \{1, \dots, n-1\}$.
+    *   What is the range of $\phi = \angle APC$ as $P$ moves from $A$ to $B$?
+        *   As $P \to A$, $\angle APC \to \angle BAC = A$.
+        *   As $P \to B$, $\angle APC \to \angle ABC = B$.
+        *   Wait, this is not quite right. Let's re-evaluate.
+        *   In $\triangle APC$, $\angle APC = 180^\circ - A - \angle ACP$.
+        *   As $P$ moves from $A$ to $B$, $\angle ACP$ increases from $0^\circ$ to $C$.
+        *   So $\phi = \angle APC$ decreases from $180^\circ - A$ to $180^\circ - A - C = B$.
+        *   The range of $\phi$ is the open interval $(B, 180^\circ - A)$.
+        *   The length of this interval is $(180^\circ - A) - B = 180^\circ - (A+B) = C$.
+    *   Mulan wins if $(B, 180^\circ - A) \cap S \neq \emptyset$.
+    *   If $C > \theta$, the interval $(B, 180^\circ - A)$ has length $C > \theta$.
+    *   An open interval of length $L$ contains a multiple of $\theta$ if $L > \theta$, *unless* the endpoints are the only multiples.
+    *   Wait, if $L > \theta$, the interval $(B, 180^\circ - A)$ must contain at least one multiple of $\theta$.
+        *   Let $B = q\theta + r$, where $0 \le r < \theta$.
+        *   The first multiple of $\theta$ greater than $B$ is $(q+1)\theta$.
+        *   Is $(q+1)\theta < 180^\circ - A$?
+        *   $(q+1)\theta = q\theta + \theta \le B + \theta$.
+        *   Since $C > \theta$, $B + \theta < B + C = 180^\circ - A$.
+        *   So $(q+1)\theta$ is in the interval $(B, 180^\circ - A)$.
+    *   Is it possible that $C \le \theta$ for all vertices?
+        *   If $n \ge 3$, then $\theta = 180^\circ/n \le 60^\circ$.
+        *   Since $A+B+C = 180^\circ$, the largest angle $C$ must be at least $60^\circ$.
+        *   If $C > 60^\circ$, then $C > \theta$ is guaranteed.
+        *   If $C = 60^\circ$, then $A=B=C=60^\circ$.
+        *   If $\theta = 60^\circ$ ($n=3$), then $C = \theta$, so $T$ already has an angle in $S$.
+        *   If $\theta < 60^\circ$ ($n > 3$), then $C > \theta$.
+    *   What if $n=2$? Then $\theta = 90^\circ$.
+        *   If $T$ has an angle of $90^\circ$, $T \in W$.
+        *   If $T$ has no angle of $90^\circ$, then $T$ is either acute or obtuse.
+        *   If $T$ is acute, the altitude from $C$ to $AB$ falls inside $AB$, creating $\phi = 90^\circ$.
+        *   If $T$ is obtuse, say $A > 90^\circ$. Then $B < 90^\circ$ and $C < 90^\circ$.
+        *   The range of $\phi$ for a cut from $C$ is $(B, 180^\circ - A)$.
+        *   Since $A > 90^\circ$, $180^\circ - A < 90^\circ$.
+        *   Since $B < 90^\circ$, the interval $(B, 180^\circ - A)$ might not contain $90^\circ$.
+        *   Wait, let's check the other vertices.
+        *   If $A > 90^\circ$, let's cut from $A$ to $BC$.
+        *   The range of $\phi = \angle APC$ is $(C, 180^\circ - B)$.
+        *   Since $B < 90^\circ$, $180^\circ - B > 90^\circ$.
+        *   Since $C < 90^\circ$, the interval $(C, 180^\circ - B)$ contains $90^\circ$.
+        *   So Mulan can always create a $90^\circ$ angle.
+    *   Conclusion for $n \ge 2$: Mulan can always force a win.
+
+    *   If $180^\circ/\theta \notin \mathbb{Z}$, let $S = \{k\theta \mid k \in \mathbb{Z}^+, 0 < k\theta < 180^\circ\}$.
+    *   Claim: $T \in W \iff T$ has an angle in $S$.
+    *   Proof by induction on the number of steps $m$ to win.
+    *   Base case $m=0$: $T$ has an angle $\theta$, so $T$ has an angle in $S$.
+    *   Inductive step: Suppose any triangle that can be won in $m$ steps has an angle in $S$.
+    *   If $T$ can be won in $m+1$ steps, Mulan can make a cut such that $T_1, T_2$ can be won in $m$ steps.
+    *   By the inductive hypothesis, $T_1$ and $T_2$ must both have angles in $S$.
+    *   Let the cut be from $C$ to $P$ on $AB$.
+    *   The angles of $T_1$ are $A, \angle ACP, \phi$.
+    *   The angles of $T_2$ are $B, \angle BCP, 180^\circ - \phi$.
+    *   If $T$ has no angle in $S$, then $A, B, C \notin S$.
+    *   For $T_1$ to have an angle in $S$, either $\angle ACP \in S$ or $\phi \in S$.
+    *   For $T_2$ to have an angle in $S$, either $\angle BCP \in S$ or $180^\circ - \phi \in S$.
+    *   Case 1: $\phi \in S$ and $180^\circ - \phi \in S$.
+        *   Then $\phi = k\theta$ and $180^\circ - \phi = m\theta$.
+        *   $180^\circ = (k+m)\theta$, so $180^\circ/\theta = k+m \in \mathbb{Z}$.
+        *   Contradiction.
+    *   Case 2: $\angle ACP \in S$ and $\angle BCP \in S$.
+        *   Then $\angle ACP = k\theta$ and $\angle BCP = m\theta$.
+        *   $C = \angle ACP + \angle BCP = (k+m)\theta$.
+        *   So $C \in S$.
+        *   Contradiction (we assumed $T$ has no angle in $S$).
+    *   Case 3: $\angle ACP \in S$ and $180^\circ - \phi \in S$.
+        *   $\angle ACP = k\theta$ and $180^\circ - \phi = m\theta$.
+        *   In $\triangle APC$, $\phi = 180^\circ - A - \angle ACP = 180^\circ - A - k\theta$.
+        *   So $180^\circ - (180^\circ - A - k\theta) = m\theta \implies A + k\theta = m\theta \implies A = (m-k)\theta$.
+        *   So $A \in S$.
+        *   Contradiction.
+    *   Case 4: $\phi \in S$ and $\angle BCP \in S$.
+        *   $\phi = k\theta$ and $\angle BCP = m\theta$.
+        *   In $\triangle BPC$, $180^\circ - \phi = B + \angle BCP \implies 180^\circ - k\theta = B + m\theta \implies B = 180^\circ - (k+m)\theta$.
+        *   Wait, this doesn't immediately mean $B \in S$ unless $180^\circ/\theta$ is an integer.
+        *   Let's re-examine Case 4.
+        *   $B = 180^\circ - (k+m)\theta$.
+        *   If $180^\circ/\theta$ is not an integer, then $B$ cannot be a multiple of $\theta$.
+        *   Wait, the claim is $T \in W \iff T$ has an angle in $S$.
+        *   If $T$ has no angle in $S$, then $A, B, C \notin S$.
+        *   If Mulan cuts $T$ into $T_1, T_2$, then for $T_1 \in W$, it must have an angle in $S$.
+        *   The angles of $T_1$ are $A, \angle ACP, \phi$.
+        *   Since $A \notin S$, either $\angle ACP \in S$ or $\phi \in S$.
+        *   Similarly, for $T_2 \in W$, either $\angle BCP \in S$ or $180^\circ - \phi \in S$.
+        *   Let's list the possibilities for $(T_1 \text{ angle in } S, T_2 \text{ angle in } S)$:
+            1.  $\phi \in S$ and $180^\circ - \phi \in S \implies 180^\circ \in S \cdot \mathbb{Z}$ (Contradiction).
+            2.  $\angle ACP \in S$ and $\angle BCP \in S \implies C \in S$ (Contradiction).
+            3.  $\angle ACP \in S$ and $180^\circ - \phi \in S$:
+                $\angle ACP = k\theta$, $180^\circ - \phi = m\theta$.
+                In $\triangle APC$, $\phi = 180^\circ - A - \angle ACP = 180^\circ - A - k\theta$.
+                $180^\circ - (180^\circ - A - k\theta) = m\theta \implies A + k\theta = m\theta \implies A = (m-k)\theta \in S$ (Contradiction).
+            4.  $\phi \in S$ and $\angle BCP \in S$:
+                $\phi = k\theta$, $\angle BCP = m\theta$.
+                In $\triangle BPC$, $180^\circ - \phi = B + \angle BCP \implies 180^\circ - k\theta = B + m\theta \implies B = 180^\circ - (k+m)\theta$.
+                Is $B \in S$? $B = j\theta \implies 180^\circ = (j+k+m)\theta \implies 180^\circ/\theta \in \mathbb{Z}$ (Contradiction).
+                Wait, this means $B$ is *not* in $S$. But we need $T_2$ to have an angle in $S$.
+                The angles of $T_2$ are $B, \angle BCP, 180^\circ - \phi$.
+                We have $\angle BCP = m\theta \in S$. So $T_2$ *does* have an angle in $S$.
+                But we also need $T_1$ to have an angle in $S$.
+                The angles of $T_1$ are $A, \angle ACP, \phi$.
+                We have $\phi = k\theta \in S$. So $T_1$ *does* have an angle in $S$.
+                So if Mulan can choose $P$ such that $\phi = k\theta$ and $\angle BCP = m\theta$, then $T_1, T_2 \in W$.
+                Is this possible?
+                $\phi = \angle APC$. In $\triangle BPC$, $\angle BPC = 180^\circ - \phi$.
+                The angles of $\triangle BPC$ are $B, \angle BCP, 180^\circ - \phi$.
+                Sum: $B + \angle BCP + 180^\circ - \phi = 180^\circ \implies \phi = B + \angle BCP$.
+                Mulan can choose $P$ to make $\angle BCP$ anything from $0$ to $C$.
+                So $\phi$ can be anything from $B$ to $B+C = 180^\circ - A$.
+                Mulan wants to find $k, m \in \mathbb{Z}^+$ such that:
+                1. $\phi = k\theta$
+                2. $\angle BCP = m\theta$
+                3. $\phi = B + \angle BCP \implies k\theta = B + m\theta \implies B = (k-m)\theta$.
+                But we assumed $B \notin S$.
+                So $B$ cannot be a multiple of $\theta$.
+                Thus, Mulan cannot choose $P$ such that both $\phi \in S$ and $\angle BCP \in S$.
+                Wait, let's re-evaluate.
+                For $T_1 \in W$, it must have an angle in $S$. The angles are $\{A, \angle ACP, \phi\}$.
+                For $T_2 \in W$, it must have an angle in $S$. The angles are $\{B, \angle BCP, 180^\circ - \phi\}$.
+                If $A, B, C \notin S$, then:
+                - $T_1 \in W \iff \angle ACP \in S$ or $\phi \in S$.
+                - $T_2 \in W \iff \angle BCP \in S$ or $180^\circ - \phi \in S$.
+                Possible pairs of winning angles:
+                - $(\phi, 180^\circ - \phi)$: $\phi + (180^\circ - \phi) = 180^\circ \implies 180^\circ/\theta \in \mathbb{Z}$.
+                - $(\angle ACP, \angle BCP)$: $\angle ACP + \angle BCP = C \implies C/\theta \in \mathbb{Z}$.
+                - $(\angle ACP, 180^\circ - \phi)$: $\angle ACP = k\theta, 180^\circ - \phi = m\theta$.
+                  In $\triangle APC$, $\phi = 180^\circ - A - \angle ACP \implies 180^\circ - (180^\circ - A - k\theta) = m\theta \implies A = (m-k)\theta \implies A/\theta \in \mathbb{Z}$.
+                - $(\phi, \angle BCP)$: $\phi = k\theta, \angle BCP = m\theta$.
+                  In $\triangle BPC$, $180^\circ - \phi = B + \angle BCP \implies 180^\circ - k\theta = B + m\theta \implies B = 180^\circ - (k+m)\theta$.
+                  If $B = j\theta$, then $180^\circ/\theta \in \mathbb{Z}$.
+                  If $B$ is not a multiple of $\theta$, then $B = 180^\circ - (k+m)\theta$ is only possible if $180^\circ$ is not a multiple of $\theta$.
+                  Wait, let's be careful.
+                  If $B = 180^\circ - (k+m)\theta$, then $B$ is not in $S$ (because $180^\circ/\theta \notin \mathbb{Z}$).
+                  But we need $T_2$ to have an angle in $S$.
+                  The angles of $T_2$ are $\{B, \angle BCP, 180^\circ - \phi\}$.
+                  We have $\angle BCP = m\theta \in S$. So $T_2 \in W$.
+                  The angles of $T_1$ are $\{A, \angle ACP, \phi\}$.
+                  We have $\phi = k\theta \in S$. So $T_1 \in W$.
+                  So if Mulan can choose $P$ such that $\phi = k\theta$ and $\angle BCP = m\theta$, she wins.
+                  Is this possible?
+                  $\phi = B + \angle BCP$.
+                  So $k\theta = B + m\theta \implies B = (k-m)\theta$.
+                  This means $B$ must be a multiple of $\theta$, so $B \in S$.
+                  But we assumed $T$ has no angle in $S$.
+                  So this is impossible.
+
+    *   Therefore, if $180^\circ/\theta \notin \mathbb{Z}$, Mulan can only win if $T$ initially has an angle in $S$.
+    *   Since Shan-Yu chooses $T$, he can choose a triangle with no angles in $S$.
+    *   For example, if $\theta = 70^\circ$, $S = \{70^\circ, 140^\circ\}$.
+    *   Shan-Yu can choose an equilateral triangle ($60^\circ, 60^\circ, 60^\circ$).
+    *   Then Mulan can never win.
+
+    *   Wait, the problem asks for which $\theta$ Mulan can guarantee victory *no matter how Shan-Yu plays*.
+    *   If $180^\circ/\theta = n \in \{2, 3, \dots\}$, Mulan can always win.
+    *   If $180^\circ/\theta \notin \mathbb{Z}$, Shan-Yu can choose $T$ such that Mulan cannot win.
+    *   Is it possible that $180^\circ/\theta = n$ for $n=1$?
+        *   The problem says $0 < \theta < 180^\circ$.
+        *   If $n=1$, $\theta = 180^\circ$, but $\theta < 180^\circ$.
+        *   If $n=2$, $\theta = 90^\circ$.
+        *   If $n=3$, $\theta = 60^\circ$.
+        *   And so on.
+    *   So the answer is $\theta = 180^\circ/n$ for $n \in \{2, 3, 4, \dots\}$.
+
+    *   The recursive definition of $W$ is:
+        $T \in W$ if:
+        1. $T$ has an angle $\theta$.
+        2. Mulan can cut $T$ into $T_1, T_2$ such that $T_1 \in W$ and $T_2 \in W$.
+    *   Is this the only way to win?
+        The game stops if $T$ has an angle $\theta$.
+        If $T$ doesn't have an angle $\theta$, Mulan cuts $T$ into $T_1, T_2$.
+        Shan-Yu chooses one.
+        Mulan wins if she can force the game to stop regardless of Shan-Yu's choice.
+        This means she must be able to make a cut such that *both* $T_1$ and $T_2$ are winning positions for her.
+        This is exactly what the recursive definition $W$ describes.
+    *   Wait, the "induction on $k$" part:
+        If $T$ has an angle $k\theta$, Mulan cuts it into $\theta$ and $(k-1)\theta$.
+        $T_1$ has angle $\theta \implies T_1 \in W$.
+        $T_2$ has angle $(k-1)\theta \implies T_2 \in W$ (by induction).
+        So $T \in W$.
+        This is correct.
+    *   The "any triangle" part:
+        If $180^\circ/\theta = n$, and $T$ has no angle in $S$, Mulan cuts from $C$ to $P$ such that $\phi = \angle APC = k\theta$.
+        Then $180^\circ - \phi = (n-k)\theta$.
+        $T_1$ has angle $\phi = k\theta \in S \implies T_1 \in W$.
+        $T_2$ has angle $180^\circ - \phi = (n-k)\theta \in S \implies T_2 \in W$.
+        So $T \in W$.
+        This is also correct.
+    *   The "non-integer" part:
+        If $180^\circ/\theta \notin \mathbb{Z}$, then $T \in W \iff T$ has an angle in $S$.
+        We checked all 4 cases for the cut and found that if $T$ has no angle in $S$, then Mulan cannot make a cut such that both $T_1, T_2$ have angles in $S$.
+        Is it possible that $T_1, T_2 \in W$ but they don't have angles in $S$?
+        No, because the base case of the induction is "has an angle $\theta$".
+        If $T \in W$, it must eventually reach a triangle with an angle $\theta$.
+        Let's be more formal.
+        Let $W_0 = \{T \mid T \text{ has an angle } \theta\}$.
+        $W_{m+1} = W_m \cup \{T \mid \exists \text{ cut } T \to (T_1, T_2) \text{ s.t. } T_1, T_2 \in W_m\}$.
+        We want to show that if $180^\circ/\theta \notin \mathbb{Z}$, then $W = \bigcup W_m = \{T \mid T \text{ has an angle in } S\}$.
+        Base case: $W_0 = \{T \mid T \text{ has an angle } \theta\}$.
+        Since $\theta \in S$, $W_0 \subseteq \{T \mid T \text{ has an angle in } S\}$.
+        Inductive step: Suppose $W_m \subseteq \{T \mid T \text{ has an angle in } S\}$.
+        Let $T \in W_{m+1}$. Then there is a cut $T \to (T_1, T_2)$ such that $T_1, T_2 \in W_m$.
+        By the inductive hypothesis, $T_1$ and $T_2$ both have angles in $S$.
+        As we analyzed before, if $T$ has no angle in $S$, this is impossible.
+        Therefore, $T$ must have an angle in $S$.
+        So $W_{m+1} \subseteq \{T \mid T \text{ has an angle in } S\}$.
+        This proves that if $180^\circ/\theta \notin \mathbb{Z}$, then $W \subseteq \{T \mid T \text{ has an angle in } S\}$.
+        Conversely, we already showed that if $T$ has an angle $k\theta$, then $T \in W$.
+        So $W = \{T \mid T \text{ has an angle in } S\}$.
+        Since Shan-Yu can choose $T$ with no angles in $S$, Mulan cannot guarantee victory.
+
+    *   The range of $\phi = \angle APC$ is $(B, 180^\circ - A)$.
+    *   Length is $C$.
+    *   If $C > \theta$, the interval contains a multiple of $\theta$.
+    *   If $n \ge 3$, $\theta \le 60^\circ$.
+    *   The largest angle $C \ge 60^\circ$.
+    *   If $C > 60^\circ$, then $C > \theta$.
+    *   If $C = 60^\circ$, then $A=B=C=60^\circ$.
+        *   If $\theta = 60^\circ$, $T$ has an angle $\theta$.
+        *   If $\theta < 60^\circ$, $C > \theta$.
+    *   If $n = 2$, $\theta = 90^\circ$.
+        *   If $T$ has a $90^\circ$ angle, $T \in W$.
+        *   If $T$ is acute, the altitude from $C$ to $AB$ gives $\phi = 90^\circ$.
+        *   If $T$ is obtuse, say $A > 90^\circ$, the cut from $A$ to $BC$ gives $\phi \in (C, 180^\circ - B)$.
+        *   Since $B < 90^\circ$, $180^\circ - B > 90^\circ$.
+        *   Since $C < 90^\circ$, $90^\circ \in (C, 180^\circ - B)$.
+    *   Everything seems solid.
+
+    *   State the final answer: $\theta = 180^\circ/n$ for $n \in \{2, 3, 4, \dots\}$.
+    *   Define the winning set $W$.
+    *   Prove the $180^\circ/\theta = n$ case.
+        *   Induction on $k$ for $k\theta$.
+        *   Existence of a winning cut for any triangle.
+    *   Prove the $180^\circ/\theta \notin \mathbb{Z}$ case.
+        *   Show $T \in W \iff T$ has an angle in $S$.
+        *   Explain why Shan-Yu can choose $T \notin W$.

@@ -1,0 +1,1074 @@
+{
+  "schema": "imo2026-b112-p4-recovery-public-v1",
+  "quality": "graded",
+  "problem": {
+    "problem_id": "imo2026_p4",
+    "lanes": [
+      {
+        "candidate_id": "t07_r01",
+        "stage": "refinement_3",
+        "proof": "proofs/imo2026_p4/t07_r01.md",
+        "proof_sha256": "59a7d76b3ff5bd145a11ed434a7e5c4f02eac8307afc1127687026af47a648fa",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "grades/imo2026_p4/t07_r01_pass1/grade.json",
+          "grades/imo2026_p4/t07_r01_pass2/grade.json"
+        ]
+      },
+      {
+        "candidate_id": "t07_r02",
+        "stage": "refinement_3",
+        "proof": "proofs/imo2026_p4/t07_r02.md",
+        "proof_sha256": "30fd68459c141cad1b2b4671128a14e048c60809ae3c11c69226d68eca6bc641",
+        "scores": [
+          6,
+          6
+        ],
+        "grades": [
+          "grades/imo2026_p4/t07_r02_pass1/grade.json",
+          "grades/imo2026_p4/t07_r02_pass2/grade.json"
+        ]
+      },
+      {
+        "candidate_id": "t10_r01",
+        "stage": "refinement_2",
+        "proof": "proofs/imo2026_p4/t10_r01.md",
+        "proof_sha256": "7ec677b2e73c45106b1fc1480abfe23b28585902310a8b644e160b5e8db2c58c",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "grades/imo2026_p4/t10_r01_pass1/grade.json",
+          "grades/imo2026_p4/t10_r01_pass2/grade.json"
+        ]
+      },
+      {
+        "candidate_id": "t10_r02",
+        "stage": "refinement_2",
+        "proof": "proofs/imo2026_p4/t10_r02.md",
+        "proof_sha256": "2ceab36c39b8dfdc969329dbb29913ae4db1341a5c6e24c132d627cbbe66cba8",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "grades/imo2026_p4/t10_r02_pass1/grade.json",
+          "grades/imo2026_p4/t10_r02_pass2/grade.json"
+        ]
+      }
+    ],
+    "seed_derived_candidate_order": [
+      "t10_r02",
+      "t07_r01",
+      "t10_r01",
+      "t07_r02"
+    ],
+    "votes": [
+      {
+        "case_id": "pair_01_gemma_forward",
+        "original_case_id": "pair_01",
+        "model_key": "gemma",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r02",
+          "t07_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "0dd4709c925edc5881685ee465976fd1fe0f0b9b4962f37b883b6126fc319ced",
+        "reason": "Both proofs are mathematically complete, correct, and follow the same logical structure. Proof A is slightly more elegant in its treatment of Case 1, using the fact that the largest angle $\\gamma$ is always at least $60^\\circ$ to simplify the interval argument for all $n \\ge 3$. Proof B's treatment of the $A \\le \\theta$ case is also correct but slightly more fragmented. The preference is weak as both are high-quality submissions.",
+        "elapsed_seconds": 274.0149357690243,
+        "response": "votes/imo2026_p4/pair_01_gemma_forward/response.md",
+        "input": "votes/imo2026_p4/pair_01_gemma_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "350271b8c02a71badc22474380fda5a4eff3d3d5c3b63a967099cb711d984085"
+      },
+      {
+        "case_id": "pair_01_qwen_forward",
+        "original_case_id": "pair_01",
+        "model_key": "qwen",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r02",
+          "t07_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "230422eebefb738529608c0da1574c5281aa4384798d5079485dd145ac7ee1e0",
+        "reason": "Both submissions are mathematically correct and complete, establishing the same necessary and sufficient condition with valid strategies and impossibility proofs. Proof A is marginally stronger in its explicit geometric derivation: it carefully defines the cut parameter $\\psi$, proves its exact open interval range $(\\alpha, 180^\\circ-\\beta)$, and explicitly addresses the boundary condition for the existence of a multiple of $\\theta$ within that interval (noting that $\\alpha \\notin W$ prevents the interval from sitting exactly between two multiples). Proof B's interval argument is correct but slightly glosses over the open-boundary nuance, relying on the strict inequality $A > \\theta$ without explicitly ruling out the degenerate boundary case (though it is implicitly excluded). Proof A's case separation and step-by-step verification of the cut geometry provide a more rigorous justification of the decisive derivation.",
+        "elapsed_seconds": 269.717636955902,
+        "response": "votes/imo2026_p4/pair_01_qwen_forward/response.md",
+        "input": "votes/imo2026_p4/pair_01_qwen_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "350271b8c02a71badc22474380fda5a4eff3d3d5c3b63a967099cb711d984085"
+      },
+      {
+        "case_id": "pair_04_gemma_reverse",
+        "original_case_id": "pair_04",
+        "model_key": "gemma",
+        "order": "reverse",
+        "presentation_order": [
+          "t10_r01",
+          "t07_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "4afc0cc578a2a1f6cc29759a7f15efc11b88f839a873347d8c662b8f857329ab",
+        "reason": "Proof B is complete and correct. It correctly identifies the winning condition as $\\theta = 180^\\circ/k$ and provides a rigorous strategy for both players. Proof A's conclusion is incorrect, as it claims Mulan wins for all rational multiples $\\theta < 120^\\circ$, and its justification for the final phase of the game is logically insufficient.",
+        "elapsed_seconds": 275.20886028406676,
+        "response": "votes/imo2026_p4/pair_04_gemma_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_04_gemma_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "2dc84befef76a2eb4c273141fd60663ec4196732494e06d290a3342fa63d8a3b"
+      },
+      {
+        "case_id": "pair_04_qwen_reverse",
+        "original_case_id": "pair_04",
+        "model_key": "qwen",
+        "order": "reverse",
+        "presentation_order": [
+          "t10_r01",
+          "t07_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "302005a913fec2f87ad8d71d9b3f310fb74358d73733f182bcf79294175d1d57",
+        "reason": "Proof B provides a complete, rigorous characterization with airtight case analysis for both the winning strategy and the avoidance strategy. Proof A's necessity argument is partially correct, but its sufficiency claim for rational $\\theta < 120^\\circ$ is mathematically false and relies on a fundamental fallacy (equating finite state reachability with adversarial forceability). The counterexample $\\theta = 100^\\circ$ decisively invalidates A's main claim, while B's set $W$ framework correctly identifies that $180^\\circ$ must be an integer multiple of $\\theta$ to guarantee victory. B's argument requires no external repairs and stands as a complete solution.",
+        "elapsed_seconds": 269.11830315797124,
+        "response": "votes/imo2026_p4/pair_04_qwen_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_04_qwen_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "2dc84befef76a2eb4c273141fd60663ec4196732494e06d290a3342fa63d8a3b"
+      },
+      {
+        "case_id": "pair_02_gemma_forward",
+        "original_case_id": "pair_02",
+        "model_key": "gemma",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r02",
+          "t10_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "caa53bf23c5f749a7c8dc87780d06aa7094d4498d1d4f15884f40c92027522c5",
+        "reason": "Proof A is complete and mathematically rigorous, correctly identifying the necessary and sufficient condition $\\theta = 180^\\circ/n$. Proof B reaches an incorrect conclusion and fails to provide a substantive proof for the sufficiency of its claimed condition.",
+        "elapsed_seconds": 288.19431554106995,
+        "response": "votes/imo2026_p4/pair_02_gemma_forward/response.md",
+        "input": "votes/imo2026_p4/pair_02_gemma_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "399d05071897e859b376618f31d92b2f4b332c547585b0358a004c3e2003de3a"
+      },
+      {
+        "case_id": "pair_02_qwen_forward",
+        "original_case_id": "pair_02",
+        "model_key": "qwen",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r02",
+          "t10_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "95ca08b7c0b13d9b2c2d5e26cd1e9c8378e75fea4d1842d619dadf6e980b8f43",
+        "reason": "Proof A provides a complete, rigorous, and correct characterization of the winning angles ($\\theta = 180^\\circ/n$). Its geometric analysis of the cut interval, the invariant set $W$, and the exhaustive case analysis for forcing/avoiding $W$ are all mathematically sound and verified. Proof B incorrectly claims that any rational multiple of $180^\\circ$ less than $120^\\circ$ is a winning angle, which is falsified by counterexamples like $\\theta = 100^\\circ$. Furthermore, B's arguments for the rational case rely on unjustified reachability claims in a finite state space, and its irrational case argument misapplies density concepts. Proof A's decisive advantage is its correct necessary-and-sufficient condition backed by a verified invariant and induction, whereas B's central claim is false.",
+        "elapsed_seconds": 320.33974394900724,
+        "response": "votes/imo2026_p4/pair_02_qwen_forward/response.md",
+        "input": "votes/imo2026_p4/pair_02_qwen_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "399d05071897e859b376618f31d92b2f4b332c547585b0358a004c3e2003de3a"
+      },
+      {
+        "case_id": "pair_05_gemma_reverse",
+        "original_case_id": "pair_05",
+        "model_key": "gemma",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r02",
+          "t07_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "d76d884423787bb5461277bad81352794ffcabd87eb9d1179f76dc8951ab33e8",
+        "reason": "Both proofs are mathematically complete and correct, following nearly identical logic. Proof B is slightly more concise and provides a more direct and elegant derivation for the \"one-move win\" strategy (using $B+\\alpha = n\\theta$ to simultaneously create multiples of $\\theta$ in both resulting triangles).",
+        "elapsed_seconds": 254.49491930997465,
+        "response": "votes/imo2026_p4/pair_05_gemma_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_05_gemma_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "83895510202443aff590ed0a85c77b931c5f383ff4b9b36553a66409873b1d4d"
+      },
+      {
+        "case_id": "pair_05_qwen_reverse",
+        "original_case_id": "pair_05",
+        "model_key": "qwen",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r02",
+          "t07_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "af724ea55aa15ecc7be63511ac7973b6eb8001b0953a30f172e19c94a78297f5",
+        "reason": "Both proofs are mathematically complete and correct, establishing the same necessary and sufficient condition with rigorous handling of edge cases and the invariant argument. Proof B is preferred for its more direct geometric derivation of the new triangle's angles (using the supplementary property to express the third angle as $B+\\alpha$), which streamlines the algebraic verification in the forward direction. Proof B's interval condition $B < n\\theta < B+A$ and its resolution of the $k=2$ case are slightly more transparent than Proof A's equivalent but more computational interval $(c/\\theta, n-b/\\theta)$. Both correctly handle the reverse direction, but B's presentation is marginally tighter without sacrificing rigor.",
+        "elapsed_seconds": 310.3508943390334,
+        "response": "votes/imo2026_p4/pair_05_qwen_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_05_qwen_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "83895510202443aff590ed0a85c77b931c5f383ff4b9b36553a66409873b1d4d"
+      },
+      {
+        "case_id": "pair_03_gemma_forward",
+        "original_case_id": "pair_03",
+        "model_key": "gemma",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r02",
+          "t07_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r02",
+        "response_sha256": "02d1a99e0fad2cf955e48e06a26751e6838015802b91386d030401f5d660bed2",
+        "reason": "Both proofs are mathematically complete and correct. Proof B is slightly stronger due to its more rigorous treatment of the existence of the cut in the $\\theta = 180^\\circ/n$ case, specifically by deriving the explicit interval $(c/\\theta, n - b/\\theta)$ and formally handling the $n=2$ boundary case. Proof A's argument for $n \\ge 3$ is correct but phrased less precisely (\"unless $\\alpha$ is a multiple of $\\theta$\"). Proof B also provides a concrete example of a starting triangle for the non-winning case.",
+        "elapsed_seconds": 243.0131289010169,
+        "response": "votes/imo2026_p4/pair_03_gemma_forward/response.md",
+        "input": "votes/imo2026_p4/pair_03_gemma_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "cfa8948606dd48f01df41975ffce18ae0a571e3eddebebe72e8c9cc39e197874"
+      },
+      {
+        "case_id": "pair_03_qwen_forward",
+        "original_case_id": "pair_03",
+        "model_key": "qwen",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r02",
+          "t07_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "bc3a92c5c47bf4bfb1116d5ecf11705881a73924b58082d70a762c1e32ef836e",
+        "reason": "Both proofs are mathematically complete and correct, arriving at the same necessary and sufficient condition with valid induction and case analysis. Proof A is preferred for its more direct geometric handling of the cut parameter $\\psi$. A's interval argument (length $\\gamma \\ge \\theta$) naturally leverages the triangle's largest angle and explicitly addresses the open-interval boundary condition, making the existence of a valid cut immediately transparent. Proof B's algebraic ansatz is valid but requires deriving and verifying a specific interval condition for the split angles, adding a layer of indirectness without increasing rigor. A's presentation of the four-case exclusion in the converse direction is also slightly more streamlined. The preference is based on mathematical clarity and directness of the central construction, not on correctness, as both are sound.",
+        "elapsed_seconds": 292.8671053000726,
+        "response": "votes/imo2026_p4/pair_03_qwen_forward/response.md",
+        "input": "votes/imo2026_p4/pair_03_qwen_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "cfa8948606dd48f01df41975ffce18ae0a571e3eddebebe72e8c9cc39e197874"
+      },
+      {
+        "case_id": "pair_06_gemma_reverse",
+        "original_case_id": "pair_06",
+        "model_key": "gemma",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r02",
+          "t10_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r02",
+        "response_sha256": "26c16202d555d39535069f7c27b861bd3b1feb240890ff3a373d930c4bf746c1",
+        "reason": "Proof A provides a complete and correct characterization of the winning values of $\\theta$. It rigorously proves both the sufficiency of $\\theta = 180^\\circ/n$ and the necessity by showing that for any other $\\theta$, Shan-Yu can maintain a state where no angle is a multiple of $\\theta$. Proof B's claim is incorrect (it includes values like $\\theta = 40^\\circ$ which are not winning) and its justification for the winning case is mathematically insufficient.",
+        "elapsed_seconds": 283.77237476198934,
+        "response": "votes/imo2026_p4/pair_06_gemma_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_06_gemma_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "7da4db6bdc21d9c73bcba6db8076d5677ba9ec5248ba882a531045c786918f32"
+      },
+      {
+        "case_id": "pair_06_qwen_reverse",
+        "original_case_id": "pair_06",
+        "model_key": "qwen",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r02",
+          "t10_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r02",
+        "response_sha256": "c6a201628f3dc865ac2506f779307c346cfb43be7fc7dcb1218051ae14495152",
+        "reason": "Proof A correctly identifies the necessary and sufficient condition $\\theta = 180^\\circ/n$ and provides a complete, rigorous argument. Its necessity proof uses a precise 4-case algebraic analysis to show that if $\\theta \\neq 180^\\circ/k$, Shan-Yu can maintain an invariant avoiding all multiples of $\\theta$, which directly accounts for Shan-Yu's optimal discarding strategy. Proof B incorrectly claims all rational multiples of $180^\\circ$ less than $120^\\circ$ are winning, which is falsified by counterexamples like $\\theta = 72^\\circ$ where Shan-Yu can perpetually avoid the target angle. Proof B's strategy fails to model the game as a two-player adversarial process, incorrectly assuming Mulan can force state transitions regardless of Shan-Yu's choices. Proof A's interval construction and invariant analysis are mathematically sound and fully resolve the problem.",
+        "elapsed_seconds": 320.7551938169636,
+        "response": "votes/imo2026_p4/pair_06_qwen_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_06_qwen_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "7da4db6bdc21d9c73bcba6db8076d5677ba9ec5248ba882a531045c786918f32"
+      },
+      {
+        "case_id": "pair_01_gemma_reverse",
+        "original_case_id": "pair_01",
+        "model_key": "gemma",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r01",
+          "t10_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "ca4fbb97d3ac8856d40780b2aca0bad0da1c2fe7184a440305b405b788b0c2b9",
+        "reason": "Both proofs are mathematically complete and correct, providing the same result using nearly identical logic. Proof A is slightly more robust in its handling of the $\\theta = 180^\\circ/k$ case, specifically by explicitly addressing the $k=2$ and $k=3$ boundary cases where the triangle angles might all be $\\le \\theta$, whereas Proof B relies on a slightly more concise argument about the interval $(\\alpha, 180^\\circ - \\beta)$ containing a multiple of $\\theta$. While both are correct, Proof A's case-by-case analysis of $k$ is more precise.",
+        "elapsed_seconds": 235.86083926598076,
+        "response": "votes/imo2026_p4/pair_01_gemma_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_01_gemma_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "b6bfedd5b772fbc1c20918e4ddca693dc27745b88f3e79b54cb01001371dfa4a"
+      },
+      {
+        "case_id": "pair_01_qwen_reverse",
+        "original_case_id": "pair_01",
+        "model_key": "qwen",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r01",
+          "t10_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "225b93b7d363c3a7e56d97228c361d99529a2ba6d387ef224dc8c1c8aade7f6d",
+        "reason": "Proof B is mathematically stronger due to superior rigor in the constructive strategy. Proof A contains a structural omission in its case analysis: it fixes a vertex $A$ without explicitly justifying why analyzing $A$ suffices when $A \\le \\theta$ but another angle is larger. Proof B avoids this by explicitly sorting the angles and choosing the largest angle for the cut, guaranteeing the interval length condition is met. Additionally, Proof B carefully addresses the boundary case where the interval length equals $\\theta$ by verifying the start point is not a multiple, whereas Proof A relies on strict inequality. Both proofs correctly handle the negative case, but Proof B's complete and explicit justification of Mulan's winning move makes it the more robust submission.",
+        "elapsed_seconds": 439.0503788830247,
+        "response": "votes/imo2026_p4/pair_01_qwen_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_01_qwen_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "b6bfedd5b772fbc1c20918e4ddca693dc27745b88f3e79b54cb01001371dfa4a"
+      },
+      {
+        "case_id": "pair_04_gemma_forward",
+        "original_case_id": "pair_04",
+        "model_key": "gemma",
+        "order": "forward",
+        "presentation_order": [
+          "t07_r01",
+          "t10_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "53773b8bf218f03fcf95e8fd18a6d832373b5df7752f2cb319be4cd0a167c5ec",
+        "reason": "Proof A provides a complete and rigorous derivation of the correct condition ($\\theta = 180^\\circ/k$). It correctly identifies the \"safe state\" (no angles being multiples of $\\theta$) and proves that this state can be maintained by Shan-Yu unless $180^\\circ$ is a multiple of $\\theta$. Proof B reaches a different, incorrect conclusion and provides only a hand-wavy sketch for its primary claim.",
+        "elapsed_seconds": 260.52647865808103,
+        "response": "votes/imo2026_p4/pair_04_gemma_forward/response.md",
+        "input": "votes/imo2026_p4/pair_04_gemma_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "bb8f9ce1701f298fbeecc6c7a4f63f2a61b310bd1ea3816741011952ea1fb800"
+      },
+      {
+        "case_id": "pair_04_qwen_forward",
+        "original_case_id": "pair_04",
+        "model_key": "qwen",
+        "order": "forward",
+        "presentation_order": [
+          "t07_r01",
+          "t10_r01"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "4b9b866a89c52eee7dd417cabbb4c4f70fd7a64ba5ca4fc0d5c0a62eed623421",
+        "reason": "Proof A provides a complete, rigorously verified characterization ($\\theta = 180^\\circ/k$) using a correct descent argument, a verified interval-forcing lemma, and an airtight invariant for Shan-Yu's defense. Proof B correctly handles irrational $\\theta$ and $\\theta \\ge 120^\\circ$, but contains a fatal mathematical defect in Lines 12-16: it falsely claims Mulan wins for all rational $\\theta < 120^\\circ$ by hand-waving reachability in the reduced lattice game. The explicit counterexample $\\theta = 100^\\circ$ demonstrates that Shan-Yu can force a cycle avoiding $\\theta$, invalidating Proof B's central claim. Proof A's logic is self-contained and correct.",
+        "elapsed_seconds": 392.62709305400494,
+        "response": "votes/imo2026_p4/pair_04_qwen_forward/response.md",
+        "input": "votes/imo2026_p4/pair_04_qwen_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "bb8f9ce1701f298fbeecc6c7a4f63f2a61b310bd1ea3816741011952ea1fb800"
+      },
+      {
+        "case_id": "pair_02_gemma_reverse",
+        "original_case_id": "pair_02",
+        "model_key": "gemma",
+        "order": "reverse",
+        "presentation_order": [
+          "t10_r01",
+          "t10_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "6c85a06acde32ff990e3204e7ef6df470abfe44108646fa33957068abc5737b2",
+        "reason": "Proof B is a complete and rigorous solution. It correctly identifies the winning condition $\\theta = 180^\\circ/n$ and provides a detailed proof for both sufficiency and necessity. Proof A's conclusion is incorrect (claiming all rational multiples of $180^\\circ$ less than $120^\\circ$ are winning), and its justification for the winning condition is a significant logical gap.",
+        "elapsed_seconds": 262.5935138859786,
+        "response": "votes/imo2026_p4/pair_02_gemma_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_02_gemma_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "aa4d9cbc6e98f481681fdf1a78cf6c8d080aca693e2d00ab2759a1ea6db9d418"
+      },
+      {
+        "case_id": "pair_02_qwen_reverse",
+        "original_case_id": "pair_02",
+        "model_key": "qwen",
+        "order": "reverse",
+        "presentation_order": [
+          "t10_r01",
+          "t10_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "724c0530024abf54a27e4796c5f3693dd66e01c52bee7805268506f8e1374286",
+        "reason": "Proof B provides a complete, correct characterization with a rigorous, self-contained argument. It correctly identifies the invariant set $W$, proves sufficiency via a clear inductive reduction, and proves necessity by exhaustively showing that forcing both split triangles into $W$ is impossible unless $\\theta = 180^\\circ/n$. Proof A's characterization is incorrect (fails for $\\theta=100^\\circ$), and its sufficiency argument relies on an unjustified finite-state/cycle-avoidance claim that ignores Shan-Yu's optimal responses. B's geometric derivation of the cut angle range and the case analysis for the four logical combinations are mathematically decisive and fully verified.",
+        "elapsed_seconds": 269.68649754696526,
+        "response": "votes/imo2026_p4/pair_02_qwen_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_02_qwen_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "aa4d9cbc6e98f481681fdf1a78cf6c8d080aca693e2d00ab2759a1ea6db9d418"
+      },
+      {
+        "case_id": "pair_05_gemma_forward",
+        "original_case_id": "pair_05",
+        "model_key": "gemma",
+        "order": "forward",
+        "presentation_order": [
+          "t07_r01",
+          "t07_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "c22a7665135c9b17e7364c86daf35373726fc1fee133d5958337a21e921aa527",
+        "reason": "Both proofs are mathematically complete and correct. Proof A is slightly more streamlined in its presentation of the \"Mulan can win\" case, particularly in its handling of the $k=2, 3$ boundary cases and the general interval argument. Proof B is also excellent, but Proof A's logic is marginally more concise.",
+        "elapsed_seconds": 245.681762449909,
+        "response": "votes/imo2026_p4/pair_05_gemma_forward/response.md",
+        "input": "votes/imo2026_p4/pair_05_gemma_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "b2ed1cc6d0ea496a496cf44a95703a232596f608d63da3abf784dce1e24cdf95"
+      },
+      {
+        "case_id": "pair_05_qwen_forward",
+        "original_case_id": "pair_05",
+        "model_key": "qwen",
+        "order": "forward",
+        "presentation_order": [
+          "t07_r01",
+          "t07_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r01",
+        "response_sha256": "fbba992d10b29de0346e4cf5726c365cd4b387e8735a4de8599d40b740bb788a",
+        "reason": "Both proofs are mathematically correct and complete. Proof A is preferred for its more rigorous and explicit case analysis in the sufficiency argument. Specifically, Proof A cleanly partitions the problem into the $A > \\theta$ and all-angles-$\\le \\theta$ cases, handling the small $k$ values ($k=2,3$) with clear geometric reasoning. Proof B's sufficiency argument is correct but glosses over the $n=2$ boundary case with an informal parenthetical remark. Additionally, Proof A's justification for the existence of a safe starting triangle (finiteness of $W$ implying a non-empty complement in the triangle space) is a more general and robust mathematical argument than Proof B's specific constructive example, though both are valid. The necessity proofs are equivalent in strength, but A's overall structure and explicit handling of edge cases provide a slight mathematical advantage in rigor.",
+        "elapsed_seconds": 446.52335884806234,
+        "response": "votes/imo2026_p4/pair_05_qwen_forward/response.md",
+        "input": "votes/imo2026_p4/pair_05_qwen_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "b2ed1cc6d0ea496a496cf44a95703a232596f608d63da3abf784dce1e24cdf95"
+      },
+      {
+        "case_id": "pair_03_gemma_reverse",
+        "original_case_id": "pair_03",
+        "model_key": "gemma",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r02",
+          "t10_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "A",
+        "selected_candidate": "t07_r02",
+        "response_sha256": "330dc9eee66228ef50ec43c6f01f43c7f1842f8158b97a29b5a5ce75df5ed012",
+        "reason": "Both proofs are complete and mathematically sound. Proof A is slightly preferred for its more detailed handling of the $n=2$ case in the \"if\" direction and its slightly more explicit case analysis in the \"only if\" direction. Both proofs correctly identify the condition $\\theta = 180^\\circ/n$ and provide rigorous justifications for both directions of the implication.",
+        "elapsed_seconds": 270.66380688594654,
+        "response": "votes/imo2026_p4/pair_03_gemma_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_03_gemma_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "309f38526c8c48300398b6d5385d2824fd321883efbd959ad8e923fbef061048"
+      },
+      {
+        "case_id": "pair_03_qwen_reverse",
+        "original_case_id": "pair_03",
+        "model_key": "qwen",
+        "order": "reverse",
+        "presentation_order": [
+          "t07_r02",
+          "t10_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t10_r02",
+        "response_sha256": "9833afb489146f1647f3699de32fdd096e7ea0370913dfe21f413e6ae3aca047",
+        "reason": "Both proofs are mathematically correct, complete, and establish the exact same theorem with rigorous invariant and construction arguments. Proof B is marginally stronger due to its geometric parameterization ($\\psi$), which aligns more naturally with the problem's cut description and yields a cleaner, more direct interval argument for the existence of a winning cut. Proof B's handling of the $n \\ge 3$ case avoids the extra algebraic case analysis required in Proof A's $a \\le \\theta$ discussion, and its $n=2$ treatment is more concise. Both converse proofs are equivalent in rigor. The preference rests on B's slightly more elegant and streamlined geometric framing without sacrificing completeness or introducing any unverified steps.",
+        "elapsed_seconds": 315.5637545179343,
+        "response": "votes/imo2026_p4/pair_03_qwen_reverse/response.md",
+        "input": "votes/imo2026_p4/pair_03_qwen_reverse/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "309f38526c8c48300398b6d5385d2824fd321883efbd959ad8e923fbef061048"
+      },
+      {
+        "case_id": "pair_06_gemma_forward",
+        "original_case_id": "pair_06",
+        "model_key": "gemma",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r01",
+          "t07_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r02",
+        "response_sha256": "79fd479a7b8eda0b91ca0ca4a1c482c4c81552abf549bf6cc9a347a549c18038",
+        "reason": "Proof B is mathematically complete and correct, providing a rigorous proof for both the necessary and sufficient conditions. Proof A's final answer is incorrect, and its justification for the rational case is a hand-waving argument that fails to establish the result.",
+        "elapsed_seconds": 209.9158714209916,
+        "response": "votes/imo2026_p4/pair_06_gemma_forward/response.md",
+        "input": "votes/imo2026_p4/pair_06_gemma_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "52d756e0689b868f10fdac08af0a5e207c6b195c3836f742d01ea2c7acacb845"
+      },
+      {
+        "case_id": "pair_06_qwen_forward",
+        "original_case_id": "pair_06",
+        "model_key": "qwen",
+        "order": "forward",
+        "presentation_order": [
+          "t10_r01",
+          "t07_r02"
+        ],
+        "valid": true,
+        "binding_verified": true,
+        "winner_label": "B",
+        "selected_candidate": "t07_r02",
+        "response_sha256": "30d142b08e5562206a9badca8714ff4b9f2c6b2f88f6bde8192db91dec0d5e24",
+        "reason": "Proof B provides a complete, rigorous proof with explicit constructions for both directions. Its sufficiency argument uses a precise interval length calculation to guarantee a valid cut, and its necessity argument exhaustively verifies an invariant strategy for Shan-Yu. Proof A's main claim is demonstrably false (e.g., $\\theta=100^\\circ$), and its sufficiency proof relies on an unjustified finite-state reachability assertion that ignores Shan-Yu's optimal discarding choices. B's mathematical obligations are fully met, while A contains a fatal gap in its central claim.",
+        "elapsed_seconds": 290.8147869289387,
+        "response": "votes/imo2026_p4/pair_06_qwen_forward/response.md",
+        "input": "votes/imo2026_p4/pair_06_qwen_forward/input.md",
+        "prompt_sha256": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+        "input_sha256": "52d756e0689b868f10fdac08af0a5e207c6b195c3836f742d01ea2c7acacb845"
+      }
+    ],
+    "selected_candidate": "t10_r02",
+    "votes_received": {
+      "t10_r02": 9,
+      "t07_r01": 9,
+      "t10_r01": 0,
+      "t07_r02": 6
+    },
+    "order_disagreements": 1,
+    "order_pairs": 12,
+    "provenance": {
+      "generation_release": "1.12.0",
+      "release_sha256": "e8d94232e00c0c3297fbbfa466df7634055ed6aa2876ba1786d94a87858041c9",
+      "fresh_end_to_end_b112": false,
+      "source_run": "imo2026_B_1_12_0_p2_p6_20260922T153924Z_p4",
+      "recovery_run": "imo2026_B_1_12_0_p4_r2_recovery_20260922T230825Z",
+      "resumed_lane": "t10_r02",
+      "resume_point": "R2 resolver",
+      "format_adapter": "acceptance-none-routine-completion-annotation-v1",
+      "source_report_sha256": "c96298bce2d8a19abfd80d76c5f3b6e7163cf594305f1f3c4140d05859aaa8f2"
+    }
+  },
+  "original_bundle": "docs/results/imo2026_b112_selection_20260922",
+  "original_scorecard_sha256": "66e7e5afd9b5300f788ec3d394fe56d6d4f5da47ad8ab01532703c34a324b01c",
+  "original_p4": {
+    "selected_candidate": "t07_r01",
+    "votes_received": {
+      "t07_r01": 12,
+      "t10_r01": 1,
+      "t07_r02": 7,
+      "t10_r02": 4
+    },
+    "order_disagreements": 1
+  },
+  "paired_grade_comparison": {
+    "1": {
+      "original": {
+        "rows": [
+          {
+            "problem_id": "imo2026_p1",
+            "average": 7.0,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p2",
+            "average": 3.75,
+            "oracle_at_4": 4,
+            "selector_at_1": 4
+          },
+          {
+            "problem_id": "imo2026_p3",
+            "average": 1.5,
+            "oracle_at_4": 2,
+            "selector_at_1": 2
+          },
+          {
+            "problem_id": "imo2026_p4",
+            "average": 5.0,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p5",
+            "average": 4.5,
+            "oracle_at_4": 6,
+            "selector_at_1": 6
+          },
+          {
+            "problem_id": "imo2026_p6",
+            "average": 3.0,
+            "oracle_at_4": 3,
+            "selector_at_1": 3
+          }
+        ],
+        "totals": {
+          "average": 24.75,
+          "oracle_at_4": 29,
+          "selector_at_1": 29
+        },
+        "maximum": 42
+      },
+      "with_p4_recovery": {
+        "rows": [
+          {
+            "problem_id": "imo2026_p1",
+            "average": 7.0,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p2",
+            "average": 3.75,
+            "oracle_at_4": 4,
+            "selector_at_1": 4
+          },
+          {
+            "problem_id": "imo2026_p3",
+            "average": 1.5,
+            "oracle_at_4": 2,
+            "selector_at_1": 2
+          },
+          {
+            "problem_id": "imo2026_p4",
+            "average": 5.5,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p5",
+            "average": 4.5,
+            "oracle_at_4": 6,
+            "selector_at_1": 6
+          },
+          {
+            "problem_id": "imo2026_p6",
+            "average": 3.0,
+            "oracle_at_4": 3,
+            "selector_at_1": 3
+          }
+        ],
+        "totals": {
+          "average": 25.25,
+          "oracle_at_4": 29,
+          "selector_at_1": 29
+        },
+        "maximum": 42
+      }
+    },
+    "2": {
+      "original": {
+        "rows": [
+          {
+            "problem_id": "imo2026_p1",
+            "average": 7.0,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p2",
+            "average": 3.75,
+            "oracle_at_4": 4,
+            "selector_at_1": 4
+          },
+          {
+            "problem_id": "imo2026_p3",
+            "average": 1.5,
+            "oracle_at_4": 2,
+            "selector_at_1": 2
+          },
+          {
+            "problem_id": "imo2026_p4",
+            "average": 5.0,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p5",
+            "average": 4.5,
+            "oracle_at_4": 6,
+            "selector_at_1": 6
+          },
+          {
+            "problem_id": "imo2026_p6",
+            "average": 3.0,
+            "oracle_at_4": 3,
+            "selector_at_1": 3
+          }
+        ],
+        "totals": {
+          "average": 24.75,
+          "oracle_at_4": 29,
+          "selector_at_1": 29
+        },
+        "maximum": 42
+      },
+      "with_p4_recovery": {
+        "rows": [
+          {
+            "problem_id": "imo2026_p1",
+            "average": 7.0,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p2",
+            "average": 3.75,
+            "oracle_at_4": 4,
+            "selector_at_1": 4
+          },
+          {
+            "problem_id": "imo2026_p3",
+            "average": 1.5,
+            "oracle_at_4": 2,
+            "selector_at_1": 2
+          },
+          {
+            "problem_id": "imo2026_p4",
+            "average": 5.5,
+            "oracle_at_4": 7,
+            "selector_at_1": 7
+          },
+          {
+            "problem_id": "imo2026_p5",
+            "average": 4.5,
+            "oracle_at_4": 6,
+            "selector_at_1": 6
+          },
+          {
+            "problem_id": "imo2026_p6",
+            "average": 3.0,
+            "oracle_at_4": 3,
+            "selector_at_1": 3
+          }
+        ],
+        "totals": {
+          "average": 25.25,
+          "oracle_at_4": 29,
+          "selector_at_1": 29
+        },
+        "maximum": 42
+      }
+    },
+    "mean": {
+      "original": {
+        "rows": [
+          {
+            "problem_id": "imo2026_p1",
+            "average": 7.0,
+            "oracle_at_4": 7.0,
+            "selector_at_1": 7.0
+          },
+          {
+            "problem_id": "imo2026_p2",
+            "average": 3.75,
+            "oracle_at_4": 4.0,
+            "selector_at_1": 4.0
+          },
+          {
+            "problem_id": "imo2026_p3",
+            "average": 1.5,
+            "oracle_at_4": 2.0,
+            "selector_at_1": 2.0
+          },
+          {
+            "problem_id": "imo2026_p4",
+            "average": 5.0,
+            "oracle_at_4": 7.0,
+            "selector_at_1": 7.0
+          },
+          {
+            "problem_id": "imo2026_p5",
+            "average": 4.5,
+            "oracle_at_4": 6.0,
+            "selector_at_1": 6.0
+          },
+          {
+            "problem_id": "imo2026_p6",
+            "average": 3.0,
+            "oracle_at_4": 3.0,
+            "selector_at_1": 3.0
+          }
+        ],
+        "totals": {
+          "average": 24.75,
+          "oracle_at_4": 29.0,
+          "selector_at_1": 29.0
+        },
+        "maximum": 42
+      },
+      "with_p4_recovery": {
+        "rows": [
+          {
+            "problem_id": "imo2026_p1",
+            "average": 7.0,
+            "oracle_at_4": 7.0,
+            "selector_at_1": 7.0
+          },
+          {
+            "problem_id": "imo2026_p2",
+            "average": 3.75,
+            "oracle_at_4": 4.0,
+            "selector_at_1": 4.0
+          },
+          {
+            "problem_id": "imo2026_p3",
+            "average": 1.5,
+            "oracle_at_4": 2.0,
+            "selector_at_1": 2.0
+          },
+          {
+            "problem_id": "imo2026_p4",
+            "average": 5.5,
+            "oracle_at_4": 7.0,
+            "selector_at_1": 7.0
+          },
+          {
+            "problem_id": "imo2026_p5",
+            "average": 4.5,
+            "oracle_at_4": 6.0,
+            "selector_at_1": 6.0
+          },
+          {
+            "problem_id": "imo2026_p6",
+            "average": 3.0,
+            "oracle_at_4": 3.0,
+            "selector_at_1": 3.0
+          }
+        ],
+        "totals": {
+          "average": 25.25,
+          "oracle_at_4": 29.0,
+          "selector_at_1": 29.0
+        },
+        "maximum": 42
+      }
+    }
+  },
+  "before_after_lanes": [
+    {
+      "candidate_id": "t07_r01",
+      "before_scores": [
+        7,
+        7
+      ],
+      "scores": [
+        7,
+        7
+      ],
+      "before_stage": "refinement_3",
+      "selected_stage": "refinement_3",
+      "mean_delta": 0.0,
+      "grading": "reused"
+    },
+    {
+      "candidate_id": "t07_r02",
+      "before_scores": [
+        6,
+        6
+      ],
+      "scores": [
+        6,
+        6
+      ],
+      "before_stage": "refinement_3",
+      "selected_stage": "refinement_3",
+      "mean_delta": 0.0,
+      "grading": "reused"
+    },
+    {
+      "candidate_id": "t10_r01",
+      "before_scores": [
+        2,
+        2
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "before_stage": "refinement_2",
+      "selected_stage": "refinement_2",
+      "mean_delta": 0.0,
+      "grading": "reused"
+    },
+    {
+      "candidate_id": "t10_r02",
+      "before_scores": [
+        5,
+        5
+      ],
+      "scores": [
+        7,
+        7
+      ],
+      "before_stage": "refinement_1",
+      "selected_stage": "refinement_2",
+      "mean_delta": 2.0,
+      "grading": "new_two_independent_passes"
+    }
+  ],
+  "stage_times": {
+    "r3": {
+      "state": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.7273473190143704,
+      "finished_at": "2026-09-23T02:55:56.219591+00:00"
+    },
+    "vote": {
+      "state": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 447.87509997806046,
+      "finished_at": "2026-09-23T03:03:24.709853+00:00"
+    },
+    "servers": {
+      "state": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6202828820096329,
+      "finished_at": "2026-09-23T02:53:29.107755+00:00"
+    },
+    "r2": {
+      "state": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 146.36664607399143,
+      "finished_at": "2026-09-23T02:55:55.484150+00:00"
+    },
+    "audit": {
+      "state": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5959734850330278,
+      "finished_at": "2026-09-23T02:55:56.825128+00:00"
+    },
+    "grading": {
+      "state": "completed",
+      "elapsed_seconds": 84.6149028739892,
+      "exit_code": 0
+    }
+  },
+  "preserved_original_run": "imo2026_B_1_12_0_p2_p6_20260922T153924Z_p4",
+  "recovery_run": "imo2026_B_1_12_0_p4_r2_recovery_20260922T230825Z",
+  "artifacts": {
+    "README.md": "a8189a6fd61b742ad363040cd6eb2dea57f2cd3c96f6cd38e33f213b30e95f6e",
+    "code/acceptance_format.py": "123a3c4556668e487a69fcb2da9f1fbfe249166b18db13b67e1e8b7afe49e766",
+    "code/controller.py": "58e3aee39ccca5c9764b22dc939eddb03abfabe7a6b2f5271ebb1d455b89f32a",
+    "code/offline_test.py": "50559f8f6a594bb0bd9c04c2f598194a5e68e7f71f9d6416c03cf4ad1ad6b62d",
+    "code/recover.py": "bc2f2cc8cf13ce2eaeb9fc72ad2edc7733237867ed2bf6f1e465e0acc9e355dd",
+    "grades/imo2026_p4/t07_r01_pass1/grade.json": "9bcc4b911c24307e9665954797a6be60e926556cf7a18993c3179dd11cb5fc48",
+    "grades/imo2026_p4/t07_r01_pass1/raw_response_1.txt": "6a95b14f2986a63e25f1bb7bcc11f40f147198b9ef81337b457e19b0fd527575",
+    "grades/imo2026_p4/t07_r01_pass2/grade.json": "9d13a523e5be651d9b919455a1becc01eaea97eec892ab6488310e7bbc27b8cd",
+    "grades/imo2026_p4/t07_r01_pass2/raw_response_1.txt": "f522d6deacd7b3d4decd1462f869e75594e0078ad583760d5850fadc6fb92ebc",
+    "grades/imo2026_p4/t07_r02_pass1/grade.json": "5dbaf88abf8d74b89b88822f04ddfd5d62207570ec3ce2e14bc0bd90420b5558",
+    "grades/imo2026_p4/t07_r02_pass1/raw_response_1.txt": "5184e25082755253dde878f9b71837037cbad0dcde38bddf2f2c76ad239a7b1a",
+    "grades/imo2026_p4/t07_r02_pass2/grade.json": "9267e9eefc22ac8a9bfa8b1c375c56ceb4c750b156939b8e3ec1ca79c02d595f",
+    "grades/imo2026_p4/t07_r02_pass2/raw_response_1.txt": "da29ffe2a83b451e2c174e7b02f5362e5d4d7476a0a5d291517268801c95e7fe",
+    "grades/imo2026_p4/t10_r01_pass1/grade.json": "4f5f8f39784b99ff356d31fb119d533d0eccbbded1d3f9ce7a7b98df6fcab066",
+    "grades/imo2026_p4/t10_r01_pass1/raw_response_1.txt": "98ad0a4c8c684e987379854a6bd678bbc22e72d288f27a453ddab93d750dee80",
+    "grades/imo2026_p4/t10_r01_pass2/grade.json": "405ee0c01fa0d882e542a83249d4c5d1fedc2bb808913366c485a2a6efcb29f0",
+    "grades/imo2026_p4/t10_r01_pass2/raw_response_1.txt": "5a91938fababf6e8e4247766c87b87daa7b5d654cecd0689af60d2d9fb923303",
+    "grades/imo2026_p4/t10_r02_pass1/grade.json": "027da3ebbd717793cc821b7a049ca17b240364e33531a34f8570daefe60c8061",
+    "grades/imo2026_p4/t10_r02_pass1/raw_response_1.txt": "72a1209dbf2cb9ceed4d6ed764f950176e7a1726b0b5c707f0af07ff19eb64f1",
+    "grades/imo2026_p4/t10_r02_pass2/grade.json": "e19a7c3320397b5cbe06d9c58cf5d745e1d738401ac5a27e82d0de5b422f920d",
+    "grades/imo2026_p4/t10_r02_pass2/raw_response_1.txt": "589a8f1ca03c157d1da64b9ac4c7ca0de1943ef0eca7f19d0aa5501eb8c366b2",
+    "offline_test_result.json": "7eb5fb0f578f0755204a2e7171cb4f9d8a3c2e5df83a34e2833120b2146cc28d",
+    "preflight.json": "45a01d1b132aed76004cafe333e7867fffd7ee176a7e8bf63e4cd268804f4281",
+    "proofs/imo2026_p4/t07_r01.md": "cb7b38380b41580485649b04ddc47f5ab800c6159b7e95c1c26b76e00001d930",
+    "proofs/imo2026_p4/t07_r02.md": "ddb5a9826360af83ee4b96e989abf44d5c88ea28108f9c45aa3d4b95f876b5f0",
+    "proofs/imo2026_p4/t10_r01.md": "f0c92c91d03bade3c4ce35b95bad0d0d51eeb907ca07c2791bf4868c85177867",
+    "proofs/imo2026_p4/t10_r02.md": "b7cb20c4d79c24205c0df373ee235c66193ab24bb71f43886e842d2f564eefc9",
+    "recovery/interpretation.json": "73a78451a48690cad2ac48d8c3fdbf52abb1f23be149b363009deabb02c64f98",
+    "recovery/saved_audit.md": "3d06757805900381148aade7f0906eadfcebc84d24b9b292701a506b1bfaba6e",
+    "votes/imo2026_p4/AUDIT_PROMPT.md": "02d5b5cc297c5d8425f19deaf4b5a9b5eba6a4d50342fbf42a68280a33094806",
+    "votes/imo2026_p4/pair_01_gemma_forward/input.md": "350271b8c02a71badc22474380fda5a4eff3d3d5c3b63a967099cb711d984085",
+    "votes/imo2026_p4/pair_01_gemma_forward/response.md": "0dd4709c925edc5881685ee465976fd1fe0f0b9b4962f37b883b6126fc319ced",
+    "votes/imo2026_p4/pair_01_gemma_reverse/input.md": "b6bfedd5b772fbc1c20918e4ddca693dc27745b88f3e79b54cb01001371dfa4a",
+    "votes/imo2026_p4/pair_01_gemma_reverse/response.md": "ca4fbb97d3ac8856d40780b2aca0bad0da1c2fe7184a440305b405b788b0c2b9",
+    "votes/imo2026_p4/pair_01_qwen_forward/input.md": "350271b8c02a71badc22474380fda5a4eff3d3d5c3b63a967099cb711d984085",
+    "votes/imo2026_p4/pair_01_qwen_forward/response.md": "230422eebefb738529608c0da1574c5281aa4384798d5079485dd145ac7ee1e0",
+    "votes/imo2026_p4/pair_01_qwen_reverse/input.md": "b6bfedd5b772fbc1c20918e4ddca693dc27745b88f3e79b54cb01001371dfa4a",
+    "votes/imo2026_p4/pair_01_qwen_reverse/response.md": "225b93b7d363c3a7e56d97228c361d99529a2ba6d387ef224dc8c1c8aade7f6d",
+    "votes/imo2026_p4/pair_02_gemma_forward/input.md": "399d05071897e859b376618f31d92b2f4b332c547585b0358a004c3e2003de3a",
+    "votes/imo2026_p4/pair_02_gemma_forward/response.md": "caa53bf23c5f749a7c8dc87780d06aa7094d4498d1d4f15884f40c92027522c5",
+    "votes/imo2026_p4/pair_02_gemma_reverse/input.md": "aa4d9cbc6e98f481681fdf1a78cf6c8d080aca693e2d00ab2759a1ea6db9d418",
+    "votes/imo2026_p4/pair_02_gemma_reverse/response.md": "6c85a06acde32ff990e3204e7ef6df470abfe44108646fa33957068abc5737b2",
+    "votes/imo2026_p4/pair_02_qwen_forward/input.md": "399d05071897e859b376618f31d92b2f4b332c547585b0358a004c3e2003de3a",
+    "votes/imo2026_p4/pair_02_qwen_forward/response.md": "95ca08b7c0b13d9b2c2d5e26cd1e9c8378e75fea4d1842d619dadf6e980b8f43",
+    "votes/imo2026_p4/pair_02_qwen_reverse/input.md": "aa4d9cbc6e98f481681fdf1a78cf6c8d080aca693e2d00ab2759a1ea6db9d418",
+    "votes/imo2026_p4/pair_02_qwen_reverse/response.md": "724c0530024abf54a27e4796c5f3693dd66e01c52bee7805268506f8e1374286",
+    "votes/imo2026_p4/pair_03_gemma_forward/input.md": "cfa8948606dd48f01df41975ffce18ae0a571e3eddebebe72e8c9cc39e197874",
+    "votes/imo2026_p4/pair_03_gemma_forward/response.md": "02d1a99e0fad2cf955e48e06a26751e6838015802b91386d030401f5d660bed2",
+    "votes/imo2026_p4/pair_03_gemma_reverse/input.md": "309f38526c8c48300398b6d5385d2824fd321883efbd959ad8e923fbef061048",
+    "votes/imo2026_p4/pair_03_gemma_reverse/response.md": "330dc9eee66228ef50ec43c6f01f43c7f1842f8158b97a29b5a5ce75df5ed012",
+    "votes/imo2026_p4/pair_03_qwen_forward/input.md": "cfa8948606dd48f01df41975ffce18ae0a571e3eddebebe72e8c9cc39e197874",
+    "votes/imo2026_p4/pair_03_qwen_forward/response.md": "bc3a92c5c47bf4bfb1116d5ecf11705881a73924b58082d70a762c1e32ef836e",
+    "votes/imo2026_p4/pair_03_qwen_reverse/input.md": "309f38526c8c48300398b6d5385d2824fd321883efbd959ad8e923fbef061048",
+    "votes/imo2026_p4/pair_03_qwen_reverse/response.md": "9833afb489146f1647f3699de32fdd096e7ea0370913dfe21f413e6ae3aca047",
+    "votes/imo2026_p4/pair_04_gemma_forward/input.md": "bb8f9ce1701f298fbeecc6c7a4f63f2a61b310bd1ea3816741011952ea1fb800",
+    "votes/imo2026_p4/pair_04_gemma_forward/response.md": "53773b8bf218f03fcf95e8fd18a6d832373b5df7752f2cb319be4cd0a167c5ec",
+    "votes/imo2026_p4/pair_04_gemma_reverse/input.md": "2dc84befef76a2eb4c273141fd60663ec4196732494e06d290a3342fa63d8a3b",
+    "votes/imo2026_p4/pair_04_gemma_reverse/response.md": "4afc0cc578a2a1f6cc29759a7f15efc11b88f839a873347d8c662b8f857329ab",
+    "votes/imo2026_p4/pair_04_qwen_forward/input.md": "bb8f9ce1701f298fbeecc6c7a4f63f2a61b310bd1ea3816741011952ea1fb800",
+    "votes/imo2026_p4/pair_04_qwen_forward/response.md": "4b9b866a89c52eee7dd417cabbb4c4f70fd7a64ba5ca4fc0d5c0a62eed623421",
+    "votes/imo2026_p4/pair_04_qwen_reverse/input.md": "2dc84befef76a2eb4c273141fd60663ec4196732494e06d290a3342fa63d8a3b",
+    "votes/imo2026_p4/pair_04_qwen_reverse/response.md": "302005a913fec2f87ad8d71d9b3f310fb74358d73733f182bcf79294175d1d57",
+    "votes/imo2026_p4/pair_05_gemma_forward/input.md": "b2ed1cc6d0ea496a496cf44a95703a232596f608d63da3abf784dce1e24cdf95",
+    "votes/imo2026_p4/pair_05_gemma_forward/response.md": "c22a7665135c9b17e7364c86daf35373726fc1fee133d5958337a21e921aa527",
+    "votes/imo2026_p4/pair_05_gemma_reverse/input.md": "83895510202443aff590ed0a85c77b931c5f383ff4b9b36553a66409873b1d4d",
+    "votes/imo2026_p4/pair_05_gemma_reverse/response.md": "d76d884423787bb5461277bad81352794ffcabd87eb9d1179f76dc8951ab33e8",
+    "votes/imo2026_p4/pair_05_qwen_forward/input.md": "b2ed1cc6d0ea496a496cf44a95703a232596f608d63da3abf784dce1e24cdf95",
+    "votes/imo2026_p4/pair_05_qwen_forward/response.md": "fbba992d10b29de0346e4cf5726c365cd4b387e8735a4de8599d40b740bb788a",
+    "votes/imo2026_p4/pair_05_qwen_reverse/input.md": "83895510202443aff590ed0a85c77b931c5f383ff4b9b36553a66409873b1d4d",
+    "votes/imo2026_p4/pair_05_qwen_reverse/response.md": "af724ea55aa15ecc7be63511ac7973b6eb8001b0953a30f172e19c94a78297f5",
+    "votes/imo2026_p4/pair_06_gemma_forward/input.md": "52d756e0689b868f10fdac08af0a5e207c6b195c3836f742d01ea2c7acacb845",
+    "votes/imo2026_p4/pair_06_gemma_forward/response.md": "79fd479a7b8eda0b91ca0ca4a1c482c4c81552abf549bf6cc9a347a549c18038",
+    "votes/imo2026_p4/pair_06_gemma_reverse/input.md": "7da4db6bdc21d9c73bcba6db8076d5677ba9ec5248ba882a531045c786918f32",
+    "votes/imo2026_p4/pair_06_gemma_reverse/response.md": "26c16202d555d39535069f7c27b861bd3b1feb240890ff3a373d930c4bf746c1",
+    "votes/imo2026_p4/pair_06_qwen_forward/input.md": "52d756e0689b868f10fdac08af0a5e207c6b195c3836f742d01ea2c7acacb845",
+    "votes/imo2026_p4/pair_06_qwen_forward/response.md": "30d142b08e5562206a9badca8714ff4b9f2c6b2f88f6bde8192db91dec0d5e24",
+    "votes/imo2026_p4/pair_06_qwen_reverse/input.md": "7da4db6bdc21d9c73bcba6db8076d5677ba9ec5248ba882a531045c786918f32",
+    "votes/imo2026_p4/pair_06_qwen_reverse/response.md": "c6a201628f3dc865ac2506f779307c346cfb43be7fc7dcb1218051ae14495152"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "seed": 2040359711,
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3052,
+    "total_tokens": 11098,
+    "completion_tokens": 8046,
+    "prompt_tokens_details": null
+  },
+  "latency_seconds": 107.78173758462071,
+  "proof_sha256": "96d59e88ee56058281cd9959c19beb1ef13492d12644abdc52a23163730c0519",
+  "resolver_system_sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c",
+  "resolver_user_sha256": "2f0ded81ed55f2300df9a87ee344f4d3423741e3f0905b82ddaca13d58d3a033",
+  "diagnosis_sha256": "063bbc059479101ef5a622037d4e8d9ff5ba1d36d724571291888e4a49f3bf9b",
+  "repair_sha256": "c97ebdaff2c9417af665befc6f112b922c504fc69beeae9f5b3e6274fdbbc92f",
+  "reference_solution_access": false,
+  "gold_information_in_resolver_input": false
+}

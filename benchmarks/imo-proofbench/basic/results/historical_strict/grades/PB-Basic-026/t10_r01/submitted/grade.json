@@ -1,0 +1,58 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T15:13:17.298690+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 26,
+  "problem_id": "PB-Basic-026",
+  "case_id": "PB-Basic-026.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "c6ba255f6bbb3bfd642e146b2a30b43e700e8da579130b27eda8a8fd634c1529",
+  "reference_sha256": "641eed7b84a961cc7a5180ea62acc3d04fcd72eacd72ca53d6909345d7153aac",
+  "proof_sha256": "51957443d84a9374accdc3543fb0a9f1b03a2b44d749539708d1a76a230bcf32",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/tasks.json",
+  "task_manifest_sha256": "704b5e2f7577350d75ebf1bd43d27e4150704f1bc33942c34e5162def5b101f1",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claim that reflection across \\(AI\\) fixes the tangent to \\((O)\\) at \\(M_a\\) is false: although \\(M_a\\in AI\\), that tangent is generally neither \\(AI\\) nor perpendicular to \\(AI\\).",
+    "summary": "Only the elementary homothety setup and \\(T\\in OI\\) are valid. The claimed collinearity \\(T,D',M_a\\) follows from a false reflection argument, while \\(M_a,D',X\\) is merely asserted without proof. In fact, the reference configuration’s concurrency point is generally not the external homothety center \\(T\\), so the central argument and stated identification of the concurrency point fail.",
+    "strengths": [
+      "Correctly observes that the two given circles have an external homothety center lying on \\(OI\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The reflection of the tangent at \\(M_a\\) across \\(AI\\) is incorrectly asserted to be the same tangent."
+      },
+      {
+        "severity": "major",
+        "description": "Consequently, \\(h_T(D')=M_a\\) and \\(T,D',M_a\\) are not established and are generally false."
+      },
+      {
+        "severity": "major",
+        "description": "The decisive collinearity \\(M_a,D',X\\) is presented as a “known property” and then justified only by another unsupported assertion."
+      },
+      {
+        "severity": "major",
+        "description": "The conclusion that all three lines pass through \\(T\\) identifies a generally incorrect concurrency point."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

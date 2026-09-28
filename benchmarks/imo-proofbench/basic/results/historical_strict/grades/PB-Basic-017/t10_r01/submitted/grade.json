@@ -1,0 +1,41 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T17:59:31.969184+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 17,
+  "problem_id": "PB-Basic-017",
+  "case_id": "PB-Basic-017.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T175922684378Z/inputs/p17/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T175922684378Z/inputs/p17/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T175922684378Z/inputs/p17/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "9dbf2311a1f395700d1ee69c9d9b112a63acc2e603471ace548e50b3694d909d",
+  "reference_sha256": "af70f5b4e524915b3f1cd1fe86201b51c283b297e51cf861dad5858235257926",
+  "proof_sha256": "5b1dda02951c612ce1e26f06e80524d8d2e30403a97be26244e76c4e640c4889",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T175922684378Z/inputs/tasks.json",
+  "task_manifest_sha256": "c01532428899ac23d57daf58ffc92bacf680edc4675045a553d8b1c9054ca3ae",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The submission correctly rewrites \\(A_n\\), proves the required polynomial factorization, and verifies that both integer factors exceed \\(1\\) for every \\(n\\ge 0\\). Thus it rigorously establishes that no such \\(n\\) exists.",
+    "strengths": [
+      "The factorization and positivity of both factors are explicitly and correctly verified."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

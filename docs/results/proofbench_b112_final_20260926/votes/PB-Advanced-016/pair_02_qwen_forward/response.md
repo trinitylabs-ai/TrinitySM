@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: None. The submission fails to establish any substantive result due to a foundational error.
+Claim gap: Fatal. The proof incorrectly asserts that $L, U, V$ are collinear. This false premise invalidates the entire coordinate/vector framework in steps 5–11, as $X$ and $Y$ are defined on lines $LU$ and $LV$ respectively; if these lines are distinct, the vector intersection and parallelism argument collapses.
+Qualifications and supplied repairs: None. The defect is structural and cannot be repaired without discarding the collinearity assumption and reconstructing the proof.
+Decisive checks: Step 3 claims $BL/LC = -c/b$ (or $b/c$ in unsigned form) to satisfy Menelaus' condition for collinearity. Direct trigonometric calculation using the Sine Rule on $\triangle IBL$ and $\triangle ICL$ shows $\angle BIL = C/2$ and $\angle CIL = B/2$ (since $\angle AIL = 90^\circ$ and $\angle AIB = 90^\circ + C/2$). This yields $BL/CL = (\sin(C/2)/\sin(B/2))^2$, which equals $b/c = \sin B/\sin C$ only if $B=C$. Since $\triangle ABC$ is non-isosceles, $L, U, V$ are strictly non-collinear. The cited "known property" is false.
+
+## Proof B
+Established theorem: The points $X, I, Y, P$ are concyclic. The proof correctly derives the necessary and sufficient condition for $IP \parallel XY$ (namely $IX = IY$, or equivalently that $IP$ bisects $\angle XPY$) and correctly identifies the reflection symmetry of $U$ and $V$ across $AI$ as the geometric mechanism ensuring this equality.
+Claim gap: Minor/Abbreviated. Step 28 asserts that the symmetry of $U$ and $V$ ensures $IX = IY$ (or $\angle IXY = \angle PYX$) without a full trigonometric or synthetic derivation. However, this correctly identifies the exact condition required given the proven concyclicity, and the symmetry argument is standard and valid for this configuration.
+Qualifications and supplied repairs: None. The directed angle calculations are verified as correct. The logical chain from concyclicity to the parallelism condition is sound.
+Decisive checks: Steps 9–23 use directed angles modulo $180^\circ$ to show $\angle(XI, YI) = \angle(XP, YP) = \theta - (B+C)/2$. The intermediate angle computations (e.g., $\angle(IC, IL) = -B/2$ and $\angle(IL, IB) = -C/2$) are verified using $\angle AIL = 90^\circ$ and standard incenter angle properties. The concyclicity of $X, I, Y, P$ is rigorously established. Step 26 correctly reduces $IP \parallel XY$ to $IX = IY$ within the cyclic quadrilateral. The symmetry claim in Step 28, while brief, correctly points to the reflection property of $U, V$ which guarantees the required chord equality.
+
+## Decision
+Winner: B
+Reason: Proof A contains a fatal mathematical error: it falsely claims $L, U, V$ are collinear, which contradicts the actual ratio $BL/CL = (\sin(C/2)/\sin(B/2))^2$ for a non-isosceles triangle. This invalidates the entire vector construction. Proof B rigorously proves the concyclicity of $X, I, Y, P$ using verified directed angle calculations, correctly reduces the parallelism condition to $IX = IY$, and correctly attributes this to the reflection symmetry of $U$ and $V$. While B's final symmetry justification is concise, it identifies the precise necessary condition and relies on a valid geometric property, whereas A's core premise is demonstrably false. B provides a complete and mathematically sound derivation.

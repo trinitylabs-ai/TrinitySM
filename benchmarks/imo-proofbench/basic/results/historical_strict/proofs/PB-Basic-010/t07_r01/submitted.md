@@ -1,0 +1,33 @@
+To prove that $\sum_{(a, b) \in S_{AB}} (b - a) \neq \sum_{(a, b) \in S_{BA}} (a - b)$, we define the given sets and sums and analyze their difference.
+
+Let $n = 1011$. The set $X = \{1, 2, 3, \ldots, 2n\}$ is partitioned into two sets $A$ and $B$ such that $|A| = |B| = n$. The sets of pairs are defined as:
+- $S_{AB} = \{ (a, b) \in A \times B \mid a < b \}$
+- $S_{BA} = \{ (a, b) \in A \times B \mid b < a \}$
+
+Let $L$ and $R$ be the two sums in question:
+\[ L = \sum_{(a, b) \in S_{AB}} (b - a) \quad \text{and} \quad R = \sum_{(a, b) \in S_{BA}} (a - b) \]
+
+Since $A$ and $B$ form a partition of $X$, they are disjoint ($A \cap B = \emptyset$). Consequently, for any pair $(a, b) \in A \times B$, it is impossible for $a$ to equal $b$. Thus, every pair $(a, b) \in A \times B$ satisfies either $a < b$ or $b < a$. This implies that $S_{AB} \cup S_{BA} = A \times B$ and $S_{AB} \cap S_{BA} = \emptyset$.
+
+We now evaluate the difference $L - R$:
+\[ L - R = \sum_{(a, b) \in S_{AB}} (b - a) - \sum_{(a, b) \in S_{BA}} (a - b) \]
+Rewriting the second sum by distributing the negative sign:
+\[ L - R = \sum_{(a, b) \in S_{AB}} (b - a) + \sum_{(a, b) \in S_{BA}} (b - a) \]
+Since $S_{AB}$ and $S_{BA}$ partition the product set $A \times B$, we can combine these into a single summation:
+\[ L - R = \sum_{(a, b) \in A \times B} (b - a) \]
+This sum can be decomposed as follows:
+\[ L - R = \sum_{a \in A} \sum_{b \in B} b - \sum_{b \in B} \sum_{a \in A} a \]
+Let $\Sigma_A = \sum_{a \in A} a$ and $\Sigma_B = \sum_{b \in B} b$. The expressions simplify to:
+\[ L - R = |A| \Sigma_B - |B| \Sigma_A \]
+Given that $|A| = |B| = n$, we have:
+\[ L - R = n(\Sigma_B - \Sigma_A) \]
+
+The condition $L = R$ would imply $n(\Sigma_B - \Sigma_A) = 0$. Since $n = 1011 \neq 0$, this would require $\Sigma_A = \Sigma_B$. We examine the total sum of the elements in $X$:
+\[ \Sigma_A + \Sigma_B = \sum_{k=1}^{2n} k = \frac{2n(2n+1)}{2} = n(2n+1) \]
+Substituting $n = 1011$:
+\[ \Sigma_A + \Sigma_B = 1011 \times (2 \times 1011 + 1) = 1011 \times 2023 \]
+Both $1011$ and $2023$ are odd integers, so their product is odd. If $\Sigma_A = \Sigma_B$, then $\Sigma_A + \Sigma_B = 2\Sigma_A$, which must be an even integer. However, we have shown that the total sum is odd. Thus, $\Sigma_A$ cannot equal $\Sigma_B$.
+
+Since $n \neq 0$ and $\Sigma_B - \Sigma_A \neq 0$, it follows that $L - R \neq 0$, and therefore $L \neq R$.
+
+\(\square\)

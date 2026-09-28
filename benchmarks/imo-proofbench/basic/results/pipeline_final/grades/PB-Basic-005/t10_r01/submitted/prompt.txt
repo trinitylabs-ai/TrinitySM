@@ -1,0 +1,120 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $P$ be a polynomial with real coefficients whose leading coefficient is $1$. Suppose that for all nonzero real numbers $x$, we have $P(x) + P(1/x) = \frac{P(x + 1/x) + P(x - 1/x)}{2}$. Determine all possibilities for $P$.
+
+**GROUND-TRUTH SOLUTION**
+
+Substitute $\frac{1}{x}$ in the place of $x$. Comparing with the original equation, one can see that $P(x-\frac{1}{x})=P(-x+\frac{1}{x})$ . This implies that $P$ is even.
+
+ Suppose $\deg P\geq 6$. Let $P(x)= x^n + a x^{n-2} + b x^{n-4} +Q(x)$, where $\deg Q < n-4$. Comparing the coefficient of $x^{n-4}$ in the given condition, we have that $b = \frac{2\binom{n}{2}+2b}{2}$, which is a contradiction. Therefore, $\deg P \leq 4$.
+
+ If $\deg P = 4$, let $P(x) = x^4 + ax^2 +b$. Comparing the constant term, we can conclude that $b=6$. The possible solutions are $P(x) = x^4 +a x^2 +6$ for all real numbers $a$.
+
+ If $\deg P = 2$, let $P(x) = x^2 +a$. Comparing the constant term, we can conclude that $a=0$. The only possible solution is $P(x)=x^2$.
+
+ Therefore, the possible solutions are $P(x)= x^4 +ax^2 +6$, $P(x)=x^2$ which satisfies the condition.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved that $P$ is even.
+ 2. Correctly identified all solutions.
+(Almost)
+ 1. Proved $\deg(P)\le 4$, but did not conclude the proof.
+
+**PROPOSED SOLUTION**
+
+To determine all monic polynomials $P(x)$ with real coefficients such that for all nonzero real numbers $x$,
+\[ P(x) + P(1/x) = \frac{P(x + 1/x) + P(x - 1/x)}{2}, \]
+let $d$ be the degree of $P$. We write $P(x) = \sum_{n=0}^d a_n x^n$ with $a_d = 1$.
+
+Let $L(P) = P(x) + P(1/x)$ and $R(P) = \frac{P(x + 1/x) + P(x - 1/x)}{2}$. These are linear operators. For a monomial $x^n$, we have $L(x^n) = x^n + x^{-n}$. Using the binomial theorem:
+\[ (x \pm x^{-1})^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} (\pm x^{-1})^k = \sum_{k=0}^n \binom{n}{k} (\pm 1)^k x^{n-2k}. \]
+Thus,
+\[ R(x^n) = \frac{1}{2} \sum_{k=0}^n \binom{n}{k} (1 + (-1)^k) x^{n-2k} = \sum_{j=0}^{\lfloor n/2 \rfloor} \binom{n}{2j} x^{n-4j}. \]
+The condition $L(P) = R(P)$ implies:
+\[ \sum_{n=0}^d a_n (x^n + x^{-n}) = \sum_{n=0}^d a_n \sum_{j=0}^{\lfloor n/2 \rfloor} \binom{n}{2j} x^{n-4j}. \]
+Comparing the coefficients of $x^k$ for $k > 0$:
+The coefficient of $x^k$ on the LHS is $a_k$. On the RHS, $x^k$ appears when $n-4j = k$, so $n = k+4j$. Thus,
+\[ a_k = \sum_{j=0}^{\lfloor (d-k)/4 \rfloor} a_{k+4j} \binom{k+4j}{2j} = a_k \binom{k}{0} + \sum_{j=1}^{\lfloor (d-k)/4 \rfloor} a_{k+4j} \binom{k+4j}{2j}. \]
+This implies $\sum_{j=1}^{\lfloor (d-k)/4 \rfloor} a_{k+4j} \binom{k+4j}{2j} = 0$ for all $k \in \{1, \dots, d\}$.
+If $d \ge 5$, we can set $k = d-4 > 0$. The sum contains the term for $j=1$:
+\[ a_d \binom{d}{2} = 0. \]
+Since $a_d = 1$, we must have $\binom{d}{2} = 0$, which implies $d=0$ or $d=1$, contradicting $d \ge 5$. Thus, $d \le 4$.
+
+We now examine the cases for $d \in \{0, 1, 2, 3, 4\}$:
+1.  **$d=0$**: $P(x)=1$. $L(P)=2, R(P)=1$. No solution.
+2.  **$d=1$**: $P(x)=x+a_0$. $L(P)=x+1/x+2a_0, R(P)=x+a_0$. This requires $1/x+a_0=0$ for all $x$, which is impossible.
+3.  **$d=2$**: $P(x)=x^2+a_1x+a_0$.
+    $L(P) = x^2 + 1/x^2 + a_1(x+1/x) + 2a_0$.
+    $R(P) = \frac{(x+1/x)^2+a_1(x+1/x)+a_0 + (x-1/x)^2+a_1(x-1/x)+a_0}{2} = x^2+1/x^2+a_1x+a_0$.
+    Equating them: $a_1(x+1/x) + 2a_0 = a_1x + a_0 \implies a_1/x + a_0 = 0 \implies a_1=0, a_0=0$.
+    So $P(x) = x^2$.
+4.  **$d=3$**: $P(x)=x^3+a_2x^2+a_1x+a_0$.
+    Comparing coefficients of $x^0$: $2a_0 = a_0 \binom{0}{0} \implies a_0=0$.
+    Comparing coefficients of $x^{-1}$: $a_1 = a_3 \binom{3}{2} = 3(1) = 3$.
+    Comparing coefficients of $x^{-3}$: $a_3 = a_1 \binom{1}{2} = 0 \implies 1=0$. No solution.
+5.  **$d=4$**: $P(x)=x^4+a_3x^3+a_2x^2+a_1x+a_0$.
+    Comparing coefficients of $x^0$: $2a_0 = a_0 \binom{0}{0} + a_4 \binom{4}{2} = a_0 + 6 \implies a_0=6$.
+    Comparing coefficients of $x^{-1}$: $a_1 = a_3 \binom{3}{2} = 3a_3$.
+    Comparing coefficients of $x^{-3}$: $a_3 = a_1 \binom{1}{2} = 0 \implies a_3=0 \implies a_1=0$.
+    Comparing coefficients of $x^{-2}$: $a_2 = a_2 \binom{2}{2} = a_2$.
+    Comparing coefficients of $x^{-4}$: $a_4 = a_0 \binom{0}{2} + a_4 \binom{4}{4} = 1$.
+    All conditions are satisfied for any $a_2 \in \mathbb{R}$.
+    So $P(x) = x^4 + ax^2 + 6$ for any $a \in \mathbb{R}$.
+
+The possible polynomials are $P(x) = x^2$ and $P(x) = x^4 + ax^2 + 6$ for any $a \in \mathbb{R}$.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

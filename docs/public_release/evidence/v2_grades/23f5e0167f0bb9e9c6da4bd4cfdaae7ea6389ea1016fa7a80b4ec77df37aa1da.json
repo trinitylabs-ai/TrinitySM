@@ -1,0 +1,65 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "86f4a0d0aac87ea61a80169de4da06df0218445c46ed2241d58c9c4837f21eed",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "0e7f4196735f830837491f90fa5ffd94446536da64532ca4afb6c56db10632be",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "25fef57a319677465fcb32c080751bd55194281326bf3f608a82e7bc82bb170d",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive relation c x_O-bx'_O=(c^2-b^2)/4 is merely asserted to follow from “symmetry.” It is exactly equivalent to the desired conclusion, while the cross-angle constraints ∠LBK=α₂ and ∠LCK=α₃ are never used to derive it. This is an unsupported central compatibility claim under Rule E.",
+    "summary": "The submission makes meaningful coordinate progress and correctly reduces OM=ON to a linear condition on O, but it provides no proof of that condition. Although the missing equality is explicit and true, Rule B does not make a score of 4 eligible because the preceding reduction is not correct and complete: the L-coordinate construction has the wrong orientation, angle branches and possible right-angle cases are untreated, and two essential angle constraints remain unused.",
+    "strengths": [
+      "The coordinates of A, B, C, M, and N are set up correctly.",
+      "For generic non-right angles, the calculation of K from the conditions at B and M is correct.",
+      "The perpendicular-bisector formulation for a circumcentre is appropriate.",
+      "The algebraic reduction of OM=ON to c x_O-bx'_O=(c^2-b^2)/4 is correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final linear relation for O is asserted without calculation or geometric argument. Calling it a consequence of symmetry is insufficient and essentially assumes the conclusion; proving this relation is the central difficulty of the problem."
+      },
+      {
+        "severity": "substantial",
+        "description": "In the stated AC-coordinate system, B has negative y'-coordinate, hence an interior point L of triangle BNC must lie on that side of AC. The correct oriented lines have signs opposite to those written. Thus the submitted formulas construct the reflection of L across AC, and the ensuing AL perpendicular-bisector equation is not for the actual L."
+      },
+      {
+        "severity": "substantial",
+        "description": "The equalities ∠LBK=∠LNC and ∠LCK=∠BMK supply essential compatibility between the separately constructed K and L, but their cross-angle sides are never translated into equations or otherwise used."
+      },
+      {
+        "severity": "minor",
+        "description": "The tangent and cotangent calculations do not treat, or prove impossible, cases in which one of the relevant angles is 90°, and the required angle-branch choices are not justified from the interior hypotheses."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:47:22.756235+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,25 @@
+To determine the angle $\gamma$ between the lines $MN$ and $OI$, we employ a vector-based approach. Let the triangle $XYZ$ have side lengths $XY=c$, $XZ=b$, and $YZ=a$. Let $O$ be the circumcenter and $I$ be the incenter of the triangle.
+
+Let the vectors from the circumcenter $O$ to the vertices $X, Y, Z$ be $\vec{X}, \vec{Y}, \vec{Z}$, respectively. Since $O$ is the circumcenter, we have $|\vec{X}| = |\vec{Y}| = |\vec{Z}| = R$, where $R$ is the circumradius. The vector to the incenter $I$ is given by the formula:
+\[ \vec{OI} = \frac{a\vec{X} + b\vec{Y} + c\vec{Z}}{a+b+c} \]
+The points $M$ and $N$ lie on the sides $XY$ and $XZ$ such that $YM = ZN = YZ = a$. This implies $XM = c-a$ and $XN = b-a$. We can express the vectors $\vec{XM}$ and $\vec{XN}$ as:
+\[ \vec{XM} = \frac{c-a}{c} \vec{XY} = \frac{c-a}{c}(\vec{Y} - \vec{X}), \quad \vec{XN} = \frac{b-a}{b} \vec{XZ} = \frac{b-a}{b}(\vec{Z} - \vec{X}) \]
+The vector $\vec{MN}$ is then:
+\[ \vec{MN} = \vec{XN} - \vec{XM} = \frac{b-a}{b}(\vec{Z} - \vec{X}) - \frac{c-a}{c}(\vec{Y} - \vec{X}) = \frac{b-a}{b}\vec{Z} - \frac{c-a}{c}\vec{Y} + \left(\frac{c-a}{c} - \frac{b-a}{b}\right)\vec{X} \]
+Simplifying the coefficient of $\vec{X}$:
+\[ \frac{c-a}{c} - \frac{b-a}{b} = 1 - \frac{a}{c} - 1 + \frac{a}{b} = \frac{a}{b} - \frac{a}{c} = \frac{a(c-b)}{bc} \]
+Thus, $\vec{MN} = \frac{1}{bc} \left[ a(c-b)\vec{X} - b(c-a)\vec{Y} + c(b-a)\vec{Z} \right]$.
+To find the angle $\gamma$ between $MN$ and $OI$, we compute the dot product $\vec{MN} \cdot \vec{OI}$:
+\[ (a+b+c)bc (\vec{MN} \cdot \vec{OI}) = \left[ a(c-b)\vec{X} - b(c-a)\vec{Y} + c(b-a)\vec{Z} \right] \cdot [ a\vec{X} + b\vec{Y} + c\vec{Z} ] \]
+Expanding the dot product, and using $\vec{X}^2 = \vec{Y}^2 = \vec{Z}^2 = R^2$:
+\[ \text{Sum} = R^2 [ a^2(c-b) - b^2(c-a) + c^2(b-a) ] + ab(a-b)(\vec{X} \cdot \vec{Y}) + ac(c-a)(\vec{X} \cdot \vec{Z}) + bc(b-c)(\vec{Y} \cdot \vec{Z}) \]
+The term $a^2(c-b) - b^2(c-a) + c^2(b-a)$ simplifies to $(a-b)(b-c)(c-a)$. The dot products between vectors from the circumcenter to the vertices are $\vec{X} \cdot \vec{Y} = R^2 \cos(2C)$, $\vec{X} \cdot \vec{Z} = R^2 \cos(2B)$, and $\vec{Y} \cdot \vec{Z} = R^2 \cos(2A)$. Substituting $\cos 2\theta = 1 - 2\sin^2 \theta$:
+\[ \text{Sum} = R^2 [ (a-b)(b-c)(c-a) + ab(a-b) + ac(c-a) + bc(b-c) - 2(ab(a-b)\sin^2 C + ac(c-a)\sin^2 B + bc(b-c)\sin^2 A) ] \]
+The linear combination $ab(a-b) + ac(c-a) + bc(b-c)$ is equal to $-(a-b)(b-c)(c-a)$, so these terms cancel. Using the Law of Sines $\sin A = a/2R$, $\sin B = b/2R$, and $\sin C = c/2R$:
+\[ \text{Sum} = -2R^2 \left[ ab(a-b)\frac{c^2}{4R^2} + ac(c-a)\frac{b^2}{4R^2} + bc(b-c)\frac{a^2}{4R^2} \right] = -\frac{abc}{2} [ c(a-b) + b(c-a) + a(b-c) ] \]
+The term in the bracket is $ac - bc + bc - ab + ab - ac = 0$. Thus, $\vec{MN} \cdot \vec{OI} = 0$, which means the lines $MN$ and $OI$ are perpendicular. Therefore, $\gamma = 90^\circ$.
+
+The value of $\frac{\gamma}{2}$ is:
+\[ \frac{\gamma}{2} = \frac{90^\circ}{2} = 45^\circ \]
+
+\(\square\)

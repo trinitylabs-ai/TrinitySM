@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "420107a735b3750c5fd54ceeb26d8732c0cee10b0cf4341f32148c4553a29a93",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "e9740227ab1e50a32f6ff8daaae8b3b47c9a3cdf5fb9079c5c9511d8474a7e2d",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "381e48e08126d37caa5d326bd501a8a8f4f956cd9807e8b9bbda70c8a0316897",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Section 3 makes the unsupported and false central claim that every θ≤90° can eventually be forced. This yields a demonstrably incorrect classification, so Rule A caps the score at 2.",
+    "summary": "The correct set is θ=180°/n for integers n≥2, not the entire interval (0,90°]. For example, θ=70° is not winning: Shan-Yu may start with angles {35°,35°,110°}. More generally, call an angle marked if it is a positive integer multiple of 70°. This triangle is unmarked, and a direct four-case check shows that every cut of an unmarked triangle has an unmarked child; otherwise the marked angles in the two children would force either 180° or a parent angle to be marked. Shan-Yu can therefore avoid 70° forever. The submission correctly handles θ=90° and gives meaningful reasoning excluding θ>90°, but its claimed strategy for arbitrary θ≤90° is neither constructed nor true.",
+    "strengths": [
+      "The one-step strategy for θ=90° is essentially correct after choosing the two acute angles as the base angles.",
+      "The invariant that Shan-Yu can retain a triangle whose angles are all below θ correctly excludes θ>90°, starting for instance from an equilateral triangle.",
+      "The angle parametrization of a cut is valid."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer includes invalid values such as θ=70°, contradicting the actual discrete classification θ=180°/n."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that a forced right angle can be manipulated to force every smaller θ is unsupported and false; creating θ in only one child does not control the child Shan-Yu retains."
+      },
+      {
+        "severity": "substantial",
+        "description": "No necessity argument is supplied to exclude θ≤90° for which 180°/θ is not an integer, and no general strategy is supplied for all actual winning values 180°/n."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:22:33.875932+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00013",
+  "native_rejection_count": 0
+}

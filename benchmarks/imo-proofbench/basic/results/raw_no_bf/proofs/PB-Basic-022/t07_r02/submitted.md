@@ -1,0 +1,17 @@
+To find all polynomials $P(x)$ with integer coefficients such that $P(x) = s$ has an integer solution $x$ for every $s \in S = \{n^{2024} : n \in \mathbb{Z}_{\ge 0}\}$, let $k = 2024$. The condition is that for every $n \in \mathbb{N}_0$, there exists $x_n \in \mathbb{Z}$ such that $P(x_n) = n^k$.
+
+Let $d = \deg P$. Since $P$ is not constant (as $S$ is infinite), $d \ge 1$. For large $n$, the solution $x_n$ must satisfy $a_d x_n^d \approx n^k$, where $a_d$ is the leading coefficient of $P$. Thus, $x_n \approx (n^k/a_d)^{1/d} = a_d^{-1/d} n^{k/d}$.
+Let $q = k/d$. If $q$ is not an integer, the sequence $x_n \approx a_d^{-1/d} n^q$ cannot consist of integers for all $n$ because the distance from $a_d^{-1/d} n^q$ to the nearest integer does not vanish as $n \to \infty$ unless $q$ is an integer (a result related to Weyl's criterion on the equidistribution of sequences). Thus, $d$ must be a divisor of $k$.
+
+Let $q = k/d \in \mathbb{Z}$. The relation $x_n \approx a_d^{-1/d} n^q$ suggests $x_n$ is a polynomial in $n$. Specifically, let $x_n = \alpha n^q + \beta + \epsilon_n$ where $\epsilon_n \to 0$. Since $x_n \in \mathbb{Z}$, for large $n$, $\epsilon_n$ must be zero and $\alpha n^q + \beta$ must be an integer. This implies $\alpha$ and $\beta$ are rational.
+Substituting $x_n = \alpha n^q + \beta$ into $P(x_n) = n^k$, we have:
+$P(\alpha n^q + \beta) = n^k$.
+Since this holds for all large $n$, it is a polynomial identity. Let $L(n) = \alpha n^q + \beta$. Then $n^q = (L(n) - \beta)/\alpha$, so $n^k = (n^q)^{k/q} = ((L(n) - \beta)/\alpha)^d$.
+Thus, $P(x) = \left(\frac{x - \beta}{\alpha}\right)^d = \alpha^{-d}(x - \beta)^d$.
+For $P(x)$ to have integer coefficients, the leading coefficient $a_d = \alpha^{-d}$ must be an integer. Also, $P(x) = n^k$ must have a solution $x \in \mathbb{Z}$ for all $n$. For $n=1$, $P(x) = 1$ implies $\alpha^{-d}(x - \beta)^d = 1$. Since $\alpha^{-d}$ is an integer, we must have $\alpha^{-d} = \pm 1$.
+1. If $\alpha^{-d} = 1$, then $P(x) = (x - \beta)^d$. For this to have integer coefficients, $\beta$ must be an integer $b$. Then $P(x) = (x - b)^d$. This works for any $d|k$ because $(x-b)^d = n^k \implies x-b = \pm n^{k/d}$, which always has an integer solution $x = \pm n^{k/d} + b$.
+2. If $\alpha^{-d} = -1$, then $P(x) = -(x - \beta)^d$. For this to have integer coefficients, $\beta$ must be an integer $b$. Then $P(x) = -(x - b)^d$. For $P(x) = n^k$ to have a solution for $n=1$, we need $-(x - b)^d = 1 \implies (x - b)^d = -1$. This is only possible if $d$ is odd. If $d$ is odd and $d|k$, then $-(x - b)^d = n^k \implies x - b = (-n^k)^{1/d} = -n^{k/d}$, which has an integer solution $x = -n^{k/d} + b$.
+
+Since $k = 2024$ is even, the odd divisors $d$ of $k$ are the divisors of $2024/2^3 = 253$. The set of all such polynomials is $P(x) = (x+b)^d$ for any $d|2024, b \in \mathbb{Z}$, and $P(x) = -(x+b)^d$ for any odd $d|2024, b \in \mathbb{Z}$.
+
+The polynomials are $P(x) = (x+b)^d$ where $d|2024, b \in \mathbb{Z}$, and $P(x) = -(x+b)^d$ where $d|2024, d \text{ is odd}, b \in \mathbb{Z}$. \(\square\)

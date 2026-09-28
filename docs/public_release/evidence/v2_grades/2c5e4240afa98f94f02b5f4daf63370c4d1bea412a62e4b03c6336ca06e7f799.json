@@ -1,0 +1,55 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7664846ff6590c9ec289579e35f5828e320fc4968cff346d4a1f13fd6d7c0f36",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "6208a397d16ce6c483f674f233bd0b17008b2728b6a90dac2d7ba3e40352be39",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "dc9f7dc37616a973cfe8da01e21b300d8b5ec6d5eb5d91e15f85026c7dc49f3c",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Section 4 falsely asserts that recursive play can produce only repeated halvings of existing angles or of 90°. The one-move characterization does not imply this restriction for multi-move strategies.",
+    "summary": "The claimed classification omits valid values, so Rule A caps the score at 2. In particular, θ=60° is forceable. Every triangle has an angle c≤60°. If c=60°, Mulan has already won. Otherwise, write the other angles as a≥b and cut from the vertex of angle a so that the children have angle sets {b,60°,120°−b} and {c,120°,60°−c}. The cut is valid; the first child contains 60°, while in the second Mulan bisects the 120° angle, putting 60° in both resulting children. Thus 60° is a direct counterexample to the submitted classification. Repairing the proof requires fundamentally extending both the construction and the obstruction argument to obtain all θ=180°/n.",
+    "strengths": [
+      "The analysis of when both immediate children can contain θ is substantially correct under the stated assumption that neither inherited base angle already equals θ.",
+      "The construction for θ=90° and the repeated angle-bisection argument correctly prove the dyadic subfamily θ=180°/2^n."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer is false: it excludes θ=60° and, more generally, all 180°/n with n not a power of two."
+      },
+      {
+        "severity": "major",
+        "description": "The necessity argument assumes without proof—and incorrectly—that every recursively forceable angle must arise by halving an existing angle or 90°. Multi-stage branching strategies allow other transformations, so the proposed invariant is invalid."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:45:50.587288+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

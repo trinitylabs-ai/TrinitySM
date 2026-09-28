@@ -1,0 +1,102 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $a_1,a_2,...,a_{18}$ be 18 real numbers, not necessarily distinct, with average $m$. Let $A$ denote the number of triples $1 \le i < j < k \le 18$ for which $a_i + a_j + a_k \ge 3m$. What is the minimum possible value of $A$?
+
+**GROUND-TRUTH SOLUTION**
+
+I claim the answer is $136$. Take the construction $17, -1,...,-1,-1,-1,-1,-1,-1,-1,-1$, which clearly works.
+ Now I will show that this is the minimum. For any partition of $\{a_1, a_2, ..., a_{18}\}$ into six triplets, at least one triplet must satisfy that $a_i + a_j +a_k \ge 0$.
+ Therefore there are $\frac{18!}{(3!)^6 6!}$ partitions, and a fixed triplet is contatined in $\frac{15!}{(3!)^5 5!}$ partitions, so there are at least $\frac{18!}{(3!)^6 6!}/\frac{15!}{(3!)^5 5!} = 136$ partitions satisfying the condition.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the answer $136$, and constructed the equality case.
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+Let $a_1, a_2, \dots, a_{18}$ be 18 real numbers with average $m$. We define $x_i = a_i - m$ for $i = 1, 2, \dots, 18$. Then the sum of these shifted variables is
+\[ \sum_{i=1}^{18} x_i = \sum_{i=1}^{18} a_i - 18m = 18m - 18m = 0. \]
+The condition $a_i + a_j + a_k \ge 3m$ is equivalent to $(x_i + m) + (x_j + m) + (x_k + m) \ge 3m$, which simplifies to $x_i + x_j + x_k \ge 0$. We wish to find the minimum number $A$ of triples $1 \le i < j < k \le 18$ such that $x_i + x_j + x_k \ge 0$, given $\sum_{i=1}^{18} x_i = 0$.
+
+First, we show that $A = 136$ is achievable. Let $x_1 = 17$ and $x_2 = x_3 = \dots = x_{18} = -1$. The sum is $17 + 17(-1) = 0$. A triple $(i, j, k)$ has a non-negative sum if and only if it contains $x_1$, because for any $j, k > 1$, $x_1 + x_j + x_k = 17 - 1 - 1 = 15 \ge 0$, while for any $i, j, k > 1$, $x_i + x_j + x_k = -1 - 1 - 1 = -3 < 0$. The number of such triples is $\binom{17}{2} = \frac{17 \times 16}{2} = 136$.
+
+To prove that $A \ge 136$ for any such set of $x_i$, assume without loss of generality that $x_1 \ge x_2 \ge \dots \ge x_{18}$. If $x_1 \le 0$, then since $\sum x_i = 0$, all $x_i$ must be 0. In this case, $x_i + x_j + x_k = 0$ for all triples, so $A = \binom{18}{3} = 816$. Now assume $x_1 > 0$.
+
+Case 1: $x_2 \le 0$.
+Since $x_1 \ge x_2 \ge \dots \ge x_{18}$ and $\sum_{i=1}^{18} x_i = 0$, we have $x_1 = -\sum_{i=2}^{18} x_i$. For any $2 \le j < k \le 18$, the sum of the triple $\{x_1, x_j, x_k\}$ is:
+\[ x_1 + x_j + x_k = -\sum_{i=2}^{18} x_i + x_j + x_k = -\sum_{i \in \{2, \dots, 18\} \setminus \{j, k\}} x_i. \]
+Since $x_i \le 0$ for all $i \in \{2, \dots, 18\}$, the sum on the right is a sum of 15 non-positive numbers, which is $\ge 0$. Thus, all $\binom{17}{2} = 136$ triples containing $x_1$ are non-negative, so $A \ge 136$.
+
+Case 2: $x_2 > 0$.
+Let $p$ be the number of positive terms, so $x_1 \ge \dots \ge x_p > 0 \ge x_{p+1} \ge \dots \ge x_{18}$, with $p \ge 2$. To find the minimum $A$, we consider the symmetric case where $x_1 = \dots = x_p = a > 0$ and $x_{p+1} = \dots = x_{18} = b < 0$. To satisfy $\sum x_i = 0$, we must have $pa + (18-p)b = 0$, so $b = -\frac{pa}{18-p}$. The triples are categorized by the number of positive terms they contain:
+- 3 positives: $\binom{p}{3}$ triples. All are $\ge 0$.
+- 2 positives, 1 negative: $\binom{p}{2}(18-p)$ triples. Sum is $2a + b = a(2 - \frac{p}{18-p}) = a(\frac{36-3p}{18-p})$, which is $\ge 0$ if $p \le 12$.
+- 1 positive, 2 negatives: $p\binom{18-p}{2}$ triples. Sum is $a + 2b = a(1 - \frac{2p}{18-p}) = a(\frac{18-3p}{18-p})$, which is $\ge 0$ if $p \le 6$.
+- 0 positives: $\binom{18-p}{3}$ triples. All are $< 0$.
+
+Evaluating $A(p)$ for these symmetric configurations:
+- For $2 \le p \le 6$, $A(p) = \binom{p}{3} + \binom{p}{2}(18-p) + p\binom{18-p}{2}$. For $p=2$, $A(2) = 0 + 1(16) + 2(120) = 256$.
+- For $7 \le p \le 12$, $A(p) = \binom{p}{3} + \binom{p}{2}(18-p)$. For $p=7$, $A(7) = 35 + 21(11) = 266$.
+- For $13 \le p \le 17$, $A(p) = \binom{p}{3}$. For $p=13$, $A(13) = \binom{13}{3} = 286$.
+In all these cases, $A(p) > 136$.
+
+For any distribution with $x_2 > 0$, we can move mass from $x_2$ to $x_1$ by replacing $(x_1, x_2)$ with $(x_1 + \epsilon, x_2 - \epsilon)$. Let $C(v)$ be the number of pairs $\{j, k\}$ with $j, k > 2$ such that $x_j + x_k \ge -v$. The change in $A$ is $\Delta A = [C(x_1 + \epsilon) - C(x_1)] - [C(x_2) - C(x_2 - \epsilon)]$. As $x_1$ increases, $C(x_1)$ eventually reaches its maximum value $\binom{16}{2} = 120$. Once $x_1$ is large enough such that $C(x_1) = 120$, then $\Delta A = 0 - [C(x_2) - C(x_2 - \epsilon)] \le 0$. Thus, we can shift all positive mass into $x_1$ without increasing $A$, reducing the problem to Case 1.
+
+In all cases, the number of triples $A$ is at least 136. Since $A=136$ is achievable, the minimum possible value of $A$ is 136.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

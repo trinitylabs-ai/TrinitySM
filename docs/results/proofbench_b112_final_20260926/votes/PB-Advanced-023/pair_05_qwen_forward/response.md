@@ -1,0 +1,21 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Claims that James can guarantee reaching row 3002 with at most 3 penalties, concluding $n=4$. The argument proposes a fixed strategy of probing columns 1, 2, and 3 sequentially, then constructing a detour path using the three revealed blocked cells.
+Claim gap: The sufficiency strategy is invalid. The path construction incorrectly assumes safety for horizontal moves in rows where the blocked cell is unknown. The necessity argument is incomplete and does not rigorously establish a lower bound of 3.
+Qualifications and supplied repairs: NONE. The strategy's core safety condition is mathematically incorrect and cannot be salvaged without fundamentally changing the approach.
+Decisive checks: 
+- Line 16 claims the horizontal move $(r_2-1, 3) \to (r_2-1, 1)$ is safe provided $r_2-1 \neq r_1$ and $r_2-1 \neq r_3$. This is a **DEMONSTRATED defect**. The safety of a horizontal traversal in row $r$ depends entirely on the column index of the blocked cell in row $r$. For any unknown row, the blocked cell could be placed in column 2, which lies directly on the path from column 3 to 1. The condition on row indices is irrelevant to column safety, so the move risks a penalty and breaks the guarantee.
+- The strategy assumes that knowing 3 blocked cells suffices to navigate 3000 rows of adversarially placed obstacles. This ignores that the remaining 2997 unknown blocked cells can form an impenetrable wall across the proposed detour. The claim that 3 penalties suffice is **FALSE**.
+
+## Proof B
+Established theorem: Claims $n=3001$ (i.e., at most 3000 penalties are necessary and sufficient). The upper bound correctly demonstrates that a strategy of probing columns sequentially guarantees identifying the unique empty column or all 3000 blocked cells within 3000 penalties, after which a safe vertical path exists.
+Claim gap: The lower bound argument (lines 7–18) contains a logical flaw in its premise. It incorrectly asserts that to guarantee success, James must avoid entering any blocked cell in unknown rows, conflating "avoiding additional penalties" with "staying within the total penalty budget." It also fixes Peter's configuration $S$ before analyzing James's strategy, which requires additional minimax justification to formally establish the lower bound. The lower bound is not rigorously proven as written.
+Qualifications and supplied repairs: NONE. The lower bound gap remains unresolved in the text; the argument relies on a false premise about penalty avoidance. The upper bound, however, stands independently as a complete and correct proof that $n \le 3001$.
+Decisive checks:
+- Lines 3–4: Upper bound is **VERIFIED**. If James incurs 3000 penalties, he knows all blocked cells $(r, c_r)$ for $r=2,\dots,3001$. He computes the unique column $c^* \notin \{c_2,\dots,c_{3001}\}$ and moves straight down it. This path is guaranteed safe. Thus $\le 3000$ penalties suffice, establishing $n \le 3001$.
+- Lines 7–18: Lower bound reasoning has a **DEMONSTRATED defect** in the premise "James must ensure that every cell he visits in row $u$ is in $C_P$." James is explicitly allowed to incur penalties; the constraint is on the total count, not on avoiding all future penalties. The geometric derivation that follows depends on this false premise. However, the final answer $n=3001$ is **CORRECT**, and the upper bound rigorously establishes the sufficiency half of the problem.
+
+## Decision
+Winner: B
+Reason: Proof B correctly identifies the answer $n=3001$ and provides a rigorous, verified upper bound showing that 3000 penalties suffice. Its lower bound argument contains a premise error regarding penalty avoidance and is not fully rigorous as written, but the upper bound stands independently and the conclusion is mathematically correct. Proof A's strategy is fundamentally flawed: it incorrectly assumes horizontal moves in unknown rows are safe based solely on row indices, ignoring that unknown blocked cells can lie anywhere in those rows. This fatal defect invalidates its sufficiency claim and leads to an incorrect answer ($n=4$). Proof B's verified progress and correct conclusion decisively outweigh Proof A's invalid construction.

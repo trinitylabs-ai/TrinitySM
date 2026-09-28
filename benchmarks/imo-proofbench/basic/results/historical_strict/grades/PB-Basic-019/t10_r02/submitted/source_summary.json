@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T19:41:00.242841+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 19,
+  "problem_id": "PB-Basic-019",
+  "case_id": "PB-Basic-019.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/p19/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/p19/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/p19/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "00c21aeff0854d1a045f7260fb4cab6487e5a4586d65d2177dd8d55422e8dfe3",
+  "reference_sha256": "22341fbfa5b1be4d043f86519f346329f13786ede1e24f33d5ea0966194d0106",
+  "proof_sha256": "536d659c9eb3c0fd2e68aae70c692869a0473cecbda26167fcc6fe000591310d",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/tasks.json",
+  "task_manifest_sha256": "df432d0e61bd8dbc0f4f32699a3973abeccaf36b09b9d5c77a82959ae923abe3",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The parity decomposition gives correct recurrences for \\(S(N)\\), which yield exact recurrences for the deviation \\(f(N)\\). Strong induction then rigorously proves the stronger bound \\(0<f(N)<2/3\\), and hence the required absolute-value inequality.",
+    "strengths": [
+      "Correctly uses \\(\\delta(2k)=\\delta(k)\\) to derive the central recurrences.",
+      "Establishes a stronger bound than required through a complete induction.",
+      "Handles strict inequalities correctly in both parity cases."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

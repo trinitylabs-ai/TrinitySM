@@ -1,0 +1,84 @@
+# Problem
+
+Let $n$ be a positive integer that has a remainder of 6 when divided by 7. Let $d$ be any divisor of $n$.
+
+Define $c$ such that when the expression $\left(d+\frac{n}{d}\right)^{2}$ is divided by $n$, the remainder is $n-c$.
+
+What is the smallest possible value of $c$ among all $d$ and $n$ satisfying the conditions above?
+
+(Note that the remainder when a positive integer $a$ is divided by a positive integer $b$ is the value of $r$ in the expression $a=b q+r, 0 \leq r \leq b-1$.)
+
+# Proof A
+
+1: Let $n$ be a positive integer such that $n \equiv 6 \pmod{7}$, and let $d$ be a divisor of $n$. Let $k = n/d$. The expression given is $(d + k)^2 = d^2 + 2n + k^2$. When this is divided by $n$, the remainder is the same as the remainder of $d^2 + k^2$ divided by $n$. We are given that this remainder is $n-c$, where $0 \le n-c \le n-1$. This implies $1 \le c \le n$ and
+2: $$d^2 + k^2 \equiv n-c \equiv -c \pmod{n}.$$
+3: Thus, $n$ must divide $d^2 + k^2 + c$. Since $n=dk$, there exists a positive integer $m$ such that
+4: $$d^2 + k^2 + c = mdk.$$
+5: We want to find the smallest positive integer $c$ for which there exist positive integers $d, k$ such that $dk \equiv 6 \pmod{7}$ and $d^2 + k^2 + c = mdk$.
+6: 
+7: For a fixed $m$ and $c$, let $(d, k)$ be a solution to $d^2 + k^2 + c = mdk$ with $d \le k$. If $d < k$, the equation $x^2 - (md)x + (d^2+c) = 0$ has roots $k$ and $k' = md-k = \frac{d^2+c}{k}$. Since $d, k, m, c$ are positive integers, $k'$ is also a positive integer. If we choose a solution $(d, k)$ such that $d+k$ is minimal, we must have $k' \ge k$, which implies $\frac{d^2+c}{k} \ge k$, or $d^2+c \ge k^2$. Since $d \le k$, this means $k^2 - d^2 \le c$.
+8: 
+9: Case $c=1$:
+10: The condition $k^2 - d^2 \le 1$ with $d \le k$ implies either $d=k$ or $k^2-d^2=1$. If $d=k$, then $2d^2+1=md^2$, which implies $(m-2)d^2=1$, so $d=1$ and $m=3$. If $k^2-d^2=1$, then $(k-d)(k+d)=1$, which has no solutions in positive integers. Thus, $m=3$ is the only possibility.
+11: For $m=3$, the solutions $(d_i, d_{i+1})$ satisfy $d_{i+1} = 3d_i - d_{i-1}$ with $d_1=1, d_2=1$. The sequence modulo 7 is $1, 1, 2, 5, 6, 6, 5, 2, 1, 1, \dots$. The possible values of $n = d_i d_{i+1} \pmod{7}$ are $1\cdot 1=1, 1\cdot 2=2, 2\cdot 5 \equiv 3, 5\cdot 6 \equiv 2, 6\cdot 6 \equiv 1, 6\cdot 5 \equiv 2, 5\cdot 2 \equiv 3, 2\cdot 1=2$. None are $6 \pmod{7}$.
+12: 
+13: Case $c=2$:
+14: The condition $k^2 - d^2 \le 2$ with $d \le k$ implies $d=k$ or $k^2-d^2 \in \{1, 2\}$. If $d=k$, then $2d^2+2=md^2$, so $(m-2)d^2=2$, which implies $d=1$ and $m=4$. If $k^2-d^2=1$ or $2$, there are no positive integer solutions since $k+d \ge 3$. Thus, $m=4$ is the only possibility.
+15: For $m=4$, the solutions satisfy $d_{i+1} = 4d_i - d_{i-1}$ with $d_1=1, d_2=1$. The sequence modulo 7 is $1, 1, 3, 4, 6, 6, 4, 3, 1, 1, \dots$. The possible values of $n = d_i d_{i+1} \pmod{7}$ are $1\cdot 1=1, 1\cdot 3=3, 3\cdot 4 \equiv 5, 4\cdot 6 \equiv 3, 6\cdot 6 \equiv 1, 6\cdot 4 \equiv 3, 4\cdot 3 \equiv 5, 3\cdot 1=3$. None are $6 \pmod{7}$.
+16: 
+17: Case $c=3$:
+18: The condition $k^2 - d^2 \le 3$ with $d \le k$ implies $d=k$ or $k^2-d^2 \in \{1, 2, 3\}$. If $d=k$, then $2d^2+3=md^2$, so $(m-2)d^2=3$, which implies $d=1$ and $m=5$. If $k^2-d^2=3$, then $(k-d)(k+d)=3$, so $k-d=1$ and $k+d=3$, giving $k=2, d=1$. Then $1^2+2^2+3=m(1)(2)$, so $8=2m$, which means $m=4$.
+19: 
+20: For $m=5$, the solutions satisfy $d_{i+1} = 5d_i - d_{i-1}$ with $d_1=1, d_2=1$. The sequence is $d_1=1, d_2=1, d_3=4, d_4=19, \dots$.
+21: Testing $n = d_3 d_4 = 4 \cdot 19 = 76$:
+22: $76 = 7 \times 10 + 6 \equiv 6 \pmod{7}$.
+23: For $n=76$ and $d=4$, we have $(4 + 19)^2 = 23^2 = 529$.
+24: Dividing 529 by 76: $529 = 6 \times 76 + 73$.
+25: The remainder is $73 = 76 - 3$, so $c=3$.
+26: 
+27: For $m=4$, the solutions for $c=3$ satisfy $d_{i+1} = 4d_i - d_{i-1}$ with $d_1=1, d_2=2$. The sequence modulo 7 is $1, 2, 0, 5, 6, 5, 0, 2, 1, 2, \dots$. The possible values of $n = d_i d_{i+1} \pmod{7}$ are $1\cdot 2=2, 2\cdot 0=0, 0\cdot 5=0, 5\cdot 6 \equiv 2, 6\cdot 5 \equiv 2, 5\cdot 0=0, 0\cdot 2=0, 2\cdot 1=2$. None are $6 \pmod{7}$.
+28: 
+29: Since $c=1$ and $c=2$ are impossible and $c=3$ is achievable, the smallest possible value of $c$ is 3.
+
+# Proof B
+
+1: Let $d$ be a divisor of $n$, and let $d' = n/d$. The expression is:
+2: \[ E = \left(d + \frac{n}{d}\right)^2 = (d + d')^2 = d^2 + 2n + d'^2 \]
+3: When $E$ is divided by $n$, the remainder is $r = (d^2 + d'^2) \pmod n$. We are given that this remainder is $n-c$. Since $0 \leq r < n$, it follows that $0 \leq n-c < n$, which implies $1 \leq c \leq n$. The condition $d^2 + d'^2 \equiv n-c \pmod n$ can be rewritten as:
+4: \[ d^2 + d'^2 \equiv -c \pmod n \]
+5: Let $g = \gcd(d, d')$. Then we can write $d = ga$ and $d' = gb$ where $\gcd(a, b) = 1$. The integer $n$ is then $n = dd' = g^2 ab$. Substituting these into the congruence gives:
+6: \[ g^2 a^2 + g^2 b^2 \equiv -c \pmod{g^2 ab} \]
+7: This implies that $g^2$ must divide $c$. Let $c = g^2 k$ for some positive integer $k$. Then:
+8: \[ g^2(a^2 + b^2) \equiv -g^2 k \pmod{g^2 ab} \implies a^2 + b^2 \equiv -k \pmod{ab} \]
+9: Thus, $a^2 + b^2 + k$ must be a multiple of $ab$. Let $a^2 + b^2 + k = mab$ for some positive integer $m$. We wish to find the smallest $c = g^2 k$ such that there exist $g, a, b, m$ satisfying $n = g^2 ab \equiv 6 \pmod 7$ and $k = mab - a^2 - b^2 > 0$.
+10: 
+11: If $g \ge 2$, then $c = g^2 k \ge 4$. We check if $c=1, 2, 3$ are possible by setting $g=1$, so $c=k$ and $n=ab \equiv 6 \pmod 7$.
+12: 
+13: **Case $c=1$ ($k=1$):** The equation is $a^2 + b^2 + 1 = mab$.
+14: For a fixed $m$, let $(a, b)$ be a solution in positive integers with $a \le b$. If $a=b$, then $(m-2)a^2 = 1$, which implies $a=1$ and $m=3$. If $a < b$, we can use Vieta jumping: the value $x = (a^2+1)/b$ is the other root of $x^2 - (ma)x + (a^2+1) = 0$. Thus $x$ is an integer and $x = ma-b$. Since $a < b$, $x = (a^2+1)/b < (b^2+1)/b = b + 1/b$, so $x \le b$. If $x < a$, we have a smaller solution $(x, a)$. The descent must terminate when $x \ge a$, which means $a^2+1 \ge ab$. Since $b > a$, this implies $a(b-a) \le 1$. If $b-a=0$, we return to the $a=b$ case. If $b-a \ge 1$, then $a(b-a) \le 1$ implies $a=1$ and $b=2$. In this case, $m = (1^2+2^2+1)/(1 \cdot 2) = 3$.
+15: The solutions for $m=3, k=1$ are generated by the recurrence $x_{i+1} = 3x_i - x_{i-1}$ with $x_0=1, x_1=1$. The sequence $x_i \pmod 7$ is:
+16: $x_0=1, x_1=1, x_2=2, x_3=5, x_4=6, x_5=6, x_6=5, x_7=2, x_8=1, x_9=1, \dots$
+17: The products $n_i = x_i x_{i+1} \pmod 7$ are:
+18: $n_0 = 1, n_1 = 2, n_2 = 3, n_3 = 2, n_4 = 1, n_5 = 2, n_6 = 3, n_7 = 2, n_8 = 1$.
+19: The products $n_i \pmod 7$ are in $\{1, 2, 3\}$, so they never reach 6.
+20: 
+21: **Case $c=2$ ($k=2$):** The equation is $a^2 + b^2 + 2 = mab$.
+22: For a fixed $m$, let $(a, b)$ be a solution with $a \le b$. If $a=b$, then $(m-2)a^2 = 2$, which implies $a=1$ and $m=4$. If $a < b$, the descent $x = (a^2+2)/b$ terminates when $x \ge a$, which implies $a^2+2 \ge ab$, or $a(b-a) \le 2$.
+23: If $a(b-a)=1$, then $a=1, b=2$, giving $m = (1+4+2)/2 = 3.5$ (not an integer).
+24: If $a(b-a)=2$, then either $(a=1, b=3)$, giving $m = (1+9+2)/3 = 4$, or $(a=2, b=3)$, giving $m = (4+9+2)/6 = 2.5$ (not an integer).
+25: Thus, the only possible value for $m$ is $m=4$.
+26: The solutions for $m=4, k=2$ are generated by $x_{i+1} = 4x_i - x_{i-1}$ with $x_0=1, x_1=1$. The sequence $x_i \pmod 7$ is:
+27: $x_0=1, x_1=1, x_2=3, x_3=4, x_4=6, x_5=6, x_6=4, x_7=3, x_8=1, x_9=1, \dots$
+28: The products $n_i = x_i x_{i+1} \pmod 7$ are:
+29: $n_0 = 1, n_1 = 3, n_2 = 5, n_3 = 3, n_4 = 1, n_5 = 3, n_6 = 5, n_7 = 3, n_8 = 1$.
+30: The products $n_i \pmod 7$ are in $\{1, 3, 5\}$, so they never reach 6.
+31: 
+32: **Case $c=3$ ($k=3$):** The equation is $a^2 + b^2 + 3 = mab$.
+33: We seek $a, b$ such that $ab \equiv 6 \pmod 7$ and $m = (a^2+b^2+3)/ab$ is an integer.
+34: Testing $a=4, b=19$, we have $n = ab = 76$. Since $76 = 7 \times 10 + 6$, $n \equiv 6 \pmod 7$.
+35: Then $m = (4^2 + 19^2 + 3)/(4 \times 19) = (16 + 361 + 3)/76 = 380/76 = 5$.
+36: Since $m$ is an integer, $c=3$ is achievable.
+37: Checking the remainder: $(4 + 19)^2 = 23^2 = 529$. Dividing 529 by 76: $529 = 76 \times 6 + 73$.
+38: The remainder is $73 = 76 - 3$, so $c=3$.
+39: 
+40: Since $c=1$ and $c=2$ are impossible and $c=3$ is achievable, the smallest possible value of $c$ is 3.

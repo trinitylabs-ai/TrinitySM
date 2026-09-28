@@ -1,0 +1,18 @@
+{
+  "attempt": 3,
+  "cap": 49152,
+  "state": "accepted",
+  "finish_reason": "stop",
+  "text_sha256": "2392337c9c27f82dffdb73970e346a350e21a89ed17cbef79c7a861725387412",
+  "parser_feedback_supplied": true,
+  "errors": [],
+  "request_timeout_sec": 600,
+  "mechanical_recovery": {
+    "policy": "acceptance-none-routine-completion-annotation-v1",
+    "field": "## First Invalid Step",
+    "raw": "NONE (defect corrected by routine completion)",
+    "interpreted": "NONE"
+  },
+  "original_validation_sha256": "f7a4708c7d31b11dcc7e1cef1cb20399ed458f415746c3b1d51934db985821a8",
+  "new_model_calls": 0
+}

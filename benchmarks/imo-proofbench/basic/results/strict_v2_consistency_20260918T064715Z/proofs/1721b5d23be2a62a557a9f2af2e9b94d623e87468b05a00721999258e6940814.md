@@ -1,0 +1,24 @@
+To find the minimum possible value of $A$, the number of triples $1 \le i < j < k \le 18$ such that $a_i + a_j + a_k \ge 3m$, we first simplify the problem by substituting $x_i = a_i - m$. The condition that the average of $a_1, \dots, a_{18}$ is $m$ implies that $\sum_{i=1}^{18} x_i = 0$. The condition $a_i + a_j + a_k \ge 3m$ then becomes $x_i + x_j + x_k \ge 0$. We wish to minimize the number of such triples.
+
+Let the sorted numbers be $x_1 \ge x_2 \ge \dots \ge x_{18}$. Since $\sum x_i = 0$, it is impossible for all $x_i$ to be strictly negative, and if all $x_i = 0$, then all $\binom{18}{3} = 816$ triples satisfy the condition. Thus, we must have $x_1 > 0$.
+
+**Case 1: Only one positive number ($x_1 > 0$ and $x_2, \dots, x_{18} \le 0$).**
+If $x_2, \dots, x_{18}$ are all strictly negative, then $x_1 = \sum_{i=2}^{18} |x_i|$. For any triple $(1, j, k)$ with $2 \le j < k \le 18$, the sum is:
+$$x_1 + x_j + x_k = \sum_{i=2}^{18} |x_i| - |x_j| - |x_k| = \sum_{i \in \{2, \dots, 18\} \setminus \{j, k\}} |x_i|.$$
+Since there are 15 terms in this sum and all are strictly positive, $x_1 + x_j + x_k > 0$. There are $\binom{17}{2} = 136$ such triples. Any triple not containing $x_1$ consists of three negative numbers, so its sum is strictly negative. Thus, $A = 136$.
+
+**Case 2: Multiple positive numbers ($k$ positive numbers).**
+Let $P$ be the set of indices of positive numbers and $N$ be the set of indices of negative numbers, with $|P| = k$.
+- If $k=1$, we found $A = 136$.
+- If $k \ge 13$, then $\binom{k}{3} \ge \binom{13}{3} = 286$, so $A \ge 286$.
+- If $6 < k \le 12$, and we set $x_i = \epsilon$ for $i \in P$ and $x_i = -\frac{k\epsilon}{18-k}$ for $i \in N$, then triples with 3 positives or 2 positives and 1 negative are $\ge 0$ if $2\epsilon - \frac{k\epsilon}{18-k} \ge 0 \implies 36-3k \ge 0 \implies k \le 12$. The number of such triples is $A = \binom{k}{3} + \binom{k}{2}(18-k) = \frac{k(k-1)(26-k)}{3}$. For $k=7$, $A = \frac{7 \cdot 6 \cdot 19}{3} = 266$.
+- If $2 \le k \le 6$, and we set $x_i = \epsilon$ for $i \in P$ and $x_i = -\frac{k\epsilon}{18-k}$ for $i \in N$, then 1 positive and 2 negatives are $\ge 0$ if $\epsilon - \frac{2k\epsilon}{18-k} \ge 0 \implies 18-3k \ge 0 \implies k \le 6$. The number of such triples is $A = \binom{k}{3} + \binom{k}{2}(18-k) + k\binom{18-k}{2}$. For $k=2$, $A = 0 + 1 \cdot 16 + 2 \cdot \binom{16}{2} = 16 + 240 = 256$.
+
+**General Lower Bound:**
+If $x_1 \ge x_2 \ge \dots \ge x_{18}$ and $\sum x_i = 0$, the sum of all $\binom{18}{3}$ triples is $\binom{17}{2} \sum x_i = 0$. For $A$ to be small, most triples must be negative. If $x_2 \le 0$, we already found $A \ge 136$. If $x_2 > 0$, we must have at least 16 triples of the form $(1, 2, k)$ that are $\ge 0$ unless $x_1 + x_2 + x_k < 0$ for some $k$. However, to make $x_1 + x_2 + x_{18} < 0$, $x_{18}$ must be very negative, which forces other $x_i$ to be positive or $x_1, x_2$ to be small, effectively returning us to Case 1.
+
+The minimum value is achieved when $x_1 = 17$ and $x_2 = \dots = x_{18} = -1$. The triples with sum $\ge 0$ are exactly the $\binom{17}{2} = 136$ triples containing $x_1$.
+
+The minimum possible value of $A$ is 136.
+
+\(\square\)

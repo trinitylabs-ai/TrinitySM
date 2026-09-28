@@ -1,0 +1,51 @@
+{
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_e25320a1c96a78094ed1f62c22ef4206",
+  "pass_index": 1,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The proof is complete and correct. The lexicographically decreasing pair (S,C), where S is the total number of prime factors with multiplicity and C counts entries greater than 1, establishes finite termination. Primewise, the gcd of all valuation coordinates is invariant under the transformation (x,y)↦(min(x,y),|x−y|). At least one such invariant is initially positive, ruling out a terminal board consisting entirely of 1s; hence exactly one entry M remains greater than 1. Its prime exponents equal the invariant valuation gcds, uniquely determining M independently of all choices.",
+    "strengths": [
+      "Correctly computes that S decreases by Ω(gcd(m,n)), and handles the equality case using the strict decrease of C.",
+      "Uses a valid lexicographic descent on nonnegative integers to prove termination.",
+      "Correctly identifies and proves the primewise invariant gcd(v_p(a_1),…,v_p(a_N)).",
+      "Correctly rules out a terminal board with no entry greater than 1.",
+      "Provides an explicit formula for the unique terminal value M."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "proof_sha256": "e25320a1c96a78094ed1f62c22ef42061291e99b256c96e8e28bd547b56fc572",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "evidence_sha256": "6322a9df4c27811976696e193aaedea52217d3e3e3619f9cb3098921517d5e6a",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p1/t10_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "db54294ae37841956bebd6b2f230d4d9c05b3a23d494626ccabfbce53e88c856",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "f403dee42e36d83d34671f32bb90718b91a030b4dfb7044d433b7934d8483db6",
+    "raw_response_1.txt": "2c48e9b79d9149a1dfee79ea6fe7133aef04d666b0eddf6a3c2dd25a255c7993",
+    "summary.json": "70a53be2e977f5b9f934bd084b12ec04d18915273cb67a95c7d163271e7fe3d9"
+  }
+}

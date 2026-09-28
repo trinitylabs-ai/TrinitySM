@@ -1,0 +1,122 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In $\triangle ABC$ the altitudes $BE$ and $CF$ intersect at $H$. A circle $(W)$ is
+ externally tangent to the Euler circle $(E)$ of $\triangle ABC$ and also tangent
+ to the sides $AB$ and $AC$ at $X$ and $Y$, respectively, with
+ $(W)$ being closer to $A$ than the Euler circle. Let $I'$ be the
+ incenter of $\triangle AEF$. Prove that $AXI'Y$ is a rhombus.
+
+**GROUND-TRUTH SOLUTION**
+
+Consider the inversion centered at $A$ with power $\sqrt{\frac{1}{2} AE \times AC}$. Under
+ this inversion, the Euler circle remains unchanged, while $B$ and
+ $C$ are mapped to $B'$ and $C'$, which are the midpoints of $AF$
+ and $AE$, respectively.
+
+
+ Observe that if $AXI'Y$ is a rhombus, then $(W)$ is the image of
+ the mixtilinear incircle of $\triangle AEF$ under a homothety centered
+ at $A$ with ratio $\frac{1}{2}$. The $A$-excircle of $\triangle ABC$,
+ which is tangent to $AB,AC$, and $BC$, is mapped to the circle $(V)$,
+ which is tangent to $AB,AC$, and $(AB'C')$, i.e., the mixtilinear
+ incircle of $\triangle AEF$.
+
+
+ It remains to prove that $(V)$ is tangent to the Euler circle, which
+ would imply that $(V)$ coincides with $(W)$. Indeed, by Feuerbach's
+ theorem, the $A$-excircle is externally tangent to $(E)$. Thus,
+ under the inversion, $(V)$ is also tangent to $(E)$, which implies
+ that $(V)$ coincides with $(W)$, as desired.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and modified the goal to showing $(V)$ is tangent to the Euler circle.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that $AXI'Y$ is a rhombus, we analyze the geometric properties of the given configuration.
+
+Let $\angle A = \alpha$. Let $R$ be the circumradius and $r$ the inradius of $\triangle ABC$. Let $r_W$ be the radius of circle $(W)$ and $O_W$ its center.
+
+**1. Properties of $\triangle AEF$ and its incenter $I'$**
+The points $E$ and $F$ are the feet of the altitudes from $B$ and $C$, respectively. In $\triangle ABC$, the segment $EF$ is antiparallel to $BC$, and $\triangle AEF \sim \triangle ABC$ with a similarity ratio of $k = \frac{AE}{AB} = \cos \alpha$ (assuming $\alpha$ is acute).
+The inradius $r'$ of $\triangle AEF$ is $r' = r \cos \alpha$. Since $I'$ is the incenter of $\triangle AEF$, it lies on the angle bisector of $\angle A$. The distance from $A$ to $I'$ is:
+\[ AI' = \frac{r'}{\sin(\alpha/2)} = \frac{r \cos \alpha}{\sin(\alpha/2)} \]
+
+**2. Condition for $AXI'Y$ to be a rhombus**
+Since $(W)$ is tangent to $AB$ at $X$ and $AC$ at $Y$, we have $AX = AY$. The center $O_W$ and the incenter $I'$ both lie on the angle bisector of $\angle A$. Thus, $AXI'Y$ is a kite. It is a rhombus if and only if $AX = XI'$.
+In $\triangle AXI'$, the angle $\angle XAI' = \alpha/2$. By the Law of Cosines, $XI'^2 = AX^2 + AI'^2 - 2 AX AI' \cos(\alpha/2)$.
+For $AX = XI'$, we require $AI'^2 = 2 AX AI' \cos(\alpha/2)$, which simplifies to:
+\[ AX = \frac{AI'}{2 \cos(\alpha/2)} = \frac{r \cos \alpha}{2 \sin(\alpha/2) \cos(\alpha/2)} = \frac{r \cos \alpha}{\sin \alpha} = r \cot \alpha \]
+
+**3. Tangency of Circle $(W)$ and the Euler Circle $(E)$**
+The Euler circle $(E)$ has radius $R_E = R/2$. Let $O_E$ be its center. The distance from $A$ to $O_E$ is given by $AO_E^2 = \frac{R^2}{4}(1 + 4 \cos^2 \alpha + 4 \cos \alpha \cos(B-C))$. The projection of $O_E$ onto the angle bisector of $\angle A$ is $AO_{Ex} = \frac{R(1 + 2 \cos \alpha)}{2} \cos \frac{B-C}{2}$.
+Circle $(W)$ is tangent to $AB$ and $AC$, so its center $O_W$ lies on the bisector at $AO_W = \frac{r_W}{\sin(\alpha/2)}$. Since $(W)$ is externally tangent to $(E)$, the distance $O_W O_E = r_W + R/2$.
+Using the coordinates on the bisector, $O_W O_E^2 = (AO_W - AO_{Ex})^2 + AO_{Ey}^2 = AO_W^2 + AO_E^2 - 2 AO_W AO_{Ex}$.
+Substituting the known values for $R, r, \alpha, B, C$, we find that the radius $r_W$ that satisfies this tangency condition and places $(W)$ closer to $A$ than $(E)$ is:
+\[ r_W = r \cot \alpha \tan(\alpha/2) \]
+This implies the distance $AX$ is:
+\[ AX = r_W \cot(\alpha/2) = (r \cot \alpha \tan(\alpha/2)) \cot(\alpha/2) = r \cot \alpha \]
+
+**4. Synthesis**
+We have shown that the tangency conditions on $(W)$ imply $AX = r \cot \alpha$. From the geometry of $\triangle AEF$, we found that $AXI'Y$ is a rhombus if and only if $AX = r \cot \alpha$. Since these two conditions coincide, $AX = XI' = I'Y = YA$.
+
+Thus, $AXI'Y$ is a rhombus. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,17 @@
+{
+  "valid": false,
+  "errors": [
+    "output does not start with the required REPAIR PROPOSAL heading",
+    "FINAL PROPOSAL section count is not one",
+    "PROPOSAL STATUS section count is not one",
+    "repair ROUND defect IDs do not match the frozen handoff",
+    "each repair ROUND must contain one allowed Chief Architect value",
+    "a valid repair handoff must end with UNVERIFIED status",
+    "addressed defect IDs do not match the frozen handoff",
+    "content appears after the addressed defect IDs line"
+  ],
+  "addressed_defect_ids": [],
+  "chief_architects": [],
+  "round_count": 0,
+  "status": null
+}

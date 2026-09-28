@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "a541a36d7870e52dd5c114b7d6bc9df614c7a15e0d52b377c80e05bf743ca9b2",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "c77e021f57816493b2a9ab774f4e62f4d2f5ca2911c67269349861d2b1e19961",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "f1dd2b9f6049e0baae09f513aa4cec4fd18ea08aac4a6ba913bf61e8d0626834",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In the termination argument, the displayed calculation of the change in Φ is false. If a=min(e_p,f_p) and b=max(e_p,f_p), the decrease is a²+b²−[a²+(b−a)²]=2ab−a²=a(2b−a), not 2a(b−a). This calculation is load-bearing because it justifies the monovariant, so Rule C caps the score at 5.",
+    "summary": "The claimed conclusions and primewise gcd invariant are correct. The termination strategy also becomes valid after replacing the erroneous algebra by the correct one-line calculation: Φ strictly decreases whenever the selected numbers have a common prime factor, while for coprime selections Φ is unchanged and k decreases. As submitted, however, that central calculation contains a false equality, although the repair is routine and does not change the strategy.",
+    "strengths": [
+      "Correctly shows that the number k of entries greater than 1 never increases and never becomes zero.",
+      "Identifies the correct transformation of p-adic exponents as (e,f)↦(min(e,f),|e−f|).",
+      "Correctly proves invariance of the gcd of all p-adic exponents and reconstructs the unique terminal value M from these invariants.",
+      "The final formula for M is correct and independent of the sequence of moves."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The asserted formula ΔΦ_p=2min(e_p,f_p)|e_p−f_p| is false. Although the submission separately notices the equal-exponent failure and the desired sign is true in every case, it never supplies the correct calculation for unequal positive exponents. This is a locally repairable but load-bearing false statement under Rule C."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:48:08.459481+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00032",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_05a0e3c2033d1cde4e345714013a3de5",
+  "pass_index": 2,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In the mixed case, after fixing a particular y with c(y)=0, the proof optimizes the resulting bounds over y and substitutes y=x. This is invalid: the bounds are known only for that one fixed point y, not for every y>0.",
+    "summary": "The claimed classification is correct, and the solution validly derives orbit invariance, nonnegativity of the defect, and equality of all positive defect values. However, it does not rule out coexistence of zero and positive defect values. The decisive quantifier error is the entire argument excluding this mixed case, so Rule E applies and caps the score at 3. A nontrivial compatibility argument, such as proving the two defect-level sets are open and invoking connectedness, must be added.",
+    "strengths": [
+      "Correctly squares the inequalities using positivity.",
+      "Correctly proves c(f(y))=c(y), obtains f^{(n)}(y)=y+nc(y), and deduces c(y)>=0.",
+      "The asymptotic orbit argument correctly shows that all positive values of c(y) are equal.",
+      "The converse verification for f(x)=x+c is correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The proof's conclusion that one fixed point f(y)=y forces f(x)=x for all x relies on varying y to optimize at y=x. Since only a single fixed y is available, this substitution is unjustified. Thus the mixed possibility c(t) in {0,C}, with both levels occurring, remains completely unresolved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "proof_sha256": "05a0e3c2033d1cde4e345714013a3de5df6058b238c7a9cff28cdc50d5b36024",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "evidence_sha256": "408bc29e85fc4f363e4f49d7b50e0d3a74008f1c355c78091490d03a8dc8ff3a",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p5/t10_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "e746bb25b79fe6dd114340f8d86c624cd09df5cf8948ab1c6cd71fe08b849ff1",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "341066a31541a57f6dbaff8ad55a377cc7c26841ec2f1eb55a597c074b687a26",
+    "raw_response_1.txt": "f41221c00adba0df3141e8b13d9e05df3234e0dc3a5b51495518cd8a9daa3442",
+    "summary.json": "0229c3cd6c34947f9d3386061a87061a63f59ee2cb2725a0c04330b38b2c96ba"
+  }
+}

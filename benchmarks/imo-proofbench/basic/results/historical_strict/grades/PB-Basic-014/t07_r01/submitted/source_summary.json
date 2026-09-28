@@ -1,0 +1,42 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:12:11.894345+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 14,
+  "problem_id": "PB-Basic-014",
+  "case_id": "PB-Basic-014.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p14/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p14/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p14/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "ff6f3bf8f5d8b896babc81f461ec8c0a366026a2c871fc88052c60d5746253cf",
+  "reference_sha256": "670930ab666534527fd6ba7d838c7cc4696ffa1e709fc2b980c854f4318f9004",
+  "proof_sha256": "2e7bbecf0eff49544d8c0f90272a1f3b3fd2a5fc50a3fcdff7f1c9ee196ce432",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof is complete and correct. It converts the hypothesis into matching number at most two, handles the possible empty set, and obtains a hitting set of size at most ten, yielding a color held by at least 203 Googlers.",
+    "strengths": [
+      "Correctly treats the exceptional case of a Googler holding no flags.",
+      "The hitting-set and pigeonhole arguments are rigorous and prove a stronger bound."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,124 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Consider a positive integer $n$. We define $f(n)$ as the number of pairs of paths on an $n \times n$ grid that:
+
+ (1) Both paths start at $(0, 0)$ (bottom left corner) and end at $(n, n)$ (top right corner).
+
+ (2) Both paths allow only right or up movements (one unit each).
+
+ (3) The $y$ coordinate of the first path never exceeds the y coordinate of the second path at any timestep.
+
+ For example, when $n = 2$, consider the following pair of paths:
+
+ The first path: $(0,0) \rightarrow (1,0) \rightarrow (1,1) \rightarrow (2,1) \rightarrow (2,2)$
+ The second path: $(0,0) \rightarrow (1,0) \rightarrow (2,0) \rightarrow (2,1) \rightarrow(2,2)$
+ The example is invalid because after 2 steps, the y coordinate of the first path (1) is larger than the y coordinate of the second path (0).
+
+ However, the following example is valid,
+
+ The first path: $(0,0) \rightarrow (1,0) \rightarrow (2,0) \rightarrow (2,1) \rightarrow (2,2)$
+ The second path: $(0,0) \rightarrow (1,0) \rightarrow (1,1) \rightarrow (2,1) \rightarrow (2,2)$
+
+ since the y coordinate of the first path is never larger than the second path. Find $f(10)$.
+
+**GROUND-TRUTH SOLUTION**
+
+If we move the second path up-left by one unit, the pair of paths corresponds to a pair of paths from (0,0) to (10,10) and from (-1,1) to (9,11) which are non-intersecting. The total number of path pairs is $\binom{20}{10}^2$. The number of intersecting pairs corresponds to the number of pair of paths from (0,0) to (9, 11) and paths from (-1, 1) to (10,10), because interchanging the two paths at the first intersection point gives a one-to-one correspondence, and thus equals $\binom{20}{9}^2$. Therefore there are $\binom{20}{10}^2 - \binom{20}{9}^2$ paths.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Came up with an idea of correcting shifting (shifting only one path by $+1$ in the $y$-coordinate) or found an equivalent idea with it.
+(Almost)
+ 1. Made a minor mistake when counting.
+
+**PROPOSED SOLUTION**
+
+To find $f(n)$, the number of pairs of paths $P_1$ and $P_2$ on an $n \times n$ grid from $(0,0)$ to $(n,n)$ such that the $y$-coordinate of $P_1$ never exceeds the $y$-coordinate of $P_2$ at any timestep $t$, we begin by analyzing the constraints.
+
+Let the paths be defined by the coordinates $(x_{i,t}, y_{i,t})$ for $t = 0, 1, \dots, 2n$. The condition is $y_{1,t} \le y_{2,t}$ for all $t$. Since $x_{i,t} + y_{i,t} = t$ for any path from $(0,0)$ to $(n,n)$ using only right (R) and up (U) moves, the condition $y_{1,t} \le y_{2,t}$ is equivalent to $t - x_{1,t} \le t - x_{2,t}$, which simplifies to $x_{1,t} \ge x_{2,t}$.
+
+This is a problem of counting non-crossing paths. We can use the Lindström-Gessel-Viennot (LGV) Lemma by transforming these non-crossing paths (which are allowed to touch) into strictly non-intersecting paths. We shift the start and end points of the paths as follows:
+- Let path $P_1^*$ start at $A_1 = (1, 0)$ and end at $B_1 = (n+1, n)$.
+- Let path $P_2^*$ start at $A_2 = (0, 1)$ and end at $B_2 = (n, n+1)$.
+
+A pair of paths $P_1, P_2$ satisfies $x_{1,t} \ge x_{2,t}$ if and only if the shifted paths $P_1^*$ (shifted by $(1,0)$) and $P_2^*$ (shifted by $(0,1)$) are strictly disjoint. According to the LGV Lemma, the number of such disjoint pairs is given by the determinant:
+\[ f(n) = \det \begin{pmatrix} N(A_1, B_1) & N(A_1, B_2) \\ N(A_2, B_1) & N(A_2, B_2) \end{pmatrix} \]
+where $N(A, B)$ denotes the number of paths from $A$ to $B$. We calculate these values:
+- $N(A_1, B_1) = \binom{(n+1-1) + (n-0)}{n} = \binom{2n}{n}$
+- $N(A_1, B_2) = \binom{(n-1) + (n+1-0)}{n+1} = \binom{2n}{n+1} = \binom{2n}{n-1}$
+- $N(A_2, B_1) = \binom{(n+1-0) + (n-1)}{n-1} = \binom{2n}{n-1}$
+- $N(A_2, B_2) = \binom{(n-0) + (n+1-1)}{n} = \binom{2n}{n}$
+
+Thus, the formula for $f(n)$ is:
+\[ f(n) = \binom{2n}{n}^2 - \binom{2n}{n-1}^2 = \left( \binom{2n}{n} - \binom{2n}{n-1} \right) \left( \binom{2n}{n} + \binom{2n}{n-1} \right) \]
+The first term is the $n$-th Catalan number $C_n = \frac{1}{n+1}\binom{2n}{n}$, and the second term is $\binom{2n+1}{n}$ by Pascal's Identity. For $n=10$:
+\[ \binom{20}{10} = \frac{20!}{10!10!} = 184,756 \]
+\[ \binom{20}{9} = \binom{20}{10} \times \frac{10}{11} = 184,756 \times \frac{10}{11} = 16,796 \times 10 = 167,960 \]
+Now we compute the factors for $f(10)$:
+- $C_{10} = 184,756 - 167,960 = 16,796$
+- $\binom{21}{10} = 184,756 + 167,960 = 352,716$
+
+The final result is the product:
+\[ f(10) = 16,796 \times 352,716 \]
+Performing the multiplication:
+\[ 16,796 \times 352,716 = (16,800 - 4) \times 352,716 = 16,800 \times 352,716 - 4 \times 352,716 \]
+\[ 16,800 \times 352,716 = 168 \times 35,271,600 = (100 + 60 + 8) \times 35,271,600 = 35,271,600 + 21,162,960 + 2,821,728 = 59,256,288 \times 100 = 5,925,628,800 \]
+\[ 4 \times 352,716 = 1,410,864 \]
+\[ f(10) = 5,925,628,800 - 1,410,864 = 5,924,217,936 \]
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

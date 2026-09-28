@@ -1,0 +1,60 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t10_r01",
+  "group": "tool_rewrite",
+  "grader_candidate": "tool_rewrite_t10_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/tool_rewrite_t10_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/653b3305883094bd8906de8a1628171e1be40a752466f1291228354ba6360ad4.json",
+  "v1_reconstructed_prompt_sha256": "197950d402df6daab5653f3f92e474fa049048a95de91177cf42e86ab4715716",
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t10_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:27:50.564599+00:00",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The first angle-to-polynomial conversion has a sign error: det(CA,CL)=cy·lx−cx·ly, the negative of the displayed denominator. Moreover, ordinary unsigned cotangent uses the absolute determinant unless compatible orientations are proved. Thus E1 does not follow from the displayed equations as written. This is a false load-bearing assertion, so Rule C caps the score at 5.",
+    "summary": "The final claim is correct, and the explicit algebraic certificate would complete the argument once E1,E2,E3 and the necessary nonzero conditions are validly obtained. A bounded repair is possible: use affine/barycentric coordinates supplied by the strict interior hypotheses to establish the determinant signs, correct the sign in the first cotangent formula, and verify the few guards actually used in Appendix A. As submitted, however, this compatibility work is missing and one displayed central formula is false.",
+    "strengths": [
+      "The coordinate formulas for the circumcenter and the final scaling from O′ to the midpoint distances are correct.",
+      "The appendix supplies an explicit finite algebraic certificate rather than merely asserting that a computer calculation works.",
+      "After correcting the angle conversion and guards, the overall coordinate strategy is coherent and reaches the desired result."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The stated formula for cot∠ACL has the determinant sign reversed, and the proof does not justify replacing unsigned-angle cotangents by signed dot/cross quotients. Consequently the crucial polynomial relation E1 is not derived as written."
+      },
+      {
+        "severity": "minor",
+        "description": "The assertion that the strict interior conditions make every triple of the listed points noncollinear is false in general and does not itself justify all the displayed guards. The guards actually needed by the appendix do follow by short barycentric inequalities, but those checks are not supplied."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "c1d681a9e358f999e2079b389e09c587aa8f9c8509272042ed252053d1d6012f",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

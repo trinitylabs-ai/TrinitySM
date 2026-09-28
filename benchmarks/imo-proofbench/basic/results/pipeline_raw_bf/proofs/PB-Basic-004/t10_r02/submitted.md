@@ -1,0 +1,48 @@
+To find all strictly increasing surjective functions $g: \mathbb{R} \to \mathbb{R}$ such that $g(g(x)) = g(x) + 20x$, we proceed as follows:
+
+**1. Linear Recurrence of Iterates**
+For any $x \in \mathbb{R}$, define a sequence $(a_n)_{n \in \mathbb{Z}}$ by $a_n = g^{(n)}(x)$, where $g^{(0)}(x) = x$ and $g^{(n)}$ denotes the $n$-th iterate of $g$. Since $g$ is strictly increasing and surjective, it is a bijection, and its inverse $g^{-1}$ is also strictly increasing and surjective. Thus, the sequence is well-defined for all integers $n$.
+The given functional equation $g(g(x)) = g(x) + 20x$ translates to the linear recurrence relation:
+$$a_{n+2} = a_{n+1} + 20a_n$$
+The characteristic equation is $r^2 - r - 20 = 0$, which factors as $(r-5)(r+4) = 0$. The roots are $r_1 = 5$ and $r_2 = -4$. The general solution for the sequence is:
+$$a_n = A(x) 5^n + B(x) (-4)^n$$
+where $A(x)$ and $B(x)$ are constants depending on the initial value $x$.
+
+**2. Determining $A(x)$ and $B(x)$**
+Using the values for $n=0$ and $n=1$:
+1. $a_0 = x \implies A(x) + B(x) = x$
+2. $a_1 = g(x) \implies 5A(x) - 4B(x) = g(x)$
+
+Solving this system, we subtract 4 times the first equation from the second:
+$5A(x) - 4B(x) - 4(A(x) + B(x)) = g(x) - 4x \implies A(x) = g(x) - 4x$ (Wait, let's re-calculate).
+From (1), $B(x) = x - A(x)$. Substituting into (2):
+$5A(x) - 4(x - A(x)) = g(x) \implies 9A(x) - 4x = g(x) \implies A(x) = \frac{g(x) + 4x}{9}$.
+Then $B(x) = x - \frac{g(x) + 4x}{9} = \frac{5x - g(x)}{9}$.
+
+**3. Applying the Monotonicity Condition**
+Since $g$ is strictly increasing, its inverse $g^{-1}$ is also strictly increasing. Consequently, $g^{(-k)}$ is strictly increasing for all $k \in \mathbb{N}$. For any $x, y \in \mathbb{R}$ such that $x > y$, we must have $g^{(-k)}(x) > g^{(-k)}(y)$.
+Using the formula for $a_n$:
+$$A(x) 5^{-k} + B(x) (-4)^{-k} > A(y) 5^{-k} + B(y) (-4)^{-k}$$
+$$(A(x) - A(y)) 5^{-k} > (B(y) - B(x)) (-4)^{-k}$$
+Let $\Delta A = A(x) - A(y)$ and $\Delta B = B(x) - B(y)$. The inequality is:
+$$\Delta A \left(\frac{1}{5}\right)^k > -\Delta B \left(-\frac{1}{4}\right)^k$$
+Multiplying both sides by $4^k$:
+$$\Delta A \left(\frac{4}{5}\right)^k > -\Delta B (-1)^k$$
+This must hold for all $k \in \mathbb{N}$.
+- For even $k = 2n$: $\Delta A (4/5)^{2n} > -\Delta B$
+- For odd $k = 2n+1$: $\Delta A (4/5)^{2n+1} > \Delta B$
+
+As $n \to \infty$, $(4/5)^{2n} \to 0$ and $(4/5)^{2n+1} \to 0$. Thus, we must have $0 \ge -\Delta B$ and $0 \ge \Delta B$, which implies $\Delta B = 0$ for all $x, y \in \mathbb{R}$. Therefore, $B(x)$ is a constant.
+
+**4. Finding the Constant**
+We first determine the fixed point of $g$. If $g(x) = x$, then $x = x + 20x \implies 20x = 0 \implies x = 0$. Thus, $0$ is the only fixed point. Since $g(g(0)) = g(0) + 20(0) = g(0)$, the value $g(0)$ is a fixed point, so $g(0) = 0$.
+Evaluating $B(x)$ at $x=0$:
+$$B(0) = \frac{5(0) - g(0)}{9} = 0$$
+Since $B(x)$ is constant, $B(x) = 0$ for all $x \in \mathbb{R}$.
+
+**5. Conclusion**
+Substituting $B(x) = 0$ into the relation $B(x) = \frac{5x - g(x)}{9}$:
+$$0 = \frac{5x - g(x)}{9} \implies g(x) = 5x$$
+Verification: $g(x) = 5x$ is strictly increasing and surjective. Also, $g(g(x)) = 5(5x) = 25x$ and $g(x) + 20x = 5x + 20x = 25x$. The conditions are satisfied.
+
+The only such function is $g(x) = 5x$. \(\square\)

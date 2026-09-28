@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-09-17T07:19:51.313364+00:00",
+  "workspace": "/opt/proof-workshop",
+  "concurrency": 3,
+  "tmux_session": "v356-validation-20260917T071542Z",
+  "trials": [
+    {
+      "candidate": "p2",
+      "case": "p2",
+      "problem_id": "imo2026_p2",
+      "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+      "launch": "/opt/proof-workshop/benchmarks/launches/v356_consolidation_20260917T071542Z/p2",
+      "experiment": "/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z",
+      "mode": "selected_certificate_resume",
+      "previous_score": 6,
+      "baseline_score": 4
+    },
+    {
+      "candidate": "basic008",
+      "case": "basic008",
+      "problem_id": "PB-Basic-008",
+      "run_id": "basic008_t10_r01_v356_consolidated_20260917T071542Z",
+      "launch": "/opt/proof-workshop/benchmarks/launches/v356_consolidation_20260917T071542Z/basic008",
+      "experiment": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z",
+      "mode": "selected_certificate_resume",
+      "previous_score": 6,
+      "baseline_score": 1
+    },
+    {
+      "candidate": "basic009",
+      "case": "basic009",
+      "problem_id": "PB-Basic-009",
+      "run_id": "basic009_t07_r01_v356_consolidated_20260917T071542Z",
+      "launch": "/opt/proof-workshop/benchmarks/launches/v356_consolidation_20260917T071542Z/basic009",
+      "experiment": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z",
+      "mode": "selected_certificate_resume",
+      "previous_score": 7,
+      "baseline_score": 1
+    }
+  ],
+  "tool_release_sha256": "b899438a603c521d5b40f1fc97fbedc0bbfb7c82d086223014e1e3f706b11e68",
+  "grading": "P2 strict Olympiad; Basic-008/009 official IMOBench; independent calls"
+}

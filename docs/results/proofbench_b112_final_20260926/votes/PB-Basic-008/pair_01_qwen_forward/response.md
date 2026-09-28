@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The inequality $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ holds for all positive reals $a,b,c$ with $a+b+c=1$. Equality holds if and only if $a=b=c=1/3$.
+Claim gap: NONE supported by checks.
+Qualifications and supplied repairs: NONE.
+Decisive checks: 
+- **Symmetry Reduction:** The Lagrange condition reduces to $h(x) = \lambda$ where $h(x) = \frac{1}{2\sqrt{x}} + 3\sqrt{3}x - 3\sqrt{3}$. The derivative $h'(x) = -\frac{1}{4}x^{-3/2} + 3\sqrt{3}$ has a unique zero at $x_0 = (12\sqrt{3})^{-2/3} \approx 0.133 \in (0,1)$. Since $h(x)$ strictly decreases on $(0, x_0)$ and strictly increases on $(x_0, 1)$, the equation $h(x)=\lambda$ admits at most two distinct solutions. This rigorously forces at least two variables to be equal at any interior critical point.
+- **Single Variable Analysis:** The reduction to $k(a) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(2a-3a^2)$ on $a \in (0, 1/2)$ is algebraically correct. The derivative $k'(a) = g(a) - h_{lin}(a)$ is analyzed by noting $g(a) = a^{-1/2} - (1-2a)^{-1/2}$ has exactly one inflection point (where $g''(a)=0$ at $a \approx 0.26$). A function with one inflection point can intersect a line at most three times. Combined with limits $k'(0^+)=\infty$, $k'(1/2^-)=-\infty$, and $k''(1/3)>0$ (implying $k'$ crosses zero from negative to positive at $a=1/3$), the proof correctly deduces exactly three roots $r_1 < 1/3 < r_2$ with sign pattern $(+, -, +, -)$. This establishes $a=1/3$ as the unique interior local minimum. Endpoint evaluations $k(0)=1$, $k(1/3)=0$, $k(1/2)=\sqrt{2}-3\sqrt{3}/4 > 0$ confirm the global minimum is 0.
+- **Boundary Analysis:** The substitution $x = \sqrt{a} + \sqrt{1-a}$ correctly maps the boundary $c=0$ to $q(x) = x - \frac{3\sqrt{3}}{4}(x^2-1)^2$ on $x \in [1, \sqrt{2}]$. The second derivative $q''(x) = -3\sqrt{3}(3x^2-1)$ is strictly negative on this interval, confirming concavity. The minimum occurs at the endpoints, both strictly positive, verifying the inequality on the boundary.
+
+## Proof B
+Established theorem: The inequality $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ holds for all positive reals $a,b,c$ with $a+b+c=1$. Equality holds if and only if $a=b=c=1/3$.
+Claim gap: NONE supported by checks.
+Qualifications and supplied repairs: NONE.
+Decisive checks:
+- **Symmetry Reduction:** The substitution $x=\sqrt{a}$ transforms the constraint to $x^2+y^2+z^2=1$. The Lagrange equations are correctly derived. Subtracting the $x$ and $y$ equations yields $(x-y)[6\sqrt{3}(xy-z^2) - 2\lambda] = 0$. The algebraic deduction that distinct variables imply $xy-z^2 = yz-x^2$, which factorizes to $(x-z)(x+y+z)=0$, correctly forces $x=z$ (contradiction) since $x,y,z>0$. This rigorously establishes that at least two variables must be equal.
+- **Single Variable Analysis:** The reduction to $f(x) = 2x + \sqrt{1-2x^2} - 3\sqrt{3}(2x^2-3x^4)$ on $x \in [0, 1/\sqrt{2}]$ is correct. The second derivative $f''(x)$ is analyzed by setting $u=x^2$ and defining $\psi(u) = 6\sqrt{3}(9u-1)$ (linear) and $\phi(u) = (1-2u)^{-3/2}$ (strictly convex). Their difference $\psi-\phi$ is strictly concave, guaranteeing at most two roots for $f''(x)$. Sign checks at $u=0, 1/3, 1/2$ confirm exactly two roots, which bounds the roots of $f'(x)$ to exactly three. The sign pattern of $f'(x)$ is correctly deduced as $(+, -, +, -)$, identifying $x=1/\sqrt{3}$ as the unique interior local minimum. Endpoint evaluations match Proof A and confirm the global minimum is 0.
+- **Boundary Analysis:** The boundary $z=0$ is handled identically to Proof A via $s=x+y$, yielding the same concave function $g(s)$ with positive endpoint minima. The analysis is rigorous and complete.
+
+## Decision
+Winner: A
+Reason: Both proofs are mathematically complete, rigorous, and free of load-bearing defects. Proof A is preferred for its directness and elegance. It operates on the original variables $a,b,c$ over the simplex, avoiding the substitution $x=\sqrt{a}$ used in Proof B. While Proof B's substitution is valid, it transforms the objective function into a mix of linear and quartic terms, increasing algebraic complexity without adding mathematical insight. Proof A's symmetry argument via the V-shape of $h(x)$ is particularly clean, and its single-variable root counting relies on a standard, correctly applied inflection point argument. Proof A achieves identical rigor with more streamlined notation and fewer intermediate transformations.

@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-029",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "78ca0883b0e76fb9ebf44a1746cb0e5b2da2047423bc6af698d9a563d6983da4",
+  "proof": "evidence/proofs/78ca0883b0e76fb9ebf44a1746cb0e5b2da2047423bc6af698d9a563d6983da4.md",
+  "completed_at": "2026-09-13T00:23:57.641211+00:00",
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-029/t07_r02/submitted/result.json",
+    "native_record_file_sha256": "7f3aa52ef0ca9b284e719011c65814f323d95d0d49cea6cec7b1fd7553379f32",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-029/t07_r02/submitted/result.json",
+    "selected_record_file_sha256": "7f3aa52ef0ca9b284e719011c65814f323d95d0d49cea6cec7b1fd7553379f32",
+    "proof": "runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-029/02_r1_cycles/lanes/t07_r02/03_r1_cycle_3/cases/PB-Basic-029.t07_r02/resolver/temperature_0_4/gpu0/p29/t07_r02/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "28cf934b31ab5199c81977c4a31b4f04e294984cfad2792673b95b8814e3a23f",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "7d10b497e0a181f1ade424d79eea55fc4e910070e5aebbbc7441f128b547ecc6",
+  "reference_sha256": "b5e85aeeb35e1e54676761b393c2d39972d68043850c2caac65cef859c5acfef",
+  "guidelines_sha256": "3ea015bfa9c82aeb0a00dfbb5ca3176ab728a9bc08752ff126676d024fb1ea29",
+  "response_sha256": "8d634915e6960a9938f9261af6457b33ef578908d4d81bf5cd4f70ed827eff60",
+  "isolation_verified": true
+}

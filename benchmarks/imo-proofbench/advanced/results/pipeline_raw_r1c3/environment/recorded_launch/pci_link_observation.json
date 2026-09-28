@@ -1,0 +1,19 @@
+{
+  "run_id": "advanced001_030_v263_v290_frozen_run01",
+  "observed_at": "2026-09-13T04:56:47.090456+00:00",
+  "links": {
+    "0000:19:00.0": {
+      "current_link_speed": "8.0 GT/s PCIe",
+      "current_link_width": "8",
+      "max_link_speed": "32.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    "0000:68:00.0": {
+      "current_link_speed": "2.5 GT/s PCIe",
+      "current_link_width": "8",
+      "max_link_speed": "32.0 GT/s PCIe",
+      "max_link_width": "16"
+    }
+  },
+  "note": "Current speed is power-state dependent; capability is not negotiated operating speed."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Advanced-018",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "bd1128309eb29eb6861af32d83e5fa5b76c06916490a24c5dcdfa5e854c88b38",
+  "proof": "evidence/proofs/bd1128309eb29eb6861af32d83e5fa5b76c06916490a24c5dcdfa5e854c88b38.md",
+  "completed_at": "2026-09-14T06:49:56.210248+00:00",
+  "grade": {
+    "score": 1,
+    "category": "Partial"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/advanced/results/advanced017_030_ipp170_retry450_20260914T043219Z/grading/work/batches/batch_0008/scores/cases/PB-Advanced-018/t10_r01/result.json",
+    "native_record_file_sha256": "15bb6e35a3f8a9cb2aa1d9baf91c8bc26bd40dd219123029fdacc10edae83b78",
+    "selected_record": "benchmarks/imo-proofbench/advanced/results/advanced017_030_ipp170_retry450_20260914T043219Z/grading/work/batches/batch_0008/scores/cases/PB-Advanced-018/t10_r01/result.json",
+    "selected_record_file_sha256": "15bb6e35a3f8a9cb2aa1d9baf91c8bc26bd40dd219123029fdacc10edae83b78",
+    "proof": "benchmarks/imo-proofbench/advanced/results/advanced017_030_ipp170_retry450_20260914T043219Z/generation/run/problems/PB-Advanced-018/02_r1_cycles/lanes/t10_r01/02_r1_cycle_2/cases/PB-Advanced-018.t10_r01/resolver/temperature_0_4/gpu0/p18/t10_r01/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "924e81221c1633915d50e50ef1303e42a6e21cdd4236465ba0223d3b6317fc7c",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "007871958e7b6a1efa382835e524f147f4e612c2a81bb09dba2d6c1dcb463ced",
+  "reference_sha256": "cea0c2df075ed8246adc37d8bf574440c966b69f8b36db62bb793248d83659b7",
+  "guidelines_sha256": "7ff2a144547282ce9980e4463d7b1436afbd43b3bc5b6034f5c47fcfc0aaec0a",
+  "response_sha256": "2b912955cd7607cb80fe49389beee7d206a233bf0bcd21d829534eb127bc9243",
+  "isolation_verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "b4ca2d3fe747059dbd9e14a6afcc1c907674f8efdc236d3fbd0158c6a46a9d9a",
+  "problem_id": "imo2026_p3",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "b38bce7da28b2772d24ef7ca9f4855e46a269d026227024ea4ef87f097c211bb",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2038aac3b3739b8ec1c5870c356868343adc6649c2b8a6f0fc3f3348d27b8654",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claimed n=2 guarantee is false. With Liu's marks at 1/5 and 2/5, Xiang may use just one mark at 7/10, splitting the length-3/5 interval into two pieces of length 3/10. The sorted pieces are 3/10,3/10,1/5,1/5, so Liu receives only 3/10+1/5=1/2<3/5. Thus Rule A applies.",
+    "summary": "The final formula (n+1)/(2n+1) is demonstrably wrong already for n=2; the actual value is 2^n/(2^(n+1)-1). The submission contains a correct lower-bound strategy for n=1 and correctly uses odd-ranked pieces to describe Liu's drafting payoff, but its n=2 construction fails and the general optimality claim is unsupported. Correcting the solution requires new lower- and upper-bound arguments.",
+    "strengths": [
+      "Correctly recognizes that optimal alternating selection gives Liu the odd-ranked pieces by length.",
+      "The marking at 1/3 correctly shows that Liu can guarantee at least 2/3 when n=1."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The n=2 lower-bound strategy fails against the admissible one-mark response at 7/10, which leaves Liu only 1/2."
+      },
+      {
+        "severity": "major",
+        "description": "The general assertion that every other distribution of Xiang's marks leaves Liu at least (n+1)/(2n+1) is neither proved nor true."
+      },
+      {
+        "severity": "major",
+        "description": "No universal upper-bound strategy for Xiang is supplied, even for the claimed general value; the n=1 discussion also establishes only Liu's lower bound, not maximality."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:44:25.312326+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

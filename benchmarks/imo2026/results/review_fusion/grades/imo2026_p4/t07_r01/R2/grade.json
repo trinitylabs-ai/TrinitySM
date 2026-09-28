@@ -1,0 +1,52 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T18:43:04.549218+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "case_id": "imo2026_p4.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the k=2 case, the proof chooses P as the foot of the altitude from A without ensuring that this foot lies in the interior of BC, as required. This is repaired directly by choosing an appropriate vertex—for example, a largest-angle vertex—whose altitude is internal when the triangle does not already contain a right angle.",
+    "summary": "The characterization is correct, and both directions are essentially proved. The sufficiency strategy correctly produces a small angle, converts it into the multiple (k−1)θ, and peels multiples down to θ. The necessity argument establishes the invariant that a triangle with no positive-integer multiple of θ always has at least one similarly safe child. The proof has only directly repairable local defects, chiefly the unqualified altitude choice, a missing explicit justification that a safe starting triangle exists, and one harmless sign reversal in the third case of the invariant calculation.",
+    "strengths": [
+      "Correct final set θ=180°/k for integers k≥2.",
+      "The small-angle construction is explicitly checked for positivity and produces the crucial angle (k−1)θ.",
+      "The peeling argument correctly handles every positive multiple of θ.",
+      "The necessity proof exhausts all four ways both children could acquire a multiple of θ and thereby gives Shan-Yu a valid invariant strategy."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "For θ=90°, the perpendicular from an arbitrarily labeled vertex A need not meet the interior of BC. The proof should specify an internal altitude, obtainable by choosing a suitable vertex."
+      },
+      {
+        "severity": "minor",
+        "description": "The necessity proof asserts without construction that Shan-Yu can initially choose three nonmultiples of θ summing to 180°. This is easy to supply, for instance with (θ/2, θ/2, 180°−θ)."
+      },
+      {
+        "severity": "cosmetic",
+        "description": "In the third of the four necessity cases, nθ−C=mθ implies C=(n−m)θ, not C=(m−n)θ. Since C>0, the corrected equality still gives the claimed contradiction."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

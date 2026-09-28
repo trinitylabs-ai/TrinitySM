@@ -1,0 +1,897 @@
+{
+  "schema": "refinement-bf-publication-v1",
+  "run_id": "refinement_bf_B6_selection_first_20260920_1426",
+  "state": "completed_generation_and_grading",
+  "published_at": "2026-09-20T17:33:10.535300+00:00",
+  "comparison_completed_at": "2026-09-20T15:37:48.196165+00:00",
+  "source_comparison": {
+    "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_B6_selection_first_20260920_1426/reports/comparison.json",
+    "source_file_sha256": "5f3a4fc73ec39167c36db4e1d0a94b71c196b5afce7864050db591fa0ee4d66c"
+  },
+  "source_run_ids": [
+    "refinement_bf_cues_six_20260920_0657",
+    "refinement_bf_cues_p4_archived_seeds_20260920_0615"
+  ],
+  "proof_counts": {
+    "A": 24,
+    "B": 24
+  },
+  "grade_counts": {
+    "A": 48,
+    "B": 48
+  },
+  "selection_results_included": false,
+  "post_selection_recovery_included": false,
+  "files": {
+    "README.md": {
+      "sha256": "bcfcb388f4c71a78a33168c678c7c022689aa6e6c5695988fb423aee0b4b4ac9"
+    },
+    "comparison.json": {
+      "sha256": "65ab4c328e5d5f8ab25c51d387e317a976f970f16276af02b6fb5d35468be28d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_B6_selection_first_20260920_1426/reports/comparison.json",
+      "source_file_sha256": "5f3a4fc73ec39167c36db4e1d0a94b71c196b5afce7864050db591fa0ee4d66c",
+      "transformation": "Portable proof/grade paths; source-only checkpoint pointers omitted; numeric results unchanged."
+    },
+    "grades/A/imo2026_p1/t07_r01/pass_1.json": {
+      "sha256": "ddae068f9b84e34895fdecad09f3d1d8594ae272b5fca6811083bb694fb95820",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t07_r01/pass_1.json",
+      "source_file_sha256": "ddae068f9b84e34895fdecad09f3d1d8594ae272b5fca6811083bb694fb95820",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t07_r01/pass_2.json": {
+      "sha256": "689216f2da7c23ccf0a0fb35073d38019389fa621e2eb20c11572c789f0d9cd9",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t07_r01/pass_2.json",
+      "source_file_sha256": "689216f2da7c23ccf0a0fb35073d38019389fa621e2eb20c11572c789f0d9cd9",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t07_r02/pass_1.json": {
+      "sha256": "58a996651b47307b680ddb83d0c0d33fddc25951fa5d4f757dd196c9b2926421",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t07_r02/pass_1.json",
+      "source_file_sha256": "58a996651b47307b680ddb83d0c0d33fddc25951fa5d4f757dd196c9b2926421",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t07_r02/pass_2.json": {
+      "sha256": "d0409c43bf3fbfa9f90bbd120839b436161d2e9cdb1ab83ba2f2263cacb5e4c7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t07_r02/pass_2.json",
+      "source_file_sha256": "d0409c43bf3fbfa9f90bbd120839b436161d2e9cdb1ab83ba2f2263cacb5e4c7",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t10_r01/pass_1.json": {
+      "sha256": "65672ddd758c558895c5aae1753f62fd6618200d77cd4c574bb5c49f8894daf5",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t10_r01/pass_1.json",
+      "source_file_sha256": "65672ddd758c558895c5aae1753f62fd6618200d77cd4c574bb5c49f8894daf5",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t10_r01/pass_2.json": {
+      "sha256": "5915e72c3395163d9680f33eee46199033e31019fb799a8ed5cf6b0dc74e2ca0",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t10_r01/pass_2.json",
+      "source_file_sha256": "5915e72c3395163d9680f33eee46199033e31019fb799a8ed5cf6b0dc74e2ca0",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t10_r02/pass_1.json": {
+      "sha256": "d6dda1546c6b04151b09bf9db04bfc1a25b3f45d9f044e6eda1095332929646e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t10_r02/pass_1.json",
+      "source_file_sha256": "d6dda1546c6b04151b09bf9db04bfc1a25b3f45d9f044e6eda1095332929646e",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p1/t10_r02/pass_2.json": {
+      "sha256": "6e646746b6b0b0d1326f0ffeb5bbeed6ffcc89aff7b9f966877752a41a5d2bf6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p1/t10_r02/pass_2.json",
+      "source_file_sha256": "6e646746b6b0b0d1326f0ffeb5bbeed6ffcc89aff7b9f966877752a41a5d2bf6",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t07_r01/pass_1.json": {
+      "sha256": "f9fabf2a3d7caa3852001c5595ac09b787826e7f69f387163462d9d828163db0",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t07_r01/pass_1.json",
+      "source_file_sha256": "f9fabf2a3d7caa3852001c5595ac09b787826e7f69f387163462d9d828163db0",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t07_r01/pass_2.json": {
+      "sha256": "50ef1940cf73349853792a273ed7918b4db4d641493ebc99a37dab744e8d20f1",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t07_r01/pass_2.json",
+      "source_file_sha256": "50ef1940cf73349853792a273ed7918b4db4d641493ebc99a37dab744e8d20f1",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t07_r02/pass_1.json": {
+      "sha256": "be2b616ef11f3f49ae0f85ecda0ff58278f010c246c622271431f43aefba3606",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t07_r02/pass_1.json",
+      "source_file_sha256": "be2b616ef11f3f49ae0f85ecda0ff58278f010c246c622271431f43aefba3606",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t07_r02/pass_2.json": {
+      "sha256": "2920a038c20877b4a71ba6a02609453c2cbeb62b1e5e6d0cf0e6d60c2619b363",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t07_r02/pass_2.json",
+      "source_file_sha256": "2920a038c20877b4a71ba6a02609453c2cbeb62b1e5e6d0cf0e6d60c2619b363",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t10_r01/pass_1.json": {
+      "sha256": "9623345cad4dfce5e8acdbdac7cfcb5b2d6b46c7e27ee70cd3067e7f9f246120",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t10_r01/pass_1.json",
+      "source_file_sha256": "9623345cad4dfce5e8acdbdac7cfcb5b2d6b46c7e27ee70cd3067e7f9f246120",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t10_r01/pass_2.json": {
+      "sha256": "43d17aa01f694c9ae406ed693917ae8fa01ea941e93cc67e73a098e7c11e1098",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t10_r01/pass_2.json",
+      "source_file_sha256": "43d17aa01f694c9ae406ed693917ae8fa01ea941e93cc67e73a098e7c11e1098",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t10_r02/pass_1.json": {
+      "sha256": "32dd528bed36565030af5e8ab6eddd7098428577f2d81503132c56873ababdc0",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t10_r02/pass_1.json",
+      "source_file_sha256": "32dd528bed36565030af5e8ab6eddd7098428577f2d81503132c56873ababdc0",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p2/t10_r02/pass_2.json": {
+      "sha256": "e0e04436f35ec6a4c4dfbbedca420f56852e482e8bd057df8e942f0ee84a6253",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p2/t10_r02/pass_2.json",
+      "source_file_sha256": "e0e04436f35ec6a4c4dfbbedca420f56852e482e8bd057df8e942f0ee84a6253",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t07_r01/pass_1.json": {
+      "sha256": "10eb5da34c76ae3e1460d0eb82b548a89dace585c41f79338b437258675939c7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t07_r01/pass_1.json",
+      "source_file_sha256": "10eb5da34c76ae3e1460d0eb82b548a89dace585c41f79338b437258675939c7",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t07_r01/pass_2.json": {
+      "sha256": "bfed0d17b90172ca44c2d5248ca462e3ba959b4f7ec4e97dec2a3bdb5eeac676",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t07_r01/pass_2.json",
+      "source_file_sha256": "bfed0d17b90172ca44c2d5248ca462e3ba959b4f7ec4e97dec2a3bdb5eeac676",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t07_r02/pass_1.json": {
+      "sha256": "070b722b07f61755585c854704d24231ed7deced00d6c7702a9ce1a0a2142827",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t07_r02/pass_1.json",
+      "source_file_sha256": "070b722b07f61755585c854704d24231ed7deced00d6c7702a9ce1a0a2142827",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t07_r02/pass_2.json": {
+      "sha256": "855989b7d478aeaa00e158c3faa88e897ed18aff10f5ba9cca24b45b921d7881",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t07_r02/pass_2.json",
+      "source_file_sha256": "855989b7d478aeaa00e158c3faa88e897ed18aff10f5ba9cca24b45b921d7881",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t10_r01/pass_1.json": {
+      "sha256": "49a57d20c919437a1072936fd873c412650fe34b8ecff75d90e4b003960338d8",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t10_r01/pass_1.json",
+      "source_file_sha256": "49a57d20c919437a1072936fd873c412650fe34b8ecff75d90e4b003960338d8",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t10_r01/pass_2.json": {
+      "sha256": "b1dec497b0163fb2f2a205ba2e31e078eed80f669c8e3c379a42ef49ff97fec3",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t10_r01/pass_2.json",
+      "source_file_sha256": "b1dec497b0163fb2f2a205ba2e31e078eed80f669c8e3c379a42ef49ff97fec3",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t10_r02/pass_1.json": {
+      "sha256": "ce211beea74600646a7c016495fe3b891d6f560543522674845d7466a4c66234",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t10_r02/pass_1.json",
+      "source_file_sha256": "ce211beea74600646a7c016495fe3b891d6f560543522674845d7466a4c66234",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p3/t10_r02/pass_2.json": {
+      "sha256": "1a79f83ca562e7d702e6a1f2bf11db2a08f6754a2a4783dad900123eb5cd3366",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p3/t10_r02/pass_2.json",
+      "source_file_sha256": "1a79f83ca562e7d702e6a1f2bf11db2a08f6754a2a4783dad900123eb5cd3366",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t07_r01/pass_1.json": {
+      "sha256": "277a5fe5a7cef816fd5df6ea4fd0ac71255be877d032882e1f370e3ab94e1ae9",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t07_r01/pass_1.json",
+      "source_file_sha256": "277a5fe5a7cef816fd5df6ea4fd0ac71255be877d032882e1f370e3ab94e1ae9",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t07_r01/pass_2.json": {
+      "sha256": "50761319a2111b5768a436cc706e5faf803ca0081e760ce5b24ef119e948d9ad",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t07_r01/pass_2.json",
+      "source_file_sha256": "50761319a2111b5768a436cc706e5faf803ca0081e760ce5b24ef119e948d9ad",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t07_r02/pass_1.json": {
+      "sha256": "413ed7d2d0fa45115d40f4ab47503c19cfba6ed241727b5434417640a7626b6e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t07_r02/pass_1.json",
+      "source_file_sha256": "413ed7d2d0fa45115d40f4ab47503c19cfba6ed241727b5434417640a7626b6e",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t07_r02/pass_2.json": {
+      "sha256": "7beb520dc2c0a8b54d4d3ecd9a486c07362f98375ff8db1928ab78432cb37193",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t07_r02/pass_2.json",
+      "source_file_sha256": "7beb520dc2c0a8b54d4d3ecd9a486c07362f98375ff8db1928ab78432cb37193",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t10_r01/pass_1.json": {
+      "sha256": "27c3ef89b25cc553b8d42c1125e75e6af866d4387657dc84ad67ffad1dfa5a61",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t10_r01/pass_1.json",
+      "source_file_sha256": "27c3ef89b25cc553b8d42c1125e75e6af866d4387657dc84ad67ffad1dfa5a61",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t10_r01/pass_2.json": {
+      "sha256": "34124cf16721e165570af2d6d3a47c67fb1347aa3ba5bbb31eaf5bc0950595c9",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t10_r01/pass_2.json",
+      "source_file_sha256": "34124cf16721e165570af2d6d3a47c67fb1347aa3ba5bbb31eaf5bc0950595c9",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t10_r02/pass_1.json": {
+      "sha256": "3b1d0479bfa5f4bb69fb55233f5a69e69aaafde14326cf27b792e3b68982b0c7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t10_r02/pass_1.json",
+      "source_file_sha256": "3b1d0479bfa5f4bb69fb55233f5a69e69aaafde14326cf27b792e3b68982b0c7",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p4/t10_r02/pass_2.json": {
+      "sha256": "344b2ec2d5501ba158aebf73192dedcf3737834de1a29427fc12a2b99e5d4276",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p4/t10_r02/pass_2.json",
+      "source_file_sha256": "344b2ec2d5501ba158aebf73192dedcf3737834de1a29427fc12a2b99e5d4276",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t07_r01/pass_1.json": {
+      "sha256": "cccff65d65afc97d1f82d04f0fd98d0f79f16a3aadfb57916990044824d06310",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t07_r01/pass_1.json",
+      "source_file_sha256": "cccff65d65afc97d1f82d04f0fd98d0f79f16a3aadfb57916990044824d06310",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t07_r01/pass_2.json": {
+      "sha256": "d6540e3a6b6537e856e136e1df53e3930d08928bef28d861df621f353334f9dd",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t07_r01/pass_2.json",
+      "source_file_sha256": "d6540e3a6b6537e856e136e1df53e3930d08928bef28d861df621f353334f9dd",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t07_r02/pass_1.json": {
+      "sha256": "45f327318d71beb62fc22bf5e9deee7bdb6e1d2395db3bf5540b5d17882f79e3",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t07_r02/pass_1.json",
+      "source_file_sha256": "45f327318d71beb62fc22bf5e9deee7bdb6e1d2395db3bf5540b5d17882f79e3",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t07_r02/pass_2.json": {
+      "sha256": "8f98763ccbcabcbcfab1aca0c0f84390ffb5d716d529ca10c559d6bd1fd637f3",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t07_r02/pass_2.json",
+      "source_file_sha256": "8f98763ccbcabcbcfab1aca0c0f84390ffb5d716d529ca10c559d6bd1fd637f3",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t10_r01/pass_1.json": {
+      "sha256": "ce324b1a8b84607bbcdbe4d3de96730cedfdfba491c41362514b9aca3858e381",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t10_r01/pass_1.json",
+      "source_file_sha256": "ce324b1a8b84607bbcdbe4d3de96730cedfdfba491c41362514b9aca3858e381",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t10_r01/pass_2.json": {
+      "sha256": "52db7f47952e474c7a66503ce2930bdacf4b3cfa99a606ba79f0640c66c417bf",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t10_r01/pass_2.json",
+      "source_file_sha256": "52db7f47952e474c7a66503ce2930bdacf4b3cfa99a606ba79f0640c66c417bf",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t10_r02/pass_1.json": {
+      "sha256": "d7740bdfe9e212b4272c8cc18405c08db1b01ed97465dfab9b454961a6dce2ba",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t10_r02/pass_1.json",
+      "source_file_sha256": "d7740bdfe9e212b4272c8cc18405c08db1b01ed97465dfab9b454961a6dce2ba",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p5/t10_r02/pass_2.json": {
+      "sha256": "e1b4e0da06041bf3648f879f4b0a24d7d75c6fea417f55dc7ef5011035678374",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p5/t10_r02/pass_2.json",
+      "source_file_sha256": "e1b4e0da06041bf3648f879f4b0a24d7d75c6fea417f55dc7ef5011035678374",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t07_r01/pass_1.json": {
+      "sha256": "61b27b9a1830b6fbdc334c55963b1c588085d978f465550bcfe2dcabae0cd1d7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t07_r01/pass_1.json",
+      "source_file_sha256": "61b27b9a1830b6fbdc334c55963b1c588085d978f465550bcfe2dcabae0cd1d7",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t07_r01/pass_2.json": {
+      "sha256": "0483113eec364119edf6c55e8980f92210448b62bbde4f716e5c4c5ad1257d57",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t07_r01/pass_2.json",
+      "source_file_sha256": "0483113eec364119edf6c55e8980f92210448b62bbde4f716e5c4c5ad1257d57",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t07_r02/pass_1.json": {
+      "sha256": "8f1a636c6a9197dcf4a2e76d000c78ce550b6504a80ea8e5f1764d478db4355e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t07_r02/pass_1.json",
+      "source_file_sha256": "8f1a636c6a9197dcf4a2e76d000c78ce550b6504a80ea8e5f1764d478db4355e",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t07_r02/pass_2.json": {
+      "sha256": "22895ae73d6f59f2c436af55efedbfe113e2d1abb5bdb2022d30bca507c17188",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t07_r02/pass_2.json",
+      "source_file_sha256": "22895ae73d6f59f2c436af55efedbfe113e2d1abb5bdb2022d30bca507c17188",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t10_r01/pass_1.json": {
+      "sha256": "027603957137a3858388aee5e10bfc61663ed49ad1ebf86c07f41f93a23b142f",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t10_r01/pass_1.json",
+      "source_file_sha256": "027603957137a3858388aee5e10bfc61663ed49ad1ebf86c07f41f93a23b142f",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t10_r01/pass_2.json": {
+      "sha256": "caf6a9ac2c6ec695f5c1f8a166d8b0ad099ae89168895ae52d5e539bd327765e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t10_r01/pass_2.json",
+      "source_file_sha256": "caf6a9ac2c6ec695f5c1f8a166d8b0ad099ae89168895ae52d5e539bd327765e",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t10_r02/pass_1.json": {
+      "sha256": "30c157ce837c1a8eae6434e8ad4e65446bc2c396110d7958f79441f3230e563a",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t10_r02/pass_1.json",
+      "source_file_sha256": "30c157ce837c1a8eae6434e8ad4e65446bc2c396110d7958f79441f3230e563a",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/A/imo2026_p6/t10_r02/pass_2.json": {
+      "sha256": "88564e68a42c1d391ed67c609ba548cb09dfc1463d82c979ba9901c6ed8f0185",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/A/imo2026_p6/t10_r02/pass_2.json",
+      "source_file_sha256": "88564e68a42c1d391ed67c609ba548cb09dfc1463d82c979ba9901c6ed8f0185",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t07_r01/pass_1.json": {
+      "sha256": "8ae2457519a2c12160f696b38cd2f8ab9bc99b444c7799f0715ed2f19d8995bf",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_ca63bc5c44687ae2d05f8232/pass_1.json",
+      "source_file_sha256": "e3f543d0da7926141a66fdda1be69031d1bcfd83d86931931c160d41647468eb",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t07_r01/pass_2.json": {
+      "sha256": "e7b46b8a025882226c894691fffb41bf3f185a4b802ca1fa05d52eaa98da65d6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_ca63bc5c44687ae2d05f8232/pass_2.json",
+      "source_file_sha256": "4aedf2348b81347741310d4879237293df072cabf454d6eec80dc3e29705854d",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t07_r02/pass_1.json": {
+      "sha256": "1f3e36f121cc186a5012c7aaf39002e1dc48317d793974d9a9913140a5623203",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_7b3b7a00af137823c4077945/pass_1.json",
+      "source_file_sha256": "15eaaa4348ab59ad271b3cbd4f86656bd88f53b3e6383d052d730901692ffefe",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t07_r02/pass_2.json": {
+      "sha256": "e87b4cbb81ae4d953b8f82e5de1c54f5fc7ad4a9907375223cd12fcd4f131716",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_7b3b7a00af137823c4077945/pass_2.json",
+      "source_file_sha256": "84a14f1327f99636ed57f14c317da2cb148215664095b20d175bd7f0bf5c538c",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t10_r01/pass_1.json": {
+      "sha256": "dbefe7b75f7ea437f4ff7959b028617b1931752d168947408223797c0579f8c4",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_6b602602730b7452c849e0a6/pass_1.json",
+      "source_file_sha256": "1271eefa314e1d88d8694fed8337d6b98696b719732a56cd8e78f29e745dc2cf",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t10_r01/pass_2.json": {
+      "sha256": "f100cc63268c0d717bfb0dc054bcf818870ded1c6466720b46b271a2632f875b",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_6b602602730b7452c849e0a6/pass_2.json",
+      "source_file_sha256": "115c52256b003b1628c3b7307ed48419d0a9bed2d58d3026cd658be3e7dceca5",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t10_r02/pass_1.json": {
+      "sha256": "077b19b5a2fc25f858044687c21f5de9347762fbcf791e8a42a6a455c1b47e21",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_bd91ff82c9d4af2f2e28b5e2/pass_1.json",
+      "source_file_sha256": "717f9ee01e135c39d180ac5ba5229e56eb7a0921dd2269663c8e58df15fa2f1c",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p1/t10_r02/pass_2.json": {
+      "sha256": "8970d6afc9fe8fbe24295a44187687c9a4ae78d63e9f9b319f06e5b78bdda784",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p1/proof_bd91ff82c9d4af2f2e28b5e2/pass_2.json",
+      "source_file_sha256": "55de1008212d8b35af36d838030861bb31d29c6b0922620846b966ad3163ce8f",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t07_r01/pass_1.json": {
+      "sha256": "aa56325c754358269b5bacca90a56138165c9dcb3446b73c55fb5bbcc18814ec",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_ddc1f85dc844acc8b62405f7/pass_1.json",
+      "source_file_sha256": "5f5c99c04b7d417b256a5798469c5972e3e1b60f39ad22f0ca17eb9c22187840",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t07_r01/pass_2.json": {
+      "sha256": "949178ca23663029b452456b0b4b74869d552bc556aa8a8edff7ae97c85e0fa2",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_ddc1f85dc844acc8b62405f7/pass_2.json",
+      "source_file_sha256": "f631395e6443a2a29289d67761b3e9ab9cdb4eb0b50f9d3d77cd1bb1b4b33e7c",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t07_r02/pass_1.json": {
+      "sha256": "2a3233c688cacaafbd49859907a9af222900bb6dad2cb69d1cf20a24dc8b01a9",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_5072a271cd3b44cff09da3a9/pass_1.json",
+      "source_file_sha256": "13d625c0f79b36230d39e1b6a0e0b06a4ddb986e653dd82f43fb97ef52925afa",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t07_r02/pass_2.json": {
+      "sha256": "c0ba6002c351db73cf6e6e90013fbdea94c38e507d7b5ca2d59350b7c4fd19e3",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_5072a271cd3b44cff09da3a9/pass_2.json",
+      "source_file_sha256": "1cb9290119855f11d78886e6a92ab4371d02de276c60216b55b00eb3493b99ee",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t10_r01/pass_1.json": {
+      "sha256": "4fed2e0ff64fbc00793053bf440463f157e63cd891aa2def0eb007cb603ebe48",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_7d500d2218b07f434f2e28c7/pass_1.json",
+      "source_file_sha256": "1fedd159c031ee9f9077cf8c857b0c7f245076fd34c287021214f52d0158b3de",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t10_r01/pass_2.json": {
+      "sha256": "0a4c0ebd9ed505d3710d9775b172e512dc44f90da0c0705085f38bf72e74e5f4",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_7d500d2218b07f434f2e28c7/pass_2.json",
+      "source_file_sha256": "8483df0dccc61f591c55671df6a0e2dd70140608d7990ae0c63ab736bf1fe4dd",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t10_r02/pass_1.json": {
+      "sha256": "c6cd4b1881cc1ba0528154be36f474df8a68f969408acfa57c308d15a18e728d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_d79728feade16e651000362a/pass_1.json",
+      "source_file_sha256": "f64aab8dc4e3c0c953af533d32a92794b77135c121dd10dccfafa08e76b38635",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p2/t10_r02/pass_2.json": {
+      "sha256": "9fe99e45e30412e8bbdcb706ebe1a3238a4fc208addf9425fef2f93f753d4ce6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p2/proof_d79728feade16e651000362a/pass_2.json",
+      "source_file_sha256": "4284d677a4c851db9b73ef0a45ae94f70f79209ddce275800538ea80e24e01bc",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t07_r01/pass_1.json": {
+      "sha256": "ace3733f0684a44aec719c92532b2108727aa729445c6f19616a699383eaffd5",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_095f135f8b56e179e54b8c87/pass_1.json",
+      "source_file_sha256": "3be2ce80a0d4124b7a208e582048baf73760f07f59a8d325af6f586c3a507889",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t07_r01/pass_2.json": {
+      "sha256": "f1b798630a152605637843ecd48e9d82a095fe21750e70c43dbfd34373989842",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_095f135f8b56e179e54b8c87/pass_2.json",
+      "source_file_sha256": "1c4c6e239315169fb4f9da08fa623b19c4dcd0e6eeccfe5eeec1ccbcc143eb30",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t07_r02/pass_1.json": {
+      "sha256": "1919d0e10e730c2026528acb430d8652d8b2b4b2d8dd36f4e17648487deb8746",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_b6137160cb7c26d379e1c82c/pass_1.json",
+      "source_file_sha256": "f8884da262058825cea93cf0e134248524062e4634bd4a6411999e8ed8754acd",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t07_r02/pass_2.json": {
+      "sha256": "2d9ed3d69c0379273b1f5608a24bbaa9f6f71e7d661579cb2270f3dd420675ef",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_b6137160cb7c26d379e1c82c/pass_2.json",
+      "source_file_sha256": "755ba7d64481240950d705d35e579f74e032f40c3cff4ba791feb517a532c409",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t10_r01/pass_1.json": {
+      "sha256": "a7b325df5429e43dbae011b8a2f4eab8e09ea871f5392a02b1e20ceb5e2b567e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_eea0211bebf3aa8070eec2ba/pass_1.json",
+      "source_file_sha256": "76591aa1c048ddee9d2ac98dfa57dcb9fb234112d82b2e675834ba54e172b25f",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t10_r01/pass_2.json": {
+      "sha256": "ba799faa0cea1fb624fda64ef50f86306b74782df0ebf394cd9481ffde9ccfee",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_eea0211bebf3aa8070eec2ba/pass_2.json",
+      "source_file_sha256": "6f2f9e8259fb581b38b67632b0143c74854ba4e5dd7a4c94d518c4f9e57124bd",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t10_r02/pass_1.json": {
+      "sha256": "272af5a9a408b050000c48fb32faecc2b1d0d96c2d86d61b6d11b4f3056f95f6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_51b6bbf81d34ccd0262dac53/pass_1.json",
+      "source_file_sha256": "12f9075b4e6917fc721bbbde6e8e1c213ce2d871bc46945d4dea9d9303c6eb20",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p3/t10_r02/pass_2.json": {
+      "sha256": "45941fef1c9f89c7eb0579fb3c2690db1c892392ba12589f18dcd224fd1e67b1",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p3/proof_51b6bbf81d34ccd0262dac53/pass_2.json",
+      "source_file_sha256": "6ed51054d90bfb7fec2ab0154579f5fe7db8b6bba15a51299a5248c89830e8d8",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t07_r01/pass_1.json": {
+      "sha256": "77a20decdc6f460cfd7efb15319f53180dbd5c90bf70fc3714e2c8c50969368f",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_6a8f2ca6dd341abf295c118e/pass_1.json",
+      "source_file_sha256": "6a42b9931299402917511084639acdfd96698508932d90a26df8d854aa0950ae",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t07_r01/pass_2.json": {
+      "sha256": "29235e4aa50ea2edeffc84febb72820a9e307b043c3824cb303f778edfde2be7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_6a8f2ca6dd341abf295c118e/pass_2.json",
+      "source_file_sha256": "8c7a558f48351b2bbf1b8f55d51d41038a84bcaf6a41b38aac81552e49005cdf",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t07_r02/pass_1.json": {
+      "sha256": "04d0ce9a848b2fc04fdf3775ebb8f32b47990a054aa8f4d45991aa9866c234d6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_cc8c0808d35910496afebcf4/pass_1.json",
+      "source_file_sha256": "b417fca4231b11b6f5272d09b5b4b21e6d2b354d446e323c3ad15ed2ff8478f1",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t07_r02/pass_2.json": {
+      "sha256": "f622a7aa4a5f54d45ecf1c9ca7674b820729950fa1c3e02574bed25772d7d5e7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_cc8c0808d35910496afebcf4/pass_2.json",
+      "source_file_sha256": "f7d7a50be57de3c06c203481366632bbdb784650bba6665649adc76ba76b8aab",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t10_r01/pass_1.json": {
+      "sha256": "4a4117488ba6ebaf55c2d347be6acce7d35e59a4afab7cd9dfc78bf8ec10a613",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_d9a9ab59ba93953141c963a3/pass_1.json",
+      "source_file_sha256": "41d1cb6ee2b64f2e19a6a0af6c8329056a343d0a9bdf86a61bd479b69b02b490",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t10_r01/pass_2.json": {
+      "sha256": "a83264c4bd5490d1ebe10aa578493bd080ecbb7d01d880e17b464a367a4b2c7d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_d9a9ab59ba93953141c963a3/pass_2.json",
+      "source_file_sha256": "07fd2e7c348849a2c20d3d2bfc2f3c06b5b933b51fec5e18d3791ff894ed26b2",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t10_r02/pass_1.json": {
+      "sha256": "f47e0f75a096106b209bc485b7a79028418de0d3d5cde53f32900aa3179d4af7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_42e2a00ee4d7912924ef789f/pass_1.json",
+      "source_file_sha256": "e4f79bf7f7919d03e7b9ac0bd0e4b6608e0715a3a1dd475f6041a657522a4cc6",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p4/t10_r02/pass_2.json": {
+      "sha256": "86a56f081738e757c9896b424040067807714ea923e8ee7f806ea4421f6ff33f",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p4/proof_42e2a00ee4d7912924ef789f/pass_2.json",
+      "source_file_sha256": "26eb485caa61f24bf7830574abaa8f8d90e3829ca2d885c3ee20d9a6dd271beb",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t07_r01/pass_1.json": {
+      "sha256": "90b1f2fc05cc4a90d014d62ff31862b3b378179c8d1f02cba9ffc1056020a395",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_e28b66b433ff097c1147bd07/pass_1.json",
+      "source_file_sha256": "a5ff3386d69cf3b1dea1045a4d69fb1357426b906bcc8b8ae649b443e2f693b4",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t07_r01/pass_2.json": {
+      "sha256": "253e7d4d9d25647745caf54517b7dbe2791008d077d83d78ea03013d91855d3e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_e28b66b433ff097c1147bd07/pass_2.json",
+      "source_file_sha256": "f5281d415446755b0d1c22135e6283bf2e88a121955cd00a6f4048755b1eb8b2",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t07_r02/pass_1.json": {
+      "sha256": "c98bc27d546e90ee1a198882a78c31caf2c90b76670ac79afcdc50b854f3c405",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_53a6dcbebe41763d5cea9785/pass_1.json",
+      "source_file_sha256": "48d8672dabd995b2931a6223a215301321ef63cb1f9bc92666f31e0654d7b019",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t07_r02/pass_2.json": {
+      "sha256": "15098e62f3e582861c5888c3b9215f6fa94835e8f00a6d34deda378d8f25ccf8",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_53a6dcbebe41763d5cea9785/pass_2.json",
+      "source_file_sha256": "bf6d5dc79055317499bab575d932bf3002996cd4d66e0a308c59acd1720ae201",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t10_r01/pass_1.json": {
+      "sha256": "6f8abab5f0d5d33f87c55002603906256c3aa68463abe80ef8ac884c4572fcc6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_1a38c9f1931d41e90ed115c3/pass_1.json",
+      "source_file_sha256": "a30f2796374a9f3581896b8bf2b21e78205f9d57b49a08dd8a142dcbc495064b",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t10_r01/pass_2.json": {
+      "sha256": "740a37c437834254e177ae6c97ce9151c42a90dd0ddaa399333d07f51d13db75",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_1a38c9f1931d41e90ed115c3/pass_2.json",
+      "source_file_sha256": "f97a1a7633e93b303c7bdd4fe717c8266abf3ee9bf4f81f47b90d40b00c80113",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t10_r02/pass_1.json": {
+      "sha256": "31ededbd355ff798d93928552f015639bb23df79a579a6199c466208f6bf1feb",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_d9db8544d041f2db9914e57c/pass_1.json",
+      "source_file_sha256": "13ebd678458463c03718353002e35bba96887cd1f691c67ec4b5075e67a63c38",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p5/t10_r02/pass_2.json": {
+      "sha256": "56dee7101a2ab3c4405aa5caf4c60f617e36f182a4ddd17bad1417b7df558ec5",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p5/proof_d9db8544d041f2db9914e57c/pass_2.json",
+      "source_file_sha256": "bd82e73a2296fdb999025a42c4df98f2d1631449e1ef1767ce88699b9be56da6",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t07_r01/pass_1.json": {
+      "sha256": "8d620d84756ca8f9ed2a5178415c5f06f9a1a5bb2f5ec90d99c007854294723e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_ec5d0fd9f0beded1d5714020/pass_1.json",
+      "source_file_sha256": "d1955d9e2f8a572504422302d11a5bbbe8353c8d33ae1fe8873c18a7f7c242b7",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t07_r01/pass_2.json": {
+      "sha256": "a95f4060786993bb9cf62c009f049872cf166e9c10f383cd9d6e3791786376d6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_ec5d0fd9f0beded1d5714020/pass_2.json",
+      "source_file_sha256": "9a5d56b594d05540e6833c263a6ae744d7708619ec44b262c4f4e247ab3e336e",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t07_r02/pass_1.json": {
+      "sha256": "5d46bda874272b2e09b859f8e67bf7867129f75512bebdb5ef4664036bd374a8",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_141f2f7445b8f895eae1828b/pass_1.json",
+      "source_file_sha256": "7ddbda65ff8587a97434285fd1cc6482f85cda4434e56d996e6879fcd2ec6929",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t07_r02/pass_2.json": {
+      "sha256": "3741d90b32e0da0ed8fac756b3a224242289975b81515a5a1ed034e5f27debbc",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_141f2f7445b8f895eae1828b/pass_2.json",
+      "source_file_sha256": "1d44826655cb216f4c46dc971b6af24f6d849a4c8517ae70d40c7a579904f3dd",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t10_r01/pass_1.json": {
+      "sha256": "d7212601545db39d4ed433b17dc76c18277e8745160a1b0da22701fe39b67a5c",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_30867517020638a6f665bcd8/pass_1.json",
+      "source_file_sha256": "f511583f6f5fea882243dd2825d9cbf31746dcc3f9bb7d6e460090ff344217d6",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t10_r01/pass_2.json": {
+      "sha256": "3bc722349ca852818d9b446c1a60e175b9c26c82f4cbd01a0256219b3d819f8c",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_30867517020638a6f665bcd8/pass_2.json",
+      "source_file_sha256": "db0ccecef91f27dbbf4b445974d815c5571b4c766233c77e9ce731f5358bb65b",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t10_r02/pass_1.json": {
+      "sha256": "4d138df14976318a195f98c462d8c1c14360d56b517dc9b9170b0d996ab6c9f1",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_122cb73c6ec9e18e87cad75b/pass_1.json",
+      "source_file_sha256": "c6d0ed2a59cfce0a875d8eb269a7fb31fe0caf8556742bbbaf18bd12a728f6a3",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grades/B/imo2026_p6/t10_r02/pass_2.json": {
+      "sha256": "89b2404bf79bded777fb977f9a13e0c2b26cccd71df80933bee8c6ed6ed2e9a6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grades/B/imo2026_p6/proof_122cb73c6ec9e18e87cad75b/pass_2.json",
+      "source_file_sha256": "55045eb9818594cdb96a5167cee9d207a488cb7c2712e67e5a7e3a3d24ec8259",
+      "transformation": "Personal source paths replaced by source_workspace/publication_source labels; judgments unchanged."
+    },
+    "grading/configuration.json": {
+      "sha256": "45b2e6b1c2f0cc3018f525259ecf5c83e5168ee8006b5d6770e0f3ba0df5ef8e"
+    },
+    "grading/reference_sources.json": {
+      "sha256": "5351d0e7be5e1d91b2a31ba9a6d36cdc9fe23c916b978115b17c641737372940"
+    },
+    "grading/strict_olympiad_policy_v2.txt": {
+      "sha256": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3"
+    },
+    "problems/imo2026_p1.json": {
+      "sha256": "d9e74e1c0fb98ddd6b65c7beb80ff1d6dcdbcaff7fb7dd0a426cd709774cbe5c",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/inputs/imo2026_p1/problem.json",
+      "source_file_sha256": "d9e74e1c0fb98ddd6b65c7beb80ff1d6dcdbcaff7fb7dd0a426cd709774cbe5c"
+    },
+    "problems/imo2026_p2.json": {
+      "sha256": "72506ae4ab955d23b3f9434753231978603ff123ba3065d2155ff34eac3685d8",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/inputs/imo2026_p2/problem.json",
+      "source_file_sha256": "72506ae4ab955d23b3f9434753231978603ff123ba3065d2155ff34eac3685d8"
+    },
+    "problems/imo2026_p3.json": {
+      "sha256": "f968b62b69a9a617b4831ec9ef7c2fdd721b4389b8b95b7d6b3064dbbb1c2033",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/inputs/imo2026_p3/problem.json",
+      "source_file_sha256": "f968b62b69a9a617b4831ec9ef7c2fdd721b4389b8b95b7d6b3064dbbb1c2033"
+    },
+    "problems/imo2026_p4.json": {
+      "sha256": "e162c62ade5f5ec9bb407232b2211d2f59d60aca2fc6a2f994043c90f77f199e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/inputs/imo2026_p4/problem.json",
+      "source_file_sha256": "e162c62ade5f5ec9bb407232b2211d2f59d60aca2fc6a2f994043c90f77f199e"
+    },
+    "problems/imo2026_p5.json": {
+      "sha256": "328d256dc6816a4873be280c43c1e0eca22bc8e4aff64f897b76af41aa44ad54",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/inputs/imo2026_p5/problem.json",
+      "source_file_sha256": "328d256dc6816a4873be280c43c1e0eca22bc8e4aff64f897b76af41aa44ad54"
+    },
+    "problems/imo2026_p6.json": {
+      "sha256": "65f8cbbaa55c4c7c298108056264fccfe0d8c4e8cfaf51738e6c930f31644930",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/inputs/imo2026_p6/problem.json",
+      "source_file_sha256": "65f8cbbaa55c4c7c298108056264fccfe0d8c4e8cfaf51738e6c930f31644930"
+    },
+    "proofs/A/imo2026_p1/t07_r01.md": {
+      "sha256": "ed0c7d3766e64578fc183ee9a10deceec538654588db7a4551cbde8cb9b988f1",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/original/proofs/t07_r01.md",
+      "source_file_sha256": "ed0c7d3766e64578fc183ee9a10deceec538654588db7a4551cbde8cb9b988f1"
+    },
+    "proofs/A/imo2026_p1/t07_r02.md": {
+      "sha256": "d9c01f5ce2c0d9d200fa60aaa2cc54229253bea57903f5a919239a91773724aa",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/original/proofs/t07_r02.md",
+      "source_file_sha256": "d9c01f5ce2c0d9d200fa60aaa2cc54229253bea57903f5a919239a91773724aa"
+    },
+    "proofs/A/imo2026_p1/t10_r01.md": {
+      "sha256": "797c61d622de03d1aa928c2f5c50a327c9d2b6cba04bdf97d9530f5ab4192c47",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/original/proofs/t10_r01.md",
+      "source_file_sha256": "797c61d622de03d1aa928c2f5c50a327c9d2b6cba04bdf97d9530f5ab4192c47"
+    },
+    "proofs/A/imo2026_p1/t10_r02.md": {
+      "sha256": "7d469be4a94433b38efb41238358e54fc4b723a6cb94ac0b50af5caf5282e342",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/original/proofs/t10_r02.md",
+      "source_file_sha256": "7d469be4a94433b38efb41238358e54fc4b723a6cb94ac0b50af5caf5282e342"
+    },
+    "proofs/A/imo2026_p2/t07_r01.md": {
+      "sha256": "1dbe902b90379a80c8b2d0e9c384c450021c09cf35c7b7b2c027c18f493d7474",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/original/proofs/t07_r01.md",
+      "source_file_sha256": "1dbe902b90379a80c8b2d0e9c384c450021c09cf35c7b7b2c027c18f493d7474"
+    },
+    "proofs/A/imo2026_p2/t07_r02.md": {
+      "sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/original/proofs/t07_r02.md",
+      "source_file_sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c"
+    },
+    "proofs/A/imo2026_p2/t10_r01.md": {
+      "sha256": "2aa08745ee64577eec39a33b885631b8f82c9ffd31fe0061deab2fdf33cb928a",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/original/proofs/t10_r01.md",
+      "source_file_sha256": "2aa08745ee64577eec39a33b885631b8f82c9ffd31fe0061deab2fdf33cb928a"
+    },
+    "proofs/A/imo2026_p2/t10_r02.md": {
+      "sha256": "732234ac22d13fd7194a060f0e0e7cc771dfdb74f167fa53ca1a0ff1e155e4bc",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/original/proofs/t10_r02.md",
+      "source_file_sha256": "732234ac22d13fd7194a060f0e0e7cc771dfdb74f167fa53ca1a0ff1e155e4bc"
+    },
+    "proofs/A/imo2026_p3/t07_r01.md": {
+      "sha256": "2b9388ba1931ec52639cb6db051c249bb7cd30327f751c44cfb3c643de0afbf8",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/original/proofs/t07_r01.md",
+      "source_file_sha256": "2b9388ba1931ec52639cb6db051c249bb7cd30327f751c44cfb3c643de0afbf8"
+    },
+    "proofs/A/imo2026_p3/t07_r02.md": {
+      "sha256": "82f41532a7f47d82c9b2ec6ed1e3a98c753540e4adb7b46d9aa1696be557e1fd",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/original/proofs/t07_r02.md",
+      "source_file_sha256": "82f41532a7f47d82c9b2ec6ed1e3a98c753540e4adb7b46d9aa1696be557e1fd"
+    },
+    "proofs/A/imo2026_p3/t10_r01.md": {
+      "sha256": "8932f2ea7698b495ae70c359ad22aa5bff4e183756ae1a7541055d11ab402ca1",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/original/proofs/t10_r01.md",
+      "source_file_sha256": "8932f2ea7698b495ae70c359ad22aa5bff4e183756ae1a7541055d11ab402ca1"
+    },
+    "proofs/A/imo2026_p3/t10_r02.md": {
+      "sha256": "db371b9c4514666491e5d4df76edd1c6f3d0282e306a40020b79bad6bcdfdd94",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/original/proofs/t10_r02.md",
+      "source_file_sha256": "db371b9c4514666491e5d4df76edd1c6f3d0282e306a40020b79bad6bcdfdd94"
+    },
+    "proofs/A/imo2026_p4/t07_r01.md": {
+      "sha256": "0cd79f13e9da1266b2483ff5eaf2b7ac57bcbf6b9518e3610734a7c276fe92a6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/original/proofs/t07_r01.md",
+      "source_file_sha256": "0cd79f13e9da1266b2483ff5eaf2b7ac57bcbf6b9518e3610734a7c276fe92a6"
+    },
+    "proofs/A/imo2026_p4/t07_r02.md": {
+      "sha256": "c255c1d4d254725a5e852d530cb072be1daaefc4dec3c06f0531927f6bf69e16",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/original/proofs/t07_r02.md",
+      "source_file_sha256": "c255c1d4d254725a5e852d530cb072be1daaefc4dec3c06f0531927f6bf69e16"
+    },
+    "proofs/A/imo2026_p4/t10_r01.md": {
+      "sha256": "490ab99f41964d41ec3628a938fd661e67ee85b3b6ad867157b36300fab8f375",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/original/proofs/t10_r01.md",
+      "source_file_sha256": "490ab99f41964d41ec3628a938fd661e67ee85b3b6ad867157b36300fab8f375"
+    },
+    "proofs/A/imo2026_p4/t10_r02.md": {
+      "sha256": "5b8e002769da667027603f1322b380b781a77c907f4c92920483bacb1f6da80e",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/original/proofs/t10_r02.md",
+      "source_file_sha256": "5b8e002769da667027603f1322b380b781a77c907f4c92920483bacb1f6da80e"
+    },
+    "proofs/A/imo2026_p5/t07_r01.md": {
+      "sha256": "6478f5e1c056b1776938e525d2a7c138cc74db2f1f0cb76223113c419b1fea61",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/original/proofs/t07_r01.md",
+      "source_file_sha256": "6478f5e1c056b1776938e525d2a7c138cc74db2f1f0cb76223113c419b1fea61"
+    },
+    "proofs/A/imo2026_p5/t07_r02.md": {
+      "sha256": "208604419739d305a51a005057eb028b7510e8b9d9df7e0d8537ec26b88ac9c2",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/original/proofs/t07_r02.md",
+      "source_file_sha256": "208604419739d305a51a005057eb028b7510e8b9d9df7e0d8537ec26b88ac9c2"
+    },
+    "proofs/A/imo2026_p5/t10_r01.md": {
+      "sha256": "e46e1076eeab6d8570dcdb0b1260e301ba755286a690aa573882b3836325b2e7",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/original/proofs/t10_r01.md",
+      "source_file_sha256": "e46e1076eeab6d8570dcdb0b1260e301ba755286a690aa573882b3836325b2e7"
+    },
+    "proofs/A/imo2026_p5/t10_r02.md": {
+      "sha256": "904ac98ba2dd10ce6e62706558edff7f2b5d1ae9b46418e746c2e916cc097d43",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/original/proofs/t10_r02.md",
+      "source_file_sha256": "904ac98ba2dd10ce6e62706558edff7f2b5d1ae9b46418e746c2e916cc097d43"
+    },
+    "proofs/A/imo2026_p6/t07_r01.md": {
+      "sha256": "83fe2d9a53ab7d5f30447d3baf1c960e2fe00d88da2ff9372ed732d4d1698c59",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/original/proofs/t07_r01.md",
+      "source_file_sha256": "83fe2d9a53ab7d5f30447d3baf1c960e2fe00d88da2ff9372ed732d4d1698c59"
+    },
+    "proofs/A/imo2026_p6/t07_r02.md": {
+      "sha256": "4cfe88ec3b99b2d1ed1e6aadd93d09f512cf8f0a42db2eba914fb18c9b5cf533",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/original/proofs/t07_r02.md",
+      "source_file_sha256": "4cfe88ec3b99b2d1ed1e6aadd93d09f512cf8f0a42db2eba914fb18c9b5cf533"
+    },
+    "proofs/A/imo2026_p6/t10_r01.md": {
+      "sha256": "530893d3f18fe036054471e2fe59e6c06aa9144b791fe82c766f2c3fad786fa0",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/original/proofs/t10_r01.md",
+      "source_file_sha256": "530893d3f18fe036054471e2fe59e6c06aa9144b791fe82c766f2c3fad786fa0"
+    },
+    "proofs/A/imo2026_p6/t10_r02.md": {
+      "sha256": "5e3b49cf36259d3fe9cf9797aa028274c8f66e7d994438729039cd3ae30fb8f9",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/original/proofs/t10_r02.md",
+      "source_file_sha256": "5e3b49cf36259d3fe9cf9797aa028274c8f66e7d994438729039cd3ae30fb8f9"
+    },
+    "proofs/B/imo2026_p1/t07_r01.md": {
+      "sha256": "9471cbc0e0120d59fc44a2375eeaec60665441440faf56074989133c8274f9e3",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/role_specific/proofs/t07_r01.md",
+      "source_file_sha256": "9471cbc0e0120d59fc44a2375eeaec60665441440faf56074989133c8274f9e3"
+    },
+    "proofs/B/imo2026_p1/t07_r02.md": {
+      "sha256": "1cd5c7c94c6a004c004f57e026bb68e7d0c4ab5291cf1adf42e35845ec3002c0",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/role_specific/proofs/t07_r02.md",
+      "source_file_sha256": "1cd5c7c94c6a004c004f57e026bb68e7d0c4ab5291cf1adf42e35845ec3002c0"
+    },
+    "proofs/B/imo2026_p1/t10_r01.md": {
+      "sha256": "187867751e3e9e101c8b41dae19b5e4bf634540168f567971d8cced2434be644",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/role_specific/proofs/t10_r01.md",
+      "source_file_sha256": "187867751e3e9e101c8b41dae19b5e4bf634540168f567971d8cced2434be644"
+    },
+    "proofs/B/imo2026_p1/t10_r02.md": {
+      "sha256": "d42ce95df96750d181a2a419898fbff84c5420cfe3a2e53a9f1d172b250dc13d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/role_specific/proofs/t10_r02.md",
+      "source_file_sha256": "d42ce95df96750d181a2a419898fbff84c5420cfe3a2e53a9f1d172b250dc13d"
+    },
+    "proofs/B/imo2026_p2/t07_r01.md": {
+      "sha256": "dea59347cc2ecc28bb19f5c87aa50ac9cb9b0b2a73dcbd7cbf08057e981d8dbf",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/role_specific/proofs/t07_r01.md",
+      "source_file_sha256": "dea59347cc2ecc28bb19f5c87aa50ac9cb9b0b2a73dcbd7cbf08057e981d8dbf"
+    },
+    "proofs/B/imo2026_p2/t07_r02.md": {
+      "sha256": "e52248945e5100437610b04e79977e2dd30b15b677b217a99672450cb513f49d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/role_specific/proofs/t07_r02.md",
+      "source_file_sha256": "e52248945e5100437610b04e79977e2dd30b15b677b217a99672450cb513f49d"
+    },
+    "proofs/B/imo2026_p2/t10_r01.md": {
+      "sha256": "f34efaa32470ca1e15d8ff21ba765e4e6fab7318eaf17ea80dd2a11f0e7e8c91",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/role_specific/proofs/t10_r01.md",
+      "source_file_sha256": "f34efaa32470ca1e15d8ff21ba765e4e6fab7318eaf17ea80dd2a11f0e7e8c91"
+    },
+    "proofs/B/imo2026_p2/t10_r02.md": {
+      "sha256": "d1b93fb6df942c841591f442e1ea18fd391af775ce7c785ea4b953de860d2248",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/role_specific/proofs/t10_r02.md",
+      "source_file_sha256": "d1b93fb6df942c841591f442e1ea18fd391af775ce7c785ea4b953de860d2248"
+    },
+    "proofs/B/imo2026_p3/t07_r01.md": {
+      "sha256": "d6b9084329321605aca0577acc45ef07f50aeb5eea379f35d708c27dc58f94a4",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/role_specific/proofs/t07_r01.md",
+      "source_file_sha256": "d6b9084329321605aca0577acc45ef07f50aeb5eea379f35d708c27dc58f94a4"
+    },
+    "proofs/B/imo2026_p3/t07_r02.md": {
+      "sha256": "65bb0655b0005cafa2d9814dad02b80457d9bf6c73bf84e570551338c6d365ba",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/role_specific/proofs/t07_r02.md",
+      "source_file_sha256": "65bb0655b0005cafa2d9814dad02b80457d9bf6c73bf84e570551338c6d365ba"
+    },
+    "proofs/B/imo2026_p3/t10_r01.md": {
+      "sha256": "8acf31fb7507cdff46fb371d69f66a15d24a11779874bd80be88b833b18c17cd",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/role_specific/proofs/t10_r01.md",
+      "source_file_sha256": "8acf31fb7507cdff46fb371d69f66a15d24a11779874bd80be88b833b18c17cd"
+    },
+    "proofs/B/imo2026_p3/t10_r02.md": {
+      "sha256": "c18303176e1aa994ebbdaf4674d5b5ff92290815e33c3218e94f680fb438a687",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/role_specific/proofs/t10_r02.md",
+      "source_file_sha256": "c18303176e1aa994ebbdaf4674d5b5ff92290815e33c3218e94f680fb438a687"
+    },
+    "proofs/B/imo2026_p4/t07_r01.md": {
+      "sha256": "5ffa30a6bedcb6c68d93336a9e58a8142df9f03c6af0a3f23a18561fd1b3876d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/role_specific/proofs/t07_r01.md",
+      "source_file_sha256": "5ffa30a6bedcb6c68d93336a9e58a8142df9f03c6af0a3f23a18561fd1b3876d"
+    },
+    "proofs/B/imo2026_p4/t07_r02.md": {
+      "sha256": "2e514e1fa45a21805472cccfd6154dd3d47b3f541f1dba7c0d34103750805dc6",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/role_specific/proofs/t07_r02.md",
+      "source_file_sha256": "2e514e1fa45a21805472cccfd6154dd3d47b3f541f1dba7c0d34103750805dc6"
+    },
+    "proofs/B/imo2026_p4/t10_r01.md": {
+      "sha256": "e71d14b18e9f9390d546708984e2d85525668b7f8d8ac5ec15d3f2581665779b",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/role_specific/proofs/t10_r01.md",
+      "source_file_sha256": "e71d14b18e9f9390d546708984e2d85525668b7f8d8ac5ec15d3f2581665779b"
+    },
+    "proofs/B/imo2026_p4/t10_r02.md": {
+      "sha256": "c873644fb7ec13d2d1021df07a7d06ac16c27f584c07cb0550d642a576de9e7f",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/role_specific/proofs/t10_r02.md",
+      "source_file_sha256": "c873644fb7ec13d2d1021df07a7d06ac16c27f584c07cb0550d642a576de9e7f"
+    },
+    "proofs/B/imo2026_p5/t07_r01.md": {
+      "sha256": "83f5c95c6f4cc12ac295c3c6b6a7139a1a742dddd9f49a845bb29ef35bba02ac",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/role_specific/proofs/t07_r01.md",
+      "source_file_sha256": "83f5c95c6f4cc12ac295c3c6b6a7139a1a742dddd9f49a845bb29ef35bba02ac"
+    },
+    "proofs/B/imo2026_p5/t07_r02.md": {
+      "sha256": "2aef9f52e35b3f098816c18cf0ef3a6de71ab662f431365ea0ea391043595534",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/role_specific/proofs/t07_r02.md",
+      "source_file_sha256": "2aef9f52e35b3f098816c18cf0ef3a6de71ab662f431365ea0ea391043595534"
+    },
+    "proofs/B/imo2026_p5/t10_r01.md": {
+      "sha256": "8c375e13d77c1a6ec4267342f0b9e539e8da6ea1ed3cc005d93137a1b3858b08",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/role_specific/proofs/t10_r01.md",
+      "source_file_sha256": "8c375e13d77c1a6ec4267342f0b9e539e8da6ea1ed3cc005d93137a1b3858b08"
+    },
+    "proofs/B/imo2026_p5/t10_r02.md": {
+      "sha256": "55d69e007bfe7f3074b0c008c45b9abdaff15792fa7925c07d5adfe060c41f57",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/role_specific/proofs/t10_r02.md",
+      "source_file_sha256": "55d69e007bfe7f3074b0c008c45b9abdaff15792fa7925c07d5adfe060c41f57"
+    },
+    "proofs/B/imo2026_p6/t07_r01.md": {
+      "sha256": "2d7e7fcd0ef7c2db4f6e482d212a7f47cca1b3f3ed197261ef637dba3f16003d",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/role_specific/proofs/t07_r01.md",
+      "source_file_sha256": "2d7e7fcd0ef7c2db4f6e482d212a7f47cca1b3f3ed197261ef637dba3f16003d"
+    },
+    "proofs/B/imo2026_p6/t07_r02.md": {
+      "sha256": "04676d095d7ca0e481b680bd79471879871ac23270061fc77847262e43ad9692",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/role_specific/proofs/t07_r02.md",
+      "source_file_sha256": "04676d095d7ca0e481b680bd79471879871ac23270061fc77847262e43ad9692"
+    },
+    "proofs/B/imo2026_p6/t10_r01.md": {
+      "sha256": "c7884142164e9a1e1c30ae9cb48b062abbc4a51edafa8502ac47e5a456d754d0",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/role_specific/proofs/t10_r01.md",
+      "source_file_sha256": "c7884142164e9a1e1c30ae9cb48b062abbc4a51edafa8502ac47e5a456d754d0"
+    },
+    "proofs/B/imo2026_p6/t10_r02.md": {
+      "sha256": "ecf3018893b363a2b7e931cd9ea79f7ad0b75075a0aa78f39b99a82446bfc3d8",
+      "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/role_specific/proofs/t10_r02.md",
+      "source_file_sha256": "ecf3018893b363a2b7e931cd9ea79f7ad0b75075a0aa78f39b99a82446bfc3d8"
+    },
+    "provenance/generation.json": {
+      "sha256": "2b76e8f8b21fc974531074093e2a0f44e4bb6b1910003d298e60017be6edee32"
+    },
+    "provenance/role_specific_cues.json": {
+      "sha256": "769258ffc5185f5e5ef82648d84dfd7a94f870d63f538efc67cd76f14cc240ae"
+    }
+  }
+}

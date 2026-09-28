@@ -1,0 +1,105 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $a,b,c$ be positive reals such that $a+b+c = 1$, prove that $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$.
+
+**GROUND-TRUTH SOLUTION**
+
+Renormalizing, we may suppose $a + b + c = 3$ and show $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq ab+bc+ca$. Note that $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq ab+bc+ca$ is equivalent to $2\sqrt{a}+2\sqrt{b}+2\sqrt{c} \geq 2ab+2bc+2ca \Leftrightarrow a^2+2\sqrt{a}+b^2+2\sqrt{b}+c^2+2\sqrt{c} \geq a^2+2ab+b^2+2bc+c^2+2ca = (a+b+c)^2$. The inequality is now equivalent to the inequality $a^2+2\sqrt{a}+b^2+2\sqrt{b}+c^2+2\sqrt{c} \geq 9$. Observe that from AM-GM, we have $a^2+\sqrt{a}+\sqrt{a} \geq 3a$. Similarly, we have $b^2+\sqrt{b}+\sqrt{b} \geq 3b$ and $c^2+\sqrt{c}+\sqrt{c} \geq 3c$. Adding these together, we have $a^2+2\sqrt{a}+b^2+2\sqrt{b}+c^2+2\sqrt{c} \geq 3(a+b+c) = 9$. Hence proved.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Reduced the inequality to a more managable form so that one can complete the proof by applying one of the well-knnown inequalities (e.g., Cauchy-Schwarz, AM-GM, Muirhead, or Schur)
+(Almost)
+ 1. Made a minor mistake when applying an inequality, or skipped rigorous justification for such a step.
+
+**PROPOSED SOLUTION**
+
+To prove the inequality $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ for positive reals $a,b,c$ such that $a+b+c=1$, we define the function
+\[ L(a,b,c) = \sqrt{a}+\sqrt{b}+\sqrt{c} - 3\sqrt{3}(ab+bc+ca). \]
+Since the expression is symmetric in $a, b, c$, we seek to find the minimum of $L(a,b,c)$ subject to the constraint $a+b+c=1$.
+
+**1. Reduction to the case of equal variables**
+Fix $c$ and the sum $S = a+b$. We examine $L$ as a function of $a$ for $a \in (0, S)$:
+\[ g(a) = \sqrt{a} + \sqrt{S-a} + \sqrt{c} - 3\sqrt{3}(a(S-a) + cS). \]
+To find the extrema, we compute the derivative with respect to $a$:
+\[ g'(a) = \frac{1}{2\sqrt{a}} - \frac{1}{2\sqrt{S-a}} - 3\sqrt{3}(S-2a) = (S-2a) \left[ \frac{1}{2\sqrt{a(S-a)}(\sqrt{a} + \sqrt{S-a})} - 3\sqrt{3} \right]. \]
+Let $K(a) = 2\sqrt{a(S-a)}(\sqrt{a} + \sqrt{S-a})$. The function $K(a)$ is symmetric about $a=S/2$, vanishing at $a=0$ and $a=S$, and reaching its maximum at $a=S/2$ with $K(S/2) = S\sqrt{2S}$.
+- If $K(S/2) \leq \frac{1}{3\sqrt{3}}$, then $\frac{1}{K(a)} - 3\sqrt{3} \geq 0$ for all $a \in (0, S)$. Thus, $g'(a)$ has the same sign as $S-2a$, meaning $g(a)$ increases on $(0, S/2)$ and decreases on $(S/2, S)$. The minimum occurs at the boundaries $a \to 0$ or $a \to S$.
+- If $K(S/2) > \frac{1}{3\sqrt{3}}$, then $\frac{1}{K(a)} - 3\sqrt{3}$ is negative near $a=S/2$ and positive near the boundaries. Thus, $g'(a)$ is positive near $a=0$, negative for $a \in (a_0, S/2)$, and positive for $a \in (S/2, S-a_0)$. The minimum occurs at either $a=S/2$ or at the boundaries $a \to 0, S$.
+
+In all cases, the minimum of $L(a,b,c)$ must occur when at least two variables are equal (either $a=b$ or one variable is $0$).
+
+**2. Analysis of the case $a=b$**
+Let $a=b$, then $c=1-2a$ for $a \in (0, 1/2)$. The function becomes:
+\[ f(a) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(a^2 + 2a(1-2a)) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(2a - 3a^2). \]
+The derivative is:
+\[ f'(a) = \frac{1}{\sqrt{a}} - \frac{1}{\sqrt{1-2a}} - 6\sqrt{3}(1-3a) = (1-3a) \left[ \frac{1}{\sqrt{a(1-2a)}(\sqrt{a} + \sqrt{1-2a})} - 6\sqrt{3} \right]. \]
+Let $H(a) = \sqrt{a(1-2a)}(\sqrt{a} + \sqrt{1-2a})$. $H(a)$ is 0 at $a=0, 1/2$ and reaches a maximum at $a=1/3$ with $H(1/3) = \frac{2}{3\sqrt{3}} \approx 0.385$. Since $1/6\sqrt{3} \approx 0.096$, there exists a small $a_0$ such that $H(a) = 1/6\sqrt{3}$.
+- For $a \in (0, a_0)$, $H(a) < 1/6\sqrt{3} \implies f'(a) > 0$.
+- For $a \in (a_0, 1/3)$, $H(a) > 1/6\sqrt{3} \implies f'(a) < 0$.
+- For $a \in (1/3, 1/2)$, $H(a) > 1/6\sqrt{3} \implies f'(a) > 0$.
+The minimum is $\min(f(0), f(1/3))$. Since $f(0) = 1$ and $f(1/3) = \frac{2}{\sqrt{3}} + \frac{1}{\sqrt{3}} - 3\sqrt{3}(\frac{2}{3} - \frac{1}{3}) = \sqrt{3} - \sqrt{3} = 0$, the minimum is 0.
+
+**3. Analysis of the case $a \to 0$**
+If $a=0$, then $b+c=1$. The function is $L(0,b,c) = \sqrt{b} + \sqrt{c} - 3\sqrt{3}bc$.
+Using the same logic as above, the minimum occurs at $b=c=1/2$:
+\[ L(0, 1/2, 1/2) = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - 3\sqrt{3}\left(\frac{1}{4}\right) = \sqrt{2} - \frac{3\sqrt{3}}{4} \approx 1.414 - 1.299 = 0.115 > 0. \]
+
+Since the minimum in all possible cases is $L(1/3, 1/3, 1/3) = 0$, we conclude that $L(a,b,c) \geq 0$ for all $a,b,c > 0$ such that $a+b+c=1$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

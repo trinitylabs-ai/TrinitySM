@@ -1,0 +1,187 @@
+{
+  "name": "IMO Proof Pipeline",
+  "components": {
+    "frontend": "0.3.263",
+    "backend": "0.3.290+goldfree.1"
+  },
+  "stage_order": [
+    "raw_generation",
+    "lazy_check",
+    "conditional_in_place_expansion",
+    "R1-C1",
+    "R1-C2"
+  ],
+  "candidates": [
+    "t10_r01",
+    "t10_r02",
+    "t07_r01",
+    "t07_r02"
+  ],
+  "raw_temperatures": [
+    1.0,
+    1.0,
+    0.7,
+    0.7
+  ],
+  "raw_base_seeds": [
+    2360094352,
+    2367214500,
+    3233582896,
+    220229344
+  ],
+  "generation": {
+    "budget_forcing": true,
+    "raw_temperature_1_continuation_temperature": 0.7,
+    "raw_primary_max_tokens": 65536,
+    "lazy_primary_max_tokens": 16384,
+    "budget_forcing_continuation_cap_floor": 32768,
+    "qwen_max_output_tokens_per_request": 65536,
+    "qwen_retry_on_output_cap": true,
+    "global_repetition_fresh_retry": false,
+    "original_reviewer1_detector_preserved": true,
+    "frontend_failure_policy": "retain_actual_checkpoint_continue_survivors",
+    "fully_failed_problem_policy": "pause_queue_allow_explicit_validated_skip",
+    "optional_exact_evidence": false,
+    "grading_inside_solver": false,
+    "terminal_checkpoint": "R1-C2",
+    "cap_recovery": {
+      "policy": "unified-limits-65536-450-one-retry-v1",
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "triggers": [
+        "length",
+        "timeout"
+      ],
+      "recovery_max_tokens": 65536,
+      "recovery_timeout_seconds": 450,
+      "max_recovery_requests_per_physical_request": 1,
+      "repetition": "original_input_plus_clean_prefix",
+      "nonrepetition_primary": "fresh_original_input_only",
+      "nonrepetition_budget_forcing": "completed_valid_primary_else_fail_closed",
+      "recovery_hits_either_limit": "fail_closed_without_retry_or_fallback",
+      "seed_and_sampling": "preserve_original",
+      "early_live_stopper": false
+    },
+    "timeout_recovery": {
+      "policy": "unified-limits-65536-450-one-retry-v1",
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "triggers": [
+        "length",
+        "timeout"
+      ],
+      "recovery_max_tokens": 65536,
+      "recovery_timeout_seconds": 450,
+      "max_recovery_requests_per_physical_request": 1,
+      "repetition": "original_input_plus_clean_prefix",
+      "nonrepetition_primary": "fresh_original_input_only",
+      "nonrepetition_budget_forcing": "completed_valid_primary_else_fail_closed",
+      "recovery_hits_either_limit": "fail_closed_without_retry_or_fallback",
+      "seed_and_sampling": "preserve_original",
+      "early_live_stopper": false
+    },
+    "budget_forcing_primary_fallback": "only_after_initial_limit_without_repetition_and_existing_stage_validation",
+    "qwen_primary_max_output_tokens": 49152,
+    "limit_recovery": {
+      "policy": "unified-limits-65536-450-one-retry-v1",
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "triggers": [
+        "length",
+        "timeout"
+      ],
+      "recovery_max_tokens": 65536,
+      "recovery_timeout_seconds": 450,
+      "max_recovery_requests_per_physical_request": 1,
+      "repetition": "original_input_plus_clean_prefix",
+      "nonrepetition_primary": "fresh_original_input_only",
+      "nonrepetition_budget_forcing": "completed_valid_primary_else_fail_closed",
+      "recovery_hits_either_limit": "fail_closed_without_retry_or_fallback",
+      "seed_and_sampling": "preserve_original",
+      "early_live_stopper": false
+    },
+    "r1_cycle_count": 2,
+    "refinement_bf": {
+      "harness_variant": "B",
+      "policy_id": "refinement-bf-role-cues-v1",
+      "bf_mode": "original_chat_preserved_reasoning_and_answer",
+      "scope": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3"
+      ],
+      "draft_unchanged": false,
+      "auxiliary_unchanged": true
+    },
+    "draft_completion": {
+      "strategy": "original_lazy_check_conditional_full_proof_expansion",
+      "lazy_check_temperature": 0.1,
+      "expansion_temperature": 0.4,
+      "expansion_bf_temperature": 0.4,
+      "prompts_and_bf_text": "unchanged_from_1.8.0",
+      "workers": 4
+    },
+    "post_resolver_audit": {
+      "scope": "refinement_2_to_3",
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "orders": [
+        "forward",
+        "reverse"
+      ],
+      "required_approvals": 4,
+      "workers_total": 4,
+      "temperature": 0.2,
+      "mechanical_validation": "post-resolver-mechanical-validation-v2",
+      "policy_id": "r2-r3-dual-audit-both-orders-v1",
+      "failure_policy": "retain_R2",
+      "identical_proofs": "skip_model_calls",
+      "external_grades_visible": false,
+      "reference_solutions_visible": false
+    }
+  },
+  "run_defaults": {
+    "gemma_endpoint": "http://127.0.0.1:8030/v1",
+    "qwen_endpoint": "http://127.0.0.1:8027/v1",
+    "model_timeout_sec": 600,
+    "seed_namespace": "v263-v290:problem-only",
+    "raw_seed_offset": 0
+  },
+  "servers": {
+    "gemma": {
+      "model": "google/gemma-4-31B-it",
+      "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "assistant_snapshot": "627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+      "flags": {
+        "--dtype": "bfloat16",
+        "--kv-cache-dtype": "bfloat16",
+        "--max-model-len": "262144",
+        "--max-num-batched-tokens": "8192",
+        "--max-num-seqs": "8",
+        "--gpu-memory-utilization": "0.95",
+        "--reasoning-parser": "gemma4"
+      }
+    },
+    "qwen": {
+      "model": "Qwen/Qwen3.6-27B",
+      "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "flags": {
+        "--dtype": "bfloat16",
+        "--kv-cache-dtype": "bfloat16",
+        "--max-model-len": "196608",
+        "--max-num-batched-tokens": "8192",
+        "--max-num-seqs": "4",
+        "--gpu-memory-utilization": "0.90",
+        "--reasoning-parser": "qwen3"
+      }
+    }
+  }
+}

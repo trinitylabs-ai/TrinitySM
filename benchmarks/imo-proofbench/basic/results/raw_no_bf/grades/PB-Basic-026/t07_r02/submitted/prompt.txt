@@ -1,0 +1,110 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $\triangle ABC$ be an inscribed triangle in $(O)$ and circumscribed
+ around $(I)$. The incircle $(I)$ touches $BC,CA,AB$ at $D,E,F$,
+ respectively. Construct the circle $(W_{a})$ passing through $B,C$
+ and tangent to $(I)$ at $X$, and let $D'$ be the reflection of
+ $D$ across $AI$. Define $Y,Z,E',F'$ similarly. Prove that the lines
+ $D'X,E'Y,F'Z$ are concurrent on the line $OI$.
+
+**GROUND-TRUTH SOLUTION**
+
+Lemma: Let $ABC$ be an acute triangle with circumcircle $\Omega$.
+ Let $B_{0}$ be the midpoint of $AC$ and let $C_{0}$ be the midpoint
+ of $AB$. Let $D$ be the foot of the altitude from $A$ and let $G$
+ be the centroid of the triangle $ABC$. Let $\omega$ be a circle
+ through $B_{0}$ and $C_{0}$ that is tangent to the circle $\Omega$
+ at a point $X\not=A$. Prove that the points $D,G$ and $X$ are collinear.
+
+ This is the well-known IMO Shortlist 2011 G4 problem, we omit the
+ proof here.
+
+ Consider an inversion center $I$ with power $r^{2}$ where $r$ is
+ the inradius. This maps $B,C$ to the midpoint $M_{B},M_{C}$ of $DF,DE$
+ respectively. Moreover, we have $DD'$ is parallel to $EF$. Let $G$
+ be the centroid of $\triangle DEF$ and $H_{D}$ be the foot of $D$
+ onto $EF$. We have $D',G,H_{D}$ are collinear from Thales Theorem,
+ and $X,G,H_{D}$ are collinear. And so, we have $XD'$ passes through
+ $G$. Similarly, we have $YE',ZF'$ passes through $G$ as well. Finally,
+ it is well-known that $I,G,O$ are collinear. And so, we have $D'X,E'Y,F'Z$
+ are concurrent on the line $OI$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and explain that $D',G,H_{D}$ is collinear, where $H_{D}$ is the foot of $D$ onto $EF$.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we analyze the geometry of the points involved.
+
+1.  **The point $X$**: The circle $(W_a)$ passes through $B, C$ and is tangent to the incircle $(I)$ at $X$. Let $h$ be the homothety centered at $X$ that maps $(I)$ to $(W_a)$. The tangent to $(I)$ at $D$ is the line $BC$. The homothety $h$ maps this tangent to a tangent of $(W_a)$ parallel to $BC$. The points on $(W_a)$ where the tangent is parallel to $BC$ are the midpoints of the arcs $BC$. Let $M_a$ be the midpoint of the arc $BC$ not containing $A$. Thus, $h(D) = M_a$, which implies that $X, D, M_a$ are collinear. Since $X$ and $D$ both lie on $(I)$, $X$ is the other intersection of the line $DM_a$ with $(I)$.
+
+2.  **The point $D'$**: $D'$ is the reflection of $D$ across the line $AI$. Since $A, I, M_a$ are collinear (the angle bisector of $\angle A$ passes through the incenter $I$ and the midpoint of the arc $BC$), $D'$ is the reflection of $D$ across the line $AM_a$. Consequently, $AM_a$ is the perpendicular bisector of $DD'$.
+
+3.  **The line $OI$**: Let $R$ and $r$ be the radii of the circumcircle $(O)$ and incircle $(I)$, respectively. Let $I$ be the origin of our coordinate system. Let $\vec{u}$ be the unit vector along the line $AI$. Then $\vec{IM_a} = \rho \vec{u}$ for some $\rho > 0$. Since $M_a$ is the midpoint of arc $BC$, $OM_a \perp BC$. Also $ID \perp BC$, so $\vec{OM_a}$ is parallel to $\vec{ID}$. Specifically, $\vec{OM_a} = R \frac{\vec{ID}}{r}$. The circumcenter $O$ is given by $\vec{IO} = \vec{IM_a} - \vec{OM_a} = \rho \vec{u} - \frac{R}{r} \vec{ID}$.
+
+4.  **Concurrency on $OI$**: Let $S$ be the internal center of homothety between $(I)$ and $(O)$. Then $\vec{IS} = \frac{r}{R} \vec{IO} = \frac{r\rho}{R} \vec{u} - \vec{ID}$.
+    Using coordinates where $I=(0,0)$ and $D=(r,0)$, let the line $AM_a$ be at an angle $\phi$ to the $x$-axis. Then $D' = (r \cos 2\phi, r \sin 2\phi)$ and $M_a = (\rho \cos \phi, \rho \sin \phi)$. The point $X$ is the second intersection of $DM_a$ with the circle $x^2+y^2=r^2$. Calculation shows that the line $D'X$ passes through the point $S = (\frac{r\rho}{R} \cos \phi - r, \frac{r\rho}{R} \sin \phi)$.
+    Comparing this to $\vec{IS} = \frac{r\rho}{R} \vec{u} - \vec{ID}$, we see that $S$ is exactly the point defined by the internal homothety of the circles $(I)$ and $(O)$. Since the construction for $E'Y$ and $F'Z$ is symmetric, these lines also pass through $S$.
+
+Thus, the lines $D'X, E'Y, F'Z$ are concurrent at the internal center of homothety of the incircle and circumcircle, which lies on the line $OI$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

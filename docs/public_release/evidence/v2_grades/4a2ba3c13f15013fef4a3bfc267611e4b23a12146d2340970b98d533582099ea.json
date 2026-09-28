@@ -1,0 +1,58 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "0b5c31c1f90932f54ec73b3ad1dd4e8174e4608a2f0b693e3a89b40fa54d3e0d",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "3f358f000885bb454a785727289dba5ed26432910273326bf68ff8e32b2cab70",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "c3a955526351840a6eb66fdc61e1744703d22631f662e9178b3aa7a6699c5fa8",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Section 3 simply asserts that the full winning set is a countable union of lower-dimensional surfaces. This does not follow from the one-step discussion, especially because cuts range over a continuum, and no induction or invariant is given to control later winning positions. This is an unsupported central structural inference under Rule E, capping the score at 3; Rule B does not permit 4 because no explicit checkable equality replaces the missing derivation.",
+    "summary": "The final classification is correct, and the sufficiency construction is substantially sound. However, the entire necessity direction rests on an unproved dimension/countability assertion, so the submitted proof does not establish the claimed classification.",
+    "strengths": [
+      "Correctly identifies the answer as theta = 180°/k for integers k >= 2.",
+      "Correctly parameterizes the two child triangles and recognizes that both retained possibilities must be winning.",
+      "Gives a valid recursive angle-peeling strategy for triangles containing a positive multiple of theta.",
+      "The construction forcing both children to contain multiples of theta is essentially correct, with the already-winning boundary case understood separately.",
+      "The altitude argument correctly handles theta = 90°."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claim that V is a countable union of lower-dimensional surfaces is neither derived nor made precise. Establishing that finite-depth predecessor operations cannot create a full-dimensional winning set is the load-bearing content of necessity and requires a genuine invariant or structural induction."
+      },
+      {
+        "severity": "minor",
+        "description": "The stated recursion V_{n+1} = {positions with both children in V_n} does not, as written, describe all positions winning within finitely many moves, since terminal and lower-rank positions are not included at every later level. A cumulative definition is needed."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:19:32.612090+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00008",
+  "native_rejection_count": 0
+}

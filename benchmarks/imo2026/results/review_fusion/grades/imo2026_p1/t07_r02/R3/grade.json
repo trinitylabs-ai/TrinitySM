@@ -1,0 +1,40 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T11:59:20.396034+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 1,
+  "problem_id": "imo2026_p1",
+  "case_id": "imo2026_p1.explicit.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r02/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete under normal Olympiad standards.",
+    "summary": "The submission correctly proves termination using the strictly decreasing lexicographic measure (N,S), establishes that at least one entry greater than 1 is always preserved, and hence obtains exactly one such entry at termination. It then proves primewise invariance of the gcd of all valuations and reconstructs the terminal integer uniquely from these invariants.",
+    "strengths": [
+      "The change in the total valuation sum S is calculated correctly for every move.",
+      "All cases for the number N of entries greater than 1 are handled, yielding a valid well-founded lexicographic descent.",
+      "The proof correctly observes that a move cannot eliminate every entry greater than 1.",
+      "The primewise valuation transformation is identified correctly as (a,b) mapping to (min(a,b),|a-b|).",
+      "The gcd invariant is justified by the Euclidean algorithm and determines every exponent in the terminal integer."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "881d6d6ac55d9465e06eff7a553e062037bc188a5b2de663d8805414d4ce2a90",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "1fcbe6f26280366a23e1765b8e10ba3f7810fcb54f3cf4af4ac716eec3d75837",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Step 3, the claim that for every n one can choose m∈N with |(z1+nc1)−(z2+mc2)|<c2 is false: the second progression may initially lie entirely above the first point. For example, for the admissible f(t)=t+1, take z1=2, z2=101 and n=1. This is the approximation step supporting constancy of g, so Rule C applies. It becomes correct by replacing “for any n” with “for all sufficiently large n,” after which a nearest-integer choice of m works.",
+    "summary": "The stated classification f(x)=x+c, c≥0, is correct. The orbit argument, nonnegativity of g, exclusion of mixed defect levels via connectedness, and final verification are otherwise sound. However, the proof contains a false load-bearing quantifier in its central constancy argument. Although the repair is immediate and preserves the strategy, Rule C caps the score at 5.",
+    "strengths": [
+      "Correctly derives f(f(y))+y=2f(y) and hence invariance of g along forward orbits.",
+      "Correctly obtains f^n(y)=y+ng(y) and uses positivity to prove g≥0.",
+      "The clopen-set argument excluding coexistence of defects 0 and c is valid.",
+      "The converse verification for f(x)=x+c is algebraically correct."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The lattice-approximation assertion is false for arbitrary n because m is required to be nonnegative. Only the sufficiently large n version is true. This step is load-bearing for proving that all positive values of g coincide, though it is repaired simply by restricting to sufficiently large n."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:41:02.752826+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

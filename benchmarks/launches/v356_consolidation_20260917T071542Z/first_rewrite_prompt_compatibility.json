@@ -1,0 +1,26 @@
+[
+  {
+    "case": "p2",
+    "new_prompt": "/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/generation/run/synthesis/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.user_prompt.txt",
+    "byte_identical_to_successful_source": true,
+    "matching_original_prompt": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/02_formalizations/sample_01/cycles/cycle_01/synthesis/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.pre_budget_forcing.user_prompt.txt",
+    "sha256": "a3f49cec54b70771fb08aa80da1c0bab96c221ff68177146d93f4761f8293a39",
+    "system_prompt_byte_identical": true
+  },
+  {
+    "case": "basic008",
+    "new_prompt": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/generation/run/synthesis/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.user_prompt.txt",
+    "byte_identical_to_successful_source": true,
+    "matching_original_prompt": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run/02_formalizations/sample_08/cycles/cycle_01/synthesis/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.pre_budget_forcing.user_prompt.txt",
+    "sha256": "ea3532809bf9f665925433ac2b0a44cc8b9d7b8d334f891fb7abfa1c2b4c0450",
+    "system_prompt_byte_identical": true
+  },
+  {
+    "case": "basic009",
+    "new_prompt": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/generation/run/synthesis/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.pre_budget_forcing.user_prompt.txt",
+    "byte_identical_to_successful_source": true,
+    "matching_original_prompt": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v353_resume_20260917T035234Z/generation/run/synthesis/02_rewrite/cycle_01/model/attempt_01_cap_32768/modular_exact_evidence_whole_proof_rewrite.pre_budget_forcing.user_prompt.txt",
+    "sha256": "d5df6e5d10621af16b7220dae86c492f9b658fcd7aa49b1b6e260f9f1ada39b6",
+    "system_prompt_byte_identical": true
+  }
+]

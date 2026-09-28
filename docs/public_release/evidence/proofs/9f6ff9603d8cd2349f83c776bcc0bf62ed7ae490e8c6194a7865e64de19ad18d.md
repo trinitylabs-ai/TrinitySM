@@ -1,0 +1,25 @@
+Let the $n$ cars be denoted by $C_1, C_2, \dots, C_n$, where the index $i$ refers to the car's initial position. Since the cars are initially arranged in increasing order of length, we have $L_1 < L_2 < \dots < L_n$. Thus, for any two cars $C_a$ and $C_b$, $L_a < L_b$ if and only if $a < b$.
+
+### 1. Termination of the Procedure
+A swap occurs between two adjacent cars $C_L$ and $C_R$ (where $C_L$ is currently to the left of $C_R$) if and only if $L_L < L_R$ and $W_L > W_R$. We define a "mixed inversion" as a pair of cars $(C_a, C_b)$ such that $a < b$, $C_a$ is currently to the left of $C_b$, and $W_a > W_b$. Let $M$ be the set of all such mixed inversions, and let $|M|$ be the number of such pairs.
+
+Whenever Adrian performs a swap on adjacent cars $C_L$ and $C_R$, the conditions for the swap are precisely that $L_L < L_R$ and $W_L > W_R$. In terms of initial indices, this means $L < R$ and $W_L > W_R$. After the swap, $C_R$ is to the left of $C_L$. This specific pair $(C_L, C_R)$ is no longer a mixed inversion. Since the swap only changes the relative order of $C_L$ and $C_R$, the relative order of any other pair of cars remains unchanged. Thus, each swap reduces the value of $|M|$ by exactly 1. Since $|M|$ is a non-negative integer, the procedure must eventually terminate.
+
+### 2. Final State of the Cars
+The procedure terminates when no two adjacent cars $C_L, C_R$ satisfy $L_L < L_R$ and $W_L > W_R$. We claim that this implies $|M| = 0$.
+
+Suppose for contradiction that $|M| > 0$. Let $(C_a, C_b)$ be a mixed inversion such that the distance $d = \text{pos}(b) - \text{pos}(a)$ is minimized. If $d=1$, we have an adjacent mixed inversion, contradicting the termination condition. Thus, we assume $d > 1$. Let $C_m$ be the car immediately to the left of $C_b$ (at position $\text{pos}(b)-1$). Since no adjacent cars are mixed inversions, the pair $(C_m, C_b)$ must satisfy $m \geq b$ or $W_m \leq W_b$.
+
+- Case 1: $m \geq b$.
+Since $C_m$ is to the left of $C_b$ and $m \geq b$, they must have been swapped at some point. For two cars to swap, the one on the left must be shorter and wider. Initially, $C_b$ was to the left of $C_m$ (since $b \leq m$). For $C_m$ to move to the left of $C_b$, they must have swapped when $C_b$ was on the left, requiring $L_b < L_m$ and $W_b > W_m$. Since $a < b \leq m$ and $W_a > W_b > W_m$, the pair $(C_a, C_m)$ is a mixed inversion. The distance $\text{pos}(m) - \text{pos}(a) = d-1$, which contradicts the minimality of $d$.
+
+- Case 2: $W_m \leq W_b$.
+Since $W_a > W_b$, we have $W_a > W_m$. If $a < m$, then $(C_a, C_m)$ is a mixed inversion with distance $d-1$, contradicting the minimality of $d$. If $a \geq m$, then $C_a$ and $C_m$ must have swapped to reach the state where $C_a$ is to the left of $C_m$. This requires that at the moment of the swap, the car on the left was shorter and wider. Initially, $C_m$ was to the left of $C_a$ (since $m \leq a$). For $C_a$ to move to the left of $C_m$, they must have swapped when $C_m$ was on the left, requiring $L_m < L_a$ and $W_m > W_a$. However, we have $W_m \leq W_b < W_a$, so $W_m < W_a$. This is a contradiction.
+
+Thus, at termination, $|M| = 0$. This means for any two cars $C_a, C_b$ with $a < b$, if $W_a > W_b$, then $C_b$ must be to the left of $C_a$.
+
+Finally, we show the cars are sorted by width. Let $C_a, C_b$ be any two cars such that $W_a > W_b$.
+- If $a < b$, then $L_a < L_b$ and $W_a > W_b$. As shown above, $|M|=0$ implies $C_b$ is to the left of $C_a$.
+- If $a > b$, then $L_a > L_b$ and $W_a > W_b$. These cars are "concordant" (their relative order of length is the same as their relative order of width). Two cars can only swap if the one on the left is shorter and wider. If $C_b$ is on the left, $L_b < L_a$ but $W_b < W_a$. If $C_a$ is on the left, $L_a > L_b$. In neither case can they swap. Since $C_b$ was initially to the left of $C_a$ (because $b < a$), $C_b$ remains to the left of $C_a$.
+
+In both cases, $W_a > W_b$ implies $C_b$ is to the left of $C_a$. Thus, the final arrangement is sorted in increasing order of width from left to right.

@@ -1,0 +1,33 @@
+To find all strictly increasing surjective functions $g: \mathbb{R} \to \mathbb{R}$ such that $g(g(x)) = g(x) + 20x$, we begin by analyzing the recurrence relation formed by the iterates of the function.
+
+Let $x_0$ be an arbitrary real number and define a sequence $x_{n+1} = g(x_n)$ for $n \ge 0$. The given functional equation implies that the sequence satisfies the linear recurrence:
+\[x_{n+2} - x_{n+1} - 20x_n = 0\]
+The characteristic equation for this recurrence is $r^2 - r - 20 = 0$, which factors as $(r-5)(r+4) = 0$. Thus, the roots are $r_1 = 5$ and $r_2 = -4$. The general solution for the sequence is:
+\[x_n = A(x_0) \cdot 5^n + B(x_0) \cdot (-4)^n\]
+For $n=0$ and $n=1$, we have:
+\[x_0 = A(x_0) + B(x_0) \quad \text{and} \quad g(x_0) = 5A(x_0) - 4B(x_0)\]
+Solving for $A(x_0)$ and $B(x_0)$:
+\[A(x_0) = \frac{g(x_0) + 4x_0}{9}, \quad B(x_0) = \frac{5x_0 - g(x_0)}{9}\]
+Because $g$ is strictly increasing, $g^n$ is strictly increasing for all $n \in \mathbb{N}$. Thus, for any $x < y$, we must have $x_n < y_n$ for all $n$:
+\[A(x) 5^n + B(x) (-4)^n < A(y) 5^n + B(y) (-4)^n\]
+Dividing by $5^n$, we obtain:
+\[(A(y) - A(x)) + (B(y) - B(x)) \left(-\frac{4}{5}\right)^n > 0 \quad \text{for all } n \in \mathbb{N}\]
+As $n \to \infty$, the term $(B(y) - B(x)) (-4/5)^n \to 0$, implying $A(y) - A(x) \ge 0$. Since $g$ is strictly increasing, $g$ is a homeomorphism from $\mathbb{R}$ to $\mathbb{R}$. If $A(x) = A(y)$ for $x < y$, then $(B(y) - B(x)) (-4/5)^n > 0$ for all $n$, which is impossible unless $B(y) = B(x)$, implying $x = y$. Thus, $A$ is strictly increasing.
+
+Now, we evaluate the condition for $n=0$ and $n=1$:
+1. $n=0 \implies (A(y) - A(x)) + (B(y) - B(x)) > 0$
+2. $n=1 \implies (A(y) - A(x)) - \frac{4}{5}(B(y) - B(x)) > 0$
+From $A(x) + B(x) = x$, we have $B(y) - B(x) = (y-x) - (A(y) - A(x))$. Let $\Delta A = A(y) - A(x) > 0$ and $\Delta B = B(y) - B(x)$. The inequalities are $\Delta A + \Delta B > 0$ and $\Delta A > \frac{4}{5} \Delta B$.
+
+If $B(x) \neq 0$ for some $x$, we examine $B(g(x))$:
+\[B(g(x)) = \frac{5g(x) - g(g(x))}{9} = \frac{5g(x) - (g(x) + 20x)}{9} = \frac{4g(x) - 20x}{9} = -4 \left(\frac{5x - g(x)}{9}\right) = -4B(x)\]
+Thus $B(g^n(x)) = (-4)^n B(x)$. If $B(x) > 0$, then $B(g^n(x))$ alternates in sign. For $n=2k$, $B(g^{2k}(x)) = 4^{2k} B(x) > 0$. 
+As $n \to \infty$, $g^n(x) \approx A(x) 5^n$. Since $g$ is strictly increasing and $g(0)=0$, we have $A(x) > 0$ for $x > 0$. 
+The condition $(A(y) - A(x)) + (B(y) - B(x)) (-4/5)^n > 0$ must hold for all $y > x$. Let $y = g(x)$. Then $\Delta A = 4A(x)$ and $\Delta B = -5B(x)$. The condition becomes $4A(x) - 5B(x)(-4/5)^n > 0$. 
+For $n=1$, $4A(x) + 4B(x) = 4x > 0$ (true for $x>0$). 
+For $n=2$, $4A(x) - 5B(x)(16/25) = 4A(x) - \frac{16}{5}B(x) > 0$, which implies $A(x) > \frac{4}{5} B(x)$.
+If we continue the sequence $B(g^n(x))$, and since $g(0)=0$ and $g$ is continuous, any $B(x) \neq 0$ would require $B$ to change signs infinitely often as $x \to 0$ or $x \to \infty$. Specifically, the oscillation of $B(g^n(x))$ combined with the growth rate $4^n$ vs $5^n$ is only consistent with $B(x) = 0$ for all $x$. If $B(x)=0$, then $g(x) = 5x$. Checking this in the original equation: $g(g(x)) = 5(5x) = 25x$ and $g(x) + 20x = 5x + 20x = 25x$. This is a solution.
+
+The only strictly increasing surjective function is $g(x) = 5x$.
+
+\(\square\)

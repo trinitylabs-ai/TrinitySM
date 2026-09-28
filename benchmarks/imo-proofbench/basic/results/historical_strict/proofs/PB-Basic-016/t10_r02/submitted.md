@@ -1,0 +1,54 @@
+To prove that the target state is unreachable from the initial state, we employ the concept of the winding number (or index) of a 3-coloring of a cycle graph.
+
+### 1. Definition of the Winding Number
+Let the three colors be represented by the set $\mathbb{Z}_3 = \{0, 1, 2\}$, where we assign:
+- Red (R) $\to 0$
+- White (W) $\to 1$
+- Blue (B) $\to 2$
+
+For any two distinct colors $a, b \in \mathbb{Z}_3$, we define a directed difference function $f(a, b)$ as follows:
+\[ f(a, b) = \begin{cases} 1 & \text{if } b \equiv a + 1 \pmod 3 \\ -1 & \text{if } b \equiv a - 1 \pmod 3 \end{cases} \]
+Note that since $a \neq b$, $b-a \pmod 3$ must be either $1$ or $2 \equiv -1$.
+For a given coloring $C = (c_1, c_2, \dots, c_{101})$ of the stones, the total sum of differences around the circle is:
+\[ S(C) = \sum_{i=1}^{100} f(c_i, c_{i+1}) + f(c_{101}, c_1) \]
+The winding number is defined as $W(C) = \frac{1}{3} S(C)$. Since $f(a, b) \equiv b - a \pmod 3$, we have:
+\[ S(C) \equiv \sum_{i=1}^{100} (c_{i+1} - c_i) + (c_1 - c_{101}) \equiv 0 \pmod 3 \]
+Thus, $S(C)$ is always a multiple of 3, and $W(C)$ is always an integer.
+
+### 2. Invariance under Recoloring
+A modification consists of choosing a stone $k$ and repainting it a different color $c_k'$, provided that no two adjacent stones have the same color. This requires $c_k' \neq c_{k-1}$ and $c_k' \neq c_{k+1}$ (indices mod 101).
+In a 3-coloring, if $c_{k-1} \neq c_{k+1}$, there is only one color available for stone $k$ that differs from both neighbors. Consequently, $c_k$ cannot be changed to a different color. Therefore, a recoloring is only possible if $c_{k-1} = c_{k+1}$.
+
+Let $c_{k-1} = c_{k+1} = a$. The current color $c_k$ and the new color $c_k'$ must be the other two colors in $\{0, 1, 2\} \setminus \{a\}$. The contribution of stone $k$ to the sum $S(C)$ is:
+\[ f(c_{k-1}, c_k) + f(c_k, c_{k+1}) = f(a, c_k) + f(c_k, a) \]
+Since $f(a, b) = -f(b, a)$ for all $a \neq b$, this sum is $f(a, c_k) - f(a, c_k) = 0$.
+Similarly, after recoloring, the contribution is $f(a, c_k') + f(c_k', a) = 0$.
+Since the differences at all other positions remain unchanged, $S(C)$ and $W(C)$ are invariant under any valid recoloring operation.
+
+### 3. Calculation for Initial and Target States
+**Initial State $S_0$:**
+- Stone 101: $c_{101} = 2$ (Blue)
+- Stones $1, 3, \dots, 99$: $c_i = 1$ (White)
+- Stones $2, 4, \dots, 100$: $c_i = 0$ (Red)
+The differences are:
+- For $i=1, 3, \dots, 99$: $f(c_i, c_{i+1}) = f(1, 0) = -1$ (50 terms).
+- For $i=2, 4, \dots, 98$: $f(c_i, c_{i+1}) = f(0, 1) = 1$ (49 terms).
+- For $i=100$: $f(c_{100}, c_{101}) = f(0, 2) = -1$.
+- For $i=101$: $f(c_{101}, c_1) = f(2, 1) = -1$.
+$S(S_0) = 50(-1) + 49(1) - 1 - 1 = -50 + 49 - 2 = -3 \implies W(S_0) = -1$.
+
+**Target State $S_T$:**
+- Stone 101: $c_{101} = 2$ (Blue)
+- Stones $1, 3, \dots, 99$: $c_i = 0$ (Red)
+- Stones $2, 4, \dots, 100$: $c_i = 1$ (White)
+The differences are:
+- For $i=1, 3, \dots, 99$: $f(c_i, c_{i+1}) = f(0, 1) = 1$ (50 terms).
+- For $i=2, 4, \dots, 98$: $f(c_i, c_{i+1}) = f(1, 0) = -1$ (49 terms).
+- For $i=100$: $f(c_{100}, c_{101}) = f(1, 2) = 1$.
+- For $i=101$: $f(c_{101}, c_1) = f(2, 0) = 1$.
+$S(S_T) = 50(1) + 49(-1) + 1 + 1 = 50 - 49 + 2 = 3 \implies W(S_T) = 1$.
+
+### 4. Conclusion
+We have found that $W(S_0) = -1$ and $W(S_T) = 1$. Since the winding number $W$ is an invariant under the allowed modifications, it is impossible to reach state $S_T$ from state $S_0$.
+
+\(\square\)

@@ -1,0 +1,52 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p6",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+  "proof": "evidence/proofs/9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9.md",
+  "completed_at": "2026-09-15T18:29:33.102762+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claim that the minimizing hitting sets eventually belong to a fixed finite family with bounded products is unsupported; the preceding argument still permits products up to roughly \\(a_n/2\\), which is unbounded.",
+    "summary": "The hitting-set formulation and the conditional periodicity argument are useful, but the proof omits the central finiteness argument. It also incorrectly assumes that eventual translation-periodicity can be extended through the initial transient merely by enlarging \\(T\\) and \\(L\\).",
+    "strengths": [
+      "Correctly reformulates admissible terms using prime hitting sets and observes the nested nature of these families.",
+      "Correctly shows that a recurrence defined by finitely many fixed moduli is translation-equivariant and yields eventual periodic increments."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "No valid argument establishes an eventual fixed finite collection of relevant hitting sets; this is the central difficulty of the problem."
+      },
+      {
+        "severity": "major",
+        "description": "Eventual equality \\(a_{n+T}=a_n+L\\) does not automatically imply the required equality for every positive \\(n\\), and enlarging \\(T,L\\) does not repair arbitrary initial terms."
+      },
+      {
+        "severity": "minor",
+        "description": "The assertion that \\(m_n\\) is bounded because of the finite set \\(P_1\\) is not explained, though it can be repaired by noting that \\(P_1\\) hits every later \\(P_i\\)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p6_c3_t07r02_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p6/t07_r02/summary.json",
+    "native_record_file_sha256": "49cde7546efb8a0acc7d875f218e21362c4561006c91b8d895368b99f1b0884d",
+    "selected_record": "benchmarks/imo2026/results/p6_c3_t07r02_20260915T164615Z/grades/imo2026_p6/t07_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "2476aa2fbc1845c415cf312df78aca1b4071412a8e88e10524be3ff121ace92a",
+    "proof": "benchmarks/imo2026/results/p6_c3_t07r02_20260915T164615Z/proofs/imo2026_p6/t07_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c"
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "cc082bbc2576395249dbffa5b314bdce4d6dd34a7e0c4c22450541425f57232c",
+  "problem_id": "imo2026_p3",
+  "repeat": 1,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "d7c32910cfce47394e2db13530cdeb03222f1d1385d1fe39785c191f51f2519b",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The asserted “known property” expressing the alternating sorted sum as a maximum over balanced sign assignments is false. For example, for lengths 0.5, 0.3, 0.2, the alternating sum is 0.4, whereas the stated maximum is 0.5+0.3-0.2=0.6. Thus the subsequent Val_i optimization does not bound the actual payoff. This is a central invalid inference under Rule E; additionally, the incorrect final answer invokes Rule A.",
+    "summary": "The claimed value is false: already for n=2 it gives 3/5, while the correct value is 4/7. The proposed lower-bound construction also fails directly: its gaps are 2/5, 2/5, 1/5, and Xiang can split only the 1/5 gap into two pieces of length 1/10. The sorted pieces are 2/5, 2/5, 1/10, 1/10, so Liu receives only 1/2, not 3/5. This failure alone disproves that construction; the universal upper response from the reference gives the actual bound 4/7, disproving the final classification. Rule A caps the score at 2, and neither direction contains a valid central proof.",
+    "strengths": [
+      "Correctly observes that optimal claiming produces the sum of the odd-ranked sorted lengths.",
+      "Correctly counts that there are at most 2n+1 pieces and relates the payoff to the alternating discrepancy."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final formula (n+1)/(2n+1) is incorrect; for n=2 the value is 4/7 rather than 3/5."
+      },
+      {
+        "severity": "major",
+        "description": "The balanced-sign maximum identity is false and is load-bearing for the claimed lower bound."
+      },
+      {
+        "severity": "major",
+        "description": "The upper-bound argument is only heuristic: it never proves that at most n permissible splits can create the asserted near-equal global pairing, and the claims involving arbitrary epsilon do not follow from the finite split budget."
+      },
+      {
+        "severity": "substantial",
+        "description": "The claimed symmetry Val_i(s)=-Val_i(-s) is generally false for maxima; negating a maximum produces a minimum of the opposite-sign problem, not its maximum."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:45:20.990136+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

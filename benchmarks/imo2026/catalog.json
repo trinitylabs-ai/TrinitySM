@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "imo2026",
+  "display_name": "IMO 2026",
+  "created_at": "2026-09-13T04:15:53.959567+00:00",
+  "path_conventions": {
+    "source": "repository-relative",
+    "path": "benchmark-directory-relative"
+  },
+  "generation_inputs": {
+    "directory": "problems",
+    "statement_only": true,
+    "count": 6,
+    "files": [
+      {
+        "problem_id": "imo2026_p1",
+        "path": "problems/imo2026_p1.json",
+        "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+        "sha256": "d9e74e1c0fb98ddd6b65c7beb80ff1d6dcdbcaff7fb7dd0a426cd709774cbe5c"
+      },
+      {
+        "problem_id": "imo2026_p2",
+        "path": "problems/imo2026_p2.json",
+        "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+        "sha256": "72506ae4ab955d23b3f9434753231978603ff123ba3065d2155ff34eac3685d8"
+      },
+      {
+        "problem_id": "imo2026_p3",
+        "path": "problems/imo2026_p3.json",
+        "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p3.json",
+        "sha256": "f968b62b69a9a617b4831ec9ef7c2fdd721b4389b8b95b7d6b3064dbbb1c2033"
+      },
+      {
+        "problem_id": "imo2026_p4",
+        "path": "problems/imo2026_p4.json",
+        "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+        "sha256": "e162c62ade5f5ec9bb407232b2211d2f59d60aca2fc6a2f994043c90f77f199e"
+      },
+      {
+        "problem_id": "imo2026_p5",
+        "path": "problems/imo2026_p5.json",
+        "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+        "sha256": "328d256dc6816a4873be280c43c1e0eca22bc8e4aff64f897b76af41aa44ad54"
+      },
+      {
+        "problem_id": "imo2026_p6",
+        "path": "problems/imo2026_p6.json",
+        "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p6.json",
+        "sha256": "65f8cbbaa55c4c7c298108056264fccfe0d8c4e8cfaf51738e6c930f31644930"
+      }
+    ]
+  },
+  "new_run_harness": {
+    "name": "IMO Proof Pipeline",
+    "release": "1.0.0",
+    "entrypoint": "harnesses/imo_proof_pipeline/run.py"
+  },
+  "historical_run_note": "The historical review–fusion experiment starts from saved raw/lazy outputs and includes R1-C1/C2/C3, R2/R3, and separate recovered C1 proofs. Its original harness identities are preserved. The v324 P2 tool-call experiment is listed separately and is excluded from the review–fusion matrix.",
+  "scoring_policy": "Historical strict gold-informed Olympiad scoring, 0–7; separate from IMOBench grading.",
+  "artifacts": [
+    {
+      "path": "runs/raw_lazy",
+      "source": "runs/v0257_v108_six_problem_bf_temp_transition_20260904",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/review_fusion_p5",
+      "source": "runs/v0290r1_p5_lazy_checked_fusion_gate_20260908",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/review_fusion_remaining",
+      "source": "runs/v0290r2_remaining_problems_fusion_gate_20260908",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/cycle1_recoveries",
+      "source": "runs/v0290r3_rejected_cycle1_synthesis_20260908",
+      "kind": "directory"
+    },
+    {
+      "path": "runs/p2_tool_call_r47",
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909",
+      "kind": "directory"
+    },
+    {
+      "path": "scores/review_fusion_strict",
+      "source": "runs/imo2026_review_fusion_strict_matrix_20260913",
+      "kind": "directory"
+    },
+    {
+      "path": "scores/p2_tool_call_r47_strict",
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score",
+      "kind": "directory"
+    },
+    {
+      "path": "reports/review_fusion_strict.md",
+      "source": "runs/imo2026_review_fusion_strict_matrix_20260913/report.md",
+      "kind": "file"
+    }
+  ],
+  "result_archives": [
+    {
+      "experiment": "review_fusion",
+      "directory": "results/review_fusion",
+      "scored_checkpoint_snapshot_count": 69
+    },
+    {
+      "experiment": "p2_tool_call_r47",
+      "directory": "results/p2_tool_call_r47",
+      "scored_checkpoint_snapshot_count": 1
+    }
+  ],
+  "future_run_layout": {
+    "experiment_directory": "results/<run_id>",
+    "solver_problem_directory": "problems",
+    "solver_output_directory": "results/<run_id>/generation/run",
+    "proof_snapshots": "results/<run_id>/proofs",
+    "published_grades": "results/<run_id>/grades",
+    "grading_configuration": "results/<run_id>/grading",
+    "grading_work_directory": "results/<run_id>/grading/work",
+    "reports": "results/<run_id>/reports",
+    "experiment_manifest": "results/<run_id>/manifest.json",
+    "explicit_harness_release_required": true,
+    "scoring_environment": "separate from generation",
+    "existing_runs": "retain original paths and launchers",
+    "launcher": "benchmarks/run_experiment.py",
+    "environment_document": "results/<run_id>/ENVIRONMENT.md",
+    "environment_snapshot": "results/<run_id>/environment/start",
+    "artifact_index": "results/<run_id>/artifact_index.jsonl",
+    "snapshot_timing": "before generation; fail before launching solver if capture fails"
+  }
+}

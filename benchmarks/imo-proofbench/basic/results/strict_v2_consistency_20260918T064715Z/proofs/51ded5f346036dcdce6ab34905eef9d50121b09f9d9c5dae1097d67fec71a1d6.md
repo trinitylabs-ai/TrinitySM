@@ -1,0 +1,42 @@
+To prove that $XO$ is perpendicular to $DE$, we establish a coordinate system and use the properties of the altitudes and reflections.
+
+**1. Setup and Coordinates**
+Let $C$ be the origin $(0,0)$ and the line $CA$ be the $x$-axis. Let $a, b, c$ denote the side lengths $BC, AC, AB$ respectively, and $A, B, C$ denote the angles.
+Since $C$ is at the origin and $A$ is on the $x$-axis, we have:
+$C = (0,0)$ and $A = (b, 0)$.
+Since $\triangle ABC$ is acute, the point $B$ lies in the first quadrant. Let $a'$ denote the length of $BC$. Then:
+$B = (a' \cos C, a' \sin C)$.
+
+**2. Coordinates of $D, E, E_1,$ and $E_2$**
+$D$ is the foot of the altitude from $B$ to $AC$. Since $AC$ is the $x$-axis, $D$ is the projection of $B$ onto the $x$-axis:
+$D = (a' \cos C, 0)$.
+$E$ is the foot of the altitude from $C$ to $AB$. The line $AB$ passes through $A(b,0)$ and $B(a' \cos C, a' \sin C)$. The angle $A$ is the interior angle at $A$, so the line $AB$ makes an angle of $180^\circ - A$ with the $x$-axis. The altitude $CE$ is perpendicular to $AB$, so the line $CE$ makes an angle of $(180^\circ - A) - 90^\circ = 90^\circ - A$ with the $x$-axis.
+The length $CE = b \sin A$. Let $r = b \sin A$. Then:
+$E = (r \cos(90^\circ - A), r \sin(90^\circ - A)) = (r \sin A, r \cos A)$.
+$E_1$ is the reflection of $E$ across the line $AC$ (the $x$-axis):
+$E_1 = (r \sin A, -r \cos A)$.
+$E_2$ is the reflection of $E$ across the line $BC$. The line $BC$ makes an angle $C$ with the $x$-axis. The angle of $E$ is $\theta = 90^\circ - A$. The angle of the reflection $E_2$ is $2C - \theta = 2C - (90^\circ - A) = 2C + A - 90^\circ$. Since $CE_2 = CE = r$:
+$E_2 = (r \cos(2C + A - 90^\circ), r \sin(2C + A - 90^\circ))$.
+
+**3. The Circumcircle of $\triangle CE_1 E_2$**
+Let $O$ be the circumcenter and $R_\Gamma$ be the circumradius of $\triangle CE_1 E_2$. Since $CE_1 = CE_2 = r$, $O$ must lie on the angle bisector of $\angle E_1 C E_2$. The angle of $CE_1$ is $A - 90^\circ$ and the angle of $CE_2$ is $2C + A - 90^\circ$. The bisector angle is:
+$\phi = \frac{(A - 90^\circ) + (2C + A - 90^\circ)}{2} = A + C - 90^\circ = (180^\circ - B) - 90^\circ = 90^\circ - B$.
+The distance $CO = R_\Gamma$. In $\triangle CE_1 E_2$, $\angle E_1 C E_2 = 2C$, so $\angle C E_2 E_1 = 90^\circ - C$. By the Law of Sines, $2 R_\Gamma = \frac{CE_1}{\sin(90^\circ - C)} = \frac{r}{\cos C}$, so $R_\Gamma = \frac{r}{2 \cos C}$.
+Thus, $O = (R_\Gamma \cos(90^\circ - B), R_\Gamma \sin(90^\circ - B)) = (R_\Gamma \sin B, R_\Gamma \cos B)$.
+
+**4. Intersection $X$ and Line $XO$**
+The equation of the circumcircle is $(x - R_\Gamma \sin B)^2 + (y - R_\Gamma \cos B)^2 = R_\Gamma^2$. $X$ is the intersection with $AC$ (the $x$-axis, $y=0$):
+$(x - R_\Gamma \sin B)^2 + R_\Gamma^2 \cos^2 B = R_\Gamma^2 \implies (x - R_\Gamma \sin B)^2 = R_\Gamma^2 \sin^2 B$.
+$x = R_\Gamma \sin B \pm R_\Gamma \sin B$. For $X \neq C(0,0)$, we have $X = (2 R_\Gamma \sin B, 0)$.
+The vector $\vec{XO} = O - X = (-R_\Gamma \sin B, R_\Gamma \cos B)$. The slope of $XO$ is:
+$m_{XO} = \frac{R_\Gamma \cos B}{-R_\Gamma \sin B} = -\cot B$.
+
+**5. Slope of $DE$**
+Using $D = (a' \cos C, 0)$ and $E = (r \sin A, r \cos A)$, with $a' = \frac{b \sin A}{\sin B}$ and $r = b \sin A$:
+$m_{DE} = \frac{r \cos A - 0}{r \sin A - a' \cos C} = \frac{b \sin A \cos A}{b \sin A \sin A - \frac{b \sin A \cos C}{\sin B}} = \frac{\cos A}{\sin A - \frac{\cos C}{\sin B}} = \frac{\sin B \cos A}{\sin A \sin B - \cos C}$.
+Using $\cos C = -\cos(A+B) = \sin A \sin B - \cos A \cos B$, we get:
+$m_{DE} = \frac{\sin B \cos A}{\cos A \cos B} = \tan B$.
+
+**6. Conclusion**
+The product of the slopes is $m_{XO} \cdot m_{DE} = (-\cot B)(\tan B) = -1$.
+Thus, $XO$ is perpendicular to $DE$. $\square$

@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T07:58:44.298554+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 5,
+  "problem_id": "imo2026_p5",
+  "case_id": "imo2026_p5.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q5_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The claim that repeatedly applying the neighborhoods around points of B forces B=(0,∞) is asserted without a rigorous propagation or connectedness argument.",
+    "summary": "The solution correctly derives orbit invariance, nonnegativity of g=f-id, equality of all positive defect values, and verifies the resulting translations. The only notable omission is the final justification excluding coexistence of zero and positive defect values. This can be repaired directly: the displayed neighborhood property makes nonempty B both open and closed in (0,∞), or one can explicitly propagate intervals in both directions. Thus the classification f(x)=x+c, c≥0, is supported.",
+    "strengths": [
+      "Correctly obtains g(f(y))=g(y), the iterate formula f^n(y)=y+ng(y), and g(y)≥0.",
+      "Uses a valid orbit-approximation argument to prove that all positive values of g coincide.",
+      "Correctly verifies every function f(x)=x+c with c≥0."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The load-bearing sentence 'By iterating this expansion, B must be R_{>0}' is not demonstrated. A short rigorous argument showing that B has no positive boundary point, or that B is clopen, is needed."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

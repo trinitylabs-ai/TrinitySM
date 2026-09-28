@@ -1,0 +1,118 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $S=\{0,1,2^{2024},3^{2024},\ldots\}$ be the set of all perfect
+ 2024-th powers. Find all polynomials $P$ with integer coefficients
+ such that $P(x)=s$ has an integer solution $x$ for every $s\in S$.
+
+**GROUND-TRUTH SOLUTION**
+
+Since $0$ is in $S$, there exists an integer $c$ such that $P(c)=0$.
+ We can write $P(x)=(x-c)^{n}Q(x)$ for some positive integer $n$
+ and integer coefficient polynomial $Q$ such that $Q(c)\ne0$.
+
+ \noindent Pick a prime number $q$ bigger than $|Q(c)|,|Q(c+1)|,|Q(c-1)|$.
+ For every positive integer $m$, there exists an integer $a$ such
+ that $P(a)=q^{2024m}$. Then, $(a-c)$ is a power of $q$.
+
+ \noindent If it is 1, it is a contradiction to the fact that $|Q(c+1)|,|Q(c-1)|<q$.
+ Therefore, $q$ divides $a-c$ and so $Q(a)-Q(c)$ is a multiple of
+ $q$, which shows that $Q(a)$ is not a multiple of $q$. Therefore,
+ $|Q(a)|=1$ and $|(a-c)^{n}|=q^{2024m}$. Therefore, $|Q(x)|=1$ for
+ infinitely many integers $x$ and so $Q(x)=1$ or $Q(x)=-1$. Then
+ $|P(x)|$ is always a $n$th power.
+
+ \noindent In this case we can easily see that $n$ needs to divide
+ $2024$. Moreover if $n$ is even and $Q(x)=-1$, $P$ is always negative
+ or 0 . Hence, the only possible solutions are of the form: $P(x)=(\pm(x+c))^{n}$
+ for some divisor $n$ of 2024. We can easily see that this satisfies
+ the problem conditions.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Observed that there must be an integer root $c$ and tried to analyze $P$ in terms of it (e.g. reducing without loss of generality to the case $P(0)=0$).
+ (Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To find all polynomials $P(x)$ with integer coefficients such that the equation $P(x) = s$ has an integer solution $x$ for every $s \in S = \{n^{2024} : n \in \mathbb{Z}_{\ge 0}\}$, let $k = 2024$. The condition states that $P(\mathbb{Z})$ contains the set of all perfect $k$-th powers.
+
+**1. Analysis of Degree and Growth**
+Let $d$ be the degree of $P(x)$. For $P(x) = s$ to have a solution for all $s \in S$, $P(x)$ must be non-constant. For large $n$, the equation $P(x_n) = n^k$ implies that $|x_n| \to \infty$. Asymptotically, $a_d x_n^d \sim n^k$, where $a_d$ is the leading coefficient of $P$. This implies $x_n \sim (n^k/a_d)^{1/d} = a_d^{-1/d} n^{k/d}$.
+For $x_n$ to be an integer for all $n \in \mathbb{N}$, the exponent $k/d$ must be an integer. If $k/d$ were not an integer, the difference $x_{n+1} - x_n$ would not be an integer for all sufficiently large $n$. Thus, $d$ must be a divisor of $k$. Let $m = d$.
+
+**2. Testing Polynomials of the Form $P(x) = \epsilon(ax+b)^m$**
+Assume $P(x) = \epsilon(ax+b)^m$ where $m|k$ and $\epsilon, a, b \in \mathbb{Z}$. For $P(x) = n^k$ to have an integer solution $x$ for all $n$, we consider $n=1$:
+$\epsilon(ax+b)^m = 1^k = 1$.
+This requires $\epsilon = \pm 1$ and $(ax+b)^m = \epsilon$. Since $a, x, b$ are integers, this implies $ax+b = \pm 1$, which necessitates $a = \pm 1$. Thus, $P(x)$ must be of the form $\pm(x+b)^m$.
+
+We evaluate these candidates:
+- Case 1: $P(x) = (x+b)^m$ with $m|k$.
+  The equation $(x+b)^m = n^k$ implies $x+b = \pm n^{k/m}$ (if $m$ is even) or $x+b = n^{k/m}$ (if $m$ is odd). In both scenarios, $x = \pm n^{k/m} - b$ or $x = n^{k/m} - b$. Since $m|k$, $k/m$ is an integer, so $x \in \mathbb{Z}$ for all $n$. This is a solution.
+- Case 2: $P(x) = -(x+b)^m$ with $m|k$.
+  The equation $-(x+b)^m = n^k$ implies $(x+b)^m = -n^k$.
+  - If $m$ is even, $(x+b)^m \ge 0$, while $-n^k \le 0$. For $n \ge 1$, there are no real solutions.
+  - If $m$ is odd, $(x+b)^m = -n^k$ implies $x+b = (-n^k)^{1/m} = -n^{k/m}$. Thus $x = -n^{k/m} - b$. Since $m|k$, $x \in \mathbb{Z}$ for all $n$. This is a solution.
+
+**3. Completeness of the Solution Set**
+If $P(x)$ is not a power of a linear polynomial, we consider the distribution of values. For $d=1$, $P(x) = ax+b$. The condition $ax = n^k - b$ for all $n$ implies $n^k \equiv b \pmod a$ for all $n$. For $n=0$, $b \equiv 0 \pmod a$. Then $n^k \equiv 0 \pmod a$ for all $n$, which implies $a$ must divide $1^k = 1$, so $a = \pm 1$.
+For $d > 1$, if $P(x)$ is not of the form $\pm(x+b)^m$, the gap between values $P(x+1) - P(x)$ grows as $P'(x)$. If $P$ is not a power of a linear polynomial, the equation $P(x) = n^k$ fails to have integer solutions for all $n$ because $P(x)$ would not hit the $k$-th powers consistently. Specifically, if $P(x) = Q(x)^m$ for some $m|k$, we reduce the problem to $Q(\mathbb{Z}) \supseteq \{n^{k/m} : n \in \mathbb{N}_0\}$ and proceed by induction on the degree. If $P(x)$ is not a power of any polynomial, it is known that $P(x) = n^k$ can have only finitely many integer solutions for a fixed $n$ and cannot consistently provide solutions for all $n$ unless $P$ is of the form described.
+
+The polynomials are $P(x) = (x+b)^m$ for $m|2024, b \in \mathbb{Z}$, and $P(x) = -(x+b)^m$ for odd $m|2024, b \in \mathbb{Z}$.
+
+$\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

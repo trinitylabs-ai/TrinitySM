@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-008",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e",
+  "proof": "evidence/proofs/764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e.md",
+  "completed_at": "2026-09-17T07:38:29.728922+00:00",
+  "grade": {
+    "score": 6,
+    "category": "Almost"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/grades/PB-Basic-008/t10_r01/tool_rewrite/result.json",
+    "native_record_file_sha256": "fe2cd0993186c6e67f605a7ac68a6253e40ebae1452b3a741a5efc690cc20680",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/grades/PB-Basic-008/t10_r01/tool_rewrite/result.json",
+    "selected_record_file_sha256": "fe2cd0993186c6e67f605a7ac68a6253e40ebae1452b3a741a5efc690cc20680",
+    "proof": "benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/proofs/PB-Basic-008/t10_r01/tool_rewrite.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "c634485121ebde3772fe22e875dd333d41f30284e7a126be2438853b30b3b7c7",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+  "reference_sha256": "ad671ff51b719ad08d069a872df41c8f8b089a5976e753f040ea64b9b784dfb8",
+  "guidelines_sha256": "f518033e93de600f964f6ed752fa5c1209778da02da49045b79e4c50980bf7d9",
+  "response_sha256": "abf2b3c17da7792c162f5cb6817160c2232b00fdc9ef583fe44aead00aedd7f7",
+  "isolation_verified": true
+}

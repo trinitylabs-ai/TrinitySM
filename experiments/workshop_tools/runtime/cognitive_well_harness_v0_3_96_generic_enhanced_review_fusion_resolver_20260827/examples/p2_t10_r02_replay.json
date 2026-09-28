@@ -1,0 +1,17 @@
+{
+  "schema": "cognitive-well-v096-cases-v1",
+  "cases": [
+    {
+      "case_id": "p2_t10_r02_replay",
+      "mode": "replay",
+      "problem_path": "../../math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+      "proof_path": "../../runs/v048_imo2026_p12356_six_lazy_20260823_021215/p2/candidates/t10_r02/checked_proof.md",
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t10_r02",
+      "reviewer_1_result": "../../runs/v049_reviewer1_temp02_temp04_all36_gemma4_bf16_mtp4_2gpu_b4_12k_20260823_1016/reviews/temperature_0_4/gpu0/p2/t10_r02/result.json",
+      "reviewer_2_result": "../../runs/v050_reviewer2_adversarial_all36_qwen36_t02_gpu1_b4_12k_20260823_1053/reviews/temperature_0_2/gpu1/p2/t10_r02/result.json",
+      "reviewer_3_result": "../../runs/v051_reviewer3_certifier_all36_gemma4_bf16_mtp4_t02_gpu0_b4_16k_20260823_1302/reviews/temperature_0_2/gpu0/p2/t10_r02/result.json"
+    }
+  ]
+}

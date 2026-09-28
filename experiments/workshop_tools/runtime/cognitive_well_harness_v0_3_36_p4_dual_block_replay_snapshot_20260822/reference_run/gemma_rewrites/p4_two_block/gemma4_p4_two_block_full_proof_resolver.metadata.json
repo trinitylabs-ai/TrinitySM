@@ -1,0 +1,45 @@
+{
+  "stage": "gemma4_p4_two_block_full_proof_resolver",
+  "started_at": "2026-08-23T04:17:09.289698+00:00",
+  "completed_at": "2026-08-23T04:19:07.852615+00:00",
+  "latency_seconds": 118.56292144209146,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8026/v1",
+  "model": "google/gemma-4-31B-it",
+  "prompt_sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c",
+  "user_prompt_sha256": "f96e0b378e45849fc12d2d02b71285dbd6d7f0fd12361aa70338b9448770311a",
+  "request_sha256": "244c359515b4c4bf977862fb9c1b3c4c367a5aa94a900caed08aae97e0871466",
+  "response_id": "chatcmpl-ba989c7cda420be8",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3176,
+    "total_tokens": 12690,
+    "completion_tokens": 9514,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 65536,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 2040359711,
+    "thinking_token_budget": null,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 14400
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "continuation": false,
+  "prior_generation_sha256": null,
+  "system_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_full_scheduling_handoffs_gemma_replay_20260822/p4_two_block/gemma4_p4_two_block_full_proof_resolver.prompt.txt",
+  "user_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_full_scheduling_handoffs_gemma_replay_20260822/p4_two_block/gemma4_p4_two_block_full_proof_resolver.user_prompt.txt",
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_full_scheduling_handoffs_gemma_replay_20260822/p4_two_block/gemma4_p4_two_block_full_proof_resolver.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_full_scheduling_handoffs_gemma_replay_20260822/p4_two_block/gemma4_p4_two_block_full_proof_resolver.reasoning.txt"
+}

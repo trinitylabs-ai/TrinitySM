@@ -1,0 +1,33 @@
+{
+  "prompt_sha256": "e6edbb340b895d0c34861a8b0d230bc3f77d2ffe56339e2ad52b017e2e839e26",
+  "source_prompt_sha256": "84180b90057d6e46c4c65ed246f66b58256b8356389780d898e3c1e27d5c1c11",
+  "transport_prompt_sha256": "e6e78d00869335d52d1841c674b4668f4185ee96792190b182f61ccbaebaf815",
+  "seed": 3632369392,
+  "model": "gpt-5.6-terra",
+  "endpoint": "codex-exec",
+  "thinking_token_budget": 16384,
+  "schema_sha256": null,
+  "reasoning_effort": "max",
+  "execution_backend": "chatgpt_codex_exec",
+  "sandbox": "read-only",
+  "tools_disabled": [
+    "apps",
+    "browser_use",
+    "computer_use",
+    "image_generation",
+    "in_app_browser",
+    "multi_agent",
+    "shell_tool",
+    "skill_search",
+    "standalone_web_search",
+    "unified_exec"
+  ],
+  "temperature_requested": 0.1,
+  "max_tokens_requested": 65536,
+  "seed_supported_by_backend": false,
+  "source_message_roles": [
+    "system",
+    "user"
+  ],
+  "transport_role_boundary": "joined_existing_text_only"
+}

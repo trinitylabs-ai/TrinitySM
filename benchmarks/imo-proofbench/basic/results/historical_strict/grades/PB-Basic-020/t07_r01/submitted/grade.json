@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T20:56:59.323345+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 20,
+  "problem_id": "PB-Basic-020",
+  "case_id": "PB-Basic-020.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/p20/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/p20/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/p20/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "53b249e15d19bf02e0251cef2ed2a4b627650d7566be5083b7ce29be02132468",
+  "reference_sha256": "3bc7e52de729ccf276fbc3aaace749134e1f86090a0ee562d6dd3f754b3f7782",
+  "proof_sha256": "d37cb67e26a3662738796c849c8db7421c1196375329c05fbafde9cb4779a916",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/tasks.json",
+  "task_manifest_sha256": "f9a0613ad1e6a28094840088803cc4af7e65f84a57f4ed58d6a618eac57a2f93",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly factors the equation, exhausts both divisibility cases, rigorously eliminates all parameters except \\(n=1\\), and verifies the unique solution \\((a,b)=(7,3)\\).",
+    "strengths": [
+      "The discriminant arguments in both cases are algebraically correct and cover every positive integer parameter.",
+      "The consecutive-square bound for \\(n\\ge 3\\) is complete and decisive.",
+      "The resulting pair is explicitly checked in the original equation."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

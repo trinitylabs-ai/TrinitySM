@@ -1,0 +1,10 @@
+{
+  "source_file": "cognitive_well_harness_v0_3_97_four_proof_raw_lazy_enhanced_pipeline_20260827/run.py",
+  "source_file_sha256": "ed7fd1a0446baed9649ce10c0966b7d6fd1142d92c2fe2f49b95e6d6f668081a",
+  "note": "Copied problem-neutral prompt constants, byte-for-byte. Runtime imports from the previous harness are not used.",
+  "files": {
+    "system.txt": "aea702bbb2bb3724a3c50ae71117337361c1856b7fa5a8928fbca5f095385225",
+    "user_prefix.txt": "59d1388a237de6a1b77ef9570c9e0c3715ce98f30df349ca9617e195ea7f45cb",
+    "user_suffix.txt": "7daed8aac343155656d7aed6763aaa78d8eb2ed531319035ce9770e8b7db441a"
+  }
+}

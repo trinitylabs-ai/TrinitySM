@@ -1,0 +1,24 @@
+To determine all non-negative integers $n$ such that $A_n = 1 + 3^{20(n^2+n+1)} + 9^{14(n^2+n+1)}$ is a prime number, we begin by simplifying the expression for $A_n$.
+
+Let $x = n^2+n+1$. Since $n$ is a non-negative integer, $x$ is a positive integer for all $n \ge 0$. The expression for $A_n$ becomes:
+\[ A_n = 1 + 3^{20x} + (3^2)^{14x} = 1 + 3^{20x} + 3^{28x} \]
+We observe that the exponents $20x$ and $28x$ are both multiples of $4x$. Let $y = 3^{4x}$. Substituting this into the expression, we get:
+\[ A_n = 1 + (3^{4x})^5 + (3^{4x})^7 = 1 + y^5 + y^7 \]
+We now analyze the polynomial $f(y) = y^7 + y^5 + 1$. To check for factors, we test if $\omega$ (a primitive cube root of unity, where $\omega^2 + \omega + 1 = 0$ and $\omega^3 = 1$) is a root:
+\[ f(\omega) = \omega^7 + \omega^5 + 1 = (\omega^3)^2 \omega + \omega^3 \omega^2 + 1 = \omega + \omega^2 + 1 = 0 \]
+Since $f(\omega) = 0$, the polynomial $y^2 + y + 1$ must be a factor of $y^7 + y^5 + 1$. Performing polynomial long division or using the identity:
+\[ (y^2 + y + 1)(y^5 - y^4 + y^3 - y + 1) = y^2(y^5 - y^4 + y^3 - y + 1) + y(y^5 - y^4 + y^3 - y + 1) + 1(y^5 - y^4 + y^3 - y + 1) \]
+\[ = (y^7 - y^6 + y^5 - y^3 + y^2) + (y^6 - y^5 + y^4 - y^2 + y) + (y^5 - y^4 + y^3 - y + 1) = y^7 + y^5 + 1 \]
+Thus, we have the factorization:
+\[ A_n = (y^2 + y + 1)(y^5 - y^4 + y^3 - y + 1) \]
+For $A_n$ to be a prime number, one of the factors must be equal to 1. Let's examine the factors for $n \ge 0$:
+1.  Since $n \ge 0$, $x = n^2+n+1 \ge 1$.
+2.  Then $y = 3^{4x} \ge 3^4 = 81$.
+3.  The first factor $y^2 + y + 1$ satisfies $y^2 + y + 1 \ge 81^2 + 81 + 1 = 6561 + 81 + 1 = 6643$. Clearly, $y^2 + y + 1 > 1$.
+4.  The second factor $y^5 - y^4 + y^3 - y + 1$ can be rewritten as $y^4(y-1) + y(y^2-1) + 1$. Since $y \ge 81$, both $y-1$ and $y^2-1$ are positive, so $y^5 - y^4 + y^3 - y + 1 > 1$.
+
+Since $A_n$ is the product of two integers both greater than 1 for all non-negative integers $n$, $A_n$ is always a composite number. Consequently, there are no non-negative integers $n$ for which $A_n$ is prime.
+
+The set of all such non-negative integers $n$ is the empty set.
+
+No non-negative integer $n$ exists. \(\square\)

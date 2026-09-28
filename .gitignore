@@ -1,0 +1,98 @@
+# Local agent/application state
+/.agents/
+/.codex/
+.tools
+
+# Python caches, test state, and local environments
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+.venv-*/
+.venvs/
+venv/
+env/
+
+# Secrets and machine-local environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+
+# Downloaded models, checkpoints, and binary weights
+/.models/
+*.safetensors
+*.gguf
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.bin
+
+# Generated experiment and benchmark artifacts
+/runs/
+/math_harness_runs/
+/math_harness_runtime/
+/gemma4_math_suite_runs/
+/gemma4_math_suite_validation/
+/gemma4_verifier_loop_runs/
+/gemma4_verifier_loop_validation/
+/exports/
+/scratch/
+*.log
+*.runner.log
+*.console.log
+*.tmux.log
+# Raw runtime logs and log archives are excluded from release artifacts.
+logs/
+*.log.*
+*.stdout.txt
+*.stderr.txt
+*.transcript.txt
+*.events.jsonl
+*_events.jsonl
+runtime_logs*.gz
+*.tar.gz
+*.zip
+
+# Large downloaded datasets and vendored dependencies
+/data/
+/third_party/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+*.so
+*.o
+*.a
+
+# Editor and OS metadata
+.DS_Store
+.idea/
+.vscode/
+*~
+*.swp
+
+# Local reproduction caches and internal work notes
+/.workshop/
+# MechMath grading references are obtained directly by the evaluator operator.
+# Metadata and hashes remain public; downloaded PDFs/text must stay local.
+/benchmarks/imo2026/results/**/grading/**/reference.txt
+/benchmarks/imo2026/results/**/grading/**/reference.md
+/experiments/workshop_tools/runtime/**/frozen/gold/
+/WORKLOG.md
+/goal.md
+/GEMMA4_12B_RESUME.md
+/codex_handoff.md
+log/
+*_logs/
+*-logs/

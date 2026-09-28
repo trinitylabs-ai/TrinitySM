@@ -1,0 +1,49 @@
+To prove that it is impossible to reach the target state from the initial state, we employ a topological invariant for 3-colorings of cycle graphs known as the winding number.
+
+### 1. Formalization of the State Space
+Let the 101 stones be represented as vertices $V = \{1, 2, \dots, 101\}$ of a cycle graph $C_{101}$, where vertex $i$ is adjacent to $i+1$ for $1 \le i < 101$, and vertex 101 is adjacent to vertex 1. We map the colors to elements of the group $\mathbb{Z}_3 = \{0, 1, 2\}$ as follows:
+- Blue $\to 0$
+- White $\to 1$
+- Red $\to 2$
+
+A coloring is a function $f: V \to \mathbb{Z}_3$. A coloring is "proper" if $f(i) \neq f(j)$ for all adjacent vertices $i, j$. The permitted operation is a single-vertex recoloring: changing $f(k)$ to $f'(k)$ such that the coloring remains proper.
+
+### 2. The Winding Number Invariant
+For any proper 3-coloring $f$, we define the directed difference between adjacent vertices $i$ and $i+1$ (with $102 \equiv 1$) as $d_i \in \{1, -1\}$ such that:
+\[ d_i \equiv f(i+1) - f(i) \pmod 3 \]
+Since $f$ is a proper coloring, $f(i+1) - f(i) \not\equiv 0 \pmod 3$, so $d_i$ is always either $1$ or $-1$. Specifically, $d_i = 1$ if $f(i+1) - f(i) \equiv 1 \pmod 3$ and $d_i = -1$ if $f(i+1) - f(i) \equiv 2 \pmod 3$.
+
+The winding number $W(f)$ is the sum of these differences:
+\[ W(f) = \sum_{i=1}^{101} d_i \]
+Note that $\sum d_i \equiv \sum (f(i+1) - f(i)) \equiv 0 \pmod 3$. Since $W(f)$ is the sum of 101 odd numbers, $W(f)$ must be an odd multiple of 3.
+
+### 3. Proof of Invariance
+Suppose we change the color of stone $k$ from $f(k)$ to $f'(k)$. Only the differences $d_{k-1}$ and $d_k$ are affected. Let $x = f(k-1)$, $y = f(k)$, $z = f(k+1)$, and $y' = f'(k)$. The change in the winding number is $\Delta W = (d'_{k-1} - d_{k-1}) + (d'_k - d_k)$.
+
+- If $x \neq z$, then there is only one element in $\mathbb{Z}_3 \setminus \{x, z\}$. Thus, $y$ must be that element. For the new coloring to be proper, $y'$ must also be that same element. Thus $y = y'$, and $\Delta W = 0$.
+- If $x = z$, then $y$ and $y'$ must be the two distinct elements of $\mathbb{Z}_3 \setminus \{x\}$. Let $x=0$ without loss of generality. Then $\{y, y'\} = \{1, 2\}$.
+    - If $y=1$ and $y'=2$: $d_{k-1} = \text{sgn}(1-0)=1$ and $d_k = \text{sgn}(0-1)=-1$. Then $d'_{k-1} = \text{sgn}(2-0)=-1$ and $d'_k = \text{sgn}(0-2)=1$.
+    $\Delta W = (-1 - 1) + (1 - (-1)) = -2 + 2 = 0$.
+    - If $y=2$ and $y'=1$: $d_{k-1} = \text{sgn}(2-0)=-1$ and $d_k = \text{sgn}(0-2)=1$. Then $d'_{k-1} = \text{sgn}(1-0)=1$ and $d'_k = \text{sgn}(0-1)=-1$.
+    $\Delta W = (1 - (-1)) + (-1 - 1) = 2 - 2 = 0$.
+
+In all cases, $\Delta W = 0$. Thus, $W(f)$ is invariant under the allowed operations.
+
+### 4. Evaluation of Initial and Final States
+**Initial State $C_0$:**
+Stone 101 is Blue (0), odd stones $1, 3, \dots, 99$ are White (1), and even stones $2, 4, \dots, 100$ are Red (2).
+- For $i=1, \dots, 99$: $d_i = \text{sgn}(f(i+1)-f(i))$. The sequence is $d_1 = \text{sgn}(2-1)=1, d_2 = \text{sgn}(1-2)=-1, \dots, d_{99} = \text{sgn}(2-1)=1$.
+  The sum $\sum_{i=1}^{99} d_i = 1$.
+- $d_{100} = \text{sgn}(f(101)-f(100)) = \text{sgn}(0-2) = \text{sgn}(1) = 1$.
+- $d_{101} = \text{sgn}(f(1)-f(101)) = \text{sgn}(1-0) = \text{sgn}(1) = 1$.
+$W(C_0) = 1 + 1 + 1 = 3$.
+
+**Target State $C_{final}$:**
+Stone 101 is Blue (0), odd stones $1, 3, \dots, 99$ are Red (2), and even stones $2, 4, \dots, 100$ are White (1).
+- For $i=1, \dots, 99$: $d_i = \text{sgn}(f(i+1)-f(i))$. The sequence is $d_1 = \text{sgn}(1-2)=-1, d_2 = \text{sgn}(2-1)=1, \dots, d_{99} = \text{sgn}(1-2)=-1$.
+  The sum $\sum_{i=1}^{99} d_i = -1$.
+- $d_{100} = \text{sgn}(f(101)-f(100)) = \text{sgn}(0-1) = \text{sgn}(2) = -1$.
+- $d_{101} = \text{sgn}(f(1)-f(101)) = \text{sgn}(2-0) = \text{sgn}(2) = -1$.
+$W(C_{final}) = -1 - 1 - 1 = -3$.
+
+Since $W(C_0) = 3$ and $W(C_{final}) = -3$, and the winding number is invariant under the permitted operations, it is impossible to reach the target state. \(\square\)

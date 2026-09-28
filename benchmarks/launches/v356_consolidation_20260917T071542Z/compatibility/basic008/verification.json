@@ -1,0 +1,305 @@
+{
+  "schema": "exact-univariate-positive-radical-sign-cells-v1",
+  "verified": true,
+  "scope": "complete roots and sign cells of the supplied expression on the supplied interval",
+  "mode": "stationary_points",
+  "compilation_sha256": "f1c04b585a573bb41ab9022df8792d2eae02ee90d891cc2ff93d7cbc04acbef1",
+  "domain_proofs": [
+    {
+      "condition": "1 - 2*x**2 > 0",
+      "sample": "181/512",
+      "sign": 1,
+      "no_numerator_or_denominator_zeros_in_interval": true
+    },
+    {
+      "condition": "sqrt(2) != 0",
+      "sample": "181/512",
+      "sign": 1,
+      "isolation": {
+        "polynomial": "sqrt(2)",
+        "polynomial_coefficients": [
+          "sqrt(2)"
+        ],
+        "coefficient_domain": "QQ<sqrt(2)>",
+        "candidates_in_interval": 0,
+        "branch_checks": [],
+        "complete_real_root_isolation": true
+      }
+    },
+    {
+      "condition": "sqrt(1 - 2*x**2) != 0",
+      "sample": "181/512",
+      "sign": 1,
+      "isolation": {
+        "polynomial": "2*x**2 - 1",
+        "polynomial_coefficients": [
+          "2",
+          "0",
+          "-1"
+        ],
+        "coefficient_domain": "ZZ",
+        "candidates_in_interval": 0,
+        "branch_checks": [],
+        "complete_real_root_isolation": true
+      }
+    }
+  ],
+  "root_isolation": {
+    "polynomial": "7776*x**8 - 9072*x**6 + 288*sqrt(3)*x**5 + 3456*x**4 - 240*sqrt(3)*x**3 - 420*x**2 + 48*sqrt(3)*x - 4",
+    "polynomial_coefficients": [
+      "7776",
+      "0",
+      "-9072",
+      "288*sqrt(3)",
+      "3456",
+      "-240*sqrt(3)",
+      "-420",
+      "48*sqrt(3)",
+      "-4"
+    ],
+    "coefficient_domain": "QQ<sqrt(3)>",
+    "candidates_in_interval": 5,
+    "branch_checks": [
+      {
+        "root": {
+          "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)",
+          "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+          "index": 4,
+          "isolating_interval": [
+            "49306969229/549755813888",
+            "98613938459/1099511627776"
+          ],
+          "sturm_root_count": 1
+        },
+        "coefficient_signs": [
+          -1,
+          1
+        ],
+        "accepted_original_branch": true
+      },
+      {
+        "root": {
+          "exact": "CRootOf(3*x**2 - 1, 1)",
+          "polynomial": "3*x**2 - 1",
+          "index": 1,
+          "isolating_interval": [
+            "634803334273/1099511627776",
+            "317401667137/549755813888"
+          ],
+          "sturm_root_count": 1
+        },
+        "coefficient_signs": [
+          -1,
+          1
+        ],
+        "accepted_original_branch": true
+      },
+      {
+        "root": {
+          "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)",
+          "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+          "index": 7,
+          "isolating_interval": [
+            "383690571915/549755813888",
+            "767381143831/1099511627776"
+          ],
+          "sturm_root_count": 1
+        },
+        "coefficient_signs": [
+          -1,
+          1
+        ],
+        "accepted_original_branch": true
+      },
+      {
+        "root": {
+          "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 5)",
+          "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+          "index": 5,
+          "isolating_interval": [
+            "122245063093/1099511627776",
+            "61122531547/549755813888"
+          ],
+          "sturm_root_count": 1
+        },
+        "coefficient_signs": [
+          -1,
+          -1
+        ],
+        "accepted_original_branch": false
+      },
+      {
+        "root": {
+          "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 6)",
+          "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+          "index": 6,
+          "isolating_interval": [
+            "518360900275/1099511627776",
+            "129590225069/274877906944"
+          ],
+          "sturm_root_count": 1
+        },
+        "coefficient_signs": [
+          -1,
+          -1
+        ],
+        "accepted_original_branch": false
+      }
+    ],
+    "complete_real_root_isolation": true
+  },
+  "roots": [
+    {
+      "root": {
+        "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)",
+        "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+        "index": 4,
+        "isolating_interval": [
+          "49306969229/549755813888",
+          "98613938459/1099511627776"
+        ],
+        "sturm_root_count": 1
+      },
+      "left_sign": 1,
+      "right_sign": -1,
+      "classification": "local_maximum"
+    },
+    {
+      "root": {
+        "exact": "CRootOf(3*x**2 - 1, 1)",
+        "polynomial": "3*x**2 - 1",
+        "index": 1,
+        "isolating_interval": [
+          "634803334273/1099511627776",
+          "317401667137/549755813888"
+        ],
+        "sturm_root_count": 1
+      },
+      "left_sign": -1,
+      "right_sign": 1,
+      "classification": "local_minimum"
+    },
+    {
+      "root": {
+        "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)",
+        "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+        "index": 7,
+        "isolating_interval": [
+          "383690571915/549755813888",
+          "767381143831/1099511627776"
+        ],
+        "sturm_root_count": 1
+      },
+      "left_sign": 1,
+      "right_sign": -1,
+      "classification": "local_maximum"
+    }
+  ],
+  "sign_cells": [
+    {
+      "left": {
+        "exact": "0"
+      },
+      "right": {
+        "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)",
+        "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+        "index": 4,
+        "isolating_interval": [
+          "49306969229/549755813888",
+          "98613938459/1099511627776"
+        ],
+        "sturm_root_count": 1
+      },
+      "sample": "11/256",
+      "sign": 1
+    },
+    {
+      "left": {
+        "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)",
+        "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+        "index": 4,
+        "isolating_interval": [
+          "49306969229/549755813888",
+          "98613938459/1099511627776"
+        ],
+        "sturm_root_count": 1
+      },
+      "right": {
+        "exact": "CRootOf(3*x**2 - 1, 1)",
+        "polynomial": "3*x**2 - 1",
+        "index": 1,
+        "isolating_interval": [
+          "634803334273/1099511627776",
+          "317401667137/549755813888"
+        ],
+        "sturm_root_count": 1
+      },
+      "sample": "85/256",
+      "sign": -1
+    },
+    {
+      "left": {
+        "exact": "CRootOf(3*x**2 - 1, 1)",
+        "polynomial": "3*x**2 - 1",
+        "index": 1,
+        "isolating_interval": [
+          "634803334273/1099511627776",
+          "317401667137/549755813888"
+        ],
+        "sturm_root_count": 1
+      },
+      "right": {
+        "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)",
+        "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+        "index": 7,
+        "isolating_interval": [
+          "383690571915/549755813888",
+          "767381143831/1099511627776"
+        ],
+        "sturm_root_count": 1
+      },
+      "sample": "163/256",
+      "sign": 1
+    },
+    {
+      "left": {
+        "exact": "CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)",
+        "polynomial": "419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1",
+        "index": 7,
+        "isolating_interval": [
+          "383690571915/549755813888",
+          "767381143831/1099511627776"
+        ],
+        "sturm_root_count": 1
+      },
+      "right": {
+        "exact": "sqrt(2)/2"
+      },
+      "sample": "45/64",
+      "sign": -1
+    }
+  ],
+  "root_count": 3,
+  "numerical_tolerance_used": false,
+  "source_semantics_verified": false,
+  "source_artifact_sha256": {
+    "theorem": "75574b5be66f38fff9d482ed758985d49d2c543d5625102fae802f7a6725f818",
+    "proof": "5d2a2c6b6fec1ba33337bb20ea5a68f9866ec82798407e8e3e42da324bcf1cdf",
+    "detection": "dc265562ab8cc5f3bd5a9a8335dd3c1684c3793c6008458c6b27a6504d63dd6f",
+    "matcher": "cf1374a26706c204318a770304e11a4e232cd31585dc4ad61e475639c1dc1a26",
+    "draft": "6dd9b3dafe906634f1d6cc6cc04968a5bf1f6b38e4233ed3df98712f060280e2",
+    "compilation": "98155fc2eb1fe9b8241ca8ad7689b63ec9080f7bce9fd8f76cd8b1749db36953",
+    "semantic_audit": "b531da5f9beea98b5e9f98721101d4acf1918ed8145bfbd6398e99314169dc26",
+    "audit_record": "9c570ec93558f42405682f8f7f6bd620a0198bc202bdcfd532cda18dacc92246",
+    "audit_call": "a333d2053d7296623591700cfb066eddd31f1c6f61081e9abc312d612ed69daf",
+    "formalizer_call": "7e6313aa3756854b289125e135c7e984692c718e17dae745bb466696ac0bbe5a",
+    "certificate": "ccbbf2abe69f5b9edc2ffee20f5b1e3062238e95e03291db47d8a5720ab0049b"
+  },
+  "target_label_latex": "R",
+  "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+  "certificate_derivation_supplied": true,
+  "model_must_prove_inserted_lemma": false,
+  "presentation_kind": "statement_with_verified_appendix",
+  "root_computation_replayed": true,
+  "source_binding": "independent_model_audit"
+}

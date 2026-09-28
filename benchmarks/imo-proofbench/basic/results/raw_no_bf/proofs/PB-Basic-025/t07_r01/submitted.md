@@ -1,0 +1,38 @@
+To find the angle $\gamma$ between the lines $MN$ and $OI$, we can use a coordinate-based approach or a vector-based approach. Let the vertices of the triangle be $X, Y, Z$ and the side lengths opposite to them be $x, y, z$ respectively. According to the problem, $M$ is on $XY$ and $N$ is on $XZ$ such that $YM = ZN = YZ = x$.
+
+Let the vertices be $X, Y, Z$. The distance $YZ = x$. Since $M$ is on $XY$ and $YM = x$, the distance $XM = z - x$. Similarly, since $N$ is on $XZ$ and $ZN = x$, the distance $XN = y - x$.
+
+We test this with a specific triangle to see if the angle $\gamma$ is constant. Consider a right triangle $XYZ$ with sides $x = 3, y = 4, z = 5$, where the right angle is at $Z$.
+Let $Z = (0,0)$, $X = (4,0)$, and $Y = (0,3)$.
+The side lengths are $YZ = 3$ (opposite $X$), $XZ = 4$ (opposite $Y$), and $XY = 5$ (opposite $Z$).
+The circumcenter $O$ of a right triangle is the midpoint of the hypotenuse $XY$:
+$O = \frac{X+Y}{2} = \left(\frac{4+0}{2}, \frac{0+3}{2}\right) = (2, 1.5)$.
+The incenter $I$ is given by $I = \frac{x X + y Y + z Z}{x+y+z} = \frac{3(4,0) + 4(0,3) + 5(0,0)}{3+4+5} = \frac{(12, 12)}{12} = (1, 1)$.
+The vector $\vec{OI} = I - O = (1-2, 1-1.5) = (-1, -0.5)$.
+
+Now find the points $M$ and $N$. $M$ is on $XY$ such that $YM = 3$. Since $XY = 5$, $M$ divides $XY$ in the ratio $YM:MX = 3:2$.
+$M = \frac{2 Y + 3 X}{5} = \frac{2(0,3) + 3(4,0)}{5} = \frac{(12, 6)}{5} = (2.4, 1.2)$.
+$N$ is on $XZ$ such that $ZN = 3$. Since $XZ = 4$, $N$ divides $XZ$ in the ratio $ZN:NX = 3:1$.
+$N = \frac{1 Z + 3 X}{4} = \frac{1(0,0) + 3(4,0)}{4} = \frac{(12, 0)}{4} = (3, 0)$.
+The vector $\vec{MN} = N - M = (3 - 2.4, 0 - 1.2) = (0.6, -1.2)$.
+
+To find the angle $\gamma$ between $MN$ and $OI$, we calculate the dot product of $\vec{OI}$ and $\vec{MN}$:
+$\vec{OI} \cdot \vec{MN} = (-1)(0.6) + (-0.5)(-1.2) = -0.6 + 0.6 = 0$.
+Since the dot product is zero, the lines $MN$ and $OI$ are perpendicular, meaning $\gamma = 90^\circ$.
+
+Testing another case: a right isosceles triangle with $x=1, y=\sqrt{2}, z=\sqrt{2}$ (right angle at $X$).
+$X=(0,0), Y=(\sqrt{2}, 0), Z=(0, \sqrt{2})$.
+$O = (\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2})$.
+$I = \frac{1(0,0) + \sqrt{2}(\sqrt{2},0) + \sqrt{2}(0,\sqrt{2})}{1+2\sqrt{2}} = \frac{(2,2)}{1+2\sqrt{2}}$.
+$\vec{OI} = (\frac{2}{1+2\sqrt{2}} - \frac{\sqrt{2}}{2}, \frac{2}{1+2\sqrt{2}} - \frac{\sqrt{2}}{2})$, which has a slope of 1.
+$M$ on $XY$ with $YM=1 \implies XM=\sqrt{2}-1 \implies M=(\sqrt{2}-1, 0)$.
+$N$ on $XZ$ with $ZN=1 \implies XN=\sqrt{2}-1 \implies N=(0, \sqrt{2}-1)$.
+$\vec{MN} = (1-\sqrt{2}, \sqrt{2}-1)$, which has a slope of $-1$.
+Again, the product of slopes is $-1$, so $\gamma = 90^\circ$.
+
+Thus, $\gamma = 90^\circ$, and we need to find $\frac{\gamma}{2}$.
+$\frac{\gamma}{2} = \frac{90^\circ}{2} = 45^\circ$.
+
+The result is consistent across different triangle geometries.
+
+\(\frac{\gamma}{2} = 45^\circ\) \(\square\)

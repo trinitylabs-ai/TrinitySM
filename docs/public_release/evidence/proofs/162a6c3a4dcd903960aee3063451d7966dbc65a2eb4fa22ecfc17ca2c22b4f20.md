@@ -1,0 +1,38 @@
+To determine all functions $f: \mathbb{R}_{>0} \to \mathbb{R}_{>0}$ such that for every $x, y > 0$,
+\[ \sqrt{\frac{x^2 + f(y)^2}{2}} \ge \frac{f(x) + y}{2} \ge \sqrt{x f(y)}, \]
+we first test the form $f(x) = x + c$ for some constant $c \ge 0$.
+Substituting $f(x) = x + c$ into the right inequality:
+\[ \frac{x + c + y}{2} \ge \sqrt{x(y + c)} \iff (x + y + c)^2 \ge 4x(y + c) \iff (x - (y + c))^2 \ge 0, \]
+which is always true. Substituting $f(x) = x + c$ into the left inequality:
+\[ \sqrt{\frac{x^2 + (y+c)^2}{2}} \ge \frac{x + y + c}{2} \iff \frac{x^2 + (y+c)^2}{2} \ge \frac{(x + y + c)^2}{4} \iff (x - (y+c))^2 \ge 0, \]
+which is also always true. Thus, $f(x) = x + c$ for any $c \ge 0$ is a solution.
+
+Next, we prove that these are the only solutions. For any $y > 0$, substituting $x = f(y)$ into the original inequalities gives:
+\[ \sqrt{\frac{f(y)^2 + f(y)^2}{2}} \ge \frac{f(f(y)) + y}{2} \ge \sqrt{f(y) f(y)} \implies f(y) \ge \frac{f(f(y)) + y}{2} \ge f(y). \]
+Thus, we must have the identity $f(f(y)) = 2f(y) - y$ for all $y > 0$.
+Let $g(x) = f(x) - x$. Then $f(x) = x + g(x)$. The identity $f(f(x)) = 2f(x) - x$ becomes:
+\[ f(x) + g(f(x)) = 2f(x) - x \implies g(f(x)) = f(x) - x = g(x). \]
+By induction, $f^{(n)}(x) = x + ng(x)$ for all $n \in \mathbb{N}$. Since the codomain of $f$ is $\mathbb{R}_{>0}$, we must have $x + ng(x) > 0$ for all $n \in \mathbb{N}$ and $x > 0$, which implies $g(x) \ge 0$ for all $x > 0$.
+
+Let $S = \text{Ran}(f)$. Note that $f$ is injective: if $f(u) = f(v)$, then $f(f(u)) = f(f(v))$, so $2f(u) - u = 2f(v) - v$, implying $u = v$.
+For any $x, z \in S$, let $y = f^{-1}(z)$. Then $f(y) = z$ and $y = z - g(z)$ because $g(z) = g(f(y)) = g(y) = f(y) - y = z - y$.
+Substituting $y = z - g(z)$ into the left inequality $\frac{f(x) + y}{2} \le \sqrt{\frac{x^2 + f(y)^2}{2}}$:
+\[ \frac{x + g(x) + z - g(z)}{2} \le \sqrt{\frac{x^2 + z^2}{2}} \implies g(x) - g(z) \le \sqrt{2x^2 + 2z^2} - (x + z). \]
+By symmetry, we obtain:
+\[ |g(x) - g(z)| \le \sqrt{2x^2 + 2z^2} - (x + z) = \frac{(x-z)^2}{\sqrt{2x^2 + 2z^2} + x + z}. \]
+If $g(x) = 0$ for all $x \in S$, then $g(y) = g(f(y)) = 0$ for all $y > 0$.
+Suppose there exists $x \in S$ such that $g(x) > 0$. For any $z \in S$ such that $z > x$, let $n = \lfloor \frac{z-x}{g(x)} \rfloor$. Then $x_n = x + ng(x) \in S$ and $0 \le z - x_n < g(x)$. We have:
+\[ |g(z) - g(x)| = |g(z) - g(x_n)| \le \frac{(z-x_n)^2}{z+x_n} < \frac{g(x)^2}{z}. \]
+As $z \to \infty$ in $S$, $g(z) \to g(x)$. This implies that for any $x \in S$ with $g(x) > 0$, $g(x)$ must be the same constant $c$. Thus, $g(S) \subseteq \{0, c\}$. Since $g(y) = g(f(y))$ and $f(y) \in S$, we have $g(y) \in \{0, c\}$ for all $y \in \mathbb{R}_{>0}$.
+
+Now we use the right inequality $\frac{f(x) + y}{2} \ge \sqrt{x f(y)}$. Substituting $f(x) = x + g(x)$ and $f(y) = y + g(y)$:
+\[ \frac{x + g(x) + y}{2} \ge \sqrt{x(y + g(y))} \iff (x + y + g(x))^2 \ge 4x(y + g(y)) \]
+\[ \iff (x - y)^2 + g(x)^2 + 2xg(x) + 2yg(x) \ge 4xg(y). \]
+Let $D_0 = \{x \in \mathbb{R}_{>0} : g(x) = 0\}$ and $D_c = \{x \in \mathbb{R}_{>0} : g(x) = c\}$. We have $\mathbb{R}_{>0} = D_0 \cup D_c$.
+Suppose both $D_0$ and $D_c$ are non-empty. For $x \in D_0$ and $y \in D_c$, the inequality becomes $(x - y)^2 \ge 4xc$.
+For a fixed $x \in D_0$, any $y \in \mathbb{R}_{>0}$ such that $(x - y)^2 < 4xc$ must be in $D_0$. This means the interval $(x - 2\sqrt{xc}, x + 2\sqrt{xc}) \cap \mathbb{R}_{>0}$ is contained in $D_0$, so $D_0$ is open.
+For a fixed $y \in D_c$, any $x \in \mathbb{R}_{>0}$ such that $(x - y)^2 < 4xc$ must be in $D_c$. The inequality $(x - y)^2 < 4xc$ is equivalent to $x^2 - 2x(y + 2c) + y^2 < 0$, which holds for $x \in (y + 2c - 2\sqrt{yc + c^2}, y + 2c + 2\sqrt{yc + c^2})$. Thus, this interval (intersected with $\mathbb{R}_{>0}$) is contained in $D_c$, so $D_c$ is open.
+Since $\mathbb{R}_{>0}$ is a connected set, it cannot be the union of two disjoint non-empty open sets. Thus, either $D_0 = \emptyset$ or $D_c = \emptyset$.
+Therefore, $g(x)$ must be a constant $c \ge 0$ for all $x \in \mathbb{R}_{>0}$.
+
+The functions satisfying the condition are $f(x) = x + c$ for any constant $c \ge 0$.

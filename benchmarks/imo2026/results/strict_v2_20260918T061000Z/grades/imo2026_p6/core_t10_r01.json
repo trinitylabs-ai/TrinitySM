@@ -1,0 +1,64 @@
+{
+  "problem_id": "imo2026_p6",
+  "candidate": "t10_r01",
+  "group": "core",
+  "grader_candidate": "core_t10_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t10_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260.md",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/36547a3ca2c7995f34aeaca61ccfb0888d5e6685415e5ae54b0d701296c704f8.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t10_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:24:38.147864+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the inference that, if a witness satisfies H∩P_i={p} and P_i∩P(m)≠∅, then p∈P(m). The prime in P_i∩P(m) may lie outside H; for example, P_i may contain p and q with q∈P(m) but q∉H. Thus H⊆H_N∪P(m) is unsupported, so the claimed finiteness and stabilization of the sets S_n do not follow. This is an unsupported central structural claim under Rule E.",
+    "summary": "The proof correctly models S_n using finite hitting sets and correctly observes that a stabilized S_n would be periodic and would yield the required index shift. However, its central argument that only finitely many minimal hitting sets can occur is invalid. Establishing the needed finiteness requires substantial new structural reasoning, so Rule E caps the score at 3.",
+    "strengths": [
+      "Correctly identifies membership in S_n with the prime support being a hitting set for P_1,…,P_n.",
+      "Correctly concludes that each fixed S_n is periodic as a finite union of sets of multiples.",
+      "The enumeration argument and the final deduction from eventual stabilization to a translation period are essentially sound, conditional on stabilization."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The claim that earlier terms belong to S_n is incorrectly attributed to S_n⊆S_{n-1}; inclusion gives the opposite membership implication. The claim is nevertheless repaired directly because a_n shares a factor with every earlier term, and gcd is symmetric."
+      },
+      {
+        "severity": "minor",
+        "description": "A nondecreasing sequence of positive integers need not stabilize merely because its terms are positive. Here stabilization of m_n would follow from the omitted bound m_n≤a_1, since a_1∈S_n for every n."
+      },
+      {
+        "severity": "major",
+        "description": "From H∩P_i={p} and P_i∩P(m)≠∅, the proof falsely infers p∈P(m). Consequently the containment H⊆H_N∪P(m), the finiteness of all possible minimal hitting sets, and eventual stabilization of S_n are not proved. This is the load-bearing heart of the solution."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "074ec65cda4d88eb14ed4813e75c2d02d08c2a5b16d34e7a55652ab7b42bed49",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

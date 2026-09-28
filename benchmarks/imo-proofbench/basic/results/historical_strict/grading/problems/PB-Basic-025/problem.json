@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-025",
+  "problem": "Given a triangle $XYZ$ with circumcenter $O$, the incircle of triangle\n $XYZ$ has center $I$. Let $M,N$ on the sides $XY,XZ$\n respectively such that $YM=ZN=YZ$. If $\\gamma$ is the angle created\n by two lines $MN,OI$, what is $\\frac{\\gamma}{2}$ in terms of degree?"
+}

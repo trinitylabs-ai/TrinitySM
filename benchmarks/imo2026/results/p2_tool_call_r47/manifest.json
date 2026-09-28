@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "benchmark": "imo2026",
+  "experiment": "p2_tool_call_r47",
+  "archived_at": "2026-09-13T04:25:56.562230+00:00",
+  "source_summary": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score/summary.json",
+  "source_summary_sha256": "d28c8b9459108c432a0eff646d8a5e3153a848b1723c577e7c5fc6e9b6c36325",
+  "snapshot_count": 1,
+  "pending_or_unavailable": [],
+  "harness_note": "v0.3.324 checked-certificate tool-call rewrite, separate from review–fusion. Saved r47 source freeze is linked.",
+  "rows": [
+    {
+      "problem_id": "imo2026_p2",
+      "candidate_id": "t07_r01",
+      "checkpoint": "submitted",
+      "proof": "proofs/imo2026_p2/t07_r01/submitted.md",
+      "grade_directory": "grades/imo2026_p2/t07_r01/submitted",
+      "score": 7,
+      "proof_sha256": "b70d9fe59d8c048f64d34c445ae9b193a1d1562b7fcd05788ced5fab2d4c25d6",
+      "proof_hash_mode": "stripped_text",
+      "source_proof": "/opt/proof-workshop/runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/rewrite/rewritten_proof.md",
+      "grader_model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "reused_from": null,
+      "recovery": false
+    }
+  ],
+  "copied_artifact_inventory": {
+    "imo2026/results/p2_tool_call_r47/proofs/imo2026_p2/t07_r01/submitted.md": {
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/rewrite/rewritten_proof.md",
+      "sha256": "efa670cdd6360cff784f6f5997043540166b33cda6eb9c5c257eef54fd8c135c"
+    },
+    "imo2026/results/p2_tool_call_r47/grades/imo2026_p2/t07_r01/submitted/source_summary.json": {
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score/summary.json",
+      "sha256": "d28c8b9459108c432a0eff646d8a5e3153a848b1723c577e7c5fc6e9b6c36325"
+    },
+    "imo2026/results/p2_tool_call_r47/grades/imo2026_p2/t07_r01/submitted/manifest.json": {
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score/p2/t07_r01/manifest.json",
+      "sha256": "c7c12a75caec4d20f41d7949e6bb4e20042d51efed5fc848a7578163bfa7d6b3"
+    },
+    "imo2026/results/p2_tool_call_r47/grading/rubric.txt": {
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score/p2/t07_r01/grading_policy.txt",
+      "sha256": "4c8c354e97adfdc7b0c31b0ebc3d10edc6f985fa1485486917ebcaf1067cd3f7"
+    },
+    "imo2026/results/p2_tool_call_r47/grading/problems/imo2026_p2/reference.txt": {
+      "source": "math_harness_references/imo2026_mechmath_20260817/Q2_solution.txt",
+      "sha256": "839e329d7b3b37b1b63a224df28b16c133ba083240e32eeb0b9ed205f1d9e9bc"
+    },
+    "imo2026/results/p2_tool_call_r47/grading/problems/imo2026_p2/problem.json": {
+      "source": "math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+      "sha256": "72506ae4ab955d23b3f9434753231978603ff123ba3065d2155ff34eac3685d8"
+    },
+    "imo2026/results/p2_tool_call_r47/generation/rewrite_manifest.json": {
+      "source": "runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/rewrite/manifest.json",
+      "sha256": "9338102c8bb717f18e465ac333afcc5957e028e3e058a1844e3d44296d853776"
+    }
+  }
+}

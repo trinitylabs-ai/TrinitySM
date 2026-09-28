@@ -1,0 +1,20 @@
+To find the minimum possible value of $m_A = \min A$ for a set $A \subset \{1, 2, \ldots, 2000\}$ with $|A| = 1000$ such that no element in $A$ divides another, we analyze the structure of such an antichain.
+
+Every integer $n \in \{1, 2, \ldots, 2000\}$ can be uniquely represented in the form $n = 2^k \cdot o$, where $o$ is an odd integer. The odd parts $o$ belong to the set $O = \{1, 3, 5, \ldots, 1999\}$, which contains exactly 1000 elements. If any two distinct elements $a, b \in A$ had the same odd part $o$, one would necessarily divide the other (e.g., if $a = 2^{k_1} o$ and $b = 2^{k_2} o$ with $k_1 < k_2$, then $a \mid b$). Since $|A| = 1000$, each odd integer $o \in O$ must be the odd part of exactly one element in $A$. Thus, we can write $A = \{ a_o = 2^{k_o} o \mid o \in O \}$ for some non-negative integers $k_o$.
+
+The condition that no element in $A$ divides another implies that if $o, o' \in O$ and $o$ is a proper divisor of $o'$, then $a_o \nmid a_{o'}$. Let $o' = m \cdot o$ for some odd integer $m > 1$. The condition $2^{k_o} o \nmid 2^{k_{o'}} m o$ is equivalent to $2^{k_o} \nmid 2^{k_{o'}} m$. Since $m$ is odd, the only way this holds is if $k_o > k_{o'}$.
+
+Let $h(o)$ denote the height of $o$ in the poset $(O, \mid)$, which is the length of the longest chain $o = o_0 \mid o_1 \mid \ldots \mid o_{n-1} \le 1999$. For any such chain, the condition $k_{o_0} > k_{o_1} > \ldots > k_{o_{n-1}} \ge 0$ must hold, which implies $k_{o_0} \ge n-1$. Thus, for any $o \in O$, we have $k_o \ge h(o) - 1$. This implies that each element $a_o \in A$ satisfies:
+\[ a_o = 2^{k_o} o \ge 2^{h(o)-1} o. \]
+The smallest element of $A$ is $m_A = \min_{o \in O} a_o \ge \min_{o \in O} 2^{h(o)-1} o$. To find the minimum of $f(o) = 2^{h(o)-1} o$, we note that the longest chain starting at $o$ is formed by multiplying by the smallest odd prime, 3. Thus, $h(o) = \lfloor \log_3(1999/o) \rfloor + 1$. We evaluate $f(o)$ for different values of $k = h(o)-1$:
+- If $k=6$, then $h(o)=7$, which requires $o \cdot 3^6 \le 1999 \implies o \le 2.74$. The only odd $o$ is $1$, giving $f(1) = 2^6 \cdot 1 = 64$.
+- If $k=5$, then $h(o)=6$, which requires $3^5 \le 1999/o < 3^6 \implies 2.74 < o \le 8.22$. The odd $o$ are $3, 5, 7$, giving $f(3) = 32 \cdot 3 = 96$, $f(5) = 160$, and $f(7) = 224$.
+- If $k=4$, then $h(o)=5$, which requires $8.22 < o \le 24.67$. The smallest odd $o$ is $9$, giving $f(9) = 16 \cdot 9 = 144$.
+- If $k=3$, then $h(o)=4$, which requires $24.67 < o \le 74.03$. The smallest odd $o$ is $25$, giving $f(25) = 8 \cdot 25 = 200$.
+- If $k=2$, then $h(o)=3$, which requires $74.03 < o \le 222.11$. The smallest odd $o$ is $75$, giving $f(75) = 4 \cdot 75 = 300$.
+- If $k=1$, then $h(o)=2$, which requires $222.11 < o \le 666.33$. The smallest odd $o$ is $223$, giving $f(223) = 2 \cdot 223 = 446$.
+- If $k=0$, then $h(o)=1$, which requires $666.33 < o \le 1999$. The smallest odd $o$ is $667$, giving $f(667) = 667$.
+
+The minimum value of $f(o)$ is $f(1) = 64$. We can construct a valid set $A$ by setting $k_o = h(o)-1$ for all $o \in O$. In this case, $a_o = 2^{h(o)-1} o \le 3^{h(o)-1} o \le 1999 \le 2000$, so $A \subset \{1, \ldots, 2000\}$. The condition $k_o > k_{o'}$ for $o \mid o'$ is satisfied by the definition of $h(o)$, and as shown, this ensures $A$ is an antichain. For this set, $m_A = \min f(o) = 64$. Since $m_A \ge 64$ for any such $A$, the minimum value is 64.
+
+\(\square\)

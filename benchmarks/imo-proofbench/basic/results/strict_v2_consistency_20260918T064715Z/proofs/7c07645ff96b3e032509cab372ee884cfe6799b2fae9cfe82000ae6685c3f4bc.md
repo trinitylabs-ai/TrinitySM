@@ -1,0 +1,50 @@
+To find all functions $f: \mathbb{Z} \rightarrow \mathbb{Z}$ such that for all $x, y \in \mathbb{Z}$,
+\[ f(2x) + 2f(y) = f(f(x+y)), \tag{1} \]
+we proceed as follows:
+
+**1. Deriving Functional Relations**
+First, we evaluate the equation at specific values to find relationships between $f(0)$, $f(x)$, and $f(f(x))$.
+Let $f(0) = c$.
+Setting $x = 0$ in (1):
+\[ f(0) + 2f(y) = f(f(y)) \implies f(f(y)) = 2f(y) + c. \tag{2} \]
+Setting $y = 0$ in (1):
+\[ f(2x) + 2f(0) = f(f(x)) \implies f(2x) + 2c = f(f(x)). \tag{3} \]
+Substituting (2) into (3), we get:
+\[ f(2x) + 2c = 2f(x) + c \implies f(2x) = 2f(x) - c. \tag{4} \]
+
+**2. Reduction to Cauchy's Equation**
+Now, substitute the expression for $f(f(x+y))$ from (2) back into the original equation (1):
+\[ f(2x) + 2f(y) = 2f(x+y) + c. \tag{5} \]
+Substitute the expression for $f(2x)$ from (4) into (5):
+\[ (2f(x) - c) + 2f(y) = 2f(x+y) + c \implies 2f(x) + 2f(y) - 2c = 2f(x+y). \]
+Dividing by 2, we obtain:
+\[ f(x) + f(y) - c = f(x+y). \]
+Define a new function $g: \mathbb{Z} \rightarrow \mathbb{Z}$ by $g(n) = f(n) - c$. Then $f(n) = g(n) + c$. Substituting this into the equation above:
+\[ (g(x) + c) + (g(y) + c) - c = g(x+y) + c \implies g(x) + g(y) = g(x+y). \]
+This is Cauchy's functional equation on the integers. The general solution for $g: \mathbb{Z} \rightarrow \mathbb{Z}$ is $g(n) = an$ for some constant $a \in \mathbb{Z}$. Thus,
+\[ f(n) = an + c. \]
+
+**3. Determining Constants $a$ and $c$**
+We substitute $f(n) = an + c$ back into the original equation (1) to find the possible values of $a$ and $c$:
+LHS: $f(2x) + 2f(y) = (a(2x) + c) + 2(ay + c) = 2ax + 2ay + 3c$.
+RHS: $f(f(x+y)) = f(a(x+y) + c) = a(a(x+y) + c) + c = a^2x + a^2y + ac + c$.
+For the equation to hold for all $x, y \in \mathbb{Z}$, the coefficients must be equal:
+1. $2a = a^2 \implies a(a-2) = 0$, so $a = 0$ or $a = 2$.
+2. $3c = ac + c \implies 2c = ac \implies c(a-2) = 0$.
+
+Case 1: $a = 0$.
+Then $c(0-2) = 0 \implies -2c = 0 \implies c = 0$.
+This gives the solution $f(n) = 0 \cdot n + 0 = 0$.
+
+Case 2: $a = 2$.
+Then $c(2-2) = 0 \implies 0 = 0$. This is true for any integer $c$.
+This gives the solution $f(n) = 2n + c$ for any $c \in \mathbb{Z}$.
+
+**4. Verification**
+- If $f(n) = 0$, then $0 + 2(0) = 0$, which is $f(f(x+y)) = f(0) = 0$. (Valid)
+- If $f(n) = 2n + c$, then $f(2x) + 2f(y) = (4x+c) + 2(2y+c) = 4x+4y+3c$.
+  And $f(f(x+y)) = f(2(x+y)+c) = 2(2x+2y+c)+c = 4x+4y+3c$. (Valid)
+
+The functions are $f(n) = 0$ and $f(n) = 2n + c$ for any $c \in \mathbb{Z}$.
+
+\(\square\)

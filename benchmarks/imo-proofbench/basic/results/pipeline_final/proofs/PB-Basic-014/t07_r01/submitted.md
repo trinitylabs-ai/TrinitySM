@@ -1,0 +1,27 @@
+To prove that one specific flag color is held by at least 200 Googlers, we model the problem using extremal set theory.
+
+Let $N = 2024$ be the number of Googlers. For each Googler $i \in \{1, 2, \dots, N\}$, let $S_i$ be the set of colors of the flags they hold. We are given that for every $i$, the number of flags is $|S_i| \le 5$. The problem states that in any group of three Googlers, at least two people hold flags of the same color. In terms of our sets, this means that for any three indices $i, j, k \in \{1, \dots, N\}$, at least one of the intersections $S_i \cap S_j$, $S_i \cap S_k$, or $S_j \cap S_k$ is non-empty.
+
+This condition implies that the family of sets $\mathcal{F} = \{S_1, S_2, \dots, S_N\}$ has a matching number $\nu(\mathcal{F}) \le 2$. The matching number $\nu(\mathcal{F})$ is the maximum number of pairwise disjoint sets in the family. If $\nu(\mathcal{F}) \ge 3$, there would exist three Googlers $i, j, k$ such that $S_i, S_j, S_k$ are pairwise disjoint, meaning no two of them share a color, which contradicts the given condition.
+
+We first consider the possibility that some Googlers hold no flags. If two Googlers $i$ and $j$ hold no flags ($S_i = \emptyset$ and $S_j = \emptyset$), then for any third Googler $k$, the intersections $S_i \cap S_j$, $S_i \cap S_k$, and $S_j \cap S_k$ are all empty. This violates the condition. Thus, at most one Googler can hold no flags.
+
+**Case 1: $\nu(\mathcal{F}) = 1$ (or one Googler holds no flags).**
+If $\nu(\mathcal{F}) = 1$, then every pair of sets in $\mathcal{F}$ intersects. Pick any non-empty set $S_1 \in \mathcal{F}$. Since every $S_i \in \mathcal{F}$ must intersect $S_1$, the elements of $S_1$ form a hitting set for $\mathcal{F}$. Because $|S_1| \le 5$, by the Pigeonhole Principle, at least one color $c \in S_1$ must be contained in at least
+\[ \frac{N}{|S_1|} \ge \frac{2024}{5} = 404.8 \]
+sets. Thus, there is a color held by at least 405 Googlers. (If one Googler holds no flags, the remaining 2023 Googlers form an intersecting family, and a similar argument gives $2023/5 = 404.6$, so $\Delta \ge 405$).
+
+**Case 2: $\nu(\mathcal{F}) = 2$.**
+If $\nu(\mathcal{F}) = 2$, there exist two disjoint sets $S_1, S_2 \in \mathcal{F}$ such that $S_1 \cap S_2 = \emptyset$. For any other set $S_i \in \mathcal{F}$, the group $\{S_1, S_2, S_i\}$ must contain at least one intersecting pair. Since $S_1$ and $S_2$ are disjoint, $S_i$ must intersect $S_1$ or $S_2$. This means $S_i \cap (S_1 \cup S_2) \neq \emptyset$ for all $i \in \{1, \dots, N\}$.
+
+The set $X = S_1 \cup S_2$ is a hitting set for the entire family $\mathcal{F}$. The size of this hitting set is:
+\[ |X| = |S_1| + |S_2| \le 5 + 5 = 10 \]
+Since every one of the $N = 2024$ sets contains at least one element from $X$, we can sum the occurrences of the elements of $X$ across all sets:
+\[ \sum_{c \in X} \text{count}(c) \ge N = 2024 \]
+By the Pigeonhole Principle, there must exist at least one color $c \in X$ such that:
+\[ \text{count}(c) \ge \frac{N}{|X|} \ge \frac{2024}{10} = 202.4 \]
+Since the number of Googlers must be an integer, there exists a color held by at least 203 Googlers.
+
+In both cases, there is a flag color held by at least 203 Googlers, which is greater than 200.
+
+\(\square\)

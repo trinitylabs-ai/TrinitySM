@@ -1,0 +1,20 @@
+Let $k = 2024$. We seek all polynomials $P \in \mathbb{Z}[x]$ such that for every $n \in \mathbb{Z}_{\ge 0}$, the equation $P(x) = n^k$ has an integer solution $x_n$.
+
+If $P$ is constant, $P(x) = C$, then $C = n^k$ for all $n$, which is impossible. Thus $P$ is non-constant. Let $d = \deg P$. As $n \to \infty$, $n^k \to \infty$, so the integer solutions $x_n$ must satisfy $|x_n| \to \infty$. Let $P(x) = a_d x^d + a_{d-1} x^{d-1} + \dots + a_0$ with $a_d \neq 0$. For large $n$, the equation $P(x) = n^k$ has $d$ complex roots. The real roots $r_{n, 1}, \dots, r_{n, m}$ (where $m \le d$) can be expressed as Puiseux series in $n$ as $n \to \infty$:
+$$r_{n, j} = C_j n^{k/d} + D_j + O(n^{-k/d})$$
+for constants $C_j, D_j$. Since $x_n$ is an integer solution, $x_n \in \{r_{n, 1}, \dots, r_{n, m}\}$ for all $n$. By the pigeonhole principle, there exists some index $j \in \{1, \dots, m\}$ such that the set $S_j = \{n \in \mathbb{Z}_{\ge 0} : x_n = r_{n, j}\}$ is infinite. For $n \in S_j$, we have $x_n = C_j n^{k/d} + D_j + \epsilon_n$, where $\epsilon_n \to 0$ as $n \to \infty$.
+
+If $k/d$ were not an integer, the distance from $C_j n^{k/d} + D_j$ to the nearest integer would not tend to 0 as $n \to \infty$ for an infinite set $S_j$ of the form described. Specifically, for $x_n - (C_j n^{k/d} + D_j) \to 0$ to hold for integers $x_n$, $C_j n^{k/d} + D_j$ must be arbitrarily close to an integer for all $n \in S_j$. This is impossible unless $k/d$ is an integer. Thus, $r = k/d$ must be an integer.
+
+Let $Q(n) = C_j n^r + D_j$. Since $x_n - Q(n) \to 0$ and $x_n$ is an integer, it must be that $x_n = Q(n)$ for all $n \in S_j$ sufficiently large. This implies $Q(n)$ takes integer values for infinitely many $n$, so $Q(x) \in \mathbb{Q}[x]$. Furthermore, $P(Q(n)) = n^k$ for all $n \in S_j$ sufficiently large. Since $P(Q(x))$ and $x^k$ are polynomials that agree on an infinite set, we have the polynomial identity $P(Q(x)) = x^k$.
+
+Let $m = \deg Q$. Then $dm = k$. If $y_1, \dots, y_s$ are the distinct roots of $P(y) = 0$ in $\mathbb{C}$, then $P(Q(x)) = a_d \prod_{i=1}^s (Q(x) - y_i)^{d_i} = x^k$. This implies that each $Q(x) - y_i$ must be of the form $c_i x^{m_i}$ for some $c_i \in \mathbb{C}$ and $m_i \in \mathbb{Z}_{\ge 0}$. Since $\deg Q = m$, we have $m_i = m$ for all $i$, so $Q(x) = c_i x^m + y_i$. For any two roots $y_i, y_j$, we have $c_i x^m + y_i = c_j x^m + y_j$, which forces $c_i = c_j$ and $y_i = y_j$. Thus $P$ has only one distinct root $y_1$ with multiplicity $d$.
+
+We can write $P(x) = a_d (x - y_1)^d$. Substituting this into $P(Q(x)) = x^k$, we get $a_d (Q(x) - y_1)^d = x^k$. Taking the $d$-th root, $Q(x) - y_1 = c x^{k/d}$ where $c^d = 1/a_d$. Since $Q(x) \in \mathbb{Q}[x]$ and $y_1 = Q(0) \in \mathbb{Q}$, we have $c \in \mathbb{Q}$. Since $a_d$ is an integer and $c^d = 1/a_d$, $c$ must be an integer. Thus $c = \pm 1$ and $a_d = (\pm 1)^{-d}$.
+
+If $c = 1$, then $a_d = 1$ and $P(x) = (x - y_1)^d$. Since $Q(n) = n^r + y_1$ is an integer for $n \in S_j$, $y_1$ must be an integer. Let $b = -y_1 \in \mathbb{Z}$, then $P(x) = (x + b)^d$.
+If $c = -1$, then $a_d = (-1)^{-d}$. If $d$ is even, $a_d = 1$ and $P(x) = (x - y_1)^d = (y_1 - x)^d$. If $d$ is odd, $a_d = -1$ and $P(x) = -(x - y_1)^d = (y_1 - x)^d$. In both cases, $P(x) = (-x + b)^d$ for $b = y_1 \in \mathbb{Z}$.
+
+Thus, $P(x)$ must be of the form $(\pm x + b)^d$ for some $b \in \mathbb{Z}$ and some positive divisor $d$ of $k = 2024$. We verify that for $P(x) = (\pm x + b)^d$, the equation $P(x) = n^k$ becomes $\pm x + b = \pm n^{k/d}$, which always yields an integer solution $x = \pm (\pm n^{k/d} - b)$.
+
+The polynomials are $P(x) = (\pm x + b)^d$ for all $b \in \mathbb{Z}$ and all positive divisors $d$ of 2024.

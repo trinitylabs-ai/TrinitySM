@@ -1,0 +1,413 @@
+{
+  "description": "Historical v257/v108/v97 raw/lazy source, v290 with parent v263, then R1-C1/C2/C3, v98 post-R1 gate, v103 R2, and v105 R3 with v263 recovery; separate recovered C1 runs. Saved run manifests identify the actual policy. No verified complete source snapshot for this older R2/R3 experiment is asserted: later v290 and composite freezes use changed policies.",
+  "recorded_settings": [
+    {
+      "problem_id": "imo2026_p1",
+      "harness_version": "0.3.290",
+      "parent_harness_version": "0.3.263",
+      "stage_order": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3",
+        "R2",
+        "R3"
+      ],
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "workers_per_endpoint": 4,
+        "resolve_workers": 2,
+        "seed_namespace": "v0290r2:lazy_checked:20260908:p1",
+        "model_timeout_sec": 600
+      },
+      "downstream": {
+        "post_r1_gate": "v0.3.98",
+        "resolver2": "v0.3.103 ungrouped ledger",
+        "resolver3": "v0.3.105 with v0.3.263 recovery"
+      }
+    },
+    {
+      "harness_version": "0.3.97",
+      "candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "temperature": 1.0,
+          "seed": 2360094352,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t10_r02",
+          "temperature": 1.0,
+          "seed": 2367214500,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r01",
+          "temperature": 0.7,
+          "seed": 3233582896,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r02",
+          "temperature": 0.7,
+          "seed": 220229344,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        }
+      ],
+      "raw_generation": {
+        "device": "gpu0",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "dtype": "bfloat16",
+        "mtp_speculative_tokens": 4,
+        "max_reasoning": true,
+        "batch_size": 4,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_tokens": 65536,
+        "cap_recovery_max_tokens": 131072
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "harness_version": "0.3.290",
+      "parent_harness_version": "0.3.263",
+      "stage_order": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3",
+        "R2",
+        "R3"
+      ],
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "workers_per_endpoint": 4,
+        "resolve_workers": 2,
+        "seed_namespace": "v0290r2:lazy_checked:20260908:p2",
+        "model_timeout_sec": 600
+      },
+      "downstream": {
+        "post_r1_gate": "v0.3.98",
+        "resolver2": "v0.3.103 ungrouped ledger",
+        "resolver3": "v0.3.105 with v0.3.263 recovery",
+        "parallel_lanes": 4
+      }
+    },
+    {
+      "harness_version": "0.3.97",
+      "candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "temperature": 1.0,
+          "seed": 2360094352,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t10_r02",
+          "temperature": 1.0,
+          "seed": 2367214500,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r01",
+          "temperature": 0.7,
+          "seed": 3233582896,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r02",
+          "temperature": 0.7,
+          "seed": 220229344,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        }
+      ],
+      "raw_generation": {
+        "device": "gpu0",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "dtype": "bfloat16",
+        "mtp_speculative_tokens": 4,
+        "max_reasoning": true,
+        "batch_size": 4,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_tokens": 65536,
+        "cap_recovery_max_tokens": 131072
+      }
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "harness_version": "0.3.290",
+      "parent_harness_version": "0.3.263",
+      "stage_order": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3",
+        "R2",
+        "R3"
+      ],
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "workers_per_endpoint": 4,
+        "resolve_workers": 2,
+        "seed_namespace": "v0290r2:lazy_checked:20260908:p3",
+        "model_timeout_sec": 600
+      },
+      "downstream": {
+        "post_r1_gate": "v0.3.98",
+        "resolver2": "v0.3.103 ungrouped ledger",
+        "resolver3": "v0.3.105 with v0.3.263 recovery",
+        "parallel_lanes": 4
+      }
+    },
+    {
+      "harness_version": "0.3.97",
+      "candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "temperature": 1.0,
+          "seed": 2360094352,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t10_r02",
+          "temperature": 1.0,
+          "seed": 2367214500,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r01",
+          "temperature": 0.7,
+          "seed": 3233582896,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r02",
+          "temperature": 0.7,
+          "seed": 220229344,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        }
+      ],
+      "raw_generation": {
+        "device": "gpu0",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "dtype": "bfloat16",
+        "mtp_speculative_tokens": 4,
+        "max_reasoning": true,
+        "batch_size": 4,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_tokens": 65536,
+        "cap_recovery_max_tokens": 131072
+      }
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "harness_version": "0.3.290",
+      "parent_harness_version": "0.3.263",
+      "stage_order": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3",
+        "R2",
+        "R3"
+      ],
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "workers_per_endpoint": 4,
+        "resolve_workers": 2,
+        "seed_namespace": "v0290r2:lazy_checked:20260908:p4",
+        "model_timeout_sec": 600
+      },
+      "downstream": {
+        "post_r1_gate": "v0.3.98",
+        "resolver2": "v0.3.103 ungrouped ledger",
+        "resolver3": "v0.3.105 with v0.3.263 recovery",
+        "parallel_lanes": 4
+      }
+    },
+    {
+      "harness_version": "0.3.97",
+      "candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "temperature": 1.0,
+          "seed": 2360094352,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t10_r02",
+          "temperature": 1.0,
+          "seed": 2367214500,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r01",
+          "temperature": 0.7,
+          "seed": 3233582896,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r02",
+          "temperature": 0.7,
+          "seed": 220229344,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        }
+      ],
+      "raw_generation": {
+        "device": "gpu0",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "dtype": "bfloat16",
+        "mtp_speculative_tokens": 4,
+        "max_reasoning": true,
+        "batch_size": 4,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_tokens": 65536,
+        "cap_recovery_max_tokens": 131072
+      }
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "harness_version": "0.3.290",
+      "parent_harness_version": "0.3.263",
+      "stage_order": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3",
+        "R2",
+        "R3"
+      ],
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "workers_per_endpoint": 4,
+        "resolve_workers": 2,
+        "seed_namespace": "v0290r1:p5:lazy_checked:20260908",
+        "model_timeout_sec": 600
+      },
+      "downstream": {
+        "post_r1_gate": "v0.3.98",
+        "resolver2": "v0.3.103 ungrouped ledger",
+        "resolver3": "v0.3.105 with v0.3.263 recovery"
+      }
+    },
+    {
+      "harness_version": "0.3.97",
+      "candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "temperature": 1.0,
+          "seed": 2360094352,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t10_r02",
+          "temperature": 1.0,
+          "seed": 2367214500,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r01",
+          "temperature": 0.7,
+          "seed": 3233582896,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r02",
+          "temperature": 0.7,
+          "seed": 220229344,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        }
+      ],
+      "raw_generation": {
+        "device": "gpu0",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "dtype": "bfloat16",
+        "mtp_speculative_tokens": 4,
+        "max_reasoning": true,
+        "batch_size": 4,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_tokens": 65536,
+        "cap_recovery_max_tokens": 131072
+      }
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "harness_version": "0.3.290",
+      "parent_harness_version": "0.3.263",
+      "stage_order": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3",
+        "R2",
+        "R3"
+      ],
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "workers_per_endpoint": 4,
+        "resolve_workers": 2,
+        "seed_namespace": "v0290r2:lazy_checked:20260908:p6",
+        "model_timeout_sec": 600
+      },
+      "downstream": {
+        "post_r1_gate": "v0.3.98",
+        "resolver2": "v0.3.103 ungrouped ledger",
+        "resolver3": "v0.3.105 with v0.3.263 recovery",
+        "parallel_lanes": 4
+      }
+    },
+    {
+      "harness_version": "0.3.97",
+      "candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "temperature": 1.0,
+          "seed": 2360094352,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t10_r02",
+          "temperature": 1.0,
+          "seed": 2367214500,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r01",
+          "temperature": 0.7,
+          "seed": 3233582896,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        },
+        {
+          "candidate_id": "t07_r02",
+          "temperature": 0.7,
+          "seed": 220229344,
+          "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+        }
+      ],
+      "raw_generation": {
+        "device": "gpu0",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "dtype": "bfloat16",
+        "mtp_speculative_tokens": 4,
+        "max_reasoning": true,
+        "batch_size": 4,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_tokens": 65536,
+        "cap_recovery_max_tokens": 131072
+      }
+    }
+  ],
+  "missing_values": "Unrecorded deployment revisions/settings are unknown; current server settings are not retroactively substituted.",
+  "original_run_artifacts": "../../../runs"
+}

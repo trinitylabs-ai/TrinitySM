@@ -1,0 +1,4 @@
+{
+  "problem_id": "imo2026_p5",
+  "claim": "IMO 2026 Problem 5. Let R_{>0} be the set of positive real numbers. Determine all functions f: R_{>0} -> R_{>0} such that, for every x,y > 0, sqrt((x^2 + f(y)^2)/2) >= (f(x) + y)/2 >= sqrt(x f(y))."
+}

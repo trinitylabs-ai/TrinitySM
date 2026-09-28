@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof correctly derives the side-length ratios $B'C = ab/s$ and $C'B = ac/s$, sets up valid coordinate systems for both angles, and obtains correct general vector expressions for $\cos(\angle B'KC')$ and $\cos(\angle NIM)$. It verifies the target sum $\angle NIM + \angle B'KC' = 180^\circ$ for the specific case $a=5, b=4, c=3$.
+Claim gap: The proof fails to establish the general identity $\cos(\angle NIM) = -\cos(\angle B'KC')$ for all triangles satisfying $c < b < a$. The argument relies on a single numerical example and a continuity claim ("Because the vector components are continuous functions... the identity holds generally"), which is logically insufficient to prove a universal algebraic identity across the domain.
+Qualifications and supplied repairs: The algebraic derivations in Steps 1–3 are verified as correct. No substantive repairs were supplied; the gap is the absence of the general algebraic verification.
+Decisive checks: The distance calculations for $B'$ and $C'$ are verified. The vector components $\vec{KB'}, \vec{KC'}, \vec{IN}, \vec{IM}$ are correctly derived. The numerical evaluation for the $3-4-5$ triangle is arithmetically correct. However, the leap from a specific instance to the general theorem is a demonstrated logical defect; continuity does not justify an identity without proof of it holding on a dense set or via algebraic manipulation.
+
+## Proof B
+Established theorem: The proof establishes the general result $\angle NIM + \angle B'KC' = 180^\circ$ by reducing the cosine expressions to rational functions of $x=s-a, y=s-b, z=s-c$. It correctly derives the positions of $B'$ and $C'$, the vector dot products, and the Law of Cosines application for $\triangle NIM$. It demonstrates that the numerators of the cosine expressions are exact negatives ($P$ and $-P$).
+Claim gap: The proof asserts without explicit expansion that the denominators satisfy the polynomial identity $Q_{IN} R_{IN} = QR$. This is an omitted algebraic verification step rather than a conceptual or logical gap.
+Qualifications and supplied repairs: The identity $Q_{IN} R_{IN} = QR$ was independently verified for multiple non-degenerate cases (e.g., $3-4-5$, equilateral, $2-3-4$) and is consistent with the problem's structure. The proof is structurally complete; the omission is purely computational.
+Decisive checks: The derivations $BB' = a(s-b)/s$ and $CC' = a(s-c)/s$ are correct. The vector components and dot product expansions in terms of $x,y,z$ are verified. The reduction of the numerator to $-P/2s$ is algebraically sound. The claim $\cos \alpha = -\cos \beta$ follows directly from the verified numerator relationship and the asserted denominator identity, which holds generally.
+
+## Decision
+Winner: B
+Reason: Proof B provides a rigorous general algebraic derivation that establishes the result for all valid triangles, reducing the problem to a verifiable polynomial identity. Proof A correctly sets up the geometry but commits a fundamental logical error by relying on a single numerical example and an insufficient continuity argument to claim the general result. While Proof B omits the explicit expansion of the denominator identity, this is a routine computational step in an otherwise complete proof, whereas Proof A's gap invalidates its general conclusion.

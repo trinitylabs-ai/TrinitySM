@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T22:16:24.205799+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 21,
+  "problem_id": "PB-Basic-021",
+  "case_id": "PB-Basic-021.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "0e226ac50da7a9d562249e1f9ac21fab78bd358cc35a70fa8b8a686f4f2662b0",
+  "reference_sha256": "b0175cc971e8820aa63dd40c66e9b7f1b7285bc7c38cc1c67b462a2ee970a1a7",
+  "proof_sha256": "b5f96304d92c388c9393b148f9bb96bef2867102f930d13f67971168fed427e1",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/tasks.json",
+  "task_manifest_sha256": "24d0be7dca34d9ff3c84eaf3239d65e93ee7cc8c984a7a08d196689ee98294d5",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The proof asserts without justification that the multiplicative order of \\(2\\) modulo \\(2^a+1\\) is exactly \\(2a\\).",
+    "summary": "The stronger induction is valid and correctly implies the required divisibility. The only omission is a short but load-bearing order calculation: \\(2^a\\equiv-1\\pmod{2^a+1}\\), while size considerations exclude every positive exponent below \\(2a\\). With this routine justification supplied, the proof is complete.",
+    "strengths": [
+      "The strengthened claim is correctly formulated, established at the base case, and sufficient for the desired conclusion.",
+      "The factorization, coprimality arguments, and use of the inductive hypothesis are correct."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The two exact multiplicative-order assertions are used centrally but are not proved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

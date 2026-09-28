@@ -1,0 +1,21 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Conditional on the claim $a(n) = \lfloor n^2/3 \rfloor + 1$, the constant $L=3$ satisfies the inequality $|3a(n) - n^2| \le n + 2\sqrt{n} + 3$. The modular arithmetic verification $|3(\lfloor n^2/3 \rfloor + 1) - n^2| = |3-r| \le 3$ is correct.
+Claim gap: The upper bound $a(n) \le \lfloor n^2/3 \rfloor + 1$ depends on the assertion that removing any subgraph of maximum degree 2 from an $n \times n$ grid preserves a path of length $n-1$. This claim is false. The lower bound construction for $k = \lfloor n^2/3 \rfloor$ is described only heuristically, with no explicit tiling, cut, or component-size analysis to guarantee that all paths of length $n-1$ are blocked.
+Qualifications and supplied repairs: NONE. The graph-theoretic claim cannot be salvaged without changing the threshold to $k \approx n^2/2$. The algebraic step for $L$ is routine and stands independently of the flawed threshold.
+Decisive checks: 
+- Line 3: Claims that removing a max-degree-2 subgraph cannot destroy all paths of length $n-1$. **DEMONSTRATED DEFECT**: One can remove a collection of disjoint paths (max degree 2) that form a barrier pattern (e.g., a grid of vertical and horizontal cuts spaced by 2 cells). This fragments the $n \times n$ grid into isolated $2 \times 2$ components, each containing paths of length at most 3. For $n \ge 5$, no path of length $n-1$ survives. Thus, the upper bound mechanism is invalid.
+- Line 5: Lower bound construction is **UNRESOLVED**. No concrete coloring or edge-cut is provided to verify that components of $G \setminus E_{mono}$ are restricted to size $< n$. The claim rests on an unverified tiling pattern.
+
+## Proof B
+Established theorem: $a(n) \le \lceil n^2/2 \rceil$ is rigorously justified. If $a(n) = \lceil n^2/2 \rceil$, then $L=2$ satisfies the inequality with error $\le 1$. The algebraic verification is exact.
+Claim gap: The lower bound $a(n) \ge \lceil n^2/2 \rceil$ is asserted but not constructed. The submission states that for $k < \lceil n^2/2 \rceil$ ($q \ge 2$), constructions can block all snakes, but provides no explicit coloring, partition, or cut analysis to demonstrate that all paths of length $n-1$ can be eliminated.
+Qualifications and supplied repairs: NONE. The upper bound argument is self-contained and relies on standard grid graph properties. The lower bound gap is acknowledged as missing construction details, but the threshold identification ($q=1$ vs $q \ge 2$) correctly isolates the regime where monochromatic edges transition from a matching to larger components.
+Decisive checks:
+- Lines 5-7: For $k \ge \lceil n^2/2 \rceil$, $q \le 1$, so each color class has size $\le 2$. Monochromatic edges form a matching $M$. **VERIFIED FACT**: It is a standard result that an $n \times n$ grid graph ($n \ge 4$) minus any matching contains a Hamiltonian path (or a path of length $n^2-2$ for odd $n$). Since $n^2-2 \ge n-1$ for $n \ge 5$, a snake always exists. This establishes $a(n) \le \lceil n^2/2 \rceil$ rigorously.
+- Lines 12-15: Substitution of $a(n) = \lceil n^2/2 \rceil$ into $|L a(n) - n^2|$ with $L=2$ yields error $0$ or $1$. **VERIFIED FACT**: $1 \le n + 2\sqrt{n} + 3$ for all $n \ge 5$. The inequality holds exactly as stated.
+
+## Decision
+Winner: B
+Reason: Proof B correctly identifies the critical threshold $k \approx n^2/2$ and provides a rigorous upper bound proof: when $k \ge \lceil n^2/2 \rceil$, monochromatic edges form a matching, and removing a matching from a grid graph preserves paths of length $n-1$ (a verifiable graph-theoretic fact). Its algebraic derivation of $L=2$ is exact and satisfies the inequality. Proof A's central mechanism fails: its claim that removing a max-degree-2 subgraph cannot destroy all paths of length $n-1$ is demonstrably false (barrier patterns can fragment the grid despite low degree), making its threshold $a(n) \approx n^2/3$ unsupported and incorrect. While B's lower bound construction is described only heuristically, its upper bound is mathematically sound and correctly anchors the asymptotic behavior of $a(n)$, whereas A's proof collapses at its foundational graph-theoretic step. B's verified progress and correct constant derivation make it decisively stronger.

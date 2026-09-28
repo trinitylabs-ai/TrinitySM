@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "5139d66e5340db08246e0664d265bc5c01a99748062cdd284c546d8e0a392e5f",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "00dba3085cbc3c5696a587acc39ea371799f5744ed67b21236a171993663d9ba",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive break occurs when the circumcircle ω is introduced. From MN ∥ BC one has ∠ANM = C and ∠AMN = B, not the reverse, so the stated cyclicity criteria and resulting formulas for θ_K and θ_L are incorrect. More fundamentally, the proof then assumes K,L ∈ ω without deriving this from the hypotheses; this is an unsupported central inference under Rule E.",
+    "summary": "The submission obtains several correct local sine-law relations, but never establishes the load-bearing claim that A,M,K,L,N are concyclic. Its purported verification is conditional and incomplete, and uniqueness cannot identify the given points with a concyclic configuration whose existence and compatibility were never proved. Consequently the argument does not support OM=ON.",
+    "strengths": [
+      "The formulas for MK and the derivations cot(θ_K)=2cot(γ)+cot(α) and cot(θ_L)=2cot(β)+cot(α) are correct.",
+      "The sine-law formulas for BK and CL, and the resulting ratio involving sin∠BLK and sin∠CKL, are valid."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The angles of triangle AMN are interchanged: ∠ANM=C and ∠AMN=B. This invalidates the stated conditions θ_K=γ−B and θ_L=β−C."
+      },
+      {
+        "severity": "major",
+        "description": "The proof reasons under the unproved hypothesis K,L∈ω and never shows that the actual angle data imply it. The assertion that a suitable concyclic configuration satisfies all constraints is not a construction or existence proof."
+      },
+      {
+        "severity": "major",
+        "description": "The vague claim that symmetry and the cotangent equations ensure the required sine ratio omits the central compatibility derivation; the displayed product-to-sum identity alone does not establish it. The subsequent uniqueness assertion therefore cannot justify concyclicity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:46:26.885213+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

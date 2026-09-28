@@ -1,0 +1,3 @@
+Lemma: If $ab$ is a perfect square for coprime integers $a,b$ then they are perfect squares.
+
+ Observe that $2x^2+x=3y^2+y$ is equivalent to $y^2 = 2x^2-2y^2+x-y = (x-y)(2x+2y+1)$. Let $d$ be the greatest common divisior of $x-y,2x+2y+1$, we have $d | x-y$ and $d | 2x+2y+1$. On the other hand, observe that $y^2 = (x-y)(2x+2y+1)$. Hence, we must have that $d^2 | y^2$, which implies $d | y$. Since $d | y$ and $d | x-y$, we have $d | x$. Furthermore, since $d | x, d | y, d | 2x+2y+1$, we have that $d | 1$ and thus, $d = 1$, meaning that $x-y,2x+2y+1$ are coprime integers. From the Lemma, we have that $x-y,2x+2y+1$ are perfect squares. Hence proved.

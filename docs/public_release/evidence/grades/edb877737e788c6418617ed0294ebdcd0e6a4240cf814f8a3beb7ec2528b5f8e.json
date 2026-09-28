@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-008",
+  "grader_candidate_id": "t10_r02__R1-C2",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "995dcb08ecb1f31f9baf4b8fb93779c87708dd514c5bb25f95a04ae255c7ae52",
+  "proof": "evidence/proofs/995dcb08ecb1f31f9baf4b8fb93779c87708dd514c5bb25f95a04ae255c7ae52.md",
+  "completed_at": "2026-09-13T05:33:12.071392+00:00",
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/lazy_c1_c2_20260913/grades/PB-Basic-008/t10_r02/R1-C2/result.json",
+    "native_record_file_sha256": "edb877737e788c6418617ed0294ebdcd0e6a4240cf814f8a3beb7ec2528b5f8e",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/lazy_c1_c2_20260913/grades/PB-Basic-008/t10_r02/R1-C2/result.json",
+    "selected_record_file_sha256": "edb877737e788c6418617ed0294ebdcd0e6a4240cf814f8a3beb7ec2528b5f8e",
+    "proof": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-008/02_r1_cycles/lanes/t10_r02/01_r1_cycle_1/cases/PB-Basic-008.t10_r02/resolver/temperature_0_4/gpu0/p8/t10_r02/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "b52a8a65645d761838f9a6c4a4c82893367c2c27cd69c1bb960851aff88e17db",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+  "reference_sha256": "ad671ff51b719ad08d069a872df41c8f8b089a5976e753f040ea64b9b784dfb8",
+  "guidelines_sha256": "f518033e93de600f964f6ed752fa5c1209778da02da49045b79e4c50980bf7d9",
+  "response_sha256": "9b44e41f6d25cf7d5381c9e6924fa2d111a25b1cb2a44c3a21a5bc956b9daead",
+  "isolation_verified": true
+}

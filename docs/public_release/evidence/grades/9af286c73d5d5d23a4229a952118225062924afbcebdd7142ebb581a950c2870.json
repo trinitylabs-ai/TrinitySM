@@ -1,0 +1,55 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p3",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+  "proof": "evidence/proofs/696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015.md",
+  "completed_at": "2026-09-15T18:27:31.523874+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claimed lower-bound strategy already fails for \\(n=2\\): its pieces are \\(2/5,2/5,1/5\\), and Xiang can split only the \\(1/5\\) piece into two \\(1/10\\) pieces, leaving Liu with \\(2/5+1/10=1/2<3/5\\).",
+    "summary": "The proposed value is wrong: the correct value is \\(\\frac{2^n}{2^{n+1}-1}\\), not \\(\\frac{n+1}{2n+1}\\). The proof correctly identifies the odd-ranked-piece payoff and its discrepancy formulation, but the lower bound mishandles added zero pieces and parity constraints, while the upper bound merely asserts that Xiang can approximately pair lengths without constructing such a refinement within \\(n\\) cuts.",
+    "strengths": [
+      "Correctly observes that optimal alternating play awards Liu the odd-ranked lengths and relates this to the sorted alternating discrepancy."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Adding zero-length pieces changes the required sign parities within the segment groups; the subsequently chosen \\(s_i\\) need not be valid."
+      },
+      {
+        "severity": "major",
+        "description": "The claimed Xiang strategy of making all pieces or adjacent ranked pairs nearly equal is unsupported and is precisely the central construction requiring proof."
+      },
+      {
+        "severity": "substantial",
+        "description": "The identity \\(\\operatorname{Val}_i(s)=-\\operatorname{Val}_i(-s)\\) is generally false for maxima over sign assignments."
+      },
+      {
+        "severity": "major",
+        "description": "The final claimed value disagrees with the correct value for every \\(n\\ge2\\)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p3_c3_t10r01_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p3/t10_r01/summary.json",
+    "native_record_file_sha256": "9af286c73d5d5d23a4229a952118225062924afbcebdd7142ebb581a950c2870",
+    "selected_record": "benchmarks/imo2026/results/p3_c3_t10r01_20260915T164615Z/grades/imo2026_p3/t10_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "d31d3c25dd021bc60d71bd38facfd46bc9d93f86c9d85525eb7189db81ca372b",
+    "proof": "benchmarks/imo2026/results/p3_c3_t10r01_20260915T164615Z/proofs/imo2026_p3/t10_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66"
+}

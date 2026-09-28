@@ -1,0 +1,35 @@
+{
+  "completed_at": "2026-09-17T07:20:41.762455+00:00",
+  "results": [
+    {
+      "candidate": "p2",
+      "returncode": 1,
+      "status": {
+        "state": "failed",
+        "updated_at": "2026-09-17T07:20:32.011089+00:00",
+        "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+        "error": "AssertionError: Preflight failed"
+      }
+    },
+    {
+      "candidate": "basic008",
+      "returncode": 1,
+      "status": {
+        "state": "failed",
+        "updated_at": "2026-09-17T07:20:32.035851+00:00",
+        "run_id": "basic008_t10_r01_v356_consolidated_20260917T071542Z",
+        "error": "AssertionError: Preflight failed"
+      }
+    },
+    {
+      "candidate": "basic009",
+      "returncode": 1,
+      "status": {
+        "state": "failed",
+        "updated_at": "2026-09-17T07:20:32.056991+00:00",
+        "run_id": "basic009_t07_r01_v356_consolidated_20260917T071542Z",
+        "error": "AssertionError: Preflight failed"
+      }
+    }
+  ]
+}

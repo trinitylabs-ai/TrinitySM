@@ -1,0 +1,328 @@
+{
+  "run_id": "advanced001_030_v263_v290_frozen_run01",
+  "provider": "OpenAI / Codex hosted service",
+  "provider_evidence": "Saved commands use the default Codex provider with --ignore-user-config; no custom provider/base URL is specified. Raw HTTP provider routing was not captured.",
+  "client_observed": {
+    "argv": [
+      "codex",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "codex-cli 0.153.4",
+    "stderr": ""
+  },
+  "model_id": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "local_workers": 4,
+  "request_interface": "codex exec; exact per-attempt argv copied in api_requests/",
+  "temperature": {
+    "explicitly_set": false,
+    "resolved_value": null
+  },
+  "top_p": {
+    "explicitly_set": false,
+    "resolved_value": null
+  },
+  "seed": {
+    "explicitly_set": false,
+    "resolved_value": null
+  },
+  "max_output_tokens": {
+    "explicitly_set": false,
+    "resolved_value": null
+  },
+  "timeout_seconds": 1200,
+  "maximum_attempts": 2,
+  "provider_hardware": "unavailable",
+  "provider_checkpoint_revision": "not exposed",
+  "evaluation_dates_utc": [
+    "2026-09-13"
+  ],
+  "dates_note": "Actual saved attempt timestamps; reused grades point to their originating calls, not the archive-copy date.",
+  "policy": "imobench-proof-autograder-b5-v1",
+  "tools_enabled": false,
+  "records": [
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "89e20b5db88d7d2c026fb3c5cdfad03b87896c0bca5e04dde57fcd48c9c23fd6",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:46:57.681791+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t10_r01/raw/attempt_1.json",
+          "sha256": "9b423daab03f381eb56334221d93599c4878d81ff366fc9e801c30f94c971f9f",
+          "started_at": "2026-09-13T02:45:06.527931+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "fb4670319d1e288e8f1b9b2daebe5b90ebac3c059e95c555b5e42164cb33ff31",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t10_r02/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:45:35.121517+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t10_r02/raw/attempt_1.json",
+          "sha256": "effb6872b2631c166581ceb1221cfff388c6c933491e7d1efe0a1aac6d33ab6c",
+          "started_at": "2026-09-13T02:45:06.526811+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "36b599055eec36b0224aed98cc3865dc54fec47f89947df4fd617d0e4393b155",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:46:19.289243+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t07_r01/raw/attempt_1.json",
+          "sha256": "6a11ebc10ea20daa2bddd681d12d9a7885bb3762a31547737567322667f40632",
+          "started_at": "2026-09-13T02:45:06.528998+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "0b8e4b40068b28bf094d949985b23e856f652c3d764f3511f7c82d78a8b408e6",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:45:49.700378+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t07_r02/raw/attempt_1.json",
+          "sha256": "9bf300f0acb39d0801a88e07784e0cfbc146851d461415e262407e18c1267bae",
+          "started_at": "2026-09-13T02:45:06.526195+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "1649ce5d5ed7345f1925ad109f328a47417e81fedb6892b13bd48e7437a4980a",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t10_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:48:21.678923+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t10_r01/R1-C3/attempt_1.json",
+          "sha256": "c3cde93d1e3bfa5190a9942eb2548ea2d32d9d02dbe7b62d042d5de0deb9c4fb",
+          "started_at": "2026-09-13T02:47:06.703205+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "36b599055eec36b0224aed98cc3865dc54fec47f89947df4fd617d0e4393b155",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r01/result.json",
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:46:19.289243+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t07_r01/R1-C3/attempt_1.json",
+          "sha256": "6a11ebc10ea20daa2bddd681d12d9a7885bb3762a31547737567322667f40632",
+          "started_at": "2026-09-13T02:45:06.528998+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-001",
+      "candidate_id": "t07_r02",
+      "checkpoint": "R1-C3",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "0b8e4b40068b28bf094d949985b23e856f652c3d764f3511f7c82d78a8b408e6",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0002/scores/cases/PB-Advanced-001/t07_r02/result.json",
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0001/scores/cases/PB-Advanced-001/t07_r02/result.json"
+      ],
+      "original_completed_at": "2026-09-13T02:45:49.700378+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-001/t07_r02/R1-C3/attempt_1.json",
+          "sha256": "9bf300f0acb39d0801a88e07784e0cfbc146851d461415e262407e18c1267bae",
+          "started_at": "2026-09-13T02:45:06.526195+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r01",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "9a59eaa7f373ecc9f2cc3bf3047e878086a4f2b0c9f4512190f3ab8453bf7bd8",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:11:33.907332+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t10_r01/raw/attempt_1.json",
+          "sha256": "529af563842212d725cb05437973657d5680e86476edd147b458dd751dce1ba8",
+          "started_at": "2026-09-13T04:08:58.653069+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r02",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "6fb7d9d38c150dedbdfa3096e6cd6d0ebf753670d997a2fc3576309a266db2f4",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t10_r02/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:11:56.942824+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t10_r02/raw/attempt_1.json",
+          "sha256": "e1ee961e3d1fc17893ef5a4bf71a266c104b3145ff944458b43654ddc7db9dd2",
+          "started_at": "2026-09-13T04:08:58.649732+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r01",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "f5a4468f6fb71bcf8dea622d357c6163e2ac352f874f09da8704a6d454a0dba1",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:12:19.344452+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t07_r01/raw/attempt_1.json",
+          "sha256": "124dac7c70438de854c5b7b17f0b1e5d4fcedfa4876daa499ea5e08ef13fd2a6",
+          "started_at": "2026-09-13T04:08:58.654525+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r02",
+      "checkpoint": "raw",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "371230a55e708024b3f8a08275aecaf2590154f6980c553c4c6fd8872bd2bbd7",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/scores/cases/PB-Advanced-002/t07_r02/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:11:02.332650+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t07_r02/raw/attempt_1.json",
+          "sha256": "cf2db10d5cdd878e8b1bf06ac78084ddc982289d666229bb2ac9b6a432713b79",
+          "started_at": "2026-09-13T04:08:58.653570+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r01",
+      "checkpoint": "R1-C3",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "497ecacf3bf9ad70f7e9ef267b4e3352f1a6274822ad015b5d48e97f9db8c2f7",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:14:32.923839+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t10_r01/R1-C3/attempt_1.json",
+          "sha256": "a558bc36c1495f00a463117e660ae223dd8b4392e66194009921c854ae5d360b",
+          "started_at": "2026-09-13T04:12:29.068787+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r02",
+      "checkpoint": "R1-C3",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "85f5995500dc7098570ceb71053be8d8e663ac9777b24dd4375466cbf95f3898",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t10_r02/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:15:15.585770+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t10_r02/R1-C3/attempt_1.json",
+          "sha256": "fc66fc4a017100474e8f95fc50e717090381fcec7e233831f2dffe6cfe474a20",
+          "started_at": "2026-09-13T04:12:29.071280+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "advanced001_030_v263_v290_frozen_run01",
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "model_id": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "proof_sha256": "395b1ea74237d87685b0ece2fb8da17988cb4b8b87bce01a18b9299a67b6f20a",
+      "reuse_chain": [
+        "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0004/scores/cases/PB-Advanced-002/t07_r01/result.json"
+      ],
+      "original_completed_at": "2026-09-13T04:14:05.398148+00:00",
+      "attempts": [
+        {
+          "path": "grading/api_requests/PB-Advanced-002/t07_r01/R1-C3/attempt_1.json",
+          "sha256": "ecca5c800410ac450f600cd4c5c83e26272734fb8fc6c57f1311bcdd382b173f",
+          "started_at": "2026-09-13T04:12:29.071707+00:00"
+        }
+      ]
+    }
+  ]
+}

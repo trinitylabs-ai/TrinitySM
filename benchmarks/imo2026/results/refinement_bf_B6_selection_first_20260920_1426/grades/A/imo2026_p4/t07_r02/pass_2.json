@@ -1,0 +1,58 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "6bab70b1a8f4e807b43c41cc3dbbb7719ef7b8644a83b45171cc2785c53ca6ba",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "1e760116b2f13157670ceb3f33b16f1f7ecfb228600fc868e8e22a4626e7c2f9",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In the sufficiency argument for k≥3, the assertion that every open interval of length at least θ contains a multiple of θ is false when the length equals θ. For example, with θ=60°, the interval (60°,120°) contains no such multiple. This is a load-bearing false assertion, so Rule C caps the score at 5, although the repair is direct: equality forces k=3 and an equilateral triangle, which already contains θ; otherwise the interval has length strictly greater than θ.",
+    "summary": "The claimed classification is correct, and both the angle-peeling strategy and the safe-state invariant are essentially the right arguments. However, the proof contains a false endpoint assertion in the sufficiency construction and a second erroneous displayed equality in the necessity case analysis. Both can be repaired routinely without changing the strategy, but the first is used in a load-bearing step, invoking Rule C's ceiling of 5.",
+    "strengths": [
+      "Correctly identifies exactly θ=180°/k for integers k≥2.",
+      "Correctly shows that a triangle containing nθ can be reduced inductively to one containing θ by splitting that angle.",
+      "The proposed one-cut construction correctly makes the two relevant new angles supplementary.",
+      "The necessity argument uses the correct invariant: from a triangle with no positive multiple of θ as an angle, Shan-Yu can retain a child with the same property.",
+      "The four possible ways the two children could each contain a marked angle are essentially exhaustive."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The open-interval claim used for k≥3 is false at equality. The omitted equality case is harmless only after explicitly observing that α=θ forces k=3 and an already-winning equilateral triangle."
+      },
+      {
+        "severity": "minor",
+        "description": "In necessity case 3, the displayed equality is algebraically false: 180°−β−(α−α1)−α1 equals γ, not γ+(α−α1). The intended correct identity is 180°−α1−β=γ+(α−α1), from which subtracting the marked angle α−α1 shows γ∈W."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:41:36.445697+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

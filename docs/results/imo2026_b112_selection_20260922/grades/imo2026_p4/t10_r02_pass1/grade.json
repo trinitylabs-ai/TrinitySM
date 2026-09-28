@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_67fdfb1eda85a47ca59eafb289b84c1f",
+  "pass_index": 1,
+  "score": 5,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In the sufficiency argument, after ordering α≤β≤γ, the submission says to cut from the smallest angle α but assigns ψ the interval (β,β+γ), whose length is γ. A cut from α instead gives an admissible interval of length α. Thus the proposed cut need not exist. This is a false load-bearing assertion, so Rule C caps the score at 5.",
+    "summary": "The classification is correct, and the necessity argument establishes the safe-triangle invariant correctly. However, the central sufficiency construction uses the wrong vertex. Replacing “smallest angle α” by “largest angle γ” makes the stated interval (β,β+γ) correct and repairs the remainder of the argument, but the proof as submitted does not justify the required cut.",
+    "strengths": [
+      "Correctly proves by induction that a triangle containing a positive multiple of θ below 180° is winning.",
+      "Correctly analyzes the four possible ways both children could contain multiples of θ and obtains a safe-child invariant when 180° is not a multiple of θ.",
+      "States the correct final classification θ=180°/n for integers n≥2.",
+      "The central construction is repairable without a new idea by choosing the largest rather than the smallest angle."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The sufficiency strategy cuts from α but uses the admissible ψ-interval belonging to a cut from γ. For example, when θ=90° and the triangle has angles 30°,40°,110°, the asserted perpendicular cut from the 30° vertex does not meet the opposite side internally. The interval and multiple-of-θ argument become valid after changing the chosen vertex to γ."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "proof_sha256": "67fdfb1eda85a47ca59eafb289b84c1fe2511098bfc65430fae7a8403a162256",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "evidence_sha256": "d0dc8cc9fb2bd2edaa2b313aa8676709fbdd7be8bac006364e61ebfeeecab010",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p4/t10_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "1e857b2a1315f1b6f02990abcc7424737958567e481e98d0335a178fad41ce22",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "c4f140aacef53f98259ac14695ac51c271023e46c66e0103a474606cf1b67b34",
+    "raw_response_1.txt": "09f3144053de03f720c5adddcb76e355259879eaed77e28f398e511ec57526be",
+    "summary.json": "4e97d2853a8adfc294099fc7dda3f69840dc1b86d0f42cbbbc3790c804ce8bcb"
+  }
+}

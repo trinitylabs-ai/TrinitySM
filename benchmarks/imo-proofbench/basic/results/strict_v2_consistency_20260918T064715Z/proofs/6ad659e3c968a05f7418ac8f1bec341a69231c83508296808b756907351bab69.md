@@ -1,0 +1,27 @@
+To find all strictly increasing surjective functions $g: \mathbb{R} \to \mathbb{R}$ such that $g(g(x)) = g(x) + 20x$, we analyze the iterates of $g$.
+
+For any $x_0 \in \mathbb{R}$, define the sequence $x_{n+1} = g(x_n)$. The given functional equation implies that this sequence satisfies the linear recurrence relation $x_{n+2} - x_{n+1} - 20x_n = 0$. The characteristic equation $r^2 - r - 20 = 0$ has roots $r_1 = 5$ and $r_2 = -4$. Thus, the general form of the sequence is:
+\[ x_n = A(x_0) 5^n + B(x_0) (-4)^n \]
+where $A(x_0)$ and $B(x_0)$ are constants depending on $x_0$. From $n=0$ and $n=1$, we have:
+\[ x_0 = A(x_0) + B(x_0), \quad g(x_0) = 5A(x_0) - 4B(x_0) \]
+Solving these equations for $A(x_0)$ and $B(x_0)$ yields $A(x_0) = \frac{g(x_0) + 4x_0}{9}$ and $B(x_0) = \frac{5x_0 - g(x_0)}{9}$.
+
+Since $g$ is strictly increasing and surjective, it is a homeomorphism from $\mathbb{R}$ to $\mathbb{R}$, and thus continuous. Consequently, $A(x)$ is also continuous. For any $x < y$, we must have $g^{(n)}(x) < g^{(n)}(y)$ for all $n \ge 0$:
+\[ (A(y) - A(x)) 5^n + (B(y) - B(x)) (-4)^n > 0 \]
+Dividing by $5^n$ and letting $n \to \infty$, we find $A(y) - A(x) \ge 0$. If $A(y) - A(x) = 0$, then $(B(y) - B(x)) (-4)^n > 0$ for all $n$, which implies $B(y) = B(x)$. Since $x = A(x) + B(x)$, this would imply $x = y$. Thus, $A(x)$ is strictly increasing and surjective.
+
+Let $\psi(u) = A^{-1}(u)$. Since $A(g(x)) = \frac{g(g(x)) + 4g(x)}{9} = \frac{g(x) + 20x + 4g(x)}{9} = \frac{5g(x) + 20x}{9} = 5 A(x)$, we have $g(x) = A^{-1}(5 A(x))$. Substituting $g(x) = 9 A(x) - 4x$ into this expression, we get:
+\[ 9 A(x) - 4x = A^{-1}(5 A(x)) \]
+Let $A(x) = u$, so $x = A^{-1}(u) = \psi(u)$. The equation becomes:
+\[ 9u - 4 \psi(u) = \psi(5u) \implies \psi(5u) + 4 \psi(u) = 9u \]
+The general solution to this linear functional equation is $\psi(u) = u + \eta(u)$, where $\eta(5u) = -4 \eta(u)$. If there exists $u_0 \neq 0$ such that $\eta(u_0) \neq 0$, then $\eta(u)$ must oscillate in sign and grow in magnitude as $|u| \to \infty$. Specifically, for $u > 0$, $\eta(u)$ takes the form $u^{\log_5 4} \omega(\log_5 u)$ where $\omega$ is a periodic function with $\omega(z+1) = -\omega(z)$.
+
+For $\psi(u)$ to be strictly increasing, we require $\psi(u_2) - \psi(u_1) > 0$ for all $u_2 > u_1$. However, as $u \to 0^+$, the term $\eta(u)$ behaves like $u^{\log_5 4}$. Since $\log_5 4 < 1$, the difference $\eta(u_2) - \eta(u_1)$ dominates the linear term $u_2 - u_1$ for sufficiently small $u$. Because $\eta(u)$ oscillates in sign, $\psi(u)$ cannot be strictly increasing unless $\eta(u) = 0$ for all $u$.
+
+Thus, $\psi(u) = u$, which implies $A(x) = x$. Substituting this into the expression for $g(x)$:
+\[ g(x) = 9 A(x) - 4x = 9x - 4x = 5x \]
+Testing this in the original equation: $g(g(x)) = 5(5x) = 25x$ and $g(x) + 20x = 5x + 20x = 25x$. This is a valid solution.
+
+The only strictly increasing surjective function is $g(x) = 5x$.
+
+\(\square\)

@@ -1,0 +1,30 @@
+To prove the inequality $\left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1$ for any $N > 0$, where $\delta(n)$ denotes the largest odd divisor of $n$, we proceed as follows.
+
+Let $M = \lfloor N \rfloor$. The sum is defined as $S(M) = \sum_{n=1}^M \frac{\delta(n)}{n}$. For any positive integer $n$, we can uniquely write $n = 2^{v_2(n)} \cdot \delta(n)$, where $v_2(n)$ is the exponent of the highest power of $2$ dividing $n$. It follows that
+\[ \frac{\delta(n)}{n} = \frac{\delta(n)}{2^{v_2(n)} \delta(n)} = \frac{1}{2^{v_2(n)}}. \]
+Thus, for $M \ge 1$, the sum is $S(M) = \sum_{n=1}^M 2^{-v_2(n)}$. We evaluate this sum by grouping terms according to the value of $v_2(n)$. Let $k$ be a non-negative integer. The number of integers $n \in \{1, 2, \dots, M\}$ such that $v_2(n) = k$ is the number of odd integers $m$ such that $2^k m \le M$. This count, denoted $C(k)$, is given by:
+\[ C(k) = \left\lfloor \frac{M}{2^k} \right\rfloor - \left\lfloor \frac{M}{2^{k+1}} \right\rfloor. \]
+Let $K = \lfloor \log_2 M \rfloor$. Then $S(M)$ is the sum over $k$ from $0$ to $K$:
+\[ S(M) = \sum_{k=0}^K \frac{1}{2^k} \left( \left\lfloor \frac{M}{2^k} \right\rfloor - \left\lfloor \frac{M}{2^{k+1}} \right\rfloor \right). \]
+Expanding the sum, we obtain:
+\[ S(M) = \left\lfloor \frac{M}{1} \right\rfloor - \left\lfloor \frac{M}{2} \right\rfloor + \frac{1}{2} \left\lfloor \frac{M}{2} \right\rfloor - \frac{1}{2} \left\lfloor \frac{M}{4} \right\rfloor + \frac{1}{4} \left\lfloor \frac{M}{4} \right\rfloor - \frac{1}{4} \left\lfloor \frac{M}{8} \right\rfloor + \dots + \frac{1}{2^K} \left\lfloor \frac{M}{2^K} \right\rfloor - \frac{1}{2^K} \left\lfloor \frac{M}{2^{K+1}} \right\rfloor. \]
+Since $M$ is an integer, $\lfloor M \rfloor = M$, and since $2^{K+1} > M$, $\lfloor M/2^{K+1} \rfloor = 0$. The sum simplifies via telescoping to:
+\[ S(M) = M - \sum_{k=1}^K \frac{1}{2^k} \left\lfloor \frac{M}{2^k} \right\rfloor. \]
+Using the identity $\lfloor x \rfloor = x - \{x\}$, where $\{x\}$ is the fractional part of $x$, we have:
+\[ S(M) = M - \sum_{k=1}^K \frac{1}{2^k} \left( \frac{M}{2^k} - \left\{ \frac{M}{2^k} \right\} \right) = M - M \sum_{k=1}^K \frac{1}{4^k} + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\}. \]
+The geometric series $\sum_{k=1}^K (1/4)^k$ sums to $\frac{1/4(1 - (1/4)^K)}{1 - 1/4} = \frac{1}{3}(1 - 4^{-K})$. Substituting this into the expression for $S(M)$:
+\[ S(M) = M - \frac{M}{3}(1 - 4^{-K}) + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\} = \frac{2}{3} M + \frac{M}{3 \cdot 4^K} + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\}. \]
+Let $g(M) = S(M) - \frac{2}{3}M$. Then $g(M) = \frac{M}{3 \cdot 4^K} + \sum_{k=1}^K \frac{1}{2^k} \left\{ \frac{M}{2^k} \right\}$.
+Since $M \ge 1$, the term $\frac{M}{3 \cdot 4^K}$ is strictly positive, and since $\{ \frac{M}{2^k} \} \ge 0$, we have $g(M) > 0$. For the upper bound, we use $M < 2^{K+1}$ and $\{ \frac{M}{2^k} \} < 1$:
+\[ g(M) < \frac{2^{K+1}}{3 \cdot 4^K} + \sum_{k=1}^K \frac{1}{2^k} < \frac{2}{3 \cdot 2^K} + \left( 1 - \frac{1}{2^K} \right) = 1 - \frac{1}{3 \cdot 2^K} < 1. \]
+Thus, for any integer $M \ge 1$, we have $0 < S(M) - \frac{2}{3}M < 1$.
+
+Now consider any $N > 0$. Let $M = \lfloor N \rfloor$ and $N = M + \epsilon$, where $0 \le \epsilon < 1$.
+If $M = 0$, then $0 < N < 1$. The sum $\sum_{n=1}^0 \frac{\delta(n)}{n}$ is empty and equals $0$. Then
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| = \left| 0 - \frac{2}{3}N \right| = \frac{2}{3}N < \frac{2}{3} < 1. \]
+If $M \ge 1$, then
+\[ \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N = S(M) - \frac{2}{3}(M + \epsilon) = \left( S(M) - \frac{2}{3}M \right) - \frac{2}{3}\epsilon = g(M) - \frac{2}{3}\epsilon. \]
+Since $0 < g(M) < 1$ and $0 \le \frac{2}{3}\epsilon < \frac{2}{3}$, we have:
+\[ 0 - \frac{2}{3} < g(M) - \frac{2}{3}\epsilon < 1 - 0, \]
+which means $-\frac{2}{3} < \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N < 1$. This implies
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1. \]

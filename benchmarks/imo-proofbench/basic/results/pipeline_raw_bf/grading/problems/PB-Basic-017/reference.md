@@ -1,0 +1,1 @@
+Substitute $a = 3^{4(n^2+n+1)} \geq 81 \in Z^+$, we have $A_n = a^7 + a^5 + 1$. Observe that $a^7 + a^5 + 1 = (a^2+a+1)(a^5-a^4+a^3-a+1)$. Since $a \geq 81$, we have $a^2+a+1 > 1$ and $a^5-a^4+a^3-a+1 > 1$. Hence, $A_n$ is not a prime number for all $n \geq 0$.

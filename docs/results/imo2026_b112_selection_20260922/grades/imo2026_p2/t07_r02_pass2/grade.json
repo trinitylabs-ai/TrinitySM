@@ -1,0 +1,59 @@
+{
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_856c0c1298fa14a1a290e4a8e97ebc76",
+  "pass_index": 2,
+  "score": 4,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The decisive step, “using these ratios and the cot relations, the expression S simplifies to …,” is asserted without any calculation. This is a substantial trigonometric elimination that is essentially the remaining core of the proof, so Rule B applies.",
+    "summary": "The coordinate setup, sine-law relations, circumcentre equations, and reduction of OM=ON to a dot-product identity are correct. The omitted final simplification is an explicit, checkable equality and is true under the displayed relations, making a score of 4 eligible under Rule B, but its derivation is too substantial to be accepted as routine terseness. The final cancellation also implicitly uses that sin(A−theta_L−theta_K) is nonzero, which follows directly from K being strictly inside triangle ABL.",
+    "strengths": [
+      "Correctly reduces OM=ON to O·(c−b)=(b²−c²)/4.",
+      "Correctly derives the cotangent relations from the relevant sine laws.",
+      "Correctly obtains the linear circumcentre system and the expression relating the target dot product to S.",
+      "States the exact remaining equality rather than merely saying that unspecified terms cancel."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "No derivation is supplied for S=(b²−c²)sin(A−theta_L−theta_K)/2. Establishing this from the two side-ratio equations and the cotangent relations requires a substantial multi-step elimination and is load-bearing."
+      },
+      {
+        "severity": "minor",
+        "description": "The proof cancels sin(A−theta_L−theta_K) without explicitly noting that it is nonzero; this follows routinely because strict interiority of K in triangle ABL places ray AK strictly between rays AB and AL."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "proof_sha256": "856c0c1298fa14a1a290e4a8e97ebc766d022bafba316c82a117794b024ac37d",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "evidence_sha256": "aa0f60b49d68afba62d21185b07b2a1fc2733b3640442b8d6a3601b931a6a1cd",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p2/t07_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "f3e0dd5247192fc0534b52a3a387370bb8b9f6001f29bb21fb09cfd77600a8d0",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "c64c0301e2476093447d97975935f4b16d2759314fe11b49c3b9da7e7d00fb0d",
+    "raw_response_1.txt": "0db018e5be60cf084065deb27470a02151c013d1b7896b37ea15a5050d8f8ec1",
+    "summary.json": "1e46e8edd7a5d6433cdaa9a5cbd040a81430933c501a6bf1449fc98089e1815e"
+  }
+}

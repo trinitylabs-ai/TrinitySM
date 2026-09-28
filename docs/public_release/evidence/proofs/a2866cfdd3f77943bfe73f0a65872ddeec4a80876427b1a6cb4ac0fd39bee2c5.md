@@ -1,0 +1,29 @@
+To prove that $\sum_{(a, b) \in S_{AB}} (b - a) \neq \sum_{(a, b) \in S_{BA}} (a - b)$, let us define the two sums given in the problem:
+Let $L = \sum_{(a, b) \in S_{AB}} (b - a)$ and $R = \sum_{(a, b) \in S_{BA}} (a - b)$.
+
+According to the definitions provided:
+- $S_{AB} = \{ (a, b) \in A \times B \mid a < b \}$
+- $S_{BA} = \{ (a, b) \in A \times B \mid b < a \}$
+
+We observe that $A$ and $B$ partition the set $X = \{ 1, 2, \ldots, 2022 \}$, meaning $A \cup B = X$ and $A \cap B = \emptyset$. This implies that for any pair $(a, b) \in A \times B$, we must have either $a < b$ or $b < a$, since $a$ cannot equal $b$. Therefore, the set $A \times B$ is the disjoint union of $S_{AB}$ and $S_{BA}$:
+$$A \times B = S_{AB} \cup S_{BA}.$$
+
+Now, let us consider the difference $L - R$:
+$$L - R = \sum_{(a, b) \in S_{AB}} (b - a) - \sum_{(a, b) \in S_{BA}} (a - b).$$
+The second term can be rewritten as $\sum_{(a, b) \in S_{BA}} -(b - a)$, so:
+$$L - R = \sum_{(a, b) \in S_{AB}} (b - a) + \sum_{(a, b) \in S_{BA}} (b - a).$$
+Combining these two sums over the entire set $A \times B$, we have:
+$$L - R = \sum_{(a, b) \in A \times B} (b - a).$$
+We can evaluate this double sum by separating the terms:
+$$L - R = \sum_{a \in A} \sum_{b \in B} (b - a) = \sum_{a \in A} \left( \sum_{b \in B} b - \sum_{b \in B} a \right).$$
+Let $S_A = \sum_{a \in A} a$ and $S_B = \sum_{b \in B} b$. Let $|A| = n$ and $|B| = n$, where $n = 1011$.
+The internal sum is $S_B - n a$. Substituting this back:
+$$L - R = \sum_{a \in A} (S_B - n a) = n S_B - n \sum_{a \in A} a = n S_B - n S_A = n(S_B - S_A).$$
+We want to show that $L \neq R$, which is equivalent to showing that $L - R \neq 0$. Since $n = 1011 \neq 0$, $L - R = 0$ if and only if $S_A = S_B$.
+We know that $S_A + S_B$ is the sum of all integers from 1 to 2022:
+$$S_A + S_B = \sum_{k=1}^{2022} k = \frac{2022 \times 2023}{2} = 1011 \times 2023.$$
+If $S_A = S_B$, then $2 S_A = 1011 \times 2023$. However, $1011$ is odd and $2023$ is odd, so their product $1011 \times 2023$ is odd. An even number $2 S_A$ cannot be equal to an odd number. Thus, $S_A \neq S_B$, which implies $L - R \neq 0$.
+
+Therefore, $\sum_{(a, b) \in S_{AB}} (b - a) \neq \sum_{(a, b) \in S_{BA}} (a - b)$.
+
+\(\square\)

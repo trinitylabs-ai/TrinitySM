@@ -1,0 +1,172 @@
+{
+  "schema": "workshop-tools-submitted-proof-comparison-v1",
+  "selection_rule": "Latest completed graded rewrite in the release score snapshot per tested candidate; compare its actual submitted input proof.",
+  "paths_relative_to": "repository_root",
+  "bindings": "experiments/workshop_tools/evidence/run_bindings.json",
+  "records": [
+    {
+      "problem_id": "PB-Basic-008",
+      "candidate": "t10_r01",
+      "benchmark": "Basic",
+      "input_checkpoint": "raw",
+      "operation": "real_root_classification",
+      "input": {
+        "score": 1,
+        "proof": "experiments/workshop_tools/evidence/proofs/2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7.md",
+        "proof_sha256": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+        "grade": "experiments/workshop_tools/evidence/grades/2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7.json"
+      },
+      "rewrite": {
+        "score": 6,
+        "proof": "docs/public_release/evidence/proofs/764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e.md",
+        "proof_sha256": "764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e",
+        "grade": "docs/public_release/evidence/grades/2188e21ab77a4e326a71c15825df6479587678452c68cb18fe2377fd3c0036d5.json"
+      }
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate": "t07_r01",
+      "benchmark": "Basic",
+      "input_checkpoint": "Refinement 3",
+      "operation": "uniform_partition_count",
+      "input": {
+        "score": 1,
+        "proof": "docs/public_release/evidence/proofs/c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8.md",
+        "proof_sha256": "c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8",
+        "grade": "docs/public_release/evidence/grades/2cbdb5947d6e482d3e718efb89d7bd580ce580de1a24218ae4484e9022229d00.json"
+      },
+      "rewrite": {
+        "score": 7,
+        "proof": "docs/public_release/evidence/proofs/9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c.md",
+        "proof_sha256": "9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c",
+        "grade": "docs/public_release/evidence/grades/91e67a8b81ee50761d4e13700e296b6e86a44a74829629fdfbc170689613f56b.json"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate": "t07_r01",
+      "benchmark": "Advanced",
+      "input_checkpoint": "Refinement 3",
+      "operation": "exact_geometry",
+      "input": {
+        "score": 0,
+        "proof": "docs/public_release/evidence/proofs/33ce7086895a867e66d9be525409efd86ddfe5c7cf9818d84cb913998e7c2569.md",
+        "proof_sha256": "33ce7086895a867e66d9be525409efd86ddfe5c7cf9818d84cb913998e7c2569",
+        "grade": "docs/public_release/evidence/grades/e0f87923241299c2cd75d6c917087bd10ad9284610d86e8aa5591003d84af2c7.json"
+      },
+      "rewrite": {
+        "score": 0,
+        "proof": "docs/public_release/evidence/proofs/348ef8b716784e6aa0a14b2aa4627dcf08e7127a123b7f50085e2d6dd70d2c00.md",
+        "proof_sha256": "348ef8b716784e6aa0a14b2aa4627dcf08e7127a123b7f50085e2d6dd70d2c00",
+        "grade": "docs/public_release/evidence/grades/df4abae7b0b3ae3b35a11a352ed2883da51da4a139b8a4b4b7affd54958b1c74.json"
+      }
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate": "t10_r02",
+      "benchmark": "Advanced",
+      "input_checkpoint": "Refinement 2",
+      "operation": "symbolic_modular_order",
+      "input": {
+        "score": 0,
+        "proof": "experiments/workshop_tools/evidence/proofs/a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1.md",
+        "proof_sha256": "a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1",
+        "grade": "experiments/workshop_tools/evidence/grades/a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1.json"
+      },
+      "rewrite": {
+        "score": 0,
+        "proof": "docs/public_release/evidence/proofs/60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79.md",
+        "proof_sha256": "60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79",
+        "grade": "docs/public_release/evidence/grades/833e6fc30f72f9a02d0794e6a106dce2bc05ca61127efa3efdb26183251840c3.json"
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "input_checkpoint": "Refinement 3",
+      "operation": "rational_identity",
+      "input": {
+        "score": 3,
+        "proof": "docs/public_release/evidence/proofs/4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe.md",
+        "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+        "grade": "docs/public_release/evidence/grades/09210773bcd3c5313e9ea23539fc744a2da319258a07619072cde906d3d3ce8e.json"
+      },
+      "rewrite": {
+        "score": 3,
+        "proof": "docs/public_release/evidence/proofs/cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222.md",
+        "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+        "grade": "docs/public_release/evidence/grades/75bb5b00bd7b01c4de9d5ce7712ed5f45a7b1de5628e8425e140d4e980b98332.json"
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "input_checkpoint": "Refinement 3",
+      "operation": "exact_geometry",
+      "input": {
+        "score": 4,
+        "proof": "docs/public_release/evidence/proofs/eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7.md",
+        "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+        "grade": "docs/public_release/evidence/grades/8949bbf3cf2be5423b3334d99a0fe19b8bbb085fcae0207d0198a13ac0aef7c9.json"
+      },
+      "rewrite": {
+        "score": 6,
+        "proof": "docs/public_release/evidence/proofs/1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867.md",
+        "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+        "grade": "docs/public_release/evidence/grades/3fef3da994eaab0fc6e77f6c3a1268d27090b01a36544439dca658fc2be8dd6c.json"
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "input_checkpoint": "Refinement 3",
+      "operation": "exact_geometry",
+      "input": {
+        "score": 3,
+        "proof": "docs/public_release/evidence/proofs/90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2.md",
+        "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+        "grade": "docs/public_release/evidence/grades/7d05db928c9dd1072ab5217cdd76b911cfe0552662542b9777ebca42204e3bd7.json"
+      },
+      "rewrite": {
+        "score": 3,
+        "proof": "docs/public_release/evidence/proofs/22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da.md",
+        "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+        "grade": "docs/public_release/evidence/grades/653b3305883094bd8906de8a1628171e1be40a752466f1291228354ba6360ad4.json"
+      }
+    }
+  ],
+  "artifacts": {
+    "experiments/workshop_tools/evidence/proofs/2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7.md": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+    "experiments/workshop_tools/evidence/grades/2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7.json": "13cfedbf440e336575acdbdd2dbdd288e2c86552a646282ed5694a780b9e2288",
+    "docs/public_release/evidence/proofs/764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e.md": "764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e",
+    "docs/public_release/evidence/grades/2188e21ab77a4e326a71c15825df6479587678452c68cb18fe2377fd3c0036d5.json": "2aa1aa7da031cf4ff7ca6eba530215bb9fcb7d3dd742fe9b8d64c07f3352a0e6",
+    "docs/public_release/evidence/proofs/c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8.md": "c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8",
+    "docs/public_release/evidence/grades/2cbdb5947d6e482d3e718efb89d7bd580ce580de1a24218ae4484e9022229d00.json": "2240ddc645bf404c78586e8a8dd571d27c60bdb587a58f7fb2265511094f7c88",
+    "docs/public_release/evidence/proofs/9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c.md": "9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c",
+    "docs/public_release/evidence/grades/91e67a8b81ee50761d4e13700e296b6e86a44a74829629fdfbc170689613f56b.json": "d0b42182233447d0274fd88e786a5514ab29ff60e8215437560a031931099801",
+    "docs/public_release/evidence/proofs/33ce7086895a867e66d9be525409efd86ddfe5c7cf9818d84cb913998e7c2569.md": "33ce7086895a867e66d9be525409efd86ddfe5c7cf9818d84cb913998e7c2569",
+    "docs/public_release/evidence/grades/e0f87923241299c2cd75d6c917087bd10ad9284610d86e8aa5591003d84af2c7.json": "99b35229800aee44138d356db264132b096304836735e3f9006365408e56b786",
+    "docs/public_release/evidence/proofs/348ef8b716784e6aa0a14b2aa4627dcf08e7127a123b7f50085e2d6dd70d2c00.md": "348ef8b716784e6aa0a14b2aa4627dcf08e7127a123b7f50085e2d6dd70d2c00",
+    "docs/public_release/evidence/grades/df4abae7b0b3ae3b35a11a352ed2883da51da4a139b8a4b4b7affd54958b1c74.json": "94b7b1a79a1fd4749d603b3b30758a2343d53b69706c919d179ca6f1870a8f08",
+    "experiments/workshop_tools/evidence/proofs/a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1.md": "a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1",
+    "experiments/workshop_tools/evidence/grades/a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1.json": "8a9eeb4c0301df41c3eb4eb099df4f9c54cd9dda7ae96f8b133bdc0fa293956e",
+    "docs/public_release/evidence/proofs/60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79.md": "60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79",
+    "docs/public_release/evidence/grades/833e6fc30f72f9a02d0794e6a106dce2bc05ca61127efa3efdb26183251840c3.json": "a3f2012834bf18cfc0e598ba7d22eb3893c2e19300f1a59addbd33cb98c31291",
+    "docs/public_release/evidence/proofs/4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe.md": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+    "docs/public_release/evidence/grades/09210773bcd3c5313e9ea23539fc744a2da319258a07619072cde906d3d3ce8e.json": "c0a67571e8b3e3fa290338ea0ff2e19d18b99bc55156b9bcfd515cc35785889e",
+    "docs/public_release/evidence/proofs/cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222.md": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+    "docs/public_release/evidence/grades/75bb5b00bd7b01c4de9d5ce7712ed5f45a7b1de5628e8425e140d4e980b98332.json": "10ba8958256627e9123641b2dc3c62bf032fb0900ac5e84e5d77fb559fabdd66",
+    "docs/public_release/evidence/proofs/eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7.md": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+    "docs/public_release/evidence/grades/8949bbf3cf2be5423b3334d99a0fe19b8bbb085fcae0207d0198a13ac0aef7c9.json": "4630497105190191c8da4c2d8039eeea2cd53fa5844f62c54f0ebb6dd974937d",
+    "docs/public_release/evidence/proofs/1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867.md": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+    "docs/public_release/evidence/grades/3fef3da994eaab0fc6e77f6c3a1268d27090b01a36544439dca658fc2be8dd6c.json": "6ccb85bfcbb74588d0354f4ebf30cdf391a0ee2d087876472ec0be6969163c50",
+    "docs/public_release/evidence/proofs/90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2.md": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+    "docs/public_release/evidence/grades/7d05db928c9dd1072ab5217cdd76b911cfe0552662542b9777ebca42204e3bd7.json": "04958720359570767a50902eaf9787e3c573054310e96c6b4deab4e9b2c56779",
+    "docs/public_release/evidence/proofs/22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da.md": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+    "docs/public_release/evidence/grades/653b3305883094bd8906de8a1628171e1be40a752466f1291228354ba6360ad4.json": "aa933158dc05c9f8918205586059c76f68291843c3e71288e14ccf2d75776204",
+    "experiments/workshop_tools/evidence/run_bindings.json": "d263465db3c5671f1ce2aa3656b9202fba5eacf99f529a624eaa184dbb12a3c8"
+  }
+}

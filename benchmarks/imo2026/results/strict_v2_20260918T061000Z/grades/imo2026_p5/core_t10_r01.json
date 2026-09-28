@@ -1,0 +1,65 @@
+{
+  "problem_id": "imo2026_p5",
+  "candidate": "t10_r01",
+  "group": "core",
+  "grader_candidate": "core_t10_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t10_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed.md",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+  "v1_score": 6,
+  "v1_grade": "docs/public_release/evidence/grades/98e6b7e39a4b8f6b3a3f9e8ecd25f4d1742f98ddb373b4c3801bf5623392dec4.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t10_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:22:52.900984+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Case 3, the claim that an arithmetic progression tending to infinity must start to the right of the finite forbidden interval is false; it may begin to the left and skip the interval. Moreover, the previously defined y_0 is naturally a zero-defect point, in which case y_n=y_0+n c_1 is not its orbit. Thus the mixed zero/positive-defect case is not validly resolved.",
+    "summary": "The classification is correct, and the proof correctly verifies the candidates, proves g≥0, and essentially establishes equality of all positive values of g. However, the exclusion of simultaneous defect values 0 and c>0 contains a false inference and then asserts without proof that the two level sets must be complementary intervals. This unsupported central structural claim is load-bearing, so Rule E caps the score at 3; Rule B does not permit 4 because the missing compatibility argument is not reduced to an explicit equality.",
+    "strengths": [
+      "Correctly verifies every f(x)=x+c with c≥0 using RMS–AM–GM.",
+      "Correctly obtains f(f(y))=2f(y)-y, invariance of g along forward orbits, and g≥0.",
+      "The orbit-comparison argument gives meaningful progress toward proving that any two positive values of g are equal.",
+      "The submitted final classification agrees with the true answer."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "In the mixed-defect case, y_n→∞ does not imply that y_0 lies to the right of the forbidden interval; an arithmetic progression can start to its left and avoid it. The displayed formula y_n=y_0+n c_1 is also inconsistent if y_0 is the zero-defect point chosen earlier."
+      },
+      {
+        "severity": "major",
+        "description": "The statement that S_0∪S_{c_1}=(0,∞) implies S_0=(0,b] and S_{c_1}=(b,∞) is false without first proving an ordering or interval property of the level sets. That missing structural step is essential to the final contradiction."
+      },
+      {
+        "severity": "minor",
+        "description": "Even after proving separation by a threshold, the boundary could belong to S_{c_1} rather than S_0; the proof handles only one of these two endpoint cases."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "6a25875711199f4cc50fb479bbfe04f4fb52728353552ff078e1ab1ecd8ffe2c",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

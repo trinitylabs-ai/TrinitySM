@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidate_id", "body"],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "body": {"type": "string", "minLength": 1}
+  }
+}

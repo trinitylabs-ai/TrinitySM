@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "9da25b4019126105e3f02720d5e4dc3f97a9355f10c191e4cdc775222ae4bae9",
+  "problem_id": "imo2026_p3",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "44b83dfeeb8c572c8c7240c264a2b0893c9b3fdca7e9553a64913c930707309e",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The lower-bound claim that equalizing the pieces is Xiang's best response is unsupported and false. For n=2, Liu's proposed lengths are 3/5, 1/5, 1/5; Xiang can split the 3/5 piece into 1/4, 1/4, 1/10, leaving sorted lengths 1/4, 1/4, 1/5, 1/5, 1/10. Liu then receives 11/20, less than the claimed 3/5.",
+    "summary": "Rule A applies: the claimed answer (n+1)/(2n+1) is incorrect; for example, at n=2 the true value is 4/7 rather than 3/5. Both the proposed lower-bound guarantee and the central construction in the upper bound fail. Correcting the proof requires a fundamentally different construction, not a local repair.",
+    "strengths": [
+      "Correctly identifies that optimal piece selection proceeds in non-increasing order and expresses Liu's payoff as the odd-ranked sum.",
+      "Correctly obtains the universal elementary bound S_L at least 1/2 and introduces the useful alternating discrepancy."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed lower-bound strategy does not guarantee (n+1)/(2n+1), as the explicit n=2 refinement in the first-issue explanation shows."
+      },
+      {
+        "severity": "major",
+        "description": "The Case 2 upper-bound construction may create a nonpositive final piece. For uniform initial lengths L_i=1/(n+1), it gives x_{n+1}=2/(n+1)-1+nε, which is negative for sufficiently small ε whenever n≥2."
+      },
+      {
+        "severity": "substantial",
+        "description": "The upper-bound argument assumes Liu initially creates exactly n+1 pieces and does not handle the allowed cases in which Liu uses fewer than n marks."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:40:23.347224+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

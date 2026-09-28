@@ -1,0 +1,52 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+  "proof": "evidence/proofs/4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe.md",
+  "completed_at": "2026-09-15T16:37:22.841867+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive claim that the remaining expression simplifies to \\(PB=PC\\) is asserted without calculation, while the cross-angle conditions \\(\\angle LBK=\\beta\\) and \\(\\angle LCK=\\gamma\\) are never translated into usable relations.",
+    "summary": "The proof correctly reduces \\(OM=ON\\) to \\(PB=PC\\) for \\(P=2O\\) and derives some valid preliminary trigonometric relations. However, it omits the entire central compatibility argument and also contains sign errors in expanding \\(P\\cdot(\\vec b-\\vec c)\\). Thus the conclusion is not established.",
+    "strengths": [
+      "Correctly reduces the desired midpoint-distance equality to showing that \\(P=2O\\) lies on the perpendicular bisector of \\(BC\\).",
+      "Correctly obtains \\(PK\\perp AK\\), \\(PL\\perp AL\\), and useful sine-law formulas for \\(AK\\) and \\(AL\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The statement that the terms “balance” and force \\(PB=PC\\) is an unsupported decisive inference replacing the central proof."
+      },
+      {
+        "severity": "substantial",
+        "description": "The conditions \\(\\angle LBK=\\beta\\) and \\(\\angle LCK=\\gamma\\) are not actually used to derive equations constraining \\(A,\\theta_K,\\phi_L\\)."
+      },
+      {
+        "severity": "substantial",
+        "description": "The expansion of \\(P\\cdot(\\vec b-\\vec c)\\) reverses the signs of the terms involving \\(c\\); the displayed trigonometric expression therefore does not follow from the preceding line."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_c3_t07r01_then_v327_20260915T063548Z/grading/work/strict_c3_20260915T163357Z/scores/p2/t07_r01/summary.json",
+    "native_record_file_sha256": "09210773bcd3c5313e9ea23539fc744a2da319258a07619072cde906d3d3ce8e",
+    "selected_record": "benchmarks/imo2026/results/p2_c3_t07r01_then_v327_20260915T063548Z/grades/imo2026_p2/t07_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "7fc325c5c5791f4173807a4d35d40c754f5db73cede4b2be79fb5dc590389681",
+    "proof": "benchmarks/imo2026/results/p2_c3_t07r01_then_v327_20260915T063548Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd"
+}

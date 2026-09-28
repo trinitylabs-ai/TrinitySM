@@ -1,0 +1,4 @@
+interface:
+  display_name: "IMOBench Scoring"
+  short_description: "Grade IMO proofs with the published benchmark rubric"
+  default_prompt: "Use $imobench-scoring to grade the available terminal IMOBench proofs with the official per-problem guidelines."

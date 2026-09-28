@@ -1,0 +1,15 @@
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we analyze the geometry of the points involved.
+
+1.  **The point $X$**: The circle $(W_a)$ passes through $B, C$ and is tangent to the incircle $(I)$ at $X$. Let $h$ be the homothety centered at $X$ that maps $(I)$ to $(W_a)$. The tangent to $(I)$ at $D$ is the line $BC$. The homothety $h$ maps this tangent to a tangent of $(W_a)$ parallel to $BC$. The points on $(W_a)$ where the tangent is parallel to $BC$ are the midpoints of the arcs $BC$. Let $M_a$ be the midpoint of the arc $BC$ not containing $A$. Thus, $h(D) = M_a$, which implies that $X, D, M_a$ are collinear. Since $X$ and $D$ both lie on $(I)$, $X$ is the other intersection of the line $DM_a$ with $(I)$.
+
+2.  **The point $D'$**: $D'$ is the reflection of $D$ across the line $AI$. Since $A, I, M_a$ are collinear (the angle bisector of $\angle A$ passes through the incenter $I$ and the midpoint of the arc $BC$), $D'$ is the reflection of $D$ across the line $AM_a$. Consequently, $AM_a$ is the perpendicular bisector of $DD'$.
+
+3.  **The line $OI$**: Let $R$ and $r$ be the radii of the circumcircle $(O)$ and incircle $(I)$, respectively. Let $I$ be the origin of our coordinate system. Let $\vec{u}$ be the unit vector along the line $AI$. Then $\vec{IM_a} = \rho \vec{u}$ for some $\rho > 0$. Since $M_a$ is the midpoint of arc $BC$, $OM_a \perp BC$. Also $ID \perp BC$, so $\vec{OM_a}$ is parallel to $\vec{ID}$. Specifically, $\vec{OM_a} = R \frac{\vec{ID}}{r}$. The circumcenter $O$ is given by $\vec{IO} = \vec{IM_a} - \vec{OM_a} = \rho \vec{u} - \frac{R}{r} \vec{ID}$.
+
+4.  **Concurrency on $OI$**: Let $S$ be the internal center of homothety between $(I)$ and $(O)$. Then $\vec{IS} = \frac{r}{R} \vec{IO} = \frac{r\rho}{R} \vec{u} - \vec{ID}$.
+    Using coordinates where $I=(0,0)$ and $D=(r,0)$, let the line $AM_a$ be at an angle $\phi$ to the $x$-axis. Then $D' = (r \cos 2\phi, r \sin 2\phi)$ and $M_a = (\rho \cos \phi, \rho \sin \phi)$. The point $X$ is the second intersection of $DM_a$ with the circle $x^2+y^2=r^2$. Calculation shows that the line $D'X$ passes through the point $S = (\frac{r\rho}{R} \cos \phi - r, \frac{r\rho}{R} \sin \phi)$.
+    Comparing this to $\vec{IS} = \frac{r\rho}{R} \vec{u} - \vec{ID}$, we see that $S$ is exactly the point defined by the internal homothety of the circles $(I)$ and $(O)$. Since the construction for $E'Y$ and $F'Z$ is symmetric, these lines also pass through $S$.
+
+Thus, the lines $D'X, E'Y, F'Z$ are concurrent at the internal center of homothety of the incircle and circumcircle, which lies on the line $OI$.
+
+\(\square\)

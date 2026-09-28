@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: James can guarantee reaching row $3002$ with at most $3000$ penalties ($n \le 3001$), and for the explicit configuration $c_r = r-1$ ($r=2,\dots,3001$), no strategy guarantees success with fewer than $3000$ penalties. Thus $n=3001$.
+Claim gap: NONE. The upper bound follows from exhaustive column testing or learning all blocks. The lower bound uses a concrete configuration and a rigorous inductive argument on column transitions that holds for any valid path.
+Qualifications and supplied repairs: NONE. All steps follow directly from the problem constraints. The restriction to columns in $C_P$ for unknown rows is correctly justified by the requirement to guarantee safety against all consistent configurations. The induction assumes crossing known rows in increasing order, which is without loss of generality since any top-to-bottom path must cross each known row at least once, and the interval constraints apply independently to each crossing.
+Decisive checks: 
+- Upper bound (line 3): Verified. Learning $N$ blocks reveals the unique safe column; moving down it guarantees success. Max penalties = $N$.
+- Lower bound configuration (line 5): $S = \{(r, r-1) : r=2,\dots,N+1\}$ satisfies all rules (one per row $2..N+1$, distinct columns). Safe column is $N+1$.
+- Transition constraint (line 10): Verified. A contiguous horizontal path in row $r_i$ avoiding $x_i=r_i-1$ requires endpoints to lie strictly on the same side of $x_i$.
+- Induction (lines 12-17): Verified. Since $c^{(0)} \in C_P$ and $c^{(0)} \neq x_1$ (blocked), $c^{(0)} > x_1 \implies c^{(0)} \in \{x_2,\dots,x_k\}$. Inductively, $c^{(i)} \in \{x_{i+1},\dots,x_k\}$. At $i=k$, this forces $c^{(k-1)} = x_k$, contradicting the requirement $c^{(k-1)} < x_k$ for crossing row $r_k$. The contradiction is airtight and covers all $k < N$.
+
+## Proof B
+Established theorem: James can guarantee success with at most $3000$ penalties ($n \le 3001$). Claims Peter can force at least $3000$ penalties, concluding $n=3001$.
+Claim gap: The lower bound argument lacks a concrete configuration and relies on unverified adversary capabilities. The claim that "Peter can ensure that for any $c, c' \in C_{known}$, any row $r_p \in R_{known}$ that could allow a switch is blocked by placing $c_p$ between $c$ and $c'$" is not justified. Peter chooses $S$ once at the start; the proof does not demonstrate that a single fixed $S$ satisfies these dynamic blocking properties against all possible James strategies. The assertion that non-contiguous $C_{known}$ makes switches in $R_{unc}$ impossible is also heuristic and ignores that James can switch freely in row 1.
+Qualifications and supplied repairs: To verify plausibility, I mentally substituted the explicit diagonal configuration from Proof A ($c_r = r-1$), which does satisfy the claimed properties. However, this construction is absent from Proof B. The proof leaves the existence of a valid $S$ and the rigorous handling of path constraints unsupported.
+Decisive checks:
+- Upper bound (line 4): Verified. Sequential column testing guarantees finding the safe column in at most $m-1$ penalties.
+- Lower bound (lines 7-22): Demonstrated defect. The adversary argument describes desired properties of $C_{known}$ and switch constraints but fails to prove a single configuration $S$ achieves them. The claim "Peter can ensure..." is an assertion of strategy without construction or verification. The logical chain from "non-contiguous $C_{known}$" to "cannot guarantee safe path" skips the critical interval-crossing constraints that actually force the contradiction. The quantifier order is flawed: it treats Peter's choices as adaptive to James's path rather than fixed beforehand, which invalidates the lower bound claim as written.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete, rigorous solution with an explicit blocker configuration ($c_r = r-1$) and a verified inductive contradiction that precisely captures the geometric constraints of horizontal transitions. Proof B correctly identifies the upper bound but relies on a heuristic adversary argument for the lower bound, failing to construct a valid configuration or rigorously justify how Peter's fixed selection blocks all possible James strategies. Proof A's decisive induction directly establishes the impossibility of a safe path for $k < 3000$, whereas Proof B's lower bound contains a demonstrated defect in quantifier order (treating a static game as adaptive) and leaves the core blocking mechanism unverified.

@@ -1,0 +1,22 @@
+To find the angle $\gamma$ between the lines $MN$ and $OI$ in triangle $XYZ$, we use a vector-based approach. Let the side lengths opposite to vertices $X, Y, Z$ be $a, b, c$ respectively. We are given that $M$ is on the side $XY$ and $N$ is on the side $XZ$ such that $YM = ZN = YZ = a$.
+
+Let the circumcenter $O$ be the origin $\vec{0}$. The positions of the vertices $\vec{X}, \vec{Y}, \vec{Z}$ satisfy $|\vec{X}| = |\vec{Y}| = |\vec{Z}| = R$, where $R$ is the circumradius. The incenter $I$ is given by the formula:
+\[ \vec{OI} = \frac{a\vec{X} + b\vec{Y} + c\vec{Z}}{a+b+c} \]
+Since $M$ is on the side $XY$ and $YM = a$, the distance $XM$ is $c - a$. The position of $M$ is:
+\[ \vec{M} = \vec{X} + \frac{c-a}{c}(\vec{Y} - \vec{X}) = \frac{a}{c}\vec{X} + \frac{c-a}{c}\vec{Y} \]
+Similarly, since $N$ is on the side $XZ$ and $ZN = a$, the distance $XN$ is $b - a$. The position of $N$ is:
+\[ \vec{N} = \vec{X} + \frac{b-a}{b}(\vec{Z} - \vec{X}) = \frac{a}{b}\vec{X} + \frac{b-a}{b}\vec{Z} \]
+The vector $\vec{MN}$ is:
+\[ \vec{MN} = \vec{N} - \vec{M} = \left( \frac{a}{b} - \frac{a}{c} \right)\vec{X} - \frac{c-a}{c}\vec{Y} + \frac{b-a}{b}\vec{Z} = \frac{a(c-b)}{bc}\vec{X} - \frac{c-a}{c}\vec{Y} + \frac{b-a}{b}\vec{Z} \]
+The dot product $\vec{MN} \cdot \vec{OI}$ is:
+\[ \vec{MN} \cdot \vec{OI} = \frac{1}{a+b+c} \left( \frac{a(c-b)}{bc}\vec{X} - \frac{c-a}{c}\vec{Y} + \frac{b-a}{b}\vec{Z} \right) \cdot (a\vec{X} + b\vec{Y} + c\vec{Z}) \]
+Expanding the dot product and using $\vec{X}^2 = \vec{Y}^2 = \vec{Z}^2 = R^2$ and the central angle properties $\vec{X} \cdot \vec{Y} = R^2 \cos 2Z$, $\vec{Y} \cdot \vec{Z} = R^2 \cos 2X$, and $\vec{Z} \cdot \vec{X} = R^2 \cos 2Y$:
+\[ \vec{MN} \cdot \vec{OI} = \frac{R^2}{a+b+c} \left[ \frac{a^2(c-b)}{bc} - \frac{b(c-a)}{c} + \frac{c(b-a)}{b} + \frac{a(a-b)}{c} \cos 2Z + (b-c) \cos 2X + \frac{a(c-a)}{b} \cos 2Y \right] \]
+Using the identity $\cos 2\theta = 1 - 2\sin^2 \theta$, the expression inside the brackets becomes:
+\[ \left[ \frac{a^2(c-b) - b^2(c-a) + c^2(b-a)}{bc} + (b-c) + \frac{a(c-a)}{b} + \frac{a(a-b)}{c} \right] - 2 \left[ (b-c)\sin^2 X + \frac{a(c-a)}{b}\sin^2 Y + \frac{a(a-b)}{c}\sin^2 Z \right] \]
+The first bracket simplifies to:
+\[ \frac{a^2c - a^2b - b^2c + b^2a + c^2b - c^2a}{bc} + b - c + \frac{ac-a^2}{b} + \frac{a^2-ab}{c} = \frac{a^2}{b} - \frac{a^2}{c} - b + \frac{ab}{c} + c - \frac{ac}{b} + b - c + \frac{ac}{b} - \frac{a^2}{b} + \frac{a^2}{c} - \frac{ab}{c} = 0 \]
+Using the law of sines $\sin X = \frac{a}{2R}$, $\sin Y = \frac{b}{2R}$, and $\sin Z = \frac{c}{2R}$, the second bracket simplifies to:
+\[ -2 \left[ (b-c)\frac{a^2}{4R^2} + \frac{a(c-a)}{b}\frac{b^2}{4R^2} + \frac{a(a-b)}{c}\frac{c^2}{4R^2} \right] = -\frac{1}{2R^2} [ a^2b - a^2c + abc - a^2b + a^2c - abc ] = 0 \]
+Thus, $\vec{MN} \cdot \vec{OI} = 0$, meaning the lines $MN$ and $OI$ are perpendicular. Therefore, $\gamma = 90^\circ$, and:
+\[ \frac{\gamma}{2} = \frac{90^\circ}{2} = 45^\circ \]

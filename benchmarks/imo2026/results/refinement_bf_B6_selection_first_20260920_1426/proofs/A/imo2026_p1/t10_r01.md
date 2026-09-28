@@ -1,0 +1,33 @@
+To prove the statements, we analyze the transformation of the integers on the blackboard through their prime factorizations.
+
+### Part 1: Termination of the Process
+
+Let the integers on the blackboard be $a_1, a_2, \dots, a_n$ where $n=2026$. A move consists of choosing two integers $m, n > 1$ and replacing them with $g = \gcd(m, n)$ and $l = \frac{\text{lcm}(m, n)}{\gcd(m, n)}$.
+
+Let $\Omega(x)$ denote the number of prime factors of $x$ counted with multiplicity. For any two positive integers $m$ and $n$, we have:
+$$\Omega(m) + \Omega(n) = \sum_{p} (v_p(m) + v_p(n))$$
+where $v_p(x)$ is the exponent of prime $p$ in the factorization of $x$. After the move, the new sum of $\Omega$ values for these two positions is:
+$$\Omega(g) + \Omega(l) = \sum_{p} \left(\min(v_p(m), v_p(n)) + \max(v_p(m), v_p(n)) - \min(v_p(m), v_p(n))\right) = \sum_{p} \max(v_p(m), v_p(n)) = \Omega(\text{lcm}(m, n))$$
+Since $\text{lcm}(m, n)$ is a divisor of $mn$, it follows that $\Omega(\text{lcm}(m, n)) \le \Omega(m) + \Omega(n)$. The total sum $S = \sum_{i=1}^n \Omega(a_i)$ is therefore non-increasing.
+
+Now, let $k$ be the number of integers on the blackboard greater than 1. We examine the pair $(S, k)$ under a move:
+1. If $\gcd(m, n) > 1$, then $\Omega(\gcd(m, n)) \ge 1$. The sum $S$ decreases by $\Omega(m) + \Omega(n) - \Omega(\text{lcm}(m, n)) = \Omega(\gcd(m, n)) > 0$. Thus, the pair $(S, k)$ decreases lexicographically.
+2. If $\gcd(m, n) = 1$, then $\Omega(\text{lcm}(m, n)) = \Omega(m) + \Omega(n)$, so $S$ remains constant. However, the new integers are $g = 1$ and $l = \text{lcm}(m, n)/1 = mn$. Since $m, n > 1$, we have $mn > 1$. Thus, we replace two integers $>1$ with one integer $>1$, and $k$ decreases by 1. Again, $(S, k)$ decreases lexicographically.
+
+Since $S \ge 0$ and $k \ge 0$ are integers, this lexicographical decrease cannot continue indefinitely. The process terminates when no two integers are greater than 1, meaning at most one integer $M$ is greater than 1. Since each move replaces $m, n > 1$ with at least one integer $> 1$ (because $\text{lcm}(m, n) > 1$, and $g \cdot l = \text{lcm}(m, n)$), the board will always contain at least one integer $> 1$. Thus, exactly one integer $M > 1$ remains.
+
+### Part 2: Invariance of $M$
+
+For a fixed prime $p$, let $x_1, x_2, \dots, x_n$ be the exponents $v_p(a_1), v_p(a_2), \dots, v_p(a_n)$. A move on $m$ and $n$ replaces their exponents $(v_p(m), v_p(n))$ with:
+$$v_p(g) = \min(v_p(m), v_p(n)) \quad \text{and} \quad v_p(l) = \max(v_p(m), v_p(n)) - \min(v_p(m), v_p(n)) = |v_p(m) - v_p(n)|$$
+This operation is a step in the subtraction-based Euclidean algorithm. It is a fundamental property of the greatest common divisor that for any non-negative integers $x$ and $y$:
+$$\gcd(x, y) = \gcd(\min(x, y), |x - y|)$$
+Consequently, for every prime $p$, the $\gcd$ of the set of exponents $\{v_p(a_1), v_p(a_2), \dots, v_p(a_n)\}$ is invariant under the move.
+
+Let $g_p = \gcd(v_p(a_1), \dots, v_p(a_n))$ be the initial $\gcd$ for prime $p$. In the final state, only one integer $M$ is greater than 1, and all other $a_i = 1$. The exponents for prime $p$ are then $(v_p(M), 0, \dots, 0)$. The $\gcd$ of these exponents is:
+$$\gcd(v_p(M), 0, \dots, 0) = v_p(M)$$
+Thus, $v_p(M) = g_p$ for every prime $p$. This implies that $M$ is uniquely determined by the initial set of integers:
+$$M = \prod_{p} p^{\gcd(v_p(a_1), \dots, v_p(a_n))}$$
+Since $M$ depends only on the initial values, it is independent of the choices made by Confucius.
+
+\(\square\)

@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "540b108a8e4ea81f64d703d4e6343e6bf11ceae06c1342bff05d1caf60fc5d0c",
+  "problem_id": "imo2026_p3",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "a159eae45bb4e5ff2344818a62a05067f482c9a3bd27dd9d076748c91ac7a10e",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "7bf85d206e97b3bcac6a2d033d773f51d047ecea34cc39a5762c1d823fbe37d0",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the conclusion c(2)=2/3. Even for Liu's proposed equal-thirds marking, Xiang may place both marks in one third so that it is trisected, producing lengths {1/3,1/3,1/9,1/9,1/9}; Liu then receives only 5/9. Thus the claimed strategy does not guarantee 2/3, and no alternative lower bound is proved. Moreover, the true value is c(2)=4/7. The incorrect classification invokes Rule A, so the score is at most 2.",
+    "summary": "The submission correctly identifies the sorted odd-ranked sum as Liu's payoff and gives a largely valid analysis of n=1. From n=2 onward, however, its proposed strategy fails, the inferences confuse a single Xiang response with a guaranteed value, odd n are untreated, and the final paragraph gives mutually inconsistent answers. The correct general value 2^n/(2^(n+1)-1) is neither stated nor approached by a valid general proof.",
+    "strengths": [
+      "Correctly obtains c(1)=2/3, with an essentially valid median-based minimax calculation.",
+      "Recognizes that optimal alternating selection gives Liu the sum of the odd-ranked piece lengths.",
+      "Performs some valid bookkeeping for one particular near-end splitting response when n is even."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed value for n=2 is false. The explicit trisection response gives Liu 5/9 against the proposed equal-thirds marking, and the actual game value is 4/7."
+      },
+      {
+        "severity": "major",
+        "description": "The final answer is contradictory: it states c(2)=2/3 but then calls (n+1)/(n+2) the intended general answer, which would give c(2)=3/4. Both disagree with the correct formula."
+      },
+      {
+        "severity": "major",
+        "description": "No general lower-bound strategy for Liu or universal upper-bound response for Xiang is established; the central refinement/discrepancy arguments needed for the result are absent."
+      },
+      {
+        "severity": "substantial",
+        "description": "The even-n computation examines only one Xiang response to one Liu marking. It cannot establish what Liu guarantees, and odd n are not analyzed at all."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T08:57:08.859251+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "202c9acdd2b0988666b3b65c46acf905516f21fdd70ed64b16ab793f84d27aa0",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "d8f6947165b9102900a330538bbe23b3d7ffd95b875ed2cce9519b42bd72f0f6",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "144f782d632ce88c8ddc8995575e96223781f9ce1a8fee26fe3e5dc4d164d5b4",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None.",
+    "summary": "The submission gives a complete and correct proof of both termination and invariance. The lexicographically decreasing pair (N,S) is valid, exact survival of at least one nonunit is established, and the primewise gcd of valuation vectors correctly determines the unique terminal integer.",
+    "strengths": [
+      "Correctly computes the valuation transformation as (a,b) -> (min(a,b),|a-b|).",
+      "Uses a valid well-founded descent: coprime moves decrease N, while non-coprime moves decrease S without increasing N.",
+      "Correctly proves that every reachable board retains at least one integer greater than 1, so a terminal board has exactly one.",
+      "Correctly establishes invariance of the gcd of all p-adic valuations and reconstructs M uniquely from these invariants."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:52:34.024815+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00040",
+  "native_rejection_count": 0
+}

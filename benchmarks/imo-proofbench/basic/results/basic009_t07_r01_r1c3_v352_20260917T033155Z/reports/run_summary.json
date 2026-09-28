@@ -1,0 +1,15 @@
+{
+  "run_id": "basic009_t07_r01_r1c3_v352_20260917T033155Z",
+  "problem_id": "PB-Basic-009",
+  "outcome": "CERTIFIED_LEMMA_REWRITE_NOT_ACCEPTED",
+  "returncode": 1,
+  "wall_seconds": 371.5421032019658,
+  "proof_audit_passed": false,
+  "verified_samples": 8,
+  "grading_status": "no_accepted_rewrite",
+  "external_grade": null,
+  "source_score": 1,
+  "source_checkpoint": "R1-C3",
+  "candidate_id": "t07_r01",
+  "harness_version": "0.3.352"
+}

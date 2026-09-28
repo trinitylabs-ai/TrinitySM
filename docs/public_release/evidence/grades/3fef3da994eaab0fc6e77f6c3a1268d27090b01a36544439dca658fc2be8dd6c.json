@@ -1,0 +1,44 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+  "proof": "evidence/proofs/1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867.md",
+  "completed_at": "2026-09-17T07:44:52.530736+00:00",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The proof uses dot/cross as the cotangent of an unsigned angle, although the correct general formula has an absolute value on the cross product; it only broadly asserts, without explicitly verifying, that the relevant oriented cross products have matching signs.",
+    "summary": "The coordinate reduction, circumcenter formula, target polynomial T, and explicit algebraic certificate form a valid route to the conclusion. The remaining issue is a routine but load-bearing orientation check: for each of the three angle equalities, the two signed cross products must be shown to have the same sign before the displayed polynomial equation follows. This can be repaired directly from positive barycentric coordinates supplied by the interiority hypotheses.",
+    "strengths": [
+      "Correctly reduces OM=ON to the vanishing of an explicit polynomial T.",
+      "Correctly establishes that A,K,L are noncollinear and hence that the circumcenter formulas have nonzero determinant denominator.",
+      "Supplies the three expanded angle polynomials rather than merely claiming that an elimination exists.",
+      "Provides a fully specified Nullstellensatz-style certificate for the decisive implication E1=E2=E3=0 implies T=0 under the two guards."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "For unsigned angles, cot(angle(u,v))=(u·v)/|u×v|, not generally (u·v)/(u×v). The proof needs three explicit sign checks, as well as a brief derivation of the two guards, from the relevant positive barycentric representations. These checks are straightforward but necessary because the polynomial equations are the premises of the central certificate."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/grades/imo2026_p2/t07_r02/tool_rewrite/strict/summary.json",
+    "native_record_file_sha256": "3f9d001d5b1d56e379cbf80d5c9ca56dc1da45797f9bf06cb64e6f48c5ab3f7e",
+    "selected_record": "benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/grades/imo2026_p2/t07_r02/tool_rewrite/strict/summary.json",
+    "selected_record_file_sha256": "3f9d001d5b1d56e379cbf80d5c9ca56dc1da45797f9bf06cb64e6f48c5ab3f7e",
+    "proof": "benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/proofs/imo2026_p2/t07_r02/tool_rewrite.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf"
+}

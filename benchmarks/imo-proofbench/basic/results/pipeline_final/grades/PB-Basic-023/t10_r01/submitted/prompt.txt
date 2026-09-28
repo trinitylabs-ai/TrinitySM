@@ -1,0 +1,202 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Suppose $a,b,c$ are positive integers such that $2^{a}+1=7^{b}+2^{c}$.
+ Find all possible values of $(a,b,c)$.
+
+**GROUND-TRUTH SOLUTION**
+
+From the given equation, observe that $a>c$. The equation can be
+ rewritten as:
+ \[
+ 2^{c}\left(2^{a-c}-1\right)=7^{b}-1.
+ \]
+
+ We consider the following cases:
+
+
+ \textbf{Case 1: $b$ is odd}
+
+ In this case, $7^{b}-1\equiv2\pmod 4$, so $2^{c}=2$, which implies
+ $c=1$. Substituting back into the equation, we have:
+ \[
+ 2^{a}=7^{b}+1.
+ \]
+
+ On the other hand, note that $7^{b}+1=8(7^{b-1}-7^{b-2}+\cdots+7+1)$.
+ If $b\ge3$ the second factor is an odd number greater than 1 which
+ cannot divide $2^{a}$, contradiction. Therefore we have $b=1$ and
+ $2^{a}=8$, so $a=3$. Hence, this case gives the solution $(a,b,c)=(3,1,1)$.
+
+
+ \textbf{Case 2: $b$ is even but not divisible by $4$}
+
+ Let $b=4k+2$, where $k\in\mathbb{N}$. Then:
+ \[
+ 7^{b}-1=7^{4k+2}-1=\left(7^{2k+1}-1\right)\left(7^{2k+1}+1\right).
+ \]
+
+ Reasoning similarly to the previous case, we find that $7^{2k+1}-1$
+ is divisible by $2$ but not by $4$, $7^{2k+1}+1$ is divisible by
+ $8$ but not by $16$. Therefore, $7^{b}-1$ is divisible by $16$
+ but not by $32$, which implies $c=4$. Substituting back into the
+ equation, we have:
+ \[
+ 2^{a}=7^{4k+2}+15.
+ \]
+
+ Since $7^{4k+2}+15\equiv1\pmod 3$, it follows that $2^{a}\equiv1\pmod 3$.
+ Thus, $a$ is even. Let $a=2\ell$, where $\ell\in\mathbb{Z}^{+}$,
+ $\ell\geq2$ (since $x>z=4$). We can write:
+ \[
+ 15=2^{2\ell}-7^{4k+2}=\left(2^{\ell}-7^{2k+1}\right)\left(2^{\ell}+7^{2k+1}\right).
+ \]
+
+ From here we easily obtain $\ell=3$ and $k=0$ which gives $a=6$
+ and $b=2$. Thus, this case gives the solution $(a,b,c)=(6,2,4)$.
+
+
+ \textbf{Case 3: $b$ is divisible by $4$}
+
+ In this case, $7^{b}-1$ is divisible by $4^{2}=16$. Since $2^{a-c}-1$
+ is divisible by $25$, $a-c$ is divisible by $\text{ord}_{25}(2)=20$.
+ Then, $2^{a-c}-1$ is divisible by 31. Additionally:
+ \[
+ 2^{a-c}-1\text{ is divisible by }31\implies7^{b}-1\text{ is divisible by }31.
+ \]
+
+ Note that $\text{ord}_{31}(7)=15$, so $b$ is divisible by $15$.
+ However, in this case $7^{b}-1$ is also divisible by $9$, implying
+ $a-c$ must be divisible by $6$ which implies that $2^{a-c}-1$ is
+ divisible by $7$. Then, we find:
+ \[
+ 7^{b}-1\text{ is divisible by }7,\text{ leading to a contradiction.}
+ \]
+
+ Hence, there are no solutions in this case.
+
+
+ \textbf{Conclusion}
+
+ The two valid solutions are:
+ \[
+ (a,b,c)=(3,1,1)\quad\text{and}\quad(a,b,c)=(6,2,4).
+ \]
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Found all answers.
+ 2. Handled the case of $b$ is odd and $2\pmod 4$.
+(Almost)
+1. Verification contains minor mistakes only or missed a trivial case.
+
+**PROPOSED SOLUTION**
+
+To find all positive integer solutions $(a, b, c)$ to the equation $2^a + 1 = 7^b + 2^c$, we rearrange the equation as:
+\[ 2^a - 2^c = 7^b - 1 \]
+Since $7^b - 1 > 0$ for $b \in \mathbb{Z}^+$, we must have $a > c$. Let $a = c + n$ for some $n \in \mathbb{Z}^+$. The equation becomes:
+\[ 2^c(2^n - 1) = 7^b - 1 \]
+
+**Case 1: $c = 1$**
+The equation becomes $2(2^n - 1) = 7^b - 1$, which simplifies to $2^{n+1} - 7^b = 1$.
+- If $b=1$, then $2^{n+1} = 8 \implies n=2$. This gives $a = c+n = 1+2 = 3$. Solution: $(3, 1, 1)$.
+- If $b > 1$, we consider $2^{n+1} = 7^b + 1$. If $b$ is even, $7^b + 1 \equiv (-1)^b + 1 = 2 \pmod 4$, so $2^{n+1} = 2 \implies n=0$, which is not possible for $n \in \mathbb{Z}^+$. If $b$ is odd, $7^b + 1 = (7+1)(7^{b-1} - 7^{b-2} + \dots + 1) = 8 \cdot (\text{odd number})$. For this to be a power of 2, the odd number must be 1, which implies $b=1$. Thus, no solutions for $b > 1$.
+
+**Case 2: $c = 2$**
+The equation becomes $4(2^n - 1) = 7^b - 1$.
+Modulo 8, the right-hand side $7^b - 1 \equiv (-1)^b - 1 \pmod 8$, which is $0$ if $b$ is even and $6$ if $b$ is odd.
+The left-hand side $4(2^n - 1)$ is $4(1) = 4$ if $n=1$, and $4(2^n - 1) \equiv 4(-1) \equiv 4 \pmod 8$ if $n \ge 2$.
+Since $4 \not\equiv 0 \pmod 8$ and $4 \not\equiv 6 \pmod 8$, there are no solutions for $c=2$.
+
+**Case 3: $c \ge 3$**
+Since $c \ge 3$, we have $7^b - 1 \equiv 0 \pmod 8$, which implies $b$ must be even. Let $b = 2^m \cdot d$ where $d$ is odd and $m \ge 1$.
+Using the Lifting The Exponent Lemma for $p=2$:
+\[ v_2(7^b - 1) = v_2(7-1) + v_2(7+1) + v_2(b) - 1 = 1 + 3 + m - 1 = m+3 \]
+Since $v_2(2^c(2^n - 1)) = c$, we have $c = m + 3$. The equation becomes:
+\[ 2^{m+3}(2^n - 1) = 7^{2^m d} - 1 \]
+
+**Subcase 3.1: $m = 1$**
+Then $c = 4$ and $16(2^n - 1) = 7^{2d} - 1$.
+- If $d=1$, then $16(2^n - 1) = 48 \implies 2^n - 1 = 3 \implies n=2$. This gives $a = c+n = 4+2 = 6$. Solution: $(6, 2, 4)$.
+- If $d > 1$, then $2^{n+4} - 7^{2d} = 15$. Let $x = n+4$ and $y = 2d$.
+Modulo 3, $(-1)^x - 1^y \equiv 0 \pmod 3 \implies x$ is even.
+Modulo 4, $0 - (-1)^y \equiv -1 \pmod 4 \implies y$ is even.
+Let $x = 2X$ and $y = 2Y$. Then $(2^X - 7^Y)(2^X + 7^Y) = 15$.
+The positive integer factor pairs of 15 are $(1, 15)$ and $(3, 5)$.
+Pair $(1, 15)$: $2^X + 7^Y = 15$ and $2^X - 7^Y = 1 \implies 2 \cdot 2^X = 16 \implies X=3$ and $2 \cdot 7^Y = 14 \implies Y=1$. This gives $x=6, y=2$, so $d=1$, contradicting $d > 1$.
+Pair $(3, 5)$: $2^X + 7^Y = 5$ and $2^X - 7^Y = 3 \implies 2 \cdot 2^X = 8 \implies X=2$ and $2 \cdot 7^Y = 2 \implies Y=0$, so $y=0$, which is impossible.
+
+**Subcase 3.2: $m \ge 2$**
+The equation is $2^n - 1 = S_m \sum_{i=0}^{d-1} R^i$ where $S_m = \frac{7^{2^m} - 1}{2^{m+3}}$ and $R = 7^{2^m}$.
+If $d=1$, $2^n - 1 = S_m$. For $m \ge 2$, $v_5(S_m) = v_5(7^{2^m}-1) = v_5(7^4-1) + v_5(2^{m-2}) = 2$.
+Thus $2^n - 1 \equiv 0 \pmod{25} \implies 20 \mid n$.
+This implies $11 \mid (2^{20}-1) \mid (2^n-1)$, so $11 \mid S_m \implies 7^{2^m} \equiv 1 \pmod{11}$.
+The order of $7 \pmod{11}$ is 10, so $10 \mid 2^m$, which is impossible.
+If $d > 1$, then $20 \mid n \implies 31 \mid (2^n-1)$.
+Since $ord_{31}(7) = 15$, $S_m \equiv 0 \pmod{31} \iff 15 \mid 2^m$, which is impossible.
+Thus $\sum_{i=0}^{d-1} R^i \equiv 0 \pmod{31} \implies R^d \equiv 1 \pmod{31}$.
+Since $ord_{31}(R) = \frac{15}{\gcd(2^m, 15)} = 15$, we have $15 \mid d$, so $3 \mid d$.
+Now consider modulo 19. $ord_{19}(7) = 3$, so $R^3 = (7^3)^{2^m} \equiv 1 \pmod{19}$.
+Since $m \ge 2$, $2^m \not\equiv 0 \pmod 3$, so $R \not\equiv 1 \pmod{19}$.
+Then $\sum_{i=0}^{d-1} R^i = \frac{R^d - 1}{R - 1} \equiv \frac{(R^3)^{d/3} - 1}{R - 1} \equiv 0 \pmod{19}$.
+Thus $2^n - 1 \equiv 0 \pmod{19} \implies 18 \mid n$.
+Since $20 \mid n$ and $18 \mid n$, we have $\text{lcm}(18, 20) = 180 \mid n$.
+This implies $2^{18} - 1 \mid 2^n - 1$. Since $2^{18} - 1 = (2^9 - 1)(2^9 + 1) = 511 \cdot 513 = (7 \cdot 73) \cdot 513$, we have $7 \mid (2^n - 1)$.
+However, $2^n - 1 = \frac{7^b - 1}{2^c} \equiv \frac{-1}{2^c} \not\equiv 0 \pmod 7$.
+This is a contradiction.
+
+The only solutions are $(3, 1, 1)$ and $(6, 2, 4)$.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,235 @@
+{
+  "candidates": [
+    "t10_r01",
+    "t10_r02",
+    "t07_r01",
+    "t07_r02"
+  ],
+  "components": {
+    "backend": "0.3.290+goldfree.1",
+    "frontend": "0.3.263"
+  },
+  "generation": {
+    "budget_forcing": true,
+    "budget_forcing_continuation_cap_floor": 32768,
+    "budget_forcing_primary_fallback": "only_after_initial_limit_without_repetition_and_existing_stage_validation",
+    "cap_recovery": {
+      "early_live_stopper": false,
+      "max_recovery_requests_per_physical_request": 1,
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "nonrepetition_budget_forcing": "completed_valid_primary_else_fail_closed",
+      "nonrepetition_primary": "fresh_original_input_only",
+      "policy": "unified-limits-65536-450-one-retry-v1",
+      "recovery_hits_either_limit": "fail_closed_without_retry_or_fallback",
+      "recovery_max_tokens": 65536,
+      "recovery_timeout_seconds": 450,
+      "repetition": "original_input_plus_clean_prefix",
+      "seed_and_sampling": "preserve_original",
+      "triggers": [
+        "length",
+        "timeout"
+      ]
+    },
+    "cross_lane_voter": {
+      "calls_for_four_lanes": 24,
+      "external_grades_visible": false,
+      "failure_policy": "preserve_lane_finals_no_winner_until_all_votes_valid",
+      "mechanical_recovery": "missing-decisive-checks-label-existing-line-citations-v1",
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "orders": [
+        "forward",
+        "reverse"
+      ],
+      "pairing": "full_round_robin",
+      "policy_id": "cross-lane-symmetric-obligation-audit-prompt-v2",
+      "prompt": "symmetric_mathematical_obligation_audit",
+      "reference_solutions_visible": false,
+      "scope": "audited_lane_finals",
+      "temperature": 0.2,
+      "tie_break": "recorded_seed_derived_candidate_order",
+      "timeout_policy": {
+        "answer_only_max_tokens": 8192,
+        "answer_only_thinking_enabled": false,
+        "answer_only_timeout_seconds": 120,
+        "failure_policy": "preserve_outputs_and_leave_vote_invalid",
+        "fresh_retries_after_timeout": 0,
+        "logical_limit_seconds": 600,
+        "max_answer_only_continuations": 1,
+        "missing_valid_initial_answer": "one_answer_only_continuation_from_saved_reasoning_and_answer",
+        "ordinary_bf_unchanged": true,
+        "policy": "logical-600s-initial-else-one-answer-only-120s-v1",
+        "scope": "cross_lane_comparison_only",
+        "valid_initial_answer": "reuse_without_model_call"
+      },
+      "workers_per_model": {
+        "gemma": 12,
+        "qwen": 12
+      },
+      "workers_total": 24
+    },
+    "draft_completion": {
+      "expansion_bf_temperature": 0.4,
+      "expansion_temperature": 0.4,
+      "lazy_check_temperature": 0.1,
+      "prompts_and_bf_text": "unchanged_from_1.8.0",
+      "strategy": "original_lazy_check_conditional_full_proof_expansion",
+      "workers": 4
+    },
+    "frontend_failure_policy": "retain_actual_checkpoint_continue_survivors",
+    "fully_failed_problem_policy": "pause_queue_allow_explicit_validated_skip",
+    "global_repetition_fresh_retry": false,
+    "grading_inside_solver": false,
+    "lazy_primary_max_tokens": 16384,
+    "limit_recovery": {
+      "early_live_stopper": false,
+      "max_recovery_requests_per_physical_request": 1,
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "nonrepetition_budget_forcing": "completed_valid_primary_else_fail_closed",
+      "nonrepetition_primary": "fresh_original_input_only",
+      "policy": "unified-limits-65536-450-one-retry-v1",
+      "recovery_hits_either_limit": "fail_closed_without_retry_or_fallback",
+      "recovery_max_tokens": 65536,
+      "recovery_timeout_seconds": 450,
+      "repetition": "original_input_plus_clean_prefix",
+      "seed_and_sampling": "preserve_original",
+      "triggers": [
+        "length",
+        "timeout"
+      ]
+    },
+    "optional_exact_evidence": false,
+    "original_reviewer1_detector_preserved": true,
+    "post_resolver_audit": {
+      "body_validation": "diagnostic_only",
+      "decision_rule": "four_bound_explicit_raw_acceptances",
+      "external_grades_visible": false,
+      "failure_policy": "retain_R2",
+      "identical_proofs": "skip_model_calls",
+      "mechanical_validation": "bound-raw-unanimous-validation-v1",
+      "model_hash_echo_used": false,
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "orders": [
+        "forward",
+        "reverse"
+      ],
+      "policy_id": "r2-r3-bound-raw-unanimous-4of4-v1",
+      "prompt": "comparative_verified_progress",
+      "reference_solutions_visible": false,
+      "required_approvals": 4,
+      "scope": "refinement_2_to_3",
+      "temperature": 0.2,
+      "workers_per_model": {
+        "gemma": 12,
+        "qwen": 12
+      },
+      "workers_total": 24
+    },
+    "qwen_max_output_tokens_per_request": 65536,
+    "qwen_primary_max_output_tokens": 49152,
+    "qwen_retry_on_output_cap": true,
+    "r1_cycle_count": 2,
+    "raw_primary_max_tokens": 65536,
+    "raw_temperature_1_continuation_temperature": 0.7,
+    "refinement_bf": {
+      "auxiliary_unchanged": true,
+      "bf_mode": "original_chat_preserved_reasoning_and_answer",
+      "draft_unchanged": false,
+      "harness_variant": "B",
+      "policy_id": "refinement-bf-role-cues-v1",
+      "scope": [
+        "R1-C1",
+        "R1-C2",
+        "R1-C3"
+      ]
+    },
+    "terminal_checkpoint": "R1-C2",
+    "timeout_recovery": {
+      "early_live_stopper": false,
+      "max_recovery_requests_per_physical_request": 1,
+      "models": [
+        "gemma",
+        "qwen"
+      ],
+      "nonrepetition_budget_forcing": "completed_valid_primary_else_fail_closed",
+      "nonrepetition_primary": "fresh_original_input_only",
+      "policy": "unified-limits-65536-450-one-retry-v1",
+      "recovery_hits_either_limit": "fail_closed_without_retry_or_fallback",
+      "recovery_max_tokens": 65536,
+      "recovery_timeout_seconds": 450,
+      "repetition": "original_input_plus_clean_prefix",
+      "seed_and_sampling": "preserve_original",
+      "triggers": [
+        "length",
+        "timeout"
+      ]
+    }
+  },
+  "name": "IMO Proof Pipeline",
+  "raw_base_seeds": [
+    2360094352,
+    2367214500,
+    3233582896,
+    220229344
+  ],
+  "raw_temperatures": [
+    1.0,
+    1.0,
+    0.7,
+    0.7
+  ],
+  "run_defaults": {
+    "gemma_endpoint": "http://127.0.0.1:8030/v1",
+    "model_timeout_sec": 600,
+    "qwen_endpoint": "http://127.0.0.1:8027/v1",
+    "raw_seed_offset": 0,
+    "seed_namespace": "v263-v290:problem-only"
+  },
+  "servers": {
+    "gemma": {
+      "assistant_snapshot": "627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+      "flags": {
+        "--dtype": "bfloat16",
+        "--gpu-memory-utilization": "0.95",
+        "--kv-cache-dtype": "bfloat16",
+        "--max-model-len": "262144",
+        "--max-num-batched-tokens": "8192",
+        "--max-num-seqs": "12",
+        "--reasoning-parser": "gemma4"
+      },
+      "model": "google/gemma-4-31B-it",
+      "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    },
+    "qwen": {
+      "flags": {
+        "--dtype": "bfloat16",
+        "--gpu-memory-utilization": "0.90",
+        "--kv-cache-dtype": "bfloat16",
+        "--max-model-len": "196608",
+        "--max-num-batched-tokens": "8192",
+        "--max-num-seqs": "12",
+        "--reasoning-parser": "qwen3"
+      },
+      "model": "Qwen/Qwen3.6-27B",
+      "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
+    }
+  },
+  "stage_order": [
+    "raw_generation",
+    "lazy_check",
+    "conditional_in_place_expansion",
+    "R1-C1",
+    "R1-C2"
+  ]
+}

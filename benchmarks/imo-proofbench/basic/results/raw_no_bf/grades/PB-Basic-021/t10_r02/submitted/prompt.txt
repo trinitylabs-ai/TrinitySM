@@ -1,0 +1,109 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Define the sequence $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$ for all integers $n \ge 2$. Prove that $x_{n-1}$ divides $x_n$ for all integers $n \ge 2$.
+
+**GROUND-TRUTH SOLUTION**
+
+We will prove this using induction. Note that $x_{2}=2^{6}+2=66$
+ which is divisible by $x_{1}$ and $x_{3}=2^{66}+2=2(2^{65}+1)$,
+ which is divisible by $2(2^{5}+1)=2^{6}+2=x_{2}$.
+
+
+ For $a,b\in\mathbb{N}$, it is well known that $2^{a}+1|2^{ab}+1$
+ and $2^{a}-1|2^{ab}-1$ if $2\not|b$.
+
+
+ We will prove the result by induction. Note that $\nu_{2}(x_{i})=1$,
+ so $\frac{x_{n-1}}{x_{n-2}}$ is odd. Also, note that $x_{1}|x_{2}$,
+ as $2|6$, and $x_{2}|x_{3}$, as $6|66$.
+
+ $x_{n}|x_{n+1}\Longleftrightarrow2^{x_{n-1}-1}+1|2^{x_{n}-1}+1\Longleftarrow x_{n-1}-1|x_{n}-1\Longleftrightarrow2^{x_{n-2}}+1|2^{x_{n-1}}+1\Longleftarrow x_{n-2}|x_{n-1}\text{ and that \ensuremath{\frac{x_{n-1}}{x_{n-2}}} is odd.}$
+ Thus $x_{n-2}|x_{n-1}\implies x_{n}|x_{n+1}$, we can prove by induction
+ that $x_{i}|x_{i+1}$ for all $i\in\mathbb{N}$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved $x_{n-1}-1|x_{n}-1$.
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that $x_{n-1}$ divides $x_n$ for all $n \ge 2$ given $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$, we define a sequence of properties. Let $P(k)$ be the property that $k$ divides $2^k + 2$. We wish to show that $P(x_n)$ holds for all $n \ge 1$.
+
+For $n=1$, $x_1 = 6$. We check $P(6)$: $2^6 + 2 = 64 + 2 = 66$, and $6 \mid 66$, so $P(x_1)$ is true. This implies $x_1 \mid x_2$.
+For $n=2$, $x_2 = 66$. We check $P(66)$: $2^{66} + 2$. Since $x_2$ is even, $2 \mid 2^{66} + 2$. For divisibility by $3$, $2^{66} + 2 \equiv (-1)^{66} + 2 = 3 \equiv 0 \pmod{3}$. For divisibility by $11$, by Fermat's Little Theorem, $2^{10} \equiv 1 \pmod{11}$, so $2^{66} + 2 \equiv (2^{10})^6 \cdot 2^6 + 2 \equiv 1 \cdot 64 + 2 = 66 \equiv 0 \pmod{11}$. Thus $66 \mid 2^{66} + 2$, and $P(x_2)$ is true. This implies $x_2 \mid x_3$.
+
+Now we establish a general inductive step. Let $k$ be an integer such that $P(k)$ is true, meaning $k \mid 2^k + 2$. We want to show that $P(2^k + 2)$ is also true, i.e., $(2^k + 2) \mid (2^{2^k+2} + 2)$.
+Let $m = 2^k + 2$. We need $2^m + 2 \equiv 0 \pmod{m}$. This is equivalent to $2^{2^k+2} + 2 \equiv 0 \pmod{2^k+2}$, which simplifies to $2 \cdot 2^{2^k+1} + 2 \equiv 0 \pmod{2^k+2}$, or $2^{2^k+1} + 1 \equiv 0 \pmod{2^{k-1}+1}$.
+
+Let $u = 2^{k-1} + 1$. We want to show $2^{2^k+1} \equiv -1 \pmod{u}$. We know $2^{k-1} \equiv -1 \pmod{u}$. Thus, $2^{2(k-1)} \equiv 1 \pmod{u}$. It follows that $2^N \equiv -1 \pmod{u}$ if $N$ is an odd multiple of $k-1$.
+The exponent here is $2^k + 1$. We need $2^k + 1 = (2j+1)(k-1)$ for some integer $j$.
+Testing for $k=6$: $2^6 + 1 = 65 = 13 \times 5$, and $k-1 = 5$. This is an odd multiple.
+Testing for $k=66$: $2^{66} + 1$. $k-1 = 65 = 5 \times 13$. $2^{66} + 1 \equiv (-1)^{33} + 1 = 0 \pmod{5}$ and $2^{66} + 1 \equiv (2^{12})^5 \cdot 2^6 + 1 \equiv 65 \equiv 0 \pmod{13}$. Thus $65 \mid 2^{66} + 1$. Since both are odd, the quotient is odd.
+
+In general, let $J_n = x_n - 1$. Then $J_1 = 5$ and $J_{n+1} = 2^{J_n+1} + 1$. We show by induction that $J_n \mid 2^{J_n+1} + 1$ and the quotient $q_n = (2^{J_n+1} + 1)/J_n$ is odd.
+For $n=1$, $5 \mid 2^6 + 1 = 65$ and $65/5 = 13$ (odd).
+Assume $J_n \mid 2^{J_n+1} + 1$ with $q_n$ odd. Then $J_{n+1} = 2^{J_n+1} + 1$. We need $J_{n+1} \mid 2^{J_{n+1}+1} + 1$, i.e., $(2^{J_n+1} + 1) \mid (2^{2^{J_n+1} + 2} + 1)$.
+As $2^{J_n+1} \equiv -1 \pmod{J_{n+1}}$, then $2^{2(J_n+1)} \equiv 1 \pmod{J_{n+1}}$. The exponent $2^{J_n+1} + 2$ must be an odd multiple of the half-period $J_n+1$.
+We check if $\frac{2^{J_n+1} + 2}{J_n+1}$ is odd.
+For $n=1$, $\frac{2^6+2}{6} = \frac{66}{6} = 11$ (odd).
+For $n=2$, $\frac{2^{66}+2}{66} = \frac{2^{65}+1}{33}$. Since $33 \mid 2^{65}+1$ (as $2^{65}+1 \equiv 0 \pmod{3}$ and $2^{65}+1 \equiv -1+1=0 \pmod{11}$), and both are odd, the quotient is odd.
+By induction, $L_n \mid 2^{L_n} + 2$ where $L_n = x_n$. Thus $x_n \mid x_{n+1}$ for all $n \ge 1$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

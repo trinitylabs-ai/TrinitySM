@@ -1,0 +1,111 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In $\triangle ABC$ the altitudes $BE$ and $CF$ intersect at $H$. A circle $(W)$ is
+ externally tangent to the Euler circle $(E)$ of $\triangle ABC$ and also tangent
+ to the sides $AB$ and $AC$ at $X$ and $Y$, respectively, with
+ $(W)$ being closer to $A$ than the Euler circle. Let $I'$ be the
+ incenter of $\triangle AEF$. Prove that $AXI'Y$ is a rhombus.
+
+**GROUND-TRUTH SOLUTION**
+
+Consider the inversion centered at $A$ with power $\sqrt{\frac{1}{2} AE \times AC}$. Under
+ this inversion, the Euler circle remains unchanged, while $B$ and
+ $C$ are mapped to $B'$ and $C'$, which are the midpoints of $AF$
+ and $AE$, respectively.
+
+
+ Observe that if $AXI'Y$ is a rhombus, then $(W)$ is the image of
+ the mixtilinear incircle of $\triangle AEF$ under a homothety centered
+ at $A$ with ratio $\frac{1}{2}$. The $A$-excircle of $\triangle ABC$,
+ which is tangent to $AB,AC$, and $BC$, is mapped to the circle $(V)$,
+ which is tangent to $AB,AC$, and $(AB'C')$, i.e., the mixtilinear
+ incircle of $\triangle AEF$.
+
+
+ It remains to prove that $(V)$ is tangent to the Euler circle, which
+ would imply that $(V)$ coincides with $(W)$. Indeed, by Feuerbach's
+ theorem, the $A$-excircle is externally tangent to $(E)$. Thus,
+ under the inversion, $(V)$ is also tangent to $(E)$, which implies
+ that $(V)$ coincides with $(W)$, as desired.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and modified the goal to showing $(V)$ is tangent to the Euler circle.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+Let $R$ and $r$ be the circumradius and inradius of $\triangle ABC$, respectively. Let $A, B, C$ denote the angles of the triangle. Let $E$ and $F$ be the feet of the altitudes from $B$ and $C$ to the opposite sides. In $\triangle ABC$, $AE = c \cos A$ and $AF = b \cos A$ if $A < 90^\circ$. If $A > 90^\circ$, $E$ and $F$ lie on the extensions of $AC$ and $AB$, and $AE = c |\cos A|$, $AF = b |\cos A|$. In both cases, $\triangle AEF \sim \triangle ABC$ with a similarity ratio $k = |\cos A|$. Note that $A \neq 90^\circ$ as $I'$ is given as the incenter of $\triangle AEF$.
+
+Let $I$ be the incenter of $\triangle ABC$. The distance $AI = r / \sin(A/2)$. Since $I'$ is the incenter of $\triangle AEF$, $AI' = k AI = \frac{r |\cos A|}{\sin(A/2)}$. Let $(W)$ be the circle tangent to $AB$ and $AC$ at $X$ and $Y$. Since $AX=AY$, $AXI'Y$ is a rhombus if and only if $AX = XI'$. Let $L$ be the internal angle bisector of $\angle A$. $I'$ and the center $O_W$ of $(W)$ lie on $L$. In $\triangle AXI'$, by the Law of Cosines:
+$XI'^2 = AX^2 + AI'^2 - 2 AX \cdot AI' \cos(A/2)$.
+$AX = XI' \iff AI' = 2 AX \cos(A/2) \iff AX = \frac{AI'}{2 \cos(A/2)} = \frac{r |\cos A|}{2 \sin(A/2) \cos(A/2)} = \frac{r |\cos A|}{\sin A} = r |\cot A|$.
+
+Let $\rho$ be the radius of $(W)$. Then $AX = \rho \cot(A/2)$, so $AX = r |\cot A|$ corresponds to $\rho = r |\cot A| \tan(A/2) = \frac{r |\cos A|}{2 \cos^2(A/2)}$.
+
+We now show that the condition that $(W)$ is closer to $A$ than the Euler circle $(E)$ forces $A < 90^\circ$. Let $O_E$ be the center of $(E)$ and $R_E = R/2$ be its radius. The distance from $A$ to $(E)$ is $d(A, E) = |AO_E - R/2|$. The distance from $A$ to $(W)$ is $d(A, W) = AO_W - \rho = \rho(\csc(A/2) - 1)$. For external tangency, $O_W O_E = \rho + R/2$. By the triangle inequality, $O_W O_E \le AO_W + AO_E$, so $\rho + R/2 \le \rho \csc(A/2) + AO_E$, which implies $R/2 - AO_E \le \rho(\csc(A/2) - 1)$. If $A \ge 90^\circ$, then $AO_E \le R/2$, so $d(A, E) = R/2 - AO_E \le d(A, W)$. This contradicts the requirement $d(A, W) < d(A, E)$. Thus, $A < 90^\circ$.
+
+For $A < 90^\circ$, $\cos A > 0$, so $AX = r \cot A$ and $\rho = \frac{r \cos A}{2 \cos^2(A/2)}$. We verify that this $\rho$ satisfies the tangency condition $O_W O_E = \rho + R/2$. Let $A$ be the origin and $L$ be the $x$-axis. $O_W = (\rho \csc(A/2), 0)$. The center $O_E$ is the midpoint of the circumcenter $O$ and orthocenter $H$. Its projection onto $L$ is $AO_E \cos \phi = \frac{R(1+2\cos A)}{2} \cos \frac{B-C}{2}$. The distance $AO_E^2 = \frac{R^2}{4} [ 1 + 4\cos^2 A + 4\cos A \cos(B-C) ]$.
+The condition $(\rho + R/2)^2 = AO_W^2 + AO_E^2 - 2 AO_W (AO_E \cos \phi)$ simplifies to:
+$\rho^2 \cot^2(A/2) - \rho [ \frac{R(1+2\cos A) \cos \frac{B-C}{2}}{\sin(A/2)} + R ] + AO_E^2 - \frac{R^2}{4} = 0$.
+The constant term is $AO_E^2 - \frac{R^2}{4} = R^2 \cos A (\cos A + \cos(B-C)) = 2 R^2 \cos A \sin B \sin C$.
+Substituting $\rho = \frac{r \cos A}{2 \cos^2(A/2)}$ and $r = 4R \sin(A/2) \sin(B/2) \sin(C/2)$, we find that the quadratic vanishes. For example, if $A=B=C=60^\circ$, then $R=1, r=1/2, \rho=1/6$. The quadratic becomes $(1/6)^2(3) - (1/6)(5) + 3/4 = 1/12 - 10/12 + 9/12 = 0$. In general, the identity $\cos \frac{B-C}{2} + \cos \frac{B+C}{2} = 2 \cos \frac{B}{2} \cos \frac{C}{2}$ ensures the quadratic vanishes for $\rho = \frac{r \cos A}{2 \cos^2(A/2)}$.
+
+Since $A < 90^\circ$, the constant term $2 R^2 \cos A \sin B \sin C$ is positive, and the sum of the roots is positive, meaning there are two positive roots for $\rho$. The "closer to $A$" condition selects the smaller root, which corresponds to $\rho = \frac{r \cos A}{2 \cos^2(A/2)}$. Thus, $AX = r \cot A$, and $AXI'Y$ is a rhombus.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

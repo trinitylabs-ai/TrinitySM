@@ -1,0 +1,42 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_bd91ff82c9d4af2f2e28b5e2",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "b5c61024c942d118f0041c9eef04eb68a863c24287a57600f729c66f79df10bc",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "db6605b1c3686965c1247bf35e195cc4b6d421cbdae05218e94838cce29e45ed",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The submission gives a complete and correct proof. The lexicographically decreasing potential establishes finite termination and exactly one surviving entry greater than 1. Primewise gcds of valuations are then correctly shown to be invariant and to determine the terminal integer uniquely.",
+    "strengths": [
+      "Correctly computes the change in the total prime-factor count under each move.",
+      "Uses a valid well-founded lexicographic potential to prove termination.",
+      "Correctly rules out a terminal board containing only 1s.",
+      "Correctly identifies the valuation transformation and its preservation of gcd.",
+      "Reconstructs the unique terminal integer from invariants depending only on the initial board."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T09:20:52.062193+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p1/pass_2/p1/proof_bd91ff82c9d4af2f2e28b5e2"
+}

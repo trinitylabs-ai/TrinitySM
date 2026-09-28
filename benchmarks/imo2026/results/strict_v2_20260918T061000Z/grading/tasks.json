@@ -1,0 +1,356 @@
+{
+  "schema": "gold-informed-generic-proof-task-manifest-v1",
+  "tasks": [
+    {
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "candidate_id": "core_t07_r01",
+      "problem_path": "../../../problems/imo2026_p1.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p1/reference.txt",
+      "proof_path": "../proofs/imo2026_p1/core_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+        "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+        "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77"
+      }
+    },
+    {
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "candidate_id": "core_t07_r02",
+      "problem_path": "../../../problems/imo2026_p1.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p1/reference.txt",
+      "proof_path": "../proofs/imo2026_p1/core_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+        "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+        "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b"
+      }
+    },
+    {
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "candidate_id": "core_t10_r01",
+      "problem_path": "../../../problems/imo2026_p1.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p1/reference.txt",
+      "proof_path": "../proofs/imo2026_p1/core_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+        "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+        "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c"
+      }
+    },
+    {
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "candidate_id": "core_t10_r02",
+      "problem_path": "../../../problems/imo2026_p1.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p1/reference.txt",
+      "proof_path": "../proofs/imo2026_p1/core_t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+        "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+        "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "core_t07_r01",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/core_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "core_t07_r02",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/core_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "core_t10_r01",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/core_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "core_t10_r02",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/core_t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50"
+      }
+    },
+    {
+      "problem_number": 3,
+      "problem_id": "imo2026_p3",
+      "candidate_id": "core_t07_r01",
+      "problem_path": "../../../problems/imo2026_p3.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p3/reference.txt",
+      "proof_path": "../proofs/imo2026_p3/core_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+        "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+        "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd"
+      }
+    },
+    {
+      "problem_number": 3,
+      "problem_id": "imo2026_p3",
+      "candidate_id": "core_t07_r02",
+      "problem_path": "../../../problems/imo2026_p3.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p3/reference.txt",
+      "proof_path": "../proofs/imo2026_p3/core_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+        "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+        "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8"
+      }
+    },
+    {
+      "problem_number": 3,
+      "problem_id": "imo2026_p3",
+      "candidate_id": "core_t10_r01",
+      "problem_path": "../../../problems/imo2026_p3.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p3/reference.txt",
+      "proof_path": "../proofs/imo2026_p3/core_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+        "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+        "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015"
+      }
+    },
+    {
+      "problem_number": 3,
+      "problem_id": "imo2026_p3",
+      "candidate_id": "core_t10_r02",
+      "problem_path": "../../../problems/imo2026_p3.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p3/reference.txt",
+      "proof_path": "../proofs/imo2026_p3/core_t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+        "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+        "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc"
+      }
+    },
+    {
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "candidate_id": "core_t07_r01",
+      "problem_path": "../../../problems/imo2026_p4.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p4/reference.txt",
+      "proof_path": "../proofs/imo2026_p4/core_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+        "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+        "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2"
+      }
+    },
+    {
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "candidate_id": "core_t07_r02",
+      "problem_path": "../../../problems/imo2026_p4.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p4/reference.txt",
+      "proof_path": "../proofs/imo2026_p4/core_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+        "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+        "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278"
+      }
+    },
+    {
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "candidate_id": "core_t10_r01",
+      "problem_path": "../../../problems/imo2026_p4.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p4/reference.txt",
+      "proof_path": "../proofs/imo2026_p4/core_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+        "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+        "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e"
+      }
+    },
+    {
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "candidate_id": "core_t10_r02",
+      "problem_path": "../../../problems/imo2026_p4.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p4/reference.txt",
+      "proof_path": "../proofs/imo2026_p4/core_t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+        "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+        "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c"
+      }
+    },
+    {
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "candidate_id": "core_t07_r01",
+      "problem_path": "../../../problems/imo2026_p5.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p5/reference.txt",
+      "proof_path": "../proofs/imo2026_p5/core_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+        "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+        "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20"
+      }
+    },
+    {
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "candidate_id": "core_t07_r02",
+      "problem_path": "../../../problems/imo2026_p5.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p5/reference.txt",
+      "proof_path": "../proofs/imo2026_p5/core_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+        "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+        "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4"
+      }
+    },
+    {
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "candidate_id": "core_t10_r01",
+      "problem_path": "../../../problems/imo2026_p5.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p5/reference.txt",
+      "proof_path": "../proofs/imo2026_p5/core_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+        "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+        "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed"
+      }
+    },
+    {
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "candidate_id": "core_t10_r02",
+      "problem_path": "../../../problems/imo2026_p5.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p5/reference.txt",
+      "proof_path": "../proofs/imo2026_p5/core_t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+        "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+        "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3"
+      }
+    },
+    {
+      "problem_number": 6,
+      "problem_id": "imo2026_p6",
+      "candidate_id": "core_t07_r01",
+      "problem_path": "../../../problems/imo2026_p6.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p6/reference.txt",
+      "proof_path": "../proofs/imo2026_p6/core_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+        "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+        "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf"
+      }
+    },
+    {
+      "problem_number": 6,
+      "problem_id": "imo2026_p6",
+      "candidate_id": "core_t07_r02",
+      "problem_path": "../../../problems/imo2026_p6.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p6/reference.txt",
+      "proof_path": "../proofs/imo2026_p6/core_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+        "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+        "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9"
+      }
+    },
+    {
+      "problem_number": 6,
+      "problem_id": "imo2026_p6",
+      "candidate_id": "core_t10_r01",
+      "problem_path": "../../../problems/imo2026_p6.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p6/reference.txt",
+      "proof_path": "../proofs/imo2026_p6/core_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+        "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+        "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260"
+      }
+    },
+    {
+      "problem_number": 6,
+      "problem_id": "imo2026_p6",
+      "candidate_id": "core_t10_r02",
+      "problem_path": "../../../problems/imo2026_p6.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p6/reference.txt",
+      "proof_path": "../proofs/imo2026_p6/core_t10_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+        "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+        "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "tool_rewrite_t07_r01",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/tool_rewrite_t07_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "tool_rewrite_t07_r02",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/tool_rewrite_t07_r02.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867"
+      }
+    },
+    {
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "candidate_id": "tool_rewrite_t10_r01",
+      "problem_path": "../../../problems/imo2026_p2.json",
+      "reference_path": "../../review_fusion/grading/problems/imo2026_p2/reference.txt",
+      "proof_path": "../proofs/imo2026_p2/tool_rewrite_t10_r01.md",
+      "expected_hashes": {
+        "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+        "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+        "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da"
+      }
+    }
+  ]
+}

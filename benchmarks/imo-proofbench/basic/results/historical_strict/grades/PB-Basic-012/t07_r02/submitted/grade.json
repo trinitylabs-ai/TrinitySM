@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:11:13.091644+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 12,
+  "problem_id": "PB-Basic-012",
+  "case_id": "PB-Basic-012.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p12/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p12/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p12/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "af4b4a7f15ea2d6faad7198afad9f7068ce408461e2c0b5ff6dad3ec0143f687",
+  "reference_sha256": "133d3fe55786fb9d1fb9d4008deb6e4f886e8977d43639df018b6c1c63debb2a",
+  "proof_sha256": "09b75607bbec44399598e47b0a7f43e0fc7dafd88d98680bd5e2fa2a882f9102",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The shift establishes the required bijection with nonintersecting paths, LGV yields the correct determinant, and the numerical evaluation \\(f(10)=5{,}924{,}217{,}936\\) is accurate.",
+    "strengths": [
+      "Correctly converts weak path ordering into strict nonintersection by shifting the second path.",
+      "Correctly applies LGV and computes all four path counts.",
+      "The binomial-coefficient and final arithmetic calculations are correct."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

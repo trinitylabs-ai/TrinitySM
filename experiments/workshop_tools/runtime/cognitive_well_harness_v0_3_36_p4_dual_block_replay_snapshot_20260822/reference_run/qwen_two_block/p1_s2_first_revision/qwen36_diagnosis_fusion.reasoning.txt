@@ -1,0 +1,158 @@
+The user wants me to adjudicate a proof for IMO 2026 Problem 1.
+I need to follow the strict output format.
+I will evaluate the candidate proof, the grading rubric, and the independent reviews.
+The candidate proof claims:
+1. Operation on valuations: $(a, b) \to (\min(a, b), |a-b|)$.
+2. Potential function $S = \sum_p \sum_i v_p(x_i)$. Change $\Delta S = -\sum_p \min(v_p(m), v_p(n)) = -\Omega(\gcd(m,n))$.
+3. If $\gcd(m,n) > 1$, $S$ decreases. If $\gcd(m,n) = 1$, $S$ constant, but number of integers $>1$ decreases by 1.
+4. Termination follows.
+5. Invariance: $\gcd(v_{p,1}, \dots, v_{p,2026})$ is invariant because $\gcd(a, b) = \gcd(\min(a, b), |a-b|)$.
+6. At termination, only one $M > 1$, others are 1 (valuations 0). So $v_p(M) = g_p$.
+7. $M = \prod p^{g_p}$, independent of choices.
+
+Let's check the math carefully.
+Operation: replace $m, n$ with $g = \gcd(m, n)$ and $l = \text{lcm}(m, n)/\gcd(m, n)$.
+Valuations: $v_p(g) = \min(a, b)$. $v_p(l) = \max(a, b) - \min(a, b) = |a-b|$. Correct.
+Potential $S$: sum of all valuations. Change for prime $p$: $\min(a,b) + |a-b| - (a+b) = \max(a,b) - (a+b) = -\min(a,b)$. Correct.
+Total change $\Delta S = -\sum_p \min(a,b) = -\Omega(\gcd(m,n))$. Correct.
+If $\gcd(m,n) > 1$, $\Omega(\gcd) \ge 1$, so $S$ decreases. Correct.
+If $\gcd(m,n) = 1$, $\Omega(\gcd) = 0$, so $S$ constant. The new numbers are $1$ and $mn$. Since $m,n > 1$, $mn > 1$. So we replace two numbers $>1$ with one number $>1$ and one number $=1$. Number of integers $>1$ decreases by 1. Correct.
+Termination: $S$ is bounded below by 0. Number of integers $>1$ is bounded below by 0. Lexicographic order $(S, \text{count})$ strictly decreases. Process terminates. Correct.
+Termination condition: no two integers $>1$ can be chosen. So at most one integer $>1$ remains. Correct.
+Invariance: For each prime $p$, consider the multiset of valuations. The operation replaces $a, b$ with $\min(a,b), |a-b|$.
+Claim: $\gcd(a, b) = \gcd(\min(a,b), |a-b|)$.
+Proof: Assume $a \le b$. Then $\min(a,b)=a$, $|a-b|=b-a$. $\gcd(a, b) = \gcd(a, b-a)$. True.
+So the gcd of the pair is invariant. Since gcd is associative and commutative, the gcd of the entire multiset of valuations for prime $p$ is invariant. Correct.
+At termination, we have one number $M > 1$ and 2025 numbers equal to 1.
+Valuations for 1 are all 0.
+So the multiset of valuations for prime $p$ is $\{v_p(M), 0, 0, \dots, 0\}$.
+The gcd of this multiset is $\gcd(v_p(M), 0, \dots, 0) = v_p(M)$.
+Since the gcd is invariant, $v_p(M)$ equals the initial gcd of valuations for $p$. Correct.
+Thus $M = \prod p^{g_p}$ is uniquely determined. Correct.
+The proof is solid.
+
+Now check the independent reviews.
+OPC critic says:
+- Potential function change calculation is flawed. (False, it's correct.)
+- Invariance argument flawed, operation doesn't preserve gcd of valuations. (False, it does.)
+- Claims score 3.
+GPT-OSS critic says:
+- Checks everything, finds it correct.
+- Claims score 7.
+
+I will verify everything myself. The proof is mathematically sound. The potential function argument is standard. The invariance of gcd of valuations is correct. The termination argument is correct. The conclusion follows.
+There are no defects.
+I will assign grade 7/7.
+I will follow the output contract strictly.
+Structure:
+# INDICTMENT
+{short overall assessment}
+## FINAL VERDICT
+{concise proof-as-submitted judgment}
+- FINAL VERDICT: CORRECT
+- FINAL_GRADE: 7/7
+## REPAIR HANDOFF
+- Status: NOT REQUIRED
+- Accepted defect IDs: NONE
+
+Wait, the prompt says: "If the proof is correct, omit all `ROUND` sections, set `FINAL_GRADE` to `7/7`, set the repair status to `NOT REQUIRED`, and set accepted defect IDs to `NONE`."
+I will produce exactly that.
+Let's double check the exact wording required.
+"Produce concise Markdown using exactly the following structure. Do not add sections before, between, or after the specified sections."
+I will write the indictment, then final verdict, then repair handoff.
+Check for any subtle issues in the proof:
+- "Since the original integers were all greater than 1, for any $x_i$ there is some prime $p$ such that $v_p(x_i) \ge 1$, ensuring $g_p \ge 1$ for that $p$, so $M > 1$." This is just to show $M>1$, which is required by the problem statement ("exactly one integer M on the blackboard is greater than 1"). It's correct.
+- The problem says "not necessarily different". The proof handles this.
+- The operation replaces $m, n$ with $\gcd(m,n)$ and $\text{lcm}(m,n)/\gcd(m,n)$. Note that $\text{lcm}(m,n)/\gcd(m,n) = mn/\gcd(m,n)^2$. This is always an integer. The proof uses valuations, so integrality is implicit.
+- Everything is correct.
+
+I will generate the output now.
+One minor point: The prompt says "If the proof is correct, omit all `ROUND` sections...".
+I will strictly follow this.
+Output matches contract.
+Proceed. 
+Self-Correction/Verification during thought:
+Wait, let's carefully verify the invariance claim: $\gcd(a, b) = \gcd(\min(a, b), |a-b|)$.
+Is it always true for non-negative integers? Yes.
+Does the operation preserve the gcd of the *entire set* of valuations? Yes, because replacing two elements in a set with two new elements that have the same pairwise gcd preserves the gcd of the whole set. $\gcd(S \cup \{a, b\}) = \gcd(\gcd(S), a, b) = \gcd(\gcd(S), \gcd(a, b)) = \gcd(\gcd(S), \gcd(a', b')) = \gcd(S \cup \{a', b'\})$. Correct.
+Termination: Lexicographic decrease of $(S, \text{count of } >1)$. Correct.
+Final state: At most one $>1$. Since $S$ decreases or count decreases, and we start with 2026 numbers $>1$, we end with exactly one $>1$ because $M>1$ is guaranteed by the invariant $g_p \ge 1$ for some $p$ (since initial numbers are $>1$). Actually, the problem says "exactly one integer M ... is greater than 1". The proof shows at most one, and then argues $M>1$. Correct.
+All good.
+
+I will produce the response. 
+Structure:
+# INDICTMENT
+The candidate proof correctly analyzes the operation via prime valuations, establishes a valid lexicographic potential function to prove termination, and identifies the invariant gcd of valuations to prove independence of the final value. The independent reviews contain conflicting assessments; the OPC critic incorrectly flags valid calculations as flawed, while the GPT-OSS critic correctly validates the argument. Direct verification confirms the proof is rigorous and complete.
+
+## FINAL VERDICT
+The proof as submitted is mathematically sound. The potential function argument correctly guarantees termination, and the invariance of the greatest common divisor of prime valuations rigorously establishes the uniqueness of the final integer $M$. No gaps or fallacies are present.
+
+- FINAL VERDICT: CORRECT
+- FINAL_GRADE: 7/7
+
+## REPAIR HANDOFF
+- Status: NOT REQUIRED
+- Accepted defect IDs: NONE
+Matches contract exactly. Proceeds. 
+One detail: The prompt says "Do not add sections before, between, or after the specified sections." I will ensure exact formatting.
+All good. 
+Output matches. 
+Proceeds. 
+[Output Generation] -> *Self-Correction/Refinement during generation prep*: 
+Wait, the prompt says "If the proof is correct, omit all `ROUND` sections, set `FINAL_GRADE` to `7/7`, set the repair status to `NOT REQUIRED`, and set accepted defect IDs to `NONE`."
+I will strictly follow this.
+The output will be exactly as structured.
+Done. 
+Let's produce it. 
+[Output Generation] (matches the refined version)
+```text
+# INDICTMENT
+The candidate proof correctly analyzes the operation via prime valuations, establishes a valid lexicographic potential function to prove termination, and identifies the invariant gcd of valuations to prove independence of the final value. The independent reviews contain conflicting assessments; the OPC critic incorrectly flags valid calculations as flawed, while the GPT-OSS critic correctly validates the argument. Direct verification confirms the proof is rigorous and complete.
+
+## FINAL VERDICT
+The proof as submitted is mathematically sound. The potential function argument correctly guarantees termination, and the invariance of the greatest common divisor of prime valuations rigorously establishes the uniqueness of the final integer $M$. No gaps or fallacies are present.
+
+- FINAL VERDICT: CORRECT
+- FINAL_GRADE: 7/7
+
+## REPAIR HANDOFF
+- Status: NOT REQUIRED
+- Accepted defect IDs: NONE
+```
+All constraints met. Proceeds. 
+Note: I'll make sure the formatting exactly matches the requested structure. No extra text.
+Done. 
+Output Generation. 
+(Self-Correction/Verification during thought)
+Wait, let's double check the exact wording of the prompt for the output contract:
+```text
+# INDICTMENT
+
+{short overall assessment}
+
+## ROUND 1
+
+...
+
+## FINAL VERDICT
+
+{concise proof-as-submitted judgment}
+
+- FINAL VERDICT: {CORRECT or INCORRECT}
+- FINAL_GRADE: N/7
+
+## REPAIR HANDOFF
+
+- Status: {REQUIRED or NOT REQUIRED}
+- Accepted defect IDs: {comma-separated accepted IDs or NONE}
+```
+It says "If the proof is correct, omit all `ROUND` sections...". So I will just output INDICTMENT, FINAL VERDICT, REPAIR HANDOFF.
+Everything matches.
+Proceeds. 
+Output matches response. 
+[Done] 
+*Self-Correction/Note during generation*: I will ensure the exact markdown headings are used.
+The prompt says: "Produce concise Markdown using exactly the following structure. Do not add sections before, between, or after the specified sections."
+I will output exactly that.
+Ready. 
+[Output Generation] -> *Proceeds*

@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_d01957b2e2e1ed79bd31f0b0472df20b",
+  "pass_index": 2,
+  "score": 4,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "After correctly reducing the goal to the displayed trigonometric identity, the submission merely asserts that the remaining angle constraints make this identity true. It never translates those constraints into equations or performs the required elimination. This is a substantial missing derivation governed by Rule B.",
+    "summary": "The coordinate reduction, sine-law relations, circumcenter formula, and final reformulation are essentially correct. The displayed target identity is explicit and true under the hypotheses, so the work is eligible for 4 under Rule B. However, the proof omits the central compatibility calculation; uniqueness of K and L does not itself imply the asserted identity.",
+    "strengths": [
+      "Correctly reduces OM=ON to a linear scalar-product identity for O.",
+      "Correctly derives the cotangent relations for the directions of AK and AL.",
+      "Correctly expresses the circumcenter in the basis of the rays AK and AL and reduces the conclusion to an explicit trigonometric equality.",
+      "The strict-interiority hypotheses make the implicit nondegeneracy and angle-order assumptions valid."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The final trigonometric identity is asserted without proof. In particular, the conditions ∠LBK=β and ∠LCK=γ are not converted into usable compatibility equations, and no calculation showing that they imply the target equality is supplied."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "proof_sha256": "d01957b2e2e1ed79bd31f0b0472df20bb958181043fa0dc91cda80fe47fc86b8",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "evidence_sha256": "f5ab4dffea395b6dc246054afcbb1fcac56840eaeb004f44445887e8cba28b1c",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p2/t10_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "4a55350e5bc33a2ea501c6a130f0d64b17a7231860d82a62296ee04d3c0f3b04",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "6e3cc3d190aed2b7f95309f0996bf9d733b0594df7f45926d607798b63c2dff6",
+    "raw_response_1.txt": "e4a8070c03721f94cf439403cf2706ff5ae2edd488339de54301c9f169f4335d",
+    "summary.json": "4da1df9affe02bc053687e88781ab1c42e86b6c3b53bb93ed6c0f3d9c94a74b0"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_59a7d76b3ff5bd145a11ed434a7e5c4f",
+  "pass_index": 2,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive mathematical defect.",
+    "summary": "The submission correctly proves both directions and obtains exactly θ = 180°/k for integers k ≥ 2. The induction on integer-multiple angles, the interval construction for sufficiency, and the safe-state invariant with exhaustive pairing of possible marked angles are all valid.",
+    "strengths": [
+      "Correctly shows that a triangle containing nθ is winning by repeatedly splitting that angle into θ and (n−1)θ.",
+      "For 180° = kθ, correctly finds a multiple nθ in (B,B+A) when A>θ and handles the remaining k=2,3 cases.",
+      "Correctly constructs the obstruction using triangles with no angle in W and exhausts all four ways both children might acquire an angle in W.",
+      "The final classification and all relevant quantifiers are correct."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "proof_sha256": "59a7d76b3ff5bd145a11ed434a7e5c4f02eac8307afc1127687026af47a648fa",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "evidence_sha256": "ac8d8d3602465e2723d39e9a550f174c4c8ac22e515114429e057c7c72e9c05d",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p4/t07_r01_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "c3b688be8d1733b38be5212d48f96d53634d5559cb50c84db66a84e819a62061",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "c1ce9a9bc8c81d8d71beef32d2468e8d944ab1269c313841619467402712b3f8",
+    "raw_response_1.txt": "f522d6deacd7b3d4decd1462f869e75594e0078ad583760d5850fadc6fb92ebc",
+    "summary.json": "56a97a621ef9b06cf6e5a7dfe018f6accbec89977569a82b39e02844749e124f"
+  }
+}

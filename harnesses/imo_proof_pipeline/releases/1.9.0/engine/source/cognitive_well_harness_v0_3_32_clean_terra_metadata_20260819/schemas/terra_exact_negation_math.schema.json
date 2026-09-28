@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "exact_negation_valid",
+    "first_issue",
+    "external_information_used"
+  ],
+  "properties": {
+    "exact_negation_valid": {"type": "boolean"},
+    "first_issue": {"type": ["string", "null"]},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

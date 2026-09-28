@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Advanced-007",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "ace1892432945c1dceb911ee4a75eb321620aca12bb6d139d414d68fea62fc17",
+  "proof": "evidence/proofs/ace1892432945c1dceb911ee4a75eb321620aca12bb6d139d414d68fea62fc17.md",
+  "completed_at": "2026-09-13T13:50:21.822926+00:00",
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/advanced/results/advanced004_030_ipp110_20260913T0750Z/grading/work/batches/batch_0020/scores/cases/PB-Advanced-007/t07_r02/result.json",
+    "native_record_file_sha256": "253f0a642260464d2fc30d42ae30169cfcdc8c2138fba245d8093a6f760d0c67",
+    "selected_record": "benchmarks/imo-proofbench/advanced/results/advanced004_030_ipp110_20260913T0750Z/grading/work/batches/batch_0020/scores/cases/PB-Advanced-007/t07_r02/result.json",
+    "selected_record_file_sha256": "253f0a642260464d2fc30d42ae30169cfcdc8c2138fba245d8093a6f760d0c67",
+    "proof": "benchmarks/imo-proofbench/advanced/results/advanced004_030_ipp110_20260913T0750Z/generation/run/problems/PB-Advanced-007/02_r1_cycles/input/lazy_checked_baseline/t07_r02.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "c380b076112d21530c0e424a25bf7eba0a257314f4ffbf74d66344b0f8d77d05",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "1a180e8c952c6554e20b5af59955b22b9deb8aa52f33b9303850baaf028b0442",
+  "reference_sha256": "a9aad31a8bdf1311c6dc42d44c11086264b96b4610a037c6d6afa3a8fbd3831c",
+  "guidelines_sha256": "2461c93596ad36372ab6793e9890098c1a74a772ed655ee843ad069a5379875c",
+  "response_sha256": "7a8803435c6d9ed2bdf8e23f510f6bcc7bb45f90fbda160acf337b88332aa2a9",
+  "isolation_verified": true
+}

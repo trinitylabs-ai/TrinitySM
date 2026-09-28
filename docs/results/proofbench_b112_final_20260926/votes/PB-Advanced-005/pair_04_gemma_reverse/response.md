@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For an acute angle $\angle XYZ = \alpha \neq 60^\circ$ and a point $A$ inside it, the condition $\angle BAC = \alpha$ is equivalent to the points $Y, A, B, C$ being concyclic, which can be expressed as a linear equation $L_A(b, c) = 0$ in the distances $b = YB$ and $c = YC$. Furthermore, if $\theta = \alpha$, the only point $D$ inside the angle satisfying the condition $\angle BAC = \alpha \implies \angle BDC = \theta$ is $D = A$.
+Claim gap: The proof fails to derive the equations for $D$ (lines 22-23) and does not justify why the intersection of the resulting line and circle provides a point $D \neq A$ inside the angle. The claim that $\alpha \neq 60^\circ$ ensures $D \neq A$ is stated without proof.
+Qualifications and supplied repairs: The derivation of the linear equation $L_A(b, c) = 0$ (lines 3-11) was verified as correct. The conclusion that $\theta = \alpha$ implies $D=A$ (lines 14-19) was also verified. The subsequent steps (20-25) are treated as unsupported claims because the derivation of the equations for $D$ is missing.
+Decisive checks: The central derivation for $\theta = \alpha$ (lines 14-19) correctly shows that no $D \neq A$ exists for $\theta = \alpha$. The transition to $\theta \neq \alpha$ (lines 20-25) is a gap, as the equations for $x_D, y_D$ are provided without derivation.
+
+## Proof B
+Established theorem: For an acute angle $\angle XYZ = \alpha$ and a point $A$ inside it, the condition $\angle BAC = \alpha$ is equivalent to $Y, A, B, C$ being concyclic, which can be expressed as a linear relation $c = mb + n$ between the distances $b = YB$ and $c = YC$. Furthermore, if $\tan \theta = \tan \alpha$, the only point $D$ inside the angle satisfying the condition $\angle BAC = \alpha \implies \angle BDC = \theta$ is $D = A$.
+Claim gap: The proof concludes that the reflection of $A$ across the angle bisector $D$ satisfies $\angle BDC = \alpha$ for all $B, C$ such that $\angle BAC = \alpha$. This claim is mathematically false.
+Qualifications and supplied repairs: The derivation in steps 13-18 correctly shows that if $\tan \theta = \tan \alpha$, then $D$ must lie on the ray $YA$ and $D=A$ or $D=Y$. This actually contradicts the proof's own later claim that the reflection $D$ (which generally does not lie on $YA$) works with $\theta = \alpha$.
+Decisive checks: The reflection argument (step 20) was tested. If $D$ is the reflection of $A$ across the bisector, $\angle BDC$ is not constant for all $B, C$ satisfying $\angle BAC = \alpha$. While the reflection of the circle through $Y, A, B, C$ is a circle through $Y, D, B', C'$ (where $B', C'$ are reflections of $B, C$), this implies $\angle B'DC' = \alpha$ or $180^\circ - \alpha$, but $\angle BDC$ is not equal to $\angle B'DC'$.
+
+## Decision
+Winner: A
+Reason: Proof A is incomplete, as it provides the final equations for $D$ without deriving them, but its logic is consistent and it correctly identifies that $\theta = \alpha$ leads only to $D=A$. Proof B, however, contains a fundamental mathematical error: it claims that the reflection of $A$ across the angle bisector provides a solution with $\theta = \alpha$, a claim that is both false and contradicted by the proof's own earlier derivation. Proof A's mention of the $\alpha \neq 60^\circ$ condition suggests a more accurate path toward the solution.

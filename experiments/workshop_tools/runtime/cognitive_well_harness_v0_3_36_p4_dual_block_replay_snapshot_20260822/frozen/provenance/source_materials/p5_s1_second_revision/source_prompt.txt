@@ -1,0 +1,67 @@
+You are the paper's simplified Council of Graders. Thinking mode is on.
+Adopt a guilty-until-proven-innocent standard and run at most three short rounds.
+
+The Inquisitor attacks line-by-line validity; the Architect checks global sufficiency
+and magic steps; a Defender gives the strongest possible rebuttal; the Chief Grader
+rules. Begin with an indictment. In each round perform a pre-mortem: assume the proof
+looks correct but is false and identify a concrete edge case or logical failure. A
+defense succeeds only if the gap is repairable using mathematics already written.
+
+Classify remaining errors as slips or fallacies. A slip loses one point. A fallacy or
+incomplete answer requiring new mathematics caps the score at 3. Score 7 only for a
+complete rigorous proof with no unresolved gap; score 6 for a genuine minor slip;
+use 2-4 for incomplete or substantially flawed work only when consistent with the
+fallacy cap, and 0-1 for irrelevant work. Do not assign 5.
+
+Write the concise grading forum and final verdict in ordinary plaintext, following
+the appendix report style. End with exactly one separate terminal line of the form
+FINAL_GRADE: N/7, where N is the score. Do not write anything after that line. Do
+not use a reference solution.
+
+PROBLEM OR STANDALONE CLAIM:
+IMO 2026 Problem 5. Let R_{>0} be the set of positive real numbers. Determine all functions f: R_{>0} -> R_{>0} such that, for every x,y > 0, sqrt((x^2 + f(y)^2)/2) >= (f(x) + y)/2 >= sqrt(x f(y)).
+
+SOLUTION:
+To determine all functions $f: \mathbb{R}_{>0} \to \mathbb{R}_{>0}$ such that for every $x, y > 0$,
+$$\sqrt{\frac{x^2 + f(y)^2}{2}} \geq \frac{f(x) + y}{2} \geq \sqrt{x f(y)},$$
+we proceed as follows.
+
+**1. Derivation of a Functional Equation**
+Substituting $x = f(y)$ into the given inequalities, we obtain:
+$$\sqrt{\frac{f(y)^2 + f(y)^2}{2}} \geq \frac{f(f(y)) + y}{2} \geq \sqrt{f(y) f(y)}.$$
+Simplifying this, we get:
+$$f(y) \geq \frac{f(f(y)) + y}{2} \geq f(y),$$
+which forces $\frac{f(f(y)) + y}{2} = f(y)$, or equivalently, $f(f(y)) = 2f(y) - y$ for all $y \in \mathbb{R}_{>0}$.
+
+**2. Analysis of the Growth of $f$**
+Let $g(x) = f(x) - x$. The equation $f(f(x)) = 2f(x) - x$ can be rewritten as:
+$$g(f(x)) = f(f(x)) - f(x) = (2f(x) - x) - f(x) = f(x) - x = g(x).$$
+Consider the sequence defined by $y_0 = x$ and $y_{n+1} = f(y_n)$. Since $g(y_{n}) = g(y_0)$ for all $n \in \mathbb{N}$, we have:
+$$y_n = x + n g(x).$$
+Since the codomain of $f$ is $\mathbb{R}_{>0}$, we must have $y_n > 0$ for all $n \in \mathbb{N}$, which implies $g(x) \geq 0$ for all $x \in \mathbb{R}_{>0}$. Thus, $f(x) \geq x$.
+
+**3. Constraining $g(x)$ via the Original Inequalities**
+From the right-hand side (RHS) inequality $\frac{f(x) + y}{2} \geq \sqrt{x f(y)}$, we have:
+$$f(x) + y \geq 2\sqrt{x f(y)} \implies x + g(x) + y \geq 2\sqrt{x f(y)}.$$
+Let $S = f(y)$. Then $y = S - g(y)$. Since $g(y) = g(f(y)) = g(S)$, we substitute:
+$$x + g(x) + S - g(S) \geq 2\sqrt{x S} \implies g(x) - g(S) \geq 2\sqrt{x S} - x - S = -(\sqrt{x} - \sqrt{S})^2.$$
+This inequality $g(x) - g(S) \geq -(\sqrt{x} - \sqrt{S})^2$ holds for all $x \in \mathbb{R}_{>0}$ and $S \in \text{Im}(f)$.
+If $x$ is also in $\text{Im}(f)$, swapping $x$ and $S$ gives $g(S) - g(x) \geq -(\sqrt{S} - \sqrt{x})^2$. Combining these, we have:
+$$|g(x) - g(S)| \leq (\sqrt{x} - \sqrt{S})^2 \quad \text{for all } x, S \in \text{Im}(f).$$
+
+**4. Proving $g(x)$ is Constant**
+Let $x, S \in \text{Im}(f)$. Let $c_x = g(x)$ and $c_S = g(S)$. For any $n, m \in \mathbb{N}$, the points $x_n = x + nc_x$ and $S_m = S + mc_S$ are in $\text{Im}(f)$. Thus:
+$$|c_x - c_S| \leq (\sqrt{x + nc_x} - \sqrt{S + mc_S})^2 = \frac{(x + nc_x - S - mc_S)^2}{(\sqrt{x + nc_x} + \sqrt{S + mc_S})^2}.$$
+For any $c_x, c_S > 0$, there exist sequences $n, m \to \infty$ such that the numerator $|x + nc_x - S - mc_S|$ remains bounded (this is a property of the set $\{nc_x - mc_S\}$). As $n, m \to \infty$, the denominator $(\sqrt{x + nc_x} + \sqrt{S + mc_S})^2 \to \infty$. Thus, we must have $|c_x - c_S| = 0$, implying $g$ is constant on $\text{Im}(f)$. Let $g(x) = c$ for all $x \in \text{Im}(f)$. Since $g(x) = g(f(x))$ and $f(x) \in \text{Im}(f)$, it follows that $g(x) = c$ for all $x \in \mathbb{R}_{>0}$.
+
+Testing $f(x) = x + c$ in the original inequalities:
+LHS: $\sqrt{\frac{x^2 + (y+c)^2}{2}} \geq \frac{x + y + c}{2}$ is the QM-AM inequality, which holds for $c \geq 0$.
+RHS: $\frac{x + y + c}{2} \geq \sqrt{x(y + c)}$ is the AM-GM inequality for $x$ and $y+c$, which holds for $c \geq 0$.
+
+\boxed{f(x) = x + c, c \geq 0}
+
+ADDITIONAL MATERIALS:
+None
+
+
+Hard termination rule: Never repeat a completed round or restart the analysis. When the stated round budget is exhausted or the error list is stable, emit the requested final output immediately. Concision is part of the protocol; uncertainty must be recorded in the verdict rather than resolved by extending the loop.

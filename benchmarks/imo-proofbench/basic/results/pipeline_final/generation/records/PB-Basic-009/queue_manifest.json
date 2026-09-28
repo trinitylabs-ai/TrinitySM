@@ -1,0 +1,38 @@
+{
+  "schema": "v263_lazy_refined_to_v290_r1c3_queue_v1",
+  "problem_dir": "/opt/proof-workshop/data/imo_proofbench_basic_problem_only",
+  "output_dir": "/opt/proof-workshop/runs/basic028_030_then009_frozen_20260912T183451065979Z/rerun_009",
+  "problems": [
+    {
+      "problem_id": "PB-Basic-009",
+      "problem": "Let $a_1,a_2,...,a_{18}$ be 18 real numbers, not necessarily distinct, with average $m$. Let $A$ denote the number of triples $1 \\le i < j < k \\le 18$ for which $a_i + a_j + a_k \\ge 3m$. What is the minimum possible value of $A$?",
+      "problem_number": 9
+    }
+  ],
+  "gemma_endpoint": "http://127.0.0.1:8030/v1",
+  "qwen_endpoint": "http://127.0.0.1:8027/v1",
+  "gemma_model": "google/gemma-4-31B-it",
+  "qwen_model": "Qwen/Qwen3.6-27B",
+  "seed_namespace": "v263-v290:problem-only:p9-rerun:20260912T183451065979Z",
+  "model_timeout_sec": 600,
+  "dry_run": false,
+  "stage_order": [
+    "raw_generation",
+    "lazy_check",
+    "conditional_in_place_expansion",
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "frontend": "0.3.263",
+  "backend": "0.3.290+goldfree.1",
+  "budget_forcing": true,
+  "raw_bf_temperature_transition": "1.0 -> 0.7",
+  "workers_per_endpoint": 4,
+  "optional_exact_evidence": false,
+  "model_output": "Markdown",
+  "strict_scoring_inside_pipeline": false,
+  "reference_inputs_allowed": false,
+  "raw_seed_offset": 1592974400
+}

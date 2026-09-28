@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The logarithmic transformation to $\sum_{k=1}^n \frac{1}{2^k} \tanh(2^{k-1} x_k) \leq 0$ is correct. The decomposition into $V_{pos}$ and $V_{neg}$, the concavity/convexity analysis of $g_k(x)$, the Lagrange multiplier maximization of $V_{pos}$, and the identification of vertex candidates for $V_{neg}$ are all mathematically sound.
+Claim gap: The proof claims $V_{neg} \leq -\frac{1}{2} \tanh S$ (line 20). This bound is false when $m \geq 4$ and $S$ is small. Expanding the vertex value $V_j$ via Taylor series yields $V_j \approx -S/2 + \frac{4^j-1}{18j^3}S^3$, while $-\frac{1}{2}\tanh S \approx -S/2 + \frac{1}{6}S^3$. For $j \geq 4$, the coefficient $\frac{4^j-1}{18j^3} > \frac{1}{6}$, so $V_j > -\frac{1}{2}\tanh S$ for small $S$. This falsifies the claimed bound and breaks the chain of implications.
+Qualifications and supplied repairs: NONE. The defect is load-bearing and cannot be repaired without fundamentally altering the bounding strategy.
+Decisive checks: Verified $g_k''(x)$ signs (lines 12, 16). Computed exact Taylor expansion of vertex values $V_j$ to demonstrate $V_j > -\frac{1}{2}\tanh S$ for $j \geq 4$. Confirmed that the concavity argument in line 20 does not justify comparing $h(j,S)$ across different $j$, and the limit checks are insufficient to establish the inequality for all $S$.
+
+## Proof B
+Established theorem: The full inequality $\sum_{k=1}^n \frac{1}{b_k} \geq \frac{1}{2} - \frac{1}{2^{n+1}}$ is established.
+Claim gap: Lines 72-73 contain a flawed inequality chain ($g(u) \leq g(u^q)$ is false for $u \in (0,1), q \geq 1$). However, the required inequality $q g(u) \leq g(u^q)$ is fully supported by the explicitly stated concavity of $q \mapsto g(u^q)$ (line 69) and Lemma 1 (line 13). By the chord property of concave functions with $h(0)=0$, $g(u^q) \geq \frac{q}{2} g(u^2)$. Lemma 1 gives $g(u^2) \geq 2g(u)$, yielding $g(u^q) \geq q g(u)$ for all $q \in [0,2]$.
+Qualifications and supplied repairs: Clarified that the final step relies on the chord property of concave functions combined with Lemma 1, both of which are present in the submission. No external lemmas were introduced.
+Decisive checks: Verified Lemma 1, 2, 3 algebraically (lines 13, 16, 19). Confirmed the induction step for $S_{\leq m}$ correctly applies Lemmas 1 & 2. Verified Jensen's application for $S_{> m}$ using concavity of $\tanh(y/2)$. Checked the final reduction to $q g(u) \leq g(u^q)$ and confirmed it holds via the stated concavity and Lemma 1. All quantifiers and domains ($m=0$ to $n$, $u \in (0,1]$, $q \in (0,2]$) are handled correctly.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, rigorous derivation using verified algebraic lemmas and convexity arguments. Every load-bearing step is mathematically sound, and a minor textual confusion in the final lines is resolved by the concavity property and Lemma 1 already explicitly stated in the submission. Proof A contains a fatal defect in bounding $V_{neg}$: the claimed inequality $V_{neg} \leq -\frac{1}{2}\tanh S$ is mathematically false for $m \geq 4$ and small $S$, as demonstrated by asymptotic analysis of the vertex values. This gap invalidates the central chain of implications, rendering Proof A incomplete. Proof B's method is self-contained and correct.

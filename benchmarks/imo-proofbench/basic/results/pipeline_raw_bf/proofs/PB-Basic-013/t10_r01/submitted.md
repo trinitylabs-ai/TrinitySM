@@ -1,0 +1,34 @@
+To prove that there are two colors that occur together in more than one box, we model the problem using set theory and a double-counting argument.
+
+### 1. Mathematical Setup
+Let $B_1, B_2, \dots, B_8$ be the 8 boxes. Each box contains 6 balls of distinct colors chosen from a set of 22 available colors, $C = \{c_1, c_2, \dots, c_{22}\}$. We represent each box as a set of colors:
+$$|B_i| = 6 \quad \text{for } i = 1, 2, \dots, 8$$
+We wish to prove that there exist two distinct colors $c_x, c_y \in C$ and two distinct boxes $B_i, B_j$ such that $\{c_x, c_y\} \subseteq B_i$ and $\{c_x, c_y\} \subseteq B_j$. This is equivalent to proving that there exists at least one pair of boxes $(B_i, B_j)$ with $i \neq j$ such that $|B_i \cap B_j| \geq 2$.
+
+### 2. Double-Counting Shared Colors
+Let $n_r$ be the number of boxes in which color $c_r$ appears, for $r = 1, 2, \dots, 22$. Since there are 8 boxes with 6 balls each, the total number of color occurrences is:
+$$\sum_{r=1}^{22} n_r = 8 \times 6 = 48$$
+We consider the number of pairs of boxes that share a common color. For a specific color $c_r$, there are $\binom{n_r}{2}$ pairs of boxes that both contain $c_r$. Summing over all colors, the total number of "shared color" instances $S$ is:
+$$S = \sum_{r=1}^{22} \binom{n_r}{2}$$
+Alternatively, if we let $k_{ij} = |B_i \cap B_j|$ be the number of colors shared by boxes $B_i$ and $B_j$, then the total number of shared colors across all pairs of boxes is:
+$$S = \sum_{1 \le i < j \le 8} k_{ij}$$
+
+### 3. Minimizing the Sum $S$
+To find the minimum possible value of $S$, we use the fact that the function $f(n) = \binom{n}{2} = \frac{n(n-1)}{2}$ is convex. For a fixed sum $\sum n_r$, the sum $\sum f(n_r)$ is minimized when the $n_r$ values are as nearly equal as possible.
+Dividing the total occurrences by the number of colors:
+$$48 = 22 \times 2 + 4$$
+The sum is minimized when 4 colors appear 3 times and 18 colors appear 2 times:
+$$S \geq 4 \binom{3}{2} + 18 \binom{2}{2} = 4(3) + 18(1) = 12 + 18 = 30$$
+
+### 4. Application of the Pigeonhole Principle
+We have determined that the total number of shared color instances $S$ is at least 30. The number of distinct pairs of boxes $(B_i, B_j)$ is:
+$$\binom{8}{2} = \frac{8 \times 7}{2} = 28$$
+Thus, we have:
+$$\sum_{1 \le i < j \le 8} k_{ij} \geq 30$$
+Since there are only 28 pairs of boxes, by the Pigeonhole Principle, at least one pair $(B_i, B_j)$ must satisfy:
+$$k_{ij} \geq \lceil \frac{30}{28} \rceil = 2$$
+This means that boxes $B_i$ and $B_j$ share at least two colors. Let these colors be $c_x$ and $c_y$. Consequently, the colors $c_x$ and $c_y$ occur together in box $B_i$ and also occur together in box $B_j$.
+
+Since $i \neq j$, these two colors occur together in more than one box.
+
+\(\square\)

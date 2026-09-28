@@ -1,0 +1,45 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p4",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+  "proof": "evidence/proofs/2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2.md",
+  "completed_at": "2026-09-15T16:39:22.804445+00:00",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the necessity direction, the proof does not explicitly exhibit a starting triangle having no angle in \\(S\\). Such a triangle is required to refute a guarantee from every initial triangle.",
+    "summary": "The characterization and both main arguments are correct. The sole logical omission is easily repaired: when \\(180^\\circ/\\theta\\notin\\mathbb Z\\), the equilateral triangle is \\(S\\)-free, since \\(60^\\circ=n\\theta\\) would imply \\(180^\\circ=3n\\theta\\).",
+    "strengths": [
+      "Correctly proves that a triangle containing a positive multiple of \\(\\theta\\) is winning by repeatedly splitting that angle.",
+      "Gives a valid interval argument establishing sufficiency when \\(180^\\circ=N\\theta\\).",
+      "Correctly establishes the invariant that every cut of an \\(S\\)-free triangle has an \\(S\\)-free child."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The existence of an \\(S\\)-free initial triangle in the necessity direction is left unstated, although it has a routine one-line construction."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p4_c3_t07r01_20260915T144230Z/grading/work/strict_c3_20260915T163357Z/scores/p4/t07_r01/summary.json",
+    "native_record_file_sha256": "6733413f745c78eee6f48d211c27cec679691f76d80bbd3962a817bbe6a0ad1a",
+    "selected_record": "benchmarks/imo2026/results/p4_c3_t07r01_20260915T144230Z/grades/imo2026_p4/t07_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "731b50f0246af0498dcd481606426074db766dc572511ebfb159580661533405",
+    "proof": "benchmarks/imo2026/results/p4_c3_t07r01_20260915T144230Z/proofs/imo2026_p4/t07_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb"
+}

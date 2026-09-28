@@ -1,0 +1,181 @@
+{
+  "schema": "two-call-fusion-repair-compare-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-08-23T04:06:10.759932+00:00",
+  "model_kind": "qwen36",
+  "model": "Qwen/Qwen3.6-27B",
+  "metrics": {
+    "sample_count": 3,
+    "valid_fusion_count": 3,
+    "valid_repair_count": 1,
+    "repair_call_count": 2,
+    "fusion_exact_gold_count": 1,
+    "prior_strict_exact_gold_count": 1,
+    "fusion_mean_absolute_error": 1.3333333333333333,
+    "prior_strict_mean_absolute_error": 1.3333333333333333,
+    "gold_fallacy_case_count": 2,
+    "fusion_gold_fallacy_detected_count": 1,
+    "fusion_false_pass_count": 1
+  },
+  "results": [
+    {
+      "sample_id": "p1_s2_first_revision",
+      "case": "p1_s2",
+      "stage": "first_ensemble_feedback_revision",
+      "fusion": {
+        "valid": true,
+        "errors": [],
+        "score": 7,
+        "verdict": "CORRECT",
+        "repair_status": "NOT REQUIRED",
+        "accepted_defect_ids": [],
+        "round_count": 0,
+        "branch_statuses": [],
+        "severities": [],
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 6773,
+          "total_tokens": 8812,
+          "completion_tokens": 2039,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 83.58792471326888,
+        "seed": 1586375840,
+        "report_sha256": "df5138af632d25e1a814c68eb993234e6ecfa251ecc447d50adf1205513aaf7d"
+      },
+      "repair": {
+        "ran": false,
+        "valid": true,
+        "status": "NOT REQUIRED"
+      },
+      "prior_strict_score": 7,
+      "gold_score": 6,
+      "gold_verdict": "minor_slip"
+    },
+    {
+      "sample_id": "p4_s2_first_revision",
+      "case": "p4_s2",
+      "stage": "first_ensemble_feedback_revision",
+      "fusion": {
+        "valid": true,
+        "errors": [],
+        "score": 3,
+        "verdict": "INCORRECT",
+        "repair_status": "REQUIRED",
+        "accepted_defect_ids": [
+          "D1"
+        ],
+        "round_count": 1,
+        "branch_statuses": [
+          "REQUIRES_NEW_ARGUMENT"
+        ],
+        "severities": [
+          "SUBSTANTIVE"
+        ],
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 12527,
+          "total_tokens": 19171,
+          "completion_tokens": 6644,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 257.3496355516836,
+        "seed": 3632369394,
+        "report_sha256": "2ded92d2f2504bb3f98245c6d80d655fd287466ab0f0b313b670a15fc63d72e1"
+      },
+      "repair": {
+        "valid": true,
+        "errors": [],
+        "addressed_defect_ids": [
+          "D1"
+        ],
+        "chief_architects": [
+          "PARTIAL REBUILD"
+        ],
+        "round_count": 1,
+        "status": "UNVERIFIED",
+        "ran": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 3092,
+          "total_tokens": 8572,
+          "completion_tokens": 5480,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 202.49058235809207,
+        "seed": 2190888492,
+        "report_sha256": "ef8c74855345046946aef1836ac57f273a8542ae3496ed1b70f7a107ae04a8f3",
+        "repair_system_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+        "repair_user_sha256": "c676eda5776a4ac4bbed56ec22a760edefcfd78e2dff0021a7f1a4626df7d756"
+      },
+      "prior_strict_score": 3,
+      "gold_score": 3,
+      "gold_verdict": "fallacy"
+    },
+    {
+      "sample_id": "p5_s1_second_revision",
+      "case": "p5_s1",
+      "stage": "severity_corrected_second_revision",
+      "fusion": {
+        "valid": true,
+        "errors": [],
+        "score": 6,
+        "verdict": "INCORRECT",
+        "repair_status": "REQUIRED",
+        "accepted_defect_ids": [
+          "D1"
+        ],
+        "round_count": 1,
+        "branch_statuses": [
+          "IMMEDIATE_OMISSION"
+        ],
+        "severities": [
+          "LOCAL"
+        ],
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 14747,
+          "total_tokens": 23214,
+          "completion_tokens": 8467,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 322.8733038986102,
+        "seed": 97059627,
+        "report_sha256": "84c964aeaf2bf290feca46912c89c5b651ae0d15eff6fd4c519f5768104a4e67"
+      },
+      "repair": {
+        "valid": false,
+        "errors": [
+          "output does not start with the required REPAIR PROPOSAL heading",
+          "FINAL PROPOSAL section count is not one",
+          "PROPOSAL STATUS section count is not one",
+          "repair ROUND defect IDs do not match the frozen handoff",
+          "each repair ROUND must contain one allowed Chief Architect value",
+          "a valid repair handoff must end with UNVERIFIED status",
+          "addressed defect IDs do not match the frozen handoff",
+          "content appears after the addressed defect IDs line"
+        ],
+        "addressed_defect_ids": [],
+        "chief_architects": [],
+        "round_count": 0,
+        "status": null,
+        "ran": true,
+        "finish_reason": "length",
+        "usage": {
+          "prompt_tokens": 2789,
+          "total_tokens": 14789,
+          "completion_tokens": 12000,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 433.5630609728396,
+        "seed": 1608434677,
+        "report_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repair_system_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+        "repair_user_sha256": "bcde4c2668348bee6885959d9ddf039052b682994100fbae92f4910a8b3c1927"
+      },
+      "prior_strict_score": 6,
+      "gold_score": 3,
+      "gold_verdict": "fallacy"
+    }
+  ]
+}

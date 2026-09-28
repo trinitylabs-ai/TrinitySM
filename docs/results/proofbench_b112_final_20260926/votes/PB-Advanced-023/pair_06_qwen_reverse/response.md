@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The smallest integer is $n=3001$. James can guarantee reaching row $3002$ with at most $3000$ penalties by probing until all $3000$ blocked cells are identified, then traversing the unique empty column. Conversely, for Peter's fixed selection $c_r = r-1$, any strategy with fewer than $3000$ penalties fails because column-switching constraints in known rows force a contradiction when attempting to traverse unknown rows safely.
+Claim gap: NONE.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Verified upper bound strategy (Lines 3-4). Verified lower bound induction (Lines 9-18): The argument correctly establishes that in unknown rows, James must restrict movement to the set of known blocked columns $C_P = \{x_1, \dots, x_k\}$ to guarantee safety. Horizontal transitions between columns can only occur safely in known rows $r_i$, requiring consecutive traversal columns $c^{(i-1)}, c^{(i)}$ to lie on the same side of the blocked column $x_i$. Since $x_1 < \dots < x_k$, this forces $c^{(i)} \in \{x_{i+1}, \dots, x_k\}$ by induction. At $i=k$, this yields $c^{(k-1)} = x_k$, which directly contradicts the requirement to avoid $x_k$ in row $r_k$. Boundary cases $k=0,1$ are correctly handled. The derivation is complete and mathematically sound.
+
+## Proof B
+Established theorem: $n=3001$ is sufficient. The lower bound claims $n=3001$ is necessary but only rigorously justifies the $m=1$ penalty case.
+Claim gap: The lower bound for $1 < m < 3000$ is incomplete. The adaptive adversary strategy is described vaguely, and the claim that Peter can force $C_{hit}$ to lack adjacent columns or maintain consistency for arbitrary $m$ is asserted without proof. The general impossibility of traversal for $m < 3000$ is not established.
+Qualifications and supplied repairs: NONE. The $m=1$ bottleneck (trapped between known and unknown rows) is correctly identified, but the extension to general $m$ relies on unsupported assertions about Peter's adaptive control over $C_{hit}$.
+Decisive checks: Upper bound verified (Lines 3-9). Lower bound $m=1$ case verified (Lines 21-22): With one known blocked cell $(r_1, c_1)$, James must stay in column $c_1$ for unknown rows but avoid $c_1$ in row $r_1$, making traversal impossible. However, the proof fails to generalize this obstruction to $m > 1$. The claim that "Peter can similarly ensure that any attempt to switch columns... requires passing through a non-guaranteed-safe cell" (Line 21) lacks a concrete configuration or inductive structure, leaving the core lower bound obligation unresolved for the general case.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete, rigorous lower bound using a fixed worst-case configuration and a precise inductive argument that tracks column constraints across known and unknown rows, successfully demonstrating the impossibility of traversal with fewer than 3000 penalties. Proof B correctly identifies the upper bound and the $m=1$ bottleneck but relies on a vague, adaptive adversary description that fails to generalize to $m > 1$. A's mathematical justification is self-contained and airtight, whereas B leaves the central lower bound obligation unsupported for the general case.

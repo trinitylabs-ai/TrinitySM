@@ -1,0 +1,6 @@
+# Recorded client dependencies; inference is served locally.
+openai==2.36.0
+jsonschema==4.26.0
+sympy==1.14.0
+z3-solver==4.15.4.0
+huggingface_hub==1.14.0

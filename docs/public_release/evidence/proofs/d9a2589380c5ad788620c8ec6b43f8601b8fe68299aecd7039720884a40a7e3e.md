@@ -1,0 +1,39 @@
+To find all polynomials $P(x)$ with real coefficients and leading coefficient $1$ such that for all $x \neq 0$,
+\[ P(x) + P(1/x) = \frac{P(x + 1/x) + P(x - 1/x)}{2}, \]
+we let $n = \deg P$ and write $P(x) = \sum_{k=0}^n a_k x^k$ with $a_n = 1$.
+
+The left-hand side (LHS) of the equation is:
+\[ P(x) + P(1/x) = \sum_{k=1}^n a_k (x^k + x^{-k}) + 2a_0. \]
+For the right-hand side (RHS), let $u = x + 1/x$ and $v = x - 1/x$. Using the binomial theorem:
+\[ u^k = \sum_{j=0}^k \binom{k}{j} x^{k-2j}, \quad v^k = \sum_{j=0}^k \binom{k}{j} (-1)^j x^{k-2j}. \]
+Summing these gives:
+\[ u^k + v^k = \sum_{j=0}^k \binom{k}{j} (1 + (-1)^j) x^{k-2j} = 2 \sum_{m=0}^{\lfloor k/2 \rfloor} \binom{k}{2m} x^{k-4m}. \]
+The RHS of the original equation becomes:
+\[ \frac{P(u) + P(v)}{2} = \frac{1}{2} \sum_{k=0}^n a_k (u^k + v^k) = \sum_{k=0}^n a_k \sum_{m=0}^{\lfloor k/2 \rfloor} \binom{k}{2m} x^{k-4m}. \]
+We compare the coefficients of $x^j$ for $j \in \{1, \dots, n\}$. On the LHS, the coefficient is $a_j$. On the RHS, $x^j$ occurs when $k-4m = j$, so $k = j+4m$. Thus:
+\[ a_j = \sum_{m=0}^{\lfloor (n-j)/4 \rfloor} a_{j+4m} \binom{j+4m}{2m}. \]
+Subtracting $a_j \binom{j}{0}$ from both sides, we have $\sum_{m=1}^{\lfloor (n-j)/4 \rfloor} \binom{j+4m}{2m} a_{j+4m} = 0$ for all $j \in \{1, \dots, n\}$. If $n \ge 5$, choosing $j = n-4$ yields $\binom{n}{2} a_n = 0$. Since $a_n = 1$, this is impossible. Thus, $n < 5$.
+
+We test the remaining cases:
+1.  **$n=0, 1$**: Direct substitution shows no solutions.
+2.  **$n=2$**: $P(x) = x^2 + ax + b$.
+    LHS: $x^2 + 1/x^2 + a(x + 1/x) + 2b$.
+    RHS: $\frac{(x+1/x)^2 + a(x+1/x) + b + (x-1/x)^2 + a(x-1/x) + b}{2} = x^2 + 1/x^2 + ax + b$.
+    Comparing the two, we require $a/x + b = 0$ for all $x \neq 0$, so $a = 0, b = 0$. Thus, $P(x) = x^2$.
+3.  **$n=3$**: $P(x) = x^3 + ax^2 + bx + c$.
+    LHS: $x^3 + 1/x^3 + a(x^2 + 1/x^2) + b(x + 1/x) + 2c$.
+    RHS: $\frac{(x+1/x)^3 + a(x+1/x)^2 + b(x+1/x) + c + (x-1/x)^3 + a(x-1/x)^2 + b(x-1/x) + c}{2} = x^3 + 3/x + a(x^2 + 1/x^2) + bx + c$.
+    Comparing gives $1/x^3 + (b-3)/x + c = 0$, which is impossible.
+4.  **$n=4$**: $P(x) = x^4 + ax^3 + bx^2 + cx + d$.
+    LHS: $x^4 + 1/x^4 + a(x^3 + 1/x^3) + b(x^2 + 1/x^2) + c(x + 1/x) + 2d$.
+    RHS: $\sum_{k=0}^4 a_k \sum_{m=0}^{\lfloor k/2 \rfloor} \binom{k}{2m} x^{k-4m} = (x^4 + 6 + 1/x^4) + a(x^3 + 3/x) + b(x^2 + 1/x^2) + cx + d$.
+    Comparing coefficients:
+    $x^3: a=a$; $x^{-3}: a=0 \implies a=0$.
+    $x^1: c=c$; $x^{-1}: c=3a \implies c=0$.
+    $x^0: 2d = d + 6 \implies d=6$.
+    $x^2: b=b$; $x^{-2}: b=b$.
+    Thus, $P(x) = x^4 + bx^2 + 6$ for any $b \in \mathbb{R}$.
+
+The possible polynomials are $P(x) = x^2$ and $P(x) = x^4 + bx^2 + 6$ for any $b \in \mathbb{R}$.
+
+\(\square\)

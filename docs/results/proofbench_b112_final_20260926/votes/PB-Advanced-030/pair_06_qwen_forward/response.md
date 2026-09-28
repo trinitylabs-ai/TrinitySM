@@ -1,0 +1,21 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Under the assumption that the cited matching theorem holds for the constructed families, the problem's conclusion follows. The submission correctly translates the score partition hypothesis into families $\mathcal{F}_i$ of consecutive blocks, verifies $\nu(\mathcal{F}_i) \ge n$, and correctly handles the distribution of remaining cupcakes using score non-negativity.
+Claim gap: The theorem stated in Line 7 is false for general families of circular arcs. It requires the upward-closure property (if an interval has score $\ge 1$, any super-interval also does) to be true, but this hypothesis is omitted from the theorem statement. Without it, the citation is mathematically incorrect as written.
+Qualifications and supplied repairs: I supplied the observation that $\mathcal{F}_i$ are inherently upward-closed due to the non-negative score threshold, which is necessary to validate the theorem's application. This property is absent from the submission. No other repairs were made; the logical deduction from the theorem to the final distribution is complete.
+Decisive checks: 
+- Line 5 correctly deduces $\nu(\mathcal{F}_i) \ge n$ from the partition hypothesis.
+- Line 7 cites a specific theorem. Falsification check: For general circular interval families, $\nu(\mathcal{F}_i) \ge n$ does not guarantee disjoint representatives (e.g., $n=2$, $\mathcal{F}_1=\{[1,2],[3,4],[5,6]\}$, $\mathcal{F}_2=\{[2,3],[4,5],[6,1]\}$ on 6 points have $\nu=3$ but intersect pairwise). The theorem as stated is therefore false. However, the citation is precise (authors, year, title), and the application in Lines 9-14 is logically sound once upward-closure is acknowledged. The remainder distribution in Line 14 is explicitly and correctly handled.
+
+## Proof B
+Established theorem: The submission correctly sets up the families $\mathcal{F}_i$, verifies $\nu(\mathcal{F}_i) \ge n$, and frames the goal as finding a rainbow matching.
+Claim gap: Line 11 asserts a "known extension" of the Aharoni-Berger theorem to circular intervals, claiming $\nu_{\text{rainbow}} \ge \min_i \nu(\mathcal{F}_i)$. This claim is false for general circular intervals and lacks citation or justification. The transition from the linear condition (Line 9) to the circular claim (Line 11) is an unjustified leap. Additionally, the distribution of remaining cupcakes is omitted.
+Qualifications and supplied repairs: I noted that the Aharoni-Berger theorem requires the union condition $\nu(\bigcup_{i \in S} \mathcal{F}_i) \ge |S|$, which B incorrectly dismisses as automatically satisfied or replaced by the minimum matching number for circular cases. This is a substantive missing justification. The upward-closure property required for circular interval matching is also absent. The remainder distribution was supplied mentally but is not in the text.
+Decisive checks:
+- Line 5 correctly establishes $\nu(\mathcal{F}_i) \ge n$.
+- Lines 9-11 contain a load-bearing defect. The linear rainbow matching condition is correctly analyzed, but the claimed extension to circular intervals is mathematically incorrect without upward-closure and proper reference. The same counterexample used in Proof A's check applies, showing the stated condition is insufficient. The argument relies on an unverified "known extension" rather than a precise theorem statement, and the logical bridge between linear and circular cases is missing.
+
+## Decision
+Winner: A
+Reason: Both proofs share a verified defect: they cite a circular interval matching theorem that is false for general families and omit the necessary upward-closure hypothesis (implicit in the score definition). However, Proof A provides a precise, traceable citation and maintains a tight, complete logical structure, including explicit handling of the remainder distribution. Proof B introduces an unjustified leap by claiming a vague "known extension" to circular intervals, misstates the conditions for rainbow matchings, and omits the remainder distribution. Proof A's gap is a missing hypothesis in a specific citation, whereas Proof B's gap is a substantive, unverified claim about theorem extension with looser reasoning. Proof A demonstrates stronger mathematical rigor and control.

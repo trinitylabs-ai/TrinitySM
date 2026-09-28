@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-027",
+  "problem": "Given an acute triangle $ABC$, let $D$ and $E$ be the feet of\n the altitudes from $B$ to $AC$ and $C$ to $AB$, respectively.\n Let $E_{1}$ and $E_{2}$ be the reflections of $E$ with respect\n to $AC$ and $BC$, respectively. If $X$ (not equal to $C$) is an\n intersection point of the circumcircle of $\\triangle CE_{1}E_{2}$\n and $AC$, and $O$ is the circumcenter of $\\triangle CE_{1}E_{2}$,\n prove that $XO$ is perpendicular to $DE$."
+}

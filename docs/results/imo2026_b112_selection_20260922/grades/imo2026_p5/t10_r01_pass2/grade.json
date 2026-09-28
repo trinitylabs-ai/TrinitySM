@@ -1,0 +1,54 @@
+{
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_23956230de9e5656a19608e1cc6f993e",
+  "pass_index": 2,
+  "score": 6,
+  "verdict": "minor_gap",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In Step 4, the assertion that repeated neighborhood extensions force a nonempty Z to equal all of (0,∞) is only sketched; merely saying “by induction” does not explicitly rule out a finite boundary or justify complete coverage.",
+    "summary": "The classification f(x)=x+c with c≥0 is correct. The orbit identity, nonnegativity of the defect, constancy of its positive values, and verification of the candidates are all sound. The sole gap is a routine boundary argument: take the connected component (a,b) of Z containing z0; the stated neighborhood radius prevents b<∞ and prevents a>0, so the component is (0,∞). This is a minor directly checkable omission under the score-6 standard, not a Rule E central gap.",
+    "strengths": [
+      "Correctly derives f(f(y))+y=2f(y), invariance of c along forward orbits, and c(y)≥0.",
+      "Obtains the valid range estimate |c(x)-c(z)|≤(√x-√z)^2 and uses orbit approximation correctly to prove constancy on S.",
+      "Correctly verifies every f(x)=x+c, c≥0, by AM-GM and RMS-AM."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The final interval-propagation argument for excluding simultaneous zero and positive defect values lacks an explicit boundary/component justification, though it is repaired in a few routine lines."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "proof_sha256": "23956230de9e5656a19608e1cc6f993e14ebb29188d2a9b97fce7df8494cf13a",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "evidence_sha256": "b04583e75ab86ac260b5c5ea0d5c763f4afb8908dd1f4dc43892fe41f16acac8",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p5/t10_r01_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "983a1e7949f77d61a4f9e8751189d36a92724b989504425659f3935c369b92cf",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "42e02c5a5f229d61e04fe762917e92bc4dc32f909e4017aae03af58e9b611922",
+    "raw_response_1.txt": "677a58e8bfe052f52dc0197360f1cb07079e6c74aedffa9c1c3b88b8aecf7d6c",
+    "summary.json": "8ff6d60887f85055f55cf8212165960d79647a66ab072463f60aa88bf2da2cd4"
+  }
+}

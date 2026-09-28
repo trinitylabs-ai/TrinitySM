@@ -1,0 +1,27 @@
+{
+  "schema": "tool-harness-result-artifact-manifest-v1",
+  "run_id": "p2_c3_t07r02_real_branches_v349_20260916T232047Z",
+  "harness_revision": "0.3.349+real-branches.1",
+  "release_sha256": "f1eecd3cbc8d98f2da5cb15258a2e5e78e9683bdb673d2cd05e758ec08dd6a6e",
+  "proofs": [
+    {
+      "path": "proofs/imo2026_p2/t07_r02/submitted_R1-C3.md",
+      "source": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/input/source_proof.md",
+      "checkpoint": "submitted_R1-C3",
+      "sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c",
+      "canonical_text_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7"
+    },
+    {
+      "path": "proofs/imo2026_p2/t07_r02/tool_rewrite.md",
+      "source": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/rewritten_proof.md",
+      "checkpoint": "tool_rewrite",
+      "sha256": "7a988fd71e41763a7c038a124df2fff224e1fc6e13bb459a3b65b5111350ec86",
+      "canonical_text_sha256": "a9ec816a7a515478298b94b1c8718e5a4e7641eca79315ff440279f1f45fec0c",
+      "strict_grade": "grades/imo2026_p2/t07_r02/tool_rewrite/strict/summary.json"
+    }
+  ],
+  "external_grade_vector": [
+    6
+  ],
+  "all_grading_calls_reported": true
+}

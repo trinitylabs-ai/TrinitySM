@@ -1,0 +1,27 @@
+{
+  "schema": "workshop-v2-export-recovery-update-v1",
+  "updated_at": "2026-09-18T17:56:11.219709+00:00",
+  "reason": "A truncated JSON agent message followed by one complete grade in the same isolated turn stopped batch export.",
+  "previous_configuration": "execution_config_pool_initial.json",
+  "previous_configuration_sha256": "2de3c0f18aeac95de674c1ed46062279493c174a0a534782218b2537d31151f4",
+  "changed_source_hashes": {
+    "scripts/run_v2_pool.py": {
+      "before": "45ef23b1567831a1db4700efd45fa4fdd527e20fb6ee86603aa54fbae859279d",
+      "after": "20203989472624dd43c4f1c1d516a63b0e7bde279ada83e6aeb374eaa35d4545"
+    },
+    "scripts/v2_response_recovery.py": {
+      "before": null,
+      "after": "2be0e0fc1559c0a14ba473a92636369b9af137016b8cec3947c510850e73896f"
+    }
+  },
+  "recovery_rule": "Accept exactly one schema-valid complete grade in one isolated turn; reject multiple complete grades. Never select by score.",
+  "queue_change": "Invalid responses leave only their own assessment pending; completed unrelated cases are exported. Persist each launched job for adoption after interruption.",
+  "accepted_grades_preserved": 898,
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "evaluator_prompts_unchanged": true,
+  "mathematical_inputs_unchanged": true,
+  "repeats": 2,
+  "workers": 12
+}

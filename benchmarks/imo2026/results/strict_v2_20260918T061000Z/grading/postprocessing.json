@@ -1,0 +1,14 @@
+{
+  "schema": "workshop-strict-v2-postprocessing-v1",
+  "launch_adapter_commit": "8d32bb0",
+  "launch_configuration": "grading/config.json",
+  "contract_update": "Allow cosmetic-only notes on a full-credit Rule C exception, including routine cosmetic edits; preserve the model assessment.",
+  "policy_changed_after_launch": false,
+  "new_model_calls_for_recovery": 0,
+  "selection": "First chronologically valid isolated response under the corrected v2 contract, regardless of numerical score.",
+  "native_results_modified": false,
+  "adapter": "scripts/score_imo_v2.py",
+  "adapter_sha256": "cced8ecc8d3418b0cfa50acb10380be2642a72b387dfb99568d6812814238943",
+  "publisher": "scripts/report_strict_v2.py",
+  "publisher_sha256": "ab19b9efbcf958b8c4af6190d62bd180f58795fc55052d314403db80278307ce"
+}

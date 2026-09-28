@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_23956230de9e5656a19608e1cc6f993e",
+  "pass_index": 1,
+  "score": 6,
+  "verdict": "minor_gap",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the final exclusion of mixed defect values, the claim that repeatedly extending the intervals around points of Z makes Z cover all of (0,∞) is not fully justified: merely obtaining successively larger intervals does not by itself rule out bounded endpoint convergence. The explicit radius 2√(zc) makes the claim true, but a short quantitative non-stalling argument is missing.",
+    "summary": "The classification f(x)=x+c with c≥0 is correct. The submission correctly verifies these functions, proves orbit invariance and nonnegativity of the defect, establishes constancy of all positive defect values using nearby forward-orbit points, and obtains a valid neighborhood of fixed points containing no positive-defect points. The last interval-propagation step is load-bearing but has only a routine, directly repairable omission, warranting score 6 rather than a Rule E cap.",
+    "strengths": [
+      "Correctly verifies every translation f(x)=x+c for c≥0 by AM-GM and RMS-AM.",
+      "Correctly derives f(f(y))+y=2f(y), invariance of c along forward orbits, the iterate formula, and c(y)≥0.",
+      "Correctly derives the squared-root continuity estimate on the range and uses it to prove all positive values of c are equal.",
+      "Correctly obtains an explicit S-free neighborhood around every point of Z."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The assertion that the explicit neighborhoods can be iterated to cover the entire positive axis lacks a quantitative argument showing that the expanding endpoints cannot stall. This can be repaired directly by choosing successive centers sufficiently near the current endpoint; on the right the radii stay bounded below, while on the left either the endpoint reaches 0 or any hypothetical positive limiting endpoint again gives a radius bounded below."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "proof_sha256": "23956230de9e5656a19608e1cc6f993e14ebb29188d2a9b97fce7df8494cf13a",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "evidence_sha256": "a22ff37c69d59570f6b9c5759de1a23c0ef44f4c8ee9edae1ad07497959a4312",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p5/t10_r01_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "b321a0425070de31f9fadb7205928cc6df0cfb3aaf2015f471323b89144869e5",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "b8299b3d0f8b9f0bdf3539bab0b596eeefb526258cbb91420d2167054bd74161",
+    "raw_response_1.txt": "7ece0c88aa71810cd059a904abeedcb427f8b1b392411b47938ccb34b9e42cf8",
+    "summary.json": "9030c1cea754162c59d55716983630c99a8e6f5411ac848adee6605132233274"
+  }
+}

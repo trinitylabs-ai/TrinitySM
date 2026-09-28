@@ -1,0 +1,64 @@
+{
+  "schema": "imobench-proof-autograder-b5-v1-manifest",
+  "created_at": "2026-09-13T04:08:58.642662+00:00",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "isolation_config_sha256": "a5917c07a3db6bc066bc7a358c0afa8351a57a289dfcfafaff37f80e68287b09",
+  "disabled_skill_paths_sha256": "118f0ada081aea2c4c8773990a4686122c73fb9c2ee696e54f043d956d531e91",
+  "evaluator_instructions_sha256": "015e67bb885a2531c0aa51431d404c9d479d6676a024dca2a24df0a332f2587c",
+  "fingerprint": "625aa2ba836de4d089aecf0d5605c70a59b9ecb6f6f249283b475a9e518f9619",
+  "workers": 4,
+  "runner_sha256": "ff0ec706ca68604bda672f0aca7d7390c757d888366b605c1e22a1b8c14b52ab",
+  "specific_guidelines_supplied": true,
+  "pipeline_reviews_supplied": false,
+  "prior_grades_supplied": false,
+  "tasks": [
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r01",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/proofs/t10_r01.md",
+      "problem_sha256": "a815d0db9733692443cbdc4c5ff8a5de0211b3a1daf27edd11c469db61e9f523",
+      "reference_sha256": "8c23379d2dbd8bab9f908bb30e1771c53dda798608434dee12cb5c4cacf36511",
+      "guidelines_sha256": "b4eed8646753e1e0e9a766e7c6951822ec1370489dd0eae5fde87100172fe42a",
+      "proof_sha256": "9a59eaa7f373ecc9f2cc3bf3047e878086a4f2b0c9f4512190f3ab8453bf7bd8",
+      "cache_key": "4d5a3f115fb4828828800a56eddd7353b9d40af2d540c54be80082d6b206deb0"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t10_r02",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/proofs/t10_r02.md",
+      "problem_sha256": "a815d0db9733692443cbdc4c5ff8a5de0211b3a1daf27edd11c469db61e9f523",
+      "reference_sha256": "8c23379d2dbd8bab9f908bb30e1771c53dda798608434dee12cb5c4cacf36511",
+      "guidelines_sha256": "b4eed8646753e1e0e9a766e7c6951822ec1370489dd0eae5fde87100172fe42a",
+      "proof_sha256": "6fb7d9d38c150dedbdfa3096e6cd6d0ebf753670d997a2fc3576309a266db2f4",
+      "cache_key": "ab51a0fbe64b81fdbd961bbcb0fe1d029e51a953fe513c007865faebec2dc29e"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r01",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/proofs/t07_r01.md",
+      "problem_sha256": "a815d0db9733692443cbdc4c5ff8a5de0211b3a1daf27edd11c469db61e9f523",
+      "reference_sha256": "8c23379d2dbd8bab9f908bb30e1771c53dda798608434dee12cb5c4cacf36511",
+      "guidelines_sha256": "b4eed8646753e1e0e9a766e7c6951822ec1370489dd0eae5fde87100172fe42a",
+      "proof_sha256": "f5a4468f6fb71bcf8dea622d357c6163e2ac352f874f09da8704a6d454a0dba1",
+      "cache_key": "a6ae610cce48d2a2aabb6bb32093499edc07a8f089c04444091cb56e13c72611"
+    },
+    {
+      "problem_id": "PB-Advanced-002",
+      "candidate_id": "t07_r02",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/advanced_raw_r1c3_imobench_incremental_20260913/batches/batch_0003/proofs/t07_r02.md",
+      "problem_sha256": "a815d0db9733692443cbdc4c5ff8a5de0211b3a1daf27edd11c469db61e9f523",
+      "reference_sha256": "8c23379d2dbd8bab9f908bb30e1771c53dda798608434dee12cb5c4cacf36511",
+      "guidelines_sha256": "b4eed8646753e1e0e9a766e7c6951822ec1370489dd0eae5fde87100172fe42a",
+      "proof_sha256": "371230a55e708024b3f8a08275aecaf2590154f6980c553c4c6fd8872bd2bbd7",
+      "cache_key": "84573c0ec6688d79bea59844b04fcacda63281d51a43b8617798b57066bf739e"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "27650d5684989d152322b995cd08ae2966b1592709e0d3953c01a535c36d8fb8",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "e10218d932f9bd2fd1e5941ae786a5f63c889db42e00001710a1300d27b80490",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the sufficiency proof, the assertion that a near-vertex cut can be repeated to force the minimum angle below θ does not explicitly account for Shan-Yu retaining the other child or prove finite termination. This is a minor, directly repairable omission under the 6-point category, not a Rule E central gap: repeatedly bisecting a chosen angle makes both children contain half that angle, so finitely many repetitions suffice.",
+    "summary": "The claimed classification is correct. Apart from the omitted adversarial justification in the initial small-angle reduction, the sufficiency argument is valid: the range analysis forces either θ or (n−1)θ, and a multiple kθ can then be peeled down to θ. The safe-angle invariant and four-case analysis in the necessity direction are correct and complete.",
+    "strengths": [
+      "Correctly identifies exactly θ=180°/n for integers n≥2.",
+      "The cut-angle interval analysis and subsequent peeling of kθ are mathematically sound.",
+      "The necessity proof correctly establishes an invariant using all four possible pairs of newly created angles."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The phrase “by repeating this” does not show why Shan-Yu cannot always discard the child with the small angle, nor specify a fixed decrement ensuring a finite number of cuts. A one-line angle-bisection argument repairs this."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T08:59:01.923937+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

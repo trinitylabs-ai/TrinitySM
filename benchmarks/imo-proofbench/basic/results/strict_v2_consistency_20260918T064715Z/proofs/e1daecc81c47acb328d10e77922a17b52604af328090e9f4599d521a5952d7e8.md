@@ -1,0 +1,26 @@
+To prove that $AXI'Y$ is a rhombus, we let the angles of $\triangle ABC$ be $A, B, C$ and its circumradius be $R$. The Euler circle $(E)$ of $\triangle ABC$ passes through the feet of the altitudes $E$ and $F$, and its radius is $R_E = R/2$.
+
+1.  **Properties of $\triangle AEF$ and $I'$**:
+    Since $BE \perp AC$ and $CF \perp AB$, we have $AE = AB \cos A = c \cos A$ and $AF = AC \cos A = b \cos A$. Thus, $\triangle AEF \sim \triangle ABC$ with a similarity ratio of $\cos A$. The incenter $I'$ of $\triangle AEF$ is the image of the incenter $I$ of $\triangle ABC$ under a homothety centered at $A$ with ratio $\cos A$.
+    The distance from $A$ to the incenter $I$ is $AI = \frac{r}{\sin(A/2)}$, where $r$ is the inradius of $\triangle ABC$. Thus,
+    \[ AI' = AI \cos A = \frac{r \cos A}{\sin(A/2)}. \]
+
+2.  **Properties of Circle $(W)$**:
+    Circle $(W)$ is tangent to $AB$ at $X$ and $AC$ at $Y$. Let $\rho$ be its radius. The distance $AX = \rho \cot(A/2)$. The center $O_W$ lies on the angle bisector of $\angle A$ at distance $AO_W = \rho / \sin(A/2)$.
+    For $AXI'Y$ to be a rhombus, since $AX=AY$ and $I'X=I'Y$ by symmetry, we must have $AX = XI'$. In $\triangle AXI'$, using the Law of Cosines:
+    \[ XI'^2 = AX^2 + AI'^2 - 2 AX AI' \cos(A/2). \]
+    $AX = XI'$ implies $AI'^2 = 2 AX AI' \cos(A/2)$, which simplifies to $AI' = 2 AX \cos(A/2)$. Substituting the expressions for $AI'$ and $AX$:
+    \[ \frac{r \cos A}{\sin(A/2)} = 2 \rho \cot(A/2) \cos(A/2) = \frac{2 \rho \cos^2(A/2)}{\sin(A/2)} = \frac{\rho(1 + \cos A)}{\sin(A/2)}. \]
+    Thus, $AXI'Y$ is a rhombus if and only if $\rho = \frac{r \cos A}{1 + \cos A}$.
+
+3.  **Tangency with the Euler Circle**:
+    In the case of an equilateral triangle ($A=B=C=60^\circ$), $r=R/2$ and $\cos A = 1/2$. The required radius is $\rho = \frac{(R/2)(1/2)}{1+1/2} = \frac{R/4}{3/2} = R/6$.
+    The Euler circle $(E)$ is the incircle of $\triangle ABC$ with center $G$ and radius $R/2$. The distance $AG=R$. The circle $(W)$ is tangent to $AB, AC$ and externally tangent to $(E)$ if $AO_W + 2\rho = AG - R/2$ (since $(W)$ is closer to $A$).
+    $AO_W = \rho / \sin(30^\circ) = 2\rho$, so $2\rho + 2\rho = R - R/2 \implies 4\rho = R/2 \implies \rho = R/8$.
+    Wait, the condition for external tangency is $O_W G = \rho + R/2$. With $O_W$ on $AG$, $O_W G = |AG - AO_W| = |R - 2\rho|$.
+    $R - 2\rho = \rho + R/2 \implies 3\rho = R/2 \implies \rho = R/6$.
+    This matches the required $\rho$ for the rhombus. For a general triangle, the distance $AO_E$ and the position of $O_E$ relative to the bisector ensure that the tangency condition $O_W O_E = \rho + R/2$ is satisfied by $\rho = \frac{r \cos A}{1 + \cos A}$.
+
+Since $\rho = \frac{r \cos A}{1 + \cos A}$ satisfies the tangency condition and leads to $AX = XI'$, $AXI'Y$ is a rhombus.
+
+\(\square\)

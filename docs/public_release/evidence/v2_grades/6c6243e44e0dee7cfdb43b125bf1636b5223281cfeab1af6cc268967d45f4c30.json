@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "09965cdfcbddca0659115383e1ebbe0580aede5f426823071ffc6de55e2b730e",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "f3567217ca52c699d974c907941c9a4aef837428faefedfde37480834598daa8",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3938faff0290147f6a3341bf69cd9eb14c55e2e15e5b401c22afdcafc852de82",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first reduction is false: the midpoint of MN is generally not the midpoint of BC, so the perpendicular bisectors of MN and BC need not coincide. Thus OM=ON is not equivalent to OB=OC. This is a decisive invalid inference under Rule E, giving a ceiling of 3.",
+    "summary": "The submission contains some correct sine-law calculations and derives plausible cotangent formulas for the directions of AK and AL. However, it begins by replacing the desired conclusion with a generally inequivalent statement, and it never proves even that replacement: the assertion that the constraints force OB=OC is supported only by an inapplicable symmetry discussion, explicitly valid only in a special isosceles case. Repairing the proof requires a new central compatibility argument.",
+    "strengths": [
+      "Correctly notes that MN is parallel to BC and that OM=ON characterizes the perpendicular bisector of MN.",
+      "The sine-law formulas for BK and LC are correct under the standard notation AB=c and AC=b.",
+      "The derivations cot(angle BAK)=cot(alpha)+2cot(gamma) and cot(angle CAL)=cot(alpha)+2cot(beta) are valid."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The midpoint of MN is (2A+B+C)/4, whereas the midpoint of BC is (B+C)/2; these are not generally equal. Consequently, the claimed equivalence OM=ON iff OB=OC is false."
+      },
+      {
+        "severity": "major",
+        "description": "The central claim that the angle and interiority constraints force OB=OC is merely asserted. The reflection argument mentioned applies only under extra conditions b=c and beta=gamma, which are not hypotheses of the problem. This is an unsupported decisive inference under Rule E."
+      },
+      {
+        "severity": "substantial",
+        "description": "The proof never relates the circumcenter angles angle OAB and angle OAC to the derived data about K and L, nor does it establish the required general trigonometric or algebraic compatibility identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:30:21.000963+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00019",
+  "native_rejection_count": 0
+}

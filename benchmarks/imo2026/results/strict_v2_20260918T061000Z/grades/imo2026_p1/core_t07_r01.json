@@ -1,0 +1,53 @@
+{
+  "problem_id": "imo2026_p1",
+  "candidate": "t07_r01",
+  "group": "core",
+  "grader_candidate": "core_t07_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t07_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77.md",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+  "v1_score": 7,
+  "v1_grade": "docs/public_release/evidence/grades/72be8eb7d3a16b3e6a8a2ac12ab9ef82058515ec487f7453bd608b1508256153.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t07_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:11:38.581032+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The submission gives a complete and correct proof. The pair (N,V) supplies a valid well-founded descent: N never increases, and whenever it remains constant the nonnegative integer V strictly decreases. The terminal board must retain at least one entry greater than 1, so it has exactly one. Primewise, the gcd of all valuation exponents is invariant under the subtraction-Euclidean transformation, and at termination these invariants reconstruct M uniquely from the initial board.",
+    "strengths": [
+      "Correctly distinguishes the cases in which the number of entries greater than 1 decreases or remains constant.",
+      "Correctly proves strict decrease of the sum-of-squares potential whenever N remains constant.",
+      "Correctly establishes that every board retains at least one entry greater than 1.",
+      "Uses the primewise exponent transformation and Euclidean gcd invariance correctly.",
+      "Provides an explicit formula for the terminal value, proving independence of all choices."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "1fa29cea71590690148c700d830b5eca27018f957fe34fd4544aa8c1bb7df66a",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

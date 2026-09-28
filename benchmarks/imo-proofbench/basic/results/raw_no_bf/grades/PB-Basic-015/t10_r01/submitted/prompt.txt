@@ -1,0 +1,97 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Adrian is lining up $n \geq 2$ toy cars in a row. Each car has a width and length, and no two cars have the same width or length. Initially, the cars are arranged in increasing order of length from left to right. Adrian repeatedly does the following: he chooses some two adjacent cars where the left car is shorter in length and greater in width than the right car, and he swaps them. He keeps doing this until no further moves are possible. Prove that no matter how Adrian chooses his swaps, the procedure will eventually terminate, and in the end, the cars will be sorted in increasing order of width from left to right.
+
+**GROUND-TRUTH SOLUTION**
+
+Define an inversion to be a pair of cars where the one on the left is wider than the one on the right. Clearly, each move strictly decreases the number of inversions, so the procedure must terminate.
+
+ Now, suppose for sake of contradiction that we can make no more moves, but the cars are not sorted in increasing order of width. Consider the smallest index $i$ such that car $i$ is wider than car $i + 1$. Since we cannot make any further swaps, it must also be the case that car $i$ is longer than book $i + 1$. This means that originally, car $i$ was to the right of car $i + 1$, and at some point they switched relative positions. However, this is not possible because the rules prevent us from ever swapping two books when one is both taller and wider than the other.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Found an increasing quantity (e.g. the number of inversion according to the width or length)
+ 2. Tried to use minimality argument by taking the first book not sorted by width.
+(Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that the procedure terminates and results in the cars being sorted by width, we analyze the process using the properties of inversions and the constraints of the swap operation.
+
+### Part 1: Termination
+Let the sequence of widths of the cars from left to right be denoted by $\mathcal{W} = (W_{p_1}, W_{p_2}, \dots, W_{p_n})$, where $p$ is a permutation of $\{1, \dots, n\}$. A swap occurs between two adjacent cars $C_i$ and $C_{i+1}$ if $L_i < L_{i+1}$ and $W_i > W_{i+1}$.
+When such a swap is performed, the widths $W_i$ and $W_{i+1}$ are exchanged. Since $W_i > W_{i+1}$, the number of inversions in the width sequence $\mathcal{W}$ (an inversion is a pair $(j, k)$ such that $j < k$ but $W_{p_j} > W_{p_k}$) decreases by exactly one. Specifically, the swap only changes the relative order of $W_i$ and $W_{i+1}$; all other relative orders remain unchanged.
+The number of inversions is a non-negative integer bounded above by $\binom{n}{2}$. Since each operation strictly decreases this number, the procedure must eventually terminate when no more swaps are possible.
+
+### Part 2: The Final State
+Let the final sequence of cars be $C'_1, C'_2, \dots, C'_n$ with lengths $L'_1, \dots, L'_n$ and widths $W'_1, \dots, W'_n$. Because the process has terminated, for every $i \in \{1, \dots, n-1\}$, the swap condition is not met:
+$$\neg (L'_i < L'_{i+1} \text{ and } W'_i > W'_{i+1})$$
+This implies that for all $i$, if $W'_i > W'_{i+1}$, then we must have $L'_i > L'_{i+1}$.
+
+We now consider the relative order of any two cars $C_j$ and $C_k$. Suppose $W_j > W_k$. We analyze whether $C_j$ can be to the left of $C_k$ in the final state.
+1.  **Case 1: $L_j > L_k$.** Initially, the cars are sorted by length, so $C_k$ (shorter) is to the left of $C_j$ (longer). For the relative order to change to $(C_j, C_k)$, they must at some point become adjacent and be swapped. A swap $(C_k, C_j) \to (C_j, C_k)$ requires the car on the left to be shorter and wider than the car on the right. Here, $L_k < L_j$ is true, but $W_k > W_j$ is false (since $W_j > W_k$). Thus, they can never be swapped, and $C_k$ must remain to the left of $C_j$.
+2.  **Case 2: $L_j < L_k$.** Initially, $C_j$ is to the left of $C_k$. They may be swapped to the order $(C_k, C_j)$ if they become adjacent, as $L_j < L_k$ and $W_j > W_k$ are both true. Once they are in the order $(C_k, C_j)$, a swap back to $(C_j, C_k)$ would require $L_k < L_j$, which is false. Thus, once they swap, they remain $(C_k, C_j)$.
+
+In both cases, if $W_j > W_k$, then the only way $C_j$ can be to the left of $C_k$ in the final state is if they started in that order ($L_j < L_k$) and were never swapped.
+
+Now, suppose the final state is not sorted by width. Then there exists some $i$ such that $W'_i > W'_{i+1}$. As established from the termination condition, this implies $L'_i > L'_{i+1}$.
+Let these two cars be $C_j$ and $C_k$, such that $W_j = W'_i$ and $W_k = W'_{i+1}$. We have $W_j > W_k$ and $L_j > L_k$. According to the analysis in **Case 1**, if $W_j > W_k$ and $L_j > L_k$, $C_k$ must always remain to the left of $C_j$. However, in the final state, $C_j$ (car $C'_i$) is to the left of $C_k$ (car $C'_{i+1}$).
+This is a contradiction. Therefore, no such $i$ can exist, and we must have $W'_1 < W'_2 < \dots < W'_n$.
+
+The procedure terminates and the final arrangement is sorted by width. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

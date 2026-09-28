@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "9da25b4019126105e3f02720d5e4dc3f97a9355f10c191e4cdc775222ae4bae9",
+  "problem_id": "imo2026_p3",
+  "repeat": 1,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "44b83dfeeb8c572c8c7240c264a2b0893c9b3fdca7e9553a64913c930707309e",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Rule A applies: the claimed value is false. Already for n=2 the actual value is 4/7, not the claimed 3/5. The first decisive proof failure is the unsupported assertion that equalizing all pieces minimizes Liu's payoff.",
+    "summary": "The odd-rank payoff reduction and the universal 1/2 lower bound are correct, but the proposed exact value is wrong. Both the claimed lower-bound strategy and the universal upper-bound construction have decisive failures, so obtaining the correct exponential formula requires a new central argument.",
+    "strengths": [
+      "Correctly identifies Liu's optimal drafting payoff as the sum of the odd-ranked piece lengths.",
+      "Correctly derives the general bound S_L >= 1/2.",
+      "Uses the useful idea that adjacent equal pairs cancel in the alternating discrepancy."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The lower-bound construction does not guarantee (n+1)/(2n+1). For n=2 it gives initial lengths 3/5,1/5,1/5; Xiang can cut the 3/5 piece into 3/10,3/10, producing 3/10,3/10,1/5,1/5, so Liu receives only 1/2 rather than 3/5."
+      },
+      {
+        "severity": "major",
+        "description": "The case-2 upper construction may not define positive pieces. For n=2 and L_1=L_2=L_3=1/3, it gives x_3=-1/3+2epsilon, which is negative for the stipulated sufficiently small epsilon."
+      },
+      {
+        "severity": "substantial",
+        "description": "The upper-bound proof only treats Liu producing exactly n+1 initial pieces, although Liu is allowed to use fewer than n marks."
+      },
+      {
+        "severity": "minor",
+        "description": "In case 1, equal halves need not occupy ranks (2i-1,2i) in the asserted order because the unpaired piece may interleave with them. Pair cancellation can repair the conclusion, but the displayed rank identities are false."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:52:34.728911+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

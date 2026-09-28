@@ -1,0 +1,64 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t10_r02",
+  "group": "core",
+  "grader_candidate": "core_t10_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t10_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+  "v1_score": 2,
+  "v1_grade": "docs/public_release/evidence/grades/0473e2984f4f7bd438958d8dcd42d506965b6e0dacf44a67fe03bab14283ea03.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t10_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:15:07.464305+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive error is the reversal of the angles of the medial triangle: since triangle AMN is similar to triangle ABC, ∠ANM=∠C and ∠AMN=∠B, not the other way around. Thus the asserted cyclicity criteria θ_K=γ−B and θ_L=β−C are false. This is a load-bearing false statement under Rule C.",
+    "summary": "The initial sine-law computations and the two cotangent identities are meaningful progress. However, after the incorrect angle assignment, the central concyclicity argument is unsupported. Even with B and C corrected, the proof merely assumes a concyclic configuration and then asserts, without a complete compatibility or existence argument, that it satisfies the original cross-angle conditions. The displayed sine ratio and the phrase that symmetry and the cotangent equations “ensure” it do not establish those conditions, handle angle branches, or prove that such a configuration exists. Consequently the final uniqueness step cannot show that the given K and L are concyclic. This unsupported central inference invokes Rule E and caps the score at 3.",
+    "strengths": [
+      "Correctly applies the sine law to triangles BKM and AMK to obtain cot θ_K=2cot γ+cot α.",
+      "The analogous derivation cot θ_L=2cot β+cot α is also essentially correct.",
+      "Recognizes that proving M and N lie on the circumcircle of AKL would imply the desired equality."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The angles ∠ANM and ∠AMN are interchanged, invalidating all subsequent formulas involving γ−B and β−C."
+      },
+      {
+        "severity": "major",
+        "description": "The existence and compatibility of the proposed concyclic configuration are never proved. The asserted trigonometric verification is not supplied, and a sine ratio alone does not establish the required angles without branch and angle-sum arguments."
+      },
+      {
+        "severity": "major",
+        "description": "Uniqueness of points determined by prescribed rays cannot be invoked until a concyclic configuration satisfying all the same prescribed angles has actually been constructed; that load-bearing step is missing."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "00dba3085cbc3c5696a587acc39ea371799f5744ed67b21236a171993663d9ba",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

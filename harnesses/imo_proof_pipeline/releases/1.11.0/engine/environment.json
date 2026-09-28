@@ -1,0 +1,17 @@
+{
+  "Singular_path": null,
+  "Singular_version": null,
+  "environment_is_observation_not_install_lock": true,
+  "model_weights_bundled": false,
+  "packages": {
+    "httpx": "0.28.1",
+    "mpmath": null,
+    "numpy": "2.4.6",
+    "pytest": "9.1.0",
+    "requests": "2.32.5",
+    "sympy": null
+  },
+  "platform": "Linux-6.8.0-110-generic-x86_64-with-glibc2.35",
+  "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+  "python_executable": "/home/user/miniconda3/bin/python"
+}

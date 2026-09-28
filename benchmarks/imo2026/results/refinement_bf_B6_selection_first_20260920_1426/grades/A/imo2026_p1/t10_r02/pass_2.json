@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "dcadc72000accc41a87dc95b57e6f0bcfead998de4c1507607f4c89378e13a20",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "87f9dd76363d870d5d058ed98e5b5b14a3c85b098acf0b3eb11d4bdae3ac59df",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect or grading cap applies. The parenthetical suggesting that h equals lcm(m,n) “always” is literally inaccurate, but the preceding case analysis already proves that at least one replacement entry exceeds 1, so the deletion-test carve-out makes this non-load-bearing.",
+    "summary": "The lexicographically decreasing potential (total number of prime factors, number of entries greater than 1) correctly proves termination and, together with positivity of the total prime-factor count, proves that exactly one nonunit remains. Primewise valuations undergo the subtractive Euclidean transformation, preserving their global gcd; at a terminal board this invariant is exactly each valuation of M, so M is uniquely determined by the initial board.",
+    "strengths": [
+      "The potential function is well-founded and strictly decreases under every move.",
+      "Both gcd cases are correctly handled to establish termination and persistence of a nonunit.",
+      "The primewise valuation transformation is computed correctly.",
+      "The invariant reconstructs the terminal integer and proves independence from all choices."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "The phrase “h = lcm(m,n) > 1 always” is false literally, since h=lcm(m,n)/gcd(m,n) and may equal 1. This does not affect the proof because the preceding two cases independently show that either g>1 or, when g=1, h=mn>1."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:49:22.950173+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00039",
+  "native_rejection_count": 0
+}

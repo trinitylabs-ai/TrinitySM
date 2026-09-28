@@ -1,0 +1,37 @@
+{
+  "schema": "v263_lazy_refined_to_v290_r1c3_queue_v1",
+  "problem_dir": "/opt/proof-workshop/data/imo_proofbench_basic_problem_only",
+  "output_dir": "/opt/proof-workshop/runs/basic001_v263_v290_run01",
+  "problems": [
+    {
+      "problem_id": "PB-Basic-001",
+      "problem": "Determine all functions $f: \\mathbb{Z} \\rightarrow \\mathbb{Z}$ such that, for all $x, y \\in \\mathbb{Z}$, we have \\[ f(2x)+2f(y)=f(f(x+y)).\\]",
+      "problem_number": 1
+    }
+  ],
+  "gemma_endpoint": "http://127.0.0.1:8030/v1",
+  "qwen_endpoint": "http://127.0.0.1:8027/v1",
+  "gemma_model": "google/gemma-4-31B-it",
+  "qwen_model": "Qwen/Qwen3.6-27B",
+  "seed_namespace": "v263-v290:problem-only",
+  "model_timeout_sec": 600,
+  "dry_run": false,
+  "stage_order": [
+    "raw_generation",
+    "lazy_check",
+    "conditional_in_place_expansion",
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "frontend": "0.3.263",
+  "backend": "0.3.290+goldfree.1",
+  "budget_forcing": true,
+  "raw_bf_temperature_transition": "1.0 -> 0.7",
+  "workers_per_endpoint": 4,
+  "optional_exact_evidence": false,
+  "model_output": "Markdown",
+  "strict_scoring_inside_pipeline": false,
+  "reference_inputs_allowed": false
+}

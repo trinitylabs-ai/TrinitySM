@@ -1,0 +1,56 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t07_r02",
+  "group": "core",
+  "grader_candidate": "core_t07_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t07_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+  "v1_score": 4,
+  "v1_grade": "docs/public_release/evidence/grades/8949bbf3cf2be5423b3334d99a0fe19b8bbb085fcae0207d0198a13ac0aef7c9.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t07_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:14:48.426060+00:00",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The proof's final step merely asserts that the displayed expression for bz-cx simplifies to (b^2-c^2)/4 using the remaining angle constraints; it never translates those constraints into equations or performs the required elimination.",
+    "summary": "The coordinate reduction, sine-law computations, cotangent relations, and circumcenter projection formulas are coherent and correctly reduce the problem to one explicit trigonometric equality. That equality is true under the stated hypotheses, but proving it is the central nontrivial compatibility calculation, and no part of that calculation is supplied. Under Rules B and F, the explicit verified target equality makes a score of 4 eligible, but the substantial omitted derivation precludes 5 or higher.",
+    "strengths": [
+      "Correctly reformulates OM=ON as the linear dot-product identity bz-cx=(b^2-c^2)/4.",
+      "Correctly obtains cot(theta_K)=2cot(gamma)+cot(alpha) and cot(theta_L)=2cot(beta)+cot(alpha) from the sine law.",
+      "Correctly uses the perpendicular-bisector equations for the circumcenter and derives an explicit formula for bz-cx."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The load-bearing trigonometric simplification is wholly omitted. The equalities angle LBK=beta and angle LCK=gamma encode the difficult compatibility between the two constructions, and merely citing them does not demonstrate that the displayed expression has the claimed value."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "c2ae201acd1b70fd5ef6668cb1856d67a7d04707483c5c4209bc89a786616007",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

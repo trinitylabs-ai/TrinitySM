@@ -1,0 +1,81 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T21:19:37.669837+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "per_problem": {
+    "3": {
+      "scores": [
+        2
+      ],
+      "mean": 2.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T21:19:37.668355+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 3,
+      "problem_id": "imo2026_p3",
+      "case_id": "imo2026_p3.explicit.t07_r02",
+      "candidate_id": "t07_r02",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p3.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q3_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r02/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "510a835111e1e9b4e9fdc393534a02d2ec619f4acceefc66b04d01f2d1fa6e29",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 2,
+        "verdict": "incorrect",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The decisive claim that Xiang maximizes the even-ranked sum by splitting the large piece into equal parts is false. For n=2, the proposed Liu partition is (1/5,1/5,3/5); Xiang can split 3/5 into 3/10 and 3/10 using one mark, producing sorted lengths (3/10,3/10,1/5,1/5), so Liu receives only 1/2, not the claimed 3/5.",
+        "summary": "The submission correctly reduces the claiming phase to alternating ranks and obtains the n=1 value, but its general construction fails already for n=2. It also supplies no upper-bound argument ruling out better initial markings. The claimed formula (n+1)/(2n+1) is incorrect; the reference value is 2^n/(2^(n+1)-1).",
+        "strengths": [
+          "Correctly identifies the relevance of the odd-ranked sum of the sorted piece lengths.",
+          "Correctly handles the special case n=1 and performs some useful bookkeeping of Xiang's cuts."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The optimization assertion underlying the proposed lower bound is false, as shown by the n=2 counterexample."
+          },
+          {
+            "severity": "major",
+            "description": "No valid proof is given that Liu's proposed marking guarantees the claimed amount."
+          },
+          {
+            "severity": "major",
+            "description": "There is no upper bound showing that arbitrary Liu markings cannot guarantee more, and the final formula disagrees with the true value for n>=2."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

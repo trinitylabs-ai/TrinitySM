@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-028",
+  "problem": "Let $H$ be the orthocenter of acute triangle $ABC$, let $F$ be\n the foot of the altitude from $C$ to $AB$, and let $P$ be the reflection\n of $H$ across $BC$. Suppose that the circumcircle of triangle $AFP$\n intersects line $BC$ at two distinct points $X$ and $Y$. Prove\n that $C$ is the midpoint of $XY$."
+}

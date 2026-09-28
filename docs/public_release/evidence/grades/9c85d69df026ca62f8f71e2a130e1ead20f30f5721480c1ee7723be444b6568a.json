@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-026",
+  "grader_candidate_id": "t10_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "289cc1f04bb56c170f21ac84eaab5424bbf9a6b5a28e9f514c2b6e299984f0f1",
+  "proof": "evidence/proofs/289cc1f04bb56c170f21ac84eaab5424bbf9a6b5a28e9f514c2b6e299984f0f1.md",
+  "completed_at": "2026-09-13T00:23:57.518726+00:00",
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-026/t10_r02/submitted/result.json",
+    "native_record_file_sha256": "8dba595d23f3987c926a02f7a41f1e8ae1c282fe555330162c353e894f938579",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-026/t10_r02/submitted/result.json",
+    "selected_record_file_sha256": "8dba595d23f3987c926a02f7a41f1e8ae1c282fe555330162c353e894f938579",
+    "proof": "runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles/lanes/t10_r02/03_r1_cycle_3/cases/PB-Basic-026.t10_r02/resolver/temperature_0_4/gpu0/p26/t10_r02/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "00a599209b13d178a0d03ef34d99af3bbbc0f47b22893438bbc2209780698380",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "c6ba255f6bbb3bfd642e146b2a30b43e700e8da579130b27eda8a8fd634c1529",
+  "reference_sha256": "641eed7b84a961cc7a5180ea62acc3d04fcd72eacd72ca53d6909345d7153aac",
+  "guidelines_sha256": "a0093235b9ed15f9699946e9b9b657b7d2934a767b5e9fbc7539d2fec8bec4b9",
+  "response_sha256": "c1e29769d6f0b58f015514bcfa51020f0d4dcdad0cd91416aaa263e7c79b5df1",
+  "isolation_verified": true
+}

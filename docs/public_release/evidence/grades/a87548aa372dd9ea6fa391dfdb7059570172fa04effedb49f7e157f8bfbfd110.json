@@ -1,0 +1,40 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p1",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+  "proof": "evidence/proofs/a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b.md",
+  "completed_at": "2026-09-15T18:27:06.532905+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The lexicographically decreasing potential proves finite termination and preserves at least one nonunit. The primewise gcd of valuations is correctly shown invariant and uniquely reconstructs the final integer.",
+    "strengths": [
+      "Correctly handles both cases for the gcd and establishes strict lexicographic descent.",
+      "Correctly identifies and applies the primewise valuation invariant.",
+      "Gives an explicit choice-independent formula for the terminal value."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p1_c3_t07r02_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p1/t07_r02/summary.json",
+    "native_record_file_sha256": "a87548aa372dd9ea6fa391dfdb7059570172fa04effedb49f7e157f8bfbfd110",
+    "selected_record": "benchmarks/imo2026/results/p1_c3_t07r02_20260915T164615Z/grades/imo2026_p1/t07_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "27b4cd77edea6ebcc47df8a214e8aab3e66ff56edf24d329fdef14beb895e670",
+    "proof": "benchmarks/imo2026/results/p1_c3_t07r02_20260915T164615Z/proofs/imo2026_p1/t07_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7"
+}

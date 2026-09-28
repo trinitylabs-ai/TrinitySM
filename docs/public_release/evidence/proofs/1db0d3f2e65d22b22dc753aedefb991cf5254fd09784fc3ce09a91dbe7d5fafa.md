@@ -1,0 +1,34 @@
+To prove that the circles $(W_3)$ and $(W_4)$ are tangent to each other, we analyze the distances between their centers using the properties of the trapezoid and the given inscribed angles.
+
+### 1. Radii and Center Positions
+Let the lengths of the legs of the trapezoid be $AB = L_1$ and $CD = L_2$. For a circle passing through two points with a chord of length $L$ and an inscribed angle $\theta$ subtending the arc on the opposite side, the radius is $R = \frac{L}{2 \sin \theta}$ and the distance from the center to the chord is $d = \frac{L}{2 \tan \theta}$.
+The radii of the four circles are:
+$$R_1 = \frac{L_1}{2 \sin \alpha}, \quad R_2 = \frac{L_2}{2 \sin \beta}, \quad R_3 = \frac{L_1}{2 \sin \beta}, \quad R_4 = \frac{L_2}{2 \sin \alpha}$$
+Note that $R_1 R_2 = \frac{L_1 L_2}{4 \sin \alpha \sin \beta} = R_3 R_4$.
+The distances from the centers to the chords are:
+$$d_1 = \frac{L_1}{2 \tan \alpha}, \quad d_2 = \frac{L_2}{2 \tan \beta}, \quad d_3 = \frac{L_1}{2 \tan \beta}, \quad d_4 = \frac{L_2}{2 \tan \alpha}$$
+
+### 2. Vector Representation of Centers
+Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$. Let $\vec{n_1}$ and $\vec{n_2}$ be unit normal vectors to $AB$ and $CD$ pointing towards the interior of the trapezoid. Based on the inscribed angle condition, the centers $O_i$ are located at:
+$$O_1 = M_1 + d_1 \vec{n_1}, \quad O_2 = M_2 + d_2 \vec{n_2}, \quad O_3 = M_1 + d_3 \vec{n_1}, \quad O_4 = M_2 + d_4 \vec{n_2}$$
+Let $\vec{v} = \vec{M_1 M_2}$. The distance between the centers of $(W_1)$ and $(W_2)$ is:
+$$O_1 O_2^2 = |\vec{v} + d_2 \vec{n_2} - d_1 \vec{n_1}|^2 = v^2 + d_1^2 + d_2^2 - 2 d_1 (\vec{v} \cdot \vec{n_1}) + 2 d_2 (\vec{v} \cdot \vec{n_2}) - 2 d_1 d_2 (\vec{n_1} \cdot \vec{n_2})$$
+Using the identity $R^2 - d^2 = (L/2)^2$, we have $d_1^2 = R_1^2 - (L_1/2)^2$ and $d_2^2 = R_2^2 - (L_2/2)^2$. Thus:
+$$O_1 O_2^2 - (R_1^2 + R_2^2) = v^2 - \frac{L_1^2 + L_2^2}{4} - 2 d_1 (\vec{v} \cdot \vec{n_1}) + 2 d_2 (\vec{v} \cdot \vec{n_2}) - 2 d_1 d_2 (\vec{n_1} \cdot \vec{n_2})$$
+Since $(W_1)$ and $(W_2)$ are tangent, $O_1 O_2 = R_1 + R_2$, so $O_1 O_2^2 - (R_1^2 + R_2^2) = 2 R_1 R_2$.
+
+### 3. Comparison with $(W_3)$ and $(W_4)$
+Similarly, for $(W_3)$ and $(W_4)$:
+$$O_3 O_4^2 - (R_3^2 + R_4^2) = v^2 - \frac{L_1^2 + L_2^2}{4} - 2 d_3 (\vec{v} \cdot \vec{n_1}) + 2 d_4 (\vec{v} \cdot \vec{n_2}) - 2 d_3 d_4 (\vec{n_1} \cdot \vec{n_2})$$
+We compare the terms. First, the product $d_1 d_2 = \frac{L_1 L_2}{4 \tan \alpha \tan \beta} = d_3 d_4$.
+Next, consider the linear terms. For a trapezoid with $AD \parallel BC$, let the bases be on $y=h$ and $y=0$. Then $\vec{v} = (v_x, 0)$. The unit normals are $\vec{n_1} = \frac{1}{L_1}(h, y_{B}-y_{A})$ and $\vec{n_2} = \frac{1}{L_2}(-h, y_{D}-y_{C})$.
+Thus, $L_1 (\vec{v} \cdot \vec{n_1}) = v_x h$ and $L_2 (\vec{v} \cdot \vec{n_2}) = -v_x h$. Let $K = v_x h$.
+The linear terms for $O_1 O_2^2$ are:
+$$- 2 d_1 (\vec{v} \cdot \vec{n_1}) + 2 d_2 (\vec{v} \cdot \vec{n_2}) = - \frac{L_1 (\vec{v} \cdot \vec{n_1})}{\tan \alpha} + \frac{L_2 (\vec{v} \cdot \vec{n_2})}{\tan \beta} = - \frac{K}{\tan \alpha} - \frac{K}{\tan \beta}$$
+The linear terms for $O_3 O_4^2$ are:
+$$- 2 d_3 (\vec{v} \cdot \vec{n_1}) + 2 d_4 (\vec{v} \cdot \vec{n_2}) = - \frac{L_1 (\vec{v} \cdot \vec{n_1})}{\tan \beta} + \frac{L_2 (\vec{v} \cdot \vec{n_2})}{\tan \alpha} = - \frac{K}{\tan \beta} - \frac{K}{\tan \alpha}$$
+These are identical. Consequently, $O_3 O_4^2 - (R_3^2 + R_4^2) = O_1 O_2^2 - (R_1^2 + R_2^2) = 2 R_1 R_2$.
+Since $R_1 R_2 = R_3 R_4$, we have $O_3 O_4^2 = R_3^2 + R_4^2 + 2 R_3 R_4 = (R_3 + R_4)^2$.
+Thus, $O_3 O_4 = R_3 + R_4$, proving that circles $(W_3)$ and $(W_4)$ are tangent to each other.
+
+\(\square\)

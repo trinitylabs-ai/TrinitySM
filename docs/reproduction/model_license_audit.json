@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-09-18T02:15:27.582867+00:00",
+  "models": {
+    "gemma": {
+      "repository": "google/gemma-4-31B-it",
+      "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "tree_url": "https://huggingface.co/api/models/google/gemma-4-31B-it/tree/842da3794eaa0b77d5f08bae87a17459d91ff475?recursive=true&limit=1000",
+      "tree_response_sha256": "5f4be26d9b235066b9a6b9e3bbcbaf63d3b51d1360d51337f6681fca6c1a5231",
+      "entries_checked": 13,
+      "pagination": false,
+      "notice_files": [],
+      "license_files": []
+    },
+    "qwen": {
+      "repository": "Qwen/Qwen3.6-27B",
+      "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "tree_url": "https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9?recursive=true&limit=1000",
+      "tree_response_sha256": "0a018644751315edd2f28317d587b644520e8ac6a67b0818754729e332281ba0",
+      "entries_checked": 29,
+      "pagination": false,
+      "notice_files": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    "gemma_assistant": {
+      "repository": "google/gemma-4-31B-it-assistant",
+      "revision": "627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+      "tree_url": "https://huggingface.co/api/models/google/gemma-4-31B-it-assistant/tree/627c5ec1458b9086b841a91e0512fd31fd2fbbf1?recursive=true&limit=1000",
+      "tree_response_sha256": "c7d964fb94640d9f0ef4736a46f78802627000603dd2a37f6f9e8475bb57b938",
+      "entries_checked": 7,
+      "pagination": false,
+      "notice_files": [],
+      "license_files": []
+    }
+  },
+  "license_copies": [
+    {
+      "path": "licenses/Apache-2.0.txt",
+      "source_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "modified": false
+    },
+    {
+      "path": "licenses/Qwen3.6-27B-LICENSE.txt",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.6-27B/resolve/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/LICENSE",
+      "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+      "modified": false
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T11:14:44.173898+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 1,
+  "problem_id": "imo2026_p1",
+  "case_id": "imo2026_p1.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "At the terminal board, the proof says that for every prime p the positive-exponent set S_p^* is the singleton {v_p(M)}. This is false when p does not divide M: then S_p^* is empty. The conclusion is repaired immediately by treating that case separately and using the stated convention gcd(∅)=0.",
+    "summary": "The main proof is correct. Termination follows from the product being nonincreasing, with a strict decrease when the selected gcd exceeds 1, while the count of entries greater than 1 decreases when the product is unchanged. Primewise, the gcd of the positive valuations is invariant under the Euclidean transformation (x,y)↦(min(x,y),|x−y|), which determines every exponent of the unique terminal entry. Only a minor zero-exponent case and a slightly terse descent justification need clarification.",
+    "strengths": [
+      "Correctly identifies the product/count descent governing termination.",
+      "Correctly proves that at least one entry greater than 1 always remains.",
+      "Correctly derives the prime-valuation transformation under a move.",
+      "Correctly identifies the gcd of the positive p-adic valuations as an invariant and reconstructs the terminal integer from it."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "For primes not dividing the terminal M, S_p^* is empty rather than a singleton; the proof should explicitly invoke the empty-set convention to obtain g_p=v_p(M)=0."
+      },
+      {
+        "severity": "minor",
+        "description": "The termination sentence should explicitly use lexicographic descent of (P,C), or state that P never increases and that only finitely many C-decreasing moves can occur between strict decreases of P. This is directly recoverable from the preceding case analysis."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

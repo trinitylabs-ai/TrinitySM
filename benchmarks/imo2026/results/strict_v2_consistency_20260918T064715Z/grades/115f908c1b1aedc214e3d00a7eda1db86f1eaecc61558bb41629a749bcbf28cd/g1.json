@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "115f908c1b1aedc214e3d00a7eda1db86f1eaecc61558bb41629a749bcbf28cd",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "12152d0644ce953d4a7cce57dca6969d3946763ef8b35ce44832fa76714d6e96",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3dd41834a1642e1cd012ebf3eac64991ceabac35ae3a2feea2d58d6cef7a2e7a",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the inference in Section 2 that every multistep winning strategy must proceed by repeatedly doubling the target angle until reaching 90°. The one-step analysis does not imply this: at an intermediate cut, the two children need only both be strategically winning, not both immediately contain the same target angle. This is an unsupported central inference under Rule E and leads to an incorrect classification under Rule A.",
+    "summary": "The claimed set is strictly too small. For example, θ=60° is winning but is not 90°/2^k. If a triangle is not already equilateral, choose an angle c<60° and label the other angles a≥b. An admissible cut gives children with angle sets {b,60°,120°−b} and {c,120°,60°−c}; the first is terminal, while in the second, bisecting the 120° angle forces 60° in both children. Thus every starting triangle is winning for θ=60°. The correct classification is θ=180°/n for every integer n≥2. Because the final classification excludes a valid case, Rule A caps the score at 2.",
+    "strengths": [
+      "The perpendicular-altitude strategy for θ=90° is valid.",
+      "Once a current triangle contains 2θ, bisecting that angle indeed makes both children contain θ.",
+      "Iterating this observation correctly proves sufficiency for the stated dyadic subfamily θ=90°/2^k."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "In the one-step calculation, β+φ=θ is incorrectly rearranged as φ=β+θ rather than φ=θ−β. Although correcting this still gives the immediate-win alternatives α=2θ or θ=90°, the submitted derivation itself is invalid."
+      },
+      {
+        "severity": "major",
+        "description": "The proof assumes without justification that the one-step characterization forces every winning strategy to follow a single doubling chain. It ignores cuts whose two children are winning for different reasons."
+      },
+      {
+        "severity": "major",
+        "description": "The asserted non-winning strategy for non-dyadic θ is unsupported: it is not shown that Shan-Yu can always select a child avoiding both θ and 2θ. For θ=60°, the explicit cut in the summary makes one child contain 60° and the other 120°, directly defeating this claim and disproving the final answer."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:43:28.531184+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

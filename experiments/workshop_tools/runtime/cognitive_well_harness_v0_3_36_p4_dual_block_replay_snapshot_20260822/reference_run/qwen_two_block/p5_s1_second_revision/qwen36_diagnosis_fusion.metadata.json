@@ -1,0 +1,45 @@
+{
+  "stage": "qwen36_diagnosis_fusion",
+  "started_at": "2026-08-23T04:06:26.114250+00:00",
+  "completed_at": "2026-08-23T04:11:59.452375+00:00",
+  "latency_seconds": 333.3381235320121,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8027/v1",
+  "model": "Qwen/Qwen3.6-27B",
+  "prompt_sha256": "2f22f133b84ad8fc39a2ad6334169d21843157ea492c76dae77eee17f2ede3bc",
+  "user_prompt_sha256": "1d04617288959fb9b6fe8b0f6c2f14257dc64b07b9beb9bf9e8dbc26a38713e4",
+  "request_sha256": "4249b1a023660156503b03e82192bc8b2a880fb56cf9f63bf07ec9063aa7db0a",
+  "response_id": "chatcmpl-8045b7c2da1ff5e5",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 14734,
+    "total_tokens": 23528,
+    "completion_tokens": 8794,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 12000,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 97059627,
+    "thinking_token_budget": null,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 14400
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "continuation": false,
+  "prior_generation_sha256": null,
+  "system_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_diagnosis_fusion.prompt.txt",
+  "user_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_diagnosis_fusion.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_block_exact_full_scheduling_replay_20260822/p5_s1_second_revision/qwen36_diagnosis_fusion.reasoning.txt"
+}

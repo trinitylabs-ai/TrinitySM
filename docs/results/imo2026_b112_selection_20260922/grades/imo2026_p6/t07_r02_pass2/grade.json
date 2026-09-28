@@ -1,0 +1,62 @@
+{
+  "problem_id": "imo2026_p6",
+  "submission_id": "proof_29583b6bd982b2e9d2753938018a0ed8",
+  "pass_index": 2,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive central defect is the unsupported assertion that the greedy minimum must be a multiple of a hitting set contained in \\(\\mathcal P_M\\). A nearby admissible multiple of \\(M\\) does not force a possibly earlier minimizer to meet every previous term through primes at most \\(M\\). Thus replacing the original supports by \\(S'_n\\) is unjustified. This is an unsupported central structural inference under Rule E, so the score is capped at 3.",
+    "summary": "The finite-state argument would be useful if admissibility were proved to depend only on the truncated supports, but that crucial equivalence is absent. Moreover, the attempted extension from eventual to pure periodicity uses \\(a_{n+T}\\equiv a_n\\pmod{L_0}\\) for early indices, which eventual periodicity does not provide, triggering the concern in Rule D. Substantial new structural work, such as proving that the globally accepted integers form a finite union of sets of multiples, is required.",
+    "strengths": [
+      "Correctly observes that all later terms share a prime with \\(a_1\\), so \\(P(a_1)\\) is a hitting set for every finite family of previous supports.",
+      "Correctly notes that the collections of truncated supports have only finitely many possible members and therefore stabilize.",
+      "Once a genuinely fixed periodic admissibility condition is available, the proposed finite-state route toward eventual periodicity is broadly sound."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The stated bounded-gap witness is false: \\(a_n+M\\) need not be divisible by every prime of \\(P(a_1)\\), and \\(\\gcd(a_n+M,a_i)\\geq\\gcd(M,a_i)\\) is invalid. For example, starting with \\(a_1=77\\) gives \\(a_2=84,a_3=88,a_4=98\\), but \\(a_4+77=175\\) is coprime to \\(88\\). The bounded-gap conclusion can be repaired routinely by using the next multiple of \\(M\\)."
+      },
+      {
+        "severity": "major",
+        "description": "Even after repairing the gap bound, there is no proof that every constraint on \\(a_{n+1}\\) can be witnessed by primes at most \\(M\\). Consequently, the assertion that \\(a_{n+1}\\) is characterized by hitting every set in \\(S'_N\\), and hence the finite-state recurrence, is unsupported."
+      },
+      {
+        "severity": "major",
+        "description": "Pairwise nontrivial gcd with the terms \\(a_i\\) does not imply hitting \\(P(a_i)\\cap\\mathcal P_M\\), since the common prime may exceed \\(M\\). The final argument also assumes early-index congruences \\(a_{n+T}\\equiv a_n\\pmod{L_0}\\) that do not follow from eventual periodicity. Thus the required conclusion for every \\(n\\) is not established."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "proof_sha256": "29583b6bd982b2e9d2753938018a0ed8037c50e8a639b5789f5cfab26b4afbce",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "evidence_sha256": "689914e670a97a5aa56e18d7a3c0651c26b01b00e461d7d5f4703d458c6e6636",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p6/t07_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "625869e11077251797b0404e67cd23a3f0b5ba25b7f2952c22d8161772255e9c",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "82f04ce56db7ff681c6ab5ef91c73236705b517779ab85f202fbf42d36a33883",
+    "raw_response_1.txt": "f2f347d956a19d3d6132b4abecf0f8daac27991bab4e5ae83adbfc930193627c",
+    "summary.json": "812fd483c53d192be45ee1cb95018c7afe7fd67844a1483cb458da96b9de02f2"
+  }
+}

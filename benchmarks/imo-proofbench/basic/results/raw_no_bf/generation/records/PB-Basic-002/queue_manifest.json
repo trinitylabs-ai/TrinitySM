@@ -1,0 +1,99 @@
+{
+  "schema": "gemma4-four-raw-mtp4-no-budget-forcing-v1",
+  "config": {
+    "endpoint": "http://127.0.0.1:8030/v1",
+    "model": "google/gemma-4-31B-it",
+    "max_tokens": 65536,
+    "timeout_sec": 14400.0,
+    "raw_seed_offset": 0,
+    "workers": 4,
+    "mtp_speculative_tokens": 4,
+    "budget_forcing": false,
+    "requests_per_candidate": 1,
+    "prompt_sha256": {
+      "system.txt": "aea702bbb2bb3724a3c50ae71117337361c1856b7fa5a8928fbca5f095385225",
+      "user_prefix.txt": "59d1388a237de6a1b77ef9570c9e0c3715ce98f30df349ca9617e195ea7f45cb",
+      "user_suffix.txt": "7daed8aac343155656d7aed6763aaa78d8eb2ed531319035ce9770e8b7db441a"
+    },
+    "runner_sha256": "282f9b0fc2d01171a89e9a05123ec4eb00222c8ac90a7a827fe1d29cab387aa4"
+  },
+  "problems": [
+    {
+      "problem_id": "PB-Basic-001",
+      "problem": "Determine all functions $f: \\mathbb{Z} \\rightarrow \\mathbb{Z}$ such that, for all $x, y \\in \\mathbb{Z}$, we have \\[ f(2x)+2f(y)=f(f(x+y)).\\]",
+      "problem_number": 1
+    },
+    {
+      "problem_id": "PB-Basic-002",
+      "problem": "Show that $x^2 + y^2 + z^2 + t^2 \\ge xyzt$ for any positive real numbers $x, y, z, t$ that satisfy $2(x + y + z + t) \\ge xyzt$.",
+      "problem_number": 2
+    },
+    {
+      "problem_id": "PB-Basic-003",
+      "problem": "Find all functions $f\\colon \\mathbb{R} \\rightarrow \\mathbb{R}$ such that for all $a,b \\in \\mathbb{R}$,\n \\[ (b - a)f(f(a)) = a f(a + f(b)). \\]\"",
+      "problem_number": 3
+    },
+    {
+      "problem_id": "PB-Basic-004",
+      "problem": "Find all strictly increasing functions $g:\\mathbb{R} \\to \\mathbb{R}$ such that:\n (a) $g$ is surjective\n (b) $g(g(x))=g(x)+20x.$",
+      "problem_number": 4
+    },
+    {
+      "problem_id": "PB-Basic-005",
+      "problem": "Let $P$ be a polynomial with real coefficients whose leading coefficient is $1$. Suppose that for all nonzero real numbers $x$, we have $P(x) + P(1/x) = \\frac{P(x + 1/x) + P(x - 1/x)}{2}$. Determine all possibilities for $P$.",
+      "problem_number": 5
+    },
+    {
+      "problem_id": "PB-Basic-006",
+      "problem": "Consider any infinite sequence of integers $c_0, c_1, c_2, \\ldots $ such that $c_0 \\neq 0$. Prove that for some integer $k \\geq 0$, the polynomial $P(x) = \\sum_{i = 0}^k c_i x^i$ has fewer than $k$ distinct real roots.",
+      "problem_number": 6
+    },
+    {
+      "problem_id": "PB-Basic-007",
+      "problem": "Determine all positive integers $n$ and integer sequences $a_0, a_1,\\ldots, a_n$ such that $a_n = 3$ and\n \\[f(a_{i-1}) = a_i\\]\n for all $i = 1,2,\\ldots,n$, where $f(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0$.",
+      "problem_number": 7
+    },
+    {
+      "problem_id": "PB-Basic-008",
+      "problem": "Let $a,b,c$ be positive reals such that $a+b+c = 1$, prove that $\\sqrt{a}+\\sqrt{b}+\\sqrt{c} \\geq 3\\sqrt{3}(ab+bc+ca)$.",
+      "problem_number": 8
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "problem": "Let $a_1,a_2,...,a_{18}$ be 18 real numbers, not necessarily distinct, with average $m$. Let $A$ denote the number of triples $1 \\le i < j < k \\le 18$ for which $a_i + a_j + a_k \\ge 3m$. What is the minimum possible value of $A$?",
+      "problem_number": 9
+    },
+    {
+      "problem_id": "PB-Basic-010",
+      "problem": "The numbers $\\{ 1, 2, 3, \\ldots , 2022 \\}$ are partitioned into two sets $A$ and $B$ of size $1011$ each. Let $S_{AB}$ denote the set of all pairs $(a, b) \\in A \\times B$ where $a < b$, and let $S_{BA}$ denote the set of all pairs $(a, b) \\in A \\times B$ where $b < a$.\n\n Prove that $\\sum_{(a, b) \\in S_{AB}} (b - a) \\neq \\sum_{(a, b) \\in S_{BA}} (a - b)$.",
+      "problem_number": 10
+    },
+    {
+      "problem_id": "PB-Basic-011",
+      "problem": "Let $A\\subset \\{1,2,\\ldots,2000\\}$, $|A|=1000$, such that $a$ does not divide $b$ for all distinct elements $a,b\\in A$. For a set $X$ as above let us denote with $m_{X}$ the smallest element in $X$. Find $\\min m_{A}$ (for all $A$ with the above properties).",
+      "problem_number": 11
+    },
+    {
+      "problem_id": "PB-Basic-012",
+      "problem": "Consider a positive integer $n$. We define $f(n)$ as the number of pairs of paths on an $n \\times n$ grid that:\n\n (1) Both paths start at $(0, 0)$ (bottom left corner) and end at $(n, n)$ (top right corner).\n\n (2) Both paths allow only right or up movements (one unit each).\n\n (3) The $y$ coordinate of the first path never exceeds the y coordinate of the second path at any timestep.\n\n For example, when $n = 2$, consider the following pair of paths:\n\n The first path: $(0,0) \\rightarrow (1,0) \\rightarrow (1,1) \\rightarrow (2,1) \\rightarrow (2,2)$\n The second path: $(0,0) \\rightarrow (1,0) \\rightarrow (2,0) \\rightarrow (2,1) \\rightarrow(2,2)$\n The example is invalid because after 2 steps, the y coordinate of the first path (1) is larger than the y coordinate of the second path (0).\n\n However, the following example is valid,\n\n The first path: $(0,0) \\rightarrow (1,0) \\rightarrow (2,0) \\rightarrow (2,1) \\rightarrow (2,2)$\n The second path: $(0,0) \\rightarrow (1,0) \\rightarrow (1,1) \\rightarrow (2,1) \\rightarrow (2,2)$\n\n since the y coordinate of the first path is never larger than the second path. Find $f(10)$.",
+      "problem_number": 12
+    },
+    {
+      "problem_id": "PB-Basic-013",
+      "problem": "Each of 8 boxes contains 6 balls. Each ball has been colored with one of 22 colors. If no two balls in the same box are the same color, prove that there are two colors that occur together in more than one box.",
+      "problem_number": 13
+    },
+    {
+      "problem_id": "PB-Basic-014",
+      "problem": "In Shoreline Amphitheatre, 2024 Googlers each hold up to five flags of various colors. Any group of three Googlers will always have at least two people holding flags of the same color. Prove that one specific flag color is held by at least 200 Googlers.",
+      "problem_number": 14
+    },
+    {
+      "problem_id": "PB-Basic-015",
+      "problem": "Adrian is lining up $n \\geq 2$ toy cars in a row. Each car has a width and length, and no two cars have the same width or length. Initially, the cars are arranged in increasing order of length from left to right. Adrian repeatedly does the following: he chooses some two adjacent cars where the left car is shorter in length and greater in width than the right car, and he swaps them. He keeps doing this until no further moves are possible. Prove that no matter how Adrian chooses his swaps, the procedure will eventually terminate, and in the end, the cars will be sorted in increasing order of width from left to right.",
+      "problem_number": 15
+    }
+  ],
+  "fingerprint": "a1ae7d642d3c035a3dd5d8576697845655c352e74820f3a08d34e809d2a5260c",
+  "created_at": "2026-09-13T01:04:25.068023+00:00"
+}

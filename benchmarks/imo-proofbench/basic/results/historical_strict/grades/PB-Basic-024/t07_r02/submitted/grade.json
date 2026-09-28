@@ -1,0 +1,52 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T02:19:29.537843+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 24,
+  "problem_id": "PB-Basic-024",
+  "case_id": "PB-Basic-024.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/p24/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/p24/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/p24/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b877ed06eb41fc0374b3de6df9b511304721211861597aeaee5a1dab7fbc84b9",
+  "reference_sha256": "16087540df0968e6371b77787f32ca89238b593f9142bc3dbd96b81449774f41",
+  "proof_sha256": "9bd265a9979fbb68fc6b7e14c3b0acd611e216fb50fef96134a9f4738446c658",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/tasks.json",
+  "task_manifest_sha256": "13921c44083ed3c12bd7a83350e66364746a13a5a81a147f383cd9d5396c90ad",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In Subcase A, the statement that the left-hand side is odd “unless \\(y=0\\) or \\(w=0\\)” is false as written; it is odd in every case because \\(5^y\\) is odd and \\(2^{z-x}5^w\\) is even.",
+    "summary": "The factorization and valuation strategy correctly eliminates all cases and supports the unique solution \\((0,0,0)\\). The erroneous parity wording is immediately repairable and does not change the argument: the left-hand side is always odd, so \\(x=3k+1\\). The assumption \\(x\\le z\\) should also be identified explicitly as a harmless relabeling of the two factors.",
+    "strengths": [
+      "Correctly handles all boundary cases and reduces the positive case to \\(c=2k\\).",
+      "Correctly factors \\(2024^{2k}-b^4\\) and restricts both factors to primes \\(2\\) and \\(5\\).",
+      "The modulo \\(3\\) contradictions and final modulo \\(11\\) computation are valid."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The parity assertion in Subcase A contains a false “unless” qualification, although the required corrected observation is immediate."
+      },
+      {
+        "severity": "cosmetic",
+        "description": "The proof says “assuming \\(x\\le z\\)” without explicitly invoking symmetry to justify relabeling the factors."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

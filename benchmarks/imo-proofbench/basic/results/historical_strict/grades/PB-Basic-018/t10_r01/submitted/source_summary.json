@@ -1,0 +1,41 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T18:52:46.183290+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 18,
+  "problem_id": "PB-Basic-018",
+  "case_id": "PB-Basic-018.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "562502eef0fc90b89936157bd6f7c3c1d6bfa4a126ac6c00ba1bc4f0dec3c5af",
+  "reference_sha256": "3ebc02426db3c6c46b48852a9bcf2281caff784d98ea26251096b3335a515c46",
+  "proof_sha256": "190cdd56ca2755baecbdad52f4b59551d4dff4c29b9fa38ec761c97eb8dbc2c9",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/tasks.json",
+  "task_manifest_sha256": "244b2f67b78db8fb886af3b88f37ed0a69dae24d9f1a066d79e4557b1e9a46bd",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The Pell parametrization is correct and complete, the congruence conditions correctly force an even index, and the Binet-formula calculation rigorously proves \\(2x+2y+1=u_k^2\\).",
+    "strengths": [
+      "Provides a valid equivalent Pell-equation approach with correct recurrences, congruence analysis, and final square identity."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "0b5c31c1f90932f54ec73b3ad1dd4e8174e4608a2f0b693e3a89b40fa54d3e0d",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "3f358f000885bb454a785727289dba5ed26432910273326bf68ff8e32b2cab70",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "c3a955526351840a6eb66fdc61e1744703d22631f662e9178b3aa7a6699c5fa8",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is in Section 3: the solution asserts, without a structural induction or compatibility analysis, that the entire finite-stage winning set is a countable union of lower-dimensional sets. The preceding discussion addresses only one-step wins and does not establish this claim. This is the central necessity argument, so Rule E caps the score at 3.",
+    "summary": "The stated classification is correct, and the sufficiency argument is essentially sound. However, the necessity direction is not proved: the decisive countability/dimension assertion is merely stated, and the recursion for V_n also fails to model children that are won in different numbers of steps. Thus the submission proves roughly one direction but leaves a central gap.",
+    "strengths": [
+      "Correctly identifies the answer theta = 180 degrees/k for integers k >= 2.",
+      "For k >= 3, the construction using a multiple m theta between beta and alpha+beta correctly gives both children an angle that is a positive multiple of theta, apart from an easily handled terminal endpoint case.",
+      "The reduction from an angle m theta to theta by repeatedly splitting the angle is a valid finite strategy for m >= 2.",
+      "The altitude argument for theta = 90 degrees is valid, with right triangles already terminal."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "There is no proof that applying the predecessor operation through arbitrarily many stages preserves the alleged lower-dimensional nature of the winning sets. Existentially choosing a cut introduces a continuous parameter, so this preservation requires a substantive compatibility argument; it cannot be inferred from the one-step case. Consequently the existence of a losing initial triangle for nonintegral 180/theta is unsupported."
+      },
+      {
+        "severity": "substantial",
+        "description": "The stated recursion V_{n+1} = {triangles having a cut with both children in V_n} is not an accurate description of all strategies of depth at most n+1 unless the sets are made cumulative. In particular, two children may require different numbers of further moves."
+      },
+      {
+        "severity": "minor",
+        "description": "For k=3 and an equilateral starting triangle, the claimed strict multiple beta < m theta < alpha+beta need not exist because the interval has length exactly theta with multiples at its endpoints. This case is already immediately winning since every angle equals theta, so it is repaired by separating the terminal case."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:19:15.901767+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00009",
+  "native_rejection_count": 0
+}

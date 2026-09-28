@@ -1,0 +1,38 @@
+{
+  "schema": "v263_lazy_refined_to_v290_r1c3_queue_v1",
+  "problem_dir": "/opt/proof-workshop/data/imo_proofbench_basic_problem_only",
+  "output_dir": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z",
+  "problems": [
+    {
+      "problem_id": "PB-Basic-026",
+      "problem": "Let $\\triangle ABC$ be an inscribed triangle in $(O)$ and circumscribed\n around $(I)$. The incircle $(I)$ touches $BC,CA,AB$ at $D,E,F$,\n respectively. Construct the circle $(W_{a})$ passing through $B,C$\n and tangent to $(I)$ at $X$, and let $D'$ be the reflection of\n $D$ across $AI$. Define $Y,Z,E',F'$ similarly. Prove that the lines\n $D'X,E'Y,F'Z$ are concurrent on the line $OI$.",
+      "problem_number": 26
+    }
+  ],
+  "gemma_endpoint": "http://127.0.0.1:8030/v1",
+  "qwen_endpoint": "http://127.0.0.1:8027/v1",
+  "gemma_model": "google/gemma-4-31B-it",
+  "qwen_model": "Qwen/Qwen3.6-27B",
+  "seed_namespace": "v263-v290:problem-only:p26-original-policy:20260912T131929Z",
+  "model_timeout_sec": 600,
+  "dry_run": false,
+  "stage_order": [
+    "raw_generation",
+    "lazy_check",
+    "conditional_in_place_expansion",
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "frontend": "0.3.263",
+  "backend": "0.3.290+goldfree.1",
+  "budget_forcing": true,
+  "raw_bf_temperature_transition": "1.0 -> 0.7",
+  "workers_per_endpoint": 4,
+  "optional_exact_evidence": false,
+  "model_output": "Markdown",
+  "strict_scoring_inside_pipeline": false,
+  "reference_inputs_allowed": false,
+  "raw_seed_offset": 2000006
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-007",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "f3047a44b736c60f79d5b5f1d401a075af16c500e0f667733d09cf97813528fd",
+  "proof": "evidence/proofs/f3047a44b736c60f79d5b5f1d401a075af16c500e0f667733d09cf97813528fd.md",
+  "completed_at": "2026-09-13T00:23:31.246416+00:00",
+  "grade": {
+    "score": 1,
+    "category": "Partial"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-007/t07_r02/submitted/result.json",
+    "native_record_file_sha256": "b308291051a70eebea20c0e42c873d711f29900fb3bfefdaa89714b0bd49d25c",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-007/t07_r02/submitted/result.json",
+    "selected_record_file_sha256": "b308291051a70eebea20c0e42c873d711f29900fb3bfefdaa89714b0bd49d25c",
+    "proof": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-007/02_r1_cycles/lanes/t07_r02/03_r1_cycle_3/cases/PB-Basic-007.t07_r02/resolver/temperature_0_4/gpu0/p7/t07_r02/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "f19257c9147c72f70873013b735b7fe324b340515ad7f08a00386dcca4cb274a",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "28d044bf4a1e7e4b5cf5d0edf6ff710625da0ac2cffe2bed8eaadfe5fc2da09f",
+  "reference_sha256": "1662e5516f5dbc92debb447c2e0a0da6f00ba833f6da043f0fb09093e86df4c6",
+  "guidelines_sha256": "411643a3977dfe60fab964524fd6ad82d9f3934c2cf017fc63cebec5ef0b1974",
+  "response_sha256": "435dc01e462c278920517a56be791bc353b2525d0873930bdde35dea729b1b0a",
+  "isolation_verified": true
+}

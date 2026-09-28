@@ -1,0 +1,3 @@
+Define an inversion to be a pair of cars where the one on the left is wider than the one on the right. Clearly, each move strictly decreases the number of inversions, so the procedure must terminate.
+
+ Now, suppose for sake of contradiction that we can make no more moves, but the cars are not sorted in increasing order of width. Consider the smallest index $i$ such that car $i$ is wider than car $i + 1$. Since we cannot make any further swaps, it must also be the case that car $i$ is longer than book $i + 1$. This means that originally, car $i$ was to the right of car $i + 1$, and at some point they switched relative positions. However, this is not possible because the rules prevent us from ever swapping two books when one is both taller and wider than the other.

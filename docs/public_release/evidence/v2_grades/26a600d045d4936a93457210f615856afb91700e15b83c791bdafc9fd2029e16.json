@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "93ecdd0d484c4efde9dc3c30540be8eefcabe9f82f1afbf9e1f416d8e441533a",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "2a5f9d2ad47fccdd0a1d45889d705657d9453c0fe3f3f01b063245bf23ae2815",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "abc685540dbe142432f2dbd784588280b052e0cf1ffffeca1a98a6b4ee3d06b3",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claim that the families \\(\\mathcal G_n\\) eventually become constant is not proved. The finite-prime argument only applies at each fixed stage; no uniform finite set of primes is established, and later terms may introduce new primes. Nor is any well-founded quantity shown to decrease. This is an unsupported central structural claim, so Rule E caps the score at 3.",
+    "summary": "The prime-support reformulation and the deduction of periodicity conditional on stabilization are meaningful. However, stabilization is essentially the main difficulty of the problem, and the submitted termination paragraph does not establish it. The final extension through the initial terms also needs a no-skipping compatibility argument, not merely the fact that earlier terms belong to the eventual periodic set.",
+    "strengths": [
+      "Correctly translates the gcd conditions into hitting-set language.",
+      "Correctly observes that, for a fixed finite family \\(\\mathcal G\\), the admissible integers form a union of residue classes modulo the product of the primes in \\(\\bigcup\\mathcal G\\).",
+      "Conditional on having a fixed family and the appropriate enumeration property, the index-shift argument is essentially sound."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The asserted termination of changes to \\(\\mathcal G_n\\) is unsupported. Each \\(\\mathcal G_n\\) uses finitely many primes, but the union over all stages has not been proved finite. The vague claim that adding a hitting set makes later behavior 'easier' supplies neither a monotonic invariant nor a termination proof."
+      },
+      {
+        "severity": "substantial",
+        "description": "The dichotomy based on a chosen minimal hitting set \\(H\\) is invalid: \\(H\\notin\\mathcal G_n\\) does not imply that \\(\\mathcal P(a_{n+1})\\) is added, since \\(\\mathcal P(a_{n+1})\\) may still contain some member of \\(\\mathcal G_n\\)."
+      },
+      {
+        "severity": "minor",
+        "description": "From the fact that every submitted term lies in the eventual set \\(C\\), it does not immediately follow that the sequence is its exact increasing enumeration; one must also prove that every relevant element of \\(C\\) was admissible at every earlier stage and hence could not be skipped. Moreover, \\(C\\) may contain elements below \\(a_1\\), so the literal claim that the sequence is all of \\(C\\) is false, though restricting to \\(C\\cap[a_1,\\infty)\\) repairs that wording."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:52:11.741097+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,51 @@
+{
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_59a7d76b3ff5bd145a11ed434a7e5c4f",
+  "pass_index": 1,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; no grading cap applies.",
+    "summary": "The submitted proof correctly establishes both directions and obtains exactly the values θ=180°/k for integers k≥2. The cutting constructions are valid, the interval argument supplies the required multiple of θ, and the safe-triangle invariant correctly prevents victory in all other cases.",
+    "strengths": [
+      "Correctly proves that an angle nθ can be reduced recursively to θ by vertex cuts.",
+      "For θ=180°/k, constructs a cut whose two children both contain positive integer multiples of θ.",
+      "Correctly handles the exceptional case in which all three angles are at most θ.",
+      "Enumerates all four ways both children could contain marked angles and derives a contradiction in each case.",
+      "Maintains a valid safe-state invariant for Shan-Yu when 180° is not an integer multiple of θ."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "proof_sha256": "59a7d76b3ff5bd145a11ed434a7e5c4f02eac8307afc1127687026af47a648fa",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "evidence_sha256": "b18ca31615ad827476fc7747f9f7dff3b03b573f06c832faff5659421d9ba6d5",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p4/t07_r01_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "faa17e3f2a2798f3db43be035fdc3a3e7efb6710f271362adcd787f1618dc3bd",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "9f0ab546ba44ae3ae204ab1a531f7c0c07238f6fa5c9716dd3916935d715bedf",
+    "raw_response_1.txt": "6a95b14f2986a63e25f1bb7bcc11f40f147198b9ef81337b457e19b0fd527575",
+    "summary.json": "ef6c7870cac321c3c569b1f55c07bf0e8692214c5e579964416b9f1d19b33693"
+  }
+}

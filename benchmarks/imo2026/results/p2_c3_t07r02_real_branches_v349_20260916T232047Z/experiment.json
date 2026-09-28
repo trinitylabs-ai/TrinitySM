@@ -1,0 +1,19 @@
+{
+  "schema": "imo-experiment-v1",
+  "run_id": "p2_c3_t07r02_real_branches_v349_20260916T232047Z",
+  "benchmark": "imo2026",
+  "created_at": "2026-09-16T23:22:54.251078+00:00",
+  "harness_release": "1.7.0",
+  "launcher_sha256": "2d4ce28819b6b67792e42368c911d2b35065cf995a0a64458120cf8e8453bb8e",
+  "state": "completed",
+  "generation_output": "generation/run",
+  "grading_output": "grading/work",
+  "tool_harness": {
+    "version": "0.3.349",
+    "release_sha256": "f1eecd3cbc8d98f2da5cb15258a2e5e78e9683bdb673d2cd05e758ec08dd6a6e",
+    "proof_file": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/proofs/imo2026_p2/t07_r02/R1-C3.md",
+    "proof_file_sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c",
+    "detection_from": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_v329_guards_20260915T220000Z/generation/run"
+  },
+  "snapshot_sha256": "92eca96c7e968b3ef4f19e9aea53c789bd86adc0dd5614030c303d1a23530545"
+}

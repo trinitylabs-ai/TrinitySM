@@ -1,0 +1,35 @@
+{
+  "problem_id": "PB-Advanced-009",
+  "candidate_id": "t10_r02",
+  "pass_index": 1,
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "proof_sha256": "60bd2d5ecf7cf5303d49e665efbd4c1973c53ec09ed6cc5c9eb44e399bd21e33",
+  "problem_sha256": "bf2931d5d1464658b9bda1441741b3b90ffc331320f41ccb289e6e7d1a11607b",
+  "reference_sha256": "4207ed35c97b80a087be12eb404c1c136ea567e0707af8280abda9d114dde038",
+  "guidelines_sha256": "c266704947115a9cd8b724410492f04ebd422cb9770854d042b37a2fc67bfd88",
+  "prompt_sha256": "8219a9817f96243f7178ed0629dd6586557175f40dd4d695df7207e9265d6b6c",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "response_sha256": "82a763f63d365e8dd1f53beaf9e816a6efbc7ae44221ce730d37a78c596dad26",
+  "cache_key": "07d3eefdd14360de3e4a1b839f57d8dccbfd816fede4fa002593b6143d38ebe7",
+  "isolation_verified": true,
+  "isolation_config_sha256": "a5917c07a3db6bc066bc7a358c0afa8351a57a289dfcfafaff37f80e68287b09",
+  "response": "grades/PB-Advanced-009/t10_r02_pass1/response.md",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "completed_turns": 1,
+    "item_types": [
+      "agent_message"
+    ],
+    "startup_diagnostics": [
+      "Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."
+    ]
+  },
+  "source_record_sha256": "96c6225d2f3f4c038c75ef71ac414e2df25c50fa0cc28829e0c64a64c2d94957"
+}

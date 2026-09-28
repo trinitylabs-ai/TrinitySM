@@ -1,0 +1,25 @@
+{
+  "geometry": {
+    "geometry_workflow.py": "3b5512dfbea52d8a85a21e748aad7affd367219be263a7dedd6983dadee574bd",
+    "geometry_program.py": "7e7bf8d328c380ff4275dced0500dbf0fe0ad826036bc69eaf7f7b83af8dabdb",
+    "geometry_normalization.py": "a64aeb8c282366890e1766da44abd12ff3a8af95e4a24b190bd3f540f68cf075",
+    "root_workflow.py": "31d7d4987ffa366d58d3c4d38519a320df5b2630e61ba4f85f86b9f3f958491e",
+    "root_classification.py": "4af1cdb6206063d6797ccf26415814cc2dc3ab2c7f034e45b89e48267e06b703",
+    "root_normalization.py": "3f4c26aabc2b2aa83b22047315fe99150c2a138742d99aa9ef221fbd7a627bff",
+    "polynomial_export.py": "4ef36e37dc32c41be9609a258d9e402aafd714db82a5c41155494c223ddfc4c3",
+    "real_branches.py": "b16d2de72f0be47d8275e654a90e0647b972c6e7dfb543d30079c044e7750580",
+    "radical_certificate.py": "3a7c99b263771daf141764a43c88d1de391d5f6a1ceb36f53386edea99711583",
+    "rational_division.py": "05484660373e89d3f3cc96957141d797c9c34d4df64f7f1435c9c3604fafbe71",
+    "appendix_synthesis.py": "e18759415d16140d4f24e2701d9a4ef283641ecb240f45cf1b68179749993ddf",
+    "final_revision.py": "2e28e83cd6e6e9a8e6b556f5ecbafdced4348682b99059af1b9451246135beb2",
+    "rewrite.py": "141a51cfc90b5c9ac8307080b13a567544dd289d8e04f4d28a29be3092763523",
+    "synthesis_core/prompts.py": "93c571eb42803514ae6015ac134d13767e54d895edde07749ecc867fd3d81706",
+    "synthesis_core/pipeline.py": "ca8f332d4de0361f2601db8ef469f34ce999b95bffce25e89189e394dbd0fdf7"
+  },
+  "discrete": {
+    "discrete_certificates.py": "d3eed6c449260c91316abfbd010da14d1fafa4685ed1bb9e2e7f0f4a2fda56b0",
+    "discrete_workflow.py": "a692e41065714ea3ce94babfb15b03489addb258036f1c4338cfe2c797768809",
+    "discrete_resume.py": "7f5e01349c3968a2fbecd3f784632f3b5a4fe7ec359adc59e891835a9ffd452b",
+    "synthesis_core/tool_purpose.py": "a324a395b5ceb4f43237c1b2cb409b4e9af255bb7347344e5b4f240a883ad385"
+  }
+}

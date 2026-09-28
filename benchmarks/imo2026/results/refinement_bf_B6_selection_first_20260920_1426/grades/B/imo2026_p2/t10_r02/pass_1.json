@@ -1,0 +1,54 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_d79728feade16e651000362a",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "5b8ba6821659ebe9d37a07e0216a3ce16d01d9b960e50961a81a33904a65b80a",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "ca5f4c2faa0e75bc9b199aaae801f2f5a14e7cadafcdfa8d3c6717c31218aadb",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect occurs in the treatment of triangle LNC. Since N lies on AC, the rays CN and CA coincide, so ∠LCN=∠LCA=∠ACL=α, not α−γ. Moreover, with angles α and β at C and N, the sine law gives LN=(b/2)sinα/sin(α+β), not (b/2)sin(α−γ)/sinβ. Thus the asserted formula for cot θ_L is false and load-bearing (Rule C).",
+    "summary": "The vector reduction of OM=ON to O·(b−c)=(b²−c²)/4 is correct, and several subsequent circumcentre projection formulas represent meaningful progress. However, the derivation governing L is false. More importantly, the final claim that the resulting trigonometric expression “simplifies” using ∠LBK=β supplies none of the necessary compatibility calculation and does not correctly use ∠LCK=γ. This is the central step of the proof. Because the reduction leading to it already contains a false relation, the omitted substantial derivation is not eligible for 4 under Rule B; the unsupported decisive inference invokes Rule E's ceiling of 3.",
+    "strengths": [
+      "Correctly expands the midpoint-distance equality into the required linear dot-product identity.",
+      "Correctly relates this identity to the circumcentre of triangle AMN.",
+      "The sine-law calculation in triangles BMK and ABK, yielding cot θ_K=cot α+2cot γ, is correct.",
+      "The perpendicular-bisector equations for the circumcentre of AKL give a plausible and largely correct coordinate framework."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion ∠LCN=α−γ contradicts the incidence and interior conditions: CN is the same ray as CA, hence ∠LCN=α. The following sine-law denominator is also incorrect. The resulting θ_L relation is therefore false."
+      },
+      {
+        "severity": "major",
+        "description": "The proof omits the central trigonometric compatibility argument. It merely asserts that substitution and the condition ∠LBK=β produce the target, without displaying the equation supplied by that angle condition or carrying out the elimination."
+      },
+      {
+        "severity": "substantial",
+        "description": "The condition ∠LCK=γ is not correctly encoded anywhere; its only purported use is the erroneous subtraction in the LNC calculation. A valid completion must use both remaining angle constraints and replace the central derivation."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T10:41:32.459070+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p2/pass_1/p2/proof_d79728feade16e651000362a"
+}

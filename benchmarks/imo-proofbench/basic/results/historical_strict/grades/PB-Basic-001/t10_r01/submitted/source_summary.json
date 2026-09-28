@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T14:32:24.512585+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 1,
+  "problem_id": "PB-Basic-001",
+  "case_id": "PB-Basic-001.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/problems/PB-Basic-001.json",
+  "reference_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/references/PB-Basic-001.md",
+  "proof_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/proofs/PB-Basic-001/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "fbab67024d1e53fad86a03ffc0df9658f40fa6919faa9a27d71d834ae65a7958",
+  "reference_sha256": "e6d7c469d9bd78763301008c78856b71196d8504838e5b5f20bd29ef740b9f1a",
+  "proof_sha256": "679b7e2610bbb513992dea06ea69ee9681cc40d5b3e9ebc010a8576891d4f2ba",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "5c6c59ab7923c1836314a3f0571a75282ff4dfe8144f5538e5463dcc07744719",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly derives additivity after shifting by \\(f(0)\\), classifies additive integer-valued functions, determines all allowable parameters, and verifies both solution families.",
+    "strengths": [
+      "Every load-bearing identity is explicitly and correctly derived.",
+      "The affine substitution and coefficient comparison are complete.",
+      "Both \\(f\\equiv0\\) and \\(f(x)=2x+c\\) are directly verified."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

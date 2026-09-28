@@ -1,0 +1,41 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:11:23.507333+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 13,
+  "problem_id": "PB-Basic-013",
+  "case_id": "PB-Basic-013.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p13/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p13/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p13/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "07f975e5449f566f33434746f69d3ec2720e776c97e82aebb330ca38ca6c51d3",
+  "reference_sha256": "15c8b8ab464de13b112ed964b40d9cfc6b39ac48a66e7bac459b58ae1265063d",
+  "proof_sha256": "ba929b912074654c0ff12ffffe32d0567d5f78d6762e05d8693503042832f5cb",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly double-counts shared colors, applies discrete convexity to obtain the sharp lower bound \\(S\\ge 30\\), and contrasts it with the 28 pairs of boxes to force two boxes to share at least two colors.",
+    "strengths": [
+      "The counting identity, minimization argument, and final pigeonhole contradiction are all correct and sufficiently justified."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

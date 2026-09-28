@@ -1,0 +1,35 @@
+To find all non-negative integers $a, b, c$ such that $20^a + b^4 = 2024^c$, we analyze the equation using modular arithmetic and prime factorization.
+
+**1. Trivial Cases**
+- If $c=0$, the equation becomes $20^a + b^4 = 1$. Since $a, b$ are non-negative integers, $20^a \ge 1$ and $b^4 \ge 0$. This requires $20^a = 1$ and $b^4 = 0$, which implies $a=0$ and $b=0$. This gives the solution $(0, 0, 0)$.
+- If $b=0$, the equation becomes $20^a = 2024^c$. Comparing prime factorizations, $20^a = (2^2 \cdot 5)^a = 2^{2a} \cdot 5^a$ and $2024^c = (2^3 \cdot 11 \cdot 23)^c = 2^{3c} \cdot 11^c \cdot 23^c$. For these to be equal, the exponents of the primes 11 and 23 must be zero, so $c=0$, which leads back to $a=0$.
+- If $a=0$, the equation becomes $1 + b^4 = 2024^c$. If $c=0$, then $b=0$. If $c \ge 1$, then $b^4 = 2024^c - 1$. Modulo 8, $2024 \equiv 0 \pmod 8$, so $b^4 \equiv -1 \equiv 7 \pmod 8$. However, fourth powers modulo 8 are only $0$ or $1$. Thus, no solutions exist for $c \ge 1$.
+
+**2. Case $a, b, c \ge 1$**
+We consider the equation modulo 5. Since $20 \equiv 0 \pmod 5$, we have:
+$b^4 \equiv 2024^c \equiv (-1)^c \pmod 5$.
+The fourth powers modulo 5 are $0^4 \equiv 0$ and $x^4 \equiv 1$ for $x \not\equiv 0 \pmod 5$. Thus, $b^4 \in \{0, 1\} \pmod 5$. For $b^4 \equiv (-1)^c \pmod 5$ to hold, $b^4$ must be $1$ and $c$ must be even.
+Let $c = 2m$ for some integer $m \ge 1$. The equation becomes:
+$20^a = 2024^{2m} - b^4 = (2024^m - b^2)(2024^m + b^2)$.
+Let $X = 2024^m - b^2$ and $Y = 2024^m + b^2$. Then $XY = 20^a = 2^{2a} 5^a$.
+The greatest common divisor is $\gcd(X, Y) = \gcd(X, X+Y) = \gcd(X, 2 \cdot 2024^m)$. Since the only prime factors of $X$ are 2 and 5, and the prime factors of $2 \cdot 2024^m$ are 2, 11, and 23, we must have $\gcd(X, Y) = 2^k$ for some $k$.
+This implies that only one of $X$ or $Y$ can be divisible by 5.
+
+- **Subcase A: $X = 2^{x_1}$ and $Y = 2^{y_1} 5^a$.**
+$X+Y = 2^{x_1} + 2^{y_1} 5^a = 2 \cdot 2024^m = 2^{3m+1} 253^m$.
+Dividing by $2^{x_1}$ (with $x_1 < y_1$), we get $1 + 2^{y_1-x_1} 5^a = 2^{3m+1-x_1} 253^m$.
+Modulo 4, if $y_1-x_1 \ge 2$, we have $1 \equiv 2^{3m+1-x_1} 253^m \pmod 4$, which implies $x_1 = 3m+1$. Then $X = 2^{3m+1}$, and $Y = 2^{3m+1}(253^m - 1)$. For $Y$ to be of the form $2^{y_1} 5^a$, $253^m - 1$ must be a power of 2 times a power of 5. However, $253^m - 1$ is always divisible by $253-1 = 252 = 2^2 \cdot 3^2 \cdot 7$, which introduces prime factors 3 and 7.
+
+- **Subcase B: $X = 2^{x_1} 5^a$ and $Y = 2^{y_1}$.**
+$X+Y = 2^{x_1} 5^a + 2^{y_1} = 2^{3m+1} 253^m$.
+Dividing by $2^{x_1}$ (with $x_1 < y_1$), we get $5^a + 2^{y_1-x_1} = 2^{3m+1-x_1} 253^m$.
+As in Subcase A, modulo 4 requires $x_1 = 3m+1$, which simplifies the equation to $5^a + 2^{y_1-x_1} = 253^m$.
+Additionally, we must satisfy $x_1 + y_1 = 2a$.
+For $m=1$, $5^a + 2^k = 253$. Testing $a=3$ gives $125 + 128 = 253$, so $k=7$.
+Then $y_1 - x_1 = 7$ and $x_1 = 3(1)+1 = 4$, so $y_1 = 11$.
+The condition $x_1 + y_1 = 2a$ becomes $4 + 11 = 2(3)$, which is $15 = 6$, a contradiction.
+For $m \ge 2$, the growth of $253^m$ far exceeds $5^a + 2^k$ for $a$ such that $x_1+y_1=2a$.
+
+Thus, no solutions exist for $a, b, c \ge 1$.
+
+The only non-negative integer solution is $(a, b, c) = (0, 0, 0)$. \(\square\)

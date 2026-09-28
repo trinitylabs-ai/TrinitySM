@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-030",
+  "problem": "Let $m$ and $n$ be positive integers with $m\\ge n$. There are\n $m$ cupcakes of different flavors arranged around a circle and $n$\n people who like cupcakes. Each person assigns a non-negative real\n number score to each cupcake, depending on how much they like the\n cupcake. Suppose that for each person $P$, it is possible to partition\n the circle of $m$ cupcakes into $n$ groups of consecutive cupcakes\n so that the sum of $P$'s scores of the cupcakes in each group is\n at least $1$. Prove that it is possible to distribute the $m$ cupcakes\n to the $n$ people so that each person $P$ receives cupcakes of total\n score at least $1$ with respect to $P$."
+}

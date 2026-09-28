@@ -1,0 +1,1844 @@
+{
+  "schema": "imo2026-v2-two-pass-report-v2",
+  "selected_repetitions": [
+    1,
+    2
+  ],
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "source_study": "benchmarks/reports/strict_v2_consistency_20260918T064715Z",
+  "source_manifest_sha256": "20d70d3bbd1b4e3e3a86be14237bf9bfb8dc3f2a10d3d87b176f2f4bba2687b5",
+  "aggregation": "Select one complete grading pass by the lower total Average across all six problems; ties select pass 1. Publish every problem row and Oracle@4 from that same pass. Report pass 1 for all three ablation configurations, for both Average and Oracle@4. Tool rows retain the minimum score for each input and rewrite.",
+  "records": [
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/ddae068f9b84e34895fdecad09f3d1d8594ae272b5fca6811083bb694fb95820.json",
+          "evidence/v2_grades/689216f2da7c23ccf0a0fb35073d38019389fa621e2eb20c11572c789f0d9cd9.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/ddae068f9b84e34895fdecad09f3d1d8594ae272b5fca6811083bb694fb95820.json",
+          "evidence/v2_grades/689216f2da7c23ccf0a0fb35073d38019389fa621e2eb20c11572c789f0d9cd9.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/58a996651b47307b680ddb83d0c0d33fddc25951fa5d4f757dd196c9b2926421.json",
+          "evidence/v2_grades/d0409c43bf3fbfa9f90bbd120839b436161d2e9cdb1ab83ba2f2263cacb5e4c7.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/58a996651b47307b680ddb83d0c0d33fddc25951fa5d4f757dd196c9b2926421.json",
+          "evidence/v2_grades/d0409c43bf3fbfa9f90bbd120839b436161d2e9cdb1ab83ba2f2263cacb5e4c7.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/65672ddd758c558895c5aae1753f62fd6618200d77cd4c574bb5c49f8894daf5.json",
+          "evidence/v2_grades/5915e72c3395163d9680f33eee46199033e31019fb799a8ed5cf6b0dc74e2ca0.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/65672ddd758c558895c5aae1753f62fd6618200d77cd4c574bb5c49f8894daf5.json",
+          "evidence/v2_grades/5915e72c3395163d9680f33eee46199033e31019fb799a8ed5cf6b0dc74e2ca0.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/d6dda1546c6b04151b09bf9db04bfc1a25b3f45d9f044e6eda1095332929646e.json",
+          "evidence/v2_grades/6e646746b6b0b0d1326f0ffeb5bbeed6ffcc89aff7b9f966877752a41a5d2bf6.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/d6dda1546c6b04151b09bf9db04bfc1a25b3f45d9f044e6eda1095332929646e.json",
+          "evidence/v2_grades/6e646746b6b0b0d1326f0ffeb5bbeed6ffcc89aff7b9f966877752a41a5d2bf6.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/f9fabf2a3d7caa3852001c5595ac09b787826e7f69f387163462d9d828163db0.json",
+          "evidence/v2_grades/50ef1940cf73349853792a273ed7918b4db4d641493ebc99a37dab744e8d20f1.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+        "scores": [
+          5,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/b23bddc791283bf71bcc6cc26a8cddf974546b55fa66367aeabffb6cbe1020c5.json",
+          "evidence/v2_grades/e20b5cac552dc3272bd883343612ca86319ea5064d246dce31501c3bda415f80.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+        "scores": [
+          3,
+          4
+        ],
+        "grades": [
+          "evidence/v2_grades/be2b616ef11f3f49ae0f85ecda0ff58278f010c246c622271431f43aefba3606.json",
+          "evidence/v2_grades/2920a038c20877b4a71ba6a02609453c2cbeb62b1e5e6d0cf0e6d60c2619b363.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+        "scores": [
+          5,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/0e571ecadeb0650a113866bbc999c0c8c0fbb463c72543b078ffc528f31cae84.json",
+          "evidence/v2_grades/1a77f8267d4c1e7f1d39a06015b0f24f3b57fc538e85f16c9650f1c02a9518fb.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+        "scores": [
+          4,
+          4
+        ],
+        "grades": [
+          "evidence/v2_grades/9623345cad4dfce5e8acdbdac7cfcb5b2d6b46c7e27ee70cd3067e7f9f246120.json",
+          "evidence/v2_grades/43d17aa01f694c9ae406ed693917ae8fa01ea941e93cc67e73a098e7c11e1098.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+        "scores": [
+          5,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/857310e7cfc198c4814b9d6c7024e40f004acae0264ec462d3c4381218a01d0b.json",
+          "evidence/v2_grades/605f8baf4bb26e878d419841fea010a9cec3f0c044199af7dfc17844ca0145ae.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/32dd528bed36565030af5e8ab6eddd7098428577f2d81503132c56873ababdc0.json",
+          "evidence/v2_grades/e0e04436f35ec6a4c4dfbbedca420f56852e482e8bd057df8e942f0ee84a6253.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/32dd528bed36565030af5e8ab6eddd7098428577f2d81503132c56873ababdc0.json",
+          "evidence/v2_grades/e0e04436f35ec6a4c4dfbbedca420f56852e482e8bd057df8e942f0ee84a6253.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+        "scores": [
+          2,
+          1
+        ],
+        "grades": [
+          "evidence/v2_grades/10eb5da34c76ae3e1460d0eb82b548a89dace585c41f79338b437258675939c7.json",
+          "evidence/v2_grades/bfed0d17b90172ca44c2d5248ca462e3ba959b4f7ec4e97dec2a3bdb5eeac676.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+        "scores": [
+          2,
+          1
+        ],
+        "grades": [
+          "evidence/v2_grades/10eb5da34c76ae3e1460d0eb82b548a89dace585c41f79338b437258675939c7.json",
+          "evidence/v2_grades/bfed0d17b90172ca44c2d5248ca462e3ba959b4f7ec4e97dec2a3bdb5eeac676.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/070b722b07f61755585c854704d24231ed7deced00d6c7702a9ce1a0a2142827.json",
+          "evidence/v2_grades/855989b7d478aeaa00e158c3faa88e897ed18aff10f5ba9cca24b45b921d7881.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/070b722b07f61755585c854704d24231ed7deced00d6c7702a9ce1a0a2142827.json",
+          "evidence/v2_grades/855989b7d478aeaa00e158c3faa88e897ed18aff10f5ba9cca24b45b921d7881.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+        "scores": [
+          1,
+          1
+        ],
+        "grades": [
+          "evidence/v2_grades/49a57d20c919437a1072936fd873c412650fe34b8ecff75d90e4b003960338d8.json",
+          "evidence/v2_grades/b1dec497b0163fb2f2a205ba2e31e078eed80f669c8e3c379a42ef49ff97fec3.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+        "scores": [
+          1,
+          1
+        ],
+        "grades": [
+          "evidence/v2_grades/49a57d20c919437a1072936fd873c412650fe34b8ecff75d90e4b003960338d8.json",
+          "evidence/v2_grades/b1dec497b0163fb2f2a205ba2e31e078eed80f669c8e3c379a42ef49ff97fec3.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/ce211beea74600646a7c016495fe3b891d6f560543522674845d7466a4c66234.json",
+          "evidence/v2_grades/1a79f83ca562e7d702e6a1f2bf11db2a08f6754a2a4783dad900123eb5cd3366.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/ce211beea74600646a7c016495fe3b891d6f560543522674845d7466a4c66234.json",
+          "evidence/v2_grades/1a79f83ca562e7d702e6a1f2bf11db2a08f6754a2a4783dad900123eb5cd3366.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+        "scores": [
+          6,
+          6
+        ],
+        "grades": [
+          "evidence/v2_grades/277a5fe5a7cef816fd5df6ea4fd0ac71255be877d032882e1f370e3ab94e1ae9.json",
+          "evidence/v2_grades/50761319a2111b5768a436cc706e5faf803ca0081e760ce5b24ef119e948d9ad.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+        "scores": [
+          6,
+          6
+        ],
+        "grades": [
+          "evidence/v2_grades/277a5fe5a7cef816fd5df6ea4fd0ac71255be877d032882e1f370e3ab94e1ae9.json",
+          "evidence/v2_grades/50761319a2111b5768a436cc706e5faf803ca0081e760ce5b24ef119e948d9ad.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+        "scores": [
+          6,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/413ed7d2d0fa45115d40f4ab47503c19cfba6ed241727b5434417640a7626b6e.json",
+          "evidence/v2_grades/7beb520dc2c0a8b54d4d3ecd9a486c07362f98375ff8db1928ab78432cb37193.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+        "scores": [
+          6,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/413ed7d2d0fa45115d40f4ab47503c19cfba6ed241727b5434417640a7626b6e.json",
+          "evidence/v2_grades/7beb520dc2c0a8b54d4d3ecd9a486c07362f98375ff8db1928ab78432cb37193.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/27c3ef89b25cc553b8d42c1125e75e6af866d4387657dc84ad67ffad1dfa5a61.json",
+          "evidence/v2_grades/34124cf16721e165570af2d6d3a47c67fb1347aa3ba5bbb31eaf5bc0950595c9.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/27c3ef89b25cc553b8d42c1125e75e6af866d4387657dc84ad67ffad1dfa5a61.json",
+          "evidence/v2_grades/34124cf16721e165570af2d6d3a47c67fb1347aa3ba5bbb31eaf5bc0950595c9.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+        "scores": [
+          3,
+          6
+        ],
+        "grades": [
+          "evidence/v2_grades/3b1d0479bfa5f4bb69fb55233f5a69e69aaafde14326cf27b792e3b68982b0c7.json",
+          "evidence/v2_grades/344b2ec2d5501ba158aebf73192dedcf3737834de1a29427fc12a2b99e5d4276.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+        "scores": [
+          3,
+          6
+        ],
+        "grades": [
+          "evidence/v2_grades/3b1d0479bfa5f4bb69fb55233f5a69e69aaafde14326cf27b792e3b68982b0c7.json",
+          "evidence/v2_grades/344b2ec2d5501ba158aebf73192dedcf3737834de1a29427fc12a2b99e5d4276.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/cccff65d65afc97d1f82d04f0fd98d0f79f16a3aadfb57916990044824d06310.json",
+          "evidence/v2_grades/d6540e3a6b6537e856e136e1df53e3930d08928bef28d861df621f353334f9dd.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+        "scores": [
+          7,
+          7
+        ],
+        "grades": [
+          "evidence/v2_grades/cccff65d65afc97d1f82d04f0fd98d0f79f16a3aadfb57916990044824d06310.json",
+          "evidence/v2_grades/d6540e3a6b6537e856e136e1df53e3930d08928bef28d861df621f353334f9dd.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/45f327318d71beb62fc22bf5e9deee7bdb6e1d2395db3bf5540b5d17882f79e3.json",
+          "evidence/v2_grades/8f98763ccbcabcbcfab1aca0c0f84390ffb5d716d529ca10c559d6bd1fd637f3.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/45f327318d71beb62fc22bf5e9deee7bdb6e1d2395db3bf5540b5d17882f79e3.json",
+          "evidence/v2_grades/8f98763ccbcabcbcfab1aca0c0f84390ffb5d716d529ca10c559d6bd1fd637f3.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+        "scores": [
+          5,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/ce324b1a8b84607bbcdbe4d3de96730cedfdfba491c41362514b9aca3858e381.json",
+          "evidence/v2_grades/52db7f47952e474c7a66503ce2930bdacf4b3cfa99a606ba79f0640c66c417bf.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+        "scores": [
+          5,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/ce324b1a8b84607bbcdbe4d3de96730cedfdfba491c41362514b9aca3858e381.json",
+          "evidence/v2_grades/52db7f47952e474c7a66503ce2930bdacf4b3cfa99a606ba79f0640c66c417bf.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+        "scores": [
+          5,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/d7740bdfe9e212b4272c8cc18405c08db1b01ed97465dfab9b454961a6dce2ba.json",
+          "evidence/v2_grades/e1b4e0da06041bf3648f879f4b0a24d7d75c6fea417f55dc7ef5011035678374.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+        "scores": [
+          5,
+          5
+        ],
+        "grades": [
+          "evidence/v2_grades/d7740bdfe9e212b4272c8cc18405c08db1b01ed97465dfab9b454961a6dce2ba.json",
+          "evidence/v2_grades/e1b4e0da06041bf3648f879f4b0a24d7d75c6fea417f55dc7ef5011035678374.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/61b27b9a1830b6fbdc334c55963b1c588085d978f465550bcfe2dcabae0cd1d7.json",
+          "evidence/v2_grades/0483113eec364119edf6c55e8980f92210448b62bbde4f716e5c4c5ad1257d57.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+        "scores": [
+          2,
+          2
+        ],
+        "grades": [
+          "evidence/v2_grades/61b27b9a1830b6fbdc334c55963b1c588085d978f465550bcfe2dcabae0cd1d7.json",
+          "evidence/v2_grades/0483113eec364119edf6c55e8980f92210448b62bbde4f716e5c4c5ad1257d57.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/8f1a636c6a9197dcf4a2e76d000c78ce550b6504a80ea8e5f1764d478db4355e.json",
+          "evidence/v2_grades/22895ae73d6f59f2c436af55efedbfe113e2d1abb5bdb2022d30bca507c17188.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/8f1a636c6a9197dcf4a2e76d000c78ce550b6504a80ea8e5f1764d478db4355e.json",
+          "evidence/v2_grades/22895ae73d6f59f2c436af55efedbfe113e2d1abb5bdb2022d30bca507c17188.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r01",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/027603957137a3858388aee5e10bfc61663ed49ad1ebf86c07f41f93a23b142f.json",
+          "evidence/v2_grades/caf6a9ac2c6ec695f5c1f8a166d8b0ad099ae89168895ae52d5e539bd327765e.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/027603957137a3858388aee5e10bfc61663ed49ad1ebf86c07f41f93a23b142f.json",
+          "evidence/v2_grades/caf6a9ac2c6ec695f5c1f8a166d8b0ad099ae89168895ae52d5e539bd327765e.json"
+        ]
+      }
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r02",
+      "benchmark": "IMO 2026",
+      "included": true,
+      "baseline": {
+        "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/30c157ce837c1a8eae6434e8ad4e65446bc2c396110d7958f79441f3230e563a.json",
+          "evidence/v2_grades/88564e68a42c1d391ed67c609ba548cb09dfc1463d82c979ba9901c6ed8f0185.json"
+        ]
+      },
+      "with_tools": {
+        "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+        "scores": [
+          3,
+          3
+        ],
+        "grades": [
+          "evidence/v2_grades/30c157ce837c1a8eae6434e8ad4e65446bc2c396110d7958f79441f3230e563a.json",
+          "evidence/v2_grades/88564e68a42c1d391ed67c609ba548cb09dfc1463d82c979ba9901c6ed8f0185.json"
+        ]
+      }
+    }
+  ],
+  "ablation_records": [
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/906f269a2ac93a1da25ed980db791b9c123fb1087ff396bc1272c46e24b38810.md",
+      "proof_sha256": "906f269a2ac93a1da25ed980db791b9c123fb1087ff396bc1272c46e24b38810",
+      "grades": [
+        "evidence/v2_grades/5158136543857492a7e59afd1e3ea92fc1b8c49db06f3ee2a2d806334428336d.json",
+        "evidence/v2_grades/b542bde8453af449bc1db3f9cbc3a87c06a0729e836aab3045c1bfdad6dc78ab.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/30ab4796df29697b7f6689d3e5e1643b04665e59550ccf0d512880af0e52c264.md",
+      "proof_sha256": "30ab4796df29697b7f6689d3e5e1643b04665e59550ccf0d512880af0e52c264",
+      "grades": [
+        "evidence/v2_grades/e36418ca4de2f7c665b366b636b936ebc01597b34e63b89d48f62115951f92aa.json",
+        "evidence/v2_grades/61e61c3b85c0721b1f8573ee329e7f246a13f0451dd973e5112f8913dc87d12c.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/754157c37cb52ece376091a825b816cdb677ed030bda0593b7103b8fe15e367e.md",
+      "proof_sha256": "754157c37cb52ece376091a825b816cdb677ed030bda0593b7103b8fe15e367e",
+      "grades": [
+        "evidence/v2_grades/bc2d3b7faacf2c1cdc05fc4d64a136a4dba159c944ab8a0d54f832f0c3bd4408.json",
+        "evidence/v2_grades/13fc59a88f4eefa74a56df834831e9494d1f4d7f21c43269c985fbf0c32be50a.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/d8f6947165b9102900a330538bbe23b3d7ffd95b875ed2cce9519b42bd72f0f6.md",
+      "proof_sha256": "d8f6947165b9102900a330538bbe23b3d7ffd95b875ed2cce9519b42bd72f0f6",
+      "grades": [
+        "evidence/v2_grades/b65e87632336330aeda73cd209606abe4b8240083816147793445f12210bfcce.json",
+        "evidence/v2_grades/ae164df6b3bacc624e6c2679bbaed632138545878f05fe8b0dc231a40167856e.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/d4f19fd6c5d49850b563a27e989db14cff8aa9ab7e3418a50bcd981b3b8449e0.md",
+      "proof_sha256": "d4f19fd6c5d49850b563a27e989db14cff8aa9ab7e3418a50bcd981b3b8449e0",
+      "grades": [
+        "evidence/v2_grades/9ae8e9a7f6141024a54fa7e5c89573286706426343493ef8df063f03cb8ed0d4.json",
+        "evidence/v2_grades/b291ec1a59aedc16eedd7fc9fcdd07a8738dc5a1e88940c8409ffdc7ed06d634.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/7d4558813343fe229d1faf6d9827e79e3f934c9b95f2bbcda86e88855fb4ba76.md",
+      "proof_sha256": "7d4558813343fe229d1faf6d9827e79e3f934c9b95f2bbcda86e88855fb4ba76",
+      "grades": [
+        "evidence/v2_grades/eb6e5780724056914e8c234071bd445aef2b59de43da19b7c972c618f829ee8c.json",
+        "evidence/v2_grades/7784d5075bacc2603b5c551d4077ed0208ad70ef4d4411c13e7e2c93f3c844d6.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/f3567217ca52c699d974c907941c9a4aef837428faefedfde37480834598daa8.md",
+      "proof_sha256": "f3567217ca52c699d974c907941c9a4aef837428faefedfde37480834598daa8",
+      "grades": [
+        "evidence/v2_grades/722aaa37ab6807462e49f0c625983bac14e619e2c6eb818c1255360c4b1ff310.json",
+        "evidence/v2_grades/6c6243e44e0dee7cfdb43b125bf1636b5223281cfeab1af6cc268967d45f4c30.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/42c6330c45178bbebdc3e3d482709786d6c2abc19f9a3f92a9a85d46cdda59d1.md",
+      "proof_sha256": "42c6330c45178bbebdc3e3d482709786d6c2abc19f9a3f92a9a85d46cdda59d1",
+      "grades": [
+        "evidence/v2_grades/42b23b5e0ca44b98c918e1e50df8bde4b6e1179ded612180a6006cec13fb8e08.json",
+        "evidence/v2_grades/8fccdfa7f4fca69da887b33be602c1bd180bced8d49e752c723b0564eeb17fc4.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/b38bce7da28b2772d24ef7ca9f4855e46a269d026227024ea4ef87f097c211bb.md",
+      "proof_sha256": "b38bce7da28b2772d24ef7ca9f4855e46a269d026227024ea4ef87f097c211bb",
+      "grades": [
+        "evidence/v2_grades/228d10e2f31554e4b163f706b62489c598cde6b7482386b907719029a70fcb6b.json",
+        "evidence/v2_grades/a37a20a65f47ce49636a767610ba09ba6bc4657b5873287ead76da5bf42f7885.json"
+      ],
+      "scores": [
+        1,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/36bdce13e8d12075f779f78da71579b0a2aebb363ca29dc20e9beb0e50614928.md",
+      "proof_sha256": "36bdce13e8d12075f779f78da71579b0a2aebb363ca29dc20e9beb0e50614928",
+      "grades": [
+        "evidence/v2_grades/7183cdb877bbbb7d97e4d985bbd1f0ba836a0485ab36a5bae1dd16163de16b2d.json",
+        "evidence/v2_grades/fa30d35aa115a73c23ab672edb6be24a4be628ad4760ee6613db9c97a562cf16.json"
+      ],
+      "scores": [
+        1,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/cb0bc33565ceb09748c9fa762175337080d71a8ecd59c9e22e905f7ce856702a.md",
+      "proof_sha256": "cb0bc33565ceb09748c9fa762175337080d71a8ecd59c9e22e905f7ce856702a",
+      "grades": [
+        "evidence/v2_grades/152524bb558c0c278a7fce70ee2f339d43043a99a145466631e83aeed57b1b07.json",
+        "evidence/v2_grades/4705cd5bc30f0a7b824f47a2b39d706e34a98adfa9edc978236b5bbb2fc9137a.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/061506057281fc787325a8728ef4dd9c7a57bc9e90f65bbafffa9f7cb8119089.md",
+      "proof_sha256": "061506057281fc787325a8728ef4dd9c7a57bc9e90f65bbafffa9f7cb8119089",
+      "grades": [
+        "evidence/v2_grades/b475a3ee46d7ebc6962c82353ebaf2e0bc9d2089076ee51c560b6d434e2cdd3f.json",
+        "evidence/v2_grades/b228b78744d9a7e8b1e426a7a7750abc558fea3f03b4ee5f04e40c637aa8c31c.json"
+      ],
+      "scores": [
+        1,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/3f358f000885bb454a785727289dba5ed26432910273326bf68ff8e32b2cab70.md",
+      "proof_sha256": "3f358f000885bb454a785727289dba5ed26432910273326bf68ff8e32b2cab70",
+      "grades": [
+        "evidence/v2_grades/4a2ba3c13f15013fef4a3bfc267611e4b23a12146d2340970b98d533582099ea.json",
+        "evidence/v2_grades/945413d8450c79b0a4383bdc3639786188a8c194eaeea20689c2b8905099038e.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/37d06d955b705fa899705a95dbe900d1d9509560f7d043e418a5b56c89d4b6a4.md",
+      "proof_sha256": "37d06d955b705fa899705a95dbe900d1d9509560f7d043e418a5b56c89d4b6a4",
+      "grades": [
+        "evidence/v2_grades/b472506fa0d003fbe92543de8790a8638fb84eaa11fc3ef52989c9882634252d.json",
+        "evidence/v2_grades/b23adb37c9236f0bdb96c841318c964d7500a54e418201c105c82cc9e1d496b8.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/1b57fde04cebe0a4366ef51db02031168ea75aa6cadf0c2c2352a26da0502276.md",
+      "proof_sha256": "1b57fde04cebe0a4366ef51db02031168ea75aa6cadf0c2c2352a26da0502276",
+      "grades": [
+        "evidence/v2_grades/c2ee33c833d45b0fdcb3e6836a5c08a89cce85a94c3f9cb557545d96f00e56fa.json",
+        "evidence/v2_grades/9909b18d5b63c64b2a46e88348dfdc74ac4767bfa0f520d0aba55bc1e782bc96.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/e9740227ab1e50a32f6ff8daaae8b3b47c9a3cdf5fb9079c5c9511d8474a7e2d.md",
+      "proof_sha256": "e9740227ab1e50a32f6ff8daaae8b3b47c9a3cdf5fb9079c5c9511d8474a7e2d",
+      "grades": [
+        "evidence/v2_grades/c110cece7572a36a1b9105f3725c7fb4cdd1b001038d0640046f51dc0f472263.json",
+        "evidence/v2_grades/4212f310352258c6e13702893030f5bba1406965c666ec0e24a745984642b9f3.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/b37c9bb4336f2a1e36dcf006dc6d6538206bddc28e60fb38d71040cb9f2bfe39.md",
+      "proof_sha256": "b37c9bb4336f2a1e36dcf006dc6d6538206bddc28e60fb38d71040cb9f2bfe39",
+      "grades": [
+        "evidence/v2_grades/8e7cff90f6612977b2d18f9699a2bdf2f9da1d9bd531806573e8178bc768e719.json",
+        "evidence/v2_grades/36c3413acaac74b2c3ffce0e7513a4c6352dace5481db53990f520d55e162119.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/7ee7c7ac8983476f6bec570d618c8a7d7539fed2b971a31e9805c489842442e2.md",
+      "proof_sha256": "7ee7c7ac8983476f6bec570d618c8a7d7539fed2b971a31e9805c489842442e2",
+      "grades": [
+        "evidence/v2_grades/067ae2709e197c88ea5acbb7ef5b3c046ac6f595d7aad8e897112c2f294df9f6.json",
+        "evidence/v2_grades/5685d68b5f8a7a51f34a8ec6d903c9ff4b8a3f140c2300bb45cbd5eadfebd55a.json"
+      ],
+      "scores": [
+        3,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/9a4f3813773eaec0c78466299d489750f38f9287fd727df5fa1723a1c0541b39.md",
+      "proof_sha256": "9a4f3813773eaec0c78466299d489750f38f9287fd727df5fa1723a1c0541b39",
+      "grades": [
+        "evidence/v2_grades/c4216b1e2b3838aea9629698f3cbab636cad5b6093486eefe5a471c35835c722.json",
+        "evidence/v2_grades/22ecec07a58216e4026b03cd03aa942e546b69be4dd4857d46c2670df26690db.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/704773a8961bc737764c7e9232cd875fb20afb2ed0d7f1ce3905ec523f6b38cb.md",
+      "proof_sha256": "704773a8961bc737764c7e9232cd875fb20afb2ed0d7f1ce3905ec523f6b38cb",
+      "grades": [
+        "evidence/v2_grades/7cb5962eb070d7a9d1b9af551755b1acaf4e11a84ed0419070365c024cf27c74.json",
+        "evidence/v2_grades/7598012217c85d08cf2750a98e3186929f208d4978418e73efa39c5cbf1eb7b7.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/8456b19dccfc32261c663b0f9ec660aa04acedc6693ba4ee6a9d0d6ced38c6ee.md",
+      "proof_sha256": "8456b19dccfc32261c663b0f9ec660aa04acedc6693ba4ee6a9d0d6ced38c6ee",
+      "grades": [
+        "evidence/v2_grades/5d62cb1565295fa10245baf4c87e8e6837ee68603d3f01e68a6bd16e6b0031bc.json",
+        "evidence/v2_grades/695ea01d1d2f6d44769ad61ad847e7510691e4f38ba9a5f00c5dabb7927bcf49.json"
+      ],
+      "scores": [
+        2,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/e590f80df04677f188e5302520ea93b9d88505142c7542b442cd21cf0f8495bf.md",
+      "proof_sha256": "e590f80df04677f188e5302520ea93b9d88505142c7542b442cd21cf0f8495bf",
+      "grades": [
+        "evidence/v2_grades/a32727bb3b00d91a761fa441c50ee6682ab58829eb2607c038319c82f00014d1.json",
+        "evidence/v2_grades/b05b49726f870291921e2de6868b1bfdd1e053b0b08807571fbb1400dd8437a0.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r01",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/7fb90983e6f37afa4170f83eb77140844b1127de7371ff87c8ff01b4af7087f8.md",
+      "proof_sha256": "7fb90983e6f37afa4170f83eb77140844b1127de7371ff87c8ff01b4af7087f8",
+      "grades": [
+        "evidence/v2_grades/50af94aa0e98a00e5f6f0f019d2f918e14973ae1a8424768012a60845bb2d9f4.json",
+        "evidence/v2_grades/9f773836af862f92e0cec95798380f9812e21f796383e75e136f5f5aa40cbb86.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r02",
+      "cohort": "raw_no_bf",
+      "proof": "evidence/proofs/907667221e9e989932b615b07878dd12ca0cafec9ce6fa9b6045816fcb939b29.md",
+      "proof_sha256": "907667221e9e989932b615b07878dd12ca0cafec9ce6fa9b6045816fcb939b29",
+      "grades": [
+        "evidence/v2_grades/80d8e632dd2d016d371e7a3506bfdbb4cd0635d7746aba7e76419932cb2c384d.json",
+        "evidence/v2_grades/928624e5435d8af2bad9ac68c60a2caf91bcaa02006b723c8ba0c5b1f339846f.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b.md",
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "grades": [
+        "evidence/v2_grades/7a96f77fe95583c33b09af7a460790f21cd9bf78d16fe07016e64e0c929d1dca.json",
+        "evidence/v2_grades/cd8de13efcfcc3bd048fd0cdb66a2d20ed40c25ba43143a850c5eb3519b1bb4c.json"
+      ],
+      "scores": [
+        7,
+        5
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/940cfe58a4c7c31fd8e541a7171f4e69b0184eb15c4d9efbe434fdaf6fa0bd99.md",
+      "proof_sha256": "940cfe58a4c7c31fd8e541a7171f4e69b0184eb15c4d9efbe434fdaf6fa0bd99",
+      "grades": [
+        "evidence/v2_grades/c9034337a03589b6a50e40d79988eb07c29d63229575fd740ced2efbbe186367.json",
+        "evidence/v2_grades/d6a5fdf2d10d1d8919a6af5a3691daadc6e34c5fdfd4fa80c8749cb7b062bc7f.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/c77e021f57816493b2a9ab774f4e62f4d2f5ca2911c67269349861d2b1e19961.md",
+      "proof_sha256": "c77e021f57816493b2a9ab774f4e62f4d2f5ca2911c67269349861d2b1e19961",
+      "grades": [
+        "evidence/v2_grades/6f7c071bf0a7c5fbd852fbe785bf052eae38a377c7823b50973bb4962c3c60e2.json",
+        "evidence/v2_grades/c53d61c0594c44ef8d104b38bffc30ad4d625e0996fe67627a8c14e1737aef0c.json"
+      ],
+      "scores": [
+        5,
+        5
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99.md",
+      "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+      "grades": [
+        "evidence/v2_grades/ab88b655eb7a25d5abc8d1a6563c70df034997d66f6f21d86ce573544c265f85.json",
+        "evidence/v2_grades/5d0c31d678b36bbab4e13b5a71aa20fb562797f4448f94eeca75f676fc561db8.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/861c18188a5be788a212b15d5f2804d56484645d9f354a3107f48c712dad40de.md",
+      "proof_sha256": "861c18188a5be788a212b15d5f2804d56484645d9f354a3107f48c712dad40de",
+      "grades": [
+        "evidence/v2_grades/0e614f7fe01b73e827b073fb853f99a7d65bf0f5ece52ee4de43a6c6bfbde817.json",
+        "evidence/v2_grades/cd9555a25d3a3a333c320e65a2cb59fc74627afd9525dd44db1098c1a80bfb15.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/965698c4bfbb433ccd300f49085dca6652c25d3dbcb32fb48ed9d3b75442e308.md",
+      "proof_sha256": "965698c4bfbb433ccd300f49085dca6652c25d3dbcb32fb48ed9d3b75442e308",
+      "grades": [
+        "evidence/v2_grades/77688774c7845b759ce37b81aa9e8201c12227fa2a8855b3be9b789813321c98.json",
+        "evidence/v2_grades/da6ac8e44d97ce571c57c9f23cc4590099c7827a9d2e17e6d771a45f67bd976c.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/0e7f4196735f830837491f90fa5ffd94446536da64532ca4afb6c56db10632be.md",
+      "proof_sha256": "0e7f4196735f830837491f90fa5ffd94446536da64532ca4afb6c56db10632be",
+      "grades": [
+        "evidence/v2_grades/23f5e0167f0bb9e9c6da4bd4cfdaae7ea6389ea1016fa7a80b4ec77df37aa1da.json",
+        "evidence/v2_grades/21cd083eb09fddbe03e77287dff72e20dd965d8a6b3a70148fe178a242659cb0.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/088d3afcd2b32f63d1fcf86d1e3a11acc90fec041153495bbeda7614299588e1.md",
+      "proof_sha256": "088d3afcd2b32f63d1fcf86d1e3a11acc90fec041153495bbeda7614299588e1",
+      "grades": [
+        "evidence/v2_grades/d780c6a72cf4b80a7c6598e4401463aea26e397eb111ada69e1f656f7122d87d.json",
+        "evidence/v2_grades/d02bb941300401244ae4d8697f88286b8e8f54fb31b0bffeaccc28233026fed2.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/a159eae45bb4e5ff2344818a62a05067f482c9a3bd27dd9d076748c91ac7a10e.md",
+      "proof_sha256": "a159eae45bb4e5ff2344818a62a05067f482c9a3bd27dd9d076748c91ac7a10e",
+      "grades": [
+        "evidence/v2_grades/d1ca02772a320a470f0567d691c5207ef18584839e0acb8358a73cc1fb1bf278.json",
+        "evidence/v2_grades/da683e36bb303a6f479bc34ec5991bdb0d5e1285b16d150d43eca553e4c36bf0.json"
+      ],
+      "scores": [
+        2,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/094ea4343b0b815e54c3fb6804a5bda883e9145ece62b3cea10db4f15d50339d.md",
+      "proof_sha256": "094ea4343b0b815e54c3fb6804a5bda883e9145ece62b3cea10db4f15d50339d",
+      "grades": [
+        "evidence/v2_grades/326c7964bb14efdb489c49d7e8b7f4ce588cc899f5e844b386029a5b4f5bbc8a.json",
+        "evidence/v2_grades/4b90e524b8320de32d3f7f8132d3f06a8543d46bddcf3ba9e04a9e0d39730bcc.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/14f823ce106869e0be4376d2cceee5e2cdd697547d90205f8ede37ec9be5ebb2.md",
+      "proof_sha256": "14f823ce106869e0be4376d2cceee5e2cdd697547d90205f8ede37ec9be5ebb2",
+      "grades": [
+        "evidence/v2_grades/58efa90b4a75422087190ce6048fca463f2fc7775de2298d43338e62eec9e48b.json",
+        "evidence/v2_grades/954f10b76206e70187d9c9084d357247faf60f2365fe3a356ff58ae64eca6ba0.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/bf9a9d7e57b1b7f0a72748154f3e1674a079615d37cfd875a486685eda724be6.md",
+      "proof_sha256": "bf9a9d7e57b1b7f0a72748154f3e1674a079615d37cfd875a486685eda724be6",
+      "grades": [
+        "evidence/v2_grades/0d7fcaa9e5d29f2c49229d21e8d42c97acf551492cf32d69adcb18011c89efa6.json",
+        "evidence/v2_grades/68305c15724ec97e8531c84b54142d0dd8f9486f61e3926fbc6436771880c5b6.json"
+      ],
+      "scores": [
+        1,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/7b0cacfeef75a47038361b368dde5553c57a31958746e1088eeca14e73453ecb.md",
+      "proof_sha256": "7b0cacfeef75a47038361b368dde5553c57a31958746e1088eeca14e73453ecb",
+      "grades": [
+        "evidence/v2_grades/d76bbed51b1a31f203ed3e4cd80fe22e356e6a549160ce8789b85f2b3359a30c.json",
+        "evidence/v2_grades/009acd6debf8f2c57c9575b1baec937d6628eb99d535f5f59a175d4cb22ca5d7.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/6208a397d16ce6c483f674f233bd0b17008b2728b6a90dac2d7ba3e40352be39.md",
+      "proof_sha256": "6208a397d16ce6c483f674f233bd0b17008b2728b6a90dac2d7ba3e40352be39",
+      "grades": [
+        "evidence/v2_grades/2c5e4240afa98f94f02b5f4daf63370c4d1bea412a62e4b03c6336ca06e7f799.json",
+        "evidence/v2_grades/c646d326fb3624b3a9ce1e641b9a8005f96430e51b433b62fee3bf3a46c082ce.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/ff8b82a5cde2aaca8b9c698ea041bdeb19deefb6bda7c9533d427cd40e53da98.md",
+      "proof_sha256": "ff8b82a5cde2aaca8b9c698ea041bdeb19deefb6bda7c9533d427cd40e53da98",
+      "grades": [
+        "evidence/v2_grades/55924a724cf7ac41d83a46da0bec939088d2ae2cf1463ccb9a6f68da269164ee.json",
+        "evidence/v2_grades/e84fb3b1d950c5dca9b405406ca697d7faf130c8be50c6136d48d928a3d29016.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/12152d0644ce953d4a7cce57dca6969d3946763ef8b35ce44832fa76714d6e96.md",
+      "proof_sha256": "12152d0644ce953d4a7cce57dca6969d3946763ef8b35ce44832fa76714d6e96",
+      "grades": [
+        "evidence/v2_grades/c4c6cf58810dad2916a1e13e5de01b374c585c8a6e5b200d0622ea1ebd7d3eba.json",
+        "evidence/v2_grades/b9a20caa7e12922d7c17d7855ca3f9b8733b2d22f7bb7235451641ef8a55eda4.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/b860c4dd940ecb8d7e83d76b4e35f3c26ff062b1be56911cacf6dd6971c3ce48.md",
+      "proof_sha256": "b860c4dd940ecb8d7e83d76b4e35f3c26ff062b1be56911cacf6dd6971c3ce48",
+      "grades": [
+        "evidence/v2_grades/c90f011b15b40eabf4e7e91a76943498a5c2c9e42c1072adbc3f914fcdc03ecf.json",
+        "evidence/v2_grades/3f2ae36c9ea13259b345b9db0d2339b4c861936fdbe85aa0a731a40b3f6be171.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/2c9985e5912fe1fa1f77d7a75ee4f46a82fe532747c30ac898edc683fe394e55.md",
+      "proof_sha256": "2c9985e5912fe1fa1f77d7a75ee4f46a82fe532747c30ac898edc683fe394e55",
+      "grades": [
+        "evidence/v2_grades/4e774bda6f35697d91a3411653a500d7f6f98f2ea3eb638e3d42b1d33eb04d46.json",
+        "evidence/v2_grades/56401ff5f7b09f86d3e9aa62a00cd2c04c049d91ffd3e312de1492140f157035.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/878a8bc2cf623bd742c9760efacfefd5ac05488192cb5debbeab1f4530d528d2.md",
+      "proof_sha256": "878a8bc2cf623bd742c9760efacfefd5ac05488192cb5debbeab1f4530d528d2",
+      "grades": [
+        "evidence/v2_grades/e0158543dd22fd35796bddf730fb8fae53c86e6c0a14675d9a2b3a4ac91f57c8.json",
+        "evidence/v2_grades/26799c1c06e3abdaaeb59081316145674b97e01ffa16aa480ebe478cc239760c.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/91a304398793e44986c2098228b3ede5e0d2ad5bef48a3acb9e14d8ae115d4cf.md",
+      "proof_sha256": "91a304398793e44986c2098228b3ede5e0d2ad5bef48a3acb9e14d8ae115d4cf",
+      "grades": [
+        "evidence/v2_grades/982ef098f0b8db31161e4cd0def3785edb44e6720c23f2ab496675e2788fff42.json",
+        "evidence/v2_grades/44a8af47ec3720f268f96b3539e3d4ee71db9f76711af1fefe37a4625bfb645b.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/e16a1ac07a1aedacd6833f80a34a479575eead369786d3e2a4724835d40b6056.md",
+      "proof_sha256": "e16a1ac07a1aedacd6833f80a34a479575eead369786d3e2a4724835d40b6056",
+      "grades": [
+        "evidence/v2_grades/72998d152a9589a44a06aed359388a00785deb2c2076187a27392ce620c2a7d4.json",
+        "evidence/v2_grades/3aff447343a0e5edd37ae799531543c404d495ea7736962f6f4e890f294f016a.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/a7f83077237464afc10cc84f3e9512329650bebb922ccbe59eca3e64be1fe9dc.md",
+      "proof_sha256": "a7f83077237464afc10cc84f3e9512329650bebb922ccbe59eca3e64be1fe9dc",
+      "grades": [
+        "evidence/v2_grades/6dbdc30b19355fa966b65458866736e4a4c8d3df14190399bdba46563d98f12f.json",
+        "evidence/v2_grades/781ae002c98353c74eef968b28823778e4485ebd18a24d18bc2e915013cbfa1e.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r01",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/9b68a094f3cd4d03116d61e98b12ae73b7c8708dfde7edee0a43fae16308c176.md",
+      "proof_sha256": "9b68a094f3cd4d03116d61e98b12ae73b7c8708dfde7edee0a43fae16308c176",
+      "grades": [
+        "evidence/v2_grades/5beb04e935aa2735473ba32211f8a8e98627170265fadd988622272045f92b8f.json",
+        "evidence/v2_grades/aa71b9dfc34e05fd71b485807110d6d1eb6a051eac9a7a67b0dc6f8ee630ef7e.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r02",
+      "cohort": "raw_bf",
+      "proof": "evidence/proofs/2a5f9d2ad47fccdd0a1d45889d705657d9453c0fe3f3f01b063245bf23ae2815.md",
+      "proof_sha256": "2a5f9d2ad47fccdd0a1d45889d705657d9453c0fe3f3f01b063245bf23ae2815",
+      "grades": [
+        "evidence/v2_grades/8b2387229fdace8bca42906d98b8226b37559d7823343d68bdadf1f4c062d9bc.json",
+        "evidence/v2_grades/26a600d045d4936a93457210f615856afb91700e15b83c791bdafc9fd2029e16.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77.md",
+      "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+      "grades": [
+        "evidence/v2_grades/ddae068f9b84e34895fdecad09f3d1d8594ae272b5fca6811083bb694fb95820.json",
+        "evidence/v2_grades/689216f2da7c23ccf0a0fb35073d38019389fa621e2eb20c11572c789f0d9cd9.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b.md",
+      "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+      "grades": [
+        "evidence/v2_grades/58a996651b47307b680ddb83d0c0d33fddc25951fa5d4f757dd196c9b2926421.json",
+        "evidence/v2_grades/d0409c43bf3fbfa9f90bbd120839b436161d2e9cdb1ab83ba2f2263cacb5e4c7.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c.md",
+      "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+      "grades": [
+        "evidence/v2_grades/65672ddd758c558895c5aae1753f62fd6618200d77cd4c574bb5c49f8894daf5.json",
+        "evidence/v2_grades/5915e72c3395163d9680f33eee46199033e31019fb799a8ed5cf6b0dc74e2ca0.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed.md",
+      "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+      "grades": [
+        "evidence/v2_grades/d6dda1546c6b04151b09bf9db04bfc1a25b3f45d9f044e6eda1095332929646e.json",
+        "evidence/v2_grades/6e646746b6b0b0d1326f0ffeb5bbeed6ffcc89aff7b9f966877752a41a5d2bf6.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe.md",
+      "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+      "grades": [
+        "evidence/v2_grades/f9fabf2a3d7caa3852001c5595ac09b787826e7f69f387163462d9d828163db0.json",
+        "evidence/v2_grades/50ef1940cf73349853792a273ed7918b4db4d641493ebc99a37dab744e8d20f1.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7.md",
+      "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+      "grades": [
+        "evidence/v2_grades/be2b616ef11f3f49ae0f85ecda0ff58278f010c246c622271431f43aefba3606.json",
+        "evidence/v2_grades/2920a038c20877b4a71ba6a02609453c2cbeb62b1e5e6d0cf0e6d60c2619b363.json"
+      ],
+      "scores": [
+        3,
+        4
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2.md",
+      "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+      "grades": [
+        "evidence/v2_grades/9623345cad4dfce5e8acdbdac7cfcb5b2d6b46c7e27ee70cd3067e7f9f246120.json",
+        "evidence/v2_grades/43d17aa01f694c9ae406ed693917ae8fa01ea941e93cc67e73a098e7c11e1098.json"
+      ],
+      "scores": [
+        4,
+        4
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50.md",
+      "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+      "grades": [
+        "evidence/v2_grades/32dd528bed36565030af5e8ab6eddd7098428577f2d81503132c56873ababdc0.json",
+        "evidence/v2_grades/e0e04436f35ec6a4c4dfbbedca420f56852e482e8bd057df8e942f0ee84a6253.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd.md",
+      "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+      "grades": [
+        "evidence/v2_grades/10eb5da34c76ae3e1460d0eb82b548a89dace585c41f79338b437258675939c7.json",
+        "evidence/v2_grades/bfed0d17b90172ca44c2d5248ca462e3ba959b4f7ec4e97dec2a3bdb5eeac676.json"
+      ],
+      "scores": [
+        2,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8.md",
+      "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8",
+      "grades": [
+        "evidence/v2_grades/070b722b07f61755585c854704d24231ed7deced00d6c7702a9ce1a0a2142827.json",
+        "evidence/v2_grades/855989b7d478aeaa00e158c3faa88e897ed18aff10f5ba9cca24b45b921d7881.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015.md",
+      "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+      "grades": [
+        "evidence/v2_grades/49a57d20c919437a1072936fd873c412650fe34b8ecff75d90e4b003960338d8.json",
+        "evidence/v2_grades/b1dec497b0163fb2f2a205ba2e31e078eed80f669c8e3c379a42ef49ff97fec3.json"
+      ],
+      "scores": [
+        1,
+        1
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc.md",
+      "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+      "grades": [
+        "evidence/v2_grades/ce211beea74600646a7c016495fe3b891d6f560543522674845d7466a4c66234.json",
+        "evidence/v2_grades/1a79f83ca562e7d702e6a1f2bf11db2a08f6754a2a4783dad900123eb5cd3366.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2.md",
+      "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+      "grades": [
+        "evidence/v2_grades/277a5fe5a7cef816fd5df6ea4fd0ac71255be877d032882e1f370e3ab94e1ae9.json",
+        "evidence/v2_grades/50761319a2111b5768a436cc706e5faf803ca0081e760ce5b24ef119e948d9ad.json"
+      ],
+      "scores": [
+        6,
+        6
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278.md",
+      "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+      "grades": [
+        "evidence/v2_grades/413ed7d2d0fa45115d40f4ab47503c19cfba6ed241727b5434417640a7626b6e.json",
+        "evidence/v2_grades/7beb520dc2c0a8b54d4d3ecd9a486c07362f98375ff8db1928ab78432cb37193.json"
+      ],
+      "scores": [
+        6,
+        5
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e.md",
+      "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+      "grades": [
+        "evidence/v2_grades/27c3ef89b25cc553b8d42c1125e75e6af866d4387657dc84ad67ffad1dfa5a61.json",
+        "evidence/v2_grades/34124cf16721e165570af2d6d3a47c67fb1347aa3ba5bbb31eaf5bc0950595c9.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c.md",
+      "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+      "grades": [
+        "evidence/v2_grades/3b1d0479bfa5f4bb69fb55233f5a69e69aaafde14326cf27b792e3b68982b0c7.json",
+        "evidence/v2_grades/344b2ec2d5501ba158aebf73192dedcf3737834de1a29427fc12a2b99e5d4276.json"
+      ],
+      "scores": [
+        3,
+        6
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20.md",
+      "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+      "grades": [
+        "evidence/v2_grades/cccff65d65afc97d1f82d04f0fd98d0f79f16a3aadfb57916990044824d06310.json",
+        "evidence/v2_grades/d6540e3a6b6537e856e136e1df53e3930d08928bef28d861df621f353334f9dd.json"
+      ],
+      "scores": [
+        7,
+        7
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4.md",
+      "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+      "grades": [
+        "evidence/v2_grades/45f327318d71beb62fc22bf5e9deee7bdb6e1d2395db3bf5540b5d17882f79e3.json",
+        "evidence/v2_grades/8f98763ccbcabcbcfab1aca0c0f84390ffb5d716d529ca10c559d6bd1fd637f3.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed.md",
+      "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+      "grades": [
+        "evidence/v2_grades/ce324b1a8b84607bbcdbe4d3de96730cedfdfba491c41362514b9aca3858e381.json",
+        "evidence/v2_grades/52db7f47952e474c7a66503ce2930bdacf4b3cfa99a606ba79f0640c66c417bf.json"
+      ],
+      "scores": [
+        5,
+        5
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3.md",
+      "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+      "grades": [
+        "evidence/v2_grades/d7740bdfe9e212b4272c8cc18405c08db1b01ed97465dfab9b454961a6dce2ba.json",
+        "evidence/v2_grades/e1b4e0da06041bf3648f879f4b0a24d7d75c6fea417f55dc7ef5011035678374.json"
+      ],
+      "scores": [
+        5,
+        5
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf.md",
+      "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+      "grades": [
+        "evidence/v2_grades/61b27b9a1830b6fbdc334c55963b1c588085d978f465550bcfe2dcabae0cd1d7.json",
+        "evidence/v2_grades/0483113eec364119edf6c55e8980f92210448b62bbde4f716e5c4c5ad1257d57.json"
+      ],
+      "scores": [
+        2,
+        2
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9.md",
+      "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+      "grades": [
+        "evidence/v2_grades/8f1a636c6a9197dcf4a2e76d000c78ce550b6504a80ea8e5f1764d478db4355e.json",
+        "evidence/v2_grades/22895ae73d6f59f2c436af55efedbfe113e2d1abb5bdb2022d30bca507c17188.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r01",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260.md",
+      "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+      "grades": [
+        "evidence/v2_grades/027603957137a3858388aee5e10bfc61663ed49ad1ebf86c07f41f93a23b142f.json",
+        "evidence/v2_grades/caf6a9ac2c6ec695f5c1f8a166d8b0ad099ae89168895ae52d5e539bd327765e.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r02",
+      "cohort": "full_harness",
+      "proof": "evidence/proofs/f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1.md",
+      "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+      "grades": [
+        "evidence/v2_grades/30c157ce837c1a8eae6434e8ad4e65446bc2c396110d7958f79441f3230e563a.json",
+        "evidence/v2_grades/88564e68a42c1d391ed67c609ba548cb09dfc1463d82c979ba9901c6ed8f0185.json"
+      ],
+      "scores": [
+        3,
+        3
+      ]
+    }
+  ],
+  "core_pass_selection": {
+    "rule": "lower_total_average",
+    "tie_break": "first_pass",
+    "selected_repeat": 1,
+    "pass_totals": [
+      {
+        "repeat": 1,
+        "average_points": 24.0,
+        "oracle_at_4_points": 29,
+        "maximum_points": 42
+      },
+      {
+        "repeat": 2,
+        "average_points": 24.5,
+        "oracle_at_4_points": 29,
+        "maximum_points": 42
+      }
+    ]
+  },
+  "ablation_pass_selections": {
+    "raw_no_bf": {
+      "rule": "fixed_pass",
+      "selected_repeat": 1,
+      "pass_totals": [
+        {
+          "repeat": 1,
+          "average_points": 18.75,
+          "oracle_at_4_points": 21,
+          "maximum_points": 42
+        },
+        {
+          "repeat": 2,
+          "average_points": 18.75,
+          "oracle_at_4_points": 21,
+          "maximum_points": 42
+        }
+      ]
+    },
+    "raw_bf": {
+      "rule": "fixed_pass",
+      "selected_repeat": 1,
+      "pass_totals": [
+        {
+          "repeat": 1,
+          "average_points": 19.0,
+          "oracle_at_4_points": 21,
+          "maximum_points": 42
+        },
+        {
+          "repeat": 2,
+          "average_points": 18.25,
+          "oracle_at_4_points": 21,
+          "maximum_points": 42
+        }
+      ]
+    },
+    "full_harness": {
+      "rule": "fixed_pass",
+      "selected_repeat": 1,
+      "pass_totals": [
+        {
+          "repeat": 1,
+          "average_points": 24.0,
+          "oracle_at_4_points": 29,
+          "maximum_points": 42
+        },
+        {
+          "repeat": 2,
+          "average_points": 24.5,
+          "oracle_at_4_points": 29,
+          "maximum_points": 42
+        }
+      ]
+    }
+  }
+}

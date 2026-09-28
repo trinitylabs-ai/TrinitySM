@@ -1,0 +1,120 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Given a triangle $XYZ$ with circumcenter $O$, the incircle of triangle
+ $XYZ$ has center $I$. Let $M,N$ on the sides $XY,XZ$
+ respectively such that $YM=ZN=YZ$. If $\gamma$ is the angle created
+ by two lines $MN,OI$, what is $\frac{\gamma}{2}$ in terms of degree?
+
+**GROUND-TRUTH SOLUTION**
+
+Let the incircle of $XYZ$ meet the sides of $XYZ$ at points $D,E,F$. Let $G$ be the centroid of triangle $DEF$, it is well-known that
+ $I,G,O$ are collinear. Let $r$ be the inradius and $\vec{v}$ be
+ the unit vector perpendicular to $MN$ pointing outward, we have $YZ\vec{ID}+ZN\vec{IE}+YM\vec{IF}+rMN\vec{v}=\vec{0}$.
+ Since $YZ=YM=ZN=a$, we have $YZ\vec{ID}+ZN\vec{IE}+YM\vec{IF}+rMN\vec{v}=\vec{0}$
+ is equivalent to $3a\vec{IG}=-rMN\vec{v}$, which implies that $IG$
+ is parallel with $\vec{v}$. Since $\vec{v}$ is perpendicular to
+ $MN$, this implies that $MN$ is perpendicular to $IG$. Combining
+ this with the fact that $I,G,O$ is collinear, we have $\gamma=90^{\circ}$,
+ which means that $\frac{\gamma}{2}=45^{\circ}$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Considered the point $G$, the centroid of the triangle formed by the points of tangency of the incircle and the sides of $XYZ$, and explained that $I,G,O$ is collinear.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To find the angle $\gamma$ between the lines $MN$ and $OI$, we can use a coordinate-based approach or a vector-based approach. Let the vertices of the triangle be $X, Y, Z$ and the side lengths opposite to them be $x, y, z$ respectively. According to the problem, $M$ is on $XY$ and $N$ is on $XZ$ such that $YM = ZN = YZ = x$.
+
+Let the vertices be $X, Y, Z$. The distance $YZ = x$. Since $M$ is on $XY$ and $YM = x$, the distance $XM = z - x$. Similarly, since $N$ is on $XZ$ and $ZN = x$, the distance $XN = y - x$.
+
+We test this with a specific triangle to see if the angle $\gamma$ is constant. Consider a right triangle $XYZ$ with sides $x = 3, y = 4, z = 5$, where the right angle is at $Z$.
+Let $Z = (0,0)$, $X = (4,0)$, and $Y = (0,3)$.
+The side lengths are $YZ = 3$ (opposite $X$), $XZ = 4$ (opposite $Y$), and $XY = 5$ (opposite $Z$).
+The circumcenter $O$ of a right triangle is the midpoint of the hypotenuse $XY$:
+$O = \frac{X+Y}{2} = \left(\frac{4+0}{2}, \frac{0+3}{2}\right) = (2, 1.5)$.
+The incenter $I$ is given by $I = \frac{x X + y Y + z Z}{x+y+z} = \frac{3(4,0) + 4(0,3) + 5(0,0)}{3+4+5} = \frac{(12, 12)}{12} = (1, 1)$.
+The vector $\vec{OI} = I - O = (1-2, 1-1.5) = (-1, -0.5)$.
+
+Now find the points $M$ and $N$. $M$ is on $XY$ such that $YM = 3$. Since $XY = 5$, $M$ divides $XY$ in the ratio $YM:MX = 3:2$.
+$M = \frac{2 Y + 3 X}{5} = \frac{2(0,3) + 3(4,0)}{5} = \frac{(12, 6)}{5} = (2.4, 1.2)$.
+$N$ is on $XZ$ such that $ZN = 3$. Since $XZ = 4$, $N$ divides $XZ$ in the ratio $ZN:NX = 3:1$.
+$N = \frac{1 Z + 3 X}{4} = \frac{1(0,0) + 3(4,0)}{4} = \frac{(12, 0)}{4} = (3, 0)$.
+The vector $\vec{MN} = N - M = (3 - 2.4, 0 - 1.2) = (0.6, -1.2)$.
+
+To find the angle $\gamma$ between $MN$ and $OI$, we calculate the dot product of $\vec{OI}$ and $\vec{MN}$:
+$\vec{OI} \cdot \vec{MN} = (-1)(0.6) + (-0.5)(-1.2) = -0.6 + 0.6 = 0$.
+Since the dot product is zero, the lines $MN$ and $OI$ are perpendicular, meaning $\gamma = 90^\circ$.
+
+Testing another case: a right isosceles triangle with $x=1, y=\sqrt{2}, z=\sqrt{2}$ (right angle at $X$).
+$X=(0,0), Y=(\sqrt{2}, 0), Z=(0, \sqrt{2})$.
+$O = (\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2})$.
+$I = \frac{1(0,0) + \sqrt{2}(\sqrt{2},0) + \sqrt{2}(0,\sqrt{2})}{1+2\sqrt{2}} = \frac{(2,2)}{1+2\sqrt{2}}$.
+$\vec{OI} = (\frac{2}{1+2\sqrt{2}} - \frac{\sqrt{2}}{2}, \frac{2}{1+2\sqrt{2}} - \frac{\sqrt{2}}{2})$, which has a slope of 1.
+$M$ on $XY$ with $YM=1 \implies XM=\sqrt{2}-1 \implies M=(\sqrt{2}-1, 0)$.
+$N$ on $XZ$ with $ZN=1 \implies XN=\sqrt{2}-1 \implies N=(0, \sqrt{2}-1)$.
+$\vec{MN} = (1-\sqrt{2}, \sqrt{2}-1)$, which has a slope of $-1$.
+Again, the product of slopes is $-1$, so $\gamma = 90^\circ$.
+
+Thus, $\gamma = 90^\circ$, and we need to find $\frac{\gamma}{2}$.
+$\frac{\gamma}{2} = \frac{90^\circ}{2} = 45^\circ$.
+
+The result is consistent across different triangle geometries.
+
+\(\frac{\gamma}{2} = 45^\circ\) \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

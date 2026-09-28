@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Claims Mulan wins if and only if $\theta$ is a rational multiple of $180^\circ$ and $\theta < 120^\circ$. Correctly identifies that Shan-Yu can force a draw for $\theta \ge 120^\circ$ by starting with an equilateral triangle, and correctly notes that irrational $\theta$ allows Shan-Yu to avoid a dense subgroup $S$.
+Claim gap: The sufficiency proof for rational $\theta < 120^\circ$ is incomplete and the characterization is false. Lines 14-16 assert that the game reduces to a finite state space of integer triples and that "Mulan can always choose a cut... to avoid cycles" and "force the maximum angle to change." No strategy is provided, no reachability is proven, and the claim that a finite state space implies a win for Mulan is false (Shan-Yu controls the transitions and can force cycles or stay in a safe subset). The characterization itself is incorrect; e.g., for $\theta = 100^\circ$, Shan-Yu can maintain all angles $\le 80^\circ$ or cycle, preventing victory.
+Qualifications and supplied repairs: NONE. The gaps are substantive and cannot be repaired without a completely different strategy.
+Decisive checks: Line 16's claim that Mulan can "force the state to $(m, n_2, n_3)$" is unsupported. For $\theta=100^\circ$, starting from $(60,60,60)$, any cut yields triangles with angles $(x,60,120-x)$ and $(60-x,60,60+x)$. Shan-Yu can always pick the triangle with maximum angle $\le 80^\circ$ (e.g., if $x=20$, pick $(40,60,80)$; from $(40,60,80)$, if Mulan cuts to create $100^\circ$, Shan-Yu picks $(40,60,60)$), creating a cycle that avoids $\theta$. This falsifies the claim that all rational $\theta < 120^\circ$ are winning.
+
+## Proof B
+Established theorem: Mulan can guarantee victory if and only if $\theta = 180^\circ/n$ for some integer $n \ge 2$.
+Claim gap: NONE. The proof is complete and rigorously justified.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Lines 3-6 correctly derive the angle sets of the split triangles and the valid open interval $(\alpha, 180^\circ-\beta)$ for $\psi$, with length $\gamma$. Lines 8-9 establish a valid inductive descent: if an angle $k\theta \in W$ ($k>1$) exists, cutting it into $\theta$ and $(k-1)\theta$ guarantees both children contain angles in $W$, forcing the multiplier to decrease until $\theta$ appears. Lines 10-29 exhaustively analyze the necessity condition: to force the game into $W$ from outside, Mulan must make both children land in $W$. The four logical combinations for this are checked algebraically; each either requires $\theta = 180^\circ/n$ or contradicts the assumption that the current angles are outside $W$. The geometric and logical steps are verified and airtight.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, correct characterization with a rigorous, self-contained argument. It correctly identifies the invariant set $W$, proves sufficiency via a clear inductive reduction, and proves necessity by exhaustively showing that forcing both split triangles into $W$ is impossible unless $\theta = 180^\circ/n$. Proof A's characterization is incorrect (fails for $\theta=100^\circ$), and its sufficiency argument relies on an unjustified finite-state/cycle-avoidance claim that ignores Shan-Yu's optimal responses. B's geometric derivation of the cut angle range and the case analysis for the four logical combinations are mathematically decisive and fully verified.

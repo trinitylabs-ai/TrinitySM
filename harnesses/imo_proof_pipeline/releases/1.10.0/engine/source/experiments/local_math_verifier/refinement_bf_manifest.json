@@ -1,0 +1,29 @@
+{
+  "harness_variant": "B",
+  "policy_id": "refinement-bf-role-cues-v1",
+  "bf_mode": "original_chat_preserved_reasoning_and_answer",
+  "role_specific_cues": {
+    "reviewer_1": "Wait. Recheck the submitted proof from its hypotheses to its conclusion. Find the earliest substantive inference that is not justified, and check whether the proof actually supplies the missing justification later. Separate a routine omitted step from a gap requiring a new mathematical idea. Revise unsupported criticism as carefully as unsupported acceptance. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "reviewer_2": "Wait. Recheck the strongest concrete attack on the submitted proof. Verify every proposed counterexample against all hypotheses and check its calculations. Try to refute your own objection using the proof's actual argument before retaining it. Distinguish an invalid inference from a false conclusion, and do not invent a failure witness. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "reviewer_3": "Wait. Recheck the proof's decisive missing obligation and the strongest charitable reading of the argument. Determine whether the gap can be closed by an explicit routine step using established premises, or instead needs a new nontrivial lemma or strategy. Do not silently supply that new idea or accept an unproved premise. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "fusion": "Wait. Re-adjudicate the reviewers' strongest claims against the submitted proof itself. Resolve conflicting diagnoses by checking their mathematical premises, not by counting reviewers or trusting confidence. Check any claimed routine completion explicitly. If repair is needed, give a precise, mathematically viable obligation without assuming the missing claim or preserving a previous verdict by default. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "acceptance": "Wait. Independently recheck the load-bearing implications of the submitted proof and treat the accepting fusion decision as untrusted. Verify that any proposed routine completion is explicit, valid and genuinely routine. Certify only a complete correct argument under the original criteria; otherwise identify the earliest substantive break without repairing it. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "repair_brief_audit": "Wait. Recheck whether the proposed repair brief is mathematically viable and addresses the actual proof defect. Check its premises, quantifiers and proposed route for circular reasoning or an unproved replacement claim. Distinguish a useful repair obligation from a purported solution. Do not certify the original proof merely because a repair is proposed. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "repair_brief_rewrite": "Wait. Recheck the audit's valid objections and revise the repair brief around the precise unresolved obligation. Preserve the original task and the brief's required scope. Remove circular steps and unsupported premises, and make the proposed route mathematically viable without presenting an unproved claim as an established fact. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction.",
+    "resolver": "Wait. Recheck whether the revised proof actually resolves the valid criticisms and proves the original statement. Preserve sound parts of the argument, establish the missing implications explicitly, and audit the resulting proof for circularity, boundary cases and unproved premises. Return the complete revised proof, not a repair plan or a claim that the checks have been performed. Emit one complete replacement response in the original required format. Do not append to, comment on, or mention the earlier draft or this instruction."
+  },
+  "cue_sha256": {
+    "reviewer_1": "7a68914b8b153396f9555db95bc78fd0fd6bb9bd2daa9eb1baa58c141adf3e94",
+    "reviewer_2": "9ca346d0bcde2325d70923996636014ce780d44d8423f7d1ea0f725f199b2476",
+    "reviewer_3": "3c450785882103d62b4008ae7b778dcc0a0a32b029aa4a5a66ec0008b5e25ac1",
+    "fusion": "cd3cfadf78a6980e6c3aa4d1eb58ebdc736c8e7a8a94f62875975c8e15db2995",
+    "acceptance": "955b7e8c3cd58e5f8efff2755f4e76d9a2e35eb2db182a635c12c51a07e0dcd7",
+    "repair_brief_audit": "47db1902854670137a6d31bbd31b96ae2e2d36ba9d4c04f3fb4e4c2dc7f99d74",
+    "repair_brief_rewrite": "3f8bc7aea07c7624b0d6fc6bb20cac313efeb107e7b17a5e4761d533634a4dac",
+    "resolver": "49b10e49847d709997f41d83261d1a27a613fe7974e2ccc72a713a939e25cda8"
+  },
+  "scope": "refinement_1_refinement_2_refinement_3",
+  "draft_policy": "unchanged",
+  "auxiliary_policy": "original_generic_cue",
+  "unknown_routes": "fail_closed"
+}

@@ -1,0 +1,11 @@
+{
+  "state": "completed",
+  "completed_at": "2026-09-17T07:31:50.316097+00:00",
+  "run_id": "basic009_t07_r01_v356_consolidated_20260917T071542Z",
+  "outcome": "REWRITTEN_AUDIT_PASS",
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "report": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/reports/run_summary.json"
+}

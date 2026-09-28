@@ -1,0 +1,23 @@
+To prove that the procedure terminates and results in the cars being sorted by width, we analyze the process using the properties of inversions and the constraints of the swap operation.
+
+### Part 1: Termination
+Let the sequence of widths of the cars from left to right be denoted by $\mathcal{W} = (W_{p_1}, W_{p_2}, \dots, W_{p_n})$, where $p$ is a permutation of $\{1, \dots, n\}$. A swap occurs between two adjacent cars $C_i$ and $C_{i+1}$ if $L_i < L_{i+1}$ and $W_i > W_{i+1}$.
+When such a swap is performed, the widths $W_i$ and $W_{i+1}$ are exchanged. Since $W_i > W_{i+1}$, the number of inversions in the width sequence $\mathcal{W}$ (an inversion is a pair $(j, k)$ such that $j < k$ but $W_{p_j} > W_{p_k}$) decreases by exactly one. Specifically, the swap only changes the relative order of $W_i$ and $W_{i+1}$; all other relative orders remain unchanged.
+The number of inversions is a non-negative integer bounded above by $\binom{n}{2}$. Since each operation strictly decreases this number, the procedure must eventually terminate when no more swaps are possible.
+
+### Part 2: The Final State
+Let the final sequence of cars be $C'_1, C'_2, \dots, C'_n$ with lengths $L'_1, \dots, L'_n$ and widths $W'_1, \dots, W'_n$. Because the process has terminated, for every $i \in \{1, \dots, n-1\}$, the swap condition is not met:
+$$\neg (L'_i < L'_{i+1} \text{ and } W'_i > W'_{i+1})$$
+This implies that for all $i$, if $W'_i > W'_{i+1}$, then we must have $L'_i > L'_{i+1}$.
+
+We now consider the relative order of any two cars $C_j$ and $C_k$. Suppose $W_j > W_k$. We analyze whether $C_j$ can be to the left of $C_k$ in the final state.
+1.  **Case 1: $L_j > L_k$.** Initially, the cars are sorted by length, so $C_k$ (shorter) is to the left of $C_j$ (longer). For the relative order to change to $(C_j, C_k)$, they must at some point become adjacent and be swapped. A swap $(C_k, C_j) \to (C_j, C_k)$ requires the car on the left to be shorter and wider than the car on the right. Here, $L_k < L_j$ is true, but $W_k > W_j$ is false (since $W_j > W_k$). Thus, they can never be swapped, and $C_k$ must remain to the left of $C_j$.
+2.  **Case 2: $L_j < L_k$.** Initially, $C_j$ is to the left of $C_k$. They may be swapped to the order $(C_k, C_j)$ if they become adjacent, as $L_j < L_k$ and $W_j > W_k$ are both true. Once they are in the order $(C_k, C_j)$, a swap back to $(C_j, C_k)$ would require $L_k < L_j$, which is false. Thus, once they swap, they remain $(C_k, C_j)$.
+
+In both cases, if $W_j > W_k$, then the only way $C_j$ can be to the left of $C_k$ in the final state is if they started in that order ($L_j < L_k$) and were never swapped.
+
+Now, suppose the final state is not sorted by width. Then there exists some $i$ such that $W'_i > W'_{i+1}$. As established from the termination condition, this implies $L'_i > L'_{i+1}$.
+Let these two cars be $C_j$ and $C_k$, such that $W_j = W'_i$ and $W_k = W'_{i+1}$. We have $W_j > W_k$ and $L_j > L_k$. According to the analysis in **Case 1**, if $W_j > W_k$ and $L_j > L_k$, $C_k$ must always remain to the left of $C_j$. However, in the final state, $C_j$ (car $C'_i$) is to the left of $C_k$ (car $C'_{i+1}$).
+This is a contradiction. Therefore, no such $i$ can exist, and we must have $W'_1 < W'_2 < \dots < W'_n$.
+
+The procedure terminates and the final arrangement is sorted by width. \(\square\)

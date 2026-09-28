@@ -1,0 +1,65 @@
+{
+  "problem_id": "imo2026_p6",
+  "candidate": "t10_r02",
+  "group": "core",
+  "grader_candidate": "core_t10_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t10_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1.md",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/fa9699798ad5e4df7b794ca22ec5630b69a64b58d1932b6fb1bfbe746452a99d.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t10_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:23:41.339319+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proof that the union P of all prime divisors of the terms is finite is false. For example, if a_1=2, then a_n=2n, so P contains every prime. In particular, infinitude of P does not imply that some new prime divisor p of a_{n+1} satisfies p>a_n+M; the subsequent claim that (a_n+M)/p<2 for large a_n merely from p>M is also false.",
+    "summary": "The submission correctly introduces the global accepted set C, proves that every sequence term lies in C, and obtains a uniform bound on consecutive gaps. However, its central route to periodicity depends on the demonstrably false claim that only finitely many primes occur among all terms. The reference argument instead requires proving finiteness only of the primes occurring in minimal accepted squarefree divisors, which is a substantial new structural idea absent here. Moreover, the final passage from eventual periodicity to periodicity for every index is not justified as written. Thus Rule E applies: a false decisive structural inference replaces the central argument, giving a ceiling of 3.",
+    "strengths": [
+      "Correctly reformulates the gcd conditions using prime supports.",
+      "Correctly observes that multiples of the radical of a_1 are always admissible, yielding bounded gaps.",
+      "Correctly proves that every a_n belongs to the global accepted set C.",
+      "Identifies the useful high-level strategy of showing C is periodic and then enumerating it."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that P=⋃S_n is finite is false; the admissible sequence beginning with a_1=2 is 2,4,6,8,… and has infinitely many prime divisors collectively."
+      },
+      {
+        "severity": "major",
+        "description": "The contradiction argument contains invalid implications: infinitude of P gives no new prime p>a_n+M, and M<p≤a_n+M does not imply (a_n+M)/p<2 for large a_n."
+      },
+      {
+        "severity": "substantial",
+        "description": "Even after claiming eventual enumeration of a periodic set, the proof does not validly deduce the required identity for all n. Determinism does not back-propagate eventual periodicity, and a_1 need not be the numerically smallest member of C."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "cdc3126292490d02acde61177b4bbbd7882d319d88d77f6b87754c4867918e80",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

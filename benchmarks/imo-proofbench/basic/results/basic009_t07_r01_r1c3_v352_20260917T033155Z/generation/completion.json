@@ -1,0 +1,9 @@
+{
+  "run_id": "basic009_t07_r01_r1c3_v352_20260917T033155Z",
+  "started_at": "2026-09-17T03:33:49.774313+00:00",
+  "completed_at": "2026-09-17T03:40:01.316367+00:00",
+  "wall_seconds": 371.5421032019658,
+  "worker_exited": true,
+  "returncode": 1,
+  "excludes_environment_capture_and_grading": true
+}

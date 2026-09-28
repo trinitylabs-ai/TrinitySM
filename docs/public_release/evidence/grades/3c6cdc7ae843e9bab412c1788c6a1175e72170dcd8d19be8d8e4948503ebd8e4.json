@@ -1,0 +1,52 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p4",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+  "proof": "evidence/proofs/81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e.md",
+  "completed_at": "2026-09-15T16:37:57.834066+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument falsely assumes that \\(2^k+2^m\\) can only be a power of \\(2\\) or three times a power of \\(2\\). For example, \\(2^2+2^0=5\\), and \\(\\theta=36^\\circ=180^\\circ/5\\) is a missing winning value.",
+    "summary": "The submission correctly proves sufficiency for two infinite subfamilies, but its claimed classification excludes many valid values \\(\\theta=180^\\circ/n\\). The central obstruction argument contains both a false arithmetic assertion and an unproved iteration step, so the final answer is incorrect.",
+    "strengths": [
+      "The angle-bisecting observation correctly converts an angle \\(2^k\\theta\\) into \\(\\theta\\) after finitely many forced cuts.",
+      "The altitude and \\(60^\\circ/120^\\circ\\) constructions correctly establish the stated sufficient subfamilies."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed complement property \\(s\\in S\\Rightarrow180^\\circ-s\\notin S\\) is false; for \\(\\theta=36^\\circ\\), both \\(36^\\circ\\) and \\(144^\\circ\\) lie in \\(S\\)."
+      },
+      {
+        "severity": "major",
+        "description": "The proof only finds a non-\\(S\\) child after a cut from the specially chosen initial triangle; it does not prove that the retained child preserves the required linear-independence invariant, so indefinite avoidance does not follow."
+      },
+      {
+        "severity": "substantial",
+        "description": "The stipulated independence of \\(\\alpha,\\beta,180^\\circ,\\theta\\) is impossible whenever \\(\\theta/180^\\circ\\) is rational, including omitted cases such as \\(\\theta=36^\\circ\\)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p4_c3_t10r01_20260915T144230Z/grading/work/strict_c3_20260915T163357Z/scores/p4/t10_r01/summary.json",
+    "native_record_file_sha256": "3c6cdc7ae843e9bab412c1788c6a1175e72170dcd8d19be8d8e4948503ebd8e4",
+    "selected_record": "benchmarks/imo2026/results/p4_c3_t10r01_20260915T144230Z/grades/imo2026_p4/t10_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "6ef0acdd1d1fe3e7d53c04c97cb7a398da614ab24251b9bde983d9a6e8416e5d",
+    "proof": "benchmarks/imo2026/results/p4_c3_t10r01_20260915T144230Z/proofs/imo2026_p4/t10_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb"
+}

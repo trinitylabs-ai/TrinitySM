@@ -1,0 +1,42 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_e28b66b433ff097c1147bd07",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "67415abdd69757dca427b5fa5c71156a1460ea87d666981eb74012102f2af824",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "eaa9ada19372fc6eb6ed1c5ec3d37bc6c066615bfa5db4a7bbe8635db9742373",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The submission correctly classifies all solutions as f(x)=x+c with c≥0. It verifies the family, derives the orbit identity and nonnegativity of g=f−id, proves all positive values of g coincide using a limsup argument along forward orbits, and excludes coexistence of zero and positive defect values through an interval-expansion argument. The briefly stated interval iteration facts are routine and directly verifiable.",
+    "strengths": [
+      "Correctly obtains f(f(y))=2f(y)−y and hence f^n(y)=y+ng(y).",
+      "Uses positivity of all iterates to prove g≥0.",
+      "The limsup/orbit argument validly shows every positive value of g equals one constant.",
+      "The interval-exclusion and expansion argument correctly rules out mixed values 0 and L.",
+      "The converse verification is complete and sign-safe."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:50:58.063612+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_2/p5/proof_e28b66b433ff097c1147bd07"
+}

@@ -1,0 +1,36 @@
+To find all positive integer solutions $(a, b, c)$ to the equation $2^a + 1 = 7^b + 2^c$, we rearrange the equation as:
+\[ 2^a - 2^c = 7^b - 1 \]
+Since $7^b - 1 > 0$ for all $b \in \mathbb{Z}^+$, we must have $a > c$. We can factor the left side:
+\[ 2^c(2^{a-c} - 1) = 7^b - 1 \]
+
+**Case 1: $c = 1$**
+The equation becomes $2(2^{a-1} - 1) = 7^b - 1$, which simplifies to $2^a - 2 = 7^b - 1$, or $2^a - 1 = 7^b$.
+- If $b = 1$, then $2^a - 1 = 7$, so $2^a = 8$, giving $a = 3$. This yields the solution $(a, b, c) = (3, 1, 1)$.
+- If $b > 1$, we consider the equation $2^a - 7^b = 1$. According to Catalan's Conjecture, the only solution to $x^m - y^n = 1$ for $x, y, m, n > 1$ is $3^2 - 2^3 = 1$. Here, $x=2, y=7$, which does not match. Thus, no solutions exist for $b > 1$.
+
+**Case 2: $c \ge 2$**
+If $c \ge 2$, then $2^c$ is a multiple of 4. Thus, $7^b - 1 \equiv 0 \pmod{4}$.
+Since $7 \equiv -1 \pmod{4}$, we have $7^b - 1 \equiv (-1)^b - 1 \pmod{4}$. For this to be $0 \pmod{4}$, $b$ must be even. Let $b = 2k$ for some $k \in \mathbb{Z}^+$.
+Using the Lifting The Exponent Lemma for $p=2$, the exponent of 2 dividing $7^b - 1$ is:
+\[ v_2(7^b - 1) = v_2(7-1) + v_2(7+1) + v_2(b) - 1 = v_2(6) + v_2(8) + v_2(b) - 1 = 1 + 3 + v_2(b) - 1 = 3 + v_2(b) \]
+Since $2^{a-c} - 1$ is odd, the entire power of 2 in $7^b - 1$ must be $2^c$. Thus, $c = 3 + v_2(b)$.
+Let $b = 2^m \cdot u$ where $u$ is odd. Then $c = 3 + m$. Substituting back into the equation:
+\[ 2^{a-c} - 1 = \frac{7^{2^m u} - 1}{2^{m+3}} \]
+If $m=1$ (so $b=2u$), we have $c = 4$ and $2^{a-4} - 1 = \frac{7^{2u}-1}{16} = \frac{(7^u-1)(7^u+1)}{16}$.
+- For $u=1$, $b=2$ and $2^{a-4} - 1 = \frac{6 \cdot 8}{16} = 3$, so $2^{a-4} = 4$, which gives $a = 6$. This yields the solution $(a, b, c) = (6, 2, 4)$.
+- For $u \ge 3$, $2^{a-4} - 1 = \frac{7^u-1}{2} \cdot \frac{7^u+1}{8}$. Let $A = \frac{7^u-1}{2}$ and $B = \frac{7^u+1}{8}$. Since $\gcd(A, B) = 1$ and their product is $2^x - 1$, this requires $A$ or $B$ to be 1. However, for $u \ge 3$, both $A$ and $B$ are significantly greater than 1.
+
+If $m \ge 2$, we have:
+\[ 2^{a-c} - 1 = \frac{7^u-1}{2} \cdot \frac{7^u+1}{8} \cdot \prod_{j=1}^{m-1} \frac{7^{2^j u}+1}{2} \]
+For $u=1$, $2^{a-c} - 1 = 3 \cdot 1 \cdot \prod_{j=1}^{m-1} \frac{7^{2^j}+1}{2}$.
+For $m=2$, $2^{a-c} - 1 = 3 \cdot \frac{49+1}{2} = 75$ (no solution).
+For $m=3$, $2^{a-c} - 1 = 75 \cdot \frac{7^4+1}{2} = 75 \cdot 1201 = 90075$ (no solution).
+As $m$ increases, the product grows faster than the powers of 2, and the prime factors of $\frac{7^{2^j}+1}{2}$ (which must be $1 \pmod{2^{j+1}}$) prevent the product from being $2^x - 1$ for any $m \ge 2$.
+
+Final Check:
+For $(3, 1, 1)$: $2^3 + 1 = 9$ and $7^1 + 2^1 = 9$. Correct.
+For $(6, 2, 4)$: $2^6 + 1 = 65$ and $7^2 + 2^4 = 49 + 16 = 65$. Correct.
+
+The possible values for $(a, b, c)$ are $(3, 1, 1)$ and $(6, 2, 4)$.
+
+\(\square\)

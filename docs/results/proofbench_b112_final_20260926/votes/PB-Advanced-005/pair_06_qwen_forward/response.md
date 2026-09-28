@@ -1,0 +1,24 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The condition $\angle BAC = \alpha$ is correctly characterized as a linear constraint $L_A(b,c)=0$ equivalent to the concyclicity of $Y,B,A,C$. The proof correctly demonstrates that $\theta=\alpha$ forces $D=A$, necessitating $\theta \neq \alpha$. For $\theta \neq \alpha$, the condition $\angle BDC=\theta$ yields a quadratic $Q_D(b,c)=0$, and the proof correctly identifies that $L_A$ must be a factor of $Q_D$, which algebraically requires the degeneracy condition $BC=AE$ for the quadratic form $Abc+Bb+Cc+E=0$. This reduces the problem to finding intersections of a line and a circle, establishing the existence of a valid $D$.
+Claim gap: The explicit algebraic derivation of equations (22)–(23) from the coefficient matching $BC=AE$ is compressed and not fully verified step-by-step. The verification that the intersection point lies strictly inside the angle and is distinct from $A$ when $\alpha \neq 60^\circ$ is asserted without detailed boundary analysis.
+Qualifications and supplied repairs: Routine algebraic expansion of the dot/cross product formulas and the standard factorization condition $AE=BC$ were independently verified. The equivalence between Proof A's linear equation and the concyclicity condition was confirmed by correcting a minor coefficient mismatch in initial mental checks (the $\csc\alpha$ term in the circle's $y$-coefficient aligns exactly with Proof A's derivation). No substantive repairs were needed; the logical architecture is sound, and the missing algebraic steps are mechanical coefficient comparisons that follow directly from the stated premises.
+Decisive checks: 
+- Lines 5–11: Verified that $N - D\tan\alpha = 0$ correctly simplifies to the stated linear equation. Independently confirmed this matches the concyclicity condition for $Y,B,A,C$ by deriving the circle equation through the origin and matching coefficients.
+- Lines 16–19: Verified that proportional coefficients for identical lines force $D=A$ when $\theta=\alpha$, correctly ruling out this case.
+- Line 20: Verified that $Q_D$ containing the line $L_A$ necessitates $Q_D$ factoring into two lines. For the form $Abc+Bb+Cc+E=0$, factorization into $(pb+q)(rc+s)$ exactly requires $AE=BC$. This is a standard and correctly applied algebraic condition.
+- Falsification check: No counterexample found to the logical flow; the system correctly reduces the geometric problem to finding intersections of a line and circle, with $\alpha \neq 60^\circ$ preventing degeneracy at $A$.
+
+## Proof B
+Established theorem: None. The proof claims $D$ is the reflection of $Y$ across $A$ ($D=2A$) and asserts $\angle BDC = \pi - \alpha$ based on an unverified citation of "known properties."
+Claim gap: The central construction $D=2A$ is mathematically false. The angle $\angle BDC$ is not constant for this choice of $D$, and the cited geometric property does not apply to this configuration. The proof lacks any derivation connecting the reflection to the constant angle condition.
+Qualifications and supplied repairs: None. The argument relies entirely on an incorrect geometric assertion.
+Decisive checks:
+- Line 10: Construction $D=2A$ is tested. Let $\alpha=90^\circ$, $Y=(0,0)$, $A=(1,2)$. Circles through $Y,A$ intersect axes at $B=(2t,0)$ and $C=(0, 2.5-t)$. For $D=(2,4)$, $\vec{DB}\cdot\vec{DC}=10$ (constant), but the 2D cross product is $-2t^2-t-5$, which varies with $t$. Thus $\tan(\angle BDC)$ varies, disproving the constant angle claim.
+- Line 21: The appeal to "properties of the orthocenter and reflections" is inapplicable; no orthocenter is defined in the variable configuration, and the reflection property cited does not hold for the pencil of circles through $Y$ and $A$.
+- Falsification check: Explicit coordinate counterexample demonstrates $\angle BDC$ is not constant, invalidating the core claim.
+
+## Decision
+Winner: A
+Reason: Proof A correctly identifies the algebraic structure of the problem: the concyclicity condition is linear in the ray parameters, and the constant-angle condition for $D$ is quadratic. It correctly deduces that the quadratic must factor to contain the line, leading to a solvable system for $D$. While some intermediate algebra is compressed, the logical chain is rigorous and aligns with the problem's constraints. Proof B proposes a specific geometric construction ($D=2A$) that is demonstrably false, as verified by a direct coordinate counterexample showing $\angle BDC$ varies. A's framework is mathematically sound and establishes the required existence claim, whereas B's central assertion fails verification.

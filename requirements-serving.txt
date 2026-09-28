@@ -1,0 +1,6 @@
+# Recorded distribution versions; GPU/CUDA build details are in ENVIRONMENT.md.
+vllm==0.24.0
+torch==2.11.0
+transformers==5.12.1
+tokenizers==0.22.2
+huggingface_hub==1.14.0

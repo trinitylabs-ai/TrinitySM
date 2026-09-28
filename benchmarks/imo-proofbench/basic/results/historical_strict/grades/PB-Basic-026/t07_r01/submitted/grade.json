@@ -1,0 +1,54 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T15:14:07.844524+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 26,
+  "problem_id": "PB-Basic-026",
+  "case_id": "PB-Basic-026.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/p26/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "c6ba255f6bbb3bfd642e146b2a30b43e700e8da579130b27eda8a8fd634c1529",
+  "reference_sha256": "641eed7b84a961cc7a5180ea62acc3d04fcd72eacd72ca53d6909345d7153aac",
+  "proof_sha256": "8915db2555cf2b584647cc70323475e48b18e3f56826dd7c693a0164f1afa100",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T151234957975Z/inputs/tasks.json",
+  "task_manifest_sha256": "704b5e2f7577350d75ebf1bd43d27e4150704f1bc33942c34e5162def5b101f1",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Step 4 falsely claims that inversion about \\(M_a\\) maps \\((W_a)\\) to \\(BC\\); this would require \\(M_a\\in(W_a)\\), which is neither proved nor generally true.",
+    "summary": "The exsimilicenter setup contains some valid observations, but the decisive claimed collinearity \\(M_a,X,D'\\) is unsupported and generally false. The final concurrency argument is also contradictory, moving from distinct reflected points \\(S'_a,S'_b,S'_c\\) to an unproved assertion that all three lines pass through \\(S\\). Thus the central argument must be replaced.",
+    "strengths": [
+      "Correctly notes that the incircle–circumcircle exsimilicenter lies on \\(OI\\) and relates parallel tangents under homothety."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The inversion argument establishing \\(M_a,X,D'\\) collinear is invalid."
+      },
+      {
+        "severity": "major",
+        "description": "The alleged “known property” that the reflected exsimilicenters yield concurrency on \\(OI\\) is neither stated precisely nor proved."
+      },
+      {
+        "severity": "major",
+        "description": "The conclusion that \\(D'X\\) passes through \\(S\\) contradicts the preceding conclusion that it passes through \\(S'=\\mathcal R_{AI}(S)\\), with no justification that \\(S=S'\\)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "ee09bcb7a9cd421cef238ade6a19ea585251183327ec5b6568f3f912c744d95d",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "2c9985e5912fe1fa1f77d7a75ee4f46a82fe532747c30ac898edc683fe394e55",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4c5bef8df02d9a7d5d39aa5ebb7d4f5816f50759d23a8ba465b1b7b0155d953c",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive defect in the uniqueness argument is the unsupported claim that bounds by two continuous functions make f continuous, followed by the invalid inference that constancy of g along one unbounded discrete orbit makes g globally constant. This is a central structural gap, so Rule E caps the score at 3.",
+    "summary": "The claimed classification is correct, and the solution correctly derives f(f(x))=2f(x)-x and hence g(x+g(x))=g(x). It also essentially verifies the candidate functions. However, it does not prove that different forward orbits have the same defect, nor does it rigorously exclude coexistence of zero and positive defects. Those are the central parts of necessity and require new ideas such as orbit comparison and a connectedness argument.",
+    "strengths": [
+      "Correctly identifies the solution family f(x)=x+c with c>=0.",
+      "Correctly obtains the important iterate identity f(f(x))=2f(x)-x and defect invariance g(x+g(x))=g(x).",
+      "The candidate verification contains the correct quadratic expression in the first inequality and shows its minimum is zero."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Being squeezed between two continuous functions does not imply that f is continuous; the bounds are not shown to converge to f at any point."
+      },
+      {
+        "severity": "major",
+        "description": "Even assuming continuity, constancy of g on the single sequence x+n g(x), which escapes to infinity, does not by itself imply that g is globally constant. The essential comparison between different orbits is absent."
+      },
+      {
+        "severity": "substantial",
+        "description": "The fixed-point case merely asserts that the inequalities force g(y)->0 and then that invariance forces g identically zero. The stated inequalities with x=x0 do not establish that asymptotic claim, so the mixed zero/positive case remains unresolved."
+      },
+      {
+        "severity": "minor",
+        "description": "The proof never explicitly derives g(x)>=0 from positivity of all forward iterates, though this could be repaired routinely from the established invariance."
+      },
+      {
+        "severity": "minor",
+        "description": "In checking the second inequality for f(x)=x+c, the polynomial is incorrectly equated with (x-c)^2+(y-x)^2+2cy. The correct expression is (x-y-c)^2; this is a local algebraic repair and the same expression is effectively handled in the following calculation."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:48:53.292193+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00034",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T14:35:26.505767+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 5,
+  "problem_id": "PB-Basic-005",
+  "case_id": "PB-Basic-005.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/problems/PB-Basic-005.json",
+  "reference_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/references/PB-Basic-005.md",
+  "proof_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/proofs/PB-Basic-005/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "ab66e5b3316a6fe1b47c925fa9d8ca69d2614a6f0b2aa58ab5db65f90397a09a",
+  "reference_sha256": "9614ffce4c61b26b1f009155d52fd573501158b436a3eb46f42044e23cfc4109",
+  "proof_sha256": "8c288c3f391e9fa36dc0fc5f4fdbbe547a635ad34334a878ecc6cd72e7be65ea",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "5c6c59ab7923c1836314a3f0571a75282ff4dfe8144f5538e5463dcc07744719",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the odd-degree case, the claim that the minimum exponent over all \\(k\\le n\\) equals \\(2-n\\) is false: \\(k=n-1\\) gives exponent \\(1-n\\). Nevertheless, this is still greater than \\(-n\\), so the required contradiction remains valid.",
+    "summary": "The coefficient analysis correctly determines all solutions as \\(P(x)=x^2\\) and \\(P(x)=x^4+ax^2+6\\). The sole defect is a localized incorrect minimum-exponent statement in excluding odd degrees, readily repaired by observing that every exponent occurring on the right is greater than \\(-n\\).",
+    "strengths": [
+      "Correctly expands the averaging operator on every monomial.",
+      "Handles degrees \\(0\\) through \\(4\\) explicitly and obtains the correct coefficients.",
+      "The \\(x^{n-4}\\)-coefficient comparison correctly excludes every even degree greater than \\(4\\)."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The stated minimum exponent for odd \\(n>4\\) overlooks the contribution from \\(k=n-1\\), although the corrected bound still proves that \\(x^{-n}\\) cannot occur."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

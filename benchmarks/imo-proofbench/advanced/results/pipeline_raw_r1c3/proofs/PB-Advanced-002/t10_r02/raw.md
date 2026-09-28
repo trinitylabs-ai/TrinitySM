@@ -1,0 +1,37 @@
+To prove that $M(f) \le 2^{70}$, we analyze the structure of the function $f$ and the nature of the "lovely relationship" defined in the problem.
+
+### 1. Analysis of the function $f$
+Let $S$ be the set of $N = 120$ students. The set $F$ is the power set $\mathcal{P}(S)$, containing $2^N$ elements. The function $f: F \to F$ is defined as:
+\[ f(X) = \{y \in S \mid \exists x \in X \text{ such that } x \text{ loves } y\} \]
+This can be rewritten as the union of the sets of students loved by each student in $X$:
+\[ f(X) = \bigcup_{x \in X} L(x) \]
+where $L(x)$ is the set of students loved by student $x$. 
+
+Two critical properties of $f$ are:
+1. **Join-homomorphism**: $f(X \cup Y) = f(X) \cup f(Y)$ for all $X, Y \in F$.
+2. **Monotonicity**: If $X \subseteq Y$, then $f(X) \subseteq f(Y)$.
+
+### 2. The Lovely Relationship and $M(f)$
+Two sets $A, B \in F$ have a "lovely relationship" if there exists a natural number $k \in \mathbb{N}$ such that $f^k(A) = B$. Let us denote this directed relationship as $A \to B$.
+The problem asks for the maximum size $t$ of a set $\{A_1, A_2, \dots, A_t\}$ of distinct elements such that for any $1 \le i < j \le t$, $A_i$ and $A_j$ have a lovely relationship. This means:
+\[ A_1 \to A_2, \quad A_1 \to A_3, \dots, A_1 \to A_t, \quad A_2 \to A_3, \dots, A_{t-1} \to A_t \]
+Since $A_i \to A_{i+1}$ implies $f^{k_i}(A_i) = A_{i+1}$ for some $k_i \in \mathbb{N}$, the entire set $\{A_1, \dots, A_t\}$ must be a subset of the trajectory of $A_1$ under $f$:
+\[ \mathcal{T}(A_1) = \{A_1, f(A_1), f^2(A_1), f^3(A_1), \dots\} \]
+Because the elements $A_i$ are distinct, $t$ cannot exceed the number of distinct elements in the trajectory $\mathcal{T}(A_1)$. Thus, $M(f)$ is the maximum number of distinct elements in any trajectory of $f$.
+
+### 3. Bounding the Trajectory Length
+The function $f$ is a linear map over the Boolean semiring $(\{0, 1\}, \lor, \land)$. Let $M$ be the $N \times N$ adjacency matrix where $M_{xy} = 1$ if $x$ loves $y$. Representing $X \in F$ as a row vector $v \in \{0, 1\}^N$, the action of $f$ is $v \mapsto v M$. The trajectory is the sequence $v, v M, v M^2, \dots$.
+
+In a finite state space of size $2^N$, any trajectory eventually becomes periodic. Let $P$ be the pre-period and $C$ be the period of the sequence of matrices $M^k$. The number of distinct vectors in any trajectory $v M^k$ is at most $P + C$.
+- **Pre-period $P$**: For a Boolean matrix of size $N$, the pre-period is bounded by $P \le (N-1)^2 + 1$. For $N=120$, $P \le 119^2 + 1 = 14162$.
+- **Period $C$**: The period of $M^k$ is the least common multiple of the periods of the strongly connected components of the graph associated with $M$. The maximum such value is given by Landau's function $g(N)$. For $N=120$, $g(120)$ is the maximum lcm of a partition of 120. Even with a generous estimate, $g(120) < 10^9$.
+
+Thus, the maximum number of distinct elements in any trajectory is:
+\[ M(f) \le P + C \le 14162 + g(120) \approx 10^9 \]
+Comparing this to the target bound:
+\[ 2^{70} = (2^{10})^7 \approx (10^3)^7 = 10^{21} \]
+Clearly, $M(f) \le 10^9 \ll 10^{21} \approx 2^{70}$.
+
+The maximum possible value of $t$ is constrained by the fact that $f$ is a Boolean linear map, ensuring that trajectories are far shorter than the total size of the power set. We have shown that $M(f) \le P + C$, and for $N=120$, this value is significantly less than $2^{70}$.
+
+\(\square\)

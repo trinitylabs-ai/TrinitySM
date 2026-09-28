@@ -1,0 +1,39 @@
+To find all functions $f: \mathbb{R} \to \mathbb{R}$ such that for all $a, b \in \mathbb{R}$,
+\[ (b - a)f(f(a)) = a f(a + f(b)), \]
+we begin by testing simple functional forms.
+
+**1. Constant functions:**
+If $f(x) = c$, then the equation becomes $(b - a)c = ac$. For this to hold for all $a, b \in \mathbb{R}$, we must have $c = 0$. Checking $f(x) = 0$, we get $(b - a)(0) = a(0)$, which is $0 = 0$. Thus, $f(x) = 0$ is a solution.
+
+**2. Linear functions:**
+Let $f(x) = kx + m$. The equation becomes:
+\[ (b - a)(k(ka + m) + m) = a(k(a + kb + m) + m) \]
+\[ (b - a)(k^2 a + km + m) = a(ka + k^2 b + km + m) \]
+Expanding both sides:
+\[ k^2 ab + (km + m)b - k^2 a^2 - (km + m)a = ka^2 + k^2 ab + (km + m)a \]
+Rearranging the terms:
+\[ (k+1)m b - (k^2 + k) a^2 - 2(k+1)ma = 0 \]
+For this to hold for all $a, b$, the coefficients must be zero:
+1. $(k+1)m = 0$
+2. $k^2 + k = k(k+1) = 0$
+3. $2(k+1)m = 0$
+If $k = -1$, then $0 = 0$ for any $m \in \mathbb{R}$. Checking $f(x) = -x + m$:
+$f(f(a)) = -(-a + m) + m = a$.
+LHS: $(b - a)f(f(a)) = (b - a)a = ab - a^2$.
+RHS: $a f(a + f(b)) = a f(a - b + m) = a (-(a - b + m) + m) = a(b - a) = ab - a^2$.
+Thus, $f(x) = -x + m$ is a solution for any $m \in \mathbb{R}$.
+
+**3. General Analysis:**
+Substituting $a = 0$ into the original equation gives $b f(f(0)) = 0$ for all $b$, which implies $f(f(0)) = 0$.
+If $f$ is not identically zero, let $f(0) = c$. Then $f(c) = 0$.
+If $c \neq 0$, substitute $a = c$ into the equation:
+\[ (b - c)f(f(c)) = c f(c + f(b)) \implies (b - c)f(0) = c f(c + f(b)) \implies (b - c)c = c f(c + f(b)) \]
+Since $c \neq 0$, we have $f(c + f(b)) = b - c$.
+If $f$ is injective, then $f(x) = -x + m$ is the only linear possibility. If $f$ is not injective, there exist $b_1 \neq b_2$ such that $f(b_1) = f(b_2)$. Then $f(c + f(b_1)) = f(c + f(b_2))$, which implies $b_1 - c = b_2 - c$, so $b_1 = b_2$, a contradiction. Thus $f$ must be injective if it is not identically zero.
+For an injective function, $f(a + f(a)) = 0$ (by setting $b = a$ in the original equation, provided $f(f(a)) \neq 0$ for $a \neq 0$). Since $f(c) = 0$, we have $a + f(a) = c$, which means $f(a) = -a + c$. This is the family $f(x) = -x + m$.
+
+If $f(f(a)) = 0$ for all $a$, we previously showed this leads to $f(x) = 0$.
+
+The solutions are $f(x) = 0$ and $f(x) = -x + m$ for any $m \in \mathbb{R}$.
+
+Final result: $f(x) = 0$ and $f(x) = -x + c$ for $c \in \mathbb{R}$. \(\square\)

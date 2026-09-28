@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Assuming all roots of $P(x)$ are real, distinct, and nonzero, the hypothesis implies $n \le 2k-2$. For the extremal case $n=2k-2$, the proof rigorously establishes that the root configuration must satisfy $p_i = -q_j$ for all positive roots $p_i$ and negative roots $q_j$, forcing all positive roots to be identical. This contradicts the distinctness hypothesis, completely resolving $n=2k-2$. The case $k < n < 2k-2$ is argued via the same coefficient-ratio inclusion $X \setminus T \subseteq R(T)$, with explicit verification for small $k$.
+Claim gap: The derivation for $n < 2k-2$ is presented as a structural sketch rather than a fully expanded algebraic chain. However, the inclusion $X \setminus T \subseteq R(T)$ and the product telescoping mechanism used for $n=2k-2$ generalize directly to tighter constraints for smaller $n$, making the gap local and mathematically transparent.
+Qualifications and supplied repairs: NONE. The set-size bound $n \le 2k-2$ follows directly from $|X \setminus T| \le |R(T)|$, though the proof derives it via Descartes' rule, which is valid under the real-root assumption. The product telescoping and symmetry arguments are verified as correct without external input.
+Decisive checks: 
+- Line 5: $a_m = b_{m-1} - r b_m$ correctly expands $(x-r)Q_T(x)$. The implication $a_m=0 \implies r = b_{m-1}/b_m$ (when $b_m \neq 0$) is verified. The handling of $b_m=0$ correctly notes it shrinks $R(T)$, strengthening the constraint.
+- Line 13-14: Product telescoping $\prod_{m=1}^{k-1} (b_{m-1}/b_m) = b_0/b_{k-1}$ is correct. Substitution into the swapped subset $T'$ yields $p_1^2 = q_1^2$, verified arithmetically. Symmetry extension to all $i,j$ is valid since roots are arbitrarily labeled distinct reals.
+- Falsification check: Attempting to construct a counterexample with $n=2k-2$ real roots fails because the product constraint forces $p_i = -q_j$, collapsing distinctness. The argument holds for all $k \ge 2$.
+
+## Proof B
+Established theorem: Reduces the problem to $n=k+1$ via subset inheritance. Defines auxiliary polynomials $R_m(x)$ and sets $S_m$ of roots satisfying $R_m(r_i)=0$. Proves $|S_m| \le \min(m, k-m)-1$ for $m \ge 2$ using elementary symmetric polynomial identities and the non-zero constant term condition. Derives a counting bound $k+1 \le \lfloor k^2/4 \rfloor - k + 3$, which successfully contradicts the hypothesis for $k \le 6$.
+Claim gap: The counting bound fails to produce a contradiction for $k \ge 7$ (e.g., $k=7$ gives $8 \le 8$). The proof acknowledges this but provides no rigorous resolution, resorting to the assertion that "the sum of these reduced capacities cannot cover $n$ distinct nonzero real roots for any $k < n$." This is an unsubstantiated claim. Additionally, the complementary bound $|S_m| < n-m-1$ (Line 22) is stated as a "similar argument" but lacks the explicit symmetric polynomial derivation provided for the $|S_m|=m$ case.
+Qualifications and supplied repairs: NONE. The reduction to $n=k+1$ and the symmetric polynomial identities are correct. The gap for $k \ge 7$ is load-bearing; without a replacement argument or tighter intersection analysis, the proof does not cover all allowed parameters.
+Decisive checks:
+- Line 15-20: The derivation $e_1(S_m^c)=0, e_2(S_m^c)=0 \implies \sum r^2=0$ is verified and correctly forces a contradiction with $P(0) \neq 0$.
+- Line 28-29: Summation $\sum_{m=2}^{k-2} (\min(m,k-m)-1)$ is correctly evaluated. The inequality $2k-2 \le \lfloor k^2/4 \rfloor$ is indeed false for $k \le 6$ but true for $k \ge 7$.
+- Falsification check: For $k=7, n=8$, the counting bound allows $|S_m|$ to theoretically cover all roots. The proof offers no algebraic obstruction for this case, leaving the contradiction unestablished.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete, rigorous resolution of the extremal case $n=2k-2$ using a precise algebraic identity and symmetry argument, which is the mathematically critical scenario. Its structural lemma ($X \setminus T \subseteq R(T)$) tightly constrains the root configuration, and the sketch for $n < 2k-2$ follows the same verified mechanism. Proof B correctly reduces to $n=k+1$ and establishes a useful counting bound, but this bound fails for $k \ge 7$, and the proof abandons rigor by asserting the contradiction holds without justification. Proof A's argument is self-contained and covers all parameters through verified algebraic constraints, whereas Proof B leaves a load-bearing gap for larger $k$.

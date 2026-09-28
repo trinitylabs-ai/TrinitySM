@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "f34dba456a3b4eaeef3f0aaedca4936f7ac8a2ef2381b0d5c247b4948c26ac92",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "6a25875711199f4cc50fb479bbfe04f4fb52728353552ff078e1ab1ecd8ffe2c",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Case 3, the ordered partition into S_0 and S_{c_1} does not imply the asserted endpoint assignment S_0=(0,b] and S_{c_1}=(b,∞); the alternative S_0=(0,b), S_{c_1}=[b,∞) is unhandled. The final contradiction depends on b belonging to S_0, so this is a false load-bearing structural assertion, invoking Rule C's ceiling of 5.",
+    "summary": "The claimed classification is correct, and the orbit argument successfully proves g>=0 and essentially proves that all positive values of g coincide. However, the mixed zero/positive case is not completed as submitted because one possible boundary assignment is simply excluded without proof. The repair is direct: in the omitted assignment, take x=b-epsilon in S_0 and y=b in S_{c_1}; Inequality 2 gives epsilon^2>=4(b-epsilon)c_1, impossible for small positive epsilon.",
+    "strengths": [
+      "Correctly verifies every function f(x)=x+c with c>=0 using RMS-AM-GM.",
+      "Correctly derives f(f(y))=2f(y)-y, invariance of g along forward orbits, the formula for the iterates, and g>=0.",
+      "The squared inequalities and the asymptotic orbit comparison give a coherent and essentially correct proof that two distinct positive defect values cannot coexist.",
+      "The mixed-value argument contains the right separation idea and is close to completion."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The assertion S_0=(0,b] and S_{c_1}=(b,∞) does not follow from the preceding separation; the reverse endpoint allocation is also possible at that stage and is required for the contradiction to be complete."
+      },
+      {
+        "severity": "minor",
+        "description": "The forbidden intervals are open, so orbit avoidance yields a non-strict bound at an endpoint, not the displayed strict bound. This does not damage the separation after correction."
+      },
+      {
+        "severity": "minor",
+        "description": "The notation y_0 is reused ambiguously in the mixed case, and the assertion that its c_1-spaced orbit must begin to the right of the forbidden interval omits the short step-size/positivity justification."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:37:36.600110+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00022",
+  "native_rejection_count": 0
+}

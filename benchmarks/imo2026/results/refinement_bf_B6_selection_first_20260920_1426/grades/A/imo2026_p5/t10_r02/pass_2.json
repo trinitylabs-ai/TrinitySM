@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "881d6d6ac55d9465e06eff7a553e062037bc188a5b2de663d8805414d4ce2a90",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "1fcbe6f26280366a23e1765b8e10ba3f7810fcb54f3cf4af4ac716eec3d75837",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Step 3, the claim that for every n one can choose a nonnegative integer m with |(z_1+nc_1)-(z_2+mc_2)|<c_2 is false when the first progression is initially far below z_2. Only sufficiently large n admit such an m. This approximation is load-bearing for proving equality of the positive values of g, so Rule C caps the score at 5.",
+    "summary": "The classification f(x)=x+c with c≥0 is correct, and the orbit argument, clopen-set argument, and final verification are otherwise sound. The decisive flaw is a false universal quantifier in the arithmetic-progression approximation. Replacing “for any n” by “for all sufficiently large n” and choosing m as a nearest nonnegative integer repairs the proof directly, but the false statement supports the central constancy argument as submitted.",
+    "strengths": [
+      "Correctly squares the inequalities using positivity and derives f(f(y))+y=2f(y).",
+      "Correctly proves g(y)≥0 using the positive forward orbit f^n(y)=y+ng(y).",
+      "The argument excluding coexistence of defect values 0 and c via a clopen set is valid.",
+      "The converse verification for f(x)=x+c is algebraically correct."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The assertion that the two forward arithmetic progressions can be brought within c_2 for every n using m∈N is false; it holds only once z_1+nc_1 is sufficiently large. Although the needed correction is routine, this is a false load-bearing assertion in the proof that all positive defect values coincide."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:41:06.035377+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /opt/proof-workshop
+exec env CUDA_VISIBLE_DEVICES=1 GLOO_SOCKET_IFNAME=lo HF_HUB_OFFLINE=1 NCCL_SOCKET_IFNAME=lo PYTHONPATH=/opt/proof-workshop/vllm_compat TRANSFORMERS_OFFLINE=1 VLLM_ENABLE_V1_MULTIPROCESSING=0 VLLM_HOST_IP=127.0.0.1 /home/user/miniconda3/envs/gemma4-vllm024/bin/python /home/user/miniconda3/envs/gemma4-vllm024/bin/vllm serve /home/user/.cache/huggingface/hub/models--Qwen--Qwen3.6-27B/snapshots/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9 --served-model-name Qwen/Qwen3.6-27B --dtype bfloat16 --kv-cache-dtype bfloat16 --max-model-len 196608 --max-num-batched-tokens 8192 --max-num-seqs 4 --gpu-memory-utilization 0.90 --host 127.0.0.1 --port 8027 --language-model-only --reasoning-parser qwen3 --default-chat-template-kwargs '{"enable_thinking": true}' --async-scheduling --speculative-config '{"method":"mtp","num_speculative_tokens":4}'

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["exact_negation"],
+  "properties": {
+    "exact_negation": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^\\\\]*$"
+    }
+  }
+}

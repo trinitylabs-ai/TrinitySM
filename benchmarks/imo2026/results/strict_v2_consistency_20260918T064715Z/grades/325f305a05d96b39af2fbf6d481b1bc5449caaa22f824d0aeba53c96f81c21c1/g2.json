@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "325f305a05d96b39af2fbf6d481b1bc5449caaa22f824d0aeba53c96f81c21c1",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "40648c963a7cee8bcd98db3f72dfe647a1e04c252080bc8fe06a84505f8f5197",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The expansion of P·(b−c) has both mixed c-terms with reversed signs. Its numerator should contain +kc sin(phi_L)−lc sin(A−theta_K), not −kc sin(phi_L)+lc sin(A−theta_K). This is a false load-bearing calculation under Rule C.",
+    "summary": "The reduction OM=ON iff PB=PC and the initial sine-law relations are useful. However, after the sign error, the proof merely asserts that the unused conditions angle LBK=beta and angle LCK=gamma make the terms balance. No compatibility equations or derivation of PB=PC are supplied. This is the central argument, so Rule E caps the score at 3; Rule B does not permit 4 because the preceding reduction is not correct and complete.",
+    "strengths": [
+      "Correctly reduces the desired midpoint-distance equality to PB=PC for P=2O.",
+      "Correctly derives P·k=k² and P·l=l² from the circumcenter equations.",
+      "Obtains relevant sine-law relations involving theta_K, phi_L, gamma, and beta."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "There is a sign error when expanding P·(b−c), invalidating all subsequent displayed formulas based on that expansion."
+      },
+      {
+        "severity": "major",
+        "description": "The decisive conditions angle LBK=beta and angle LCK=gamma are never converted into equations or used in a proof. The assertion that they force P onto the perpendicular bisector of BC simply restates the missing central conclusion."
+      },
+      {
+        "severity": "minor",
+        "description": "The tangent formulas divide by cosine factors without excluding right-angle cases; the stated hypotheses do not guarantee those tangents are finite."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:42:44.398493+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

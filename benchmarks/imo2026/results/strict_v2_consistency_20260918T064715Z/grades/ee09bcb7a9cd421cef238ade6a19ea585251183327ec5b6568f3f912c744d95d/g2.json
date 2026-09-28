@@ -1,0 +1,69 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "ee09bcb7a9cd421cef238ade6a19ea585251183327ec5b6568f3f912c744d95d",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "2c9985e5912fe1fa1f77d7a75ee4f46a82fe532747c30ac898edc683fe394e55",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4c5bef8df02d9a7d5d39aa5ebb7d4f5816f50759d23a8ba465b1b7b0155d953c",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In the uniqueness argument, the claim that bounding f(x) between two continuous functions implies that f is continuous is false. The bounds do not converge to one another, and no continuity follows. This is a load-bearing unsupported inference under Rule E.",
+    "summary": "The submitted classification is correct, and the proof derives the important identity f(f(x))=2f(x)-x and the orbit invariance g(x+g(x))=g(x). However, the decisive step from orbit invariance to constancy is not proved: even continuity would not make constancy on each unbounded arithmetic orbit imply global constancy. The zero-defect case is likewise based on an unsupported and in fact unjustified claim that the displayed inequalities force g(y)→0. Substantial new comparison and compatibility arguments are required, so the proof has a major central gap and receives 3.",
+    "strengths": [
+      "Correctly identifies the solution family f(x)=x+c with c≥0.",
+      "Correctly obtains f(f(y))=2f(y)-y by substituting x=f(y).",
+      "Correctly derives g(x+g(x))=g(x), which is a useful structural invariant.",
+      "The later quadratic calculation establishes the nonnegativity needed to verify the proposed solutions."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "In checking the second inequality, the polynomial is incorrectly rewritten as (x-c)^2+(y-x)^2+2cy. The equality is false. The same polynomial is subsequently proved nonnegative in the first-inequality calculation, so this does not by itself invalidate the converse."
+      },
+      {
+        "severity": "major",
+        "description": "Being squeezed between two continuous functions does not imply that f is continuous; the asserted bounds do not constitute a squeeze-limit argument."
+      },
+      {
+        "severity": "major",
+        "description": "Even assuming continuity, constancy of g along each sequence x+n g(x) does not establish that g has the same value on different orbits. Comparing distinct orbit values is the central missing argument."
+      },
+      {
+        "severity": "major",
+        "description": "When g(x0)=0, the inequalities shown only give broad bounds of orders y and y^2 for f(y); they do not imply f(y)-y→0. Thus the mixed zero/positive-defect case is not resolved."
+      },
+      {
+        "severity": "minor",
+        "description": "The proof does not explicitly exclude g(x)<0. This can be repaired routinely by iterating f^n(x)=x+n g(x) and using positivity, but it is absent as submitted."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:48:35.592707+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00035",
+  "native_rejection_count": 0
+}

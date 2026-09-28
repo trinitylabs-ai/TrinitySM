@@ -1,0 +1,57 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p6",
+  "submission_id": "proof_122cb73c6ec9e18e87cad75b",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "f3dccd6a93148903e098a30fa8f92bf7f7467691a23f1d61a7a2c7535702aa8d",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "d7729d8eaecc85c87bf4247d2ba8147a80c4118be657f2be5405cfc0f64a5277",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the claimed bound that every inclusion-minimal hitting set of \\(\\mathcal G_n\\) has size at most \\(|\\mathcal P(a_1)|\\) merely because \\(\\mathcal P(a_1)\\) is itself a hitting set. This implication is false in general and does not establish the bounded-rank premise needed for stabilization. Thus the central stabilization argument is unsupported, invoking Rule E and capping the score at 3.",
+    "summary": "The hitting-set reformulation is useful, and a stabilized finite family would indeed yield a periodic set of admissible integers. However, the proof of stabilization—the heart of the problem—rests on false set-theoretic assertions. Moreover, the final passage from eventual periodicity to periodicity for every index does not establish the necessary index alignment. Repairing the central argument requires a genuinely new finiteness argument comparable in substance to the reference solution.",
+    "strengths": [
+      "Correctly reformulates the gcd conditions as a hitting-set condition on prime supports.",
+      "Correctly observes that, conditional on stabilization to a finite family \\(\\mathcal G\\), membership in the resulting admissible set is periodic modulo the product of the primes in \\(\\bigcup\\mathcal G\\).",
+      "The resulting eventual recurrence for the increasing enumeration of that periodic set is essentially correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "A known hitting set of size \\(m\\) does not bound the sizes of all inclusion-minimal hitting sets. For example, the intersecting family \\(\\{\\{p,q_i\\}:1\\le i\\le r\\}\\) has the hitting set \\(\\{p\\}\\), while \\(\\{q_1,\\ldots,q_r\\}\\) is an inclusion-minimal hitting set of arbitrarily large size."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that every \\(S\\in\\mathcal G_n\\) is a minimal hitting set of \\(\\mathcal G_{n-1}\\) is false even for admissible sequences. If \\(a_1=10\\), then \\(a_2=12\\), and \\(\\mathcal G_2=\\{\\{2,5\\},\\{2,3\\}\\}\\); neither two-element set is an inclusion-minimal hitting set of \\(\\mathcal G_1=\\{\\{2,5\\}\\}\\)."
+      },
+      {
+        "severity": "major",
+        "description": "The cited claim that bounded-rank intersecting families have only finitely many isomorphism classes is false: the star families \\(\\{\\{p,q_i\\}:1\\le i\\le r\\}\\) already give infinitely many nonisomorphic rank-two examples. Consequently, the claimed stabilization of \\(\\mathcal G_n\\) is not proved. A decreasing density bounded below would not by itself imply stabilization either."
+      },
+      {
+        "severity": "substantial",
+        "description": "Even assuming stabilization, eventual enumeration of \\(C\\) does not by itself imply \\(a_n=c_{j+n-1}\\) for all large \\(n\\); there could be a persistent index offset. The submitted propagation argument only carries strict inequality forward and never contradicts an established equality at \\(N\\). Thus the required all-index conclusion is not proved as written, triggering the quantifier concern of Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T15:34:22.509107+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p6/pass_1/p6/proof_122cb73c6ec9e18e87cad75b"
+}

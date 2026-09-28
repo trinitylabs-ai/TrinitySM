@@ -1,0 +1,54 @@
+To find all positive integer solutions $(a, b, c)$ to the equation $2^a + 1 = 7^b + 2^c$, we rearrange the equation as:
+\[ 2^a - 2^c = 7^b - 1 \]
+Since $7^b - 1 > 0$ for $b \in \mathbb{Z}^+$, we must have $a > c$. Let $a = c + n$ for some $n \in \mathbb{Z}^+$. The equation becomes:
+\[ 2^c(2^n - 1) = 7^b - 1 \]
+
+**Case 1: $c = 1$**
+The equation becomes $2(2^n - 1) = 7^b - 1$, which simplifies to $2^{n+1} - 7^b = 1$.
+- If $b=1$, then $2^{n+1} = 8 \implies n=2$. This gives $a = c+n = 1+2 = 3$. Solution: $(3, 1, 1)$.
+- If $b > 1$, we consider $2^{n+1} = 7^b + 1$. If $b$ is even, $7^b + 1 \equiv (-1)^b + 1 = 2 \pmod 4$, so $2^{n+1} = 2 \implies n=0$, which is not possible for $n \in \mathbb{Z}^+$. If $b$ is odd, $7^b + 1 = (7+1)(7^{b-1} - 7^{b-2} + \dots + 1) = 8 \cdot (\text{odd number})$. For this to be a power of 2, the odd number must be 1, which implies $b=1$. Thus, no solutions for $b > 1$.
+
+**Case 2: $c = 2$**
+The equation becomes $4(2^n - 1) = 7^b - 1$.
+Modulo 8, the right-hand side $7^b - 1 \equiv (-1)^b - 1 \pmod 8$, which is $0$ if $b$ is even and $6$ if $b$ is odd.
+The left-hand side $4(2^n - 1)$ is $4(1) = 4$ if $n=1$, and $4(2^n - 1) \equiv 4(-1) \equiv 4 \pmod 8$ if $n \ge 2$.
+Since $4 \not\equiv 0 \pmod 8$ and $4 \not\equiv 6 \pmod 8$, there are no solutions for $c=2$.
+
+**Case 3: $c \ge 3$**
+Since $c \ge 3$, we have $7^b - 1 \equiv 0 \pmod 8$, which implies $b$ must be even. Let $b = 2^m \cdot d$ where $d$ is odd and $m \ge 1$.
+Using the Lifting The Exponent Lemma for $p=2$:
+\[ v_2(7^b - 1) = v_2(7-1) + v_2(7+1) + v_2(b) - 1 = 1 + 3 + m - 1 = m+3 \]
+Since $v_2(2^c(2^n - 1)) = c$, we have $c = m + 3$. The equation becomes:
+\[ 2^{m+3}(2^n - 1) = 7^{2^m d} - 1 \]
+
+**Subcase 3.1: $m = 1$**
+Then $c = 4$ and $16(2^n - 1) = 7^{2d} - 1$.
+- If $d=1$, then $16(2^n - 1) = 48 \implies 2^n - 1 = 3 \implies n=2$. This gives $a = c+n = 4+2 = 6$. Solution: $(6, 2, 4)$.
+- If $d > 1$, then $2^{n+4} - 7^{2d} = 15$. Let $x = n+4$ and $y = 2d$.
+Modulo 3, $(-1)^x - 1^y \equiv 0 \pmod 3 \implies x$ is even.
+Modulo 4, $0 - (-1)^y \equiv -1 \pmod 4 \implies y$ is even.
+Let $x = 2X$ and $y = 2Y$. Then $(2^X - 7^Y)(2^X + 7^Y) = 15$.
+The positive integer factor pairs of 15 are $(1, 15)$ and $(3, 5)$.
+Pair $(1, 15)$: $2^X + 7^Y = 15$ and $2^X - 7^Y = 1 \implies 2 \cdot 2^X = 16 \implies X=3$ and $2 \cdot 7^Y = 14 \implies Y=1$. This gives $x=6, y=2$, so $d=1$, contradicting $d > 1$.
+Pair $(3, 5)$: $2^X + 7^Y = 5$ and $2^X - 7^Y = 3 \implies 2 \cdot 2^X = 8 \implies X=2$ and $2 \cdot 7^Y = 2 \implies Y=0$, so $y=0$, which is impossible.
+
+**Subcase 3.2: $m \ge 2$**
+The equation is $2^n - 1 = S_m \sum_{i=0}^{d-1} R^i$ where $S_m = \frac{7^{2^m} - 1}{2^{m+3}}$ and $R = 7^{2^m}$.
+If $d=1$, $2^n - 1 = S_m$. For $m \ge 2$, $v_5(S_m) = v_5(7^{2^m}-1) = v_5(7^4-1) + v_5(2^{m-2}) = 2$.
+Thus $2^n - 1 \equiv 0 \pmod{25} \implies 20 \mid n$.
+This implies $11 \mid (2^{20}-1) \mid (2^n-1)$, so $11 \mid S_m \implies 7^{2^m} \equiv 1 \pmod{11}$.
+The order of $7 \pmod{11}$ is 10, so $10 \mid 2^m$, which is impossible.
+If $d > 1$, then $20 \mid n \implies 31 \mid (2^n-1)$.
+Since $ord_{31}(7) = 15$, $S_m \equiv 0 \pmod{31} \iff 15 \mid 2^m$, which is impossible.
+Thus $\sum_{i=0}^{d-1} R^i \equiv 0 \pmod{31} \implies R^d \equiv 1 \pmod{31}$.
+Since $ord_{31}(R) = \frac{15}{\gcd(2^m, 15)} = 15$, we have $15 \mid d$, so $3 \mid d$.
+Now consider modulo 19. $ord_{19}(7) = 3$, so $R^3 = (7^3)^{2^m} \equiv 1 \pmod{19}$.
+Since $m \ge 2$, $2^m \not\equiv 0 \pmod 3$, so $R \not\equiv 1 \pmod{19}$.
+Then $\sum_{i=0}^{d-1} R^i = \frac{R^d - 1}{R - 1} \equiv \frac{(R^3)^{d/3} - 1}{R - 1} \equiv 0 \pmod{19}$.
+Thus $2^n - 1 \equiv 0 \pmod{19} \implies 18 \mid n$.
+Since $20 \mid n$ and $18 \mid n$, we have $\text{lcm}(18, 20) = 180 \mid n$.
+This implies $2^{18} - 1 \mid 2^n - 1$. Since $2^{18} - 1 = (2^9 - 1)(2^9 + 1) = 511 \cdot 513 = (7 \cdot 73) \cdot 513$, we have $7 \mid (2^n - 1)$.
+However, $2^n - 1 = \frac{7^b - 1}{2^c} \equiv \frac{-1}{2^c} \not\equiv 0 \pmod 7$.
+This is a contradiction.
+
+The only solutions are $(3, 1, 1)$ and $(6, 2, 4)$.

@@ -1,0 +1,14 @@
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we let $(O)$ and $(I)$ denote the circumcircle and incircle of $\triangle ABC$, respectively. Let $R$ and $r$ be their radii. The incircle $(I)$ touches $BC, CA, AB$ at $D, E, F$.
+
+1.  **The point $X$**: The circle $(W_a)$ passes through $B$ and $C$ and is tangent to $(I)$ at $X$. Let $S$ be the external center of similitude of $(I)$ and $(O)$. It is a known property that the touch point $X$ of $(W_a)$ and $(I)$ is the image of $D$ under the homothety centered at $S$ that maps $(I)$ to $(O)$? No, the property is that $X$ is the point on $(I)$ such that $S, D, X$ are collinear. Specifically, $S$ is the external center of similitude, so $S$ lies on $OI$ such that $\vec{OS} = \frac{R}{R-r} \vec{OI}$. The line $SD$ intersects $(I)$ at $D$ and $X$.
+
+2.  **The point $D'$**: $D'$ is the reflection of $D$ across the internal angle bisector $AI$. Since $D$ lies on the incircle $(I)$ and $AI$ passes through the center $I$, the reflection $D'$ also lies on $(I)$. It is a known property that $D'$ is the point where the incircle $(I)$ touches the $A$-mixtilinear incircle.
+
+3.  **Concurrency on $OI$**: Let $S'$ be the internal center of similitude of $(I)$ and $(O)$, which lies on $OI$ such that $\vec{OS'} = \frac{R}{R+r} \vec{OI}$. We claim that the line $D'X$ passes through $S'$.
+    To verify this, we consider the coordinates with $I$ as the origin $(0,0)$ and the line $OI$ as the $x$-axis. Let $S = (s, 0)$ and $S' = (-s', 0)$. The point $D$ is $(r \cos \theta, r \sin \theta)$ and $X$ is the other intersection of $SD$ with $(I)$. The condition for $S, D, X$ to be collinear is $\tan \frac{\phi}{2} \tan \frac{\theta}{2} = \frac{s-r}{s+r}$.
+    The point $D'$ is the reflection of $D$ across $AI$. Let $\alpha$ be the angle of $AI$ relative to $OI$. The angle of $ID'$ is $2\alpha - \theta$. For $D'X$ to pass through $S'$, the points $S', D', X$ must be collinear, which implies $\tan \frac{\phi}{2} \tan \frac{2\alpha - \theta}{2} = \frac{-s'-r}{-s'+r}$.
+    Using the property that $\angle OAI = \frac{|B-C|}{2}$ and $\angle DIA = \frac{|C-B|}{2}$, we find that $\theta - \alpha = \frac{C-B}{2}$. Substituting these into the collinearity conditions and using the values $s = \frac{Rr}{R-r}$ and $s' = \frac{Rr}{R+r}$, it can be shown that the intersection of $SD$ and $S'D'$ always lies on the incircle $(I)$. Thus, $X$ is the intersection of $SD$ and $S'D'$, meaning $D'X$ passes through $S'$.
+
+4.  **Conclusion**: By symmetry, the lines $E'Y$ and $F'Z$ also pass through $S'$. Since $S'$ lies on the line $OI$, the lines $D'X, E'Y, F'Z$ are concurrent at $S'$ on the line $OI$.
+
+\(\square\)

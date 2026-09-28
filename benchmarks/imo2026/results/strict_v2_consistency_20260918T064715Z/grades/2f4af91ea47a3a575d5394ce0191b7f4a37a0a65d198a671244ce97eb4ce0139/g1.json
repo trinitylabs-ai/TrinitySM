@@ -1,0 +1,65 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2f4af91ea47a3a575d5394ce0191b7f4a37a0a65d198a671244ce97eb4ce0139",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "7b0cacfeef75a47038361b368dde5553c57a31958746e1088eeca14e73453ecb",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2b597acdba0dfbb48785bdfeb16740a89743bc5f1c495aab924b6583ab12baae",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument asserts that Shan-Yu can preserve the invariant that no angle is a positive multiple of θ, but it checks only cuts producing θ in one child. It does not handle cuts producing mθ for m≥2, nor arbitrary cuts generally. This is the central compatibility claim needed to exclude a finite winning strategy, so Rule E caps the score at 3.",
+    "summary": "The final classification is correct, and the sufficiency strategy is essentially sound. However, the necessity direction does not prove its decisive invariant: avoiding an immediate θ is insufficient, since retaining a triangle containing 2θ or another multiple could permit a later forced win. A complete repair requires an all-multiples case analysis and an explicit safe starting triangle. Thus the solution has meaningful progress but a central gap.",
+    "strengths": [
+      "States the correct answer θ=180°/k for integers k≥2.",
+      "Correctly uses peeling cuts to reduce an angle nθ to (n−1)θ while the other child already contains θ.",
+      "The construction from a small angle C<θ correctly produces a child containing (k−1)θ, apart from a routine legality check.",
+      "The angle bookkeeping for the two child triangles is generally correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed invariant in the necessity proof is not established for arbitrary moves. The two displayed responses cover only α=θ and 180°−B−α=θ, not the corresponding possibilities α=mθ or 180°−B−α=mθ for arbitrary m≥2."
+      },
+      {
+        "severity": "minor",
+        "description": "No explicit initial triangle with all three angles nonmultiples of θ is supplied, although such a triangle is needed to start the proposed invariant defense."
+      },
+      {
+        "severity": "minor",
+        "description": "In the small-angle sufficiency construction, the proof does not specify choosing A to be the larger remaining angle or otherwise verify α=180°−B−θ>0. This is readily repaired."
+      },
+      {
+        "severity": "minor",
+        "description": "The repeated subtraction step should specify repeatedly reducing the same surviving angle and acknowledge that reaching θ gives an immediate win rather than necessarily producing an angle strictly below θ."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:00:26.993916+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00042",
+  "native_rejection_count": 0
+}

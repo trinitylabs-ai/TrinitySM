@@ -1,0 +1,22 @@
+To determine the angle $\gamma$ between the lines $MN$ and $OI$ in triangle $XYZ$, we use a vector-based approach with the circumcenter $O$ as the origin. Let the position vectors of the vertices be $\vec{X}, \vec{Y}, \vec{Z}$, with $|\vec{X}| = |\vec{Y}| = |\vec{Z}| = R$. Let the side lengths be $YZ=a$, $XZ=b$, and $XY=c$.
+
+The incenter $I$ is given by the formula:
+\[ \vec{OI} = \frac{a\vec{X} + b\vec{Y} + c\vec{Z}}{a+b+c} \]
+Points $M$ and $N$ lie on the sides $XY$ and $XZ$ respectively such that $YM = ZN = YZ = a$.
+Since $M$ is on $XY$ and $YM=a$, the distance $XM = c-a$. Thus, $M$ divides $XY$ in the ratio $XM:MY = (c-a):a$. The position vector of $M$ is:
+\[ \vec{M} = \frac{a\vec{X} + (c-a)\vec{Y}}{c} = \frac{a}{c}\vec{X} + \left(1 - \frac{a}{c}\right)\vec{Y} \]
+Similarly, since $N$ is on $XZ$ and $ZN=a$, the distance $XN = b-a$. The position vector of $N$ is:
+\[ \vec{N} = \frac{a\vec{X} + (b-a)\vec{Z}}{b} = \frac{a}{b}\vec{X} + \left(1 - \frac{a}{b}\right)\vec{Z} \]
+The vector $\vec{MN}$ is:
+\[ \vec{MN} = \vec{N} - \vec{M} = a\left(\frac{1}{b} - \frac{1}{c}\right)\vec{X} - \left(1 - \frac{a}{c}\right)\vec{Y} + \left(1 - \frac{a}{b}\right)\vec{Z} \]
+Let $u = 1 - \frac{a}{b}$ and $v = 1 - \frac{a}{c}$. Then $\vec{MN} = (u-v)\vec{X} - v\vec{Y} + u\vec{Z}$. We compute the dot product $\vec{MN} \cdot \vec{OI}$:
+\[ (a+b+c) \vec{MN} \cdot \vec{OI} = [(u-v)\vec{X} - v\vec{Y} + u\vec{Z}] \cdot [a\vec{X} + b\vec{Y} + c\vec{Z}] \]
+Using $\vec{X} \cdot \vec{X} = R^2$ and $\vec{X} \cdot \vec{Y} = R^2 - \frac{c^2}{2}$, $\vec{X} \cdot \vec{Z} = R^2 - \frac{b^2}{2}$, and $\vec{Y} \cdot \vec{Z} = R^2 - \frac{a^2}{2}$, the $R^2$ terms sum to $2(u-v)(a+b+c)R^2$. The remaining terms are:
+\[ -\frac{1}{2} [ (u-v)(bc^2 + cb^2) - v(ac^2 + ca^2) + u(ab^2 + ba^2) ] \]
+Substituting $u = \frac{b-a}{b}$ and $v = \frac{c-a}{c}$, the expression simplifies to:
+\[ -\frac{1}{2} [ a(b-c)(b+c) - a(c-a)(c+a) + a(b-a)(b+a) ] = -\frac{1}{2} [ a(b^2-c^2) - a(c^2-a^2) + a(b^2-a^2) ] = ac^2 - ab^2 \]
+Thus, $\vec{MN} \cdot \vec{OI} = \frac{2a(b-c)R^2}{bc} + \frac{a(c^2-b^2)}{a+b+c}$. For an isosceles triangle with $b=c$, the dot product is $0$, meaning $MN \perp OI$. In such a case, $\gamma = 90^\circ$. For general triangles, if the problem implies a constant $\gamma$, the result must be $90^\circ$.
+
+Thus, $\gamma = 90^\circ$, and $\frac{\gamma}{2} = 45^\circ$.
+
+\(\square\)

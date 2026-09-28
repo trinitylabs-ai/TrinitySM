@@ -1,0 +1,15 @@
+Let $(O)$ and $(I)$ be the circumcircle and incircle of $\triangle ABC$, with radii $R$ and $r$, respectively. Let $D, E, F$ be the contact points of $(I)$ with $BC, CA, AB$. Let $S_{int}$ be the internal center of similitude of $(O)$ and $(I)$, which lies on the line $OI$ such that $\vec{S_{int} I} = -\frac{r}{R} \vec{S_{int} O}$.
+
+Let $M_a$ be the midpoint of the arc $BC$ of $(O)$ not containing $A$. The tangent to $(O)$ at $M_a$ is parallel to $BC$. The homothety $h(S_{int}, -r/R)$ maps $(O)$ to $(I)$. Since it preserves the direction of tangents, it maps the point $M_a$ (where the tangent is parallel to $BC$) to a point on $(I)$ where the tangent is also parallel to $BC$. The two such points on $(I)$ are $D$ and the point $D_{opp}$ diametrically opposite to $D$. Since the ratio is negative, $M_a$ is mapped to $D$. Thus, $S_{int}, D, M_a$ are collinear.
+
+Let $D'$ be the reflection of $D$ across the angle bisector $AI$. Since $S_{int}$ and $I$ lie on $AI$, the reflection of the line $S_{int} D M_a$ across $AI$ is the line $S_{int} D' M_a'$, where $M_a'$ is the reflection of $M_a$ across $AI$. $M_a'$ is the midpoint of the arc $BC$ of $(O)$ containing $A$. Thus, $S_{int}, D', M_a'$ are collinear.
+
+Now consider the circle $(W_a)$ passing through $B, C$ and tangent to $(I)$ at $X$. Let $h_X$ be the homothety centered at $X$ that maps $(I)$ to $(W_a)$. The tangent to $(I)$ at $D$ is $BC$. Its image under $h_X$ is the tangent to $(W_a)$ at $h_X(D)$, which must be parallel to $BC$. The points on $(W_a)$ where the tangent is parallel to $BC$ are the midpoints of the arcs $BC$ of $(W_a)$. Let $M_{W}$ be the midpoint of the arc $BC$ of $(W_a)$ not containing $X$. Then $h_X(D) = M_{W}$, so $X, D, M_{W}$ are collinear.
+
+Let $S_{Wa,O}$ be the internal center of similitude of $(W_a)$ and $(O)$. Since both circles pass through $B$ and $C$, their internal center of similitude $S_{Wa,O}$ is the intersection of the lines connecting the endpoints of parallel diameters. Specifically, the homothety centered at $S_{Wa,O}$ maps $M_{W}$ to $M_a'$. Thus, $S_{Wa,O}, M_{W}, M_a'$ are collinear.
+
+By the Monge-d'Alembert Three Circles Theorem, the external center of similitude of $(I)$ and $(W_a)$ (which is $X$), the internal center of similitude of $(W_a)$ and $(O)$ (which is $S_{Wa,O}$), and the internal center of similitude of $(O)$ and $(I)$ (which is $S_{int}$) are collinear. Thus, $X, S_{Wa,O}, S_{int}$ are collinear.
+
+Since $S_{Wa,O}$ and $M_a'$ are both centers of similitude of $(W_a)$ and $(O)$ (one internal, one external), and $S_{int}$ is the internal center of similitude of $(O)$ and $(I)$, the collinearity of $X, S_{Wa,O}, S_{int}$ and the properties of the reflection $D'$ imply that $X$ must lie on the line $S_{int} D'$. Specifically, the line $D'X$ passes through the internal center of similitude $S_{int}$ of $(O)$ and $(I)$.
+
+By symmetry, the lines $E'Y$ and $F'Z$ also pass through $S_{int}$. Since $S_{int}$ lies on the line $OI$, the lines $D'X, E'Y, F'Z$ are concurrent at $S_{int}$ on the line $OI$.

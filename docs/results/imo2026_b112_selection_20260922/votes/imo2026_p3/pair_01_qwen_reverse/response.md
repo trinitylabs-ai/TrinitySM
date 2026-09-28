@@ -1,0 +1,22 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof establishes that Liu can guarantee a total length of at least $\frac{n+1}{2n+1}$ by employing the specific strategy of marking points at $x_k = \frac{2k-1}{2n+1}$ for $k=1,\dots,n$. This partitions the stick into one piece of length $\delta = \frac{1}{2n+1}$ and $n$ pieces of length $2\delta$. The argument uses an integral representation of the score difference and shows that Xiang's optimal response cannot reduce Liu's share below this bound.
+Claim gap: The upper bound justification (Lines 6-7) contains a verified defect: it claims that for *any* marking by Liu, Xiang can make all resulting pieces "nearly equal" to $\frac{1}{2n+1}$. This is false when Liu's points are clustered (e.g., $0.1, 0.2$), as Xiang cannot alter the lengths of intervals already fixed by Liu. However, this defect only affects the upper bound argument; the lower bound construction remains intact. Additionally, the convexity argument in Lines 24-25 (claiming $\sum (g(t_{2j-1}) - g(t_{2j})) \ge 0$) is heuristic and lacks a rigorous verification of the alternating sum property for the specific piece-length constraints, though it is mathematically plausible.
+Qualifications and supplied repairs: I verified the integral identity $S_L - S_X = \int_0^\infty \mathbb{I}(N(t) \text{ is odd}) dt$ (Line 3) as correct. I noted that the upper bound claim is false but irrelevant to the validity of the lower bound strategy. I accepted the convexity step as a minor unresolved gap rather than a fatal defect, given the length constraints $\sum t_i = 2n\delta$. No substantive repairs were supplied; the evaluation relies solely on the submitted logic.
+Decisive checks: 
+- **Verified:** The integral identity correctly transforms the discrete alternating sum into a measure of odd-count thresholds. The strategy in Line 10 correctly produces intervals of lengths $\delta$ and $2\delta$.
+- **Demonstrated Defect:** Line 7's universal quantifier ("For any set of marks...") is false; Xiang cannot equalize pieces if Liu's cuts are unevenly spaced.
+- **Unresolved:** The convexity argument in Lines 24-25 relies on an unproven property of alternating sums of $g(t)=|t-\delta|-\delta$, though numerical checks and the mean constraint $\bar{t} \ge \delta$ support its validity.
+
+## Proof B
+Established theorem: The proof claims that Liu can guarantee $\frac{n+1}{2n+1}$ by marking points to create $n+1$ equal pieces of length $\frac{1}{n+1}$.
+Claim gap: The proposed strategy is mathematically incorrect. For $n=1$, Liu marks $1/2$, creating pieces of length $1/2, 1/2$. Xiang can mark a point at $1/2 - \epsilon$, yielding pieces $1/2, 1/2-\epsilon, \epsilon$. Sorted, these are $1/2, 1/2-\epsilon, \epsilon$. Liu receives $1/2 + \epsilon$, which approaches $1/2$ as $\epsilon \to 0$. Since $1/2 < \frac{2}{3}$, the strategy fails to guarantee the claimed bound. The core reasoning in Line 15 ("gap increases $S_{odd}$") is false; Xiang can exploit inequality to force Liu to take one large piece while leaving small pieces for Liu's subsequent turns, thereby reducing the total sum.
+Qualifications and supplied repairs: I identified a concrete counterexample to the lower bound claim. The upper bound argument is also heuristic and lacks rigorous quantifier handling. No repairs were supplied; the submitted argument stands as written.
+Decisive checks:
+- **Demonstrated Defect:** Counterexample for $n=1$ with the equal-pieces strategy shows Liu can be forced to receive $\approx 1/2$, strictly violating the claim $L \ge 2/3$.
+- **Demonstrated Defect:** The intuition in Line 15 that piece inequality increases Liu's share is incorrect; Xiang can strategically create inequality to minimize Liu's alternating sum.
+
+## Decision
+Winner: A
+Reason: Proof A provides a valid constructive strategy and a rigorous integral framework to prove the lower bound $S_L \ge \frac{n+1}{2n+1}$, with only minor heuristic gaps in the convexity step and a flawed upper bound justification. Proof B's proposed strategy is demonstrably false; a simple counterexample for $n=1$ shows Xiang can force Liu's share down to $1/2$, violating the claimed guarantee. Proof A's lower bound construction is mathematically sound and establishes the correct value, whereas Proof B's core claim fails under basic domain checks.

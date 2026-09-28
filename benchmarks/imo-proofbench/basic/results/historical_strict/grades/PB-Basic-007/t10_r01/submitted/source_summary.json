@@ -1,0 +1,60 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T21:45:02.150406+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 7,
+  "problem_id": "PB-Basic-007",
+  "case_id": "PB-Basic-007.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/problems/PB-Basic-007.json",
+  "reference_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/references/PB-Basic-007.md",
+  "proof_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/proofs/PB-Basic-007/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "28d044bf4a1e7e4b5cf5d0edf6ff710625da0ac2cffe2bed8eaadfe5fc2da09f",
+  "reference_sha256": "1662e5516f5dbc92debb447c2e0a0da6f00ba833f6da043f0fb09093e86df4c6",
+  "proof_sha256": "485f5acea013007bd0f98f5df7794d39c985b1e7954d6352bbf9d2e39abf4615",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "4310784e5fc3c310ebaaa7de17e98ba61275c55b46669bf5d8cdcf19d9bea15b",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proof incorrectly infers from \\(a_{n-1}=a_n\\) and the divisibility chain that all preceding differences vanish; a nonzero integer can divide \\(0\\), so equality cannot be propagated backward.",
+    "summary": "The stated answer is correct, and the cases \\(n=1\\) and \\(n=2\\) are substantially handled. However, the essential exclusion of every \\(n\\ge3\\) is not proved: it relies on invalid inequalities, uncontrolled cancellation in \\(Q_n\\), and an assertion that all remaining small cases give similar contradictions.",
+    "strengths": [
+      "Correctly verifies the solution \\((n,a_0,a_1,a_2)=(2,-1,1,3)\\).",
+      "Correctly identifies the divisibility relation between consecutive differences.",
+      "Gives meaningful algebraic analysis for \\(n=1,2\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The backward propagation from \\(a_{n-1}=a_n\\) to equality of all earlier terms is invalid."
+      },
+      {
+        "severity": "major",
+        "description": "The \\(n=3\\) argument contains unsupported bounds and a false claimed contradiction; for example, \\(a_2\\ge103\\) does not contradict \\(a_2\\ge9\\) and \\(a_2<a_1\\)."
+      },
+      {
+        "severity": "major",
+        "description": "For \\(n\\ge4\\), the estimate \\(|Q_n|\\approx3|a_{n-1}|^{n-1}\\) ignores possible cancellation from the other coefficients and is not a proof."
+      },
+      {
+        "severity": "major",
+        "description": "The remaining bounded cases are dismissed by “similar contradictions” without enumeration or argument, leaving the central \\(n\\ge3\\) case unresolved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

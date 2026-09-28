@@ -1,0 +1,104 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Adrian is lining up $n \geq 2$ toy cars in a row. Each car has a width and length, and no two cars have the same width or length. Initially, the cars are arranged in increasing order of length from left to right. Adrian repeatedly does the following: he chooses some two adjacent cars where the left car is shorter in length and greater in width than the right car, and he swaps them. He keeps doing this until no further moves are possible. Prove that no matter how Adrian chooses his swaps, the procedure will eventually terminate, and in the end, the cars will be sorted in increasing order of width from left to right.
+
+**GROUND-TRUTH SOLUTION**
+
+Define an inversion to be a pair of cars where the one on the left is wider than the one on the right. Clearly, each move strictly decreases the number of inversions, so the procedure must terminate.
+
+ Now, suppose for sake of contradiction that we can make no more moves, but the cars are not sorted in increasing order of width. Consider the smallest index $i$ such that car $i$ is wider than car $i + 1$. Since we cannot make any further swaps, it must also be the case that car $i$ is longer than book $i + 1$. This means that originally, car $i$ was to the right of car $i + 1$, and at some point they switched relative positions. However, this is not possible because the rules prevent us from ever swapping two books when one is both taller and wider than the other.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Found an increasing quantity (e.g. the number of inversion according to the width or length)
+ 2. Tried to use minimality argument by taking the first book not sorted by width.
+(Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that the procedure eventually terminates and that the cars end up sorted in increasing order of width, we analyze the relative ordering of the cars based on their lengths and widths.
+
+### 1. Termination of the Procedure
+
+Let the $n$ cars be denoted by $C_1, C_2, \dots, C_n$, where the index $i$ refers to the car's initial position. Since the cars are initially arranged in increasing order of length, we have $L_1 < L_2 < \dots < L_n$. Thus, for any two cars $C_a$ and $C_b$, the condition $L_a < L_b$ is equivalent to $a < b$.
+
+A swap occurs between two adjacent cars $C_a$ and $C_b$ (where $C_a$ is currently to the left of $C_b$) if and only if $L_a < L_b$ and $W_a > W_b$. In terms of initial indices, this means $a < b$ and $W_a > W_b$.
+
+We define a "mixed inversion" as a pair of cars $(C_a, C_b)$ such that $a < b$, $C_a$ is currently to the left of $C_b$, and $W_a > W_b$. Let $M$ be the set of all such mixed inversions, and let $|M|$ be the number of such pairs.
+
+Whenever Adrian performs a swap on adjacent cars $C_a$ and $C_b$ (with $C_a$ on the left), the conditions for the swap are precisely that $a < b$ and $W_a > W_b$. After the swap, $C_b$ is to the left of $C_a$. This specific pair $(C_a, C_b)$ is no longer a mixed inversion. Since the swap only changes the relative order of $C_a$ and $C_b$, the relative order of any other pair of cars remains unchanged. Thus, each swap reduces the value of $|M|$ by exactly 1. Since $|M|$ is a non-negative integer, the procedure must eventually terminate.
+
+### 2. Final State of the Cars
+
+The procedure terminates when no further swaps are possible. This happens if and only if no two adjacent cars $C_i, C_{i+1}$ satisfy $L_i < L_{i+1}$ and $W_i > W_{i+1}$. This implies that $|M| = 0$, meaning for all pairs $(a, b)$ with $a < b$ and $W_a > W_b$, the car $C_b$ must be to the left of $C_a$ in the final arrangement.
+
+To show that the final arrangement is sorted by width, we consider any two cars $C_a$ and $C_b$ and assume without loss of generality that $W_a > W_b$. We must prove that $C_b$ is to the left of $C_a$ in the final state.
+
+**Case 1: $a < b$**
+In this case, $L_a < L_b$. Since $W_a > W_b$, the pair $(C_a, C_b)$ is a mixed inversion if $C_a$ is to the left of $C_b$. However, at termination, $|M| = 0$, so $C_a$ cannot be to the left of $C_b$. Thus, $C_b$ must be to the left of $C_a$.
+
+**Case 2: $a > b$**
+In this case, $L_a > L_b$. Initially, since the cars are sorted by length, $C_b$ is to the left of $C_a$. For $C_a$ to move to the left of $C_b$, they must at some point be adjacent and swap. A swap between two adjacent cars $C_L$ and $C_R$ occurs if $L_L < L_R$ and $W_L > W_R$.
+- If $C_b$ is on the left and $C_a$ is on the right: we have $L_b < L_a$, but we assumed $W_a > W_b$, so $W_b < W_a$. The condition $W_L > W_R$ is not met.
+- If $C_a$ is on the left and $C_b$ is on the right: the condition $L_L < L_R$ is not met because $L_a > L_b$.
+Thus, $C_a$ and $C_b$ can never swap. Their relative order remains the same as the initial state, so $C_b$ remains to the left of $C_a$.
+
+In both cases, if $W_a > W_b$, then $C_b$ ends up to the left of $C_a$. This implies that the final arrangement of cars is sorted in increasing order of width from left to right.
+
+$\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

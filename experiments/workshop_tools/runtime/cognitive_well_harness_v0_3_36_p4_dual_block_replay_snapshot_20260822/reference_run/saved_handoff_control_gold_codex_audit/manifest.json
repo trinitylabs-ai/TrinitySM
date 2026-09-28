@@ -1,0 +1,31 @@
+{
+  "schema": "p4-qwen36-exact-branch-replay-gold-sol-xhigh-manifest-v1",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "reference_informed": true,
+  "generation_feedback": false,
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "candidate_count": 2,
+  "generation_scores_visible": false,
+  "historical_strict_scale": {
+    "score_5_disallowed": true,
+    "new_math_gap_cap": 3
+  },
+  "concurrency": 2,
+  "candidates": [
+    {
+      "candidate_id": "replay.p4_two_block",
+      "layout": "p4_two_block",
+      "source_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/resolved_proof.md",
+      "proof_sha256": "457c9f964ad249ce7ad00d1fb12b8a941f25bcffed0bfb16147c2dee16a31282"
+    },
+    {
+      "candidate_id": "replay.p4_three_block",
+      "layout": "p4_three_block",
+      "source_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/resolved_proof.md",
+      "proof_sha256": "13f58a927a37b2d8f60a67d26a0af2bf630262d3820e1e00954a4b360b00f1c7"
+    }
+  ]
+}

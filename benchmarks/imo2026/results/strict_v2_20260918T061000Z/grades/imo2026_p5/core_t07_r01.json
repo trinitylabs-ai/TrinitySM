@@ -1,0 +1,53 @@
+{
+  "problem_id": "imo2026_p5",
+  "candidate": "t07_r01",
+  "group": "core",
+  "grader_candidate": "core_t07_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t07_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20.md",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+  "v1_score": 7,
+  "v1_grade": "docs/public_release/evidence/grades/acdbf40a31f9f2fdfc2dcf28fc3f68a5c32bcd9b54d4f489a31bb17bb5c51375.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t07_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:19:02.120326+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; no grading-rule cap applies.",
+    "summary": "The submission correctly proves that the solutions are exactly f(x)=x+c with c≥0. It establishes orbit invariance of g=f−id, nonnegativity of g, equality of all positive values of g through a valid tail comparison on Ran(f), and then excludes coexistence of the values 0 and c by connectedness. The converse is also verified correctly.",
+    "strengths": [
+      "Correctly derives f(f(y))=2f(y)−y and hence g(f(y))=g(y).",
+      "Correctly uses forward iterates to prove g≥0.",
+      "The comparison estimate on Ran(f) validly forces all positive defect values to coincide; the brief limiting inference is routine and justified by the unbounded forward orbit.",
+      "The openness and connectedness argument correctly rules out mixed defect values.",
+      "Both inequalities are checked correctly for f(x)=x+c."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "9553f13ff48b093bd69959c4e7a1186c11928304c88c832defed5683a1e45b5f",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

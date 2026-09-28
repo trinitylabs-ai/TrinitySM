@@ -1,0 +1,51 @@
+{
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_2ceab36c39b8dfdc969329dbb29913ae",
+  "pass_index": 1,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The submitted proof correctly establishes that Mulan can guarantee victory exactly when θ=180°/n for an integer n≥2. Both sufficiency and necessity are rigorously supported by valid strategies and invariants.",
+    "strengths": [
+      "Correctly parameterizes every admissible cut and its two resulting angle triples.",
+      "For θ=180°/n, proves that an angle in W can be reduced inductively to θ and gives a valid first cut forcing both children into W.",
+      "For all other θ, establishes that every cut of a triangle avoiding W has at least one child avoiding W, yielding a valid perpetual avoidance strategy for Shan-Yu.",
+      "Correctly handles the special case n=2 and the grid-point argument for n≥3.",
+      "The existence of a starting triangle avoiding the finite set W is routine and sufficient as stated."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "proof_sha256": "2ceab36c39b8dfdc969329dbb29913ae4db1341a5c6e24c132d627cbbe66cba8",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "evidence_sha256": "0885d4ef186ebc5ec3f253a292df992fd72c423319f656c9411987f6d72d340b",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p4/t10_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "8833407654b10a72d59f6c724822267412c85d95f9e28ec528edaae336c378ca",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "a852c0d906bf7b5c33df87da9a32dab326758f8bfa6ba6be7296b844ad1b4d94",
+    "raw_response_1.txt": "72a1209dbf2cb9ceed4d6ed764f950176e7a1726b0b5c707f0af07ff19eb64f1",
+    "summary.json": "06c3a86799678663de8876ffa30f00c441ac56a8dc4cc0e4c8b79d4de7528915"
+  }
+}

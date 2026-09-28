@@ -1,0 +1,106 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In Shoreline Amphitheatre, 2024 Googlers each hold up to five flags of various colors. Any group of three Googlers will always have at least two people holding flags of the same color. Prove that one specific flag color is held by at least 200 Googlers.
+
+**GROUND-TRUTH SOLUTION**
+
+Take any Googler. He holds at most 5 flags. If everyone holds at least one of those flags but not more than 199 people speak have each flag, then there are at most 1 + 5·198 = 991 Googlers. But there are 2024 Googlers, so we must be able to find someone who holds none of the 5 flags. He too has at most 5 flags, giving a total of 10 between the two Googlers selected. Now we are told that every other Googler holds at least one of these 10 flags. So if no more than 199 Googlers holds each flag, then there are at most 2 + 10·198 = 1982 Googlers. But there are 2024 Googlers, so one of the 10 flags must be held by 200 or more people.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Established that there is a pair of people not sharing a flag of the same color.
+ (Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that one specific flag color is held by at least 200 Googlers, we model the problem using graph theory and the properties of intersecting families of sets.
+
+**1. Graph Construction**
+Let $V$ be the set of $n = 2024$ Googlers. We define a graph $G = (V, E)$ where an edge exists between two Googlers $i$ and $j$ if and only if they share at least one flag color. Let $S_i$ denote the set of colors of the flags held by Googler $i$. By the problem statement, $|S_i| \le 5$ for all $i \in V$.
+The condition that any group of three Googlers contains at least two people holding flags of the same color implies that for any three vertices $\{i, j, k\} \subseteq V$, at least one pair is connected by an edge. In graph-theoretic terms, this means the independence number of the graph is $\alpha(G) \le 2$.
+
+**2. Structural Property of $G$**
+Let $v$ be any vertex in $V$. Let $N(v)$ be the set of neighbors of $v$, and let $N^c(v) = V \setminus (N(v) \cup \{v\})$ be the set of non-neighbors of $v$.
+For any two vertices $u, w \in N^c(v)$, the set $\{v, u, w\}$ is a group of three vertices. Since $\alpha(G) \le 2$, at least one pair among them must be connected. However, by the definition of $N^c(v)$, $v$ is not connected to $u$ and $v$ is not connected to $w$. Therefore, $u$ and $w$ must be connected. This implies that $N^c(v)$ is a clique in $G$.
+
+**3. Intersecting Family Lemma**
+We use the following lemma: If $\mathcal{F} = \{S_1, S_2, \dots, S_m\}$ is a collection of sets such that every pair $S_i, S_j$ has a non-empty intersection ($S_i \cap S_j \neq \emptyset$) and $|S_i| \le k$ for all $i$, then there exists an element contained in at least $\frac{m+k-1}{k}$ sets.
+
+*Proof:* Pick any set $S_1 \in \mathcal{F}$. Since every other set $S_j \in \mathcal{F} \setminus \{S_1\}$ intersects $S_1$, and $S_1$ contains at most $k$ elements, by the Pigeonhole Principle, at least one element $c \in S_1$ must be contained in at least $\lceil \frac{m-1}{k} \rceil$ of the other sets. Including $S_1$ itself, the element $c$ is contained in at least $1 + \frac{m-1}{k} = \frac{m+k-1}{k}$ sets. $\square$
+
+**4. Bounding the Maximum Color Frequency**
+Let $\omega$ be the maximum number of Googlers who hold a flag of the same color. That is, $\omega = \max_c |V_c|$, where $V_c = \{i \in V : c \in S_i\}$.
+A Googler $u$ is a neighbor of $v$ if they share at least one color. Thus, $N(v)$ is the union of the color-cliques $V_c$ for all $c \in S_v$:
+$$N(v) = \bigcup_{c \in S_v} (V_c \setminus \{v\})$$
+Since $|S_v| \le 5$ and $|V_c| \le \omega$ for all $c$, we have $|N(v)| \le 5(\omega - 1)$.
+Now, consider the clique $N^c(v)$. The sets $\{S_u : u \in N^c(v)\}$ form an intersecting family of sets of size at most $k=5$. Applying the lemma with $m = |N^c(v)|$:
+$$\omega \ge \frac{|N^c(v)| + 5 - 1}{5} = \frac{|N^c(v)| + 4}{5}$$
+
+**5. Final Synthesis**
+We know $|N^c(v)| = n - 1 - |N(v)|$. Substituting the bound for $|N(v)|$:
+$$|N^c(v)| \ge 2024 - 1 - 5(\omega - 1) = 2023 - 5\omega + 5 = 2028 - 5\omega$$
+Substituting this into the bound for $\omega$:
+$$\omega \ge \frac{(2028 - 5\omega) + 4}{5} = \frac{2032 - 5\omega}{5} = \frac{2032}{5} - \omega$$
+Adding $\omega$ to both sides:
+$$2\omega \ge \frac{2032}{5} \implies \omega \ge \frac{1016}{5} = 203.2$$
+Since $\omega$ must be an integer, $\omega \ge 204$. Thus, at least one flag color is held by at least 204 Googlers, which is greater than 200.
+
+(Note: If $S_v = \emptyset$ for some $v$, then $N(v) = \emptyset$, and $N^c(v)$ contains all other $n-1$ Googlers. In this case, $\omega \ge \frac{2023+4}{5} = 405.4$, so $\omega \ge 406$, which also satisfies the requirement.)
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

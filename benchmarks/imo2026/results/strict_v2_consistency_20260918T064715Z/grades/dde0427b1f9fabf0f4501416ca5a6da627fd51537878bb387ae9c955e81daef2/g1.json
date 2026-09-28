@@ -1,0 +1,49 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "dde0427b1f9fabf0f4501416ca5a6da627fd51537878bb387ae9c955e81daef2",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "940cfe58a4c7c31fd8e541a7171f4e69b0184eb15c4d9efbe434fdaf6fa0bd99",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2887358eeb8822ebd0decfa8ea589f04d578d3bf612d0d9de55392b440fd6736",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete and no grading-rule cap applies.",
+    "summary": "The submission gives a complete proof. The pair consisting of the number of entries greater than 1 and the total sum of prime valuations strictly decreases in the stated lexicographic sense, proving termination while preserving the existence of at least one entry greater than 1. Primewise, the gcd of all valuations is invariant under the Euclidean-algorithm transformation, and at termination these invariants uniquely determine the sole nonunit entry.",
+    "strengths": [
+      "Correctly computes the valuation transformation as (a,b) -> (min(a,b), |a-b|).",
+      "Provides a valid well-founded descent argument for termination.",
+      "Correctly proves that at least one entry greater than 1 persists, so a terminal board has exactly one such entry.",
+      "Correctly identifies and applies the invariant gcd of the prime valuations.",
+      "Reconstructs the terminal integer uniquely from its prime valuations."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:33:22.015037+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00020",
+  "native_rejection_count": 0
+}

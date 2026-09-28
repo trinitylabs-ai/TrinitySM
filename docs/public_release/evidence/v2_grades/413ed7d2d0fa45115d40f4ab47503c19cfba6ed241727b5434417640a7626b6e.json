@@ -1,0 +1,57 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "6bab70b1a8f4e807b43c41cc3dbbb7719ef7b8644a83b45171cc2785c53ca6ba",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "1e760116b2f13157670ceb3f33b16f1f7ecfb228600fc868e8e22a4626e7c2f9",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the sufficiency argument for k≥3, the claim that every open interval of length at least θ contains a multiple of θ is false when its length is exactly θ and its endpoints are consecutive multiples. Here the only problematic case is k=3 and α=60°, which forces the triangle to be equilateral and hence already terminal. Adding this case split repairs the proof directly; no Rule A–F ceiling applies.",
+    "summary": "The classification θ=180°/k for integers k≥2 is correct. The angle-peeling induction and the safe-state invariant in the necessity direction are sound. Apart from a minor endpoint oversight in the interval argument, the proof establishes both directions.",
+    "strengths": [
+      "Correctly shows that an angle nθ can be reduced to θ by repeatedly splitting off θ.",
+      "Provides a valid one-cut construction placing supplementary multiples of θ in the two child triangles.",
+      "Correctly enumerates the four ways both children could contain multiples of θ and derives a contradiction, yielding Shan-Yu's invariant strategy.",
+      "Reaches the complete and correct classification."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The open-interval lattice-point assertion overlooks the equality case; this is harmless after explicitly separating triangles already containing an angle in W."
+      },
+      {
+        "severity": "cosmetic",
+        "description": "The existence of an initial triangle with no angle in W is asserted without an example. It is routine: the equilateral triangle works, since 60°=nθ would imply 180°=3nθ."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:41:09.908376+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

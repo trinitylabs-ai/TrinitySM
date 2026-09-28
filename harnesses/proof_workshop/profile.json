@@ -1,0 +1,109 @@
+{
+  "completed_proof_precedence": [
+    "refinement_3",
+    "refinement_2",
+    "refinement_1",
+    "lazy_checked",
+    "raw"
+  ],
+  "cross_lane_voter": {
+    "calls_for_four_lanes": 24,
+    "external_grades_visible": false,
+    "failure_policy": "preserve_lane_finals_no_winner_until_all_votes_valid",
+    "mechanical_recovery": "missing-decisive-checks-label-existing-line-citations-v1",
+    "models": [
+      "gemma",
+      "qwen"
+    ],
+    "orders": [
+      "forward",
+      "reverse"
+    ],
+    "pairing": "full_round_robin",
+    "policy_id": "cross-lane-symmetric-obligation-audit-prompt-v2",
+    "prompt": "symmetric_mathematical_obligation_audit",
+    "reference_solutions_visible": false,
+    "scope": "audited_lane_finals",
+    "temperature": 0.2,
+    "tie_break": "recorded_seed_derived_candidate_order",
+    "timeout_policy": {
+      "answer_only_max_tokens": 8192,
+      "answer_only_thinking_enabled": false,
+      "answer_only_timeout_seconds": 120,
+      "failure_policy": "preserve_outputs_and_leave_vote_invalid",
+      "fresh_retries_after_timeout": 0,
+      "logical_limit_seconds": 600,
+      "max_answer_only_continuations": 1,
+      "missing_valid_initial_answer": "one_answer_only_continuation_from_saved_reasoning_and_answer",
+      "ordinary_bf_unchanged": true,
+      "policy": "logical-600s-initial-else-one-answer-only-120s-v1",
+      "scope": "cross_lane_comparison_only",
+      "valid_initial_answer": "reuse_without_model_call"
+    },
+    "workers_per_model": {
+      "gemma": 12,
+      "qwen": 12
+    },
+    "workers_total": 24
+  },
+  "draft": {
+    "expansion_bf_temperature": 0.4,
+    "expansion_temperature": 0.4,
+    "lazy_check_temperature": 0.1,
+    "strategy": "original"
+  },
+  "experimental_tools": false,
+  "external_grading": false,
+  "final_submission_policy": "raw_unanimous_audited_r3_else_r2_then_last_completed",
+  "harness_variant": "B",
+  "implementation_release": "1.12.0",
+  "name": "Workshop Pipeline",
+  "post_resolver_audit": {
+    "body_validation": "diagnostic_only",
+    "decision_rule": "four_bound_explicit_raw_acceptances",
+    "external_grades_visible": false,
+    "failure_policy": "retain_R2",
+    "identical_proofs": "skip_model_calls",
+    "mechanical_validation": "bound-raw-unanimous-validation-v1",
+    "model_hash_echo_used": false,
+    "models": [
+      "gemma",
+      "qwen"
+    ],
+    "orders": [
+      "forward",
+      "reverse"
+    ],
+    "policy_id": "r2-r3-bound-raw-unanimous-4of4-v1",
+    "prompt": "comparative_verified_progress",
+    "reference_solutions_visible": false,
+    "required_approvals": 4,
+    "scope": "refinement_2_to_3",
+    "temperature": 0.2,
+    "workers_per_model": {
+      "gemma": 12,
+      "qwen": 12
+    },
+    "workers_total": 24
+  },
+  "previous_release": "1.11.0",
+  "refinement_bf_policy": "refinement-bf-role-cues-v1",
+  "refinement_failure_policy": "submit_last_completed_proof_and_continue",
+  "scheduling_policy": "finish_each_problem_with_last_completed_proof",
+  "schema": "workshop-pipeline-v1",
+  "stages": [
+    "draft",
+    "refinement_1",
+    "refinement_2",
+    "refinement_3"
+  ],
+  "supported_releases": [
+    "1.7.0",
+    "1.8.0",
+    "1.9.0",
+    "1.10.0",
+    "1.11.0",
+    "1.12.0"
+  ],
+  "terminal_stage": "refinement_3"
+}

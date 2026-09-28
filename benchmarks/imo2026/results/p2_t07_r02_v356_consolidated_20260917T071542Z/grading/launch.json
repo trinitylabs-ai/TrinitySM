@@ -1,0 +1,47 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/scripts/score.py",
+    "--proof-task",
+    "imo2026_p2:t07_r02=/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/proofs/imo2026_p2/t07_r02/tool_rewrite.md",
+    "--problem-root",
+    "/opt/proof-workshop/benchmarks/imo2026/problems",
+    "--reference-root",
+    "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817",
+    "--output-dir",
+    "/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/grading/work/strict_tool_rewrite/scores",
+    "--workers",
+    "1"
+  ],
+  "cwd": "/opt/proof-workshop",
+  "started_at": "2026-09-17T07:40:13.998469+00:00",
+  "proof_sha256": "5d20d1162705a7f74bf72dc752f0235a6871519a43f906021988ca9fde348817",
+  "skill_inputs": {
+    "SKILL.md": {
+      "path": "/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/SKILL.md",
+      "sha256": "436cf44164da18d11f0ba27e2f28479dec867de8009adc220d6432c7771b9bff"
+    },
+    "rubric.md": {
+      "path": "/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/references/rubric.md",
+      "sha256": "e450542dd2a56e3d37470a78fadac4582af5d94090caef88bd712b7814701e19"
+    },
+    "score.py": {
+      "path": "/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/scripts/score.py",
+      "sha256": "7a4cfb1c678717d045889eb58fd0714a9932c8a2f29902ed210a363a15d8a12a"
+    },
+    "runner.py": {
+      "path": "/opt/proof-workshop/scripts/run_v097_p145_gold_informed_calibrated_codex_scores_20260827.py",
+      "sha256": "f9df6f07c15b0189e483a23a141412ce9e09b6e5b5ed70a4012130e2cc61eeb3"
+    },
+    "contract.py": {
+      "path": "/opt/proof-workshop/scripts/external_olympiad_scorer/contract.py",
+      "sha256": "bae2836fe5e498b23b8607a4a330fa878b195f5d99e980c418a2f4aecf6566d4"
+    },
+    "grade_schema.json": {
+      "path": "/opt/proof-workshop/scripts/external_olympiad_scorer/grade_schema.json",
+      "sha256": "6c731fb4b521bebf050866086e958d343988a318f8f4118640d8bfef93dc4302"
+    }
+  },
+  "isolation": "one proof, problem, and gold reference; no pipeline reviews or scores"
+}

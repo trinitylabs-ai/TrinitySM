@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-026",
+  "problem": "Let $\\triangle ABC$ be an inscribed triangle in $(O)$ and circumscribed\n around $(I)$. The incircle $(I)$ touches $BC,CA,AB$ at $D,E,F$,\n respectively. Construct the circle $(W_{a})$ passing through $B,C$\n and tangent to $(I)$ at $X$, and let $D'$ be the reflection of\n $D$ across $AI$. Define $Y,Z,E',F'$ similarly. Prove that the lines\n $D'X,E'Y,F'Z$ are concurrent on the line $OI$."
+}

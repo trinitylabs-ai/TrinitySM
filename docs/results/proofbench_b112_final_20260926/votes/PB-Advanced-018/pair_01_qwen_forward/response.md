@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Under the unverified assumption that $k > n^2/2$ (forcing $q=1$), the problem reduces to finding the minimum matching size $f(n)$ whose removal eliminates all paths of length $n-1$. Within this restricted regime, the proof establishes the relation $a(n) = n^2 - f(n) + 1$ and derives $L=1$ contingent on $f(n) \le n+1$.
+Claim gap: The proof fails to justify why the threshold $a(n)$ must lie in the $q=1$ regime. The problem requires the minimum $k$ guaranteeing a snake for *all* valid colorings. Colorings with $q \ge 2$ allow larger monochromatic components, removing more edges and making it strictly easier to block long paths. Ignoring these regimes means the derived $a(n)$ is an unjustified overestimate. Additionally, the claim that a matching of size $O(n)$ blocks all paths of length $n-1$ is mathematically false.
+Qualifications and supplied repairs: NONE. The regime restriction and the matching-size bound are substantive missing justifications that cannot be repaired without fundamentally altering the argument.
+Decisive checks: 
+- Line 5: Restricts analysis to $k > n^2/2$ without justification. This is a demonstrated defect; the true threshold is determined by the hardest-to-block colorings, which utilize larger color classes ($q \ge 2$) to remove more edges.
+- Line 22: Claims removing a matching of size $f(n) \le n+1$ ensures the longest path in $G \setminus M$ is at most $n-2$. Demonstrated defect: An $n \times n$ grid has $\sim 2n^2$ edges. Removing $O(n)$ edges leaves a graph with average degree $\sim 4$ and diameter $\Theta(n)$. Standard path-existence results guarantee paths of length $\Omega(n^2)$, not bounded by $O(n)$. A matching of size $O(n)$ cannot partition the grid into components of size $< n$, so the claim is false.
+- Line 14: Deduces $L=1$ from the false asymptotic $a(n) \sim n^2$. The quantifier shift from "minimum $k$ for all colorings" to "minimum $k$ for matchings" invalidates the conclusion.
+
+## Proof B
+Established theorem: Identifies the asymptotic threshold $a(n) = \lfloor n^2/3 \rfloor + 1$ and rigorously verifies that $L=3$ satisfies the target inequality. The algebraic derivation (lines 10–13) is exact and matches the problem's bound structure.
+Claim gap: The upper bound (line 3) cites a "known result" that removing a max-degree-2 subgraph from a grid preserves a path of length $n-1$, without proof. The lower bound construction (line 5) sketches a $1 \times 3$ tiling but does not rigorously prove that the inter-component graph $G \setminus E_{mono}$ has all components of size $< n$. These are local gaps in construction details and graph-theoretic justification.
+Qualifications and supplied repairs: NONE. The gaps are standard Olympiad-level omissions (sketching a tiling barrier, citing grid connectivity properties). The core asymptotic identification and algebraic verification are complete and self-consistent.
+Decisive checks:
+- Lines 3–4: Correctly links $k \approx n^2/3$ to $q=2$ and max monochromatic degree 2. The claim that the remainder graph retains a path of length $n-1$ is plausible for highly connected grids and aligns with extremal graph theory, though unproven here. Unresolved check, but not fatal.
+- Lines 5–6: The $1 \times 3$ tiling construction correctly targets the regime where monochromatic edges are dense enough to potentially block snakes. The claim that components of $G \setminus E_{mono}$ are size $< n$ is the critical blocking mechanism; while not fully detailed, it is a valid combinatorial strategy consistent with the problem's $O(n)$ error term. Unresolved check.
+- Lines 10–13: Algebraic verification is flawless. $|3(\lfloor n^2/3 \rfloor + 1) - n^2| = |3 - (n^2 \bmod 3)| \in \{1,2,3\} \le n + 2\sqrt{n} + 3$ for $n \ge 5$. Verified fact.
+
+## Decision
+Winner: B
+Reason: Proof B correctly identifies the asymptotic regime ($a(n) \sim n^2/3$) dictated by the problem's structure and provides a mathematically sound algebraic verification that $L=3$ satisfies the inequality. Its gaps are local (unverified tiling details and a cited connectivity result), which do not undermine the core asymptotic identification. Proof A contains fatal defects: it arbitrarily restricts analysis to the $q=1$ regime without justification, and its central claim that a matching of size $O(n)$ blocks all paths of length $n-1$ is demonstrably false (removing $O(n)$ edges from an $n \times n$ grid leaves paths of length $\Omega(n^2)$). B's verified progress and correct asymptotic identification decisively outweigh A's regime misidentification and false graph-theoretic claim.

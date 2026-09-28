@@ -1,0 +1,66 @@
+{
+  "problem_id": "imo2026_p3",
+  "submission_id": "proof_616b8f92c9d0f222476a7b3cdbc33fe7",
+  "pass_index": 2,
+  "score": 1,
+  "verdict": "incorrect",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive error is the reversed inequality “1/2 ≥ (n+1)/(2n+1)”; in fact (n+1)/(2n+1)>1/2. For example, when n=1, the proposed equal-halves marking followed by zero Xiang marks gives Liu only 1/2, not 2/3. This is a false load-bearing step (Rule C). Moreover, the final formula itself is false, so Rule A caps the score at 2.",
+    "summary": "The claimed value (n+1)/(2n+1) is incorrect; the correct value is 2^n/(2^{n+1}-1). In particular, for n=2 the submission claims 3/5, whereas Xiang can always hold Liu to at most 4/7. One certificate uses the eight subset sums of Liu's at most three initial gaps: two consecutive subset sums differ by δ≤1/7, and at most two splits can pair all resulting pieces except possibly one piece of length δ, giving payoff at most (1+δ)/2≤4/7. Thus the answer is demonstrably false, and neither the proposed lower bound nor the asserted upper strategy is proved.",
+    "strengths": [
+      "Correctly models Xiang's cuts as refinements of Liu's initial pieces and counts at most 2n+1 final pieces.",
+      "Correctly observes that optimal alternating selection corresponds to the sum of odd-ranked lengths.",
+      "Correctly derives the basic bound that the odd-ranked sum is at least 1/2."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The proposed equal-piece strategy does not establish the claimed lower bound; the proof explicitly uses a numerically false inequality."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that, with 2n+1 pieces, the odd-ranked sum is minimized by equal lengths is false in general and is supported only by informal language about gaps 'generally' increasing the sum."
+      },
+      {
+        "severity": "major",
+        "description": "The upper-bound argument merely asserts that Xiang can make all pieces nearly equal. It gives no valid construction for arbitrary Liu markings, no verification that n cuts suffice, and approximate equality would not prove the exact bound."
+      },
+      {
+        "severity": "major",
+        "description": "Rule A applies because the final classification is false already at n=2: 3/5 is not the game value."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "proof_sha256": "616b8f92c9d0f222476a7b3cdbc33fe71a2c1e16216f247acd7de294e9b15df4",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "evidence_sha256": "7b4afa0e3f6bc7da07a4677924efda30d1e5393151c2819fdbc7c47ae23d7243",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p3/t07_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "e3222fa138100a6cc7cbd65a698062d769aae3418cae04c79523a52df431aded",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "c3a908714a4077b4758c3d02dedba3f8ab82c7aac99e0de28d02820a1124c03b",
+    "raw_response_1.txt": "8edda8f74ac47e4de4aefd3f9500de812e727ca62c7a3bf29a7c5bf3c31440e5",
+    "summary.json": "09db97351eebd9ba0e3c1466f1e0e12e394d84e43219b06d41f95b31a299f892"
+  }
+}

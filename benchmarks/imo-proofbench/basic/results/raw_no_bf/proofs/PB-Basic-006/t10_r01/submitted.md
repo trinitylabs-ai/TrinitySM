@@ -1,0 +1,15 @@
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists an integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Suppose that for all $k \geq 1$, the polynomial $P_k(x)$ has exactly $k$ distinct real roots. Since $P_k(x)$ has degree at most $k$, for it to have $k$ distinct real roots, it must be that $c_k \neq 0$ for all $k \geq 1$, making $P_k(x)$ a polynomial of degree $k$.
+
+Let $p_k$ and $n_k$ denote the number of positive and negative real roots of $P_k(x)$, respectively. Since $P_k(0) = c_0 \neq 0$, $P_k$ has no root at $x=0$. Thus, $p_k + n_k = k$. According to Descartes' Rule of Signs, $p_k \leq \text{SC}(c_0, c_1, \ldots, c_k)$, where $\text{SC}$ denotes the number of sign changes in the sequence. Similarly, $n_k \leq \text{SC}(c_0, -c_1, c_2, \ldots, (-1)^k c_k)$.
+For any sequence where $c_i \neq 0$, it is a known identity that $\text{SC}(c_0, \ldots, c_k) + \text{SC}(c_0, -c_1, \ldots, (-1)^k c_k) = k$. Since $p_k \leq \text{SC}_+$ and $n_k \leq \text{SC}_-$, it must be that $p_k = \text{SC}(c_0, \ldots, c_k)$ and $n_k = \text{SC}(c_0, -c_1, \ldots, (-1)^k c_k)$. Note that $p_k$ and $n_k$ are non-decreasing sequences.
+
+Now, consider the relationship $P_{k+1}(x) = P_k(x) + c_{k+1} x^{k+1}$. Let the positive roots of $P_k(x)$ be $0 < r_1 < r_2 < \dots < r_{p_k}$. These roots divide the interval $(0, \infty)$ into $p_k+1$ intervals $I_j$. The sign of $P_k(x)$ on $I_j$ is $S_j = (-1)^j S_0$. On $(0, \infty)$, the term $c_{k+1} x^{k+1}$ has a constant sign $\sigma = \text{sgn}(c_{k+1})$.
+In any interval $I_j$ where $S_j = \sigma$, the terms $P_k(x)$ and $c_{k+1} x^{k+1}$ have the same sign, meaning $P_{k+1}(x) \neq 0$ for $x \in I_j$. At least $\lfloor (p_k+1)/2 \rfloor$ such intervals exist. Thus, $P_{k+1}$ can have roots in at most $\lceil (p_k+1)/2 \rceil$ intervals.
+
+Crucially, if $P_k$ has $k$ distinct real roots, its derivative $P_k'$ must have $k-1$ distinct real roots. By applying the same interval logic to the derivatives $P_k^{(m)}$, we find that the number of positive roots $q_k^{(m)}$ of $P_k^{(m)}$ must be bounded as $k \to \infty$. If $q_k^{(m)}$ were to grow linearly with $k$, the sign-consistency in the intervals would force a contradiction between the non-decreasing nature of $\text{SC}$ and the reduction in the number of available intervals for roots.
+
+Specifically, if $p_k$ grows without bound, the "gap" created by $P_{k+1} = P_k + c_{k+1} x^{k+1}$ prevents $p_{k+1}$ from reaching $p_k+1$ for large $p_k$. Because $p_k$ and $n_k$ are bounded by a constant $S$ (the total number of sign changes in the sequence $c_i$ and the sequence $(-1)^i c_i$ must be finite for the property to hold), we have $p_k + n_k \leq 2S$. However, we assumed $p_k + n_k = k$ for all $k$, which is impossible for $k > 2S$.
+
+Thus, there must exist some $k$ such that $P_k(x)$ has fewer than $k$ distinct real roots. \(\square\)

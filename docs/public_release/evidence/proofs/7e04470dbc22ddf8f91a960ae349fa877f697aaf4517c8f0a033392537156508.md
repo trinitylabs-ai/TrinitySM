@@ -1,0 +1,23 @@
+To prove that the procedure eventually terminates and that the cars will end up sorted in increasing order of width, we analyze the process using the properties of inversions and the movement of the car with the maximum width.
+
+### 1. Termination of the Procedure
+Let the cars be denoted by $C_1, C_2, \dots, C_n$. Each car $C_i$ has a unique width $w_i$ and a unique length $l_i$. Let the sequence of cars in the row at any time $t$ be $P = (P_1, P_2, \dots, P_n)$. The initial state is given as $l(P_1) < l(P_2) < \dots < l(P_n)$.
+A swap occurs between adjacent cars $P_i$ and $P_{i+1}$ if $l(P_i) < l(P_{i+1})$ and $w(P_i) > w(P_{i+1})$. After the swap, the new sequence $P'$ has $P'_i = P_{i+1}$ and $P'_{i+1} = P_i$.
+
+Consider the number of inversions in the lengths of the cars. An inversion is a pair of indices $(i, j)$ such that $i < j$ but $l(P_i) > l(P_j)$. Let $I(L)$ be the total number of such inversions.
+Initially, the cars are sorted by length, so $I(L) = 0$. When a swap occurs between $P_i$ and $P_{i+1}$, it is required that $l(P_i) < l(P_{i+1})$. After the swap, $P_{i+1}$ is to the left of $P_i$, creating a new length inversion. No other pairs change their relative order. Thus, every swap increases $I(L)$ by exactly 1.
+The maximum possible number of inversions for $n$ elements is $\binom{n}{2} = \frac{n(n-1)}{2}$. Since $I(L)$ is strictly increasing with each move and is bounded above, the procedure must eventually terminate.
+
+### 2. The Final State
+The process terminates when no two adjacent cars $P_i, P_{i+1}$ satisfy the condition $l(P_i) < l(P_{i+1})$ and $w(P_i) > w(P_{i+1})$. This means that in the final state, for all $i \in \{1, \dots, n-1\}$, if $w(P_i) > w(P_{i+1})$, then it must be that $l(P_i) > l(P_{i+1})$.
+
+Let $C_{max}$ be the car with the maximum width $w_{max}$. We claim that in the final state, $C_{max}$ must be at the last position $P_n$.
+To prove this, consider the set $S$ of cars to the right of $C_{max}$ at any given time. Initially, $S = \{C_j : l(C_j) > l(C_{max})\}$, meaning every car in $S$ is longer than $C_{max}$.
+A car $C_{left}$ initially to the left of $C_{max}$ can only move to the right of $C_{max}$ by swapping with $C_{max}$ when $C_{left}$ is at position $i$ and $C_{max}$ is at position $i+1$. This would require $l(C_{left}) < l(C_{max})$ and $w(C_{left}) > w(C_{max})$. However, since $w_{max}$ is the maximum width, $w(C_{left}) > w(C_{max})$ is impossible.
+Thus, no car from the left of $C_{max}$ can ever move to its right. Consequently, at all times, any car $P_j$ to the right of $C_{max}$ must have been initially to the right of $C_{max}$, which implies $l(P_j) > l(C_{max})$.
+
+Now, suppose that in the final state, $C_{max}$ is at position $P_k$ with $k < n$. The car $P_{k+1}$ is to the right of $C_{max}$, so $l(P_{k+1}) > l(C_{max})$. Additionally, $w(C_{max}) > w(P_{k+1})$ because $w_{max}$ is the maximum width. This means the pair $(P_k, P_{k+1})$ satisfies the swap condition, which contradicts the assumption that the process has terminated. Therefore, $C_{max}$ must be at position $P_n$.
+
+Once $C_{max}$ is at position $P_n$, it can no longer be swapped. We can now apply the same logic to the remaining $n-1$ cars at positions $P_1, \dots, P_{n-1}$. The car with the maximum width among them must eventually reach position $P_{n-1}$ for the same reasons. By induction, the car with the $m$-th largest width will eventually occupy position $P_{n-m+1}$.
+
+Thus, in the final state, the cars are arranged such that $w(P_1) < w(P_2) < \dots < w(P_n)$, meaning they are sorted in increasing order of width from left to right. $\square$

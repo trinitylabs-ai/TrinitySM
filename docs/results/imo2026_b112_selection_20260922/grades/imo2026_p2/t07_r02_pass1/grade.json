@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_856c0c1298fa14a1a290e4a8e97ebc76",
+  "pass_index": 1,
+  "score": 4,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The proof omits the entire derivation of the decisive identity asserting that the displayed expression S simplifies to (b^2-c^2)sin(A-theta_L-theta_K)/2.",
+    "summary": "The coordinate and sine-law reductions are coherent and lead to the correct explicit remaining identity. However, that identity is the central compatibility/elimination calculation, not a routine one-line simplification, and no calculation proving it is supplied. The identity is true under the stated relations, so Rule B permits a score of 4, while Rule F precludes 5.",
+    "strengths": [
+      "Correctly converts OM=ON into a linear dot-product identity for O.",
+      "Correctly derives the cotangent relations for theta_K and theta_L using the sine law.",
+      "Correctly writes the circumcentre equations and reduces the desired conclusion to an explicit trigonometric equality.",
+      "Correctly derives the two side-ratio compatibility relations from triangles ABL and ACK."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The step beginning “Using these ratios and the cot relations” suppresses a substantial multi-step trigonometric elimination. Since this equality supplies the whole remaining proof of the target dot-product identity, merely asserting it does not constitute a complete proof."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "proof_sha256": "856c0c1298fa14a1a290e4a8e97ebc766d022bafba316c82a117794b024ac37d",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "evidence_sha256": "2a6213c9c8a48886b82d39ce4bf12c6febb2488f5d9449fcc364a94e922ea6e3",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p2/t07_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "f5a1cab10817d6d4b355be0303a52cdb527be31dd7fe0fa4b8b6b2e1bcf36141",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "71fc0eb9a362ea797628a777d1f6a88abed38228554bc1137c5dec9ac2e28473",
+    "raw_response_1.txt": "199c794178194b1848a708a28941eb52d28d594d8ab917eef928b1cbec8c20f5",
+    "summary.json": "aa7db6c30311d33fe4d9372d6aeb1d8a625070f902b04b5827a272a3ae92756e"
+  }
+}

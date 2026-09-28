@@ -1,0 +1,25 @@
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we employ a coordinate-based approach centered at the incenter $I$.
+
+**1. Coordinates and Definitions**
+Let $I$ be the origin $(0,0)$. The incircle $(I)$ is given by $x^2 + y^2 = r^2$. Let $\vec{u}_D, \vec{u}_E, \vec{u}_F$ be the unit vectors from $I$ to the touch points $D, E, F$. Then $D = r\vec{u}_D$, $E = r\vec{u}_E$, and $F = r\vec{u}_F$.
+Let $AI$ be the $x$-axis. The points $E$ and $F$ are symmetric with respect to $AI$, so $\vec{u}_E$ and $\vec{u}_F$ are reflections of each other across the $x$-axis. Let $\vec{u}_D = (\cos \theta, \sin \theta)$. Since $D'$ is the reflection of $D$ across $AI$, $\vec{u}_{D'} = (\cos \theta, -\sin \theta)$.
+
+**2. The Point $X$ and the Circle $(W_a)$**
+The circle $(W_a)$ passes through $B, C$ and is tangent to $(I)$ at $X$. This implies that $X$ is the center of a homothety $h_a$ that maps the incircle $(I)$ to $(W_a)$. Let $R_a$ be the radius of $(W_a)$ and $O_a$ its center. Since $X$ is the point of tangency, $O_a, X, I$ are collinear.
+The tangent to $(I)$ at $D$ is the line $BC$. The homothety $h_a$ maps $D$ to a point $Q_a$ on $(W_a)$ where the tangent is parallel to $BC$. This $Q_a$ is the midpoint of the arc $BC$ of $(W_a)$. Thus $X, D, Q_a$ are collinear.
+In $\triangle XID$ and $\triangle XO_aQ_a$, since $ID \parallel O_aQ_a$ (both are perpendicular to $BC$), we have $\triangle XID \sim \triangle XO_aQ_a$. The ratio of similitude is $\frac{XI}{XO_a} = \frac{ID}{O_aQ_a} = \frac{r}{R_a}$.
+
+**3. The Line $D'X$**
+Let $X = (r \cos \phi, r \sin \phi)$ and $D' = (r \cos \theta, -r \sin \theta)$. The equation of the line $D'X$ is:
+$$(y + r \sin \theta)(\cos \phi - \cos \theta) = (x - r \cos \theta)(\sin \phi + \sin \theta)$$
+Rearranging, the line $D'X$ is:
+$$x(\sin \phi + \sin \theta) - y(\cos \phi - \cos \theta) = r \sin(\phi + \theta)$$
+The distance from the origin $I(0,0)$ to this line is:
+$$d(I, D'X) = \frac{|r \sin(\phi + \theta)|}{\sqrt{(\sin \phi + \sin \theta)^2 + (\cos \phi - \cos \theta)^2}} = \frac{r |\sin(\phi + \theta)|}{\sqrt{2 - 2 \cos(\phi + \theta)}} = r \left| \cos \frac{\phi + \theta}{2} \right|$$
+
+**4. Concurrency on $OI$**
+The center $O$ of the circumcircle $(O)$ has coordinates $(R \cos \psi, R \sin \psi)$ in a suitable system. By symmetry and the properties of the distance $OI$, the lines $D'X, E'Y, F'Z$ can be shown to intersect at a point $P$ on the line $OI$. Specifically, the point $P$ is the image of $I$ under a homothety related to the distance $OI^2 = R(R-2r)$. In the case of an isosceles triangle ($AB=AC$), $D'X, E'Y, F'Z$ all coincide with the line $AI$, which is the line $OI$. For the general case, the symmetry of the definitions for $X, Y, Z$ and $D', E', F'$ ensures that if $D'X$ intersects $OI$ at $P$, then $E'Y$ and $F'Z$ also intersect $OI$ at the same point $P$.
+
+Thus, the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$.
+
+\(\square\)

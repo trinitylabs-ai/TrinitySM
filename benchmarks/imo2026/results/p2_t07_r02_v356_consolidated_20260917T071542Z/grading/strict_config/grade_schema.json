@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "score",
+    "verdict",
+    "answer_supported",
+    "dependency_impact",
+    "repair_complexity",
+    "olympiad_treatment",
+    "first_issue",
+    "summary",
+    "strengths",
+    "errors"
+  ],
+  "properties": {
+    "score": {"type": "integer", "minimum": 0, "maximum": 7},
+    "verdict": {
+      "type": "string",
+      "enum": ["pass", "minor_gap", "substantial_gap", "major_gap", "incorrect"]
+    },
+    "answer_supported": {"type": "boolean"},
+    "dependency_impact": {
+      "type": "string",
+      "enum": ["none", "local", "load_bearing"]
+    },
+    "repair_complexity": {
+      "type": "string",
+      "enum": ["none", "routine_direct", "local_nontrivial", "new_idea"]
+    },
+    "olympiad_treatment": {
+      "type": "string",
+      "enum": ["full_credit", "minor_deduction", "partial_credit", "major_deduction"]
+    },
+    "first_issue": {"type": "string", "minLength": 1},
+    "summary": {"type": "string", "minLength": 1},
+    "strengths": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "description"],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": ["cosmetic", "minor", "substantial", "major"]
+          },
+          "description": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

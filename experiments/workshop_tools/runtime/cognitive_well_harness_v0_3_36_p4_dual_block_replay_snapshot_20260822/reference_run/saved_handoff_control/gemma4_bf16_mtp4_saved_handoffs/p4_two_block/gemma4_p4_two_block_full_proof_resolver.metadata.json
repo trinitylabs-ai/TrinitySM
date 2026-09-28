@@ -1,0 +1,45 @@
+{
+  "stage": "gemma4_p4_two_block_full_proof_resolver",
+  "started_at": "2026-08-23T03:58:48.626532+00:00",
+  "completed_at": "2026-08-23T04:00:23.682504+00:00",
+  "latency_seconds": 95.05596533417702,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8026/v1",
+  "model": "google/gemma-4-31B-it",
+  "prompt_sha256": "8b6408eda2653432f3813321917ce7f991c5b91dcd91b6a08930ac577182334c",
+  "user_prompt_sha256": "2dcc96d72711e642542c524312da6041d8b56c900ef20f86e8015d993c1088ef",
+  "request_sha256": "aad08e105892b27e0109b250f0f409ec5099bce9724d79f8e570f3690699e2a7",
+  "response_id": "chatcmpl-b8fe9aee2f90c278",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3504,
+    "total_tokens": 11057,
+    "completion_tokens": 7553,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 65536,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 2040359711,
+    "thinking_token_budget": null,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 14400
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "continuation": false,
+  "prior_generation_sha256": null,
+  "system_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.prompt.txt",
+  "user_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.user_prompt.txt",
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/gemma4_p4_two_block_full_proof_resolver.reasoning.txt"
+}

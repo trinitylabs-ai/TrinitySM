@@ -1,0 +1,55 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T21:32:41.353484+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 29,
+  "problem_id": "PB-Basic-029",
+  "case_id": "PB-Basic-029.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/p29/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/p29/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/p29/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "7d10b497e0a181f1ade424d79eea55fc4e910070e5aebbbc7441f128b547ecc6",
+  "reference_sha256": "b5e85aeeb35e1e54676761b393c2d39972d68043850c2caac65cef859c5acfef",
+  "proof_sha256": "3dcc203a3a167381d7a02a8b1a4e6fa4521f32f8feffd1b8e6c358caedf78b19",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/tasks.json",
+  "task_manifest_sha256": "c52dfad21680905c42eb93274b02feb738fa150ad3c013528d6560e486f46cae",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "A projective transformation sending \\(O\\) to the vertical point at infinity does not generally send every segment \\(OX\\) to an upward ray: vertices on opposite sides of the new line at infinity yield oppositely directed rays.",
+    "summary": "The construction correctly gives exactly \\(\\binom{p+2}{2}\\) red points, but the essential universal lower bound is not proved. Its projective reduction is invalid in general, and the subsequent claim that the crossings on an added line have levels \\(0,1,\\ldots,n-1\\) is also false. Repairing the proof requires a different lower-bound argument.",
+    "strengths": [
+      "The tangent-line construction and the calculation that \\(X_{ij}\\) is crossed by exactly \\((i-1)+(n-j)\\) lines are correct.",
+      "The resulting count of \\(\\binom{p+2}{2}\\) red vertices establishes the sharp upper bound."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The uniform upward-ray interpretation after the projective transformation is unjustified and can fail when the intersection vertices lie on both sides of the chosen line through \\(O\\)."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that the \\(n\\) crossings on a newly added line have levels \\(0,1,\\ldots,n-1\\) in some order is false; levels may repeat."
+      },
+      {
+        "severity": "major",
+        "description": "The claim that a line can cut off at most \\(p+1\\) vertices of the \\(p\\)-level is merely asserted and does not supply the missing induction estimate."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

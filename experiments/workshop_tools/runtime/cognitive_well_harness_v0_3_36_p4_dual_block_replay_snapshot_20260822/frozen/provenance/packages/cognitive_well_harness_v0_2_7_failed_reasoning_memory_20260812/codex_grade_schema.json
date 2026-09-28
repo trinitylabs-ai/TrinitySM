@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "score",
+    "verdict",
+    "answer_supported",
+    "complete",
+    "requires_new_math",
+    "first_break",
+    "summary",
+    "strengths",
+    "errors"
+  ],
+  "properties": {
+    "score": {"type": "integer", "enum": [0, 1, 2, 3, 4, 6, 7]},
+    "verdict": {
+      "type": "string",
+      "enum": ["pass", "minor_slip", "fallacy", "incomplete"]
+    },
+    "answer_supported": {"type": "boolean"},
+    "complete": {"type": "boolean"},
+    "requires_new_math": {"type": "boolean"},
+    "first_break": {"type": ["string", "null"]},
+    "summary": {"type": "string"},
+    "strengths": {"type": "array", "items": {"type": "string"}},
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "description"],
+        "properties": {
+          "severity": {"type": "string", "enum": ["slip", "fallacy"]},
+          "description": {"type": "string"}
+        }
+      }
+    }
+  }
+}

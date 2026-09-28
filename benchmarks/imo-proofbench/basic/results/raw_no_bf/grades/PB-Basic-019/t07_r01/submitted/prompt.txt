@@ -1,0 +1,107 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+For any positive integer $n$, let $\delta(n)$ be the largest odd divisor of $n$. Prove for any $N>0$ that we have
+ \[
+ \left| \sum_{n=1}^N \frac{\delta(n)}{n}- \frac{2}{3}N \right| <1.
+ \]
+
+**GROUND-TRUTH SOLUTION**
+
+Observe the following: If the greatest power of $2$ that divides $n$ is $2^k$, the greatest odd divisor dividing $n$ is $\frac{n}{2^k}$.
+
+ Let $\sum_{n=1}^N \frac{\delta(n)}{n}$ be $S(N)$.
+
+ Let the greatest power of $2$ smaller or equal to $N$ be $2^k$. Then, $2^k \leq N <2^{k+1}$ holds. Using the observation, we get the following equation:
+ $\sum_{n=1}^{2^k} \frac{\delta(n)}{n} = \sum_{i=0}^{k-1} \frac{2^{k-1-i}}{2^i} + \frac{1}{2^k} = 2^{k-1}(\frac{1-\frac{1}{4^{k}}}{\frac{3}{4}}) + \frac{1}{2^k}$
+
+ Now observe that for $2^k < n <2^{k+1}$, $\frac{\delta(n)}{n} = \frac{\delta(n-2^k)}{n-2^k}$. Therefore, we have that $S(N)= S(N-2^k)+ (\frac{2^{k+1}}{3})(1-\frac{1}{4^{k}}) + \frac{1}{2^k}$
+
+ Using this, we have that $S(N) - \frac{2N}{3} = S(N-2^k) - \frac{2(N-2^k)}{3} + \frac{1}{3\cdot 2^k}$
+
+ Therefore, $|S(N) - \frac{2N}{3}|\leq \sum_{k=0}^\infty \frac{1}{3\cdot 2^k} \leq 1$
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Expressed $\sum \delta(n)/n$ as negative powers of 2's and attempted to rearrange the summation.
+(Almost)
+ 1. Successfully rearranged the summation, and counted $2^{-k}$ correctly.
+
+**PROPOSED SOLUTION**
+
+To prove that for any positive integer $N$, the inequality $\left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1$ holds, where $\delta(n)$ is the largest odd divisor of $n$, we proceed as follows.
+
+Let $S(N) = \sum_{n=1}^N \frac{\delta(n)}{n}$. We first derive a recurrence relation for $S(N)$. Consider the sum $S(2N)$:
+\[ S(2N) = \sum_{n=1}^{2N} \frac{\delta(n)}{n} = \sum_{m=1}^N \frac{\delta(2m)}{2m} + \sum_{m=1}^N \frac{\delta(2m-1)}{2m-1} \]
+By the definition of $\delta(n)$, for any integer $m$, the largest odd divisor of $2m$ is the same as the largest odd divisor of $m$, so $\delta(2m) = \delta(m)$. For the odd integers $2m-1$, the largest odd divisor is the number itself, so $\delta(2m-1) = 2m-1$. Substituting these into the expression for $S(2N)$, we obtain:
+\[ S(2N) = \sum_{m=1}^N \frac{\delta(m)}{2m} + \sum_{m=1}^N \frac{2m-1}{2m-1} = \frac{1}{2} \sum_{m=1}^N \frac{\delta(m)}{m} + \sum_{m=1}^N 1 = \frac{1}{2} S(N) + N \]
+Now, let $f(N) = S(N) - \frac{2}{3}N$. We examine how $f(N)$ behaves under the recurrences. For $N$ even, let $N = 2m$:
+\[ f(2m) = S(2m) - \frac{2}{3}(2m) = \frac{1}{2} S(m) + m - \frac{4}{3}m = \frac{1}{2} S(m) - \frac{1}{3}m = \frac{1}{2} \left( S(m) - \frac{2}{3}m \right) = \frac{1}{2} f(m) \]
+For $N$ odd, let $N = 2m+1$:
+\[ f(2m+1) = S(2m+1) - \frac{2}{3}(2m+1) = S(2m) + \frac{\delta(2m+1)}{2m+1} - \frac{4}{3}m - \frac{2}{3} \]
+Since $2m+1$ is odd, $\frac{\delta(2m+1)}{2m+1} = 1$. Thus,
+\[ f(2m+1) = \left( S(2m) - \frac{4}{3}m \right) + 1 - \frac{2}{3} = f(2m) + \frac{1}{3} = \frac{1}{2} f(m) + \frac{1}{3} \]
+We now prove by induction that $0 < f(N) < \frac{2}{3}$ for all $N \ge 1$.
+Base case: For $N=1$, $S(1) = \frac{\delta(1)}{1} = 1$, so $f(1) = 1 - \frac{2}{3}(1) = \frac{1}{3}$. Clearly, $0 < \frac{1}{3} < \frac{2}{3}$.
+Inductive step: Assume $0 < f(k) < \frac{2}{3}$ for all $1 \le k < N$.
+- If $N=2m$, then $f(N) = \frac{1}{2} f(m)$. Since $0 < f(m) < \frac{2}{3}$, we have $0 < f(N) < \frac{1}{3} < \frac{2}{3}$.
+- If $N=2m+1$, then $f(N) = \frac{1}{2} f(m) + \frac{1}{3}$. Since $0 < f(m) < \frac{2}{3}$, we have $\frac{1}{3} < f(N) < \frac{1}{3} + \frac{1}{3} = \frac{2}{3}$.
+In both cases, $0 < f(N) < \frac{2}{3}$. By induction, the statement holds for all $N \ge 1$.
+
+Consequently, we have $|f(N)| < \frac{2}{3} < 1$ for all $N > 0$, which is exactly
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1. \]
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

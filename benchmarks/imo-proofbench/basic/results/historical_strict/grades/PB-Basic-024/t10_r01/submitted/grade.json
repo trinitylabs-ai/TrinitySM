@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T02:18:31.060866+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 24,
+  "problem_id": "PB-Basic-024",
+  "case_id": "PB-Basic-024.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/p24/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/p24/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/p24/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b877ed06eb41fc0374b3de6df9b511304721211861597aeaee5a1dab7fbc84b9",
+  "reference_sha256": "16087540df0968e6371b77787f32ca89238b593f9142bc3dbd96b81449774f41",
+  "proof_sha256": "110efadb4073397ad24abd80f055318099c77229ed4951f31c0dda599ecc9843",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T021739659031Z/inputs/tasks.json",
+  "task_manifest_sha256": "13921c44083ed3c12bd7a83350e66364746a13a5a81a147f383cd9d5396c90ad",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The submission correctly handles all boundary cases and gives a complete alternative proof for positive \\(a,b,c\\). Modulo \\(5\\) forces \\(c\\) even; the resulting difference-of-squares factorization, prime-support analysis, and exhaustive treatment of the possible power of \\(2\\) lead to valid contradictions.",
+    "strengths": [
+      "Correctly isolates the unique boundary solution \\((0,0,0)\\).",
+      "Uses a valid factorization and controls the prime factors of both factors.",
+      "Exhaustively and correctly eliminates \\(K\\ge2\\), \\(K=1\\), and \\(K=0\\)."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

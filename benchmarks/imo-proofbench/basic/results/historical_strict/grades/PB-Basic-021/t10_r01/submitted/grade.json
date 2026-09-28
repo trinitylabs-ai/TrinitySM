@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T22:16:10.414596+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 21,
+  "problem_id": "PB-Basic-021",
+  "case_id": "PB-Basic-021.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "0e226ac50da7a9d562249e1f9ac21fab78bd358cc35a70fa8b8a686f4f2662b0",
+  "reference_sha256": "b0175cc971e8820aa63dd40c66e9b7f1b7285bc7c38cc1c67b462a2ee970a1a7",
+  "proof_sha256": "bd8ba37a60e057df398aca562e1f2181ef515d22235da144f59794060d8beb4e",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/tasks.json",
+  "task_manifest_sha256": "24d0be7dca34d9ff3c84eaf3239d65e93ee7cc8c984a7a08d196689ee98294d5",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The simultaneous induction is complete: both properties hold at \\(n=1\\), and the two cross-implications propagate both properties to every subsequent index. Each divisibility application correctly verifies that the relevant exponent ratio is an odd integer.",
+    "strengths": [
+      "Correctly reformulates the target divisibility after factoring out \\(2\\).",
+      "Correctly uses the standard criterion \\(a^m+1\\mid a^k+1\\) when \\(k/m\\) is odd.",
+      "Supplies valid base cases and a logically sound simultaneous-induction closure."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

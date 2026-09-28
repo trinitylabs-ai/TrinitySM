@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "errors": [],
+  "addressed_defect_ids": [
+    "D1"
+  ],
+  "chief_architects": [
+    "PARTIAL REBUILD"
+  ],
+  "round_count": 1,
+  "status": "UNVERIFIED"
+}

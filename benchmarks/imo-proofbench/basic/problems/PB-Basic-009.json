@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-009",
+  "problem": "Let $a_1,a_2,...,a_{18}$ be 18 real numbers, not necessarily distinct, with average $m$. Let $A$ denote the number of triples $1 \\le i < j < k \\le 18$ for which $a_i + a_j + a_k \\ge 3m$. What is the minimum possible value of $A$?"
+}

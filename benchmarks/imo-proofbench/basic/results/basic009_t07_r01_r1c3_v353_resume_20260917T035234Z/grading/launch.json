@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "-B",
+    "/home/user/.codex/skills/imobench-scoring/scripts/score.py",
+    "--task-manifest",
+    "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v353_resume_20260917T035234Z/grading/work/imobench_tool_rewrite/tasks.json",
+    "--output-dir",
+    "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v353_resume_20260917T035234Z/grading/work/imobench_tool_rewrite/scores",
+    "--workers",
+    "1",
+    "--model",
+    "gpt-5.6-sol",
+    "--reasoning-effort",
+    "xhigh"
+  ],
+  "started_at": "2026-09-17T03:58:29.134064+00:00",
+  "policy": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "6db6d47d9a0b0a8e2e2cb60247e3a095a2f006e53706429f44a8842b954e7373"
+}

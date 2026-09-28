@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "cfd8bae48315349241d0e51a9d818410fcc02492f82476c0e326be8fe4156eeb",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "37d06d955b705fa899705a95dbe900d1d9509560f7d043e418a5b56c89d4b6a4",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "e59edfde3ef22fe6c94dce6ee05299f039e45a5279ef0f07b0bfbce122cb9204",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "After correctly treating k=2 and essentially k=3, the submission asserts the general sufficiency for every integer k without giving a legal recursive strategy. The doubling discussion does not cover cases such as odd k>3, and convergence to theta would not imply attaining theta in finitely many moves. This is an unsupported central existence claim under Rule E.",
+    "summary": "The final classification is correct, and the solution gives valid or nearly valid strategies for theta=90° and theta=60°. However, neither direction of the full classification is proved: general sufficiency is replaced by a vague recursion, while necessity is asserted without a Shan-Yu invariant or strategy robust against multi-step play. These are central gaps, so Rule E caps the score at 3.",
+    "strengths": [
+      "States the correct answer theta=180°/k for integers k>=2.",
+      "Correctly parametrizes a cevian cut by splitting the apex angle.",
+      "Gives a valid one-move strategy for theta=90°.",
+      "The theta=60° two-stage strategy is essentially correct, with its cut legality routine to verify."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The proposed general strategy for theta=180°/k is not established. No cuts, legality conditions, induction, or finite decreasing measure are supplied for arbitrary k; the doubling chain does not handle all integers, and merely approaching theta is irrelevant to an exact finite-win condition."
+      },
+      {
+        "severity": "major",
+        "description": "The necessity direction is only asserted. Saying Shan-Yu chooses the child without theta after each cut does not rule out that this child is strategically winning later. A preserved obstruction or equivalent proof is required, so this is a second unsupported central claim under Rule E."
+      },
+      {
+        "severity": "minor",
+        "description": "For the theta=60° construction, the submission does not explicitly justify that labels can always be chosen so that 0<120°-B<A, although this can be checked routinely when the initial triangle has no 60° angle."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:28:47.572877+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00017",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "basic009_t07_r01_r1c3_v353_resume_20260917T035234Z",
+  "problem_id": "PB-Basic-009",
+  "outcome": "REWRITTEN_AUDIT_PASS",
+  "returncode": 0,
+  "wall_seconds": 320.3209116550279,
+  "proof_audit_passed": true,
+  "verified_samples": 1,
+  "grading_status": "completed",
+  "external_grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "source_score": 1,
+  "source_checkpoint": "R1-C3",
+  "candidate_id": "t07_r01",
+  "harness_version": "0.3.353"
+}

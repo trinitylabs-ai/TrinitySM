@@ -1,0 +1,62 @@
+{
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_b8cf56de3079243dd27ec5e328892377",
+  "pass_index": 1,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the unsupported assertion that the remaining angle conditions imply Im(N)=bc(c^2-b^2)Im(e^{iθ} conjugate(w_K)w_L). This is precisely the central compatibility identity needed for the conclusion, but no equations encoding those angle conditions or derivation of the identity are provided. Rule E therefore caps the score at 3; Rule B does not permit 4 because the reduction also leaves orientation and nonzero-denominator conditions unjustified.",
+    "summary": "The submission obtains useful sine-law coordinates and correctly reduces OM=ON to a real-part identity, but then simply asserts the entire difficult algebraic consequence of the two remaining angle conditions. The isolated symmetric example does not prove the general identity. There is also an omitted factor bc in one displayed quotient, although the final line silently restores it.",
+    "strengths": [
+      "The midpoint coordinates and sine-law expressions for K and L are essentially correct after fixing the orientation.",
+      "The circumcentre formula and the reduction of OM=ON to a real-part identity are appropriate.",
+      "The proof identifies an explicit algebraic identity that would suffice to finish."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The load-bearing identity for Im(N) is asserted without derivation; saying that the angle constraints ensure the simplification is not a proof."
+      },
+      {
+        "severity": "substantial",
+        "description": "The solution divides by Im(e^{iθ} conjugate(w_K)w_L) without establishing that it is nonzero, equivalently that A,K,L are noncollinear, and does not fully justify the signed angle branches used in the coordinate formulas."
+      },
+      {
+        "severity": "minor",
+        "description": "The displayed formula for the real part omits a factor bc in the denominator; the subsequent final calculation uses the corrected denominator."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "proof_sha256": "b8cf56de3079243dd27ec5e328892377d4fc6e5f0f7d587957b8521e69dc9330",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "evidence_sha256": "56e04b25732a51957d0e85f3f485e1041b2bc07bf3ee4a45223c4b55f66fa0d8",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p2/t10_r01_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "1f8aa6b674d84e1d60e63e84829e04e3e3f2e661bcc2a1eacdfec42c2ee25197",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "ad2ff2d497574ecf6fb76d9e74c6e4392d5b462a4e85065e7b8b2a871c47e37f",
+    "raw_response_1.txt": "772f3f16268003d22c6058abf1300e458cf2a515d62ad4914f6386f35519448c",
+    "summary.json": "ce8b9723a31c8551f8d190fc0a24377df74ac17bd6d13eb78ab6f43d67d5eebc"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-task-v1",
+  "created_at": "2026-09-08T21:11:38.722809+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "prompt_sha256": "e83760e260271d8096849d30770dbbc4d995e18663d2435f5e38b6a505b15bc7",
+  "schema_path": "/opt/proof-workshop/scripts/external_olympiad_scorer/grade_schema.json",
+  "isolated_candidate_call": true,
+  "pipeline_reviews_supplied": false,
+  "problem_number": 6,
+  "problem_id": "imo2026_p6",
+  "case_id": "imo2026_p6.explicit.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p6.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q6_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "31754efffdff90e0580e40f24e17d7195b7dd502ab2f04f1f450719bfc86f426",
+  "resolver_outcome": "EXPLICIT_ARTIFACT"
+}

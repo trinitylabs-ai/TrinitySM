@@ -1,0 +1,49 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "505fa102319f3c4b4ce6cf3fb1b4fdb4fd201a894495608c4d32cd40fc1fd7bd",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "906f269a2ac93a1da25ed980db791b9c123fb1087ff396bc1272c46e24b38810",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "299490f788090dc10ba2f9780bb852881e3b0f367ce818d4c4417e0ad78bc796",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete and correct.",
+    "summary": "The submission proves termination using a well-founded lexicographic descent of the number of entries greater than 1 and the total prime-factor count. It then identifies the primewise gcd of all valuations as an invariant and reconstructs the unique terminal integer from these invariants. Both requested conclusions follow rigorously.",
+    "strengths": [
+      "Correctly computes the valuation transformation as (a,b) ↦ (min(a,b),|a-b|).",
+      "Provides a valid lexicographic descent argument covering all possible cases of a move.",
+      "Correctly proves that a terminal board has exactly one entry greater than 1.",
+      "Establishes the primewise gcd invariant via the Euclidean algorithm.",
+      "Correctly reconstructs M and shows that it depends only on the initial board."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:18:38.414755+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00011",
+  "native_rejection_count": 0
+}

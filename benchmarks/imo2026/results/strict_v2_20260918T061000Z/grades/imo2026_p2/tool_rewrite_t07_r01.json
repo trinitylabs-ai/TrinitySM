@@ -1,0 +1,69 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t07_r01",
+  "group": "tool_rewrite",
+  "grader_candidate": "tool_rewrite_t07_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/tool_rewrite_t07_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/75bb5b00bd7b01c4de9d5ce7712ed5f45a7b1de5628e8425e140d4e980b98332.json",
+  "v1_reconstructed_prompt_sha256": "c0915cb2ed0f8225b0846f5575f6e3b721cfc22ad7d55df04edf1154432022c5",
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t07_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:26:52.322447+00:00",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The first decisive defect is the translation of ∠LBK=∠LNC. Writing D=(L-B)×(K-B), d=L×C, u=(L-B)·(K-B), and v=L·C−|C|²/2, the displayed cotangents imply du−Dv=0. The submission instead writes 2Dv−du=0, which is not equivalent. It then falsely claims that this expands to E2. This is a false load-bearing assertion, so Rule C caps the score at 5.",
+    "summary": "The coordinate reduction from OM=ON to PB=PC is correct, and the appendix supplies an explicit algebraic certificate for the intended polynomial implication. However, the second and third angle equalities are both cross-multiplied with an erroneous factor of 2, so the listed polynomial hypotheses E2 and E3 are not established by the equations actually written. Correcting those two lines recovers the intended polynomials. The signed-cotangent branch signs and the numerous nonzero guards are also asserted rather than demonstrated, though the guards actually used by the certificate follow routinely from barycentric coordinates. Thus the strategy is essentially repairable, but it is not valid as submitted.",
+    "strengths": [
+      "Correctly derives the circumcenter relations 2O·K=|K|² and 2O·L=|L|².",
+      "Correctly proves that OM=ON is equivalent to PB=PC for P=2O.",
+      "Provides explicit circumcenter coordinates, a target residual, and a finite algebraic certificate rather than leaving the central algebra wholly unspecified.",
+      "The large listed polynomials E2 and E3 appear to correspond to the corrected cotangent cross-multiplications, so the main strategy can be repaired directly."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "For ∠LBK=∠LNC, the submitted cleared-denominator equation has an extra factor of 2 on the Dv term and therefore does not expand to the displayed polynomial E2."
+      },
+      {
+        "severity": "substantial",
+        "description": "The analogous translation of ∠LCK=∠BMK has the same erroneous factor of 2, so E3 is likewise not derived as written."
+      },
+      {
+        "severity": "minor",
+        "description": "The general formula stated for cot(∠XYZ) uses vectors based at X rather than Y and omits the absolute value required for an unsigned angle. The later coordinate formulas use the proper vertex, but equality of their signed versions requires a determinant-sign argument that is not supplied."
+      },
+      {
+        "severity": "minor",
+        "description": "The claim that strict interior placement guarantees every listed nonzero guard is made without calculation. Most listed guards are unused; the two special guards used in the algebraic certificate can be verified directly using barycentric coordinates, but that verification is absent."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "3543c519e2d6a6a82362b675d31617c62ed8b3e2e7ffb1d5034fdaf3ff8572cf",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

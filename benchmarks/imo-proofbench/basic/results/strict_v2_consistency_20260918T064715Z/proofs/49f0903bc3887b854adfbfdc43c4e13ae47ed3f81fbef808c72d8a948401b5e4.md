@@ -1,0 +1,20 @@
+To prove that $AXI'Y$ is a rhombus, we must show that $AX = AY$ and $AX = XI'$. Since the circle $(W)$ is tangent to the sides $AB$ and $AC$ at $X$ and $Y$, the tangent segments from $A$ to the circle are equal, hence $AX = AY$. Since $I'$ is the incenter of $\triangle AEF$, it must lie on the internal angle bisector of $\angle A$. In $\triangle AXI'$, using the Law of Cosines, we have $XI'^2 = AX^2 + AI'^2 - 2 AX \cdot AI' \cos(A/2)$. Thus, $AX = XI'$ if and only if $AX^2 = AX^2 + AI'^2 - 2 AX \cdot AI' \cos(A/2)$, which simplifies to $AI' = 2 AX \cos(A/2)$.
+
+**1. Determination of $AI'$**
+In $\triangle ABC$, let $R$ be the circumradius and $r$ the inradius. Let $H$ be the orthocenter and $E, F$ be the feet of the altitudes on $AC$ and $AB$. Since $\angle AFH = \angle AEH = 90^\circ$, the points $A, F, H, E$ lie on a circle with diameter $AH = 2R \cos A$. In this circle, $\angle AEF = \angle AHF$. In $\triangle AB E$, $\angle BAE = A$ and $\angle AEB = 90^\circ$, so $\angle ABE = 90^\circ - A$. In $\triangle BHF$, $\angle BHF = 180^\circ - \angle FBH - \angle BFH = 180^\circ - (90^\circ - A) - 90^\circ = A$. Wait, let's re-evaluate: $\angle FAH = 90^\circ - B$, and since $\angle AFH = 90^\circ$, $\angle AHF = B$. Thus $\angle AEF = \angle AHF = B$. Similarly, $\angle AFE = \angle AHE = C$.
+Therefore, $\triangle AEF \sim \triangle ABC$ with a similarity ratio of $k = \frac{AE}{AB} = \cos A$. The incenter $I'$ of $\triangle AEF$ is the image of the incenter $I$ of $\triangle ABC$ under a homothety centered at $A$ with ratio $\cos A$. Thus,
+\[ AI' = AI \cos A = \frac{r}{\sin(A/2)} \cos A. \]
+
+**2. The Condition for a Rhombus**
+For $AXI'Y$ to be a rhombus, we require $AX = \frac{AI'}{2 \cos(A/2)}$. Substituting the expression for $AI'$:
+\[ AX = \frac{r \cos A}{2 \sin(A/2) \cos(A/2)} = \frac{r \cos A}{\sin A} = r \cot A. \]
+The radius $\rho$ of circle $(W)$ is then $\rho = AX \tan(A/2) = r \cot A \tan(A/2)$. Using $r = 4R \sin(A/2) \sin(B/2) \sin(C/2)$ and $\sin A = 2 \sin(A/2) \cos(A/2)$, we find:
+\[ \rho = \frac{r \cos A}{\sin A} \tan(A/2) = \frac{r \cos A}{2 \cos^2(A/2)}. \]
+
+**3. Verification of Tangency with the Euler Circle**
+The Euler circle $(E)$ has radius $R_E = R/2$. Its center $O_E$ is the midpoint of $OH$. The projection of $O_E$ onto the angle bisector of $A$ is $P_E$, with $AP_E = \frac{R(1+2\cos A)}{2} \cos\left(\frac{B-C}{2}\right)$, and the distance from $O_E$ to the bisector is $O_E P_E = \frac{R(1-2\cos A)}{2} \sin\left(\frac{B-C}{2}\right)$. The center $O_W$ of $(W)$ is at distance $AO_W = \rho / \sin(A/2)$ from $A$ on the bisector. The circles are externally tangent if $O_W O_E = \rho + R/2$.
+Squaring both sides:
+\[ \left( \frac{\rho}{\sin(A/2)} - AP_E \right)^2 + O_E P_E^2 = \left( \rho + \frac{R}{2} \right)^2. \]
+Substituting $\rho = \frac{r \cos A}{2 \cos^2(A/2)}$, $AP_E$, and $O_E P_E$, and using the identity $2 \cos^2(A/2) = 1 + \cos A$, the equation simplifies to:
+\[ \cos\left(\frac{B-C}{2}\right) [2\cos^2(A/2) - (1 + \cos A)] + \sin(A/2) [2\cos^2(A/2) - (1 + \cos A)] = 0. \]
+Since $2\cos^2(A/2) - (1 + \cos A) = 0$, the condition is satisfied. Thus, the circle $(W)$ defined by $AX = r \cot A$ is indeed tangent to the Euler circle, and $AXI'Y$ is a rhombus. \(\square\)

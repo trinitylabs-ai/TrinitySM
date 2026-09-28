@@ -1,0 +1,22 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The gaps $g_n = a_{n+1} - a_n$ are bounded by $M = \prod_{p \in P(a_1)} p$. The truncated prime factor families $S'_n = \{P(a_i) \cap \mathcal{P}_M : i \le n\}$ stabilize to a constant family $S'_N$ for $n \ge N$. The sequence $(a_n)$ is eventually periodic in its gaps, i.e., $\exists T, L$ such that $a_{n+T} = a_n + L$ for all $n \ge N$.
+Claim gap: Fails to extend periodicity to all $n \ge 1$. Step 9 incorrectly asserts that $a_{n+1}$ hits $S'_N$ for $n < N$, which is not guaranteed by the greedy forward definition. The deduction that $\gcd(a_{k+1}, a_{n+1}) > 1$ implies $\gcd(a_{n+1}, a_i) > 1$ for $i \le N$ reverses the quantifier order and is false in general.
+Qualifications and supplied repairs: NONE. The gap in Step 9 is a demonstrated logical defect that cannot be repaired without additional substantive arguments about the pre-period structure. No repairs were supplied.
+Decisive checks: 
+- Step 3: VERIFIED. Since $P(a_1) \cap P(a_i) \neq \emptyset$ for all $i$ by induction, any multiple of $M$ shares a prime factor with every $a_i$. Thus $a_n + M$ is a valid candidate, bounding gaps by $M$.
+- Step 9: DEMONSTRATED DEFECT. The definition requires $\gcd(a_{k+1}, a_j) > 1$ for $j \le k$. It imposes no condition on $\gcd(a_{n+1}, a_j)$ for $j > n+1$. The claim that past terms must hit future prime sets reverses the problem's quantifier order and invalidates the backward extension to all $n$.
+
+## Proof B
+Established theorem: The family of minimal prime factor sets $\mathcal{G}_n$ is intersecting. The union of primes $P_n = \bigcup_{S \in \mathcal{G}_n} S$ is non-increasing for $n \ge N_1$ and stabilizes to a finite set $P$. Consequently, $\mathcal{G}_n$ stabilizes to a constant family $\mathcal{G}$. Gaps are bounded by $m = \min \prod_{p \in H} p$ over minimal hitting sets $H$ of $\mathcal{G}$. The sequence $(a_n)$ is eventually periodic: $\exists T, L$ such that $a_{n+T} = a_n + L$ for all $n \ge N$.
+Claim gap: Step 7 contains a demonstrated defect in justification: it claims $\mathcal{P}(a_1)$ hitting $\mathcal{G}_n$ implies $\exists S \in \mathcal{G}_n$ with $S \subseteq \mathcal{P}(a_1)$. The implication is logically invalid (intersection does not imply subset), though the conclusion is true by definition ($\mathcal{P}(a_1) \in \mathcal{F}_n$, so some minimal element is contained in it). The proof does not address extending periodicity to $n < N$.
+Qualifications and supplied repairs: NONE. The flaw in Step 7 is noted as a defective justification, but the mathematical fact used downstream holds independently by the definition of $\mathcal{G}_n$. No repairs were supplied.
+Decisive checks:
+- Step 5: VERIFIED. If $\mathcal{G}_n$ is intersecting and $\mathcal{P}(a_{n+1})$ hits every $S \in \mathcal{G}_n$, then any two minimal elements in $\mathcal{G}_{n+1}$ intersect. The induction holds.
+- Step 7: DEMONSTRATED DEFECT IN REASONING, VERIFIED FACT. The subset claim holds because $\mathcal{G}_n$ contains minimal sets from $\mathcal{F}_n$ and $\mathcal{P}(a_1) \in \mathcal{F}_n$. The proof's wording conflates "hitting" with "containing", but the fact itself is correct and does not break the subsequent bounds.
+- Steps 11-13: VERIFIED. $P_n$ stabilization follows from the gap bound and minimality conditions. Since $\mathcal{G}_n$ consists of subsets of a finite set $P$, and changes only when new minimal hitting sets appear, finiteness forces stabilization. The eventual periodicity modulo $M = \prod_{p \in P} p$ follows rigorously.
+
+## Decision
+Winner: B
+Reason: Proof B provides a mathematically sound derivation of the eventual periodic structure using a well-defined framework of minimal hitting sets and prime unions. Its stabilization argument correctly leverages finiteness and gap bounds. Proof A contains a fatal logical defect in Step 9: it incorrectly assumes past terms must satisfy gcd conditions with future terms' prime sets, reversing the problem's quantifier order and invalidating the extension to all $n$. While neither proof explicitly handles the pre-period extension to $n=1$, B's core mechanism is rigorously justified and avoids A's demonstrated contradiction. B's minor wording issue in Step 7 does not affect the validity of the subsequent bounds or stabilization, making it the stronger submission.

@@ -1,0 +1,44 @@
+**Ideation**
+
+The problem describes a game where Mulan seeks to create a triangle with an angle $\theta$ and Shan-Yu seeks to prevent it. Mulan's move involves splitting the current triangle $T$ into two smaller triangles $T_1$ and $T_2$, and Shan-Yu's move is to discard one of them.
+
+1.  **Immediate Victory:** Mulan wins in one move if she can make both $T_1$ and $T_2$ contain the angle $\theta$. Let the angles of $T$ be $\alpha, \beta, \gamma$. Let the cut divide $\alpha$ into $\alpha_1, \alpha_2$ and create angles $\phi$ and $180^\circ - \phi$ at the cut point $P$.
+    *   $T_1$ has angles $(\beta, \alpha_1, \phi)$.
+    *   $T_2$ has angles $(\gamma, \alpha_2, 180^\circ - \phi)$.
+    For Mulan to win immediately, she must choose $P$ such that $\theta \in \{\beta, \alpha_1, \phi\}$ and $\theta \in \{\gamma, \alpha_2, 180^\circ - \phi\}$.
+    If $T$ does not already have $\theta$, then $\beta, \gamma \neq \theta$. She must have:
+    $(\alpha_1 = \theta \text{ or } \phi = \theta)$ AND $(\alpha_2 = \theta \text{ or } 180^\circ - \phi = \theta)$.
+    - If $\phi = \theta$ and $180^\circ - \phi = \theta$, then $\theta = 90^\circ$.
+    - If $\alpha_1 = \theta$ and $\alpha_2 = \theta$, then $\alpha = 2\theta$.
+    - If $\phi = \theta$ and $\alpha_2 = \theta$, then in $T_2$, angles are $(\gamma, \theta, 180^\circ - \theta)$, which sums to $180^\circ + \gamma$, impossible.
+    - If $\alpha_1 = \theta$ and $180^\circ - \phi = \theta$, similarly impossible.
+
+2.  **Recursive Winning States:** Define a set $W$ of "winning angles." An angle $\beta$ is in $W$ if any triangle containing $\beta$ is a winning state for Mulan.
+    - $\theta \in W$ (by definition).
+    - If $\beta = 2\beta'$ where $\beta' \in W$, then $\beta \in W$ because Mulan can split $\beta$ into $\beta', \beta'$.
+    - Thus, $n\theta \in W$ for all $n \in \mathbb{N}$ such that $n\theta < 180^\circ$.
+    - If $T$ has an angle $\beta \in W$, Mulan can force a win in finite steps by repeatedly splitting the winning angle until she reaches $\theta$.
+
+3.  **Forcing a Win from Any Triangle:** Mulan can guarantee a win if she can make a move such that both $T_1, T_2 \in W$.
+    As analyzed, if $\phi = \theta$ and $180^\circ - \phi = n\theta$ for some $n \in \mathbb{N}$, she wins immediately (or forces a state in $W$).
+    $180^\circ - \theta = n\theta \implies (n+1)\theta = 180^\circ \implies \theta = \frac{180^\circ}{m}$ for $m = n+1 \in \{2, 3, \dots\}$.
+
+**Dialectic Loop**
+
+*Cognitive Reset: A straight line cuts the whole, but the parts define the game.*
+
+Drafting the proof: We need to show that if $\theta = 180^\circ/m$, Mulan wins, and if $\theta \neq 180^\circ/m$, she cannot.
+- **Case 1: $\theta = 180^\circ/m$ ($m \in \mathbb{Z}, m \ge 2$).**
+  Mulan picks $P$ such that $\phi = \theta$. $T_1$ contains $\theta$ (win). $T_2$ contains $180^\circ - \theta = (m-1)\theta$. Since $(m-1)\theta$ is a multiple of $\theta$, $T_2$ is a winning state. Any angle $n\theta$ can be split into $\theta$ and $(n-1)\theta$. Thus, $T_2$ will eventually produce $\theta$ regardless of Shan-Yu's choices.
+- **Case 2: $\theta \neq 180^\circ/m$.**
+  If $T$ has no angle $n\theta$, can Mulan force $T_1, T_2 \in W$?
+  We checked the four possibilities for $\alpha_1, \phi, \alpha_2, 180^\circ - \phi$. Every scenario leads to the requirement that $T$ must already have an angle $n\theta$ or $\theta$ must be $180^\circ/m$.
+  If Shan-Yu starts with a triangle where no angle is a multiple of $\theta$, and $\theta$ is not $180^\circ/m$, Mulan can never create a state where both resulting triangles are winning. Shan-Yu simply picks the triangle that is not in $W$.
+
+**Synthesis**
+
+We proved that Mulan can guarantee victory if and only if the target angle $\theta$ is an integer divisor of $180^\circ$ (excluding $m=1$ as $\theta < 180^\circ$). If $\theta = 180^\circ/m$, Mulan creates a situation where both possible outcomes contain an angle in the set $\{n\theta \mid n \in \mathbb{N}\}$. By induction on $n$, any triangle with an angle $n\theta$ can be forced to a triangle with an angle $\theta$ in at most $n-1$ steps. If $\theta$ is not of this form, Shan-Yu can avoid the target angle by always choosing the triangle that does not contain a multiple of $\theta$.
+
+The values of $\theta$ are $\theta = \frac{180^\circ}{n}$ for $n = 2, 3, 4, \dots$.
+
+\boxed{\theta = \frac{180^\circ}{n} \text{ for } n \in \{2, 3, 4, \dots\}}

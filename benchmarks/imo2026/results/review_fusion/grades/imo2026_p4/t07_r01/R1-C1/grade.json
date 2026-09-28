@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T16:03:20.114682+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "case_id": "imo2026_p4.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "1fcc43601af78d86b1fbc493ec6071d700962e95af2dea7c291b23b8af90f5d5",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the necessity argument, the submission simply asserts that Shan-Yu can initially choose a triangle whose angles are not positive integer multiples of θ, without proving such a triangle exists. This essential point is repaired directly by choosing (θ/2, θ/2, 180°−θ).",
+    "summary": "The characterization is correct, and both main strategies are mathematically sound. The invariant argument correctly proves that one child remains free of multiples of θ, while the sufficiency argument first creates a small angle and then produces and peels the multiple (k−1)θ. Only minor, directly repairable existence details are omitted.",
+    "strengths": [
+      "Correctly obtains exactly θ=180°/k for integers k≥2.",
+      "The four-case invariant analysis in the necessity direction is complete and algebraically correct.",
+      "The construction from an angle smaller than θ correctly yields the angles θ−C′, C′, and (k−1)θ.",
+      "The repeated peeling of a multiple nθ gives a valid finite winning strategy."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Existence of the initial triangle having no angle equal to a positive integer multiple of θ is asserted rather than demonstrated."
+      },
+      {
+        "severity": "minor",
+        "description": "For k=2, the proof does not explicitly justify choosing a vertex whose altitude foot lies in the interior of the opposite side; this follows routinely by choosing the vertex opposite the two acute angles, unless the triangle is already right."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

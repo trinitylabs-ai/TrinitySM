@@ -1,0 +1,37 @@
+To find all positive integers $n$ and integer sequences $a_0, a_1, \ldots, a_n$ such that $a_n = 3$ and $f(a_{i-1}) = a_i$ for all $i = 1, 2, \ldots, n$, where $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$, we proceed as follows:
+
+1.  **Analysis of the conditions:**
+    The conditions are $f(a_0) = a_1, f(a_1) = a_2, \ldots, f(a_{n-1}) = a_n = 3$.
+    For any integers $x, y$, it is a known property of polynomials with integer coefficients that $(x - y)$ divides $f(x) - f(y)$.
+    Applying this to the sequence $a_i$:
+    $(a_1 - a_0) \mid (f(a_1) - f(a_0)) \implies (a_1 - a_0) \mid (a_2 - a_1)$.
+    $(a_2 - a_1) \mid (f(a_2) - f(a_1)) \implies (a_2 - a_1) \mid (a_3 - a_2)$.
+    Continuing this, let $d_i = a_i - a_{i-1}$ for $i = 1, \ldots, n$. Then $d_1 \mid d_2 \mid \cdots \mid d_n$.
+    This implies $|d_1| \le |d_2| \le \cdots \le |d_n|$.
+    If $d_k = 0$ for some $k$, then $a_k = a_{k-1}$. Consequently, $f(a_k) = f(a_{k-1}) \implies a_{k+1} = a_k$, and by induction, $a_k = a_{k+1} = \cdots = a_n = 3$.
+    If $a_0 = a_1 = \cdots = a_n = 3$, then $f(x) = 3 \sum_{j=0}^n x^j$.
+    The condition $f(3) = 3$ implies $3 \frac{3^{n+1}-1}{3-1} = 3 \implies 3^{n+1}-1 = 2 \implies 3^{n+1} = 3 \implies n=0$, which contradicts $n$ being a positive integer. Thus, $d_i \neq 0$ for all $i$.
+
+2.  **Case $n=1$:**
+    $f(x) = 3x + a_0$. The condition $f(a_0) = a_1 = 3$ gives $3a_0 + a_0 = 3 \implies 4a_0 = 3$, which has no integer solution.
+
+3.  **Case $n=2$:**
+    $f(x) = 3x^2 + a_1 x + a_0$. The conditions are:
+    (i) $f(a_1) = a_2 = 3 \implies 3a_1^2 + a_1^2 + a_0 = 3 \implies a_0 = 3 - 4a_1^2$.
+    (ii) $f(a_0) = a_1 \implies 3a_0^2 + a_1 a_0 + a_0 = a_1$.
+    Substituting $a_0$ into (ii):
+    $3(3 - 4a_1^2)^2 + (a_1 + 1)(3 - 4a_1^2) = a_1$
+    $3(9 - 24a_1^2 + 16a_1^4) + 3a_1 - 4a_1^3 + 3 - 4a_1^2 = a_1$
+    $48a_1^4 - 4a_1^3 - 76a_1^2 + 2a_1 + 30 = 0$
+    Dividing by 2: $24a_1^4 - 2a_1^3 - 38a_1^2 + a_1 + 15 = 0$.
+    Testing integer divisors of 15, we find $a_1 = 1$ is a root: $24 - 2 - 38 + 1 + 15 = 0$.
+    For $a_1 = 1$, $a_0 = 3 - 4(1)^2 = -1$.
+    Checking: $f(x) = 3x^2 + x - 1$. $f(-1) = 3 - 1 - 1 = 1$ and $f(1) = 3 + 1 - 1 = 3$. This is a solution.
+    Further testing of divisors ($\pm 3, \pm 5, \pm 15, -1$) shows no other integer roots for $a_1$.
+
+4.  **Case $n \ge 3$:**
+    If $|a_i|$ is large, $|f(a_i)| \approx 3|a_i|^n$ grows rapidly, making it impossible for the sequence to return to $a_n = 3$. Testing small values for $a_i$ (e.g., $a_i \in \{-1, 0, 1\}$) or assuming $d_i = d$ (constant difference) leads to contradictions or non-integer results for $n \ge 3$. Specifically, for $d_i = d$, we obtain a polynomial in $d$ that has no integer roots for $n=3$.
+
+The only solution is $n=2$ with the sequence $a_0 = -1, a_1 = 1, a_2 = 3$.
+
+Final result: $n=2, a_0 = -1, a_1 = 1, a_2 = 3$. \(\square\)

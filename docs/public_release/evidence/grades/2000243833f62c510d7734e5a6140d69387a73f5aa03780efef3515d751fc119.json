@@ -1,0 +1,40 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p1",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+  "proof": "evidence/proofs/fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c.md",
+  "completed_at": "2026-09-15T18:27:04.794875+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The lexicographically decreasing invariant \\((S,k)\\) proves termination and uniqueness of the remaining nonunit. Primewise gcds of valuations are correctly shown invariant and uniquely reconstruct the terminal value \\(M\\).",
+    "strengths": [
+      "Gives a valid well-founded descent argument covering both possible gcd cases.",
+      "Correctly applies the subtraction form of Euclid’s algorithm to prime valuations.",
+      "Reconstructs \\(M\\) entirely from invariants of the initial board."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p1_c3_t10r01_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p1/t10_r01/summary.json",
+    "native_record_file_sha256": "2000243833f62c510d7734e5a6140d69387a73f5aa03780efef3515d751fc119",
+    "selected_record": "benchmarks/imo2026/results/p1_c3_t10r01_20260915T164615Z/grades/imo2026_p1/t10_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "2e34b4f128f84de164d3e27607c190e02870da2ca66f6115ba8e6acaf05ba2be",
+    "proof": "benchmarks/imo2026/results/p1_c3_t10r01_20260915T164615Z/proofs/imo2026_p1/t10_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7"
+}

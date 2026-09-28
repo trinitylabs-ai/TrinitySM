@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "230341455c62d3c5ddb0346312a2bbb9275aac7fa6128075af06eed2c3a567d8",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "e18df56a50806eefe574dbffd2dcf9c3c0f49b66bb8fb278a927e0e5baed62ad",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Part (2), the submission claims that for every prime p the terminal multiset S_p^* contains the single element v_p(M). This is false when p does not divide M: then v_p(M)=0 and S_p^* is empty. This assertion is used to identify the invariant g_p with v_p(M), so Rule C applies despite the one-line repair.",
+    "summary": "The termination argument and the primewise gcd invariant are correct, and the claimed terminal value is correct. However, the terminal reconstruction contains a false load-bearing assertion for primes not dividing M. Splitting into the cases p|M and p∤M immediately repairs the proof, but under the stated strict policy this false central statement caps the score at 5.",
+    "strengths": [
+      "Correctly uses the product together with the number of entries greater than 1 to prove termination.",
+      "Correctly proves that at least one entry greater than 1 persists, so a terminal board has exactly one such entry.",
+      "Correctly computes the valuation transformation and identifies the gcd of the positive exponents as an invariant."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "For p∤M, the terminal positive-exponent multiset is empty rather than {v_p(M)}={0}, since S_p^* excludes zero. The proof needs an explicit empty-case argument using its convention gcd(∅)=0 before concluding g_p=v_p(M)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:47:32.380749+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

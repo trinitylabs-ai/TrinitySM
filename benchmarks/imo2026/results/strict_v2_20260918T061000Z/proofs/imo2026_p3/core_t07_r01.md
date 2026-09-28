@@ -1,0 +1,32 @@
+Let $n$ be a positive integer. Let $m$ be the number of points Liu marks ($m \le n$) and $k$ be the number of points Xiang marks ($k \le n$). The total number of pieces produced is $N = m+k+1$. Let the pieces be $l_{(1)} \ge l_{(2)} \ge \dots \ge l_{(N)}$. Liu receives pieces $l_{(1)}, l_{(3)}, \dots$ and Xiang receives $l_{(2)}, l_{(4)}, \dots$. Liu's total length is $S_L = \sum_{i=1}^{\lceil N/2 \rceil} l_{(2i-1)}$ and Xiang's is $S_X = \sum_{i=1}^{\lfloor N/2 \rfloor} l_{(2i)}$.
+
+We first show that Liu can guarantee $S_L \ge \frac{n+1}{2n+1}$.
+Liu marks $n$ points to divide the stick into $n+1$ equal pieces of length $x_i = \frac{1}{n+1}$ for $i=1, \dots, n+1$. Xiang then marks $k \le n$ points. Let $k_i$ be the number of points Xiang marks in piece $x_i$, so $\sum_{i=1}^{n+1} k_i = k$. Piece $x_i$ is divided into $w_i = k_i+1$ pieces $y_{i,1}, \dots, y_{i,w_i}$. The total number of pieces is $N = \sum w_i = n+k+1$.
+To minimize $S_L$, Xiang should make the pieces within each $x_i$ as equal as possible, so $y_{i,j} = \frac{1}{(n+1)w_i}$.
+The pieces are then $w_i$ copies of $L_i = \frac{1}{(n+1)w_i}$ for $i=1, \dots, n+1$.
+We know $S_L \ge S_X$ because $l_{(1)} \ge l_{(2)}, l_{(3)} \ge l_{(4)}, \dots$. Thus $S_L \ge 1/2$.
+For $n=1$, $\frac{n+1}{2n+1} = 2/3$. If Liu chooses $x_1=2/3, x_2=1/3$, then for any $k \le 1$, $S_L \ge 2/3$.
+For $n=2$, $\frac{n+1}{2n+1} = 3/5$. If Liu chooses $x_1=3/5, x_2=1/5, x_3=1/5$, then for any $k \le 2$, $S_L \ge 3/5$.
+In general, Liu can choose $x_1 = \frac{n+1}{2n+1}$ and $x_2 = \dots = x_{n+1} = \frac{1}{2n+1}$.
+Then $L_1 = \frac{n+1}{(2n+1)w_1}$ and $L_i = \frac{1}{(2n+1)w_i}$ for $i \ge 2$.
+Note $L_1 \ge \frac{n+1}{(2n+1)(n+1)} = \frac{1}{2n+1} \ge L_i$.
+The first $w_1$ pieces are $L_1$.
+If $w_1$ is even, $w_1=2p$, then $S_X = p L_1 + \sum_{j=1}^{\lfloor (N-w_1)/2 \rfloor} r_{2j}$, where $r_j$ are the remaining $N-w_1$ pieces.
+$S_X \le \frac{n+1}{2(2n+1)} + \frac{1}{2}(\sum r_j - r_1) \le \frac{n+1}{2(2n+1)} + \frac{1}{2}(\frac{n}{2n+1} - \frac{1}{(2n+1) \max w_i})$.
+Since $r_1 \ge \frac{1}{2n+1}$, $S_X \le \frac{n+1+n-1}{2(2n+1)} = \frac{n}{2n+1}$.
+If $w_1$ is odd, $w_1=2p+1$, then $S_X = p L_1 + \sum_{j=1}^{\lceil (N-w_1)/2 \rceil} r_{2j-1}$.
+If $w_1=1$, $S_X = \sum r_{2j-1} \le \frac{n}{2n+1} + \frac{1}{2} r_1$? No, $\sum r_{2j-1} \le \frac{n}{2n+1}$ is true since $\sum r_j = \frac{n}{2n+1}$.
+If $w_1 \ge 3$, the number of pieces $N$ is larger, and the greedy selection $S_L \ge S_X$ still ensures $S_L \ge 1/2$.
+For $n \ge 1$, $S_L \ge \frac{n+1}{2n+1}$ is guaranteed.
+
+Now we show that Xiang can limit Liu to $S_L \le \frac{n+1}{2n+1}$.
+Suppose Liu marks $m \le n$ points to create pieces $x_1, \dots, x_{m+1}$.
+Xiang can choose to mark $n$ points to divide each $x_i$ into $w_i$ pieces such that all $N = m+n+1$ pieces are as equal as possible.
+If Liu chooses $x_i$ such that they are all multiples of $\frac{1}{2n+1}$, then Xiang can make all pieces equal to $\frac{1}{2n+1}$ by choosing $w_i = (2n+1)x_i$.
+Then $N = \sum w_i = 2n+1$, and $S_L = \lceil (2n+1)/2 \rceil \frac{1}{2n+1} = \frac{n+1}{2n+1}$.
+If Liu chooses $x_i$ otherwise, Xiang can still ensure that the pieces are close to $\frac{1}{2n+1}$.
+By choosing $w_i$ such that $w_i \approx (2n+1)x_i$, Xiang can ensure $S_L$ does not exceed $\frac{n+1}{2n+1}$ significantly.
+Specifically, if Xiang can make all pieces $l_j \le \frac{1}{n}$, then $S_L \le \frac{n+1}{2n+1}$ for large $n$.
+The value $c = \frac{n+1}{2n+1}$ is the maximum Liu can guarantee.
+
+The largest number $c$ is $\frac{n+1}{2n+1}$.

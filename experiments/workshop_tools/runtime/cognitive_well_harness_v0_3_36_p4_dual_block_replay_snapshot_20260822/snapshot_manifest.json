@@ -1,0 +1,140 @@
+{
+  "schema": "cognitive-well-v036-snapshot-manifest-v1",
+  "version": "0.3.36",
+  "snapshot_id": "p4-qwen36-dual-block-gemma4-gold-codex-20260822",
+  "created_date": "2026-08-22",
+  "parent_harness": "cognitive_well_harness_v0_3_35_cap_continuation_recovery_20260822",
+  "scope": "P4 cold start from problem statement through dual repair branches and final gold-informed audit",
+  "default_entrypoint": "cold-generate -> cold-refine -> finish",
+  "fast_replay_entrypoint": "fast-pipeline",
+  "models": {
+    "discovery_gemma_nvfp4": {
+      "served_name": "nvidia/Gemma-4-31B-IT-NVFP4",
+      "huggingface_revision": "4135a98a9b728a548947683219633b25682223ac",
+      "quantization": "modelopt_nvfp4",
+      "dtype": "bfloat16",
+      "kv_cache_dtype": "fp8_e4m3",
+      "mtp_speculative_tokens": 0
+    },
+    "opc": {
+      "model": "INSAIT-Institute/OPC-R1-8B",
+      "file": "/opt/proof-workshop/.models/OPC-R1-8B.Q4_K_M.gguf",
+      "ctx_size": 32768,
+      "max_output_tokens": 8000,
+      "temperature": 0.2
+    },
+    "gpt_oss": {
+      "model": "openai/gpt-oss-20b",
+      "file": "/opt/proof-workshop/.models/gpt-oss-20b-MXFP4.gguf",
+      "ctx_size": 32768,
+      "max_output_tokens": 16000,
+      "temperature": 0.2,
+      "primary_reasoning_budget": null,
+      "bounded_retry_reasoning_budget": 8000
+    },
+    "qwen": {
+      "served_name": "Qwen/Qwen3.6-27B",
+      "huggingface_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "dtype": "bfloat16",
+      "kv_cache_dtype": "bfloat16",
+      "mtp_speculative_tokens": 0
+    },
+    "gemma": {
+      "served_name": "google/gemma-4-31B-it",
+      "huggingface_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "assistant_revision": "627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+      "dtype": "bfloat16",
+      "kv_cache_dtype": "bfloat16",
+      "mtp_speculative_tokens": 4
+    },
+    "codex": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "reference_informed": true,
+      "seed_control": "not_exposed_by_codex_exec"
+    }
+  },
+  "generation": {
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "qwen_max_tokens": 12000,
+    "gemma_max_tokens": 65536,
+    "qwen_layout_concurrency": 3,
+    "gemma_rewrite_concurrency": 2,
+    "cap_policy": "exact first request; on length only, one doubled-cap continuation reusing prior generation"
+  },
+  "cold_start": {
+    "initial_input": "frozen/problem/imo2026_p4.json claim only",
+    "draft": {"temperature": 1.0, "max_tokens": 65536},
+    "lazy_scan": {"temperature": 0.1, "max_tokens": 8192},
+    "explicit_resolve": {"temperature": 1.0, "max_tokens": 65536},
+    "nvfp4_refinement": {"temperature": 1.0, "max_tokens": 65536},
+    "nvfp4_service": {
+      "max_model_len": 262144,
+      "gpu_memory_utilization": 0.9,
+      "async_scheduling": true,
+      "mtp_speculative_tokens": 0
+    },
+    "local_review_runtime": {
+      "llama_binary": "/opt/proof-workshop/third_party/llama.cpp/build/bin/llama-cli",
+      "threads": 12,
+      "gpu_layers": 999,
+      "batch_size": 256,
+      "ubatch_size": 128,
+      "review_isolation": true
+    },
+    "gemma_review_fusion": {
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "top_k": 64,
+      "max_tokens": 5000,
+      "thinking_token_budget": 3000
+    },
+    "call_order": [
+      "nvfp4_cold_draft",
+      "nvfp4_lazy_scan",
+      "nvfp4_explicit_resolve_if_needed",
+      "opc_initial_review",
+      "gpt_oss_initial_review_with_bounded_retry_if_needed",
+      "nvfp4_initial_review_fusion",
+      "nvfp4_proof_refinement",
+      "opc_revision_review",
+      "gpt_oss_revision_review_with_bounded_retry_if_needed",
+      "nvfp4_revision_review_fusion",
+      "qwen36_three_block_fusion_and_repair",
+      "qwen36_two_block_fusion_and_repair",
+      "gemma4_bf16_mtp4_two_rewrites",
+      "gold_informed_codex_audit"
+    ]
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "vllm": "0.24.0",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "gpu_memory_mib": 97887,
+    "driver": "595.71.05"
+  },
+  "reference_result": {
+    "cold_checked_proof_sha256": "19cb3a2255b87406ee392de99384fdd56116faf0d28437c3038590891e625dc5",
+    "cold_initial_feedback_sha256": "a142df7e00184d51c3f2d15f35719734967eff68bb3459a3b94fb4ba265c7da1",
+    "candidate_proof_sha256": "d5edef081e351980bb743fc68ae5944762623c6373806871bf3313c3152ce7de",
+    "two_block_gemma_proof_sha256": "53cb108773decfa9539fb9b15ed2539d1b5e8d03e446e9667ff8db9eca51ade3",
+    "three_block_gemma_proof_sha256": "a48a0979495b4365d5b9f1ee058f02a7b24e3e275da3e9fbecfa6ad607e13584",
+    "gold_informed_codex_scores": {
+      "two_block": 3,
+      "three_block": 6
+    },
+    "gold_informed_codex_prompt_sha256": {
+      "two_block": "7645ba10ba17f79d39f9132052627e39338b09068e014e22f8a6dacf1f87b647",
+      "three_block": "775871b5a0048e6a75bb76b72285d97dda5317112cd3cf3d08c4cceb42faadc6"
+    }
+  },
+  "gold_firewall": {
+    "reference_available_to_qwen": false,
+    "reference_available_to_gemma": false,
+    "reference_loaded_only_after_final_proofs": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "1f7a4b2d3245bd1813f00c681d5fb544b12ee891627691ac72c8b74cc0d2ec50",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "42c6330c45178bbebdc3e3d482709786d6c2abc19f9a3f92a9a85d46cdda59d1",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "22a4f4cfacaaba8ab65ebd80cb225cd4680cc99b09fa27b90e19db7b7cc2484c",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The first decisive defect is the sine-law equation for triangle ABL. Here θ_L was defined as ∠CAL, whereas the angle at A in triangle ABL is ∠BAL; these are not equal. Thus the denominator sin(α+β+θ_L), and consequently b/c=f(tan β), are unjustified. The analogous step for triangle AKC likewise confuses ∠BAK with ∠KAC. These false inferences replace the central compatibility argument, so Rule E gives a ceiling of 3.",
+    "summary": "The vector reduction of OM=ON and several preliminary sine-law relations are useful, but the central relation f(tan β)f(tan γ)=1 is derived from incorrect angle identifications. Moreover, the final circumcenter computation is entirely asserted through vague symmetry rather than performed. Correcting the proof requires replacing the central compatibility argument and supplying a substantial calculation, not merely filling a local omission.",
+    "strengths": [
+      "Correctly reduces OM=ON to a linear dot-product identity involving the circumcenter.",
+      "Correctly obtains the circumcenter equations 2o·k=|k|² and 2o·l=|l|².",
+      "The sine-law formulas for BK in triangle BMK and CL in triangle CNL are valid, and the displayed vector formula for the circumcenter is correct when A,K,L are noncollinear."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "In triangle ABL the proof substitutes θ_L=∠CAL for ∠BAL, and in triangle AKC it substitutes θ_K=∠BAK for ∠KAC. Hence both side-ratio equations used to obtain the function f are generally false."
+      },
+      {
+        "severity": "major",
+        "description": "The decisive computation of o·(c−b) is omitted. Saying that symmetry and a reciprocal relation 'ensure' the target equality is an unsupported central inference; because the preceding reduction is already invalid, Rule B does not make a score of 4 eligible."
+      },
+      {
+        "severity": "minor",
+        "description": "The use of tangent formulas does not address cases in which one of the relevant tangents is undefined or a displayed denominator vanishes; the hypotheses do not establish that these cases are impossible."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T08:58:24.148410+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

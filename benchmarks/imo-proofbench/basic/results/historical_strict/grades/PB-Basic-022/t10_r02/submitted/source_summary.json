@@ -1,0 +1,51 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T23:36:40.581296+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 22,
+  "problem_id": "PB-Basic-022",
+  "case_id": "PB-Basic-022.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "1efea3a9dd6c26c80e0fbe5bf4d31b3a340d8a46fe300c0f17f18033217e5cf8",
+  "reference_sha256": "88f4d123bb4de7af98dc52cc35cdf7c94c2a6dcc73184ef23e250bc4abc71e68",
+  "proof_sha256": "1c1f98d2028ec6d555b2bc7e437118408c98d10994b2a1add828531ef16e931b",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/tasks.json",
+  "task_manifest_sha256": "02253172db52a934d2fc8810880f2cbedd41a93efcf73a52ee6440114f9f3a4b",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The selected integer roots \\(x_n\\) need not lie on one fixed algebraic branch, so the assertion that \\(x_n\\) itself has a Newton–Puiseux expansion is unjustified.",
+    "summary": "The final classification is correct, and the deductions after obtaining \\(P(Q(x))=x^{2024}\\) are largely sound. However, the central passage from arbitrarily selected integer roots to an eventual polynomial \\(Q(n)\\) is invalid: Newton–Puiseux applies to individual branches, while the chosen roots may switch branches. The termwise finite-difference argument is also not justified for the stated infinite expansion. Repairing this requires a new load-bearing argument, such as the reference solution’s prime-divisibility method.",
+    "strengths": [
+      "Correctly derives and verifies the complete candidate family, conditional on the polynomial-composition identity.",
+      "The differentiation argument forcing \\(Q(x)=cx^m+b\\) is essentially correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Treats the sequence of selected integer roots as a single algebraic branch without proving eventual branch consistency."
+      },
+      {
+        "severity": "substantial",
+        "description": "Concludes \\(\\Delta^m x_n\\to0\\) by applying finite differences termwise to an infinite Puiseux expansion without the necessary convergence or remainder estimates."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

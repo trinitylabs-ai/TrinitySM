@@ -1,0 +1,54 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T01:23:26.030881+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 23,
+  "problem_id": "PB-Basic-023",
+  "case_id": "PB-Basic-023.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/p23/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/p23/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/p23/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "6c2d45869261be95ca230e89c427572c388fcaddb30bfb8722f630aaa7a0b124",
+  "reference_sha256": "4393d5c48aa4d550dc62db261ca201891f0c1235d787f441e21f615629b91bc9",
+  "proof_sha256": "56847c94da5f44a56993f4123618c0d0c7cdeedf57bc2d5ad511291d0dd4403e",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/tasks.json",
+  "task_manifest_sha256": "21785542003bf9c02da7dd9fbbd5063771db41b0bf5d480fc5302d1120316ce3",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The inference \\(x\\equiv54\\pmod{60}\\Rightarrow x\\equiv6\\pmod8\\) is false, so the subsequent modulo \\(17\\) and modulo \\(73\\) contradiction does not eliminate that branch.",
+    "summary": "The submission correctly finds both solutions and rigorously handles \\(c=1\\), but its proof of completeness fails. Several remaining branches are eliminated by invalid congruence deductions or unsupported assertions, including “the only solution” and “similar contradictions rule out” all larger \\(s\\).",
+    "strengths": [
+      "Correctly proves \\(a>c\\), applies the \\(2\\)-adic valuation formula, and obtains \\((3,1,1)\\) and \\((6,2,4)\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The false reduction from a congruence modulo \\(60\\) to one modulo \\(8\\) invalidates a load-bearing contradiction."
+      },
+      {
+        "severity": "major",
+        "description": "In the \\(y\\equiv2\\pmod{12}\\) branch, one residue case is not treated and the claimed uniqueness of \\((x,y)=(6,2)\\) is merely asserted."
+      },
+      {
+        "severity": "major",
+        "description": "For even \\(j\\), only \\(s=3\\) is partially considered; the growth argument is unjustified and all cases \\(s=6,9,\\ldots\\) are dismissed without proof."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

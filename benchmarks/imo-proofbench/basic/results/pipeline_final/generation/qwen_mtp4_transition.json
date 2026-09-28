@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-09-11T13:12:19.054081+00:00",
+  "user_authorized": "Adopt Qwen MTP=4 for further experiments; resume IMOBench Basic",
+  "previous_qwen_mtp": 0,
+  "qwen_speculative_config": {
+    "method": "mtp",
+    "num_speculative_tokens": 4
+  },
+  "qwen_launcher": "/opt/proof-workshop/scripts/launch_qwen36_bf16_mtp4.sh",
+  "launcher_sha256": "9fbe8e62998ed00d54c4a9073aa50a76372853afd475a7f723ae941f24d21379",
+  "queue_manifest_sha256": "db7299c350ae5e00c93672f90c0f223668b5dd1ca242092b70e47221f4df6dd5",
+  "backend_manifest_sha256": "0dc0368782fc1491d3bca6ba8f0a43e22b50f34207917d8e445e697ad37f3dc9",
+  "recovery_script_sha256": "b59064ea4b9836559f01f30b4efd21e9cb837c50a50d735f89a22cb4928a4246",
+  "original_inputs_seeds_caps_and_budget_forcing_preserved": true,
+  "completed_C1_lanes_reused": 3,
+  "pending_C1_lanes": [
+    "t10_r01"
+  ],
+  "remaining_queue": "PB-Basic-011 through PB-Basic-030",
+  "historical_outputs_preserved": true
+}

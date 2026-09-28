@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-022",
+  "problem": "Given a triangle $ABC$ with $AB<AC<BC$, let $I$ be the incenter\n of triangle $ABC$, and let $M$ and $N$ be the midpoints of sides\n $CA$ and $AB$, respectively. Let $K$ be the midpoint of the arc\n $BC$ of the circumcircle of triangle $ABC$ which does not contain\n $A$. Let $B'\\neq C$ be the point where the line parallel to $AC$\n and tangent to the incircle of triangle $ABC$ intersects side $BC$,\n and similarly, let $C'\\neq B$ be the point where the line parallel\n to $AB$ and tangent to the incircle of triangle $ABC$ intersects\n side $BC$. Find the value of $\\angle NIM+\\angle B'KC'$ in terms\n of degree."
+}

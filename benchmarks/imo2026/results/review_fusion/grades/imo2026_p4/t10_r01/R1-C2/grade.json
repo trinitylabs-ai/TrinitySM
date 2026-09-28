@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T17:21:06.729945+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "case_id": "imo2026_p4.explicit.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t10_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "091b8c955e1798f61fd1f5aab81ea88c43fb50bf22c5171883fb04b0170420a4",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument unjustifiably claims that Mulan can only make relevant transitions through Moves A and B. A winning strategy may instead cut to two nonterminal triangles that are both recursively winning, so neither child need contain θ immediately.",
+    "summary": "The claimed characterization is correct, and the sufficiency direction gives a substantially valid peeling strategy, including the treatment of angles below θ. However, the entire necessity direction rests on a false restriction of Mulan's possible winning moves. The subsequent countability argument neither defines a preserved safe class nor proves that every arbitrary cut has at least one child from which Shan-Yu can continue avoiding θ. Repairing this requires a new load-bearing invariant, such as the reference solution's marked-angle safe-triangle lemma. Under the stated strict policy, the unsupported decisive inference caps the score at 3.",
+    "strengths": [
+      "Derives the child-angle formulas correctly.",
+      "Correctly shows how an angle kθ can be peeled down to θ.",
+      "Gives a workable sufficiency strategy for reaching an angle at most θ and then producing the multiple 180°−θ=(n−1)θ.",
+      "States the correct final set of values θ=180°/n for integers n≥2."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The necessity proof ignores branching winning moves in which neither immediate child contains θ but both children are winning after further play."
+      },
+      {
+        "severity": "major",
+        "description": "The countability discussion does not prove a Shan-Yu strategy: it never establishes that after every arbitrary cut at least one child avoids the alleged dangerous set, and its claimed form for all relevant future angles is unsupported."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

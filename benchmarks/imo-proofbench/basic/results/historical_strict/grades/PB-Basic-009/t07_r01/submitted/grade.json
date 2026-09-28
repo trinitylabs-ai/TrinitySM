@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:10:03.801910+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 9,
+  "problem_id": "PB-Basic-009",
+  "case_id": "PB-Basic-009.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "38ddc6b8f92fbe75b0a849bcf58418169c490526ec752691ec959df0e802586a",
+  "reference_sha256": "9d402d87386bcc57d6e799c2e7235c54c3eb7a6d3466ba66487e54443eb91c48",
+  "proof_sha256": "e102d4f527f22afbeb1e02dfe2b6e45c7ae4737a0b3921d458dfbab301e5c726",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claim that \\(A\\) is minimized when the positive mass is either concentrated or balanced is unsupported; analyzing two special families does not establish a lower bound for arbitrary configurations.",
+    "summary": "The normalization and the \\(p=1\\) construction correctly prove \\(A\\le136\\). However, the essential universal bound \\(A\\ge136\\) is not proved. It requires a new argument, such as double-counting partitions into six triples.",
+    "strengths": [
+      "Correctly reduces the problem to zero-sum variables and constructs a configuration with exactly \\(136\\) nonnegative triples.",
+      "Correctly analyzes the case of exactly one positive variable."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The decisive extremal reduction to the concentrated and balanced configurations is merely asserted, leaving the entire lower-bound argument unproved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

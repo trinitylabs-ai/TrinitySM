@@ -1,0 +1,121 @@
+The user wants me to act as an expert mathematical proof-review adjudicator.
+I need to evaluate the provided candidate proof against the problem statement, grading rubric, and independent reviews.
+I will follow the strict output contract.
+
+Problem: IMO 2026 Problem 1. 2026 integers > 1. Operation: choose m, n > 1, replace with gcd(m,n) and lcm(m,n)/gcd(m,n).
+(1) Prove process terminates with exactly one integer > 1.
+(2) Prove M is independent of choices.
+
+Candidate proof:
+- Analyzes prime valuations.
+- Operation on valuations (a,b) -> (min(a,b), |a-b|).
+- Defines potential S = sum of all valuations.
+- Shows S decreases by min(a,b) per prime, total decrease = Omega(gcd(m,n)).
+- If gcd > 1, S strictly decreases. If gcd = 1, S constant, but number of integers > 1 decreases by 1.
+- Concludes termination with at most one integer > 1.
+- Invariance: gcd of valuations for each prime p across all numbers is invariant because gcd(a,b) = gcd(min(a,b), |a-b|).
+- At termination, only one number M > 1, others are 1 (valuations 0). So v_p(M) = invariant gcd.
+- M = product p^{g_p}, independent of choices.
+
+Independent reviews:
+- Local critic: Claims S calculation is flawed, invariance argument flawed, caps at 3.
+- Whole-proof grader: Claims CORRECT, 7/7.
+- Adversarial checker: Claims CORRECT, 7/7.
+
+My task: Verify directly.
+Check S calculation:
+For a prime p, valuations a, b. New valuations: min(a,b), |a-b|.
+Sum of new valuations: min(a,b) + |a-b| = max(a,b).
+Old sum: a + b.
+Change: max(a,b) - (a+b) = -min(a,b). Correct.
+Total change in S: sum over p of -min(v_p(m), v_p(n)) = - sum v_p(gcd(m,n)) = -Omega(gcd(m,n)). Correct.
+If gcd(m,n) > 1, Omega >= 1, so S decreases by at least 1.
+If gcd(m,n) = 1, S unchanged. But operation replaces m,n with 1 and mn. Number of integers > 1 decreases by 1.
+Since S >= 0 and number of integers > 1 is finite, process terminates. Termination condition: no two integers > 1 can be chosen. This means at most one integer > 1 remains. Correct.
+
+Check Invariance:
+For each prime p, consider the multiset of valuations {v_{p,1}, ..., v_{p,2026}}.
+Operation replaces a, b with min(a,b), |a-b|.
+Claim: gcd(a,b) = gcd(min(a,b), |a-b|).
+Proof: Assume a <= b. min=a, |a-b|=b-a. gcd(a,b) = gcd(a, b-a). True.
+Thus, the gcd of the pair is invariant.
+Since gcd of the whole set is gcd(gcd(a,b), others), and gcd(a,b) is invariant, the gcd of the whole set is invariant. Correct.
+At termination, only one integer M > 1. All others are 1, so their valuations are 0.
+The invariant gcd for prime p is gcd(v_p(M), 0, ..., 0) = v_p(M).
+Thus v_p(M) is determined by initial valuations. M = prod p^{v_p(M)} is independent. Correct.
+
+Are there any edge cases?
+What if m=n? gcd(m,m)=m, lcm(m,m)/gcd(m,m) = m/m = 1.
+Valuations: a, a -> min(a,a)=a, |a-a|=0.
+gcd(a,a)=a. gcd(a,0)=a. Invariant holds.
+S change: -min(a,a) = -a. Decreases. Correct.
+What if one of the numbers becomes 1 during the process? The problem says "chooses two integers m > 1 and n > 1". So we only operate on numbers > 1. Once a number becomes 1, it's never chosen again. This matches the proof's assumption.
+The proof says "Termination occurs when no two integers m, n > 1 can be chosen, meaning at most one integer M on the blackboard is greater than 1." This is correct.
+The proof says "Since the original integers were all greater than 1, for any x_i there is some prime p such that v_p(x_i) >= 1, ensuring g_p >= 1 for that p, so M > 1." This ensures exactly one integer > 1 remains, not zero. Correct.
+
+The Local critic's objections are unfounded. The calculation of S is correct. The invariance argument is correct.
+The Whole-proof grader and Adversarial checker are correct.
+I will assign grade 7/7.
+I will format the output exactly as requested.
+No defects to report.
+Output structure:
+# INDICTMENT
+{short overall assessment}
+## FINAL VERDICT
+{concise proof-as-submitted judgment}
+- FINAL VERDICT: CORRECT
+- FINAL_GRADE: 7/7
+## REPAIR HANDOFF
+- Status: NOT REQUIRED
+- Accepted defect IDs: NONE
+
+Wait, the prompt says: "If the proof is correct, omit all ROUND sections, set FINAL_GRADE to 7/7, set the repair status to NOT REQUIRED, and set accepted defect IDs to NONE."
+I will follow this exactly.
+Check rubric: "Score 7 only for a complete rigorous proof with no unresolved gap"
+The proof is complete and rigorous.
+I will produce the output.
+One minor point: The proof says "Termination occurs when no two integers m, n > 1 can be chosen, meaning at most one integer M on the blackboard is greater than 1." This is logically sound.
+The proof handles everything correctly.
+I will generate the response. 
+Structure check:
+# INDICTMENT
+...
+## FINAL VERDICT
+...
+- FINAL VERDICT: CORRECT
+- FINAL_GRADE: 7/7
+## REPAIR HANDOFF
+...
+Matches contract.
+Proceed. 
+Self-Correction/Verification during thought:
+Is there any subtle issue with "lcm(m,n)/gcd(m,n)"? The problem defines it exactly as such. The valuation analysis correctly identifies it as |a-b|.
+Is S strictly decreasing when gcd>1? Yes, by at least 1.
+Is the number of moves finite? Yes, lexicographic order on (S, count of numbers > 1) strictly decreases.
+Is the invariant correctly applied? Yes.
+The proof is solid.
+I will write the indictment stating that the proof is correct and the local critic's objections are unfounded.
+Final output matches requirements.✅
+Proceed. 
+Output Generation. 
+(Note: I will ensure the exact formatting requested.) 
+"# INDICTMENT
+The candidate proof correctly analyzes the operation via prime valuations, establishes a valid potential function to prove termination, and identifies the correct invariant to prove independence of the final value. The local critic's objections regarding the potential function calculation and the invariance argument are mathematically unfounded. The proof is complete and rigorous.
+
+## FINAL VERDICT
+The proof correctly handles both parts of the problem. The potential function argument strictly decreases a well-ordered pair (S, count of integers > 1), guaranteeing termination with exactly one integer > 1. The valuation transformation preserves the greatest common divisor of the exponents for each prime, which directly determines the final integer M. All steps are logically sound and mathematically justified.
+
+- FINAL VERDICT: CORRECT
+- FINAL_GRADE: 7/7
+
+## REPAIR HANDOFF
+- Status: NOT REQUIRED
+- Accepted defect IDs: NONE"
+Matches exactly. No extra text. Proceeds. 
+All constraints met. Output matches contract.✅
+Done. 
+(Self-Correction/Refinement during drafting: I should make sure the indictment is short as requested. The rest matches.)
+Ready. 
+Output matches response. 
+Proceeds. 
+[Output Generation] -> *Proceeds*

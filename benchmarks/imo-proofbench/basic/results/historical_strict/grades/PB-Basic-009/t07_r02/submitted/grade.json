@@ -1,0 +1,50 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:10:23.072006+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 9,
+  "problem_id": "PB-Basic-009",
+  "case_id": "PB-Basic-009.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "38ddc6b8f92fbe75b0a849bcf58418169c490526ec752691ec959df0e802586a",
+  "reference_sha256": "9d402d87386bcc57d6e799c2e7235c54c3eb7a6d3466ba66487e54443eb91c48",
+  "proof_sha256": "aff4290a2d4643c340c12884977418e013f5a5e054716f819e7bdc0ba17c966d",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The case analysis evaluates specially chosen configurations rather than proving lower bounds for arbitrary configurations with the specified number of positive terms.",
+    "summary": "The centering reduction and the construction achieving \\(A=136\\) are correct. However, the essential bound \\(A\\ge136\\) is not proved: Cases 2–4 impose unproved “minimizing” configurations, and Case 5 simply asserts that at least 140 triples remain nonnegative despite acknowledging that triples with two positive terms can be negative. A new global argument, such as the partition double count, is required.",
+    "strengths": [
+      "Correctly reduces the problem to zero-sum numbers and supplies a valid example with exactly \\(136\\) nonnegative triples."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The proof never establishes a lower bound for all admissible configurations; its chosen examples cannot justify minimization."
+      },
+      {
+        "severity": "major",
+        "description": "The claim for \\(k\\ge5\\) that at least \\(140\\) triples remain nonnegative is unsupported, and the displayed example proves only attainability for one configuration."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

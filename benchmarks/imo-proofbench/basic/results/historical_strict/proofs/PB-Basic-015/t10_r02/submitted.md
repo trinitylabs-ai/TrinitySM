@@ -1,0 +1,26 @@
+To prove that Adrian's procedure terminates and results in the cars being sorted in increasing order of width, we analyze the process using the properties of inversions and the constraints on the swaps.
+
+### 1. Proof of Termination
+Let the cars be denoted by $C_i = (l_i, w_i)$ for $i=1, \dots, n$. Initially, the cars are arranged such that $l_1 < l_2 < \dots < l_n$. A swap occurs between two adjacent cars $C_j$ and $C_{j+1}$ if and only if $l_j < l_{j+1}$ and $w_j > w_{j+1}$.
+
+Consider the number of inversions in the lengths of the cars. An inversion is a pair of positions $(i, k)$ such that $i < k$ but the length of the car at position $i$ is greater than the length of the car at position $k$. Let $I(l)$ be the total number of such inversions.
+Initially, $I(l) = 0$ because the cars are sorted by length. Every time Adrian performs a swap, he chooses two adjacent cars where the left car is shorter than the right car ($l_j < l_{j+1}$) and swaps them. After the swap, the car with the larger length is now to the left of the car with the smaller length. This operation increases $I(l)$ by exactly 1 and does not affect the relative order of any other pairs.
+
+The maximum possible number of inversions in a sequence of $n$ elements is $\binom{n}{2}$. Since $I(l)$ increases by 1 with every swap and is bounded above, the procedure must eventually terminate.
+
+### 2. Proof of Final Order
+Let the final state of the cars be $S_{final} = (C_{p_1}, C_{p_2}, \dots, C_{p_n})$, where $p$ is a permutation of $\{1, \dots, n\}$. We want to show that $w_{p_1} < w_{p_2} < \dots < w_{p_n}$.
+
+First, we observe that any two cars $C_a$ and $C_b$ can be swapped at most once. Suppose $l_a < l_b$. Initially, $C_a$ is to the left of $C_b$. They can only swap if they become adjacent and $w_a > w_b$. After one such swap, $C_b$ is to the left of $C_a$. Now, the car on the left ($C_b$) has a length $l_b$ which is greater than the length $l_a$ of the car on the right. The condition for a swap requires the left car to be shorter than the right car ($l_{left} < l_{right}$), which is now false. Since only a direct swap between $C_a$ and $C_b$ can change their relative order, they can never be swapped again.
+
+Now, we examine the terminal state $S_{final}$. By the definition of the termination condition, for any two adjacent cars $C_{p_i}$ and $C_{p_{i+1}}$, the condition $(l_{p_i} < l_{p_{i+1}} \text{ and } w_{p_i} > w_{p_{i+1}})$ must be false. This implies:
+$$\text{If } l_{p_i} < l_{p_{i+1}}, \text{ then } w_{p_i} < w_{p_{i+1}}.$$
+
+We now consider the case where $l_{p_i} > l_{p_{i+1}}$. Since the cars were initially sorted by length, $C_{p_i}$ must have been to the right of $C_{p_{i+1}}$ at the start. For $C_{p_i}$ to end up to the left of $C_{p_{i+1}}$, they must have swapped at some point. As established, a swap between two cars $X$ and $Y$ (with $l_X < l_Y$) occurs if and only if $w_X > w_Y$, resulting in the order $(Y, X)$ where $w_Y < w_X$. 
+In our case, $C_{p_{i+1}}$ is the shorter car ($X$) and $C_{p_i}$ is the longer car ($Y$). Their swap occurred because $w_{p_{i+1}} > w_{p_i}$ was true (specifically, the shorter car $C_{p_{i+1}}$ was on the left and was wider). After the swap, the order became $(C_{p_i}, C_{p_{i+1}})$ and the widths satisfy $w_{p_i} < w_{p_{i+1}}$.
+
+Thus, for any two adjacent cars $C_{p_i}$ and $C_{p_{i+1}}$ in the final state:
+1. If $l_{p_i} < l_{p_{i+1}}$, then $w_{p_i} < w_{p_{i+1}}$ by the terminal condition.
+2. If $l_{p_i} > l_{p_{i+1}}$, then $w_{p_i} < w_{p_{i+1}}$ because they must have swapped, and a swap always places the narrower of the two cars on the left.
+
+Since $w_{p_i} < w_{p_{i+1}}$ for all $i = 1, \dots, n-1$, the cars are sorted in increasing order of width.

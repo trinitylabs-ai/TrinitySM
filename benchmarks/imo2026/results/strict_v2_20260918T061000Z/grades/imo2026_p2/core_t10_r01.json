@@ -1,0 +1,61 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t10_r01",
+  "group": "core",
+  "grader_candidate": "core_t10_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t10_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/7d05db928c9dd1072ab5217cdd76b911cfe0552662542b9777ebca42204e3bd7.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t10_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:13:00.024636+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "After correctly reducing the goal to the displayed trigonometric identity equivalent to O'B=O'C, the submission merely asserts that the remaining angle conditions force this identity. Neither that compatibility claim nor the asserted uniqueness of K and L is proved. This is the decisive central inference and invokes Rule E, capping the score at 3.",
+    "summary": "The coordinate setup, the two cotangent relations, and the reduction of OM=ON to O' lying on the perpendicular bisector of BC are meaningful and largely correct. However, the proof omits the essential step connecting the angle conditions LBK=β and LCK=γ to the required identity. The concluding paragraph restates that these conditions make the identity true without deriving it, so the main difficulty of the problem remains unresolved.",
+    "strengths": [
+      "Correctly places A,B,C,M,N in coordinates.",
+      "Derives the relations cot(phi_1)=cot(alpha)+2cot(gamma) and cot(phi_3)=cot(alpha)+2cot(beta) via the sine law.",
+      "Correctly introduces the antipode O'=2O-A and shows that OM=ON is equivalent to O'B=O'C.",
+      "Obtains an explicit coordinate identity whose proof would suffice to finish the argument."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claim that the remaining angle conditions ensure the final displayed identity is wholly unsupported; no equations encoding LBK=β and LCK=γ are developed or used to verify it."
+      },
+      {
+        "severity": "substantial",
+        "description": "The assertion that K and L are uniquely determined by the angle conditions is unproved and, even if true, would not imply the required perpendicular-bisector identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "64dfa303e75178ba5da260238d196d3bd3577a82efa63cc3d9585d2280d34167",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

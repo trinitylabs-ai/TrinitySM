@@ -1,0 +1,52 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p6",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+  "proof": "evidence/proofs/6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260.md",
+  "completed_at": "2026-09-15T18:29:55.481329+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "From \\(H\\cap P_i=\\{p\\}\\) and \\(P_i\\cap P(m)\\ne\\varnothing\\), it does not follow that \\(p\\in P(m)\\); the prime in \\(P_i\\cap P(m)\\) may lie outside \\(H\\).",
+    "summary": "The solution correctly reduces the problem to eventual stabilization of the admissible sets and gives a sound periodicity argument conditional on that stabilization. However, the central proof that only finitely many minimal hitting sets can occur relies on a false inference, so stabilization is unproved. Repairing this requires the main nontrivial finiteness argument.",
+    "strengths": [
+      "Correctly describes each finite-stage admissible set as a finite union of divisibility classes.",
+      "The final deduction from stabilization to translation-periodicity is essentially correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed containment \\(H\\subseteq H_N\\cup P(m)\\) is unsupported because the witness argument does not force \\(p\\in P(m)\\); consequently, finiteness of the possible \\(\\mathcal H_n\\) and stabilization of \\(S_n\\) do not follow."
+      },
+      {
+        "severity": "minor",
+        "description": "A nondecreasing sequence of positive integers need not stabilize merely for being positive; boundedness should be stated using \\(a_1\\in S_n\\), which gives \\(m_n\\le a_1\\)."
+      },
+      {
+        "severity": "minor",
+        "description": "The claim that earlier \\(a_i\\) remain in \\(S_n\\) does not follow from \\(S_n\\subseteq S_{n-1}\\) alone, though it is routinely repaired using symmetry of the gcd condition with \\(a_n\\)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p6_c3_t10r01_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p6/t10_r01/summary.json",
+    "native_record_file_sha256": "36547a3ca2c7995f34aeaca61ccfb0888d5e6685415e5ae54b0d701296c704f8",
+    "selected_record": "benchmarks/imo2026/results/p6_c3_t10r01_20260915T164615Z/grades/imo2026_p6/t10_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "b4e057dde38422b5f76da73a2311e407db0c08c46a597aa2f7e1429993bb7233",
+    "proof": "benchmarks/imo2026/results/p6_c3_t10r01_20260915T164615Z/proofs/imo2026_p6/t10_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c"
+}

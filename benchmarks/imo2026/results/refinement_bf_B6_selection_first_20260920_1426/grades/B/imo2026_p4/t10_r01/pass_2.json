@@ -1,0 +1,53 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_d9a9ab59ba93953141c963a3",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "6791ee65b4b3a539ea7b840a67144e10c4b641d414a127e9a37798be0445b90b",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "7890cca6a0dff56f694c104a7917ca4289540141c1634a202cadaa9fa6841f2d",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect occurs in the claimed sufficiency of the “plus” family: from a right triangle it is not enough that θ₁<180° to ensure C<θ₁<180°−B. For θ=36° (p=2,q=0), a current 45°-45°-90° triangle gives θ₁=144°, but the admissible interval is (45°,135°), so the proposed cut is illegal. This is a false load-bearing feasibility assertion under Rule C.",
+    "summary": "The submitted classification is false and is capped at 2 by Rule A. The correct set is θ=180°/n for every integer n≥2. In particular, θ=180°/7 is valid by the peeling/small-angle induction, but 7 is neither a sum 2^p+2^q nor an allowed difference 2^p−2^q, so the submission excludes a valid case. Its converse is also an unsupported central assertion under Rule E. There is nevertheless meaningful correct progress in the cut formulas and the dyadic subfamily strategy.",
+    "strengths": [
+      "The formulas for the two child triangles and the admissible interval for φ are correct.",
+      "The observation that 90° can be forced and then repeatedly halved gives a valid strategy for θ=90°/2^k.",
+      "Several algebraic relations describing how non-inherited child angles can belong to Sθ are correctly identified."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The plus-family construction ignores the actual admissibility inequalities; θ₁<180° does not imply θ₁<180°−B."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that the only angles forceable from an arbitrary triangle are in F is false and unsupported; it replaces the central necessity argument, invoking Rule E."
+      },
+      {
+        "severity": "major",
+        "description": "The final classification omits valid values such as θ=180°/7. Hence Rule A applies and caps the score at 2."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T08:15:53.543758+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p4/pass_2/p4/proof_d9a9ab59ba93953141c963a3"
+}

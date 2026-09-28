@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "44f1200c808c99b3f3af50f655b887ff95c5a983054f10022845b04567cd36b3",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "30ab4796df29697b7f6689d3e5e1643b04665e59550ccf0d512880af0e52c264",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2815a2a0537c1c5c6da92cc6906d613a12b9c214490529db76871361086eaebe",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None. The proof is complete and correct by normal Olympiad standards.",
+    "summary": "The submission proves termination using lexicographic descent of the pair consisting of the board product and the number of entries greater than 1. It then proves that exactly one entry remains greater than 1. For independence, it correctly tracks each prime's valuation vector and shows that the gcd of its coordinates is invariant under the Euclidean transformation (x,y) -> (min(x,y),|x-y|). At a terminal board this invariant equals v_p(M), uniquely determining M from the initial board.",
+    "strengths": [
+      "Correctly distinguishes the cases gcd(m,n)>1 and gcd(m,n)=1 to obtain a well-founded descent.",
+      "Correctly argues that a terminal board has exactly, rather than merely at most, one entry greater than 1.",
+      "Uses the appropriate primewise invariant and handles positive, mixed-zero, and all-zero valuation pairs.",
+      "Correctly reconstructs the terminal number from all of its prime exponents, establishing independence of choices."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:49:02.828313+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

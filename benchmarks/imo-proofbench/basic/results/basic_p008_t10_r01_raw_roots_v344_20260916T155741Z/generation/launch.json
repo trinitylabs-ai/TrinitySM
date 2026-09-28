@@ -1,0 +1,26 @@
+{
+  "run_id": "basic_p008_t10_r01_raw_roots_v344_20260916T155741Z",
+  "argv": [
+    "/home/user/miniconda3/envs/math/bin/python",
+    "-u",
+    "-B",
+    "-m",
+    "cognitive_well_harness_v0_3_344_root_syntax_normalization_20260916.proof_harness",
+    "--problem-file",
+    "/opt/proof-workshop/benchmarks/imo-proofbench/basic/problems/PB-Basic-008.json",
+    "--proof-file",
+    "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/pipeline_raw_bf/proofs/PB-Basic-008/t10_r01/submitted.md",
+    "--output-dir",
+    "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run",
+    "--master-seed",
+    "20260915",
+    "--gemma-endpoint",
+    "http://127.0.0.1:8030/v1",
+    "--qwen-endpoint",
+    "http://127.0.0.1:8027/v1",
+    "--execute-models",
+    "--detection-from",
+    "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_simple_tool_v342_20260916T080852Z/generation/run"
+  ],
+  "cwd": "/opt/proof-workshop"
+}

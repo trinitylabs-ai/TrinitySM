@@ -1,0 +1,61 @@
+{
+  "schema": "two-call-fusion-repair-compare-manifest-v1",
+  "created_at": "2026-08-23T03:53:34.284852+00:00",
+  "model_kind": "qwen36",
+  "model": "Qwen/Qwen3.6-27B",
+  "endpoint": "http://127.0.0.1:8027/v1",
+  "dtype": "bfloat16",
+  "mtp_speculative_tokens": 0,
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "top_k": 64,
+  "max_tokens": 12000,
+  "concurrency": 3,
+  "fusion_system_path": "/opt/proof-workshop/prompts/fusion_diagnosis_proof_submitted_v1_20260822.md",
+  "fusion_system_sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b",
+  "repair_system_path": "/opt/proof-workshop/prompts/repair_architect_frozen_handoff_v1_20260822.md",
+  "repair_system_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+  "message_boundary": "system_specification_plus_user_frozen_materials",
+  "review_layout": "split_gptoss_three_slot",
+  "component_review_mapping": {
+    "local_critic": "complete frozen OPC report",
+    "whole_proof_grader": "complete frozen GPT-OSS final report",
+    "adversarial_checker": "complete frozen GPT-OSS adversarial analysis"
+  },
+  "repair_policy": "run_only_for_valid_REQUIRED_fusion_handoffs",
+  "fusion_grade_frozen_during_repair": true,
+  "reference_solution_access_during_inference": false,
+  "gold_labels_loaded_after_all_fusion_and_repair_inference": true,
+  "materials": {
+    "p1_s2_first_revision": {
+      "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+      "candidate_proof_sha256": "dbc27624535fe72f86a2f0067346750a655b867bda3a86e96b84f0234ad3ce29",
+      "grading_rubric_sha256": "3f78e3f6a228b6bf24da4103ded3a9bba0b8dc65f43ac9296d567788d9e5e80f",
+      "local_critic_sha256": "bd2f5155aa92ece8677ad9df1ed590fbd90c3ecac34a60632a991c990d06310b",
+      "whole_proof_grader_sha256": "41a658792b48e1e212157cda1eb56ea8470f2d643be4c2746dcbe83d585aa9f8",
+      "adversarial_checker_sha256": "506a57b456395ca6b21910c255d1cb6e3be4d75134c9cbb08a53a72b81b233d1",
+      "gptoss_complete_sha256": "6131d56fc4077f30de78bc895970d8699dc3b8fec90799dab8e527299b2ab129",
+      "fusion_input_sha256": "715aebecc9a08ff67e9142f0fe1f41bfd2e7b567dcc30286d5fa974504ae1ecc"
+    },
+    "p4_s2_first_revision": {
+      "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+      "candidate_proof_sha256": "d5edef081e351980bb743fc68ae5944762623c6373806871bf3313c3152ce7de",
+      "grading_rubric_sha256": "3f78e3f6a228b6bf24da4103ded3a9bba0b8dc65f43ac9296d567788d9e5e80f",
+      "local_critic_sha256": "cc05fb13c7b4960a139becbc1d4839a62767875ae71072c4108fdb1e8a9a3fcc",
+      "whole_proof_grader_sha256": "a577ed73017f113635af9bab5be8dd6ed0a53c86eba4a7a619526536b55db876",
+      "adversarial_checker_sha256": "c51bdbe38ce8c6ae8fe07d57fd9591d993bebd3571f0dd0e40ae54ea48089cb0",
+      "gptoss_complete_sha256": "5853c5289aa16b6a8e3d6ef8bb150ef0a7255362dc25846a96692efa1e2f1b58",
+      "fusion_input_sha256": "457c87f4c3642b474d50cfa388aa3f254198ce3af646b544d24953b3563ccf19"
+    },
+    "p5_s1_second_revision": {
+      "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+      "candidate_proof_sha256": "0cdfdc3a006a75d2dd8eadaeb76f809144fa790f69e18182bad23c2e102a60b0",
+      "grading_rubric_sha256": "3f78e3f6a228b6bf24da4103ded3a9bba0b8dc65f43ac9296d567788d9e5e80f",
+      "local_critic_sha256": "e52cbea81892ed4ce4bf261d322148d64e92c7dd573cf12728895a750822bab0",
+      "whole_proof_grader_sha256": "6d64f4d3df16bb8f21d13bbe186ae535b072d8c778d576e80fd50f116716a4f7",
+      "adversarial_checker_sha256": "0a175c34b1e36df96aaafb18c204d7834adb7b88ee01a88994a1542deaff338f",
+      "gptoss_complete_sha256": "9f283206854282faa473189a913e21d9602110ee19b7e71767e6f4fce65cbdf9",
+      "fusion_input_sha256": "d03c1ad3b75e6a7b9df2c3d470065def862336533f6843fc00336deb8c0505e0"
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "active_attempt": {
+    "command": [
+      "/home/user/miniconda3/envs/math/bin/python",
+      "-u",
+      "-B",
+      "/opt/proof-workshop/scripts/run_v263_v290.py",
+      "--problem-dir",
+      "/opt/proof-workshop/data/imo_proofbench_basic_problem_only",
+      "--problem-id",
+      "PB-Basic-026",
+      "--output-dir",
+      "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z",
+      "--gemma-endpoint",
+      "http://127.0.0.1:8030/v1",
+      "--qwen-endpoint",
+      "http://127.0.0.1:8027/v1",
+      "--model-timeout-sec",
+      "600",
+      "--seed-namespace",
+      "v263-v290:problem-only:p26-original-policy:20260912T131929Z",
+      "--raw-seed-offset",
+      "2000006",
+      "--execute-models",
+      "--resume"
+    ],
+    "execution_policy": {
+      "bf_continuation_cap_floor": 32768,
+      "frontend_budget_forcing": true,
+      "frontend_lane_failure_policy": "retain_actual_checkpoint_continue_survivors",
+      "frontend_model": "google/gemma-4-31B-it",
+      "frontend_reviews_fusion_resolver_executed": false,
+      "launcher_sha256": "ff4e567720538dbebfad25aa6530b5b04584931ff461b9f1928ab08e38c9ab2f",
+      "lazy_primary_max_tokens": 16384,
+      "qwen_mandatory_budget_forcing": true,
+      "qwen_max_output_tokens": 49152,
+      "qwen_retry_on_output_cap": false,
+      "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+      "raw_bf_temperature_transition": "1.0 -> 0.7",
+      "raw_candidate_specs": [
+        {
+          "candidate_id": "t10_r01",
+          "seed": 2362094358,
+          "temperature": 1.0
+        },
+        {
+          "candidate_id": "t10_r02",
+          "seed": 2369214506,
+          "temperature": 1.0
+        },
+        {
+          "candidate_id": "t07_r01",
+          "seed": 3235582902,
+          "temperature": 0.7
+        },
+        {
+          "candidate_id": "t07_r02",
+          "seed": 222229350,
+          "temperature": 0.7
+        }
+      ],
+      "raw_primary_max_tokens": 65536,
+      "raw_seed_offset": 2000006,
+      "stage_order": [
+        "raw_generation",
+        "lazy_check",
+        "conditional_in_place_expansion",
+        "R1-C1",
+        "R1-C2",
+        "R1-C3"
+      ]
+    },
+    "problem_ids": [
+      "PB-Basic-026"
+    ],
+    "raw_seed_offset": 2000006,
+    "raw_seeds": [
+      {
+        "candidate_id": "t10_r01",
+        "new_raw_seed": 1696034833,
+        "old_raw_seed": 2301899842,
+        "temperature": 1.0
+      },
+      {
+        "candidate_id": "t10_r02",
+        "new_raw_seed": 654165688,
+        "old_raw_seed": 1489291270,
+        "temperature": 1.0
+      },
+      {
+        "candidate_id": "t07_r01",
+        "new_raw_seed": 4119236326,
+        "old_raw_seed": 3033799688,
+        "temperature": 0.7
+      },
+      {
+        "candidate_id": "t07_r02",
+        "new_raw_seed": 1785323334,
+        "old_raw_seed": 3528487451,
+        "temperature": 0.7
+      }
+    ],
+    "run": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z",
+    "seed_namespace": "v263-v290:problem-only:p26-original-policy:20260912T131929Z",
+    "state_at_freeze": {
+      "index": 1,
+      "problem_id": "PB-Basic-026",
+      "state": "running",
+      "total": 1
+    }
+  },
+  "environment_observation_is_not_install_lock": true,
+  "environments": {
+    "solver": {
+      "executable": "/home/user/miniconda3/envs/math/bin/python",
+      "packages": {
+        "httpx": "0.28.1",
+        "jsonschema": "4.26.0",
+        "mpmath": "1.3.0",
+        "numpy": "2.3.5",
+        "openai": "2.36.0",
+        "requests": "2.33.1",
+        "sympy": "1.14.0"
+      },
+      "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]"
+    },
+    "vllm": {
+      "executable": "/home/user/miniconda3/envs/gemma4-vllm024/bin/python",
+      "packages": {
+        "torch": "2.11.0",
+        "transformers": "5.12.1",
+        "vllm": "0.24.0"
+      },
+      "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]"
+    }
+  },
+  "generation_policy": {
+    "default_raw_seed_offset": 0,
+    "default_seed_namespace": "v263-v290:problem-only",
+    "frontend_failed_lanes": "retain_actual_checkpoint_continue_survivors",
+    "injected_repetition_detector": false,
+    "original_budget_forcing": true,
+    "original_cap_and_format_recovery": true,
+    "repetition_triggered_fresh_retry": false
+  },
+  "metadata_only_not_a_runtime_loader": true,
+  "model_weights_bundled": false,
+  "problem_proof_gold_artifacts_bundled": false,
+  "queue": {
+    "backend": "0.3.290+goldfree.1",
+    "budget_forcing": true,
+    "dry_run": false,
+    "frontend": "0.3.263",
+    "gemma_endpoint": "http://127.0.0.1:8030/v1",
+    "gemma_model": "google/gemma-4-31B-it",
+    "model_output": "Markdown",
+    "model_timeout_sec": 600,
+    "optional_exact_evidence": false,
+    "qwen_endpoint": "http://127.0.0.1:8027/v1",
+    "qwen_model": "Qwen/Qwen3.6-27B",
+    "raw_bf_temperature_transition": "1.0 -> 0.7",
+    "reference_inputs_allowed": false,
+    "schema": "v263_lazy_refined_to_v290_r1c3_queue_v1",
+    "stage_order": [
+      "raw_generation",
+      "lazy_check",
+      "conditional_in_place_expansion",
+      "R1-C1",
+      "R1-C2",
+      "R1-C3"
+    ],
+    "strict_scoring_inside_pipeline": false,
+    "terminal_checkpoint": "R1-C3",
+    "workers_per_endpoint": 4
+  },
+  "release_id": "v263-v290-mtp4-original-recovery-20260912T141117Z",
+  "schema": "basic-v263-v290-frozen-profile-v1",
+  "servers": {
+    "gemma": {
+      "argv": [
+        "/home/user/miniconda3/envs/gemma4-vllm024/bin/python",
+        "/home/user/miniconda3/envs/gemma4-vllm024/bin/vllm",
+        "serve",
+        "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it/snapshots/842da3794eaa0b77d5f08bae87a17459d91ff475",
+        "--served-model-name",
+        "google/gemma-4-31B-it",
+        "--dtype",
+        "bfloat16",
+        "--kv-cache-dtype",
+        "bfloat16",
+        "--max-model-len",
+        "262144",
+        "--max-num-batched-tokens",
+        "8192",
+        "--max-num-seqs",
+        "8",
+        "--gpu-memory-utilization",
+        "0.95",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8030",
+        "--language-model-only",
+        "--reasoning-parser",
+        "gemma4",
+        "--default-chat-template-kwargs",
+        "{\"enable_thinking\": true}",
+        "--async-scheduling",
+        "--speculative-config",
+        "{\"method\":\"mtp\",\"model\":\"/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it-assistant/snapshots/627c5ec1458b9086b841a91e0512fd31fd2fbbf1\",\"num_speculative_tokens\":4}"
+      ],
+      "pid": 32690
+    },
+    "qwen": {
+      "argv": [
+        "/home/user/miniconda3/envs/gemma4-vllm024/bin/python",
+        "/home/user/miniconda3/envs/gemma4-vllm024/bin/vllm",
+        "serve",
+        "/home/user/.cache/huggingface/hub/models--Qwen--Qwen3.6-27B/snapshots/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+        "--served-model-name",
+        "Qwen/Qwen3.6-27B",
+        "--dtype",
+        "bfloat16",
+        "--kv-cache-dtype",
+        "bfloat16",
+        "--max-model-len",
+        "196608",
+        "--max-num-batched-tokens",
+        "8192",
+        "--max-num-seqs",
+        "4",
+        "--gpu-memory-utilization",
+        "0.90",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8027",
+        "--language-model-only",
+        "--reasoning-parser",
+        "qwen3",
+        "--default-chat-template-kwargs",
+        "{\"enable_thinking\": true}",
+        "--async-scheduling",
+        "--speculative-config",
+        "{\"method\":\"mtp\",\"num_speculative_tokens\":4}"
+      ],
+      "pid": 32891
+    }
+  },
+  "source_selection": {
+    "additional_entrypoints_and_support": [
+      "scripts/run_v263_v290.py",
+      "scripts/relaunch_v263_v290.py",
+      "scripts/test_run_v263_v290.py",
+      "scripts/test_relaunch_v263_v290.py",
+      "scripts/test_original_inference_policy.py",
+      "scripts/monitor_basic_mtp4_20260911.py",
+      "scripts/monitor_basic_sequence.py",
+      "scripts/supervise_basic_sequence.py",
+      "scripts/test_supervise_basic_sequence.py",
+      "scripts/score_completed_basic_strict_20260911.py",
+      "scripts/report_basic_attempts.py",
+      "scripts/freeze_harness_release.py",
+      "scripts/test_freeze_harness_release.py",
+      "docs/basic_queue_attempts.md"
+    ],
+    "package_closures": [
+      "cognitive_well_harness_v0_3_290_p5_iterated_review_fusion_20260906",
+      "cognitive_well_harness_v0_3_263_v260_unified_recovery_20260905",
+      "cognitive_well_harness_v0_3_257_v108_third_resolve_raw_t10_bf_temp07_20260904",
+      "cognitive_well_harness_v0_3_97_four_proof_raw_lazy_enhanced_pipeline_20260827"
+    ]
+  },
+  "strict_grading": {
+    "launcher_external": "/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/scripts/score.py",
+    "model": "gpt-5.6-sol",
+    "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+    "reasoning_effort": "xhigh",
+    "reuse_existing_hash_scores": true,
+    "separate_from_solver": true
+  }
+}

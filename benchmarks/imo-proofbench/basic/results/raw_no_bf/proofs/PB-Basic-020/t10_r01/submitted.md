@@ -1,0 +1,43 @@
+To find all pairs of primes $(a, b)$ such that $a^2 - ab - b^3 = 1$, we begin by rearranging the equation as a quadratic in $a$:
+\[a^2 - ab - (b^3 + 1) = 0\]
+Solving for $a$ using the quadratic formula, we have:
+\[a = \frac{b \pm \sqrt{b^2 + 4(b^3 + 1)}}{2} = \frac{b \pm \sqrt{4b^3 + b^2 + 4}}{2}\]
+For $a$ to be an integer, the discriminant $D = 4b^3 + b^2 + 4$ must be a perfect square. Let $D = k^2$ for some integer $k \ge 0$.
+Alternatively, we can rewrite the original equation as:
+\[a^2 - 1 = b(a + b^2) \implies (a-1)(a+1) = b(a + b^2)\]
+Since $b$ is prime, $b$ must divide either $(a-1)$ or $(a+1)$. We analyze these two cases.
+
+**Case 1: $b$ divides $a-1$**
+Let $a-1 = nb$ for some integer $n \ge 1$. Then $a = nb + 1$. Substituting this into the original equation:
+\[(nb+1)^2 - (nb+1)b - b^3 = 1\]
+\[n^2b^2 + 2nb + 1 - nb^2 - b - b^3 = 1\]
+\[-b^3 + (n^2-n)b^2 + (2n-1)b = 0\]
+Dividing by $b$ (since $b$ is prime, $b \neq 0$):
+\[-b^2 + (n^2-n)b + (2n-1) = 0 \implies b^2 - (n^2-n)b - (2n-1) = 0\]
+Solving for $b$:
+\[b = \frac{(n^2-n) \pm \sqrt{(n^2-n)^2 + 4(2n-1)}}{2}\]
+Let $D_n = (n^2-n)^2 + 8n - 4$. We check for which $n$ $D_n$ is a square:
+- For $n=1$, $D_1 = 0 + 8 - 4 = 4 = 2^2$, giving $b = \frac{0 \pm 2}{2} = \pm 1$ (not prime).
+- For $n=2$, $D_2 = 2^2 + 16 - 4 = 16 = 4^2$, giving $b = \frac{2 \pm 4}{2} = 3, -1$. If $b=3$, then $a = 2(3)+1 = 7$. Both 3 and 7 are prime.
+- For $n=3$, $D_3 = 6^2 + 24 - 4 = 56$ (not a square).
+- For $n=4$, $D_4 = 12^2 + 32 - 4 = 172$ (not a square).
+- For $n \ge 5$, we have $(n^2-n)^2 < D_n < (n^2-n+1)^2$ because $8n-4 > 0$ and $D_n - (n^2-n)^2 = 8n-4 < 2(n^2-n)+1 = 2n^2-2n+1$ for $n \ge 5$ (since $2n^2-10n+5 > 0$ for $n \ge 5$). Thus $D_n$ is not a square for $n \ge 5$.
+
+**Case 2: $b$ divides $a+1$**
+Let $a+1 = nb$ for some integer $n \ge 1$. Then $a = nb - 1$. Substituting into the equation:
+\[(nb-1)^2 - (nb-1)b - b^3 = 1\]
+\[n^2b^2 - 2nb + 1 - nb^2 + b - b^3 = 1\]
+\[-b^3 + (n^2-n)b^2 + (1-2n)b = 0\]
+Dividing by $b$:
+\[-b^2 + (n^2-n)b + (1-2n) = 0 \implies b^2 - (n^2-n)b + (2n-1) = 0\]
+Solving for $b$:
+\[b = \frac{(n^2-n) \pm \sqrt{(n^2-n)^2 - 4(2n-1)}}{2}\]
+Let $D_n = (n^2-n)^2 - 8n + 4$.
+- For $n=1, 2$, $D_n < 0$.
+- For $n=3$, $D_3 = 6^2 - 24 + 4 = 16 = 4^2$, giving $b = \frac{6 \pm 4}{2} = 5, 1$. If $b=5$, then $a = 3(5)-1 = 14$ (not prime).
+- For $n=4$, $D_4 = 12^2 - 32 + 4 = 116$ (not a square).
+- For $n \ge 5$, we have $(n^2-n-1)^2 < D_n < (n^2-n)^2$ because $D_n - (n^2-n)^2 = -8n+4 < 0$ and $D_n - (n^2-n-1)^2 = 2n^2-10n+3 > 0$ for $n \ge 5$. Thus $D_n$ is not a square for $n \ge 5$.
+
+The only pair of primes satisfying the equation is $(a, b) = (7, 3)$.
+
+\(\square\)

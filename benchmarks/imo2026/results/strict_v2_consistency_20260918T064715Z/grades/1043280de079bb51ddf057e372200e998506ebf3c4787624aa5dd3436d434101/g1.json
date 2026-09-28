@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "1043280de079bb51ddf057e372200e998506ebf3c4787624aa5dd3436d434101",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "5f35280d4178e8178e14da6b463f88209e45eb6ae79d49bbf41f08ddd2dcbd1b",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The derivation of the three polynomial angle equations uses the false identity \\(\\cot\\angle(u,v)=(u\\cdot v)/(u\\times v)\\) for unsigned angles; the denominator should be \\(|u\\times v|\\). The submission never explicitly proves that the paired signed cross products have the same sign. Since these equations are essential to the algebraic certificate, this is a false load-bearing justification, so Rule C caps the score at 5.",
+    "summary": "The coordinate reduction, circumcenter formula, target polynomial, and explicit algebraic certificate are otherwise coherent. The sign defect is locally repairable by choosing the orientation so \\([B,C]>0\\) and using the four interiority assumptions to verify the relevant ray orders, hence that every paired cross product has the same sign. As submitted, however, that necessary argument is replaced by an incorrect general identity.",
+    "strengths": [
+      "Correctly reduces \\(OM=ON\\) to the explicit polynomial condition \\(T=0\\).",
+      "Correctly establishes that \\(A,K,L\\) are noncollinear, so the circumcenter formulas have nonzero denominator.",
+      "Provides an explicit finite algebraic certificate showing that the three signed-cotangent equations and two nonzero guards imply \\(T=0\\).",
+      "The missing orientation argument can be supplied without changing the overall strategy."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "Unsigned-angle cotangents require an absolute cross product. The proof uses signed determinants without establishing the required common signs for each paired angle, so the crucial polynomial premises are not validly derived as written."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:20:03.865048+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00004",
+  "native_rejection_count": 0
+}

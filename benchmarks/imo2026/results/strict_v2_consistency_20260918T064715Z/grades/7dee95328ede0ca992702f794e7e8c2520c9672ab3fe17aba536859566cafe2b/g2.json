@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7dee95328ede0ca992702f794e7e8c2520c9672ab3fe17aba536859566cafe2b",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "907667221e9e989932b615b07878dd12ca0cafec9ce6fa9b6045816fcb939b29",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "ed443836d522ad78a1937f50cdff12729490e4cb80f33cbdd4cf5642a2e1b15e",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the unsupported claim that bounded hitting number and finiteness of each individual prime set force the families H_n to stabilize or cycle. The union of primes need not have been shown finite, and bounded minimum transversal size does not give a finite state space for H_n. This is the central step needed to obtain a fixed recurrence, so Rule E applies.",
+    "summary": "The submission develops a useful hitting-set formulation and correctly analyzes the recurrence conditional on eventual stabilization of H_n. However, stabilization is not proved, the stated alternative of cycling is not treated, and the final passage from eventual affine periodicity to a relation valid for every n is merely asserted. These are central gaps requiring new ideas.",
+    "strengths": [
+      "Correctly interprets prime supports as hitting sets and obtains the minimum-over-multiples recurrence.",
+      "Correctly observes that, for a fixed finite family L, the map f satisfies f(x+M)=f(x)+M.",
+      "Conditional on a fixed recurrence, the finite-residue argument gives eventual periodicity of increments."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Neither the finiteness of each S_n nor the bound τ(V_n)≤|S_1| implies that H_n eventually stabilizes or cycles; new primes and new minimal transversals can continue to appear. No argument using the greedy property repairs this inference."
+      },
+      {
+        "severity": "major",
+        "description": "Even the claimed 'stabilizes or enters a cycle' conclusion is insufficient because the proof thereafter assumes stabilization and never handles the cycle alternative."
+      },
+      {
+        "severity": "major",
+        "description": "The proof establishes at most an eventual relation. Enlarging T does not generally remove a preperiod, and uniqueness from a_1 does not force the finitely many initial differences to match the periodic tail. The assertion that construction ensures this is unsupported, leaving the required all-n quantifier unhandled under Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T08:59:57.634519+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

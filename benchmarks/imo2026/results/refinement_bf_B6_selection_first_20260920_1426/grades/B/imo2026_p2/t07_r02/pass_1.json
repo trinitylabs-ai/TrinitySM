@@ -1,0 +1,49 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_5072a271cd3b44cff09da3a9",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "c82a39cf41f3dcb21ad765e493ece7a6c3fe59ac4e598739ec63b68f1312a53d",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "853d42b8733f4d8b5ee86c8518f7c9f14f6bfe7c121fc382f17dfd0f2371742f",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The final displayed trigonometric identity is never derived from the two cross-angle conditions. The assertion that uniqueness and the preceding relations “ensure” it does not constitute a proof; uniqueness would not itself imply the identity. This is a substantial missing derivation governed by Rule B.",
+    "summary": "The submission correctly reduces OM=ON to an explicit trigonometric equality, with the sine-law calculations, circumcenter projections, and intervening simplifications essentially correct. The remaining equality is explicit, checkable, and true under the hypotheses, so Rule B makes a score of 4 eligible. However, proving it requires a substantial compatibility/elimination argument using ∠LBK=β and ∠LCK=γ, and none is supplied.",
+    "strengths": [
+      "Correctly converts OM=ON into a linear identity involving the projections of O.",
+      "Correctly obtains the sine-law formulas and cotangent relations for θ_K and θ_L.",
+      "Correctly derives the projection formulas for the circumcenter and reaches an explicit target equality."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The decisive final identity is merely asserted. The proof never translates the cross-angle conditions into compatibility equations or performs the nontrivial elimination needed to establish that identity."
+      },
+      {
+        "severity": "minor",
+        "description": "The claim that K and L are uniquely determined is not justified as stated and, even if established in the intended sense, would not prove the required identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T10:41:55.169054+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p2/pass_1/p2/proof_5072a271cd3b44cff09da3a9"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "18dfd0199a98fb663a142a274c24f4595ffb01178bbced58c8df646745e21c4e",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9e80b2120c8c733384f3dbbab0c0904e2a19f6a8d3722b004f94122ec4458806",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the false load-bearing claim that S, the union of all prime divisors of the terms, is finite. For a_1=2, the greedy sequence is a_n=2n, so S contains every prime. This false structural inference replaces the central argument, invoking Rule E and capping the score at 3.",
+    "summary": "The submission contains useful preliminary observations, but both essential stages fail. Its asserted finiteness of all occurring primes is false even in the simplest admissible example, so the finite-state periodicity argument does not apply. Moreover, the attempted passage from eventual to global periodicity begins with an impossible choice of K and uses circular equalities. Repairing the proof requires a new structural idea, such as proving finiteness only of suitable minimal hitting sets rather than of all prime factors.",
+    "strengths": [
+      "Correctly observes that the prime support of each new term must hit every earlier prime support.",
+      "Correctly notes that Q_1 hits every Q_i and consequently obtains the useful uniform bound a_{n+1}-a_n<=rad(a_1).",
+      "Conditional on a genuinely finite stabilized family, the translation-equivariant finite-state argument toward eventual periodicity is broadly sound."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion S is finite is false. If a_1=2, induction gives a_n=2n, and every prime p occurs in a_p=2p. The pigeonhole argument only suggests that a large new prime may coexist with a smaller prime; that does not bound the new prime or imply finiteness of S."
+      },
+      {
+        "severity": "major",
+        "description": "The choice of K with L=KL' divisible by a_1,...,a_{N+KT} is impossible under the claimed eventual relation: a_{N+KT}=a_N+KL'>KL'=L, so it cannot divide L."
+      },
+      {
+        "severity": "major",
+        "description": "The backward induction is circular. In its first step it uses a_{N-2+T_new}=a_{N-2}+L, which is precisely a still-unproved earlier-index instance. Likewise, writing a_i=a_{i-T_new}+L for indices whose shifted-back index is below N applies the eventual relation outside its established range."
+      },
+      {
+        "severity": "minor",
+        "description": "As defined, the collection of all hitting sets may contain infinite sets, for which m_H is undefined. It should be restricted to finite hitting sets, or to subsets of the finite union Q_1 union ... union Q_n."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:42:25.642157+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

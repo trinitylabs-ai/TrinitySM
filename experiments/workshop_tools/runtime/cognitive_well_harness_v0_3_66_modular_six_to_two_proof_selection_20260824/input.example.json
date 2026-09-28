@@ -1,0 +1,56 @@
+{
+  "problem_id": "replace_with_problem_id",
+  "problem": "Replace this with the complete olympiad-level problem statement.",
+  "tracks": [
+    {
+      "track_id": "candidate_1",
+      "original_proof": "Replace this with candidate 1's original proof text.",
+      "fusion_diagnostic": "Replace this with candidate 1's final Fusion diagnostic.",
+      "resolver_change_record": "Replace this with candidate 1's Resolver change record.",
+      "resolved_proof": "Replace this with candidate 1's resolved proof text."
+    },
+    {
+      "track_id": "candidate_2",
+      "original_proof": "Replace this with candidate 2's original proof text.",
+      "fusion_diagnostic": "Replace this with candidate 2's final Fusion diagnostic.",
+      "resolver_change_record": "Replace this with candidate 2's Resolver change record.",
+      "resolved_proof": "Replace this with candidate 2's resolved proof text."
+    },
+    {
+      "track_id": "candidate_3",
+      "original_proof": "Replace this with candidate 3's original proof text.",
+      "fusion_diagnostic": "Replace this with candidate 3's final Fusion diagnostic.",
+      "resolver_change_record": "Replace this with candidate 3's Resolver change record.",
+      "resolved_proof": "Replace this with candidate 3's resolved proof text."
+    },
+    {
+      "track_id": "candidate_4",
+      "original_proof": "Replace this with candidate 4's original proof text.",
+      "fusion_diagnostic": "Replace this with candidate 4's final Fusion diagnostic.",
+      "resolver_change_record": "Replace this with candidate 4's Resolver change record.",
+      "resolved_proof": "Replace this with candidate 4's resolved proof text."
+    },
+    {
+      "track_id": "candidate_5",
+      "original_proof": "Replace this with candidate 5's original proof text.",
+      "fusion_diagnostic": "Replace this with candidate 5's final Fusion diagnostic.",
+      "resolver_change_record": "Replace this with candidate 5's Resolver change record.",
+      "resolved_proof": "Replace this with candidate 5's resolved proof text."
+    },
+    {
+      "track_id": "candidate_6",
+      "original_proof": "Replace this with candidate 6's original proof text.",
+      "fusion_diagnostic": "Replace this with candidate 6's final Fusion diagnostic.",
+      "resolver_change_record": "Replace this with candidate 6's Resolver change record.",
+      "resolved_proof": "Replace this with candidate 6's resolved proof text."
+    }
+  ],
+  "synthesis_instructions": "",
+  "gate": {
+    "require_all_verified_lemmas": true,
+    "minimum_cited_lemmas": 1,
+    "minimum_case_headings": 0,
+    "require_qwen_certification": true
+  }
+}
+

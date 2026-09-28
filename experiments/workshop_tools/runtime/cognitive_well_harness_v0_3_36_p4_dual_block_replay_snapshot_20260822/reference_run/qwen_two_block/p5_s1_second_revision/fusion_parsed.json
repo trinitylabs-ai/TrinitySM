@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "errors": [],
+  "score": 6,
+  "verdict": "INCORRECT",
+  "repair_status": "REQUIRED",
+  "accepted_defect_ids": [
+    "D1"
+  ],
+  "round_count": 1,
+  "branch_statuses": [
+    "IMMEDIATE_OMISSION"
+  ],
+  "severities": [
+    "LOCAL"
+  ]
+}

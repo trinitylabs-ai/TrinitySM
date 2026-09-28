@@ -1,0 +1,15 @@
+{
+  "paper": "Towards Robust Mathematical Reasoning",
+  "authors": "Thang Luong et al.",
+  "arxiv_id": "2511.01846v1",
+  "section": "B.5",
+  "source_url": "https://arxiv.org/html/2511.01846v1#A2.SS5",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "retrieved_at": "2026-09-12",
+  "source_html_sha256": "daecfd6d29f72c8931935c574d2fff46d7779aba9504c1d6e84da9903861d1af",
+  "prompt_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "normalization": "HTML markup, rendered list counters and @itemi artifacts removed; horizontal whitespace and paragraph spacing normalized; published wording and placeholders preserved.",
+  "dataset_url": "https://raw.githubusercontent.com/google-deepmind/superhuman/main/imobench/proofbench_v2.csv",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0"
+}

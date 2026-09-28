@@ -1,0 +1,102 @@
+{
+  "schema": "p4-qwen36-exact-branch-replay-gold-sol-xhigh-summary-v1",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "reference_informed": true,
+  "candidate_count": 2,
+  "completed_grade_count": 2,
+  "results": [
+    {
+      "schema": "gold-informed-codex-math-grade-v1",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "reference_informed": true,
+      "qwen_grades_visible": false,
+      "gemma_grades_visible": false,
+      "terra_grades_visible": false,
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "stage": "qwen36_exact_branch_replay_audit",
+      "position": 1,
+      "selection_role": "gemma4_bf16_mtp4",
+      "candidate_id": "replay.p4_two_block",
+      "solution_id": "p4_two_block",
+      "source_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_full_scheduling_handoffs_gemma_replay_20260822/p4_two_block/resolved_proof.md",
+      "proof_sha256": "53cb108773decfa9539fb9b15ed2539d1b5e8d03e446e9667ff8db9eca51ade3",
+      "grade": {
+        "score": 3,
+        "verdict": "fallacy",
+        "answer_supported": false,
+        "complete": false,
+        "requires_new_math": true,
+        "first_break": "In the necessity argument, the solution infers from T1,T2 ∈ W that each child must already contain an angle in S. Only the forward implication—containing an angle in S implies membership in W—was proved, so this inference is invalid.",
+        "summary": "The claimed characterization is correct, and the sufficiency construction is essentially rigorous. However, the necessity proof has a decisive logical gap: winning triangles need not themselves contain marked angles. The four-case analysis only proves that every cut of a safe triangle has a safe child; an additional induction on the finite winning derivation is required to conclude that no safe triangle is winning. This is a new argument, so the proof is capped at 3.",
+        "strengths": [
+          "Correctly identifies the answer θ = 180°/n for integers n ≥ 2.",
+          "Correctly proves that a triangle containing kθ is winning by splitting that angle into θ and (k−1)θ.",
+          "The sufficiency interval argument correctly produces complementary multiples kθ and (n−k)θ, and handles n=2.",
+          "The four cases in the safe-triangle obstruction correctly show that both children cannot contain marked angles when the parent is safe and 180°/θ is nonintegral."
+        ],
+        "errors": [
+          {
+            "severity": "fallacy",
+            "description": "The necessity proof reverses the established implication: T_i ∈ W does not imply that T_i contains an angle in S. To finish, one must use structural induction (or minimal winning depth) together with the fact that every cut has a safe child."
+          },
+          {
+            "severity": "slip",
+            "description": "The proposed safe starting example incorrectly excludes θ=120°. Under the nonintegrality hypothesis, the equilateral triangle is safe for every such θ: if 60°=kθ, then 180°/θ=3k would be an integer."
+          }
+        ],
+        "contract_consistent": true,
+        "strict_pass": false
+      },
+      "attempt": 1
+    },
+    {
+      "schema": "gold-informed-codex-math-grade-v1",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "reference_informed": true,
+      "qwen_grades_visible": false,
+      "gemma_grades_visible": false,
+      "terra_grades_visible": false,
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "stage": "qwen36_exact_branch_replay_audit",
+      "position": 2,
+      "selection_role": "gemma4_bf16_mtp4",
+      "candidate_id": "replay.p4_three_block",
+      "solution_id": "p4_three_block",
+      "source_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_full_scheduling_handoffs_gemma_replay_20260822/p4_three_block/resolved_proof.md",
+      "proof_sha256": "a48a0979495b4365d5b9f1ee058f02a7b24e3e275da3e9fbecfa6ad607e13584",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_slip",
+        "answer_supported": true,
+        "complete": true,
+        "requires_new_math": false,
+        "first_break": "In the n≥3 sufficiency argument, the claim that C∉S and C≥60° imply C>60° is false when n>3; for example, C=60° need not belong to S.",
+        "summary": "The proposed solution reaches the correct characterization and supplies essentially complete sufficiency and necessity arguments. Its two local interval/inequality errors are readily repaired using facts already present, without any new mathematical argument.",
+        "strengths": [
+          "Correctly proves by induction that any triangle containing a positive integral multiple of θ is winning.",
+          "For integral 180°/θ, the interval argument correctly reduces an arbitrary triangle to two triangles containing complementary multiples of θ.",
+          "For nonintegral 180°/θ, the four-case analysis exhausts how both children could contain marked angles and yields the required invariant.",
+          "The finite-strategy interpretation and all cases n≥2 are addressed."
+        ],
+        "errors": [
+          {
+            "severity": "slip",
+            "description": "For n≥3, C∉S does not always imply C>60°. The needed conclusion C>θ still follows from the written facts: if n=3, nonmembership excludes C=60°; if n>3, θ<60°≤C."
+          },
+          {
+            "severity": "slip",
+            "description": "For a cut from A to BC, the stated range of φ=∠APC is incorrect: it is (B,180°−C), not (C,180°−B). Equivalently, the stated interval is the range of ∠BPA. Either corrected interval contains 90° because both B and C are acute."
+          }
+        ],
+        "contract_consistent": true,
+        "strict_pass": false
+      },
+      "attempt": 1
+    }
+  ]
+}

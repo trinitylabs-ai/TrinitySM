@@ -1,0 +1,54 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p5",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+  "proof": "evidence/proofs/af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed.md",
+  "completed_at": "2026-09-15T16:41:47.774033+00:00",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the mixed zero/positive-defect case, the claim that an orbit must start to the right of the second forbidden interval is not fully justified merely by its divergence, and the subsequent assertion that the boundary point belongs to \\(S_0\\) is omitted.",
+    "summary": "The candidate family, iterate invariance, nonnegativity of \\(g\\), and equality of all positive values of \\(g\\) are correctly established. The final mixed-defect argument has small logical omissions, but its first forbidden-interval estimate already orders the two level sets; a routine boundary argument then yields the desired contradiction.",
+    "strengths": [
+      "Correctly verifies all \\(f(x)=x+c\\), \\(c\\ge0\\), using RMS–AM–GM.",
+      "Correctly derives \\(g(f(y))=g(y)\\), the orbit formula, and \\(g\\ge0\\).",
+      "Uses boundedly close forward orbits effectively to show all positive defect values coincide.",
+      "Develops a valid quantitative separation estimate for the zero and positive defect sets."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Divergence of \\(y_0+nc_1\\) alone does not prove it enters the second forbidden interval; an additional step-size argument is needed, though that paragraph is redundant."
+      },
+      {
+        "severity": "minor",
+        "description": "The forbidden-interval conclusions should allow equality at the upper endpoint."
+      },
+      {
+        "severity": "minor",
+        "description": "The assertion \\(S_0=(0,b]\\) rather than possibly \\((0,b)\\) is not explicitly justified; the omitted alternative is ruled out directly by the displayed inequalities."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p5_c3_t10r01_20260915T144230Z/grading/work/strict_c3_20260915T163357Z/scores/p5/t10_r01/summary.json",
+    "native_record_file_sha256": "98e6b7e39a4b8f6b3a3f9e8ecd25f4d1742f98ddb373b4c3801bf5623392dec4",
+    "selected_record": "benchmarks/imo2026/results/p5_c3_t10r01_20260915T144230Z/grades/imo2026_p5/t10_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "75940194aa51342e659bd2fd16fa9e930784732f54b4e204d5d047a8cb2c50f2",
+    "proof": "benchmarks/imo2026/results/p5_c3_t10r01_20260915T144230Z/proofs/imo2026_p5/t10_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb"
+}

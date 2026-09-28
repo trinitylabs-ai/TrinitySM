@@ -1,0 +1,37 @@
+To prove that $XO$ is perpendicular to $DE$ in an acute triangle $ABC$, we set up a coordinate system. Let $C$ be the origin $(0,0)$ and let the side $CA$ lie along the $x$-axis. Thus, $C = (0,0)$ and $A = (b, 0)$, where $b$ is the length of $AC$. The coordinates of $B$ are $(a \cos C, a \sin C)$, where $a$ is the length of $BC$.
+
+**1. Coordinates of $D$ and $E$**
+$D$ is the foot of the altitude from $B$ to $AC$, so $D$ is the projection of $B$ onto the $x$-axis:
+$D = (a \cos C, 0)$.
+$E$ is the foot of the altitude from $C$ to $AB$. The line $AB$ passes through $(b, 0)$ and $(a \cos C, a \sin C)$. The projection of $C(0,0)$ onto $AB$ is given by:
+$x_E = \frac{a^2 b \sin^2 C}{c^2}, \quad y_E = \frac{ab \sin C (b - a \cos C)}{c^2}$, where $c$ is the length of $AB$.
+The length $CE$ is $CE = \sqrt{x_E^2 + y_E^2} = \frac{ab \sin C}{c} = a \sin B$.
+
+**2. Coordinates of $E_1, E_2$ and $O$**
+$E_1$ is the reflection of $E$ across $AC$ (the $x$-axis), so $E_1 = (x_E, -y_E)$.
+$E_2$ is the reflection of $E$ across $BC$. The line $BC$ is $y = (\tan C)x$. The reflection $(x', y')$ of $(x, y)$ across $y = x \tan \theta$ is $x' = x \cos 2\theta + y \sin 2\theta$ and $y' = x \sin 2\theta - y \cos 2\theta$. With $\theta = C$:
+$E_2 = (x_E \cos 2C + y_E \sin 2C, x_E \sin 2C - y_E \cos 2C)$.
+$O(x_O, y_O)$ is the circumcenter of $\triangle CE_1E_2$. Since $C$ is the origin, $OC^2 = OE_1^2 = OE_2^2$.
+$x_O^2 + y_O^2 = (x_O - x_E)^2 + (y_O + y_E)^2 \implies 2(x_O x_E - y_O y_E) = x_E^2 + y_E^2 = CE^2$.
+$x_O^2 + y_O^2 = (x_O - x_{E2})^2 + (y_O - y_{E2})^2 \implies 2(x_O x_{E2} + y_O y_{E2}) = x_{E2}^2 + y_{E2}^2 = CE^2$.
+Solving this system for $x_O$ and $y_O$:
+$x_O = \frac{1}{2} x_E + \frac{1}{2} y_E \tan C, \quad y_O = \frac{1}{2} x_E \tan C - \frac{1}{2} y_E$.
+
+**3. Coordinates of $X$ and Vector $XO$**
+$X$ is the intersection of the circumcircle of $\triangle CE_1E_2$ and $AC$ (the $x$-axis), other than $C$. Since $C$ is the origin and $X$ is on the circle with center $O$, $CX$ is a chord. The $x$-coordinate of $X$ is $x_X = 2x_O$ because $C$ is the origin and $X$ lies on the $x$-axis.
+$X = (2x_O, 0) = (x_E + y_E \tan C, 0)$.
+The vector $\vec{XO} = O - X = (-x_O, y_O) = \frac{1}{2} (-x_E - y_E \tan C, x_E \tan C - y_E)$.
+
+**4. Perpendicularity of $XO$ and $DE$**
+The vector $\vec{DE} = E - D = (x_E - a \cos C, y_E)$.
+We compute the dot product $\vec{XO} \cdot \vec{DE}$:
+$2(\vec{XO} \cdot \vec{DE}) = (-x_E - y_E \tan C)(x_E - a \cos C) + (x_E \tan C - y_E)y_E$
+$= -x_E^2 + x_E a \cos C - y_E x_E \tan C + y_E a \cos C \tan C + x_E y_E \tan C - y_E^2$
+$= -(x_E^2 + y_E^2) + a(x_E \cos C + y_E \sin C)$.
+Substitute $x_E$ and $y_E$:
+$x_E \cos C + y_E \sin C = \frac{a^2 b \sin^2 C \cos C + ab \sin^2 C (b - a \cos C)}{c^2} = \frac{ab^2 \sin^2 C}{c^2}$.
+Then $a(x_E \cos C + y_E \sin C) = \frac{a^2 b^2 \sin^2 C}{c^2} = CE^2$.
+Thus, $2(\vec{XO} \cdot \vec{DE}) = -CE^2 + CE^2 = 0$.
+Since the dot product is zero, $XO \perp DE$.
+
+\(\square\)

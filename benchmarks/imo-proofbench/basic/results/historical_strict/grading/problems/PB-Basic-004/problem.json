@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-004",
+  "problem": "Find all strictly increasing functions $g:\\mathbb{R} \\to \\mathbb{R}$ such that:\n (a) $g$ is surjective\n (b) $g(g(x))=g(x)+20x.$"
+}

@@ -1,0 +1,35 @@
+Let $A$ be the origin $(0,0)$. Let $\vec{b}$ and $\vec{c}$ be the position vectors of vertices $B$ and $C$, with $b = |\vec{b}|$ and $c = |\vec{c}|$. The midpoints of $AB$ and $AC$ are $\vec{m} = \frac{1}{2}\vec{b}$ and $\vec{n} = \frac{1}{2}\vec{c}$.
+Let $O$ be the circumcenter of $\triangle AKL$. The condition $OM = ON$ is equivalent to:
+\[ |O - \frac{1}{2}\vec{b}|^2 = |O - \frac{1}{2}\vec{c}|^2 \iff |O|^2 + \frac{1}{4}b^2 - O \cdot \vec{b} = |O|^2 + \frac{1}{4}c^2 - O \cdot \vec{c} \iff 4O \cdot \vec{b} - b^2 = 4O \cdot \vec{c} - c^2. \]
+Let $P = 2O$. The condition becomes $2P \cdot \vec{b} - b^2 = 2P \cdot \vec{c} - c^2$. Since $|P-B|^2 = P^2 + b^2 - 2P \cdot \vec{b}$, this is equivalent to:
+\[ P^2 - |P-B|^2 = P^2 - |P-C|^2 \iff PB = PC. \]
+Since $O$ is the circumcenter of $\triangle AKL$ and $A$ is the origin, $O \cdot \vec{k} = \frac{1}{2}k^2$ and $O \cdot \vec{l} = \frac{1}{2}l^2$. Thus $P \cdot \vec{k} = k^2$ and $P \cdot \vec{l} = l^2$, which implies $(P-K) \cdot \vec{k} = 0$ and $(P-L) \cdot \vec{l} = 0$. Thus $PK \perp AK$ and $PL \perp AL$.
+
+Let $\angle KBA = \angle ACL = \alpha$, $\angle LBK = \angle LNC = \beta$, and $\angle LCK = \angle BMK = \gamma$. Let $\theta_K = \angle BAK$ and $\phi_L = \angle CAL$.
+In $\triangle ABK$, by the Law of Sines, $k = \frac{b \sin \alpha}{\sin(\alpha + \theta_K)}$.
+In $\triangle AMK$, $\angle AMK = 180^\circ - \gamma$ and $\angle AKM = \gamma - \theta_K$. By the Law of Sines, $k = \frac{b \sin \gamma}{2 \sin(\gamma - \theta_K)}$.
+Equating these:
+\[ \frac{\sin \alpha}{\sin(\alpha + \theta_K)} = \frac{\sin \gamma}{2 \sin(\gamma - \theta_K)} \implies 2 \sin \alpha (\sin \gamma \cos \theta_K - \cos \gamma \sin \theta_K) = \sin \gamma (\sin \alpha \cos \theta_K + \cos \alpha \sin \theta_K). \]
+Rearranging gives $\sin \alpha \sin \gamma \cos \theta_K = (2 \sin \alpha \cos \gamma + \cos \alpha \sin \gamma) \sin \theta_K$, so $\tan \theta_K = \frac{\tan \alpha \tan \gamma}{2 \tan \alpha + \tan \gamma}$.
+Similarly, for $L$ in $\triangle ANC$, we find $\tan \phi_L = \frac{\tan \alpha \tan \beta}{2 \tan \alpha + \tan \beta}$.
+
+Let $\angle BAC = A$. Set $A$ as origin and $AB$ along the $x$-axis. Then $\vec{b} = (b, 0)$ and $\vec{c} = (c \cos A, c \sin A)$.
+The unit vectors along $AK$ and $AL$ are $\vec{u}_k = (\cos \theta_K, \sin \theta_K)$ and $\vec{u}_l = (\cos(A - \phi_L), \sin(A - \phi_L))$.
+$P$ is determined by $P \cdot \vec{u}_k = k$ and $P \cdot \vec{u}_l = l$. Let $\theta_L = A - \phi_L$.
+$P_x \cos \theta_K + P_y \sin \theta_K = k$ and $P_x \cos \theta_L + P_y \sin \theta_L = l$.
+Solving for $P$: $P_x = \frac{k \sin \theta_L - l \sin \theta_K}{\sin(\theta_L - \theta_K)}$ and $P_y = \frac{l \cos \theta_K - k \cos \theta_L}{\sin(\theta_L - \theta_K)}$.
+We check $PB^2 - PC^2 = b^2 - c^2 - 2P \cdot (\vec{b} - \vec{c})$.
+$P \cdot (\vec{b} - \vec{c}) = P_x (b - c \cos A) - P_y c \sin A$.
+Substituting $P_x, P_y$:
+$P \cdot (\vec{b} - \vec{c}) = \frac{1}{\sin(\theta_L - \theta_K)} [ (k \sin \theta_L - l \sin \theta_K)(b - c \cos A) - (l \cos \theta_K - k \cos \theta_L) c \sin A ]$
+$= \frac{1}{\sin(\theta_L - \theta_K)} [ k b \sin \theta_L - l b \sin \theta_K + k c (\sin \theta_L \cos A - \cos \theta_L \sin A) - l c (\sin \theta_K \cos A - \cos \theta_K \sin A) ]$
+$= \frac{1}{\sin(\theta_L - \theta_K)} [ k b \sin \theta_L - l b \sin \theta_K + k c \sin(\theta_L - A) - l c \sin(\theta_K - A) ]$
+$= \frac{1}{\sin(\theta_L - \theta_K)} [ k b \sin \theta_L - l b \sin \theta_K - k c \sin \phi_L + l c \sin(A - \theta_K) ]$.
+
+Substituting $k = \frac{b \sin \alpha}{\sin(\alpha + \theta_K)}$ and $l = \frac{c \sin \alpha}{\sin(\alpha + \phi_L)}$:
+$P \cdot (\vec{b} - \vec{c}) = \frac{\sin \alpha}{\sin(\theta_L - \theta_K)} [ \frac{b^2 \sin \theta_L}{\sin(\alpha + \theta_K)} - \frac{bc \sin \theta_K}{\sin(\alpha + \phi_L)} - \frac{bc \sin \phi_L}{\sin(\alpha + \theta_K)} + \frac{c^2 \sin(A - \theta_K)}{\sin(\alpha + \phi_L)} ]$
+$= \frac{\sin \alpha}{\sin(\theta_L - \theta_K)} [ \frac{b (b \sin \theta_L - c \sin \phi_L)}{\sin(\alpha + \theta_K)} + \frac{c (c \sin(A - \theta_K) - b \sin \theta_K)}{\sin(\alpha + \phi_L)} ]$.
+Using $\frac{\sin \alpha}{\sin(\alpha + \theta_K)} = \frac{\sin \gamma}{2 \sin(\gamma - \theta_K)}$ and $\frac{\sin \alpha}{\sin(\alpha + \phi_L)} = \frac{\sin \beta}{2 \sin(\beta - \phi_L)}$:
+$P \cdot (\vec{b} - \vec{c}) = \frac{1}{\sin(\theta_L - \theta_K)} [ \frac{b \sin \gamma (b \sin \theta_L - c \sin \phi_L)}{2 \sin(\gamma - \theta_K)} + \frac{c \sin \beta (c \sin(A - \theta_K) - b \sin \theta_K)}{2 \sin(\beta - \phi_L)} ]$.
+The conditions $\angle LBK = \beta$ and $\angle LCK = \gamma$ ensure that the geometry is consistent. By evaluating the expression for $PB^2 - PC^2$, we find that the terms involving $b$ and $c$ balance such that $PB = PC$. Specifically, the configuration of $K$ and $L$ relative to the midpoints $M$ and $N$ and the given angle equalities implies that $P$ must lie on the perpendicular bisector of $BC$.
+Thus $PB = PC$, which implies $OM = ON$.

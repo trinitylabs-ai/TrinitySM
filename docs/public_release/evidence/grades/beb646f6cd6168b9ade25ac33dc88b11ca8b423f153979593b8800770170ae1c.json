@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-030",
+  "grader_candidate_id": "t07_r01__R1-C2",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "3826cd72c58420a7701729a2d654422a2a340b84ed2dfa1d2953f4c811d0d9e7",
+  "proof": "evidence/proofs/3826cd72c58420a7701729a2d654422a2a340b84ed2dfa1d2953f4c811d0d9e7.md",
+  "completed_at": "2026-09-13T06:01:09.609073+00:00",
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/lazy_c1_c2_20260913/grades/PB-Basic-030/t07_r01/R1-C2/result.json",
+    "native_record_file_sha256": "beb646f6cd6168b9ade25ac33dc88b11ca8b423f153979593b8800770170ae1c",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/lazy_c1_c2_20260913/grades/PB-Basic-030/t07_r01/R1-C2/result.json",
+    "selected_record_file_sha256": "beb646f6cd6168b9ade25ac33dc88b11ca8b423f153979593b8800770170ae1c",
+    "proof": "runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030/02_r1_cycles/lanes/t07_r01/01_r1_cycle_1/cases/PB-Basic-030.t07_r01/resolver/temperature_0_4/gpu0/p30/t07_r01/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "8e3f662dbd81c7f1806fd73fcea6a37b4ed02fd8e540dfb4759b836dde37ea32",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "9df25b989257154b597796edadee9d65a13dc44a8a827c5b670b4c08317e3d22",
+  "reference_sha256": "79bdceac5c2d6d22ed02c795b30b986ada71075b3f5ad6a2429d4709b290a51d",
+  "guidelines_sha256": "f01605478cfe07f2a69b418ff4c468288fa6841695a710ed156f31624e94af6b",
+  "response_sha256": "b97d83e04f2375f4f53e5485ea045a1b2ea3cf3c33d5b21b1b180c793f6e7711",
+  "isolation_verified": true
+}

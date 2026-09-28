@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "09965cdfcbddca0659115383e1ebbe0580aede5f426823071ffc6de55e2b730e",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "f3567217ca52c699d974c907941c9a4aef837428faefedfde37480834598daa8",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3938faff0290147f6a3341bf69cd9eb14c55e2e15e5b401c22afdcafc852de82",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proof falsely claims that the midpoint of MN is the midpoint of BC. In fact these points are (2A+B+C)/4 and (B+C)/2, respectively, and they cannot coincide in a nondegenerate triangle. Hence the perpendicular bisectors of MN and BC are not generally the same, so OM=ON is not equivalent to OB=OC. This is a false load-bearing reduction under Rule C.",
+    "summary": "Some preliminary sine-law calculations are correct, but the initial reduction to OB=OC is invalid. More decisively, the general assertion that the angle constraints force OB=OC is supported only by a symmetry observation applicable when b=c and beta=gamma; no argument is supplied for the required general case. This is an unsupported central inference under Rule E, giving a ceiling of 3, and the limited correct preliminary work merits 2.",
+    "strengths": [
+      "Correctly observes that MN is parallel to BC and has half its length.",
+      "The sine-law formulas for BK and LC are correct under the stated angle ordering.",
+      "The derived relations cot(theta_K)=cot(alpha)+2cot(gamma) and its beta analogue are valid preliminary identities."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The midpoint of MN is incorrectly identified with the midpoint of BC, invalidating the claimed equivalence between OM=ON and OB=OC."
+      },
+      {
+        "severity": "major",
+        "description": "The crucial claim that the constraints imply OB=OC in the general case is merely asserted. The cited reflection symmetry covers only the special case b=c and beta=gamma and supplies no proof for a general triangle."
+      },
+      {
+        "severity": "substantial",
+        "description": "No explicit trigonometric identity connecting the preliminary angle calculations to the circumcenter condition is stated or proved, so the missing central derivation does not satisfy Rule B."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:30:20.003998+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00018",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,22 @@
+# Proof comparison
+
+## Proof A
+Established theorem: James can guarantee reaching the last row with at most 3000 penalties by sequentially probing each column vertically until the empty column is found. This establishes the upper bound $n \le 3001$.
+Claim gap: The lower bound argument (Lines 7-22) claims Peter can force 3000 penalties. This is unsupported and mathematically invalid. The argument incorrectly assumes James must identify the completely empty column to succeed, and falsely claims that switching between columns is blocked by Peter's placement. It ignores the problem constraint that each middle row contains exactly one obstacle (implying all obstacle row indices are distinct) and fails to account for the fact that James can always switch columns safely at row 1 or between any two probed columns with known obstacle rows.
+Qualifications and supplied repairs: NONE. The lower bound relies on an unjustified strategic necessity (finding the empty column) and a flawed "proven safe" analysis that does not hold under the distinct-row constraint.
+Decisive checks: 
+- Line 4: Upper bound derivation verified. Sequential vertical probing guarantees finding the empty column in at most $m-1$ penalties.
+- Lines 12-22: Lower bound falsified. The claim that switches are impossible in $R_{unc}$ or $R_{known}$ is false. Since each row $2,\dots,3001$ has exactly one obstacle, any two probed columns have distinct obstacle rows. James can weave between them (e.g., go down col 1 to $\min(r_1,r_2)$, switch to col 2, go down to $\max(r_1,r_2)$, switch back) without ever entering other columns. This 2-column weaving strategy succeeds after only 2 penalties, directly contradicting the claim that $m-1$ penalties are necessary.
+
+## Proof B
+Established theorem: Correctly identifies that each penalty reveals the exact row index of the obstacle in the probed column (Line 4). Proposes a constructive strategy using information from probed columns to weave a safe path to the bottom (Lines 12-19).
+Claim gap: The constructive path fails when the three discovered obstacle rows are consecutive integers (e.g., $r_2 = r_1+1$ and $r_3 = r_2+1$). In this case, both detour options in Line 16 hit a known forbidden cell, breaking the guaranteed path. Additionally, the lower bound claim (Line 24) that Peter can force 3 penalties is false; the 2-column weaving strategy shows 2 penalties suffice.
+Qualifications and supplied repairs: NONE. The gap is a local edge case in the specific 3-column routing choice, not a failure of the underlying information-gain mechanism.
+Decisive checks:
+- Line 4: Information gain step verified. Hitting $(r,c)$ reveals the exact obstacle location for that column, and the distinct-row constraint ensures $r_i \neq r_j$ for different columns.
+- Lines 12-19: Path construction partially verified but contains a demonstrable defect. The detour logic in Line 16 assumes at least one of $r_2-1$ or $r_2+1$ avoids $\{r_1, r_3\}$, which fails when $r_1, r_2, r_3$ are consecutive. However, the core mechanism (probing columns to learn rows, then routing around known obstacles) is structurally sound and aligns with the correct solution approach.
+- Line 24: Lower bound falsified. Peter cannot force 3 penalties; James can guarantee success with 2 by probing any two columns and weaving between them.
+
+## Decision
+Winner: B
+Reason: Proof B correctly identifies the central mathematical mechanism of the problem: penalties reveal exact obstacle rows, and the distinct-row constraint allows James to weave between probed columns to bypass obstacles. Although Proof B's specific 3-column path construction has a local gap for consecutive rows and its lower bound is incorrect, its approach is fundamentally aligned with the correct solution strategy (which actually requires only 2 penalties, giving $n=3$). Proof A, by contrast, is globally misdirected: it incorrectly assumes James must find the completely empty column, provides a hand-wavy adversary argument that ignores the distinct-row constraint, and fails to recognize that weaving between just two probed columns suffices. Proof B demonstrates substantive mathematical progress through correct information-theoretic analysis and constructive path planning, whereas Proof A's lower bound collapses under basic counterexamples. B's gap is a fixable routing oversight; A's gap is a fundamental mischaracterization of the problem's requirements.

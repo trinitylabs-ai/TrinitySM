@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "3804b1b5f2d49b97a6d0d9558e9d0fac6b684bbfd2f355214d27dd466afa9f82",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "878a8bc2cf623bd742c9760efacfefd5ac05488192cb5debbeab1f4530d528d2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4e746e84139cdfb377a79f7ea93daae760d1068cf78d706d16883487bd264374",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive assertion that f(x)≥x implies that Im(f) contains an interval—and hence contains values arbitrarily close to any fixed x—is unsupported and invalid. Even an admissible translation f(t)=t+10 has image (10,∞), which does not approach x=1. This is an unsupported central inference under Rule E.",
+    "summary": "The claimed classification is correct, and the submission correctly verifies all translations and derives the useful orbit identity f^n(y)=y+n(f(y)-y), hence f(y)≥y. However, the argument that the defect a(x)=f(x)-x is constant fails at its central step. Varying y changes both z=f(y) and a(y), so the displayed estimate cannot be minimized over z while keeping the desired comparison with a fixed a(y). Establishing constancy requires substantial additional orbit-comparison and compatibility arguments.",
+    "strengths": [
+      "Correctly verifies that f(x)=x+a works for every a≥0.",
+      "Correctly derives f(f(y))=2f(y)-y and the invariance a(f(y))=a(y).",
+      "Correctly uses iteration and positivity to conclude a(y)≥0."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claim that the image of f contains an interval follows from f(x)≥x is unjustified; such a lower bound alone gives no interval or density property."
+      },
+      {
+        "severity": "major",
+        "description": "Even assuming Im(f) is an interval, it need not contain points arbitrarily close to an arbitrary fixed x. Moreover, varying z=f(y) also varies its preimage y and therefore a(y), so the argument does not prove a(x)≤a(y). This leaves the central uniqueness step entirely unproved and invokes Rule E's score ceiling of 3."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:43:18.921616+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

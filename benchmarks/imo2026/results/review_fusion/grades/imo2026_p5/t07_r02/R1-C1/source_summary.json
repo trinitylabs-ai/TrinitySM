@@ -1,0 +1,79 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T07:07:57.382806+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "per_problem": {
+    "5": {
+      "scores": [
+        3
+      ],
+      "mean": 3.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T07:07:57.381300+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "case_id": "imo2026_p5.explicit.t07_r02",
+      "candidate_id": "t07_r02",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q5_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r02/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "54a30ec37ef9533df62c673797aeb5216303138033d3b73e8e4197ce9b83ef50",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The proof does not justify passing from differentiability of g at points in the range of f to differentiability at an arbitrary y. It assumes, circularly, both that f(y+ε)→f(y) and effectively that g'(y) exists and is finite.",
+        "summary": "The submitted answer is correct, and the proof correctly verifies all translations f(x)=x+c, derives f(f(x))=2f(x)-x, proves orbit invariance g(f(x))=g(x), and establishes g≥0. However, the decisive uniqueness step is invalid: differentiability with derivative zero on the range of f does not imply differentiability everywhere, especially without continuity or local control of f. Repairing this requires a new load-bearing argument comparing defect values and excluding mixed levels. Under the stated harsh policy, this unsupported central inference caps the score at 3.",
+        "strengths": [
+          "Correctly verifies that every f(x)=x+c with c≥0 satisfies both inequalities.",
+          "Correctly obtains f(f(y))=2f(y)-y and hence g(f(y))=g(y).",
+          "Correctly derives f^n(x)=x+ng(x) and uses positivity to prove g(x)≥0.",
+          "Develops potentially useful quadratic local control of g near points f(y)."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "From g(f(t))=g(t) and g'(f(y))=0, the proof claims g'(y)=0. Differentiability at f(y) can only be invoked if f(y+ε)→f(y), which has not been proved. Moreover, the computation explicitly assumes that g'(y) exists in order to conclude that it exists and equals zero. This circular step is the entire argument that g is constant."
+          },
+          {
+            "severity": "minor",
+            "description": "The asserted inequality sqrt(1+u)≥1+u/2-u²/8 for every u>-1 is false for negative u near 0, so the claimed two-sided quadratic estimate is not established as written. A modified local estimate with a different constant could repair this point, but it would not fix the central uniqueness gap."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

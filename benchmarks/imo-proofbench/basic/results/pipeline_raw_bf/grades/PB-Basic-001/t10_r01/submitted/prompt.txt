@@ -1,0 +1,117 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Determine all functions $f: \mathbb{Z} \rightarrow \mathbb{Z}$ such that, for all $x, y \in \mathbb{Z}$, we have \[ f(2x)+2f(y)=f(f(x+y)).\]
+
+**GROUND-TRUTH SOLUTION**
+
+By taking $x = 0$, we get $f(0) + 2f(y) = f(f(y))$ for all $y\in \mathbb{Z}$. So, the problem becomes:
+ $$ f(2x) + 2f(y) = f(0) + 2f(x + y) $$
+ Taking $x = 1$ for this one, we quickly obtain that $2(f(y+1) - f(y)) = f(2) - f(0) \Leftrightarrow f(y+1)-f(y) = (f(2)-f(0))/2$, so $f$ is linear, that is there exists $k,c$ such that $f(x) = kx+c$. Plug this back into the original equation, we see $f(x) = 2x+c$ and $f(x)=0$ are all possible solutions, and these indeed satisfy the given condition
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the solution correctly
+ 2. Proved $f(f(y)) = 2f(y) + f(0)$ and $f(2x) + 2f(0) = f(f(x))$
+(Almost)
+ 1. Solved correctly, but did not check that the finding candidates are indeed the solutions to the given equation.
+
+**PROPOSED SOLUTION**
+
+To find all functions $f: \mathbb{Z} \rightarrow \mathbb{Z}$ such that for all $x, y \in \mathbb{Z}$,
+\[ f(2x) + 2f(y) = f(f(x+y)), \]
+we proceed as follows:
+
+**1. Deriving a relation for $f(f(n))$**
+Let $f(0) = c$ for some constant $c \in \mathbb{Z}$. By substituting $x = 0$ into the original equation, we get:
+\[ f(0) + 2f(y) = f(f(y)) \implies f(f(y)) = 2f(y) + c. \]
+This identity holds for all $y \in \mathbb{Z}$.
+
+**2. Simplifying the original equation**
+We can now substitute the identity $f(f(z)) = 2f(z) + c$ (where $z = x+y$) back into the original equation:
+\[ f(2x) + 2f(y) = 2f(x+y) + c. \]
+To find a relationship for $f(2x)$, we set $y = 0$ in this simplified equation:
+\[ f(2x) + 2f(0) = 2f(x) + c \implies f(2x) + 2c = 2f(x) + c \implies f(2x) = 2f(x) - c. \]
+
+**3. Reducing to Cauchy's Functional Equation**
+Substitute the expression for $f(2x)$ back into the equation $f(2x) + 2f(y) = 2f(x+y) + c$:
+\[ (2f(x) - c) + 2f(y) = 2f(x+y) + c \implies 2f(x) + 2f(y) - 2c = 2f(x+y). \]
+Dividing by 2, we obtain:
+\[ f(x+y) = f(x) + f(y) - c. \]
+Let $g(x) = f(x) - c$. Then $f(x) = g(x) + c$. Substituting this into the equation above:
+\[ g(x+y) + c = (g(x) + c) + (g(y) + c) - c \implies g(x+y) = g(x) + g(y). \]
+This is Cauchy's functional equation. Since $g: \mathbb{Z} \rightarrow \mathbb{Z}$, the only solutions are of the form $g(x) = ax$ for some constant $a \in \mathbb{Z}$. Thus, the general form of $f$ is:
+\[ f(x) = ax + c. \]
+
+**4. Solving for $a$ and $c$**
+We substitute $f(x) = ax + c$ back into the original equation $f(2x) + 2f(y) = f(f(x+y))$ to determine the possible values of $a$ and $c$:
+LHS: $f(2x) + 2f(y) = (a(2x) + c) + 2(ay + c) = 2ax + 2ay + 3c$.
+RHS: $f(f(x+y)) = f(a(x+y) + c) = a(a(x+y) + c) + c = a^2x + a^2y + ac + c$.
+Equating the two sides:
+\[ 2a(x+y) + 3c = a^2(x+y) + (a+1)c. \]
+For this to hold for all $x, y \in \mathbb{Z}$, the coefficients of $(x+y)$ and the constant terms must be equal:
+1. $a^2 = 2a \implies a(a-2) = 0 \implies a = 0$ or $a = 2$.
+2. $(a+1)c = 3c \implies (a-2)c = 0$.
+
+- If $a = 0$, then $(0-2)c = 0 \implies -2c = 0 \implies c = 0$. This yields $f(x) = 0x + 0 = 0$.
+- If $a = 2$, then $(2-2)c = 0 \implies 0 = 0$, which is true for any $c \in \mathbb{Z}$. This yields $f(x) = 2x + c$.
+
+**5. Verification**
+- If $f(x) = 0$, then $0 + 2(0) = f(0) = 0$. (Correct)
+- If $f(x) = 2x + c$, then $f(2x) + 2f(y) = (4x+c) + 2(2y+c) = 4x + 4y + 3c$ and $f(f(x+y)) = f(2(x+y)+c) = 2(2x+2y+c) + c = 4x + 4y + 3c$. (Correct)
+
+The solutions are $f(x) = 0$ and $f(x) = 2x + c$ for any $c \in \mathbb{Z}$. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

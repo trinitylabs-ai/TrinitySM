@@ -1,0 +1,195 @@
+{
+  "schema": "workshop-external-imo-reference-sources-v1",
+  "provider": "MechMath Agent Team",
+  "repository": "https://github.com/MechMath/IMO2026",
+  "verified_revision": "47ff510110dd400c98aee2ead3be0f53f7b8ba04",
+  "verified_on": "2026-09-18",
+  "revision_note": "This revision was verified to contain byte-identical PDFs to the historical grading sources; the original retrieval revision was not recorded.",
+  "paper": "https://arxiv.org/abs/2607.04394v1",
+  "license_status": "No license or redistribution grant was located for these solution files at the verified revision. The associated paper license is not assumed to apply to repository PDFs.",
+  "distribution": "Source metadata and hashes only. PDFs and extracted reference text must be obtained directly from upstream by the evaluator operator and kept local.",
+  "extraction": {
+    "command": [
+      "pdftotext",
+      "-layout",
+      "SOURCE.pdf",
+      "-"
+    ],
+    "verified_version": "pdftotext version 22.02.0",
+    "normalization": "UTF-8 text, stripped of surrounding whitespace for reference_sha256; historical file byte hashes are recorded separately."
+  },
+  "references": [
+    {
+      "problem_id": "imo2026_p1",
+      "source_path": "IMO2026/Q1/solution.pdf",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q1/solution.pdf",
+      "download_url": "https://raw.githubusercontent.com/MechMath/IMO2026/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q1/solution.pdf",
+      "pdf_sha256": "9a3fa4240da23fdf52f32e2e4b8f98740fbd28c30f25b1dbdd11baf59b3814e5",
+      "extracted_sha256": "662ac2cc92f984f365ab4291c8cf54c1acf5fb371a4dae58b8e796841479fd9e",
+      "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+      "known_git_blob_ids": [
+        "242066fcc74700735d16965516f9f5bdd65e9e81",
+        "460b29c43077bec91e51b47eb8f37b02984acb58",
+        "d3b85a9ff4155ea4077b76334908ca08b325f8ba",
+        "f5d1078288dd0648259894b2c93aeca9e2a6edfc"
+      ],
+      "local_grading_inputs": [
+        {
+          "path": "benchmarks/imo2026/results/review_fusion/grading/problems/imo2026_p1/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "662ac2cc92f984f365ab4291c8cf54c1acf5fb371a4dae58b8e796841479fd9e"
+        },
+        {
+          "path": "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grading/inputs/imo2026_p1/reference.md",
+          "format": "strip",
+          "sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "source_path": "IMO2026/Q2/solution.pdf",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q2/solution.pdf",
+      "download_url": "https://raw.githubusercontent.com/MechMath/IMO2026/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q2/solution.pdf",
+      "pdf_sha256": "c45e3bdae20970bb33793f0a5301c4ccedad3167787c1601be4728c68d18666c",
+      "extracted_sha256": "839e329d7b3b37b1b63a224df28b16c133ba083240e32eeb0b9ed205f1d9e9bc",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "known_git_blob_ids": [
+        "31b344c024ff0f1ae87a7fbd05853edc80fe8559",
+        "ade8a38e054017c37bc00a1101c0f35178d68c9b",
+        "d8fc532b94062c89478606a7b0135e7b1335280f",
+        "f1c8ff6433bff2803bc6aa50f07d556f0d2a54b3"
+      ],
+      "local_grading_inputs": [
+        {
+          "path": "benchmarks/imo2026/results/p2_tool_call_r47/grading/problems/imo2026_p2/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "839e329d7b3b37b1b63a224df28b16c133ba083240e32eeb0b9ed205f1d9e9bc"
+        },
+        {
+          "path": "benchmarks/imo2026/results/review_fusion/grading/problems/imo2026_p2/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "839e329d7b3b37b1b63a224df28b16c133ba083240e32eeb0b9ed205f1d9e9bc"
+        },
+        {
+          "path": "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grading/inputs/imo2026_p2/reference.md",
+          "format": "strip",
+          "sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "source_path": "IMO2026/Q3/solution.pdf",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q3/solution.pdf",
+      "download_url": "https://raw.githubusercontent.com/MechMath/IMO2026/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q3/solution.pdf",
+      "pdf_sha256": "0f009e99e2c076a2eb32b88d1f6c6593da1ff0653c888f5b0f7b42d105279aa1",
+      "extracted_sha256": "026551dba2af8e70e0ccf4075f52706182effe250a7b80963c0edb312189b987",
+      "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+      "known_git_blob_ids": [
+        "03576f19557e915e7fe7fc0b2ff68f399fe6fd95",
+        "1d8c7c9278bf8f491e76c3026c47bda90ef61566",
+        "8490f6bdd842c0586796945b5151c2a41ed28997",
+        "ced840bde1cfbfc8d8285bbb3b497f9e0fb7de48"
+      ],
+      "local_grading_inputs": [
+        {
+          "path": "benchmarks/imo2026/results/review_fusion/grading/problems/imo2026_p3/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "026551dba2af8e70e0ccf4075f52706182effe250a7b80963c0edb312189b987"
+        },
+        {
+          "path": "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grading/inputs/imo2026_p3/reference.md",
+          "format": "strip",
+          "sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "source_path": "IMO2026/Q4/solution.pdf",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q4/solution.pdf",
+      "download_url": "https://raw.githubusercontent.com/MechMath/IMO2026/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q4/solution.pdf",
+      "pdf_sha256": "db3e212a375ae6d56ca989526ac28d7c3967e75cad491a4f32fe72a04ff406e7",
+      "extracted_sha256": "52c3658873cc87f532294dbd6291a8a8804b2244c87d61f805c8e9d5c274deae",
+      "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+      "known_git_blob_ids": [
+        "0a0a27e3e97533d5e27f3075349b8ca43a9b9c53",
+        "761a896902caba42f26c30b3f65df59671383e0d",
+        "b058f0ff2c84f1f07b7f98bd3ccc242459099bc5",
+        "ef611dd6cd7b842522e1e73b26aea08a61d11ab2"
+      ],
+      "local_grading_inputs": [
+        {
+          "path": "benchmarks/imo2026/results/review_fusion/grading/problems/imo2026_p4/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "52c3658873cc87f532294dbd6291a8a8804b2244c87d61f805c8e9d5c274deae"
+        },
+        {
+          "path": "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grading/inputs/imo2026_p4/reference.md",
+          "format": "strip",
+          "sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb"
+        },
+        {
+          "path": "experiments/workshop_tools/runtime/cognitive_well_harness_v0_3_36_p4_dual_block_replay_snapshot_20260822/frozen/gold/Q4_solution.txt",
+          "format": "pdftotext_layout",
+          "sha256": "52c3658873cc87f532294dbd6291a8a8804b2244c87d61f805c8e9d5c274deae"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "source_path": "IMO2026/Q5/solution.pdf",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q5/solution.pdf",
+      "download_url": "https://raw.githubusercontent.com/MechMath/IMO2026/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q5/solution.pdf",
+      "pdf_sha256": "8203198d4425aa146927a2c5fc3cebeeb46ac9f334590c19dff070f0e6dc76b1",
+      "extracted_sha256": "cba581e8e19cffaff70274137f1e6dc5e15399a5dbf1aac5336213c80faef073",
+      "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+      "known_git_blob_ids": [
+        "51fb2a749ee871be219406d7e0a657b8117ec929",
+        "690ab4c62226e5aa6f9ea41957541756d359a928",
+        "735721a5e15a518c2a104ac08055133da26a839c",
+        "d821505f565c3827f3cca07a2493ca1d56c4aabc"
+      ],
+      "local_grading_inputs": [
+        {
+          "path": "benchmarks/imo2026/results/review_fusion/grading/problems/imo2026_p5/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "cba581e8e19cffaff70274137f1e6dc5e15399a5dbf1aac5336213c80faef073"
+        },
+        {
+          "path": "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grading/inputs/imo2026_p5/reference.md",
+          "format": "strip",
+          "sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb"
+        }
+      ]
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "source_path": "IMO2026/Q6/solution.pdf",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q6/solution.pdf",
+      "download_url": "https://raw.githubusercontent.com/MechMath/IMO2026/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q6/solution.pdf",
+      "pdf_sha256": "7922242c93f7e7e2e2a1bb88be36fd1e6db46aa9ba241d78cd20df8f68eef4cb",
+      "extracted_sha256": "001e420b5eb6396e919a458f4b13056d060ffcda94d5268010c23b0330baae3a",
+      "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+      "known_git_blob_ids": [
+        "2b3c54919559a36e2a88422ab03b3f44061c0dae",
+        "2d885198edbfab30ebdd3420866150de2ecb41bd",
+        "65bcdac15077858c1e55accdcb1ef8f75933a40d",
+        "6dafe35200cd2cef71259dfc843b904b68145d6e"
+      ],
+      "local_grading_inputs": [
+        {
+          "path": "benchmarks/imo2026/results/review_fusion/grading/problems/imo2026_p6/reference.txt",
+          "format": "pdftotext_layout",
+          "sha256": "001e420b5eb6396e919a458f4b13056d060ffcda94d5268010c23b0330baae3a"
+        },
+        {
+          "path": "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grading/inputs/imo2026_p6/reference.md",
+          "format": "strip",
+          "sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c"
+        }
+      ]
+    }
+  ]
+}

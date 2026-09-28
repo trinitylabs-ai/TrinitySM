@@ -1,0 +1,36 @@
+To prove that $XO$ is perpendicular to $DE$, we employ a coordinate geometry approach. Let $C$ be the origin $(0,0)$ and let the line $CA$ lie along the $x$-axis. Let the side lengths of $\triangle ABC$ be $a, b, c$ opposite to vertices $A, B, C$, respectively. Since $\triangle ABC$ is acute, the altitude feet $D$ and $E$ lie on the segments $AC$ and $AB$.
+
+**1. Coordinates of the key points $D$ and $E$**
+Point $D$ is the foot of the altitude from $B$ to $AC$. Since $D$ lies on the $x$-axis and the distance $CD = a \cos C$, we have $D = (a \cos C, 0)$.
+Point $E$ is the foot of the altitude from $C$ to $AB$. The length $CE = b \sin A$. In $\triangle AEC$, $\angle ACE = 90^\circ - A$. Thus, $E$ has polar coordinates $(b \sin A, 90^\circ - A)$, which gives:
+\[ E = (b \sin A \cos(90^\circ - A), b \sin A \sin(90^\circ - A)) = (b \sin^2 A, b \sin A \cos A) \]
+
+**2. Coordinates of $E_1, E_2$, and the center $O$**
+$E_1$ is the reflection of $E$ across the $x$-axis $AC$, so $E_1 = (b \sin^2 A, -b \sin A \cos A)$.
+$E_2$ is the reflection of $E$ across the line $BC$. The line $BC$ makes an angle $C$ with the $x$-axis. The reflection of a point at angle $\theta$ across a line at angle $\phi$ is $2\phi - \theta$. The angle of $CE$ is $90^\circ - A$, so the angle of $CE_2$ is $2C - (90^\circ - A) = 2C + A - 90^\circ$.
+Since $C$ is the origin and $CE_1 = CE_2 = CE = b \sin A$, let $r = b \sin A$. The circumcircle $\Gamma$ of $\triangle CE_1 E_2$ has its center $O$ on the angle bisector of $\angle E_1 C E_2$. The angle of the bisector is:
+\[ \frac{(A - 90^\circ) + (2C + A - 90^\circ)}{2} = A + C - 90^\circ = (180^\circ - B) - 90^\circ = 90^\circ - B \]
+The circumradius $R_\Gamma$ is found by the relation $r = 2 R_\Gamma \cos(\angle E_1 C E_2 / 2) = 2 R_\Gamma \cos C$, so $R_\Gamma = \frac{r}{2 \cos C}$. Thus, the center $O$ is:
+\[ O = (R_\Gamma \cos(90^\circ - B), R_\Gamma \sin(90^\circ - B)) = (R_\Gamma \sin B, R_\Gamma \cos B) \]
+
+**3. Coordinates of the point $X$**
+$X$ is the intersection of $\Gamma$ and $AC$ (the $x$-axis). The equation of $\Gamma$ is:
+\[ (x - R_\Gamma \sin B)^2 + (y - R_\Gamma \cos B)^2 = R_\Gamma^2 \]
+Setting $y=0$ to find the intersection with the $x$-axis:
+\[ (x - R_\Gamma \sin B)^2 = R_\Gamma^2 - R_\Gamma^2 \cos^2 B = R_\Gamma^2 \sin^2 B \implies x = R_\Gamma \sin B \pm R_\Gamma \sin B \]
+The solutions are $x=0$ (which is point $C$) and $x = 2 R_\Gamma \sin B$. Thus, $X = (2 R_\Gamma \sin B, 0)$.
+
+**4. Verification of Perpendicularity**
+We calculate the vectors $\vec{XO}$ and $\vec{DE}$:
+\[ \vec{XO} = O - X = (-R_\Gamma \sin B, R_\Gamma \cos B) \]
+\[ \vec{DE} = E - D = (b \sin^2 A - a \cos C, b \sin A \cos A) \]
+The dot product $\vec{XO} \cdot \vec{DE}$ is:
+\[ \vec{XO} \cdot \vec{DE} = -R_\Gamma \sin B (b \sin^2 A - a \cos C) + R_\Gamma \cos B (b \sin A \cos A) \]
+\[ = R_\Gamma [ b \sin A (\cos A \cos B - \sin A \sin B) + a \sin B \cos C ] \]
+\[ = R_\Gamma [ b \sin A \cos(A+B) + a \sin B \cos C ] \]
+Using the identity $\cos(A+B) = \cos(180^\circ - C) = -\cos C$:
+\[ \vec{XO} \cdot \vec{DE} = R_\Gamma [ -b \sin A \cos C + a \sin B \cos C ] = R_\Gamma \cos C (a \sin B - b \sin A) \]
+By the Law of Sines, $a \sin B = b \sin A$, which implies $\vec{XO} \cdot \vec{DE} = 0$.
+Thus, $XO$ is perpendicular to $DE$.
+
+\(\square\)

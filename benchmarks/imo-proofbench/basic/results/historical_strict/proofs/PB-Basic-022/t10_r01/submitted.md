@@ -1,0 +1,26 @@
+Let $k = 2024$ and $S = \{n^k \mid n \in \mathbb{Z}_{\ge 0}\}$. We seek all polynomials $P(x) \in \mathbb{Z}[x]$ such that for every $s \in S$, the equation $P(x) = s$ has an integer solution. This means for every $n \in \mathbb{Z}_{\ge 0}$, there exists an integer $x_n$ such that $P(x_n) = n^k$.
+
+**1. Proving $P$ is of the form $a(x+b)^d$**
+Let $d$ be the degree of $P$. If $P$ is a constant $C$, then $C = n^k$ for all $n$, which is impossible. Thus $d \ge 1$. For each $n$, $x_n$ is a root of the polynomial $f(x, n) = P(x) - n^k = 0$. The roots of a polynomial whose coefficients are polynomials in $n$ can be expressed as $d$ Puiseux series in $n$ for sufficiently large $n$:
+$$f_j(n) = \sum_{i=j_0}^\infty c_{j,i} n^{i/q}$$
+for $j=1, \dots, d$, where $q \in \mathbb{Z}^+$. For each $n$, the integer solution $x_n$ must be one of these branches: $x_n \in \{f_1(n), \dots, f_d(n)\}$. Since there are only $d$ branches, at least one branch, say $f_1(n)$, must be chosen for infinitely many $n$. Let $\mathcal{N}_1 = \{n \in \mathbb{Z}_{\ge 0} \mid x_n = f_1(n)\}$.
+
+For all $n \in \mathcal{N}_1$, we have $P(f_1(n)) = n^k$. Since $f_1(n)$ is a Puiseux series, $P(f_1(n))$ is also a Puiseux series. A Puiseux series that equals $n^k$ for infinitely many $n$ must be identically equal to $n^k$ as a formal series. Thus, the identity $P(f_1(x)) = x^k$ holds.
+
+Let $Q(x) = f_1(x)$. Since $P(Q(x)) = x^k$, the roots of $P(x)$ are constrained. If $r$ is a root of $P(x)$, then $P(Q(x)) = 0$ whenever $Q(x) = r$. However, $P(Q(x)) = x^k$, which has only one root, $x=0$. Thus, for any root $r$ of $P$, the equation $Q(x) = r$ must have only the root $x=0$. Since $Q$ is a Puiseux series, this implies $Q(x) - r = c_r x^{m_r}$ for some constant $c_r$ and $m_r \in \mathbb{Q}$. If $P$ had two distinct roots $r_1$ and $r_2$, then $r_1 - r_2 = (Q(x) - r_1) - (Q(x) - r_2) = c_{r_1} x^{m_{r_1}} - c_{r_2} x^{m_{r_2}}$. For the right-hand side to be a non-zero constant, we must have $m_{r_1} = m_{r_2}$ and $c_{r_1} = c_{r_2}$, which implies $r_1 = r_2$. Thus, $P(x)$ has only one distinct root $r$.
+
+Therefore, $P(x)$ must be of the form $P(x) = a(x-r)^d$ for some $a, r \in \mathbb{R}$. Since $P(x) \in \mathbb{Z}[x]$, we can write $P(x) = a'(qx-p)^d$ for some $a', q, p \in \mathbb{Z}$ with $\gcd(p,q)=1$.
+
+**2. Determining the coefficients**
+The condition $P(x_n) = n^k$ becomes $a'(qx_n-p)^d = n^k$. For $n=1$, we have $a'(qx_1-p)^d = 1$, which implies $a' = \pm 1$ and $(qx_1-p)^d = \pm 1$.
+
+Case 1: $a' = 1$. Then $(qx_n-p)^d = n^k$. This implies $qx_n-p = \pm n^{k/d}$. For $x_n$ to be an integer for all $n$, $k/d$ must be an integer $m$, and $p \pm n^m$ must be divisible by $q$ for all $n$. For $n=0$, we have $q|p$. Since $\gcd(p,q)=1$, we must have $q=1$. Thus $P(x) = (x-p)^d$ where $d|k$.
+
+Case 2: $a' = -1$. Then $-(qx_n-p)^d = n^k$, so $(qx_n-p)^d = -n^k$. For $n \ge 1$, this requires $d$ to be odd. Then $qx_n-p = -n^{k/d}$. As before, this implies $k/d$ is an integer $m$ and $q=1$. Thus $P(x) = -(x-p)^d$ where $d|k$ and $d$ is odd.
+
+**3. Final Verification**
+- If $P(x) = (x+b)^d$ with $d|k$, then $P(x)=n^k$ has the solution $x = n^{k/d}-b$, which is an integer for all $n$.
+- If $P(x) = -(x+b)^d$ with $d|k$ and $d$ odd, then $P(x)=n^k$ has the solution $x = -n^{k/d}-b$, which is an integer for all $n$.
+- If $P(x) = -(x+b)^d$ with $d$ even, then $P(x) \le 0$ for all $x$, so $P(x)=n^k$ has no solution for $n \ge 1$.
+
+The polynomials $P$ are $P(x) = (x+b)^d$ for $d|2024, b \in \mathbb{Z}$, and $P(x) = -(x+b)^d$ for odd $d|2024, b \in \mathbb{Z}$.

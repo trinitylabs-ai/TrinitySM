@@ -1,0 +1,42 @@
+To find all pairs of primes $(a, b)$ such that $a^2 - ab - b^3 = 1$, we rewrite the equation as:
+\[ a(a - b) = b^3 + 1 \]
+The right side can be factored using the sum of cubes identity:
+\[ a(a - b) = (b + 1)(b^2 - b + 1) \]
+Since $a$ is a prime number, it must divide the product $(b + 1)(b^2 - b + 1)$. According to Euclid's Lemma, $a$ must divide at least one of the factors: $a \mid (b + 1)$ or $a \mid (b^2 - b + 1)$.
+
+**Case 1: $a \mid (b + 1)$**
+Let $b + 1 = ma$ for some positive integer $m$. Substituting $b = ma - 1$ into the original equation $a^2 - ab - b^3 = 1$:
+\[ a^2 - a(ma - 1) - (ma - 1)^3 = 1 \]
+\[ a^2 - ma^2 + a - (m^3 a^3 - 3m^2 a^2 + 3ma - 1) = 1 \]
+\[ -m^3 a^3 + (3m^2 - m + 1)a^2 + (1 - 3m)a + 1 = 1 \]
+\[ -m^3 a^3 + (3m^2 - m + 1)a^2 + (1 - 3m)a = 0 \]
+Since $a$ is prime, $a \neq 0$, so we divide by $a$:
+\[ m^3 a^2 - (3m^2 - m + 1)a + (3m - 1) = 0 \]
+For $a$ to be an integer, the discriminant $D$ of this quadratic in $a$ must be a perfect square:
+\[ D = (3m^2 - m + 1)^2 - 4m^3(3m - 1) = 9m^4 + m^2 + 1 - 6m^3 + 6m^2 - 2m - 12m^4 + 4m^3 \]
+\[ D = -3m^4 - 2m^3 + 7m^2 - 2m + 1 \]
+If $m = 1$, $D = -3 - 2 + 7 - 2 + 1 = 1$, which is a square. The equation becomes $a^2 - 3a + 2 = 0$, which factors as $(a - 1)(a - 2) = 0$. Thus $a = 1$ (not prime) or $a = 2$ (prime). If $a = 2$, then $b = ma - 1 = 1(2) - 1 = 1$, which is not prime.
+If $m \ge 2$, we observe that $D$ becomes negative. For $m = 2$, $D = -3(16) - 2(8) + 7(4) - 2(2) + 1 = -39$. Since the leading coefficient is negative, $D < 0$ for all $m \ge 2$. Thus, Case 1 yields no prime solutions.
+
+**Case 2: $a \mid (b^2 - b + 1)$**
+Let $b^2 - b + 1 = na$ for some positive integer $n$. Substituting this into the factored equation $a(a - b) = (b + 1)(b^2 - b + 1)$:
+\[ a(a - b) = (b + 1)na \implies a - b = n(b + 1) \implies a = (n + 1)b + n \]
+Now substitute this expression for $a$ back into $b^2 - b + 1 = na$:
+\[ b^2 - b + 1 = n((n + 1)b + n) = (n^2 + n)b + n^2 \]
+\[ b^2 - (n^2 + n + 1)b + (1 - n^2) = 0 \]
+Solving for $b$ using the quadratic formula:
+\[ b = \frac{(n^2 + n + 1) \pm \sqrt{(n^2 + n + 1)^2 - 4(1 - n^2)}}{2} \]
+The discriminant is $g(n) = n^4 + 2n^3 + 7n^2 + 2n - 3$. We check for values of $n$ that make $g(n)$ a perfect square:
+- If $n = 1$, $g(1) = 1 + 2 + 7 + 2 - 3 = 9 = 3^2$. Then $b = \frac{3 \pm 3}{2}$, so $b = 3$ or $b = 0$. Since $b$ must be prime, $b = 3$. Then $a = (1 + 1)3 + 1 = 7$. This gives the pair $(7, 3)$.
+- If $n = 2$, $g(2) = 16 + 16 + 28 + 4 - 3 = 61$, which is not a square.
+- If $n \ge 3$, we bound $g(n)$ between two consecutive squares:
+\[ (n^2 + n + 2)^2 = n^4 + 2n^3 + 5n^2 + 4n + 4 \]
+\[ (n^2 + n + 3)^2 = n^4 + 2n^3 + 7n^2 + 6n + 9 \]
+Comparing $g(n)$ to these:
+$g(n) - (n^2 + n + 2)^2 = 2n^2 - 2n - 7$. For $n = 3$, $18 - 6 - 7 = 5 > 0$. For $n > 3$, this is clearly positive.
+$(n^2 + n + 3)^2 - g(n) = 4n + 12$, which is positive for all $n \ge 1$.
+Thus, for $n \ge 3$, we have $(n^2 + n + 2)^2 < g(n) < (n^2 + n + 3)^2$. Since $g(n)$ lies strictly between two consecutive squares, it cannot be a perfect square for $n \ge 3$.
+
+The only prime pair found is $(7, 3)$. Checking this in the original equation: $7^2 - 7(3) - 3^3 = 49 - 21 - 27 = 1$.
+
+The only pair of primes $(a, b)$ is $(7, 3)$. \(\square\)

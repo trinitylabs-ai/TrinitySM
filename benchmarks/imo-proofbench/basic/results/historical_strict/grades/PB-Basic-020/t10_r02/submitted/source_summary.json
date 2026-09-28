@@ -1,0 +1,41 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T20:57:47.827175+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 20,
+  "problem_id": "PB-Basic-020",
+  "case_id": "PB-Basic-020.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/p20/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/p20/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/p20/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "53b249e15d19bf02e0251cef2ed2a4b627650d7566be5083b7ce29be02132468",
+  "reference_sha256": "3bc7e52de729ccf276fbc3aaace749134e1f86090a0ee562d6dd3f754b3f7782",
+  "proof_sha256": "e32a45fc513527aaa5dda385c237b1441b892242beb4a152f0c88acf33e69b32",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T205641012219Z/inputs/tasks.json",
+  "task_manifest_sha256": "f9a0613ad1e6a28094840088803cc4af7e65f84a57f4ed58d6a618eac57a2f93",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The factorization and exhaustive gcd split are valid. Both cases are handled correctly, and the discriminant argument rules out every \\(n\\ge2\\), leaving exactly \\((a,b)=(7,3)\\).",
+    "strengths": [
+      "Provides a complete alternative solution with correct algebra, exhaustive cases, and explicit verification of the unique pair."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

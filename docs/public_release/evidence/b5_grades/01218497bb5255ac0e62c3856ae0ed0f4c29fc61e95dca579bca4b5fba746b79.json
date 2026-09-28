@@ -1,0 +1,22 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "problem_id": "PB-Advanced-011",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "proof": "evidence/proofs/69a0275c5830602c1d858f7afe240b46fdc1b0aa62c3d509675e960d928e93d2.md",
+  "proof_sha256": "69a0275c5830602c1d858f7afe240b46fdc1b0aa62c3d509675e960d928e93d2",
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "problem_sha256": "c03a77a620963644ed04db6512ca67fe420118b7e34e3fff51485a30080ec657",
+  "reference_sha256": "1d84a8d5e284d2688e7715d6b95365890476212b4693afc7ea5d3dae87f9f877",
+  "guidelines_sha256": "e44dd56f518bedf4dea7d532fb3cbcfed226904b1f1e0b1f3c2a0bdb39a8ac43",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "reasoning_effort": "xhigh",
+  "isolation_verified": true,
+  "completed_at": "2026-09-18T19:27:57.389709+00:00",
+  "source_record_sha256": "6aa2d9df2a520728eac75da6ab2ff0faacdb85ec63a1eccd02168ae2f907bc6b"
+}

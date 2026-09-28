@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2c1a2125533dbedda4a1ff2c470dfcb75aba3e136ce299f2fd76936b29366a3d",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "7d4558813343fe229d1faf6d9827e79e3f934c9b95f2bbcda86e88855fb4ba76",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "fe40ecb85c924bb13c3bf47f9338156e690219ca29b9cf64e71502f728b36084",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claimed coordinate reformulation of OM = ON is false. With K at direction φ₁ and L at direction A−φ₂, the correct resulting identity has plus signs on the b-terms and right-hand sine sin(A−φ₁−φ₂), not sin(φ₂−φ₁). This is a false load-bearing step under Rule C.",
+    "summary": "The coordinate setup, perpendicular-bisector equation, and sine-law formulas are meaningful progress. However, the target identity is derived incorrectly, and the two remaining angle conditions are never used to prove any corrected identity: the general case is concluded only by assertion. This unsupported central inference invokes Rule E and caps the score at 3; repairing it requires the main missing elimination argument.",
+    "strengths": [
+      "Correctly places A, B, C and computes the midpoints.",
+      "Correctly identifies the perpendicular-bisector equation equivalent to OM = ON.",
+      "Obtains useful sine-law relations for BK, CL, AK, and AL."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The asserted equation equivalent to OM = ON has incorrect signs and an incorrect area sine factor. The correct factor is sin(A−φ₁−φ₂)."
+      },
+      {
+        "severity": "major",
+        "description": "No derivation is supplied showing that ∠LBK = β and ∠LCK = γ imply the required circumcentre identity. The symmetric special case does not prove the general case, and the final sentence merely restates the desired conclusion."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:42:17.128146+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

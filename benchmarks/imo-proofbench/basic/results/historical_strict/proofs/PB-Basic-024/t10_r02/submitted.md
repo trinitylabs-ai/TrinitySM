@@ -1,0 +1,38 @@
+To find all non-negative integers $a, b, c$ such that $20^a + b^4 = 2024^c$, we evaluate the equation through case analysis and modular arithmetic.
+
+**Case 1: $c = 0$**
+The equation becomes $20^a + b^4 = 2024^0 = 1$. Since $a, b$ are non-negative integers, we must have $20^a \le 1$, which implies $a = 0$. Then $1 + b^4 = 1 \implies b = 0$. This gives the solution $(a, b, c) = (0, 0, 0)$.
+
+**Case 2: $a = 0$**
+The equation becomes $1 + b^4 = 2024^c$.
+If $c = 0$, we recover $(0, 0, 0)$. If $c \ge 1$, we examine the equation modulo 5. Since $2024 \equiv -1 \pmod 5$, we have $b^4 \equiv (-1)^c - 1 \pmod 5$.
+The fourth powers modulo 5 are $0^4 \equiv 0$ and $k^4 \equiv 1$ for $k \not\equiv 0 \pmod 5$.
+- If $c$ is odd, $b^4 \equiv -1 - 1 = -2 \equiv 3 \pmod 5$, which is impossible.
+- If $c$ is even, let $c = 2k$ for some $k \ge 1$. Then $b^4 = (2024^k)^2 - 1 = (2024^k - 1)(2024^k + 1)$.
+The greatest common divisor $\gcd(2024^k - 1, 2024^k + 1)$ must divide $(2024^k + 1) - (2024^k - 1) = 2$. Since $2024^k - 1$ is odd, the GCD is 1. For the product of two coprime integers to be a fourth power, each must be a fourth power. Thus, $2024^k - 1 = x^4$ and $2024^k + 1 = y^4$ for some integers $x, y$. This implies $y^4 - x^4 = 2$. The only fourth powers are $0, 1, 16, \dots$, and no two differ by 2. Thus, there are no solutions for $a = 0, c \ge 1$.
+
+**Case 3: $b = 0$**
+The equation becomes $20^a = 2024^c$. For $c > 0$, the prime factorization of $2024^c$ includes 11 and 23, while $20^a$ only includes 2 and 5. Thus, we must have $c = 0$, which leads back to $(0, 0, 0)$.
+
+**Case 4: $a, b, c \ge 1$**
+We use a sequence of modular constraints to check for solutions:
+1. **Modulo 5:** Since $a \ge 1$, $20^a \equiv 0 \pmod 5$. Thus, $b^4 \equiv 2024^c \equiv (-1)^c \pmod 5$. Since $b^4 \in \{0, 1\} \pmod 5$, and $b^4 \equiv 0$ would imply $0 \equiv (-1)^c$ (impossible), we must have $b^4 \equiv 1 \pmod 5$, which implies $c$ is even.
+2. **Modulo 3:** We have $20 \equiv -1 \pmod 3$ and $2024 \equiv 8 \equiv -1 \pmod 3$. The equation becomes $(-1)^a + b^4 \equiv (-1)^c \pmod 3$. Since $c$ is even, $(-1)^c = 1$, so $(-1)^a + b^4 \equiv 1 \pmod 3$.
+   - If $a$ is odd, $-1 + b^4 \equiv 1 \implies b^4 \equiv 2 \pmod 3$, which is impossible as $b^4 \in \{0, 1\} \pmod 3$.
+   - If $a$ is even, $1 + b^4 \equiv 1 \implies b^4 \equiv 0 \pmod 3$, which implies $3|b$.
+   Thus, $a$ must be even. Let $a = 2m$ for some $m \ge 1$.
+3. **Modulo 11:** Since $2024 = 11 \times 184$, we have $2024 \equiv 0 \pmod{11}$. The equation becomes $20^a + b^4 \equiv 0 \pmod{11}$. Substituting $a = 2m$:
+   $b^4 \equiv - (20^2)^m \equiv - 400^m \pmod{11}$.
+   Since $400 = 11 \times 36 + 4$, we have $b^4 \equiv - 4^m \pmod{11}$.
+   The set of fourth powers modulo 11 is $S = \{0^4, 1^4, 2^4, 3^4, 4^4, 5^4\} \pmod{11} = \{0, 1, 5, 4, 3, 9\}$.
+   The values of $-4^m \pmod{11}$ for $m = 1, 2, 3, 4, 5, \dots$ are:
+   $m=1: -4 \equiv 7 \pmod{11}$
+   $m=2: -16 \equiv 6 \pmod{11}$
+   $m=3: -64 \equiv 2 \pmod{11}$
+   $m=4: -256 \equiv 8 \pmod{11}$
+   $m=5: -1024 \equiv -1 \equiv 10 \pmod{11}$
+   The sequence repeats every 5 terms. None of the values $\{7, 6, 2, 8, 10\}$ are in $S$. Thus, no solutions exist for $a, b, c \ge 1$.
+
+The only non-negative integer solution is $(a, b, c) = (0, 0, 0)$.
+
+\(\square\)

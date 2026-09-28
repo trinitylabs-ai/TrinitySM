@@ -1,0 +1,41 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_ca63bc5c44687ae2d05f8232",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "909b371cce26d1ff3ec8d274f0ae8f989318516b75c1803040f93ced00f10839",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9f70fc4f2a647a2b61f44b67452ad49310fc6c153ecb22969d7329ae4d7510ca",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete and correct.",
+    "summary": "The lexicographic potential (N,V) proves termination: coprime selections decrease N, while selections with nontrivial gcd either decrease N or, when both outputs remain greater than 1, strictly decrease V. The process always retains at least one entry greater than 1, so termination leaves exactly one. Primewise, each move applies a subtraction step to the two valuations and preserves their gcd; hence the gcd of all valuations for each prime is invariant and reconstructs the unique terminal integer. This establishes independence of all choices.",
+    "strengths": [
+      "The proposed potential is well-founded and its change is calculated correctly in every case.",
+      "The argument correctly proves that a terminal board has exactly one entry greater than 1.",
+      "The primewise Euclidean-algorithm invariant is valid and yields an explicit formula for the terminal value.",
+      "All essential quantifiers and both requested conclusions are addressed."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T09:20:17.509468+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p1/pass_1/p1/proof_ca63bc5c44687ae2d05f8232"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "baf1a9a6eb4ae9a3268f869df80bbf0457e9a24c3d7bd8aff8cb33cecffbb4b2",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "074ec65cda4d88eb14ed4813e75c2d02d08c2a5b16d34e7a55652ab7b42bed49",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first score-determining defect is the false inference that, when a witness set P_i with i>N meets P(m) and H∩P_i={p}, one must have p∈P(m). The common prime in P_i∩P(m) need not belong to H. This invalidates the central finiteness argument, so Rule E caps the score at 3.",
+    "summary": "The proof correctly develops finite-stage hitting sets and shows that each S_n is periodic, but it does not establish that the descending sequence S_n stabilizes. The claimed bound on all minimal hitting sets rests on a demonstrably false implication. Repairing this requires a new structural argument controlling the possible primes, not a local correction.",
+    "strengths": [
+      "Correctly relates membership in S_n to hitting sets of the prime-support family.",
+      "Correctly observes that each finite-stage set S_n is a finite union of sets of multiples and hence periodic.",
+      "The finite-stage enumeration argument is essentially correct after a routine repair, and eventual stabilization of S_n would indeed yield the required translation law."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The decisive inference is actually false even for a valid greedy sequence. Take a_1=105; then the next terms are 108,110,112. Here m_n=6 for every n≥3. For n=4, H={3,5,7} is a minimal hitting set, and for p=7 the witness is P_4={2,7}, with 4>N=3 and H∩P_4={7}; nevertheless 7∉P(6)={2,3}. Thus H⊆H_N∪P(m), and hence finiteness and stabilization of the S_n, do not follow."
+      },
+      {
+        "severity": "minor",
+        "description": "The assertion that S_n⊆S_{n-1} implies earlier terms in S_{n-1} also lie in S_n reverses the implication of set inclusion. The desired conclusion is readily repaired using the pairwise gcd property supplied when each later term is chosen."
+      },
+      {
+        "severity": "minor",
+        "description": "A nondecreasing sequence of positive integers need not stabilize. Here stabilization of m_n can be justified because a_1∈S_n gives m_n≤a_1, but that necessary boundedness argument is omitted."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:16:17.081342+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00002",
+  "native_rejection_count": 0
+}

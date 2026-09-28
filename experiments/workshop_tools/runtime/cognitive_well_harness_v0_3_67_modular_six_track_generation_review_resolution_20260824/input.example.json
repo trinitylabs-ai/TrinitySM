@@ -1,0 +1,12 @@
+{
+  "problem_id": "replace_with_problem_id",
+  "problem": "Replace this with the complete olympiad-level problem statement.",
+  "synthesis_instructions": "",
+  "gate": {
+    "require_all_verified_lemmas": true,
+    "minimum_cited_lemmas": 1,
+    "minimum_case_headings": 0,
+    "require_qwen_certification": true
+  }
+}
+

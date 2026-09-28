@@ -1,0 +1,41 @@
+{
+  "schema": "workshop-v2-two-grade-retention-v1",
+  "applied_at": "2026-09-18T16:57:37.184419+00:00",
+  "reason": "User requested retaining first and second v2 grading repetitions and deleting third and fourth.",
+  "retained_repetitions": [
+    1,
+    2
+  ],
+  "discarded_repetitions": [
+    3,
+    4
+  ],
+  "selection_depends_on_score": false,
+  "deleted_published_assessments": 413,
+  "deleted_published_by_benchmark": {
+    "imo-proofbench/basic": 173,
+    "imo-proofbench/advanced": 208,
+    "imo2026": 32
+  },
+  "deleted_native_case_directories": {
+    "imo-proofbench/basic": 1562,
+    "imo-proofbench/advanced": 1720,
+    "imo2026": 386
+  },
+  "deleted_mixed_native_aggregate_files": 466,
+  "retained_evidence_files_verified_unchanged": 15893,
+  "deleted_reports": [
+    "FOUR_GRADE_REPORT.md",
+    "four_grade_results_before_reduction.json"
+  ],
+  "original_manifest_sha256": "20d70d3bbd1b4e3e3a86be14237bf9bfb8dc3f2a10d3d87b176f2f4bba2687b5",
+  "preceding_plan_sha256": "50ead7846fb6b35e0697b8c6fede9d941656555345131a818cf7a15491f94248",
+  "preceding_execution_config_sha256": "9775fecdc4b62dd97350740d54b6f2f10ab880447f6163406b2541bea14998cf",
+  "preceding_pair_runner_sha256": "8fa39b51826ed402815f9b45ae9c8fc5948dee261ede9e9923ad8ff6dec1cdac",
+  "current_pair_runner_sha256": "ecdc04972f51d181b3ac013d40495fbf5327a0c32cda9cf6d2cb626e1d1422d1",
+  "operational_change": "Recovery and collection exclude repetitions 3 and 4; report text reflects deletion. Evaluator, policy and mathematical inputs are unchanged.",
+  "evaluator_changed": false,
+  "policy_changed": false,
+  "proofs_changed": false,
+  "git_push_authorized": false
+}

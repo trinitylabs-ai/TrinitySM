@@ -1,0 +1,6 @@
+Find all functions$f:\mathbb{Z}\rightarrow\mathbb{Z}$
+ such that the equation
+ \[
+ f(x-f(xy))=f(x)f(1-y)
+ \]
+ holds for all $x,y\in\mathbb{Z}$.

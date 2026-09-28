@@ -1,0 +1,43 @@
+To prove that the circles $(W_3)$ and $(W_4)$ are tangent to each other, we will use a coordinate-based vector approach.
+
+### 1. Definitions and Notations
+Let the trapezoid $ABCD$ be positioned such that the parallel bases are $AD$ and $BC$. Let the height of the trapezoid be $h$. We set up a coordinate system where $A = (0,0)$ and $D = (d,0)$. Since $AD \parallel BC$, we have $B = (x_B, h)$ and $C = (x_C, h)$.
+The legs are $AB$ and $CD$. Let $a = |AB|$ and $b = |CD|$.
+The midpoints of the legs are $M_{AB} = \left(\frac{x_B}{2}, \frac{h}{2}\right)$ and $M_{CD} = \left(\frac{x_C+d}{2}, \frac{h}{2}\right)$.
+Let $\vec{w} = M_{AB} - M_{CD} = \left(\frac{x_B - x_C - d}{2}, 0\right)$.
+
+### 2. Centers and Radii of the Circles
+For a circle passing through two points $P, Q$ with an inscribed angle $\theta$ on the arc opposite to some region, the center $O$ is located on the perpendicular bisector of $PQ$ at a distance $d = \frac{|PQ|}{2} \cot \theta$ from the segment $PQ$.
+Let $\vec{n_{AB}}$ and $\vec{n_{CD}}$ be the unit normal vectors to the legs $AB$ and $CD$, pointing toward the interior of the trapezoid.
+For $W_1$ (through $A, B$ with angle $\alpha$): $R_1 = \frac{a}{2 \sin \alpha}$, and $\vec{O_1} = M_{AB} + (\cot \alpha) \vec{u}$, where $\vec{u} = \frac{a}{2} \vec{n_{AB}}$.
+For $W_2$ (through $C, D$ with angle $\beta$): $R_2 = \frac{b}{2 \sin \beta}$, and $\vec{O_2} = M_{CD} + (\cot \beta) \vec{v}$, where $\vec{v} = \frac{b}{2} \vec{n_{CD}}$.
+For $W_3$ (through $A, B$ with angle $\beta$): $R_3 = \frac{a}{2 \sin \beta}$, and $\vec{O_3} = M_{AB} + (\cot \beta) \vec{u}$.
+For $W_4$ (through $C, D$ with angle $\alpha$): $R_4 = \frac{b}{2 \sin \alpha}$, and $\vec{O_4} = M_{CD} + (\cot \alpha) \vec{v}$.
+
+### 3. Geometric Properties
+The vectors $\vec{u}$ and $\vec{v}$ are defined by the legs.
+$\vec{AB} = (x_B, h) \implies \vec{u} = \frac{1}{2}(h, -x_B)$ (verified as the inward normal).
+$\vec{DC} = (x_C - d, h) \implies \vec{v} = \frac{1}{2}(-h, x_C - d)$ (verified as the inward normal).
+Calculating the sum: $\vec{u} + \vec{v} = \left(0, \frac{x_C - d - x_B}{2}\right)$.
+Computing the dot product with $\vec{w}$:
+$\vec{w} \cdot (\vec{u} + \vec{v}) = \left(\frac{x_B - x_C - d}{2}, 0\right) \cdot \left(0, \frac{x_C - d - x_B}{2}\right) = 0$.
+
+### 4. Condition for Tangency
+Circles are tangent if $O_i O_j^2 = (R_i \pm R_j)^2$.
+$O_1 - O_2 = \vec{w} + (\cot \alpha) \vec{u} - (\cot \beta) \vec{v}$.
+$O_1 O_2^2 = w^2 + \cot^2 \alpha u^2 + \cot^2 \beta v^2 + 2 \cot \alpha (\vec{w} \cdot \vec{u}) - 2 \cot \beta (\vec{w} \cdot \vec{v}) - 2 \cot \alpha \cot \beta (\vec{u} \cdot \vec{v})$.
+Using $u^2 = (a/2)^2$ and $v^2 = (b/2)^2$, and $R_1^2 = u^2(1 + \cot^2 \alpha)$, we have $\cot^2 \alpha u^2 = R_1^2 - u^2$.
+Thus, $O_1 O_2^2 - (R_1^2 + R_2^2) = w^2 - u^2 - v^2 + 2 \cot \alpha (\vec{w} \cdot \vec{u}) - 2 \cot \beta (\vec{w} \cdot \vec{v}) - 2 \cot \alpha \cot \beta (\vec{u} \cdot \vec{v})$.
+Similarly for $O_3, O_4$:
+$O_3 O_4^2 - (R_3^2 + R_4^2) = w^2 - u^2 - v^2 + 2 \cot \beta (\vec{w} \cdot \vec{u}) - 2 \cot \alpha (\vec{w} \cdot \vec{v}) - 2 \cot \alpha \cot \beta (\vec{u} \cdot \vec{v})$.
+Subtracting these two expressions:
+$(O_3 O_4^2 - (R_3^2 + R_4^2)) - (O_1 O_2^2 - (R_1^2 + R_2^2)) = 2(\cot \beta - \cot \alpha)(\vec{w} \cdot \vec{u}) - 2(\cot \alpha - \cot \beta)(\vec{w} \cdot \vec{v}) = 2(\cot \beta - \cot \alpha)(\vec{w} \cdot (\vec{u} + \vec{v}))$.
+Since $\vec{w} \cdot (\vec{u} + \vec{v}) = 0$, we have:
+$O_3 O_4^2 - (R_3^2 + R_4^2) = O_1 O_2^2 - (R_1^2 + R_2^2)$.
+Given $W_1, W_2$ are tangent, $O_1 O_2^2 - (R_1^2 + R_2^2) = \pm 2 R_1 R_2$.
+Thus, $O_3 O_4^2 = R_3^2 + R_4^2 \pm 2 R_1 R_2$.
+Since $R_1 R_2 = \frac{ab}{4 \sin \alpha \sin \beta} = R_3 R_4$, we obtain:
+$O_3 O_4^2 = R_3^2 + R_4^2 \pm 2 R_3 R_4 = (R_3 \pm R_4)^2$.
+This implies $O_3 O_4 = |R_3 \pm R_4|$, confirming that $(W_3)$ and $(W_4)$ are tangent.
+
+\(\square\)

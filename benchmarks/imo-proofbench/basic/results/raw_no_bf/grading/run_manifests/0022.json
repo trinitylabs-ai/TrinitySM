@@ -1,0 +1,75 @@
+{
+  "schema": "imobench-proof-autograder-b5-v1-manifest",
+  "created_at": "2026-09-13T01:45:07.620308+00:00",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "isolation_config_sha256": "a5917c07a3db6bc066bc7a358c0afa8351a57a289dfcfafaff37f80e68287b09",
+  "disabled_skill_paths_sha256": "118f0ada081aea2c4c8773990a4686122c73fb9c2ee696e54f043d956d531e91",
+  "evaluator_instructions_sha256": "015e67bb885a2531c0aa51431d404c9d479d6676a024dca2a24df0a332f2587c",
+  "fingerprint": "053a24cc8834ece0fc7f72ac1c08697baf907447c7fca2d4638972f7fedb2f01",
+  "workers": 5,
+  "runner_sha256": "ff0ec706ca68604bda672f0aca7d7390c757d888366b605c1e22a1b8c14b52ab",
+  "specific_guidelines_supplied": true,
+  "pipeline_reviews_supplied": false,
+  "prior_grades_supplied": false,
+  "tasks": [
+    {
+      "problem_id": "PB-Basic-027",
+      "candidate_id": "t10_r02",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z/gpu1/problems/PB-Basic-027/candidates/t10_r02/draft_proof.md",
+      "problem_sha256": "c5349d2c6f957577b170d4c81f82f09acb10787f247c8265428bdeaedcefa599",
+      "reference_sha256": "f7aef57e2c5e97348ffb13e76b90312e4b25a5a2f5bad9e47d8da4adf1e94922",
+      "guidelines_sha256": "84c2d50c9b325d8cc1bfa877584d937adde411085d25e2d644e1df08dc5b7b50",
+      "proof_sha256": "b85b6110e8ea4597265797898b1236662210270711d08473b5057360e982caee",
+      "cache_key": "71919ba50f73fe9e704fbbcce6e8f2fcb502fb0eb9c4318407398857dff9e7b3"
+    },
+    {
+      "problem_id": "PB-Basic-027",
+      "candidate_id": "t07_r01",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z/gpu1/problems/PB-Basic-027/candidates/t07_r01/draft_proof.md",
+      "problem_sha256": "c5349d2c6f957577b170d4c81f82f09acb10787f247c8265428bdeaedcefa599",
+      "reference_sha256": "f7aef57e2c5e97348ffb13e76b90312e4b25a5a2f5bad9e47d8da4adf1e94922",
+      "guidelines_sha256": "84c2d50c9b325d8cc1bfa877584d937adde411085d25e2d644e1df08dc5b7b50",
+      "proof_sha256": "c683bd221ed4524ccfb25514f3b07b1f586299179e63218544ac10262a7ee849",
+      "cache_key": "aa894692966ecac412d4ee7d5b5cfc54d8f0443fb252bb135da13de59f8bbe33"
+    },
+    {
+      "problem_id": "PB-Basic-027",
+      "candidate_id": "t07_r02",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z/gpu1/problems/PB-Basic-027/candidates/t07_r02/draft_proof.md",
+      "problem_sha256": "c5349d2c6f957577b170d4c81f82f09acb10787f247c8265428bdeaedcefa599",
+      "reference_sha256": "f7aef57e2c5e97348ffb13e76b90312e4b25a5a2f5bad9e47d8da4adf1e94922",
+      "guidelines_sha256": "84c2d50c9b325d8cc1bfa877584d937adde411085d25e2d644e1df08dc5b7b50",
+      "proof_sha256": "b53f740e45c37b01d53568931476d20f3a0b4493586e36d5fa1c46cf6a319504",
+      "cache_key": "be7df9e58f4c32ddaac2779f8b189109a53a2906ca92a752190980bf2568501a"
+    },
+    {
+      "problem_id": "PB-Basic-028",
+      "candidate_id": "t10_r01",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z/gpu1/problems/PB-Basic-028/candidates/t10_r01/draft_proof.md",
+      "problem_sha256": "85f3b26c7decfd4b54801f9388779c6380fe9a809093698294c23a0183fb8b19",
+      "reference_sha256": "dbad64fe6dfad8a0e4d6c3d0c19da15955195bc4b4ce538dd181477de939441d",
+      "guidelines_sha256": "dcc6eb5ffc062293b091f0d8ff887f800f5ccf3fa5309b8855e04647cc6f6069",
+      "proof_sha256": "712957af5081d3a17c005bd62bf8064baad51156d4fe7eb980fa9d514d729ff9",
+      "cache_key": "73e8920d953a217d9b30d08c87b13bf87a94dd6f40e69bb491f9d578179c6942"
+    },
+    {
+      "problem_id": "PB-Basic-028",
+      "candidate_id": "t07_r02",
+      "selection": "explicit",
+      "source_proof": "/opt/proof-workshop/runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z/gpu1/problems/PB-Basic-028/candidates/t07_r02/draft_proof.md",
+      "problem_sha256": "85f3b26c7decfd4b54801f9388779c6380fe9a809093698294c23a0183fb8b19",
+      "reference_sha256": "dbad64fe6dfad8a0e4d6c3d0c19da15955195bc4b4ce538dd181477de939441d",
+      "guidelines_sha256": "dcc6eb5ffc062293b091f0d8ff887f800f5ccf3fa5309b8855e04647cc6f6069",
+      "proof_sha256": "54ff78a105498a49c8b2f851416770dd502ef90f7393d6e2c8b7c09276c2e3a0",
+      "cache_key": "a94002512396bcde3d36c93453dc113ed2e6ad539c6611f3bd3948382280580f"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "cognitive-well-v097-raw-lazy-manifest-v1",
+  "harness_version": "0.3.97",
+  "created_at": "2026-09-11T19:40:50.300213+00:00",
+  "problem": {
+    "problem_number": 20,
+    "problem_id": "PB-Basic-020",
+    "problem_path": "/opt/proof-workshop/runs/basic002_030_v263_v290_run01/problems/PB-Basic-020/01_source/p20/01_raw_lazy_enhanced_resolve/input/problem.json",
+    "problem_sha256": "53b249e15d19bf02e0251cef2ed2a4b627650d7566be5083b7ce29be02132468"
+  },
+  "candidate_allocation": {
+    "temperature_1.0": 2,
+    "temperature_0.7": 2
+  },
+  "candidate_count": 4,
+  "candidate_specs": [
+    {
+      "candidate_id": "t10_r01",
+      "temperature": 1.0,
+      "seed": 2360094352,
+      "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+    },
+    {
+      "candidate_id": "t10_r02",
+      "temperature": 1.0,
+      "seed": 2367214500,
+      "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+    },
+    {
+      "candidate_id": "t07_r01",
+      "temperature": 0.7,
+      "seed": 3233582896,
+      "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+    },
+    {
+      "candidate_id": "t07_r02",
+      "temperature": 0.7,
+      "seed": 220229344,
+      "seed_policy": "frozen_v048_sha256_problem_candidate_base_seed"
+    }
+  ],
+  "raw_generation": {
+    "device": "gpu0",
+    "endpoint": "http://127.0.0.1:8030/v1",
+    "model": "google/gemma-4-31B-it",
+    "dtype": "bfloat16",
+    "mtp_speculative_tokens": 4,
+    "max_reasoning": true,
+    "batch_size": 4,
+    "top_p": 0.95,
+    "top_k": 64,
+    "max_tokens": 65536,
+    "cap_recovery_max_tokens": 131072
+  },
+  "lazy_check": {
+    "device": "gpu0",
+    "temperature": 0.1,
+    "max_tokens": 16384,
+    "unconditional": true,
+    "cap_recovery_max_tokens": 32768
+  },
+  "conditional_in_place_expansion": {
+    "device": "gpu0",
+    "temperature": 0.7,
+    "max_tokens": 65536,
+    "cap_recovery_max_tokens": 131072,
+    "only_when_lazy_check_reports_an_issue": true,
+    "prompt_sha256": "205d804d5572c9b0b5ee756e29ba949a6e7754036d21b6fd8109cf4ccd50cc52"
+  },
+  "prompt_identity": {
+    "control_dir": null,
+    "prompt_source": "version_owned_problem_neutral_constants",
+    "runtime_cross_problem_artifact_reads": false,
+    "system_prompt_sha256": "aea702bbb2bb3724a3c50ae71117337361c1856b7fa5a8928fbca5f095385225",
+    "user_prompt_sha256": "3d67f323c7c795795e83cd944df28d4cc48e8822af1fdbba3ab3d0759696bbd8",
+    "only_variable_region": "problem_statement"
+  },
+  "reference_solution_access": false,
+  "problem_specific_prompting": false
+}

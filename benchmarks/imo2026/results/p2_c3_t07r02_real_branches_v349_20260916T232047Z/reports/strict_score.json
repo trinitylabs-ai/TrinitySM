@@ -1,0 +1,45 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-17T00:08:48.697970+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "json",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 2,
+  "problem_id": "imo2026_p2",
+  "case_id": "imo2026_p2.explicit.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/benchmarks/imo2026/problems/imo2026_p2.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q2_solution.txt",
+  "proof_path": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/proofs/imo2026_p2/t07_r02/tool_rewrite.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "a9ec816a7a515478298b94b1c8718e5a4e7641eca79315ff440279f1f45fec0c",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The unsigned-angle equalities are converted to signed cross\u2013dot equations without explicitly proving, for each pair, that the two oriented cross products have the same sign. Interiority gives the required ray orders, but Step 4 only asserts this generically.",
+    "summary": "The coordinate reduction, circumcenter computation, target polynomial T, and explicit algebraic certificate form a correct and essentially complete proof. The appendix supplies a finite verifiable certificate showing that the three angle polynomials and two nonvanishing guards imply T=0. The sole material omission is the short but necessary orientation/branch verification behind the angle-polynomial encoding; this is directly repairable from the convexity hypotheses.",
+    "strengths": [
+      "Correctly reduces OM=ON to the explicit polynomial identity T=0.",
+      "Correctly identifies that A,K,L are noncollinear and gives the circumcenter coordinates.",
+      "Supplies a complete explicit algebraic certificate rather than merely invoking computer algebra.",
+      "The two guards actually used in the appendix follow directly from K\u2208int(BMC) and L\u2208int(BNC)."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Nondegeneracy and cotangent injectivity alone do not justify the displayed signed cross\u2013dot equations for unsigned angles. The proof should explicitly establish the ray orders BA,BK,BL,BC and CA,CL,CK,CB (and the analogous orders at M and N), or directly show that the paired cross products have matching signs."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For $n$ families of circular intervals $\mathcal{F}_i$ defined as the set of all contiguous blocks with total score $\ge 1$ for person $P_i$, if each $\mathcal{F}_i$ has a matching number $\nu(\mathcal{F}_i) \ge n$, then there exists a rainbow matching of size $n$.
+Claim gap: The proof relies on a "known extension" of the Aharoni-Berger Theorem to circular interval hypergraphs, stating that $\nu_{rainbow}(\mathcal{F}_1, \dots, \mathcal{F}_n) \ge \min \nu(\mathcal{F}_i)$ for any such families (line 11). This general statement is false for arbitrary circular interval families. For example, if $n=2, m=4$, let $\mathcal{F}_1 = \{\{C_1, C_2\}, \{C_3, C_4\}\}$ and $\mathcal{F}_2 = \{\{C_2, C_3\}, \{C_4, C_1\}\}$; then $\nu(\mathcal{F}_1)=\nu(\mathcal{F}_2)=2$, but no two arcs from different families are disjoint ($\nu_{rainbow}=1$). The result is only true for families that are upward-closed (filters), which the $\mathcal{F}_i$ in this problem are, but the proof does not specify this condition.
+Qualifications and supplied repairs: The repair is to note that the families $\mathcal{F}_i$ are upward-closed (if $S \in \mathcal{F}_i$ and $S \subseteq S'$, then $S' \in \mathcal{F}_i$), which is the necessary condition for the cited result to hold for circular arcs.
+Decisive checks: The central derivation depends on the claim in line 11. The falsification check (counterexample $n=2, m=4$ provided above) demonstrates that the claim is false for general circular interval hypergraphs.
+
+## Proof B
+Established theorem: For $n$ families of circular intervals $\mathcal{F}_i$ defined as the set of all contiguous blocks with total score $\ge 1$ for person $P_i$, if each $\mathcal{F}_i$ has a matching number $\nu(\mathcal{F}_i) \ge n$, then there exists a rainbow matching of size $n$.
+Claim gap: Proof B states a general theorem in line 7: "if $\mathcal{F}_1, \dots, \mathcal{F}_n$ are families of arcs on a circle such that $\nu(\mathcal{F}_i) \ge n$ for each $i$, then there exist $n$ pairwise disjoint arcs $A_i \in \mathcal{F}_i$." This general statement is false for arbitrary circular arc families (as shown by the same counterexample used for Proof A). The theorem in the cited paper "Fair division of a circle" applies to measures, which naturally produce upward-closed families.
+Qualifications and supplied repairs: The repair is to note that the families $\mathcal{F}_i$ are upward-closed, which is the necessary condition for the result to hold.
+Decisive checks: The central derivation relies on the theorem cited in line 7. The falsification check (counterexample $n=2, m=4$ provided above) demonstrates that the theorem as stated is false for general circular arc families.
+
+## Decision
+Winner: B
+Reason: Both proofs identify the problem as finding a rainbow matching in circular arc families and both incorrectly state the governing theorem as a general property of all circular arc families, whereas it only holds for upward-closed families (which the problem's families are). However, Proof B cites the specific paper ("Fair division of a circle" by Aharoni and Holzman) that directly addresses the problem's structure (fair division of a circle using measures), whereas Proof A cites a theorem for linear intervals and claims a vague "known extension." Proof B's reference is more precise and mathematically appropriate for the problem, and its final distribution step is more explicit.

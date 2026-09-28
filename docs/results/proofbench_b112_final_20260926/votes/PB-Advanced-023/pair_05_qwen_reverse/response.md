@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: James can guarantee reaching the last row with at most $3000$ penalties (i.e., $n=3001$ is a valid upper bound). The proof correctly demonstrates that identifying all $3000$ blocked cells reveals the unique empty column, enabling a safe vertical descent.
+Claim gap: The lower bound argument (lines 7–18) is fundamentally invalid. It asserts that for any $k < 3000$, Peter can force James to fail, relying on the false premise that James must identify the empty column to succeed. The induction incorrectly models grid connectivity by assuming known columns form an impassable barrier, ignoring that James can safely weave between known columns by switching at rows immediately above each known block.
+Qualifications and supplied repairs: NONE. The upper bound stands as written. The lower bound collapses for small $k$ (e.g., $k=2$) and requires no repair to identify as defective.
+Decisive checks: Lines 12–18 claim that transitions between known columns are blocked by the configuration $c_r = r-1$. Verification shows that with blocks at $(r_1, c_1)$ and $(r_2, c_2)$, the path $(1,1) \to \dots \to (r_1-1, c_1) \to (r_1-1, c_2) \to \dots \to (r_2-1, c_2) \to (r_2-1, c_1) \to \dots$ safely bypasses both obstacles. Since each column contains at most one block, this weaving strategy guarantees progress. Thus, the lower bound is demonstrably false.
+
+## Proof B
+Established theorem: James can guarantee success with at most $3$ penalties (i.e., $n=4$ is a valid upper bound). The proof provides a constructive strategy: probe columns 1, 2, and 3 to learn their block locations, then weave through these three columns to reach the bottom while avoiding the known obstacles.
+Claim gap: The necessity argument (line 24) overestimates the required penalties by 1. It claims 3 penalties are necessary, but 2 suffice (probing two columns and weaving between them guarantees success). The argument incorrectly assumes James cannot switch columns at safe rows above known blocks, but this only affects the tightness of the lower bound, not the validity of the strategy.
+Qualifications and supplied repairs: NONE. The sufficiency strategy is mathematically sound and correctly bypasses the false premise that the empty column must be found. The lower bound gap is minor and does not invalidate the constructive upper bound.
+Decisive checks: Lines 7–20 construct a valid path avoiding three known blocks. The path correctly switches columns at safe rows, leveraging the fact that each column contains at most one block. The necessity claim in line 24 is falsified by the 2-column weaving strategy, but the upper bound remains correct and the core mechanism (navigating known columns) is accurately identified.
+
+## Decision
+Winner: B
+Reason: Proof B correctly identifies the central mathematical insight: James does not need to locate the unique empty column but can instead navigate through a small set of columns with known obstacles. Its sufficiency proof is constructive, valid, and establishes a tight constant penalty bound. Proof A relies on the incorrect assumption that James must identify all blocked columns to succeed, leading to a drastically inflated lower bound. Although both proofs slightly overestimate the optimal answer (which is $n=3$), Proof B's approach is fundamentally sound and captures the correct game-theoretic structure, whereas Proof A's lower bound argument is mathematically invalid and misses the weaving strategy entirely.

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["score", "hypothesis_seed_value"],
+  "properties": {
+    "score": {
+      "type": "integer",
+      "enum": [0, 1, 2, 3, 4, 6, 7]
+    },
+    "hypothesis_seed_value": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    }
+  }
+}

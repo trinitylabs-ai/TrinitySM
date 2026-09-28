@@ -1,0 +1,23 @@
+To find the angle $\gamma$ between the lines $MN$ and $OI$, we use a vector-based approach. Let the vertices of the triangle be $X, Y,$ and $Z$, and let the side lengths opposite to these vertices be $x, y,$ and $z$ respectively. Let $\vec{X}$ be the origin $\vec{0}$.
+
+Let $\vec{y} = \vec{XY}$ and $\vec{z} = \vec{XZ}$. The lengths are $|\vec{y}| = z$, $|\vec{z}| = y$, and $|\vec{y} - \vec{z}| = x$. The points $M$ and $N$ are located on the lines $XY$ and $XZ$ such that $YM = ZN = YZ = x$. For $M$ to be on the "side" $XY$ (interpreting the side as the line containing the segment), the position of $M$ is given by $\vec{M} = \frac{z-x}{z}\vec{y}$ and $\vec{N} = \frac{y-x}{y}\vec{z}$.
+
+The vector $\vec{MN}$ is:
+\[ \vec{MN} = \vec{N} - \vec{M} = \frac{y-x}{y}\vec{z} - \frac{z-x}{z}\vec{y} \]
+The incenter $I$ is given by $\vec{I} = \frac{x\vec{X} + y\vec{Y} + z\vec{Z}}{x+y+z} = \frac{y\vec{y} + z\vec{z}}{x+y+z}$.
+The circumcenter $O$ satisfies $\vec{O} \cdot \vec{y} = \frac{1}{2}|\vec{y}|^2 = \frac{1}{2}z^2$ and $\vec{O} \cdot \vec{z} = \frac{1}{2}|\vec{z}|^2 = \frac{1}{2}y^2$.
+
+We compute the dot product $\vec{MN} \cdot \vec{I}$:
+\[ \vec{MN} \cdot \vec{I} = \left(\frac{y-x}{y}\vec{z} - \frac{z-x}{z}\vec{y}\right) \cdot \frac{y\vec{y} + z\vec{z}}{x+y+z} \]
+\[ = \frac{1}{x+y+z} \left[ (y-x)(\vec{z} \cdot \vec{y}) + z(y-x)y - (z-x)yz - (z-x)(\vec{y} \cdot \vec{z}) \right] \]
+\[ = \frac{1}{x+y+z} \left[ (y-z)(\vec{z} \cdot \vec{y}) + zy^2 - xyz - yz^2 + xyz \right] = \frac{y-z}{x+y+z} (\vec{z} \cdot \vec{y} + zy) \]
+Using $\vec{z} \cdot \vec{y} = \frac{y^2+z^2-x^2}{2}$:
+\[ \vec{MN} \cdot \vec{I} = \frac{y-z}{x+y+z} \left( \frac{y^2+z^2-x^2+2zy}{2} \right) = \frac{y-z}{x+y+z} \frac{(y+z)^2-x^2}{2} = \frac{(y-z)(y+z-x)}{2} \]
+Next, we compute the dot product $\vec{MN} \cdot \vec{O}$:
+\[ \vec{MN} \cdot \vec{O} = \frac{y-x}{y}(\vec{z} \cdot \vec{O}) - \frac{z-x}{z}(\vec{y} \cdot \vec{O}) = \frac{y-x}{y} \frac{y^2}{2} - \frac{z-x}{z} \frac{z^2}{2} \]
+\[ = \frac{y(y-x) - z(z-x)}{2} = \frac{y^2 - xy - z^2 + xz}{2} = \frac{(y-z)(y+z-x)}{2} \]
+Since $\vec{MN} \cdot \vec{I} = \vec{MN} \cdot \vec{O}$, we have:
+\[ \vec{MN} \cdot \vec{OI} = \vec{MN} \cdot (\vec{I} - \vec{O}) = 0 \]
+Thus, the line $MN$ is perpendicular to the line $OI$. The angle $\gamma$ is $90^\circ$, and therefore $\frac{\gamma}{2} = 45^\circ$.
+
+$\square$

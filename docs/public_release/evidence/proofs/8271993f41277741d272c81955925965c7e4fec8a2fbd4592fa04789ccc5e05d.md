@@ -1,0 +1,33 @@
+To determine all non-negative integers $n$ such that $A_n = 1 + 3^{20(n^2+n+1)} + 9^{14(n^2+n+1)}$ is a prime number, we begin by simplifying the expression for $A_n$.
+
+Let $k = n^2+n+1$. Since $n$ is a non-negative integer, $k$ is an integer such that $k \ge 1$ (for $n=0$, $k=1$). The expression for $A_n$ becomes:
+\[ A_n = 1 + 3^{20k} + (3^2)^{14k} = 1 + 3^{20k} + 3^{28k} \]
+Let $x = 3^k$. Substituting this into the expression, we have:
+\[ A_n = x^{28} + x^{20} + 1 \]
+We examine the polynomial $P(x) = x^{28} + x^{20} + 1$ to see if it can be factored. A common technique for polynomials of the form $x^a + x^b + 1$ is to check for roots among the primitive cube roots of unity, $\omega$ and $\omega^2$, where $\omega^2 + \omega + 1 = 0$ and $\omega^3 = 1$.
+Substituting $x = \omega$ into $P(x)$:
+\[ P(\omega) = \omega^{28} + \omega^{20} + 1 \]
+Using the property $\omega^3 = 1$, we simplify the exponents modulo 3:
+\[ 28 \equiv 1 \pmod 3 \implies \omega^{28} = \omega^1 \]
+\[ 20 \equiv 2 \pmod 3 \implies \omega^{20} = \omega^2 \]
+Thus,
+\[ P(\omega) = \omega + \omega^2 + 1 = 0 \]
+Since $P(\omega) = 0$, the minimal polynomial of $\omega$, which is $x^2 + x + 1$, must be a factor of $P(x)$. We can write:
+\[ P(x) = (x^2 + x + 1) Q(x) \]
+where $Q(x)$ is some polynomial with integer coefficients. Specifically, we can express $P(x)$ as:
+\[ x^{28} + x^{20} + 1 = (x^{28} - x) + (x^{20} - x^2) + (x^2 + x + 1) \]
+Since $x^3 - 1$ divides $x^{3m} - 1$, $x^2 + x + 1$ (which is a factor of $x^3-1$) divides $x^{27} - 1$ and $x^{18} - 1$. Thus, $x(x^{27}-1)$ and $x^2(x^{18}-1)$ are both divisible by $x^2 + x + 1$. This confirms the factorization.
+
+For $A_n$ to be prime, one of the factors $(x^2 + x + 1)$ or $Q(x)$ must be equal to 1. 
+1.  Check $x^2 + x + 1 = 1$:
+    \[ x^2 + x = 0 \implies x(x+1) = 0 \]
+    Since $x = 3^k$ and $k \ge 1$, $x \ge 3$. Thus, $x^2 + x + 1 \ge 3^2 + 3 + 1 = 13$. This factor can never be 1.
+2.  Check $Q(x) = 1$:
+    If $Q(x) = 1$, then $P(x) = x^2 + x + 1$, so $x^{28} + x^{20} + 1 = x^2 + x + 1$, which implies $x^{28} + x^{20} - x^2 - x = 0$. 
+    For $x \ge 3$, $x^{28} + x^{20} > x^2 + x$, so $Q(x)$ must be strictly greater than 1.
+
+Since $A_n$ is the product of two integers $x^2 + x + 1 \ge 13$ and $Q(x) > 1$, $A_n$ is always a composite number for all non-negative integers $n$.
+
+Conclusion: There are no non-negative integers $n$ such that $A_n$ is prime.
+
+$\square$

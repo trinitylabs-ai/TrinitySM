@@ -1,0 +1,97 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+There are 120 students in DeepMind highschool, and each student `loves' some of the students. Here `love' is not always a mutual relationship; a student A may love B while B may not love A, and it is also possible that a student loves oneself. For the set $F$ of all $2^{120}$ subsets of the students, define the function $f: F \rightarrow F$ as the function that maps each $X \in F$ to the set of students loved by one or more students in $X$. For $A, B \in F$, $A$ and $B$ are said to have a 'lovely relationship' iff there exists a natural number $k$ such that $f^{k}(A)=B$. Now we want to select distinct elements $A_{1}, A_{2}, \cdots A_{t}$ from $F$ such that for any $1 \leq i<j \leq t$, $A_{i}$ and $A_{j}$ have a lovely relationship. Let $M(f)$ be the maximum possible value of $t$.  Show that $M(f) \leq 2^{70}$.
+
+**GROUND-TRUTH SOLUTION**
+
+To being with, we prove there must be some $A \in F$ such that $\left\{A_{1}, \cdots A_{t}\right\} \subset \cup_{i=0}^{\infty}\left\{f^{i}(A)\right\}$. Why is this? Consider a graph $H$ with $A_{1}, A_{2}, \cdots A_{t}$ as its vertices. If $f^{k}\left(A_{i}\right)=A_{j}$ for some $k$, draw a directed edge $A_{i} \rightarrow A_{j}$ to create a directed graph. This graph is a tournament. Now, if there is a vertex $A$ such that $d^{-}(A)=0$, then it holds directly. If not, then in this graph, the in-degree of any vertex is at least 1. This means the graph contains a cycle. Having a cycle means that for each element $A$ in the cycle, there is some $T$ such that $f^{T}(A)=A$. Therefore, for two vertices $A, B$ in the cycle, if $f^{i}(A)=B$, then $f^{T-i}(B)=A$. This means any two vertices in the cycle can reach each other via applications of $f$. Now, if we remove all but one vertex from the cycle and then use induction on the number of vertices, we can immediately find that there is a vertex $A$ such that $d^{+}(A)=t-1$. Thus, we can obtain our desired conclusion.
+
+Now, considering a directed graph $G$ whose vertices are the students and where an edge $i \rightarrow j$ is drawn if student $i$ loves student $j$, we need to find $\max_{A_0 \in F} \left| \{f^i(A_0) \mid i \in \mathbb{Z}_{\ge 0} \} \right|$. Now, in $G$, let's perform the following procedure: \begin{itemize} \item Pick any cycle in $G$ and call it $C_{1}$. \item Pick any cycle in $G-C_{1}$ (the graph after removing all vertices of $C_1$) and call it $C_{2}$. \item Repeat this procedure until no more cycles can be found. \end{itemize} As a result of this procedure, we will have disjoint cycles $C_{1}, C_{2}, \cdots, C_{m}$, and a graph $H$ (which is $G - \bigcup C_i$) that has no cycles. Let $a_i$ be the number of vertices in $C_i$, and let $|V(H)|=x$. Then $a_{1}+a_{2}+\cdots+a_{m}=n-x \leq n$ (where $n=120$). Let $L =c\operatorname{lcm}\left[a_{1}, a_{2}, \cdots, a_{m}\right]$, where $c$ is the smallest positive integer such that $L\ge n$.
+\\Consider some nonempty $A \subset V(G)$. Now, if we define $T(k) = \bigcup_{j=1}^{m} (f^{k}(A) \cap C_{j})$, then since each $|f^{k}(A) \cap C_{j}|$ is non-decreasing, $|T(k)|$ is a non-decreasing function. Now let's look at $|T(L)|, \cdots, |T((2n+1)L)|$. Since $|T(k)| \leq |V(G)|=n$ and $|T(k)|$ is non-decreasing, there exists some $i$ such that $|T(iL)|=|T((i+1)L)|=|T((i+2)L)|$. At this point, by the definition of $L$, it must be that $T(iL) \subset T((i+1)L) \subset T((i+2)L)$, and therefore $T(iL)=T((i+1)L)=T((i+2)L)$. Therefore, for each $1 \leq r < L$, $T(iL+r)=T((i+1)L+r)$ also holds.
+\\Now, if $f^{(i+2)L}(A) \neq f^{(i+1)L}(A)$, then there must be a $v_{0} \in f^{(i+2)L}(A) \triangle f^{(i+1)L}(A)$ (symmetric difference; $A \triangle B=(A-B) \cup (B-A)$), and in this case, $v_{0} \in H$ must hold. Therefore, there also exists $v_1 \in f^{(i+2)L-1}(A) \triangle f^{(i+1)L-1}(A)$ (from which $v_0$ is reached), and $v_2 \in \dots$, so we can keep finding $v_j$ such that there is a path $v_k \rightarrow \dots \rightarrow v_1 \rightarrow v_0$. If $v_1 , v_2, \cdots, v_{|V(H)|+1}$ are all in $H$, then some point should appear at least twice, which is a contradiction to the fact that $H$ has no cycles. Therefore, there exists some $k \le n$ such that $v_k \not \in H$, or equivalently  $v_k \in \bigcup C_j$. However, since $v_k \in f^{(i+2)L -k} (A) \triangle f^{(i+1)L -k} (A)$ where $k \le n \le L$, this is a contradiction to the observation above that $T(iL+r)=T((i+1)L+r)$ for each $1\le r \le L$.
+
+Thus, $f^{(i+2)L}(A)=f^{(i+1)L}(A)$ and thus it follows that $\left\{f^{j}(A) \mid j \in \mathbb{Z}_{\ge 0}\right\}=\left\{f^{j}(A) \mid j \leq (i+1)L \right\}$. Since $i <2n$, we can conclude that $M(f) \leq 2nL$.
+\\Now, $\operatorname{lcm}[a_1, a_2, \cdots, a_m] \leq 120 \cdot 60 \cdot 40 \cdot 30 \cdot 24 \cdot 20 \cdot 17 \cdot 15 \cdot 13 \cdot \operatorname{lcm}[1,2,3, \cdots, 12]<2^{60}$ so $L \le \max\{2^{60}, 2n\} = 2^{60}$ Since $2n=240<2^8$, $2nL < 2^8 \cdot 2^{60} = 2^{68}$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved there must be some $A \in F$ such that $\left\{A_{1}, \cdots A_{t}\right\} \subset \cup_{i=0}^{\infty}\left\{f^{i}(A)\right\}$.
+ 2. Considered the non-intersecting cycles
+(Almost)
+ 1.  Introduced a quantity like $\lcm[a_1, a_2, \cdots, a_n]$, but failed to find the desired numerical bound.
+ 2.  Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To find the maximum possible value of $t$, we first analyze the function $f: F \rightarrow F$, where $F = \mathcal{P}(S)$ is the power set of the set of students $S$ with $|S| = n = 120$. The function $f$ is defined as:
+\[ f(X) = \bigcup_{i \in X} L_i \]
+where $L_i \subseteq S$ is the set of students loved by student $i$. This function is a linear operator over the Boolean semiring $(\{0, 1\}, \lor, \land)$. Specifically, if $L$ is the $n \times n$ adjacency matrix of the 'love' relation (where $L_{ij} = 1$ if student $i$ loves student $j$), then for any $X \in F$, the characteristic vector $v_{f(X)}$ is given by $v_X^T L$ in the Boolean semiring.
+
+A 'lovely relationship' between $A$ and $B$ is defined as the existence of a natural number $k$ such that $f^k(A) = B$. Let us denote this relation as $A \sim B$. This relation is transitive: if $A \sim B$ and $B \sim C$, then $f^k(A) = B$ and $f^m(B) = C$ for some $k, m \in \mathbb{N}$, implying $f^{k+m}(A) = C$, so $A \sim C$.
+
+We are looking for the maximum size $t$ of a set $\{A_1, A_2, \dots, A_t\}$ such that for any $1 \le i < j \le t$, $A_i$ and $A_j$ have a lovely relationship. This means that for every pair $\{A_i, A_j\}$, either $A_i \sim A_j$ or $A_j \sim A_i$. This condition implies that all $A_i$ must belong to the same orbit of $f$. To see this, note that if $A_1$ and $A_2$ are related, they must be in the same component of the functional graph of $f$. Since every pair is related, the entire set must lie on a single path ending in a cycle. Thus, the maximum value of $t$ is the maximum size of an orbit $O(X) = \{X, f(X), f^2(X), \dots\}$ for any $X \in F$.
+
+The size of the orbit $O(X)$ is the sum of the pre-period $s$ (the number of steps to reach the cycle) and the period $p$ (the length of the cycle).
+1. **Pre-period $s$**: For any single student $i \in S$, the sequence $\{i\}, f(\{i\}), f^2(\{i\}), \dots$ reaches a cycle in at most $n$ steps. Since $f(X) = \bigcup_{i \in X} f(\{i\})$, the sequence $f^k(X)$ must enter a cycle once all constituent sequences $f^k(\{i\})$ have entered their respective cycles. Thus, $s \le n = 120$.
+2. **Period $p$**: The period of the sequence $v_{f^k(X)}^T = v_X^T L^k$ must divide the period of the matrix $L^k$ in the Boolean semiring. The period of a Boolean matrix $L$ is the least common multiple of the periods of its strongly connected components (SCCs), where the period of an SCC is the greatest common divisor of the lengths of its cycles. This maximum possible lcm is given by Landau's function $g(n)$. For $n = 120$, $g(120)$ is the maximum lcm of integers whose sum is 120. A rough upper bound is $g(120) < e^{120}$, but more accurately, $g(120) \approx 2.2 \times 10^8$.
+
+Therefore, the maximum value of $t$ is:
+\[ M(f) = \max_{X, L} |O(X)| \le n + g(n) \le 120 + 2.2 \times 10^8 \]
+Since $2.2 \times 10^8$ is significantly smaller than $2^{70}$ (which is approximately $1.18 \times 10^{21}$), we have:
+\[ M(f) \le 2^{70} \]
+$\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

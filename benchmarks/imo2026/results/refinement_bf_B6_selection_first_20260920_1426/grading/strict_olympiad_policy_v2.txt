@@ -1,0 +1,113 @@
+Strict proof-as-submitted Olympiad grading policy, version 2.
+
+Compare the submission with the gold reference, but credit only mathematics
+actually written in the submitted proof. Do not import a missing lemma,
+calculation, invariant, construction, or compatibility argument from the
+reference. Accept genuinely equivalent approaches, standard named results,
+routine one-line algebra, and normal Olympiad terseness. A load-bearing step
+must be demonstrated well enough for a skeptical Olympiad jury to verify it.
+
+Decision process
+
+First identify the claimed answer, its quantifiers, and the central dependencies
+of the proof. Independently check the answer and any proposed constructions on
+small admissible cases where useful. Then distinguish false statements from
+unproved statements, identify the first decisive defect, and apply Rules A--F.
+All caps are ceilings, never automatic awards. The lowest applicable cap wins;
+choose the score within that ceiling according to the correct work submitted.
+
+Rule A -- Incorrect final answer: maximum 2.
+For a problem asking to determine, classify, or find all possibilities, a
+demonstrably incorrect final answer caps the score at 2, irrespective of the
+amount of earlier work. A claimed full classification that is correct only for
+some cases is incorrect if it demonstrably includes an invalid case or excludes
+a valid case. Identify a valid counterexample or other disproof before calling
+the answer false. An incomplete proof of a possibly correct answer is not, by
+itself, a false answer. Likewise, a failed construction disproves that
+construction, but does not necessarily disprove the claimed optimum or answer
+if another construction could realize it. Grade the resulting proof defect
+under the applicable other rules. Do not treat an explicitly partial result as
+a false claim to a full classification. Test a submitted construction against
+the actual hypotheses; failure on an admissible small case is a false claim,
+not merely an omission. Passing small cases does not establish a general proof.
+
+Rule B -- The 3/4 boundary for a missing substantial derivation.
+When a load-bearing substantial calculation or derivation is absent, a score
+of 4 is eligible only if ALL three conditions hold:
+1. The reduction up to the remaining claim is correct and complete, including
+   all necessary domains, denominators, signs, cases, and equivalences.
+2. The remaining claim is stated as an explicit, checkable equality (or an
+   explicitly specified finite set of equalities), with the quantities and
+   assumptions defined.
+3. That remaining claim is true under those assumptions, as independently
+   verified by the grader. Do not infer truth merely because the desired
+   conclusion is true or the reference has a different correct argument.
+If any condition fails or cannot be established, the maximum is 3. Failure to
+verify is not evidence of falsehood: report it as unresolved, not false.
+Phrases such as "the terms balance", "one can verify", or "the conditions
+ensure" do not meet condition 2 when they replace the explicit remaining
+claim. They are not forbidden phrases: an explicit true equality accompanied
+by "one can verify" may meet condition 2. Meeting all three conditions only
+makes 4 eligible; it does not supply the omitted mathematics or justify 5.
+This rule concerns a substantial missing derivation. It does not downgrade
+complete proofs, acceptable routine terseness, minor omissions, or a mostly
+present localized argument with a bounded repair merely for not having this
+particular reduction format.
+
+Rule C -- False load-bearing statement versus omission: maximum 5.
+A load-bearing statement that is false under the actual hypotheses caps the
+score at 5 even if its correction takes one line. Score 6 is reserved for a
+minor omission, not a false load-bearing assertion. A lower cap still applies
+if the falsehood replaces the central argument or leads to an incorrect answer.
+Carve-out: an erroneous inline justification can count as acceptable terseness
+if the required fact has already been established independently and without
+circularity elsewhere in the submission. Apply the deletion test: remove the
+faulty inference; does the submission itself still establish the required fact
+and support its downstream use? A fact merely asserted elsewhere, obtainable
+from the reference, or provable by the grader is not enough for this exception.
+Do not manufacture a falsehood by stripping away applicable hypotheses.
+
+Rule D -- Quantifier scope: maximum 3 for an unhandled required range.
+A proof claiming a universal conclusion but establishing only an eventual one
+has a central gap if it dismisses the remaining required range without a valid
+argument. Saying "enlarge the constant" or "absorb the transient" is not by
+itself a justification. However, absorbing finitely many cases into an
+existential constant is legitimate when the submission demonstrates that the
+absorption is possible and respects the stated quantifiers, dependencies, and
+uniformity requirements. Proper treatment carries no automatic cap.
+
+Rule E -- Unsupported central inference: maximum 3.
+An unproved central uniqueness, existence, structural, or compatibility claim
+on which the proof depends caps the score at 3. A false decisive inference
+replacing the central argument also caps the score at 3. Ordinary named results
+and genuinely routine, directly checkable steps may remain implicit. Do not
+reclassify a minor omission as a central missing idea merely because later
+steps use it. For a substantial missing explicit calculation, apply Rule B
+to distinguish the eligible 4 case from the central-gap case.
+
+Rule F -- Existing caps are ceilings only.
+An asserted decisive identity or simplification requiring a substantial
+multi-step calculation or elimination has a ceiling of 4; Rule B determines
+whether 4 is eligible or the ceiling falls to 3. Do not award 5 merely because
+some repair might preserve the same strategy. The localized nontrivial lemma
+or calculation must already be substantially present, with only a bounded
+repair remaining. The distinct Rule C case can receive 5 for a routine repair
+of a false statement in an otherwise mostly complete proof, subject to all
+lower caps. Record the actual repair complexity rather than exaggerating it
+to fit the score.
+
+Score scale, subject to all applicable caps:
+- 7: complete and correct as submitted by normal Olympiad jury standards.
+- 6: correct proof with only a genuinely minor, directly checkable omission.
+- 5: mostly complete proof with a localized, bounded repair; this includes
+  the Rule C case of a locally repairable false load-bearing statement.
+- 4: meaningful coherent strategy with a substantial missing derivation
+  satisfying every condition in Rule B, and no lower applicable cap.
+- 3: meaningful progress but a major central gap, unsupported decisive claim,
+  serious invalid step, or missing derivation failing Rule B.
+- 1--2: limited correct progress, or correct work subject to Rule A's ceiling.
+- 0: no meaningful progress.
+
+Explain the first decisive defect and the applicable rule in the assessment.
+Keep dependency impact separate from repair complexity. Be exacting rather
+than charitable, while accepting equivalent approaches and routine terseness.

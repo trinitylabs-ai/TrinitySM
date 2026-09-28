@@ -1,0 +1,101 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Adrian is lining up $n \geq 2$ toy cars in a row. Each car has a width and length, and no two cars have the same width or length. Initially, the cars are arranged in increasing order of length from left to right. Adrian repeatedly does the following: he chooses some two adjacent cars where the left car is shorter in length and greater in width than the right car, and he swaps them. He keeps doing this until no further moves are possible. Prove that no matter how Adrian chooses his swaps, the procedure will eventually terminate, and in the end, the cars will be sorted in increasing order of width from left to right.
+
+**GROUND-TRUTH SOLUTION**
+
+Define an inversion to be a pair of cars where the one on the left is wider than the one on the right. Clearly, each move strictly decreases the number of inversions, so the procedure must terminate.
+
+ Now, suppose for sake of contradiction that we can make no more moves, but the cars are not sorted in increasing order of width. Consider the smallest index $i$ such that car $i$ is wider than car $i + 1$. Since we cannot make any further swaps, it must also be the case that car $i$ is longer than book $i + 1$. This means that originally, car $i$ was to the right of car $i + 1$, and at some point they switched relative positions. However, this is not possible because the rules prevent us from ever swapping two books when one is both taller and wider than the other.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Found an increasing quantity (e.g. the number of inversion according to the width or length)
+ 2. Tried to use minimality argument by taking the first book not sorted by width.
+(Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that Adrian's procedure terminates and results in the cars being sorted in increasing order of width, we proceed in two main steps: proving termination and proving the property of the final state.
+
+### 1. Proof of Termination
+Let the cars be denoted by $C_1, C_2, \dots, C_n$. Each car $C_i$ has a length $l_i$ and a width $w_i$. Initially, the cars are arranged such that $l_{p_1} < l_{p_2} < \dots < l_{p_n}$, where $p$ is the initial permutation.
+An operation consists of swapping two adjacent cars $C_{p_j}$ and $C_{p_{j+1}}$ if $l_{p_j} < l_{p_{j+1}}$ and $w_{p_j} > w_{p_{j+1}}$.
+
+Consider the number of inversions in the lengths of the cars. An inversion is a pair of indices $(j, k)$ such that $j < k$ but $l_{p_j} > l_{p_k}$.
+Initially, the cars are sorted by length, so the number of inversions in length is 0.
+Each swap operation takes two cars $C_{p_j}, C_{p_{j+1}}$ with $l_{p_j} < l_{p_{j+1}}$ and swaps them. After the swap, the new lengths at these positions are $l'_{p_j} = l_{p_{j+1}}$ and $l'_{p_{j+1}} = l_{p_j}$, so $l'_{p_j} > l'_{p_{j+1}}$. This increases the total number of length-inversions by exactly 1.
+The maximum number of inversions in a sequence of $n$ elements is $\binom{n}{2}$. Since the number of inversions increases with every step and is bounded above, the procedure must eventually terminate.
+
+### 2. Proof of Final State
+Let the final state be the sequence of cars $C_{q_1}, C_{q_2}, \dots, C_{q_n}$. This state is terminal if and only if for all $i \in \{1, \dots, n-1\}$, the condition ($l_{q_i} < l_{q_{i+1}}$ and $w_{q_i} > w_{q_{i+1}}$) is false. This implies that for every adjacent pair:
+\[ l_{q_i} > l_{q_{i+1}} \quad \text{or} \quad w_{q_i} < w_{q_{i+1}}. \]
+
+We wish to show that $w_{q_1} < w_{q_2} < \dots < w_{q_n}$. Suppose, for the sake of contradiction, that the final state is not sorted by width. Then there exists at least one pair $(i, k)$ such that $i < k$ and $w_{q_i} > w_{q_k}$. Among all such pairs, choose one with the minimum distance $k-i$.
+
+If $k-i > 1$, then for any $j \in \{i, \dots, k-1\}$, we must have $w_{q_j} < w_{q_{j+1}}$. If there were any $j$ such that $w_{q_j} > w_{q_{j+1}}$, then $(j, j+1)$ would be a width-inversion with distance 1, which is smaller than $k-i$, contradicting our choice of $(i, k)$. However, if $w_{q_j} < w_{q_{j+1}}$ for all $j \in \{i, \dots, k-1\}$, then by transitivity $w_{q_i} < w_{q_k}$, which contradicts our assumption that $w_{q_i} > w_{q_k}$.
+Thus, we must have $k-i = 1$.
+
+For $k-i=1$, we have $w_{q_i} > w_{q_{i+1}}$. According to the terminal condition, this implies $l_{q_i} > l_{q_{i+1}}$.
+Now, consider the two cars $X = C_{q_i}$ and $Y = C_{q_{i+1}}$. Initially, since all cars were sorted by length, the car with the shorter length was to the left of the car with the longer length. Let $L_{short}$ and $L_{long}$ be the cars. Since $l_{q_i} > l_{q_{i+1}}$, $X$ is the longer car and $Y$ is the shorter car. To end up in the order $(X, Y)$, they must have swapped at some point, as their initial relative order was $(Y, X)$.
+A swap between two cars $A$ and $B$ (with $l_A < l_B$) occurs if and only if they are adjacent and $w_A > w_B$. After the swap, the order becomes $(B, A)$, and the car on the left ($B$) is now the one with the larger length. Crucially, after this swap, the car on the left is $B$ (with width $w_B$) and the car on the right is $A$ (with width $w_A$). Since the swap required $w_A > w_B$, we now have $w_{left} = w_B < w_A = w_{right}$.
+Furthermore, once two cars are in the order $l_{left} > l_{right}$, they can never be swapped again, because the swap condition $l_{left} < l_{right}$ is now permanently violated for that pair.
+Thus, if $X$ and $Y$ ended up in the order $l_{q_i} > l_{q_{i+1}}$, they must have swapped exactly once, and the resulting order must satisfy $w_{q_i} < w_{q_{i+1}}$. This contradicts our assumption that $w_{q_i} > w_{q_{i+1}}$.
+
+Consequently, no width-inversions can exist in the final state. The cars must be sorted in increasing order of width. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

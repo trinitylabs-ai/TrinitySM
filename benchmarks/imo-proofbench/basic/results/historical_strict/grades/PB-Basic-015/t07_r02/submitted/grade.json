@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:54:55.953906+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 15,
+  "problem_id": "PB-Basic-015",
+  "case_id": "PB-Basic-015.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T165416860578Z/inputs/p15/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T165416860578Z/inputs/p15/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T165416860578Z/inputs/p15/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "c0f7e3e02474c93501b9a16d719fbfedda248b1d8beab413861e9d0f031c5e54",
+  "reference_sha256": "905fd4cb26979d414351be9b96213c52584afc264c07a7eb52815c94c2a81ee4",
+  "proof_sha256": "9f6ff9603d8cd2349f83c776bcc0bf62ed7ae490e8c6194a7865e64de19ad18d",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T165416860578Z/inputs/tasks.json",
+  "task_manifest_sha256": "e494e8b7d1f05ac5ccde4c1f15a9429ce6e1d0003486924f8ec45d4984e76dc0",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly establishes termination via a nonnegative mixed-inversion count that decreases by exactly one per swap. Its minimal-distance argument rigorously shows that no mixed inversion can remain at termination, and the final pairwise analysis correctly proves increasing width order.",
+    "strengths": [
+      "The potential function and its behavior under each adjacent swap are precisely justified.",
+      "The minimal-distance contradiction handles all possible intermediate cars correctly.",
+      "The proof explicitly covers both possible initial length orders for every width-inverted pair."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

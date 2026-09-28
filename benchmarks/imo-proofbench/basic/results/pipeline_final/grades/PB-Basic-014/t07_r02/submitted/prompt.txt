@@ -1,0 +1,108 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In Shoreline Amphitheatre, 2024 Googlers each hold up to five flags of various colors. Any group of three Googlers will always have at least two people holding flags of the same color. Prove that one specific flag color is held by at least 200 Googlers.
+
+**GROUND-TRUTH SOLUTION**
+
+Take any Googler. He holds at most 5 flags. If everyone holds at least one of those flags but not more than 199 people speak have each flag, then there are at most 1 + 5·198 = 991 Googlers. But there are 2024 Googlers, so we must be able to find someone who holds none of the 5 flags. He too has at most 5 flags, giving a total of 10 between the two Googlers selected. Now we are told that every other Googler holds at least one of these 10 flags. So if no more than 199 Googlers holds each flag, then there are at most 2 + 10·198 = 1982 Googlers. But there are 2024 Googlers, so one of the 10 flags must be held by 200 or more people.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Established that there is a pair of people not sharing a flag of the same color.
+ (Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that one specific flag color is held by at least 200 Googlers, we model the problem using the language of extremal set theory.
+
+### 1. Formalization
+Let $N = 2024$ be the number of Googlers. For each Googler $i \in \{1, 2, \dots, N\}$, let $S_i$ be the set of colors of the flags they hold. We are given that each Googler holds up to five flags, meaning $|S_i| \le 5$ for all $i$.
+
+The condition "any group of three Googlers will always have at least two people holding flags of the same color" means that for any three distinct indices $i, j, k \in \{1, \dots, N\}$, at least one of the following intersections is non-empty:
+\[ S_i \cap S_j \neq \emptyset, \quad S_i \cap S_k \neq \emptyset, \quad \text{or} \quad S_j \cap S_k \neq \emptyset. \]
+In set theory, a collection of sets $\mathcal{F} = \{S_1, S_2, \dots, S_N\}$ is said to have a matching number $\nu(\mathcal{F})$ equal to the maximum number of pairwise disjoint sets in the family. The given condition states that there are no three pairwise disjoint sets in $\mathcal{F}$, which implies $\nu(\mathcal{F}) \le 2$.
+
+### 2. Case Analysis
+We aim to find a hitting set (a set of colors that intersects every $S_i$) to apply the Pigeonhole Principle.
+
+**Case 1: There exists a Googler $i$ who holds no flags ($S_i = \emptyset$).**
+If $S_i = \emptyset$, then for any other two Googlers $j$ and $k$, the set $\{i, j, k\}$ must satisfy the intersection condition. Since $S_i \cap S_j = \emptyset$ and $S_i \cap S_k = \emptyset$, it must be that $S_j \cap S_k \neq \emptyset$. 
+This implies that the family of sets held by the remaining $N-1$ Googlers is an intersecting family (any two sets share at least one color). Let $S_j$ be the set of flags of any Googler $j \neq i$. Since $S_j$ intersects every $S_k$ for $k \neq i$, the colors in $S_j$ form a hitting set for all Googlers except possibly $i$.
+The size of $S_j$ is at most 5. By the Pigeonhole Principle, at least one color in $S_j$ is held by at least:
+\[ \left\lceil \frac{N-1}{5} \right\rceil = \left\lceil \frac{2023}{5} \right\rceil = 405 \text{ Googlers.} \]
+Since $405 \ge 200$, the claim holds.
+
+**Case 2: Every Googler holds at least one flag ($S_i \neq \emptyset$ for all $i$).**
+We analyze the matching number $\nu(\mathcal{F})$:
+- **Subcase 2a: $\nu(\mathcal{F}) = 1$.**
+  This means every pair of sets $S_i, S_j$ intersects. Pick any set $S_1$. Since $S_1$ intersects every other set in the family, $S_1$ is a hitting set of size at most 5. By the Pigeonhole Principle, one color in $S_1$ is held by at least:
+  \[ \left\lceil \frac{2024}{5} \right\rceil = 405 \text{ Googlers.} \]
+- **Subcase 2b: $\nu(\mathcal{F}) = 2$.**
+  This means there exist two sets $S_1$ and $S_2$ such that $S_1 \cap S_2 = \emptyset$. For any other set $S_k \in \mathcal{F}$, the condition $\nu(\mathcal{F}) \le 2$ implies that among the three sets $\{S_1, S_2, S_k\}$, at least one pair must intersect. Because $S_1 \cap S_2 = \emptyset$, it must be that $S_k \cap S_1 \neq \emptyset$ or $S_k \cap S_2 \neq \emptyset$.
+  Thus, $S_k \cap (S_1 \cup S_2) \neq \emptyset$ for all $k \in \{1, \dots, N\}$. The union $S_1 \cup S_2$ is therefore a hitting set for the entire family.
+  The size of this hitting set is:
+  \[ |S_1 \cup S_2| = |S_1| + |S_2| \le 5 + 5 = 10. \]
+  By the Pigeonhole Principle, at least one color in $S_1 \cup S_2$ must be held by at least:
+  \[ \left\lceil \frac{2024}{10} \right\rceil = \lceil 202.4 \rceil = 203 \text{ Googlers.} \]
+  Since $203 \ge 200$, the claim holds.
+
+### 3. Conclusion
+In all possible cases, we have shown that there exists a color held by at least 203 Googlers. Therefore, there is at least one specific flag color held by at least 200 Googlers.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,36 @@
+To prove that the circles $(W_3)$ and $(W_4)$ are tangent to each other, we employ a vector-based approach to analyze the distance between the centers of the circles.
+
+**1. Definitions and Parameters**
+Let $ABCD$ be the trapezoid with legs $AB$ and $CD$, which implies that the bases $AD$ and $BC$ are parallel. Let $L_1 = |AB|$ and $L_2 = |CD|$. Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$, respectively. Let $\vec{n}_1$ and $\vec{n}_2$ be the unit normal vectors to $AB$ and $CD$ pointing into the interior of the trapezoid.
+
+For a circle passing through two points $P, Q$ where the inscribed angle corresponding to the arc on the side opposite to a region is $\theta$, the radius $R$ and the signed distance $d$ from the center $O$ to the chord $PQ$ (positive if $O$ is on the same side as the region) are:
+\[ R = \frac{|PQ|}{2\sin\theta}, \quad d = \frac{|PQ|}{2\tan\theta} \]
+Applying this to $(W_1)$ and $(W_2)$:
+\[ R_1 = \frac{L_1}{2\sin\alpha}, \quad d_1 = \frac{L_1}{2\tan\alpha}; \quad R_2 = \frac{L_2}{2\sin\beta}, \quad d_2 = \frac{L_2}{2\tan\beta} \]
+The centers are $O_1 = M_1 + d_1\vec{n}_1$ and $O_2 = M_2 + d_2\vec{n}_2$. For $(W_3)$ and $(W_4)$, the angles are swapped:
+\[ R_3 = \frac{L_1}{2\sin\beta}, \quad d_3 = \frac{L_1}{2\tan\beta}; \quad R_4 = \frac{L_2}{2\sin\alpha}, \quad d_4 = \frac{L_2}{2\tan\alpha} \]
+The centers are $O_3 = M_1 + d_3\vec{n}_1$ and $O_4 = M_2 + d_4\vec{n}_2$.
+
+**2. The Tangency Condition**
+Two circles are tangent if the square of the distance between their centers equals the square of the sum or difference of their radii: $O_i O_j^2 = (R_i + \epsilon R_j)^2$ where $\epsilon \in \{1, -1\}$.
+Let $\vec{V} = M_2 - M_1$. The distance between $O_1$ and $O_2$ is:
+\[ O_1O_2^2 = \|\vec{V} + d_2\vec{n}_2 - d_1\vec{n}_1\|^2 = V^2 + d_1^2 + d_2^2 + 2\vec{V} \cdot (d_2\vec{n}_2 - d_1\vec{n}_1) - 2d_1d_2(\vec{n}_1 \cdot \vec{n}_2) \]
+Using the identity $R^2 - d^2 = (L/2)^2$, we substitute $d_1^2 = R_1^2 - (L_1/2)^2$ and $d_2^2 = R_2^2 - (L_2/2)^2$:
+\[ V^2 - (L_1/2)^2 - (L_2/2)^2 + 2\vec{V} \cdot (d_2\vec{n}_2 - d_1\vec{n}_1) - 2d_1d_2(\vec{n}_1 \cdot \vec{n}_2) = 2\epsilon R_1R_2 \]
+Let $C = V^2 - (L_1/2)^2 - (L_2/2)^2$. The tangency of $(W_1, W_2)$ is given by:
+\[ C + 2\vec{V} \cdot (d_2\vec{n}_2 - d_1\vec{n}_1) - 2d_1d_2(\vec{n}_1 \cdot \vec{n}_2) = 2\epsilon R_1R_2 \]
+
+**3. Comparison and Proof of Tangency**
+For $(W_3, W_4)$, the condition for tangency is:
+\[ C + 2\vec{V} \cdot (d_4\vec{n}_2 - d_3\vec{n}_1) - 2d_3d_4(\vec{n}_1 \cdot \vec{n}_2) = 2\epsilon' R_3R_4 \]
+Note that $R_1R_2 = \frac{L_1 L_2}{4\sin\alpha \sin\beta} = R_3R_4$ and $d_1d_2 = \frac{L_1 L_2}{4\tan\alpha \tan\beta} = d_3d_4$. The difference between the left-hand sides of the two conditions is:
+\[ \Delta = 2\vec{V} \cdot (d_4\vec{n}_2 - d_3\vec{n}_1 - d_2\vec{n}_2 + d_1\vec{n}_1) = 2\vec{V} \cdot ((d_4-d_2)\vec{n}_2 + (d_1-d_3)\vec{n}_1) \]
+Substituting $d_i$ in terms of cotangents:
+\[ \Delta = 2\vec{V} \cdot \left( \frac{L_2}{2}(\cot\alpha - \cot\beta)\vec{n}_2 + \frac{L_1}{2}(\cot\alpha - \cot\beta)\vec{n}_1 \right) = (\cot\alpha - \cot\beta) \vec{V} \cdot (L_1\vec{n}_1 + L_2\vec{n}_2) \]
+To evaluate $\vec{V} \cdot (L_1\vec{n}_1 + L_2\vec{n}_2)$, set $B=(0,0), C=(b,0), D=(x_D, h), A=(x_A, h)$. Then:
+$\vec{V} = M_2 - M_1 = (\frac{b+x_D-x_A}{2}, 0)$.
+The inward normal $L_1\vec{n}_1$ to $AB$ is $(h, -x_A)$ and the inward normal $L_2\vec{n}_2$ to $CD$ is $(-h, x_D-b)$.
+Their sum is $L_1\vec{n}_1 + L_2\vec{n}_2 = (0, x_D-b-x_A)$.
+The dot product is $\vec{V} \cdot (L_1\vec{n}_1 + L_2\vec{n}_2) = \frac{b+x_D-x_A}{2}(0) + 0(x_D-b-x_A) = 0$.
+
+Thus, $\Delta = 0$, and the condition for the tangency of $(W_3, W_4)$ is identical to that of $(W_1, W_2)$. Since $(W_1, W_2)$ are tangent, $(W_3, W_4)$ must also be tangent. $\square$

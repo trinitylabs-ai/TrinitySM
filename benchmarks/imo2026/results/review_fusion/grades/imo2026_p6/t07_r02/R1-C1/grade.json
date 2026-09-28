@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T21:13:20.977898+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 6,
+  "problem_id": "imo2026_p6",
+  "case_id": "imo2026_p6.explicit.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p6.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q6_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r02/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "963c4e8881c4157c5984abec55814c39a3c3ca9f8fd703a50b62bc135a6eccb2",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The inference that, because the gap a_{n+1}-a_n is at most m^*, the minimizing multiple must come from some modulus m in M_n with m≤m^*, is false. A modulus much larger than m^* can have a multiple very close to a_n, so stabilization of M_n^{small} does not yield the asserted fixed recurrence.",
+    "summary": "The proof correctly finds a permanent hitting set from the prime divisors of a_1 and consequently obtains bounded gaps. However, its eventual-periodicity argument depends on an invalid restriction to bounded hitting-set products. Independently, the final extension from eventual translation-periodicity to all indices is unsupported: monotonicity of M_n does not rule out a finite preperiod, and the claimed contradiction applies a tail identity outside the range where it was proved. Repairing these issues requires the substantial finiteness and pure-periodicity machinery absent from the submission.",
+    "strengths": [
+      "Correctly observes that the prime support of a_1 hits every later prime support.",
+      "Correctly deduces the uniform gap bound a_{n+1}-a_n≤rad(a_1).",
+      "The conditional claim that a recurrence based on a fixed finite set of moduli is translation-equivariant is sound."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Bounded output gaps do not imply that a minimizing admissible integer is witnessed by a hitting-set product bounded by m^*. Thus M_n^{small} may stabilize while larger moduli continue to affect the greedy choices."
+      },
+      {
+        "severity": "major",
+        "description": "The passage from eventual periodicity to pure periodicity is merely asserted. Uniqueness of the sequence and the inclusions M_n⊇M_{n+T} do not force d_n=d_{n+T} before n_0, and the proposed summation contradiction relies on periodicity not established for those early indices."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,58 @@
+{
+  "problem_id": "imo2026_p5",
+  "candidate": "t10_r02",
+  "group": "core",
+  "grader_candidate": "core_t10_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t10_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3.md",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+  "v1_score": 7,
+  "v1_grade": "docs/public_release/evidence/grades/fe31771c5ba1471ab2a0a4bdd72e26c9f3c6c1f948a2f891974a3648393dcec4.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t10_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:22:39.685085+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; Rules A–F impose no cap. The phrase “for any n” in the orbit-approximation step should literally be “for all sufficiently large n,” but the proof immediately uses only the limit as n tends to infinity, so this is harmless.",
+    "summary": "The submission correctly derives the iterate relation and nonnegativity of g=f-id, proves that all positive values of g coincide by comparing nearby arithmetic-progressive orbits, excludes coexistence of defect values 0 and c using connectedness, and verifies every translation f(x)=x+c with c≥0. The argument supports the complete and correct classification.",
+    "strengths": [
+      "Correctly squares the inequalities using positivity and obtains equality at x=f(y).",
+      "Correctly derives g(f(y))=g(y), the arithmetic form of forward iterates, and g≥0.",
+      "The orbit-approximation argument validly proves uniqueness of a positive value of g.",
+      "The clopen-set argument correctly rules out mixed values 0 and c.",
+      "The converse is verified by exact square identities."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "The choice of a nonnegative integer m approximating z1+nc1 by z2+mc2 is guaranteed only for sufficiently large n, not necessarily every n. This is exactly the range used in the limiting argument."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 2,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 1
+  },
+  "native_scorer_failed": true,
+  "prompt_sha256": "1fcbe6f26280366a23e1765b8e10ba3f7810fcb54f3cf4af4ac716eec3d75837",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 2
+}

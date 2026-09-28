@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "verdict",
+    "answer_supported",
+    "exact_problem_solved",
+    "proof_complete",
+    "first_break",
+    "repair_instruction",
+    "external_information_used"
+  ],
+  "properties": {
+    "verdict": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+    "answer_supported": {"type": "boolean"},
+    "exact_problem_solved": {"type": "boolean"},
+    "proof_complete": {"type": "boolean"},
+    "first_break": {"type": ["string", "null"]},
+    "repair_instruction": {"type": ["string", "null"]},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

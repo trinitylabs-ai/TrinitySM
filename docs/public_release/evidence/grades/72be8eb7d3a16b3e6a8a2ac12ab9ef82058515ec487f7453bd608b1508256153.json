@@ -1,0 +1,40 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p1",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+  "proof": "evidence/proofs/872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77.md",
+  "completed_at": "2026-09-15T18:27:21.163663+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The solution correctly proves termination using the lexicographically decreasing pair \\((N,V)\\), establishes that exactly one entry remains greater than \\(1\\), and identifies the terminal value through invariant prime-exponent gcds.",
+    "strengths": [
+      "The potential-function argument handles all move cases correctly.",
+      "The primewise Euclidean-algorithm invariant rigorously determines the final value.",
+      "Both required conclusions follow without reliance on unproved load-bearing claims."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p1_c3_t07r01_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p1/t07_r01/summary.json",
+    "native_record_file_sha256": "72be8eb7d3a16b3e6a8a2ac12ab9ef82058515ec487f7453bd608b1508256153",
+    "selected_record": "benchmarks/imo2026/results/p1_c3_t07r01_20260915T164615Z/grades/imo2026_p1/t07_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "525ddb6e253b842778222c018564fa3a662912bef3630b422b5c427f6db64604",
+    "proof": "benchmarks/imo2026/results/p1_c3_t07r01_20260915T164615Z/proofs/imo2026_p1/t07_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7"
+}

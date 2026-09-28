@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "3a38256191837d6bf631631f6afad87880de8eadffd3a16bc75a0fd8c330b89b",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "e16a1ac07a1aedacd6833f80a34a479575eead369786d3e2a4724835d40b6056",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "940788d886051955a401361c373e7592882c91e1ab91a1692d5507a3d34f847f",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the false claim that the prime-factor sets S_n eventually stabilize. For a_1=2, induction gives a_n=2n, so primes continually enter S_n (for example, p divides a_p=2p), while L_min,n remains 2. Thus the claimed growth of L_min,n with S_n is invalid. This is a false decisive structural inference, so Rule E gives a ceiling of 3.",
+    "summary": "The proof correctly reformulates the greedy step using prime coverings and gives a valid conditional finite-state argument once a fixed finite family of moduli is available. However, the required finiteness/stabilization is not established and is actually false for S_n itself. Moreover, stabilization of the sets of coverings does not follow from the argument given, and eventual translation periodicity cannot be extended through the transient merely from forward uniqueness. Repairing these issues requires the new structural idea of isolating finitely many relevant minimal coverings and a separate argument proving periodicity from the first term. The correct submitted work is therefore limited.",
+    "strengths": [
+      "The displayed minimum formula for a_{n+1} in terms of prime coverings is essentially correct.",
+      "If a fixed finite family of moduli governed the recurrence, the observation that the increment function is periodic and that the residue orbit is eventually periodic would correctly yield eventual translation periodicity."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that S_n eventually stabilizes is false. In fact L_min,n need not include newly occurring primes; for a_1=2 the sequence is 2,4,6,8,..., S_n grows indefinitely, and L_min,n=2 throughout."
+      },
+      {
+        "severity": "major",
+        "description": "Even assuming a finite stabilized prime set, the stated reasoning does not prove that the families L_n stabilize. Showing that one modulus used for a_{n+1} remains available does not establish monotonicity or stabilization of the entire family."
+      },
+      {
+        "severity": "major",
+        "description": "The final claim that eventual periodicity extends to every n by uniqueness and by 'absorbing' the transient is unsupported and generally invalid for a forward deterministic recurrence. This leaves the required quantifier range untreated and invokes Rule D."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:25:32.354091+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00014",
+  "native_rejection_count": 0
+}

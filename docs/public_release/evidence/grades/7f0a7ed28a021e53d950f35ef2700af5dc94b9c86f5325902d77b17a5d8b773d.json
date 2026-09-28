@@ -1,0 +1,29 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-024",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "9bd265a9979fbb68fc6b7e14c3b0acd611e216fb50fef96134a9f4738446c658",
+  "proof": "evidence/proofs/9bd265a9979fbb68fc6b7e14c3b0acd611e216fb50fef96134a9f4738446c658.md",
+  "completed_at": "2026-09-13T00:23:57.467425+00:00",
+  "grade": {
+    "score": 6,
+    "category": "Almost"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-024/t07_r02/submitted/result.json",
+    "native_record_file_sha256": "7f0a7ed28a021e53d950f35ef2700af5dc94b9c86f5325902d77b17a5d8b773d",
+    "proof": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-024/02_r1_cycles/lanes/t07_r02/01_r1_cycle_1/cases/PB-Basic-024.t07_r02/resolver/temperature_0_4/gpu0/p24/t07_r02/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "f29010d6e762fb94e711a736979187e135ff910e8525d5bdf5b70b50352df87e",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "b877ed06eb41fc0374b3de6df9b511304721211861597aeaee5a1dab7fbc84b9",
+  "reference_sha256": "16087540df0968e6371b77787f32ca89238b593f9142bc3dbd96b81449774f41",
+  "guidelines_sha256": "c92b8a34d705bdcffee2ca735fb0589c935e34000d546d43b2e0fe4d153d41fd",
+  "response_sha256": "04b74fb7741a01687b40dbc065b349e2905052b92841094a63b646c34a875a1d",
+  "isolation_verified": true
+}

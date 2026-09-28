@@ -1,0 +1,42 @@
+To prove that $x_{n-1}$ divides $x_n$ for all $n \ge 2$, where $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$, we define the following two properties for an integer $m$:
+Property $P(m)$: $m$ divides $2^m + 2$.
+Property $Q(m)$: $m-1$ divides $2^m + 1$ and the quotient $\frac{2^m + 1}{m-1}$ is an odd integer.
+
+We will prove that $P(x_n)$ is true for all $n \ge 1$.
+First, we check the base cases:
+For $n=1$, $x_1 = 6$. $2^6 + 2 = 64 + 2 = 66$. Since $6 \mid 66$, $P(x_1)$ is true.
+For $n=2$, $x_2 = 66$. We need to check if $66 \mid 2^{66} + 2$.
+- $2^{66} + 2$ is clearly even, so $2 \mid 2^{66} + 2$.
+- $2^{66} + 2 \equiv (-1)^{66} + 2 = 1 + 2 = 3 \equiv 0 \pmod 3$.
+- By Fermat's Little Theorem, $2^{10} \equiv 1 \pmod{11}$. Thus, $2^{66} = (2^{10})^6 \cdot 2^6 \equiv 1^6 \cdot 64 \equiv 9 \pmod{11}$. Then $2^{66} + 2 \equiv 9 + 2 = 11 \equiv 0 \pmod{11}$.
+Since $2, 3, 11$ are pairwise coprime, their product $66$ divides $2^{66} + 2$. Thus, $P(x_2)$ is true.
+
+Next, we prove that $P(x_n) \implies Q(x_{n+1})$ for all $n \ge 1$:
+Suppose $P(x_n)$ is true. Then $x_n \mid 2^{x_n} + 2$. Let $k = \frac{2^{x_n} + 2}{x_n}$.
+Note that $x_n = 2^{x_{n-1}} + 2 = 2(2^{x_{n-1}-1} + 1)$ for $n \ge 2$, so $x_n$ is twice an odd number. Similarly, $2^{x_n} + 2 = 2(2^{x_n-1} + 1)$ is twice an odd number. Thus, $k$ is a quotient of two odd numbers (after dividing by 2), which means $k$ must be odd.
+We want to show $Q(x_{n+1})$, which is $x_{n+1}-1 \mid 2^{x_{n+1}} + 1$.
+$x_{n+1}-1 = 2^{x_n} + 1$.
+$2^{x_{n+1}} + 1 = 2^{2^{x_n} + 2} + 1$.
+Since $2^{x_n} \equiv -1 \pmod{x_{n+1}-1}$, we have:
+$2^{x_{n+1}} = 2^{k x_n} = (2^{x_n})^k \equiv (-1)^k \pmod{x_{n+1}-1}$.
+Since $k$ is odd, $2^{x_{n+1}} \equiv -1 \pmod{x_{n+1}-1}$, so $x_{n+1}-1 \mid 2^{x_{n+1}} + 1$.
+Because both $2^{x_{n+1}} + 1$ and $x_{n+1}-1$ are odd, the quotient is odd. Thus, $Q(x_{n+1})$ is true.
+
+Now we prove that $Q(x_n) \implies P(x_{n+1})$ for all $n \ge 2$:
+Suppose $Q(x_n)$ is true. Then $q = \frac{2^{x_n} + 1}{x_n - 1}$ is an odd integer.
+We want to show $P(x_{n+1})$, which is $x_{n+1} \mid 2^{x_{n+1}} + 2$.
+$x_{n+1} = 2^{x_n} + 2 = 2(2^{x_n-1} + 1)$.
+$x_{n+1} \mid 2^{x_{n+1}} + 2 \iff 2(2^{x_n-1} + 1) \mid 2(2^{x_{n+1}-1} + 1) \iff 2^{x_n-1} + 1 \mid 2^{x_{n+1}-1} + 1$.
+We know $x_{n+1}-1 = 2^{x_n} + 1$. Thus we need $2^{x_n-1} + 1 \mid 2^{2^{x_n} + 1} + 1$.
+Using the lemma that $2^a + 1 \mid 2^b + 1$ if $b/a$ is an odd integer, let $a = x_n - 1$ and $b = 2^{x_n} + 1$.
+Then $\frac{b}{a} = \frac{2^{x_n} + 1}{x_n - 1} = q$, which is an odd integer by the hypothesis $Q(x_n)$.
+Thus, $2^{x_n-1} + 1 \mid 2^{2^{x_n} + 1} + 1$ is true, and $P(x_{n+1})$ is true.
+
+By induction:
+$P(x_1) \implies Q(x_2) \implies P(x_3) \implies Q(x_4) \dots$
+$P(x_2) \implies Q(x_3) \implies P(x_4) \implies Q(x_5) \dots$
+Since $P(x_1)$ and $P(x_2)$ are true, $P(x_n)$ is true for all $n \ge 1$.
+The statement $P(x_{n-1})$ is $x_{n-1} \mid 2^{x_{n-1}} + 2$, which is $x_{n-1} \mid x_n$.
+Therefore, $x_{n-1}$ divides $x_n$ for all integers $n \ge 2$.
+
+\(\square\)

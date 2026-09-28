@@ -1,0 +1,104 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Consider any infinite sequence of integers $c_0, c_1, c_2, \ldots $ such that $c_0 \neq 0$. Prove that for some integer $k \geq 0$, the polynomial $P(x) = \sum_{i = 0}^k c_i x^i$ has fewer than $k$ distinct real roots.
+
+**GROUND-TRUTH SOLUTION**
+
+If there exists an integer $k>0$ such that $c_k = 0$, $P(x)=\sum_{i=0}^k c_i x^i$ has less than $k$ roots. So it suffices to see the cases where $c_k \ne 0$ for all integers $k>0$. Let's prove the following lemma:
+ If a polynomial $\sum_{i=0}^n a_i x^i$ has $n$ different real roots, $(\frac{a_{1}}{a_0})^2 - 2 \frac{a_{2}}{a_0} \geq n\sqrt[n]{\frac{a_n ^2}{a_0^2}}$
+
+ (Proof) The left hand side is the sum of squares of inverses of all roots. The right hand side is $n$ times the $n$th root of the product of square of inverses of roots. By AM-GM, we can see that the inequality holds.
+
+ Going back to the main proof, let's assume that all $P(x)=\sum_{i=0}^k c_i x^i$ has exactly $k$ distinct real roots.
+ By the lemma, $\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}} \geq n\sqrt[n]{c_n^2}$, which shows that $1\leq c_n^2 \leq (\frac{\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}}}{n})^n$. We can easily see that the righthandside tends to $0$ as $n$ goes to infinity. It's a contradiction.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Derived a useful inequality of between $c_n$ based on Vieta's formula (along with the proof by contradiction).
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists some integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Assume that for every $k \geq 1$, the polynomial $P_k(x)$ has at least $k$ distinct real roots. Since $P_k(x)$ is a polynomial of degree at most $k$, it can have at most $k$ roots. Therefore, the assumption implies that for all $k \geq 1$, $P_k(x)$ has exactly $k$ distinct real roots. This further implies that $c_k \neq 0$ for all $k \geq 1$, because if $c_k = 0$ for some $k$, the degree of $P_k(x)$ would be at most $k-1$, making it impossible to have $k$ distinct roots.
+
+Let $r_{1,k}, r_{2,k}, \ldots, r_{k,k}$ be the $k$ distinct real roots of $P_k(x)$. Since $c_0 \neq 0$, no root is zero. We define the reciprocal polynomial $Q_k(x) = x^k P_k(1/x)$, given by:
+\[ Q_k(x) = c_0 x^k + c_1 x^{k-1} + c_2 x^{k-2} + \dots + c_k. \]
+The roots of $Q_k(x)$ are $\rho_{i,k} = 1/r_{i,k}$ for $i=1, \dots, k$. These roots are also distinct and real. To utilize properties of monic polynomials with integer coefficients, we define a new polynomial $R_k(y)$ by substituting $y = c_0 x$:
+\[ R_k(y) = c_0^{k-1} Q_k\left(\frac{y}{c_0}\right) = c_0^{k-1} \left[ c_0 \left(\frac{y}{c_0}\right)^k + c_1 \left(\frac{y}{c_0}\right)^{k-1} + \dots + c_k \right] \]
+\[ R_k(y) = y^k + c_1 y^{k-1} + c_0 c_2 y^{k-2} + c_0^2 c_3 y^{k-3} + \dots + c_0^{k-1} c_k. \]
+Since $c_i \in \mathbb{Z}$ for all $i$, $R_k(y)$ is a monic polynomial with integer coefficients. The roots of $R_k(y)$ are $y_{i,k} = c_0 \rho_{i,k}$, which are $k$ distinct real numbers.
+
+The discriminant $\Delta_k$ of a monic polynomial is defined as the square of the Vandermonde determinant of its roots:
+\[ \Delta_k = \prod_{1 \le i < j \le k} (y_{i,k} - y_{j,k})^2. \]
+Since $R_k(y)$ has integer coefficients and is monic, its discriminant $\Delta_k$ is an integer. Because the roots are real and distinct, $\Delta_k$ must be a positive integer, so $\Delta_k \geq 1$.
+
+By the Arithmetic Mean-Geometric Mean (AM-GM) inequality, we have:
+\[ \frac{1}{\binom{k}{2}} \sum_{1 \le i < j \le k} (y_{i,k} - y_{j,k})^2 \ge \left( \prod_{1 \le i < j \le k} (y_{i,k} - y_{j,k})^2 \right)^{1/\binom{k}{2}} = \Delta_k^{1/\binom{k}{2}} \ge 1. \]
+Thus, we obtain the inequality $\sum_{i < j} (y_{i,k} - y_{j,k})^2 \geq \binom{k}{2} = \frac{k(k-1)}{2}$.
+Using the algebraic identity $\sum_{i < j} (y_i - y_j)^2 = k \sum_{i=1}^k y_i^2 - (\sum_{i=1}^k y_i)^2$, we apply Vieta's formulas to the coefficients of $R_k(y)$:
+\[ \sum_{i=1}^k y_{i,k} = -c_1, \quad \sum_{i=1}^k y_{i,k}^2 = (-c_1)^2 - 2(c_0 c_2) = c_1^2 - 2c_0 c_2. \]
+Substituting these values into the discriminant inequality:
+\[ k(c_1^2 - 2c_0 c_2) - (-c_1)^2 \geq \frac{k(k-1)}{2}. \]
+Rearranging the terms, we get:
+\[ k(c_1^2 - 2c_0 c_2) - c_1^2 \geq \frac{1}{2}k^2 - \frac{1}{2}k. \]
+The left-hand side of this inequality is a linear function of $k$, while the right-hand side is a quadratic function of $k$. As $k \to \infty$, the quadratic term $\frac{1}{2}k^2$ grows faster than any linear term, meaning this inequality must fail for sufficiently large $k$.
+
+This contradiction proves that the assumption—that $P_k(x)$ has $k$ distinct real roots for all $k \ge 1$—is false. Therefore, there must exist some integer $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

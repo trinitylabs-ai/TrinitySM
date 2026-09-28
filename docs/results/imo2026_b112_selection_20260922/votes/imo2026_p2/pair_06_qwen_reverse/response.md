@@ -1,0 +1,25 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Correctly establishes a complex coordinate framework with $A=0$, derives explicit expressions for $z_K$ and $z_L$ using the Law of Sines, and rigorously reduces the condition $OM=ON$ to the algebraic requirement $\text{Re}(z_O(\bar{z}_B - \bar{z}_C)) = (c^2 - b^2)/4$. The circumcenter formula, substitution, and expansion of the numerator $N$ and denominator $D$ through step 22 are algebraically verified.
+Claim gap: Step 23 asserts without derivation that the cross-angle conditions $\angle LBK = \beta$ and $\angle LCK = \gamma$ force the identity $\text{Im}(N) = bc(c^2 - b^2)\text{Im}(e^{i\theta}\bar{w}_K w_L)$. This is the central load-bearing step; the proof never uses these conditions to constrain $w_K$ and $w_L$, leaving the implication unjustified. Additionally, the proof claims that for $b=c$ and $\beta=\gamma$, one has $\theta = \pi/3$; this is a demonstrated defect, as $\theta = \angle BAC$ is arbitrary in an isosceles triangle.
+Qualifications and supplied repairs: NONE. The gap at step 23 is substantive and cannot be bridged by routine algebra; it requires a geometric or trigonometric derivation linking the cross-angle constraints to the complex identity. The false specific-case claim is not repaired.
+Decisive checks: 
+- Lines 1-12: VERIFIED. Coordinate setup, Law of Sines application, circumcenter formula, and reduction to $\text{Re}(z_O(\bar{z}_B - \bar{z}_C)) = (c^2-b^2)/4$ are correct.
+- Lines 13-22: VERIFIED. Substitution and expansion of $N$ and $D$ are algebraically sound. The cancellation of $bc$ in step 20 is correct.
+- Line 23: DEMONSTRATED DEFECT. The identity is asserted without proof. The supporting example ($\theta=\pi/3$ for isosceles) is false. The cross-angle conditions are never used in the derivation, leaving the central implication unsupported.
+
+## Proof B
+Established theorem: Correctly reduces $OM=ON$ to the vector condition $\vec{O} \cdot (\vec{C} - \vec{B}) = (b^2 - c^2)/4$. Derives the exact relations $\cot \theta_K = 2\cot\gamma + \cot\alpha$ and $\cot \theta_L = 2\cot\beta + \cot\alpha$ using the Law of Sines in $\triangle BMK, \triangle ABK$ and their symmetric counterparts. Correctly expresses $\vec{O} \cdot \vec{B}$ and $\vec{O} \cdot \vec{C}$ in the $\{\vec{u}_K, \vec{u}_L\}$ basis, and rigorously reduces the problem to the trigonometric identity in step 29: $2a[AL\sin(B+\theta_K) - AK\sin(C+\theta_L)] = (b^2-c^2)\sin\phi$.
+Claim gap: Step 30 asserts that the trigonometric identity in step 29 is satisfied by the given angle conditions, but omits the explicit substitution and verification. This is a verification gap; the reduction is complete, but the final algebraic check is stated rather than shown.
+Qualifications and supplied repairs: NONE. The derivation up to step 29 is self-contained and correct. The gap at step 30 is a local verification step that follows from substituting $AK = c\sin\alpha/\sin(\alpha+\theta_K)$, $AL = b\sin\alpha/\sin(\alpha+\theta_L)$, and the cotangent relations into the left-hand side of step 29. No false claims are present.
+Decisive checks:
+- Lines 3-6: VERIFIED. Vector distance expansion and reduction to dot product condition are correct.
+- Lines 9-15: VERIFIED. Law of Sines applications and cotangent derivations are algebraically exact. Domain assumptions ($\sin(\theta_K+\alpha)\neq 0$) hold given the strict interior placement of $K, L$.
+- Lines 17-23: VERIFIED. Basis decomposition of $\vec{O}$ and dot product expansions are correct.
+- Lines 26-29: VERIFIED. Angle substitution $\phi = A - \theta_K - \theta_L$ and projection formula $b\sin(A-\theta_K)+c\sin\theta_K = a\sin(B+\theta_K)$ are correct.
+- Line 30: UNRESOLVED CHECK. The identity is claimed to hold but not verified. However, all prerequisites for verification are explicitly derived, making the gap local and repairable by direct substitution.
+
+## Decision
+Winner: B
+Reason: Proof B provides a rigorous, step-by-step reduction of the geometric condition to a verifiable trigonometric identity, with all intermediate derivations (Law of Sines applications, vector projections, and angle substitutions) independently verified. Its only gap is the omitted final substitution at step 30, which is a routine algebraic check given the explicit formulas derived. Proof A, while correctly setting up the complex framework, contains a demonstrably false claim ($\theta=\pi/3$ for isosceles triangles) and makes an unsupported leap at step 23, asserting a complex identity without using the cross-angle conditions $\angle LBK=\beta$ and $\angle LCK=\gamma$ in the derivation. B's approach avoids orientation ambiguities, correctly handles all given constraints, and leaves only a local verification gap, whereas A's gap is central and accompanied by a factual error. Thus, B is mathematically stronger.

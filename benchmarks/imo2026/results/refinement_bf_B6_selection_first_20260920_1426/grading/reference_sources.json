@@ -1,0 +1,45 @@
+{
+  "provider": "MechMath Agent Team",
+  "repository": "https://github.com/MechMath/IMO2026",
+  "verified_revision": "47ff510110dd400c98aee2ead3be0f53f7b8ba04",
+  "license_status": "No license or redistribution grant was located for these solution files at the verified revision. The associated paper license is not assumed to apply to repository PDFs.",
+  "distribution": "Source metadata and hashes only. PDFs and extracted reference text must be obtained directly from upstream by the evaluator operator and kept local.",
+  "references": [
+    {
+      "problem_id": "imo2026_p1",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q1/solution.pdf",
+      "pdf_sha256": "9a3fa4240da23fdf52f32e2e4b8f98740fbd28c30f25b1dbdd11baf59b3814e5",
+      "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q2/solution.pdf",
+      "pdf_sha256": "c45e3bdae20970bb33793f0a5301c4ccedad3167787c1601be4728c68d18666c",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd"
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q3/solution.pdf",
+      "pdf_sha256": "0f009e99e2c076a2eb32b88d1f6c6593da1ff0653c888f5b0f7b42d105279aa1",
+      "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66"
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q4/solution.pdf",
+      "pdf_sha256": "db3e212a375ae6d56ca989526ac28d7c3967e75cad491a4f32fe72a04ff406e7",
+      "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb"
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q5/solution.pdf",
+      "pdf_sha256": "8203198d4425aa146927a2c5fc3cebeeb46ac9f334590c19dff070f0e6dc76b1",
+      "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb"
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "source_url": "https://github.com/MechMath/IMO2026/blob/47ff510110dd400c98aee2ead3be0f53f7b8ba04/IMO2026/Q6/solution.pdf",
+      "pdf_sha256": "7922242c93f7e7e2e2a1bb88be36fd1e6db46aa9ba241d78cd20df8f68eef4cb",
+      "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c"
+    }
+  ]
+}

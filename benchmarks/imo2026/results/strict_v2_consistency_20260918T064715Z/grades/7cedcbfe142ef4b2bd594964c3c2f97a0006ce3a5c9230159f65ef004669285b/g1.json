@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7cedcbfe142ef4b2bd594964c3c2f97a0006ce3a5c9230159f65ef004669285b",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "d4f19fd6c5d49850b563a27e989db14cff8aa9ab7e3418a50bcd981b3b8449e0",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "b800fa06adbdebe2942ec1159a51ed3f5857f04a07b225c9289ae6d3504228c9",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "After deriving a sine-law relation, the submission simply asserts that the angle conditions and an alleged symmetry force \\((\\vec o-\\vec{O'})\\cdot\\vec{BC}=0\\). No symmetry or argument establishing this perpendicularity is given. This is the decisive central inference, so Rule E caps the score at 3.",
+    "summary": "The vector and power-of-a-point reduction is correct: the desired equality is equivalently that the circumcentre lies on the perpendicular bisector of MN. The sine-law formulas are also essentially valid if the undefined scalar b and c are interpreted as the relevant side lengths. However, the proof never connects those formulas to the required circumcentre condition; it replaces the main content of the problem with an unsupported assertion. Establishing that connection requires a new, load-bearing argument.",
+    "strengths": [
+      "Correctly expresses the powers of M and N relative to the circumcircle.",
+      "Correctly reduces OM=ON to OO' being perpendicular to BC, where O' is the midpoint of MN.",
+      "Obtains relevant sine-law relations from the stated angle equalities."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed projection/perpendicularity property of O is wholly unsupported; the preceding sine relation does not directly imply it, and no calculation or geometric lemma supplies the missing implication."
+      },
+      {
+        "severity": "minor",
+        "description": "The scalar symbols b and c used for side lengths in the sine-law formulas are not defined and conflict with the earlier vector notation."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:43:42.165405+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

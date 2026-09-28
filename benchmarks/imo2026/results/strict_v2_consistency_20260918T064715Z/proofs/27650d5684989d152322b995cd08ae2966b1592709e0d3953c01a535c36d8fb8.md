@@ -1,0 +1,32 @@
+We claim that Mulan can guarantee victory if and only if $\theta = 180^\circ/n$ for some integer $n \ge 2$.
+
+Sufficiency: Suppose $\theta = 180^\circ/n$ for some integer $n \in \{2, 3, \dots\}$.
+Let $S = \{k\theta \mid k \in \{1, 2, \dots, n-1\}\}$. We show that Mulan can force the triangle $T$ to have an angle in $S$.
+First, Mulan can make the minimum angle of $T$ arbitrarily small. If $T$ has angles $\alpha \le \beta \le \gamma$, Mulan can choose a vertex (say $B$) and a point $P$ on the opposite side $AC$ very close to $C$. The resulting triangle $T_1$ (containing $\angle BPC$) will have an angle $\angle CBP$ that can be made arbitrarily small. By repeating this, Mulan can ensure the minimum angle $\alpha$ satisfies $\alpha < \theta$.
+
+Let the angles of $T$ be $\alpha \le \beta \le \gamma$. The range of the angle formed by a cut from a vertex to the opposite side is:
+- Cut from $A$: $\angle APB \in (\gamma, 180^\circ - \beta)$
+- Cut from $B$: $\angle BPC \in (\alpha, 180^\circ - \gamma)$
+- Cut from $C$: $\angle CPA \in (\beta, 180^\circ - \alpha)$
+
+If $\alpha < \theta$, Mulan considers the range $(\alpha, 180^\circ - \gamma)$. If $180^\circ - \gamma > \theta$, then $\theta$ is in this range, and Mulan can force $\angle BPC = \theta$. If $180^\circ - \gamma \le \theta$, then $\alpha + \beta = 180^\circ - \gamma \le \theta$. Since $\alpha \le \beta$, we have $\beta \le \theta$. If $\beta = \theta$, Mulan wins. If $\beta < \theta$, she considers the range $(\beta, 180^\circ - \alpha)$. Since $\alpha$ can be made arbitrarily small, $180^\circ - \alpha$ can be made larger than $\theta$, so $\theta \in (\beta, 180^\circ - \alpha)$ and she can force $\angle CPA = \theta$.
+
+If Mulan forces a cut angle $\phi = \theta$, she wins if Shan-Yu (SY) keeps that triangle. If SY keeps the other triangle, it has an angle $180^\circ - \theta = (n-1)\theta \in S$.
+Now, if $T$ has an angle $k\theta \in S$ with $k \ge 2$, Mulan can cut this angle into $\theta$ and $(k-1)\theta$ by picking $P$ on the opposite side such that $\angle BAP = \theta$. Then one resulting triangle has angle $\theta$ (Mulan wins) and the other has angle $(k-1)\theta$. SY must keep the latter to avoid losing. By repeating this, Mulan eventually forces $T$ to have an angle $\theta$.
+
+Necessity: Suppose $\theta \neq 180^\circ/n$ for any $n \in \mathbb{Z}^+$.
+Let $S = \{k\theta \mid k \in \mathbb{Z}^+\}$. Since $\theta \neq 180^\circ/n$, $180^\circ \notin S$. SY chooses $T_0$ to be an equilateral triangle. Since $60^\circ \in S$ would imply $\theta = 60^\circ/k = 180^\circ/(3k)$, which contradicts our assumption, $T_0$ has no angle in $S$.
+SY's strategy is to always discard any triangle that contains an angle in $S$. Mulan wins if and only if she can force a cut such that both resulting triangles $T_1$ and $T_2$ contain an angle in $S$.
+Suppose $T$ has angles $\alpha, \beta, \gamma \notin S$. Mulan cuts from $A$ to $P \in BC$.
+$T_1$ has angles $\beta, \angle BAP, \angle APB$ and $T_2$ has angles $\gamma, \angle CAP, \angle APC$.
+For both to have an angle in $S$, since $\beta, \gamma \notin S$, we must have:
+$(\angle BAP \in S \text{ or } \angle APB \in S)$ AND $(\angle CAP \in S \text{ or } \angle APC \in S)$.
+1. If $\angle APB \in S$ and $\angle APC \in S$, then $\angle APB + \angle APC = 180^\circ \implies 180^\circ \in S$, contradiction.
+2. If $\angle BAP \in S$ and $\angle CAP \in S$, then $\angle BAP + \angle CAP = \alpha \implies \alpha \in S$, contradiction.
+3. If $\angle APB \in S$ and $\angle CAP \in S$, let $\angle APB = k_1\theta$ and $\angle CAP = k_2\theta$.
+Then $\gamma = 180^\circ - (\alpha + \beta) = \angle APB - \angle CAP = (k_1 - k_2)\theta \in S$, contradiction.
+4. If $\angle BAP \in S$ and $\angle APC \in S$, let $\angle BAP = k_1\theta$ and $\angle APC = k_2\theta$.
+Then $\beta = 180^\circ - (\alpha + \gamma) = \angle APC - \angle BAP = (k_2 - k_1)\theta \in S$, contradiction.
+
+Thus, SY can always maintain a triangle with no angle in $S$, preventing Mulan from winning.
+Mulan can guarantee victory if and only if $\theta = 180^\circ/n$ for some integer $n \ge 2$.

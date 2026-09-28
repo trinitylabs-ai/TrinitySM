@@ -1,0 +1,54 @@
+{
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_95c644c37c1e25ff973c220ba39525d2",
+  "pass_index": 1,
+  "score": 4,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The final step merely asserts that substituting the trigonometric and sine-law relations makes the displayed expression equal to (c^2-b^2)/4. This is the decisive, substantial elimination in the proof, but none of its calculation is supplied. Rules B and F therefore cap the score at 4.",
+    "summary": "The coordinate reduction, sine-law relations, circumcenter equations, and computation of O·(B−C) are coherent and essentially correct. They reduce the problem to an explicit true trigonometric identity. However, the asserted final simplification contains the central hard calculation and is not routine enough to omit. Because the exact remaining equality is stated and the preceding reduction is valid, Rule B permits 4 rather than imposing Rule E's lower ceiling.",
+    "strengths": [
+      "Correctly reformulates OM=ON as the linear identity O·(B−C)=(c^2−b^2)/4.",
+      "Derives appropriate sine-law constraints from the midpoint triangles and correctly solves the circumcenter's two linear equations.",
+      "Obtains an explicit formula for O·(B−C), thereby giving a meaningful analytic reduction."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "No derivation is given for the final multi-step trigonometric elimination. Referring collectively to the displayed constraints and saying that the expression 'simplifies' does not establish the load-bearing identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "proof_sha256": "95c644c37c1e25ff973c220ba39525d2189ca4bf35ef1e076f098156d221e8da",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "evidence_sha256": "8562619eeb894e5172541013d30789164dd14e53aec0d382fcc7bbfc1beb688e",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p2/t07_r01_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "62c237c67b5102a85c161dcdba55c6bf19d1d0149065a08c2e996fdb09de063a",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "6019ff7b35f9e7cfb2c78cd542fb11a1cda549583d583dad7d1d754ecdc9dadc",
+    "raw_response_1.txt": "33b199e33377c6e653ee433e220fc58e1d6bbb32a7ef9728f9b5d623f4fbe65d",
+    "summary.json": "213b92891ad2bd83573a319ee0d9af483dc447521c48f1be4dcf15425d8a7121"
+  }
+}

@@ -1,0 +1,30 @@
+To prove that $XO$ is perpendicular to $DE$, we use a coordinate geometry approach. Let the vertex $C$ be the origin $(0,0)$ and the side $CA$ lie along the $x$-axis. Let the side lengths of $\triangle ABC$ be $a, b, c$ opposite to vertices $A, B, C$, respectively.
+
+1.  **Coordinates of Points $D$ and $E$:**
+    The vertices are $C = (0,0)$, $A = (b,0)$, and $B = (a \cos C, a \sin C)$. Since $D$ is the foot of the altitude from $B$ to $AC$, its coordinates are $D = (a \cos C, 0)$.
+    Point $E$ is the foot of the altitude from $C$ to $AB$. $E$ is the projection of $C(0,0)$ onto the line $AB$ passing through $A(b,0)$ and $B(a \cos C, a \sin C)$. The equation of line $AB$ is $y - 0 = \frac{a \sin C}{a \cos C - b}(x - b)$. The line $CE$ is perpendicular to $AB$ and passes through $(0,0)$, so its equation is $y = \frac{b - a \cos C}{a \sin C}x$. Solving for the intersection $E(x_E, y_E)$:
+    $$x_E \frac{b - a \cos C}{a \sin C} = \frac{a \sin C}{a \cos C - b}(x_E - b) \implies x_E(b - a \cos C)(a \cos C - b) = a^2 \sin^2 C(x_E - b)$$
+    $$-x_E(b - a \cos C)^2 = a^2 \sin^2 C x_E - a^2 b \sin^2 C \implies x_E [ (b - a \cos C)^2 + a^2 \sin^2 C ] = a^2 b \sin^2 C$$
+    Using the law of cosines $c^2 = a^2 + b^2 - 2ab \cos C$, we find $x_E = \frac{a^2 b \sin^2 C}{c^2}$ and $y_E = \frac{ab \sin C (b - a \cos C)}{c^2}$. Note that $CE^2 = x_E^2 + y_E^2 = \frac{a^2 b^2 \sin^2 C}{c^2}$.
+
+2.  **Coordinates of $O$ and $X$:**
+    $E_1$ is the reflection of $E$ across $AC$ (the $x$-axis), so $E_1 = (x_E, -y_E)$. $E_2$ is the reflection of $E$ across $BC$ ($y = x \tan C$), given by $E_2 = (x_E \cos 2C + y_E \sin 2C, x_E \sin 2C - y_E \cos 2C)$.
+    Let $O = (x_O, y_O)$. Since $O$ is the circumcenter of $\triangle CE_1E_2$, $OC^2 = OE_1^2 = OE_2^2$.
+    $OC^2 = OE_1^2 \implies x_O^2 + y_O^2 = (x_O - x_E)^2 + (y_O + y_E)^2 \implies 2x_O x_E - 2y_O y_E = CE^2$.
+    $OC^2 = OE_2^2 \implies 2(x_O x_{E2} + y_O y_{E2}) = CE^2$.
+    Solving these equations yields $x_O = \frac{1}{2}(x_E + y_E \tan C)$ and $y_O = \frac{1}{2}(x_E \tan C - y_E)$.
+    $X$ is the intersection of the circumcircle and $AC$ ($x$-axis). Thus $X = (x_X, 0)$ and $OX^2 = OC^2 \implies (x_X - x_O)^2 + y_O^2 = x_O^2 + y_O^2 \implies x_X = 2x_O = x_E + y_E \tan C$.
+
+3.  **Proof of Perpendicularity:**
+    The vector $\vec{XO} = O - X = \frac{1}{2}(-(x_E + y_E \tan C), x_E \tan C - y_E)$.
+    The vector $\vec{DE} = E - D = (x_E - a \cos C, y_E)$.
+    The dot product $2 \vec{XO} \cdot \vec{DE}$ is:
+    $$2 \vec{XO} \cdot \vec{DE} = -(x_E + y_E \tan C)(x_E - a \cos C) + (x_E \tan C - y_E)y_E$$
+    $$= -x_E^2 + x_E a \cos C - y_E x_E \tan C + y_E a \cos C \tan C + x_E y_E \tan C - y_E^2$$
+    $$= -(x_E^2 + y_E^2) + x_E a \cos C + y_E a \sin C = -CE^2 + a(x_E \cos C + y_E \sin C)$$
+    Substituting $x_E$ and $y_E$:
+    $$x_E \cos C + y_E \sin C = \frac{a^2 b \sin^2 C \cos C + ab \sin^2 C(b - a \cos C)}{c^2} = \frac{ab^2 \sin^2 C}{c^2}$$
+    Thus $2 \vec{XO} \cdot \vec{DE} = -\frac{a^2 b^2 \sin^2 C}{c^2} + a \frac{ab^2 \sin^2 C}{c^2} = 0$.
+    Since the dot product is zero, $XO \perp DE$.
+
+\(\square\)

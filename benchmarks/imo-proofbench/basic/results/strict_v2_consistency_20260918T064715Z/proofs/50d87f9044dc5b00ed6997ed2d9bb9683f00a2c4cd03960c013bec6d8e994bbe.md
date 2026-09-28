@@ -1,0 +1,47 @@
+To find all functions $f: \mathbb{R} \to \mathbb{R}$ such that for all $a, b \in \mathbb{R}$,
+\[ (b - a)f(f(a)) = a f(a + f(b)), \]
+we proceed as follows:
+
+1.  **Initial Substitutions and Key Properties:**
+    Let the given equation be $P(a, b)$.
+    $P(0, b) \implies b f(f(0)) = 0$ for all $b \in \mathbb{R}$. This implies that $f(f(0)) = 0$.
+    Let $f(0) = c$. Then $f(c) = 0$.
+    $P(a, a) \implies 0 = a f(a + f(a))$ for all $a \in \mathbb{R}$.
+    For $a \neq 0$, $f(a + f(a)) = 0$.
+    For $a = 0$, $f(0 + f(0)) = f(c) = 0$.
+    Thus, $f(a + f(a)) = 0$ for all $a \in \mathbb{R}$.
+
+2.  **Analyzing the Roots of $f$:**
+    Let $S = \{x \in \mathbb{R} \mid f(x) = 0\}$. We have already shown that $S$ is non-empty since $f(c) = 0$.
+    If $x_0 \in S$, then $P(a, x_0) \implies (x_0 - a) f(f(a)) = a f(a + f(x_0)) = a f(a)$.
+    
+    Case 1: $f$ has exactly one root $c$.
+    Since $f(a + f(a)) = 0$ for all $a$, and $c$ is the unique root, we must have $a + f(a) = c$ for all $a$.
+    This implies $f(a) = c - a$ for all $a \in \mathbb{R}$.
+    Checking this in the original equation:
+    LHS: $(b - a) f(f(a)) = (b - a) f(c - a) = (b - a)(c - (c - a)) = (b - a)a$.
+    RHS: $a f(a + f(b)) = a f(a + c - b) = a(c - (a + c - b)) = a(b - a)$.
+    LHS = RHS, so $f(x) = c - x$ is a solution for any $c \in \mathbb{R}$.
+
+    Case 2: $f$ has more than one root.
+    Suppose $c_1, c_2 \in S$ with $c_1 \neq c_2$.
+    Using the identity $(x_0 - a) f(f(a)) = a f(a)$ for $x_0 = c_1$ and $x_0 = c_2$:
+    $(c_1 - a) f(f(a)) = a f(a)$
+    $(c_2 - a) f(f(a)) = a f(a)$
+    Subtracting these two equations gives $(c_1 - c_2) f(f(a)) = 0$.
+    Since $c_1 \neq c_2$, we must have $f(f(a)) = 0$ for all $a \in \mathbb{R}$.
+    Substituting $f(f(a)) = 0$ back into $(c_1 - a) f(f(a)) = a f(a)$ gives $a f(a) = 0$ for all $a \in \mathbb{R}$.
+    Thus, $f(a) = 0$ for all $a \neq 0$.
+    Let $f(0) = k$.
+    If $k = 0$, then $f(x) = 0$ for all $x \in \mathbb{R}$, which is a solution.
+    If $k \neq 0$, let's check $P(a, b)$ for $a \neq 0, b \neq 0$:
+    LHS: $(b - a) f(f(a)) = (b - a) f(0) = (b - a)k$.
+    RHS: $a f(a + f(b)) = a f(a + 0) = a f(a) = a \cdot 0 = 0$.
+    For this to hold for all $a, b \neq 0$, we must have $k = 0$, which contradicts $k \neq 0$.
+    Therefore, the only solution in this case is $f(x) = 0$ for all $x \in \mathbb{R}$.
+
+3.  **Conclusion:**
+    The solutions are $f(x) = 0$ and $f(x) = c - x$ for any constant $c \in \mathbb{R}$.
+    Note that $f(x) = 0$ is not of the form $c - x$ for any constant $c$ (since $0 = c - x$ would imply $x = c$ for all $x$).
+
+The functions satisfying the equation are $f(x) = 0$ and $f(x) = c - x$ for all $c \in \mathbb{R}$. \(\square\)

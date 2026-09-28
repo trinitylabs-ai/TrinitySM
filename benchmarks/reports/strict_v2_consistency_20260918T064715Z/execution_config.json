@@ -1,0 +1,20 @@
+{
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "workers": 8,
+  "chunk_size": 32,
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "source_hashes": {
+    "scripts/score_imo_v2.py": "cced8ecc8d3418b0cfa50acb10380be2642a72b387dfb99568d6812814238943",
+    "scripts/score_v2_consistency_worker.py": "7ba7ceac026d6d7e18ac7913528cf671ff7b527f5f315f47164a72f70b4e4461",
+    "scripts/run_v2_consistency.py": "9cd5b5d8aeba573176f5f52c7e18c304d7ba9817fe908f0d0bc2dd6654d030d9",
+    "scripts/report_strict_v2.py": "ab19b9efbcf958b8c4af6190d62bd180f58795fc55052d314403db80278307ce",
+    "docs/public_release/grading/strict_olympiad_policy_v2.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "docs/public_release/grading/evaluator_instructions.txt": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "malformed_or_failed_attempts_only_retried": true,
+  "semantic_disagreements_retained": true,
+  "earlier_grades_reused": false,
+  "ordering_seed": 20260918,
+  "study_manifest_sha256": "20d70d3bbd1b4e3e3a86be14237bf9bfb8dc3f2a10d3d87b176f2f4bba2687b5"
+}

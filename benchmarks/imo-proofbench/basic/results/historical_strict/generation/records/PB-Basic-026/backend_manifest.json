@@ -1,0 +1,114 @@
+{
+  "schema": "cognitive-well-v0290-p5-iterated-review-fusion-manifest-v1",
+  "harness_version": "0.3.290",
+  "parent_harness_version": "0.3.263",
+  "problem_id": "PB-Basic-026",
+  "problem_number": 26,
+  "source_run": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/01_source",
+  "input_checkpoint": "lazy_checked",
+  "output_dir": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles",
+  "candidate_ids": [
+    "t10_r01",
+    "t10_r02",
+    "t07_r01",
+    "t07_r02"
+  ],
+  "r1_cycle_count": 3,
+  "pipeline_policy": "r1_three_cycles_terminal_v1",
+  "stage_order": [
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "runtime": {
+    "gemma_endpoint": "http://127.0.0.1:8030/v1",
+    "qwen_endpoint": "http://127.0.0.1:8027/v1",
+    "workers_per_endpoint": 4,
+    "resolve_workers": 2,
+    "seed_namespace": "v263-v290:problem-only:p26-original-policy:20260912T131929Z:PB-Basic-026:r1",
+    "model_timeout_sec": 600
+  },
+  "transport_policy": {
+    "reviewer2_http_timeout_floor_sec": 2400,
+    "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+    "qwen_max_output_tokens": 49152,
+    "qwen_retry_on_output_cap": false,
+    "single_model": null,
+    "budget_forcing": true,
+    "reasoning_effort": null
+  },
+  "repair_brief_boundary": {
+    "mandatory_every_r1_cycle": true,
+    "accepting_fusion_audit_mandatory": true,
+    "rejected_acceptance_returns_to_fusion": true,
+    "max_acceptance_reconsiderations": 2,
+    "audit_model": "Qwen/Qwen3.6-27B",
+    "rewrite_model": "google/gemma-4-31B-it",
+    "audit_original_then_every_rewrite": true,
+    "max_rewrite_rounds": 2,
+    "token_caps": [
+      32768,
+      49152,
+      65536
+    ],
+    "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+    "output_format": "Markdown",
+    "mutation": "replace exactly resolver_brief only",
+    "uncertified_route": "synthesize_with_rejected_brief",
+    "optional_exact_evidence": {
+      "enabled_for_every_repair_brief_audit": false,
+      "operation_policy": "generic allowlist only",
+      "no_tool_or_failure": "contained; audit continues without evidence",
+      "finite_no_witness_is_global_proof": false
+    }
+  },
+  "parallel_lanes": 4,
+  "model_inputs_exclude": [
+    "reference_solution",
+    "v0139_proof",
+    "strict_score",
+    "Codex_feedback",
+    "human_repair_brief_audit"
+  ],
+  "strict_scoring": {
+    "inside_model_pipeline": false,
+    "targets_written_after_each_checkpoint": true,
+    "scores_must_not_control_selection_or_stopping": true
+  },
+  "frozen_inputs": {
+    "problem_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles/input/problem.json",
+    "problem_text_sha256": "c6ba255f6bbb3bfd642e146b2a30b43e700e8da579130b27eda8a8fd634c1529",
+    "problem_file_sha256": "72221a0180f8260b4c2cb1036bccae051fd5d38697c5218a0acb59615b935e48",
+    "lanes": [
+      {
+        "candidate_id": "t10_r01",
+        "proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles/input/lazy_checked_baseline/t10_r01.md",
+        "proof_sha256": "6e536f8cd8625c36212d34907ccc25363284c22a39fb4a5c5dd21dc9eada1343",
+        "source_proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/01_source/p26/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p26/candidates/t10_r01/checked_proof.md",
+        "source_proof_sha256": "6e536f8cd8625c36212d34907ccc25363284c22a39fb4a5c5dd21dc9eada1343"
+      },
+      {
+        "candidate_id": "t10_r02",
+        "proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles/input/lazy_checked_baseline/t10_r02.md",
+        "proof_sha256": "348b2c9780351d967f0bb6f9179821f913f1d20d3cb1f56cda0fd0312073ba9e",
+        "source_proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/01_source/p26/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p26/candidates/t10_r02/checked_proof.md",
+        "source_proof_sha256": "348b2c9780351d967f0bb6f9179821f913f1d20d3cb1f56cda0fd0312073ba9e"
+      },
+      {
+        "candidate_id": "t07_r01",
+        "proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles/input/lazy_checked_baseline/t07_r01.md",
+        "proof_sha256": "8915db2555cf2b584647cc70323475e48b18e3f56826dd7c693a0164f1afa100",
+        "source_proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/01_source/p26/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p26/candidates/t07_r01/checked_proof.md",
+        "source_proof_sha256": "8915db2555cf2b584647cc70323475e48b18e3f56826dd7c693a0164f1afa100"
+      },
+      {
+        "candidate_id": "t07_r02",
+        "proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/02_r1_cycles/input/lazy_checked_baseline/t07_r02.md",
+        "proof_sha256": "fd63cf9f7168c51a9552e789948fd2cf76e168db10f32f1bf4598c52b2b45129",
+        "source_proof_path": "/opt/proof-workshop/runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026/01_source/p26/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p26/candidates/t07_r02/checked_proof.md",
+        "source_proof_sha256": "fd63cf9f7168c51a9552e789948fd2cf76e168db10f32f1bf4598c52b2b45129"
+      }
+    ]
+  }
+}

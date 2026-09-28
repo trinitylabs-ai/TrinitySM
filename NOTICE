@@ -1,0 +1,158 @@
+NOTICE — TrinitySM
+
+Copyright (c) 2026 Jihun Yu.
+Original source code in this repository is licensed under Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0), as provided in
+LICENSE: https://creativecommons.org/licenses/by-nc/4.0/.
+Third-party material is NOT relicensed by LICENSE and remains under its own
+terms. Retain any applicable upstream notices and licenses.
+
+--------------------------------------------------------------------------
+1. IMOBench ProofAutoGrader prompt (CC BY 4.0)
+--------------------------------------------------------------------------
+File:    docs/public_release/grading/imobench_b5_prompt.txt
+Source:  Thang Luong et al., "Towards Robust Mathematical Reasoning",
+         arXiv:2511.01846v1, Appendix B.5
+         https://arxiv.org/html/2511.01846v1#A2.SS5
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Changes: MODIFIED. Retrieved 12 September 2026; HTML markup, rendered list
+         artifacts and spacing were normalized. Published wording and
+         placeholders are otherwise preserved.
+         File SHA-256: e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c
+
+--------------------------------------------------------------------------
+2. IMO-ProofBench dataset (CC BY 4.0)
+--------------------------------------------------------------------------
+Files:   benchmarks/imo-proofbench/{basic,advanced}/problems/*.json
+         and the per-problem grading guidelines and reference solutions
+         under benchmarks/imo-proofbench/*/results/*/grading/
+Source:  google-deepmind/superhuman, imobench/proofbench_v2.csv
+         https://github.com/google-deepmind/superhuman/blob/main/imobench/proofbench_v2.csv
+         Dataset SHA-256: aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Changes: MODIFIED. Dataset rows were converted into per-problem
+         statement-only JSON inputs and split into Basic and Advanced
+         subsets. 58 statement strings match the recorded CSV exactly;
+         PB-Advanced-002 and PB-Advanced-009 differ only by surrounding
+         whitespace removal. Source paths and per-file SHA-256 hashes are
+         recorded in each catalog.json. Use the bundled statements to
+         reproduce the recorded problem selection.
+
+Scores in this repository were produced with a different autograder from the
+one used in the source paper. No agreement with the paper's Gemini 2.5 Pro
+evaluator or its human grading results is claimed or implied.
+
+--------------------------------------------------------------------------
+3. IMO 2026 problem statements
+--------------------------------------------------------------------------
+Files:   benchmarks/imo2026/problems/*.json
+Source:  International Mathematical Olympiad, 67th IMO (2026), Problems 1–6
+         https://www.imo-official.org/problems/2026/
+         Official English problem paper:
+         https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf
+Rights:  The official website identifies International Mathematical Olympiad
+         as its copyright holder. No express redistribution license was
+         located on the cited problem page or paper. These statements are
+         not covered by the project license in LICENSE; confirm applicable
+         redistribution terms before public publication.
+Changes: Statements are represented as per-problem JSON with local problem
+         identifiers. The bundled inputs and their catalog hashes identify
+         the text used in the experiments.
+
+--------------------------------------------------------------------------
+3b. MechMath IMO 2026 reference solutions (external; license not specified)
+--------------------------------------------------------------------------
+Source:  MechMath Agent Team, reader-facing solution PDFs for Problems 1–6
+         https://github.com/MechMath/IMO2026
+         Verified revision: 47ff510110dd400c98aee2ead3be0f53f7b8ba04
+         Files: IMO2026/Q{1,2,3,4,5,6}/solution.pdf
+Paper:   Yichuan Cao et al., "MechMath Agent Team: LLM Driven Agents for
+         Mathematical Research", arXiv:2607.04394v1
+         https://arxiv.org/abs/2607.04394v1
+Rights:  No license or redistribution grant was located for these solution
+         files at the verified revision (checked 18 September 2026). The
+         associated paper's license is not assumed to cover repository PDFs.
+         Attribution, public availability and this project's CC BY-NC 4.0
+         license do not grant rights to these third-party materials.
+Use:     The release file set excludes the PDFs and extracted reference text.
+         Evaluator operators obtain them directly from upstream, on request,
+         with scripts/prepare_imo_references.py. They remain local inputs,
+         excluded from version control and release artifacts. Source URLs,
+         hashes and extraction instructions are recorded in
+         docs/public_release/grading/imo2026_reference_sources.json.
+         The operator must determine the applicable permissions or other
+         lawful basis for downloading, processing and, when applicable,
+         transmitting the text to the chosen external grading service.
+         This project grants none of those rights and makes no claim that
+         local downloading or noncommercial use alone authorizes them.
+         Do not redistribute the downloaded files, extracted text or grader
+         request logs on the basis of this project's license. Distribution
+         requires an applicable upstream permission or other lawful basis.
+Meaning: "Gold reference" is an evaluator input label for these third-party
+         solutions, not an official IMO jury solution or endorsement.
+History: Removing current files does not remove prior Git objects. Any public
+         Git history or archive must also exclude historical reference copies
+         unless their distribution has separately been authorized.
+
+--------------------------------------------------------------------------
+4. Model repository files (Apache License 2.0)
+--------------------------------------------------------------------------
+This repository redistributes configuration, tokenizer-configuration and
+chat-template files copied verbatim from the model repositories below.
+No model weights (.safetensors) are included; weight index files are metadata.
+
+Location: benchmarks/imo-proofbench/advanced/results/pipeline_raw_r1c3/
+          environment/observed_20260913/models/{gemma,gemma_mtp_assistant,qwen}/
+Files:    config.json, generation_config.json, tokenizer_config.json,
+          chat_template.jinja, configuration.json,
+          model.safetensors.index.json (where present for each model)
+Changes:  UNMODIFIED. Copied as observed on 13 September 2026.
+          SHA-256 inventories are recorded alongside the copies.
+
+  Gemma 4 31B IT
+    Copyright 2026 Google LLC
+    https://huggingface.co/google/gemma-4-31B-it
+    Pinned revision 842da3794eaa0b77d5f08bae87a17459d91ff475
+    https://huggingface.co/google/gemma-4-31B-it/tree/842da3794eaa0b77d5f08bae87a17459d91ff475
+
+  Gemma 4 31B IT MTP assistant
+    Copyright 2026 Google LLC
+    https://huggingface.co/google/gemma-4-31B-it-assistant
+    Pinned revision 627c5ec1458b9086b841a91e0512fd31fd2fbbf1
+    https://huggingface.co/google/gemma-4-31B-it-assistant/tree/627c5ec1458b9086b841a91e0512fd31fd2fbbf1
+
+  Qwen3.6 27B
+    Copyright 2026 Alibaba Cloud
+    https://huggingface.co/Qwen/Qwen3.6-27B
+    Pinned revision 6a9e13bd6fc8f0983b9b99948120bc37f49c13e9
+    https://huggingface.co/Qwen/Qwen3.6-27B/tree/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9
+
+All three are licensed under the Apache License, Version 2.0:
+https://www.apache.org/licenses/LICENSE-2.0
+A copy is included in licenses/Apache-2.0.txt. The Qwen repository's exact
+LICENSE is included in licenses/Qwen3.6-27B-LICENSE.txt.
+
+Google's Gemma 4 license page:
+https://ai.google.dev/gemma/docs/gemma_4_license
+resolves to https://ai.google.dev/gemma/apache_2. The older Gemma Terms of
+Use explicitly direct Gemma 4 users to this separate Apache 2.0 license.
+
+No separate NOTICE file was present in any of the three repositories at the
+pinned revisions. The recursive file-list checks and copied-license hashes
+are recorded in docs/reproduction/model_license_audit.json.
+
+Model weights and installed serving environments are NOT included. Obtain
+each checkpoint from its source repository at the pinned revision.
+
+Proofs, reviews and revisions were generated with google/gemma-4-31B-it;
+additional reviews and audits used Qwen/Qwen3.6-27B; historical external
+grading used gpt-5.6-sol. The hosted grader is not required to verify saved
+results or generate new proofs locally. Workshop Tools is experimental and
+uses SymPy and Z3 at run time; those dependencies retain their own licenses.
+
+--------------------------------------------------------------------------
+5. Disclaimer
+--------------------------------------------------------------------------
+Third-party material is provided by its respective licensors on an "AS IS"
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. This NOTICE supplies attribution and does not replace upstream terms.

@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "dcadc72000accc41a87dc95b57e6f0bcfead998de4c1507607f4c89378e13a20",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "87f9dd76363d870d5d058ed98e5b5b14a3c85b098acf0b3eb11d4bdae3ac59df",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect. The parenthetical claim that h=lcm(m,n)>1 always is false (for example, m=n=2 gives h=1), but it is extraneous: the preceding case analysis already shows that g>1 in the first case and h=mn>1 in the coprime case. Thus the Rule C deletion test is satisfied.",
+    "summary": "The lexicographically decreasing potential (total prime-factor count, number of entries greater than 1) correctly proves finite termination and, together with preservation of at least one nonunit, yields exactly one final entry M>1. Primewise, the move sends exponent pairs to (min(x,y),|x-y|), preserving the gcd of all exponents. At a terminal board this invariant equals v_p(M), determining M uniquely from the initial board. Apart from one harmless false parenthetical, the proof is complete.",
+    "strengths": [
+      "The potential-function calculation is correct and establishes termination for every sequence of choices.",
+      "The two cases gcd(m,n)>1 and gcd(m,n)=1 correctly give strict lexicographic descent.",
+      "The valuation transformation and preservation of the gcd of the complete exponent list are correctly identified.",
+      "The terminal reconstruction v_p(M)=gcd_i v_p(a_i) proves choice-independence."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "The statement that h=lcm(m,n)>1 always is false; h=lcm(m,n)/gcd(m,n) and can equal 1. Deleting this parenthetical leaves the argument complete because the preceding exhaustive case analysis already preserves a nonunit."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:49:37.277879+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00038",
+  "native_rejection_count": 0
+}

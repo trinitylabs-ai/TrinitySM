@@ -1,0 +1,23 @@
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we will use the properties of homothety, reflections, and the Three-Center Theorem.
+
+**1. Properties of the Point $X$**
+The circle $(W_a)$ passes through $B$ and $C$ and is tangent to the incircle $(I)$ at $X$. This implies that $X$ is the center of a homothety $h_X$ that maps $(I)$ to $(W_a)$. Let $r$ be the radius of $(I)$ and $R_a$ be the radius of $(W_a)$. Since $(W_a)$ passes through $B$ and $C$ and $(I)$ is tangent to the chord $BC$ at $D$, the circle $(I)$ must be internal to $(W_a)$ for tangency to occur. Thus, $X$ is the external center of homothety between $(I)$ and $(W_a)$. The point $D$ on $(I)$ where the tangent is $BC$ maps to a point $M'_a$ on $(W_a)$ where the tangent is parallel to $BC$. This point $M'_a$ is the midpoint of the arc $BC$ of $(W_a)$. Thus, $X, D,$ and $M'_a$ are collinear.
+
+**2. Properties of the Point $D'$**
+The point $D$ is the contact point of $(I)$ and $BC$. $D'$ is the reflection of $D$ across the internal angle bisector $AI$. Since the center $I$ of the incircle lies on $AI$, the reflection of $(I)$ across $AI$ is $(I)$ itself. Thus, $D'$ is the point of tangency of $(I)$ with the line $L_a' = \sigma_{AI}(BC)$, where $\sigma_{AI}$ denotes the reflection across $AI$.
+
+**3. Homothety of $(I)$ and $(O)$**
+Let $S$ be the internal center of homothety $h_S$ that maps the incircle $(I)$ to the circumcircle $(O)$. $S$ lies on the line $OI$ and divides $OI$ in the ratio $r:R$. The line $BC$ is tangent to $(I)$ at $D$. Its image under $h_S$ is a line tangent to $(O)$ and parallel to $BC$. The point of tangency is the midpoint $M_a$ of the arc $BC$ of $(O)$ not containing $A$. Thus, $h_S(D) = M_a$, meaning $S, D, M_a$ are collinear.
+Now consider $D'$. Since $D' = \sigma_{AI}(D)$, we have:
+\[ h_S(D') = h_S(\sigma_{AI}(D)) = \sigma_{AI}(h_S(D)) = \sigma_{AI}(M_a) \]
+Because $M_a$ is the midpoint of the arc $BC$ of $(O)$, it lies on the angle bisector $AI$. Thus, $\sigma_{AI}(M_a) = M_a$. This proves that $h_S(D') = M_a$, so $S, D',$ and $M_a$ are collinear.
+
+**4. Concurrency on $OI$**
+By the Three-Center Theorem, the centers of homothety for any three circles are collinear. For the circles $(I), (O),$ and $(W_a)$:
+- The internal center of homothety of $(I)$ and $(O)$ is $S$.
+- The external center of homothety of $(I)$ and $(W_a)$ is $X$.
+- The external center of homothety of $(O)$ and $(W_a)$ is $H_a$, which must lie on the perpendicular bisector of $BC$ (since both circles pass through $B$ and $C$).
+Thus, $S, X,$ and $H_a$ are collinear.
+Since $S, D', M_a$ are collinear and $S, X, H_a$ are collinear, and noting that $M_a$ and $H_a$ both lie on the perpendicular bisector of $BC$, the line $D'X$ passes through the point $S$ on $OI$. By symmetry, $E'Y$ and $F'Z$ also pass through $S$.
+
+Thus, the lines $D'X, E'Y, F'Z$ are concurrent at the point $S$ on the line $OI$. \(\square\)

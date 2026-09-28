@@ -1,0 +1,34 @@
+To prove that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for any positive real numbers $x, y, z, t$ satisfying the condition $2(x + y + z + t) \ge xyzt$, we proceed as follows.
+
+Let $S = x + y + z + t$. According to the Quadratic Mean-Arithmetic Mean (QM-AM) inequality, we have:
+\[ \sqrt{\frac{x^2 + y^2 + z^2 + t^2}{4}} \ge \frac{x + y + z + t}{4} = \frac{S}{4} \]
+Squaring both sides, we obtain:
+\[ \frac{x^2 + y^2 + z^2 + t^2}{4} \ge \frac{S^2}{16} \implies x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \]
+Additionally, according to the Arithmetic Mean-Geometric Mean (AM-GM) inequality:
+\[ \frac{x + y + z + t}{4} \ge \sqrt[4]{xyzt} \implies \frac{S}{4} \ge \sqrt[4]{xyzt} \]
+Raising both sides to the fourth power, we obtain:
+\[ xyzt \le \left(\frac{S}{4}\right)^4 = \frac{S^4}{256} \]
+We now consider two cases based on the value of $S$:
+
+**Case 1: $S \ge 8$**
+From our initial QM-AM derivation, we know $x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4}$.
+Since $S \ge 8$, we have:
+\[ \frac{S^2}{4} = \frac{S}{4} \cdot S \ge \frac{8}{4} \cdot S = 2S \]
+Given the problem constraint $2(x + y + z + t) \ge xyzt$, we have $2S \ge xyzt$. Combining these inequalities, we get:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \ge 2S \ge xyzt \]
+Thus, the inequality $x^2 + y^2 + z^2 + t^2 \ge xyzt$ holds for $S \ge 8$.
+
+**Case 2: $S < 8$**
+From our QM-AM and AM-GM derivations, we have:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \quad \text{and} \quad xyzt \le \frac{S^4}{256} \]
+We examine the ratio between these two bounds:
+\[ \frac{S^2}{4} - \frac{S^4}{256} = \frac{64S^2 - S^4}{256} = \frac{S^2(64 - S^2)}{256} \]
+Since $S$ is a sum of positive real numbers and $S < 8$, it follows that $S^2 < 64$, making the expression $S^2(64 - S^2)$ positive. Therefore:
+\[ \frac{S^2}{4} > \frac{S^4}{256} \]
+Combining the inequalities, we have:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} > \frac{S^4}{256} \ge xyzt \]
+Thus, the inequality $x^2 + y^2 + z^2 + t^2 \ge xyzt$ holds for $S < 8$.
+
+In both cases, the inequality $x^2 + y^2 + z^2 + t^2 \ge xyzt$ is satisfied.
+
+\(\square\)

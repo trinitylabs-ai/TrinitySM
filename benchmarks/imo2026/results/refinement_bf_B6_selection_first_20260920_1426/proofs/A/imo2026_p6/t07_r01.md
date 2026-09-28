@@ -1,0 +1,26 @@
+Let $Q_n$ be the set of prime factors of $a_n$. The condition $\gcd(a_{n+1}, a_i) > 1$ for all $i=1, \dots, n$ implies that $Q_{n+1}$ must be a hitting set for the family $\mathcal{F}_n = \{Q_1, \dots, Q_n\}$. A hitting set $H$ is a set of primes such that $H \cap Q_i \neq \emptyset$ for all $i \in \{1, \dots, n\}$. Let $\mathcal{H}_n$ be the collection of all hitting sets of $\mathcal{F}_n$. For each $H \in \mathcal{H}_n$, let $m_H = \prod_{p \in H} p$. The value of $a_{n+1}$ is the smallest integer greater than $a_n$ that is a multiple of some $m_H$ for $H \in \mathcal{H}_n$:
+\[ a_{n+1} = \min_{H \in \mathcal{H}_n} \left\{ m_H \left\lceil \frac{a_n+1}{m_H} \right\rceil \right\} \]
+Let $m_{Q_1} = \prod_{p \in Q_1} p$. Since $Q_1$ is a hitting set for $\mathcal{F}_n$ for all $n \ge 1$ (as $Q_i \cap Q_1 \neq \emptyset$ for all $i$), we have $a_{n+1} \le m_{Q_1} \lceil \frac{a_n+1}{m_{Q_1}} \rceil \le a_n + m_{Q_1}$.
+
+**1. Finiteness of the Set of Prime Factors**
+Let $S = \bigcup_{n=1}^\infty Q_n$ be the set of all primes dividing at least one $a_n$. We claim $S$ is finite.
+Suppose $S$ is infinite. Let $m_1 = m_{Q_1}$. For any prime $p \in S$ with $p > m_1$, if $p$ divides $a_n$, then for any $m$ such that $n < m < n + p/m_1$, we have $a_m - a_n = \sum_{i=n}^{m-1} (a_{i+1} - a_i) \le (m-n)m_1 < p$. Since $p | a_n$, if $p | a_m$, then $p | (a_m - a_n)$, which implies $a_m = a_n$, a contradiction. Thus, for all $m \in \{n+1, \dots, n + \lfloor p/m_1 \rfloor\}$, $p \nmid a_m$.
+Since $\gcd(a_m, a_n) > 1$ for all $m > n$, the set $Q_n \setminus \{p\}$ must be a hitting set for $\{Q_{n+1}, \dots, Q_{n + \lfloor p/m_1 \rfloor}\}$. Let $k = \omega(a_n)$ be the number of distinct prime factors of $a_n$. By the pigeonhole principle, there exists a prime $q \in Q_n \setminus \{p\}$ that divides at least $\frac{\lfloor p/m_1 \rfloor}{k}$ values of $a_m$ in the range $m \in \{n+1, \dots, n + \lfloor p/m_1 \rfloor\}$.
+However, if $q$ divides $a_m$ and $a_{m'}$, then $q | (a_m - a_{m'}) \le (m-m')m_1$. If $q > m_1$, then $m-m' \ge q/m_1$. Thus, the number of $m$ in a range of length $p/m_1$ that $q$ can divide is at most $\frac{p/m_1}{q/m_1} + 1 = p/q + 1$.
+Thus, we have $\frac{p/m_1 - 1}{k} \le \frac{p}{q} + 1$. As $p \to \infty$, since $k = \omega(a_n) \le \log_2(a_n) \le \log_2(a_1 + n m_1)$, the growth of $k$ is logarithmic while the range $p/m_1$ is linear in $p$. This forces the primes $q$ to be bounded by a value depending only on $m_1$ and the growth of $k$. Consequently, the set $S$ must be finite.
+
+**2. Eventual Periodicity**
+Since $S$ is finite, the collection of all possible hitting sets $\mathcal{P}(S)$ is finite. The sequence of hitting set families $\mathcal{H}_n$ is non-increasing ($\mathcal{H}_{n+1} \subseteq \mathcal{H}_n$) and non-empty. Thus, $\mathcal{H}_n$ stabilizes to a constant set $\mathcal{H}_\infty$ for $n \ge N$.
+For $n \ge N$, the sequence follows the recurrence $a_{n+1} = f(a_n) = \min_{m \in M_\infty} m \lceil \frac{a_n+1}{m} \rceil$, where $M_\infty = \{m_H \mid H \in \mathcal{H}_\infty\}$.
+Let $L_0 = \text{lcm}(m \in M_\infty)$. Then $f(x + L_0) = \min_{m \in M_\infty} m \lceil \frac{x+L_0+1}{m} \rceil = \min_{m \in M_\infty} (m \lceil \frac{x+1}{m} \rceil + L_0) = f(x) + L_0$.
+The sequence $a_n \pmod{L_0}$ is eventually periodic because it takes values in a finite set and $a_{n+1} \pmod{L_0}$ depends only on $a_n \pmod{L_0}$. Thus, there exist $T$ and $L'$ such that $a_{n+T} = a_n + L'$ for all $n \ge N$.
+
+**3. Global Periodicity**
+We extend this to all $n \ge 1$. Choose $K$ such that $L = KL'$ is a multiple of $a_1, \dots, a_{N+KT}$. Let $T_{new} = KT$. Then $a_{n+T_{new}} = a_n + L$ for all $n \ge N$.
+We prove $a_{n+T_{new}} = a_n + L$ for $n = N-1, N-2, \dots, 1$ by backward induction.
+For $n = N-1$, let $z = a_{N-1} + L$.
+1. $z > a_{N-2} + L = a_{N-2+T_{new}}$.
+2. For $i < N-1$, $\gcd(z, a_i) = \gcd(a_{N-1} + L, a_i) = \gcd(a_{N-1}, a_i) > 1$ since $a_i \mid L$.
+3. For $N-1 \le i < N-1+T_{new}$, if $i < N$, $\gcd(z, a_i) = \gcd(a_{N-1}, a_i) > 1$ since $a_i \mid L$. If $i \ge N$, then $i = j + T_{new}$ for some $j < N-1$. Then $\gcd(z, a_i) = \gcd(a_{N-1} + L, a_j + L) = \gcd(a_{N-1}, a_j) > 1$ since $j < N-1$.
+4. Minimality: If $a_{N-2+T_{new}} < w < a_{N-1} + L$ and $\gcd(w, a_i) > 1$ for all $i < N-1+T_{new}$, then $w-L$ satisfies $a_{N-2} < w-L < a_{N-1}$ and $\gcd(w-L, a_i) = \gcd(w, a_i) > 1$ for all $i < N$. For $N \le i < N-1+T_{new}$, $\gcd(w-L, a_i) = \gcd(w-L, a_{i-T_{new}} + L) = \gcd(w-L, a_{i-T_{new}})$, which is $> 1$ since $i-T_{new} < N-1$. This contradicts the minimality of $a_{N-1}$.
+Thus $a_{N-1+T_{new}} = a_{N-1} + L$. By induction, $a_{n+T_{new}} = a_n + L$ for all $n \ge 1$.

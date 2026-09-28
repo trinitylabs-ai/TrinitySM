@@ -1,0 +1,39 @@
+To prove the inequality $\sqrt{a} + \sqrt{b} + \sqrt{c} \geq 3\sqrt{3}(ab + bc + ca)$ for positive reals $a, b, c$ such that $a + b + c = 1$, we employ a change of variables and the method of Lagrange multipliers.
+
+### 1. Change of Variables
+Let $x = \sqrt{a}$, $y = \sqrt{b}$, and $z = \sqrt{c}$. Since $a, b, c > 0$, it follows that $x, y, z > 0$. The constraint $a + b + c = 1$ becomes:
+\[ x^2 + y^2 + z^2 = 1 \]
+The inequality to be proved is:
+\[ x + y + z \geq 3\sqrt{3}(x^2y^2 + y^2z^2 + z^2x^2) \]
+Define the function $f(x, y, z) = x + y + z - 3\sqrt{3}(x^2y^2 + y^2z^2 + z^2x^2)$ on the set $S = \{(x, y, z) \in \mathbb{R}^3 : x^2 + y^2 + z^2 = 1, x, y, z \geq 0\}$. Since $S$ is a compact set and $f$ is continuous, $f$ must attain a minimum value on $S$.
+
+### 2. Identification of Critical Points
+We use Lagrange multipliers to find the extrema of $f$ subject to $g(x, y, z) = x^2 + y^2 + z^2 - 1 = 0$. The condition $\nabla f = \lambda \nabla g$ yields:
+\[ \begin{cases} 1 - 6\sqrt{3}x(y^2 + z^2) = 2\lambda x \\ 1 - 6\sqrt{3}y(x^2 + z^2) = 2\lambda y \\ 1 - 6\sqrt{3}z(x^2 + y^2) = 2\lambda z \end{cases} \]
+Subtracting the second equation from the first:
+\[ 6\sqrt{3}(y(x^2 + z^2) - x(y^2 + z^2)) = 2\lambda(x - y) \]
+\[ 6\sqrt{3}(yx^2 + yz^2 - xy^2 - xz^2) = 2\lambda(x - y) \]
+\[ 6\sqrt{3}(xy(x - y) - z^2(x - y)) = 2\lambda(x - y) \]
+\[ (x - y) [6\sqrt{3}(xy - z^2) - 2\lambda] = 0 \]
+Thus, for any pair of variables, either they are equal or $2\lambda = 6\sqrt{3}(xy - z^2)$. If $x, y, z$ are all distinct, then $xy - z^2 = yz - x^2 = zx - y^2$. From $xy - z^2 = yz - x^2$, we have $x^2 - z^2 + y(x - z) = 0$, which factors as $(x - z)(x + y + z) = 0$. Since $x, y, z > 0$, this implies $x = z$, contradicting the assumption that they are distinct. Therefore, at any interior critical point, at least two variables must be equal.
+
+### 3. Analysis of the Equal-Variable Case
+Assume $x = y$. The constraint becomes $2x^2 + z^2 = 1$, so $z = \sqrt{1 - 2x^2}$ for $x \in [0, 1/\sqrt{2}]$. Substituting into $f$:
+\[ f(x) = 2x + \sqrt{1 - 2x^2} - 3\sqrt{3}(x^4 + 2x^2(1 - 2x^2)) = 2x + \sqrt{1 - 2x^2} - 3\sqrt{3}(2x^2 - 3x^4) \]
+To find the minimum of $f(x)$, we examine its derivative:
+\[ f'(x) = 2 - \frac{2x}{\sqrt{1 - 2x^2}} - 3\sqrt{3}(4x - 12x^3) = 2 - \frac{2x}{z} - 12\sqrt{3}x(1 - 3x^2) \]
+Setting $f'(x) = 0$, we observe that $x = 1/\sqrt{3}$ is a solution, as $z = \sqrt{1 - 2/3} = 1/\sqrt{3}$, and:
+\[ f'(1/\sqrt{3}) = 2 - \frac{2/\sqrt{3}}{1/\sqrt{3}} - 12\sqrt{3}(1/\sqrt{3})(1 - 1) = 2 - 2 - 0 = 0 \]
+At $x = 1/\sqrt{3}$, we have $x = y = z = 1/\sqrt{3}$, and:
+\[ f(1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3}) = \frac{3}{\sqrt{3}} - 3\sqrt{3}\left(\frac{1}{9} + \frac{1}{9} + \frac{1}{9}\right) = \sqrt{3} - 3\sqrt{3}\left(\frac{1}{3}\right) = 0 \]
+We check the endpoints of the domain $x \in [0, 1/\sqrt{2}]$:
+- At $x = 0$, $f(0) = 0 + 1 - 0 = 1 > 0$.
+- At $x = 1/\sqrt{2}$, $f(1/\sqrt{2}) = \sqrt{2} + 0 - 3\sqrt{3}(2(1/2) - 3(1/4)) = \sqrt{2} - \frac{3\sqrt{3}}{4} \approx 1.414 - 1.299 > 0$.
+Since $x = 1/\sqrt{3}$ is the only critical point in the interior and $f(1/\sqrt{3}) = 0$, the minimum value of $f$ on this path is $0$.
+
+### 4. Conclusion
+Since all critical points and boundary conditions lead to $f(x, y, z) \geq 0$, the minimum value of $f$ is $0$, achieved if and only if $x = y = z = 1/\sqrt{3}$, which corresponds to $a = b = c = 1/3$. Thus:
+\[ \sqrt{a} + \sqrt{b} + \sqrt{c} \geq 3\sqrt{3}(ab + bc + ca) \]
+for all $a, b, c > 0$ such that $a + b + c = 1$.
+
+\(\square\)

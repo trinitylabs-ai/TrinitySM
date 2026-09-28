@@ -1,0 +1,45 @@
+{
+  "stage": "qwen36_diagnosis_fusion",
+  "started_at": "2026-08-23T03:48:10.735933+00:00",
+  "completed_at": "2026-08-23T03:51:44.692822+00:00",
+  "latency_seconds": 213.95689296815544,
+  "transport": "openai-compatible-loopback-http",
+  "endpoint": "http://127.0.0.1:8027/v1",
+  "model": "Qwen/Qwen3.6-27B",
+  "prompt_sha256": "69e23857e6b538e8ccaad3faeb6b8c4b3e513c76ac6903f3d5f464db8379f57b",
+  "user_prompt_sha256": "457c87f4c3642b474d50cfa388aa3f254198ce3af646b544d24953b3563ccf19",
+  "request_sha256": "26a466ae98d450d9d2a801762c3c5741467df1e50cfb13f66da61fdafb161b11",
+  "response_id": "chatcmpl-ab9b4fa0fa86a953",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 12527,
+    "total_tokens": 18111,
+    "completion_tokens": 5584,
+    "prompt_tokens_details": null
+  },
+  "config": {
+    "max_tokens": 12000,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 64,
+    "min_p": null,
+    "presence_penalty": null,
+    "repetition_penalty": null,
+    "seed": 3632369394,
+    "thinking_token_budget": null,
+    "reasoning_effort": null,
+    "response_format": null,
+    "timeout_seconds": 14400
+  },
+  "message_roles": [
+    "system",
+    "user"
+  ],
+  "continuation": false,
+  "prior_generation_sha256": null,
+  "system_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.prompt.txt",
+  "user_prompt_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.user_prompt.txt",
+  "thinking_enabled": true,
+  "response_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.raw_response.json",
+  "reasoning_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/qwen36/three_block/p4_s2_first_revision/qwen36_diagnosis_fusion.reasoning.txt"
+}

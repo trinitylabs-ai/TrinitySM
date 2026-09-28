@@ -1,0 +1,31 @@
+To prove that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for all positive real numbers $x, y, z, t$ such that $2(x + y + z + t) \ge xyzt$, we define the sum $S = x + y + z + t$ and the product $P = xyzt$. The given condition is $P \le 2S$.
+
+We analyze the expression $x^2 + y^2 + z^2 + t^2$ using two cases based on the value of $S$.
+
+**Case 1: $S \ge 8$**
+By the Quadratic Mean-Arithmetic Mean (QM-AM) inequality, we have:
+\[ \sqrt{\frac{x^2 + y^2 + z^2 + t^2}{4}} \ge \frac{x + y + z + t}{4} \]
+Squaring both sides and multiplying by 4, we obtain:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{(x + y + z + t)^2}{4} = \frac{S^2}{4} \]
+Since $S \ge 8$, it follows that:
+\[ \frac{S^2}{4} = \frac{S}{4} \cdot S \ge \frac{8}{4} S = 2S \]
+Combining this result with the given condition $P \le 2S$, we have:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \ge 2S \ge P \]
+Thus, $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for $S \ge 8$.
+
+**Case 2: $S < 8$**
+From the given condition $P \le 2S$ and the assumption $S < 8$, we deduce:
+\[ P < 2(8) = 16 \]
+By the Arithmetic Mean-Geometric Mean (AM-GM) inequality:
+\[ x^2 + y^2 + z^2 + t^2 \ge 4 \sqrt[4]{x^2 y^2 z^2 t^2} = 4 \sqrt{xyzt} = 4\sqrt{P} \]
+We now compare $4\sqrt{P}$ with $P$. Consider the difference:
+\[ 4\sqrt{P} - P = \sqrt{P}(4 - \sqrt{P}) \]
+Since $P < 16$, we have $\sqrt{P} < 4$, which implies $4 - \sqrt{P} > 0$. Because $x, y, z, t$ are positive, $\sqrt{P} > 0$, so $4\sqrt{P} - P > 0$, or $4\sqrt{P} > P$.
+Therefore:
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{P} > P \]
+Thus, $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for $S < 8$.
+
+**Conclusion**
+In both cases, the inequality $x^2 + y^2 + z^2 + t^2 \ge xyzt$ is satisfied. Equality holds if and only if $S=8$, $x=y=z=t=2$, and $P=16$, in which case both sides of the inequality equal 16.
+
+\(\square\)

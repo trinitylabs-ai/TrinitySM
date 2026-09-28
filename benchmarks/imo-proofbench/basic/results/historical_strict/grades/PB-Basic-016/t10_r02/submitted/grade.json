@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T17:35:50.817747+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 16,
+  "problem_id": "PB-Basic-016",
+  "case_id": "PB-Basic-016.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b7c61f1b0a854f75a7b8ffbb8c95ed45496ae0ef06e52fc526a08babda679cd6",
+  "reference_sha256": "a26399654be52ba0ffb8544a40186c12222e4ac40472531796bbc0390fa4a33e",
+  "proof_sha256": "552e234337b95fe2c7e4cefd1bab8e2ad8606cbdfc3158149dee40db8ef2a56f",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/tasks.json",
+  "task_manifest_sha256": "5039baa647efcb46330330160cdb4692ad07b3a6ab14df28b51c8db7e3f4e244",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The winding-number invariant is rigorously defined, proved invariant under every valid recoloring, and correctly computed as different for the initial and target colorings.",
+    "strengths": [
+      "Correctly characterizes all possible recolorings and proves the two affected edge contributions remain unchanged.",
+      "Correctly verifies integrality of the winding number and computes the endpoint values as \\(-1\\) and \\(1\\).",
+      "Provides a complete equivalent invariant argument without relying on the reference solution."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2dcfd27140126f4c28514e94f218fda1dd7e2199589ac6c6a55fd177d205834f",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "0651d4867b26391a858a45da627b47ec42d44d65d676c48a00acb960a824b360",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Case 2, the claim that the distance from x0 to the forward progression {y+n c(y): n∈N} is at most c(y) is false when y>x0; for example, the first point of the progression may already lie arbitrarily far to the right of x0. Consequently, the deduction c(y)≥4x0 and the ensuing elimination of mixed zero and positive defect values are unsupported. This is the decisive compatibility argument, so Rule E caps the score at 3.",
+    "summary": "The final classification f(x)=x+c with c≥0 is correct. The iteration identity, nonnegativity of the defect, equality of all positive defect values, and converse verification are sound. However, the proof does not validly rule out coexistence of zero and positive defects, which is a central required case. A nontrivial local repair, such as a connectedness argument using the already derived bound, is needed.",
+    "strengths": [
+      "Correctly obtains f(f(x))=2f(x)-x, defect invariance, the iterate formula, and c(x)≥0.",
+      "Correctly proves that any two positive defect values on the image of f are equal, using orbit points whose square roots become arbitrarily close.",
+      "Correctly verifies that every function f(x)=x+c with c≥0 satisfies both inequalities."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The mixed-defect case rests on a false assertion about the distance from x0 to a one-sided arithmetic progression. Without it, neither c(y)≥4x0 nor the propagation of the zero set follows, so constancy of c is not established."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:44:33.229101+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

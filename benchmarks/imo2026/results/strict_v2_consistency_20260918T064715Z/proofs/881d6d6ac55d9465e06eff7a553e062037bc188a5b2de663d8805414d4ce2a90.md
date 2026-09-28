@@ -1,0 +1,42 @@
+To determine all functions $f: \mathbb{R}_{>0} \to \mathbb{R}_{>0}$ such that for every $x, y > 0$,
+\[ \sqrt{\frac{x^2 + f(y)^2}{2}} \ge \frac{f(x) + y}{2} \ge \sqrt{x f(y)}, \]
+we square the given inequalities. Since all terms are positive, we have:
+(i) $\frac{x^2 + f(y)^2}{2} \ge \frac{(f(x) + y)^2}{4} \implies 2x^2 + 2f(y)^2 \ge (f(x) + y)^2$
+(ii) $\frac{(f(x) + y)^2}{4} \ge x f(y) \implies (f(x) + y)^2 \ge 4x f(y)$
+
+Combining these, we obtain the chain of inequalities:
+\[ 2x^2 + 2f(y)^2 \ge (f(x) + y)^2 \ge 4x f(y). \]
+Note that the difference between the outer bounds is $2x^2 + 2f(y)^2 - 4xf(y) = 2(x - f(y))^2$.
+
+**1. Deriving a Functional Equation**
+For any $y > 0$, let $x = f(y)$. Substituting this into the chain:
+\[ 2f(y)^2 + 2f(y)^2 \ge (f(f(y)) + y)^2 \ge 4f(y) f(y) \]
+\[ 4f(y)^2 \ge (f(f(y)) + y)^2 \ge 4f(y)^2. \]
+This forces $(f(f(y)) + y)^2 = 4f(y)^2$. Since $f(x), y > 0$, we must have:
+\[ f(f(y)) + y = 2f(y) \quad \text{for all } y > 0. \]
+Let $g(x) = f(x) - x$. The equation $f(f(y)) - f(y) = f(y) - y$ can be rewritten as:
+\[ g(f(y)) = g(y) \quad \text{for all } y > 0. \]
+
+**2. Non-negativity of $g$**
+Consider the sequence $a_0 = y$ and $a_{n+1} = f(a_n)$. The relation $a_{n+2} - 2a_{n+1} + a_n = 0$ implies the general solution $a_n = n(f(y) - y) + y = n g(y) + y$. Since the codomain of $f$ is $\mathbb{R}_{>0}$, we must have $a_n > 0$ for all $n \in \mathbb{N}$. If $g(y) < 0$, then for sufficiently large $n$, $a_n$ would be negative. Thus, $g(y) \ge 0$ for all $y > 0$.
+
+**3. Constancy of $g$**
+From inequality (i), we have $f(x) + y \le \sqrt{2x^2 + 2f(y)^2}$. Substituting $f(x) = x + g(x)$ and letting $z = f(y)$, we note that $y = z - g(y) = z - g(z)$ because $g(f(y)) = g(y)$. Thus:
+\[ x + g(x) + z - g(z) \le \sqrt{2x^2 + 2z^2} \implies g(x) - g(z) \le \sqrt{2x^2 + 2z^2} - (x + z). \]
+Let $h(x, z) = \sqrt{2x^2 + 2z^2} - (x + z) = \frac{(x - z)^2}{\sqrt{2x^2 + 2z^2} + x + z}$. This inequality holds for all $x > 0$ and $z \in \text{Im}(f)$.
+
+Suppose $g$ takes two positive values $c_1, c_2 > 0$ on $\text{Im}(f)$. Let $z_1, z_2 \in \text{Im}(f)$ such that $g(z_1) = c_1$ and $g(z_2) = c_2$. Then $z_1 + nc_1 \in \text{Im}(f)$ and $z_2 + mc_2 \in \text{Im}(f)$ for all $n, m \in \mathbb{N}$. Using the bound:
+\[ g(z_1 + nc_1) - g(z_2 + mc_2) \le h(z_1 + nc_1, z_2 + mc_2) \implies c_1 - c_2 \le h(z_1 + nc_1, z_2 + mc_2). \]
+For any $n \in \mathbb{N}$, we can choose $m \in \mathbb{N}$ such that $|(z_1 + nc_1) - (z_2 + mc_2)| < c_2$. As $n \to \infty$, the denominator of $h$ tends to infinity while the numerator remains bounded, so $h(z_1 + nc_1, z_2 + mc_2) \to 0$. This forces $c_1 \le c_2$. By symmetry, $c_2 \le c_1$, so $c_1 = c_2$. Thus, $g$ takes at most one positive value $c$ on $\text{Im}(f)$. Since $g(x) = g(f(x))$ and $f(x) \in \text{Im}(f)$, $g(x) \in \{0, c\}$ for all $x \in \mathbb{R}_{>0}$.
+
+Assume $c > 0$. Let $S_0 = \{x \in \mathbb{R}_{>0} : g(x) = 0\}$ and $S_c = \{x \in \mathbb{R}_{>0} : g(x) = c\}$. If $x \in S_0$ and $y \in S_c$, the original inequality $\frac{f(x) + y}{2} \ge \sqrt{x f(y)}$ becomes $\frac{x + y}{2} \ge \sqrt{x(y + c)}$. Squaring gives $(x + y)^2 \ge 4x(y + c)$, which simplifies to $(x - y)^2 \ge 4xc$.
+This implies that for any $x \in S_0$, the interval $(x - 2\sqrt{xc}, x + 2\sqrt{xc}) \cap \mathbb{R}_{>0}$ contains no elements of $S_c$. Since $g(y) \in \{0, c\}$, this interval must be contained in $S_0$, so $S_0$ is open in $\mathbb{R}_{>0}$.
+Furthermore, let $b \in \mathbb{R}_{>0}$ be a limit point of $S_0$. If $b \in S_c$, then for all $x \in S_0$, we must have $(x - b)^2 \ge 4xc$. However, as $x \to b$, $(x - b)^2 \to 0$ while $4xc \to 4bc > 0$. This is a contradiction for $x$ sufficiently close to $b$. Thus $b \notin S_c$, so $b \in S_0$, meaning $S_0$ is closed in $\mathbb{R}_{>0}$. Since $\mathbb{R}_{>0}$ is connected, $S_0$ must be either $\emptyset$ or $\mathbb{R}_{>0}$. In either case, $g$ is constant.
+
+**4. Final Verification**
+Let $f(x) = x + c$ for some constant $c \ge 0$. Substituting into the original inequalities:
+$\frac{x^2 + (y+c)^2}{2} - \frac{(x+y+c)^2}{4} = \frac{2x^2 + 2y^2 + 4yc + 2c^2 - (x^2 + y^2 + c^2 + 2xy + 2xc + 2yc)}{4} = \frac{(x - y - c)^2}{4} \ge 0$,
+and $\frac{(x+y+c)^2}{4} - x(y+c) = \frac{x^2 + y^2 + c^2 + 2xy + 2xc + 2yc - 4xy - 4xc}{4} = \frac{(x - y - c)^2}{4} \ge 0$.
+Both inequalities hold for all $x, y > 0$ and $c \ge 0$.
+
+The functions are $f(x) = x + c$ for any constant $c \ge 0$.

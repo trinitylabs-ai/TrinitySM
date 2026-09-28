@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-021",
+  "problem": "Infinitely many boys and girls stand in a line alternatingly. For\n a given positive integer $N$, they choose positive integers according\n to the following rules:\n\n (1) The first $N$ people in the line choose any positive integers\n they want.\n\n (2) For each $m>N$, the $m$-th person chooses the number that is\n one more than the number of appearances of the number chosen by the\n $(m-1)$-th person appears among the numbers chosen by the first $m-2$\n people.\n\n Let $b_{i}$ be the number chosen by the $i$-th boy, and $g_{i}$\n be the number chosen by the $i$-th girl. Prove that at least one\n of the following holds:\n\n (i) There exists a sufficiently large integer $M$ such that $\\{b_{n}\\}_{n\\ge M}$\n is a periodic sequence.\n\n (ii) There exists a sufficiently large integer $M$ such that $\\{g_{n}\\}_{n\\ge M}$\n is a periodic sequence."
+}

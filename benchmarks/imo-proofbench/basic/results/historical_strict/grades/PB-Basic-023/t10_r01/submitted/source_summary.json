@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T01:23:56.219814+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 23,
+  "problem_id": "PB-Basic-023",
+  "case_id": "PB-Basic-023.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/p23/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/p23/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/p23/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "6c2d45869261be95ca230e89c427572c388fcaddb30bfb8722f630aaa7a0b124",
+  "reference_sha256": "4393d5c48aa4d550dc62db261ca201891f0c1235d787f441e21f615629b91bc9",
+  "proof_sha256": "f7905a9d98ef1ac4d008b79a92c7bb767135d665d1a488c688375f127c6ffa57",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T012219892613Z/inputs/tasks.json",
+  "task_manifest_sha256": "21785542003bf9c02da7dd9fbbd5063771db41b0bf5d480fc5302d1120316ce3",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof exhausts all cases for \\(c\\), correctly applies LTE, and rigorously eliminates every remaining subcase through valid order and divisibility arguments. It establishes exactly the two claimed solutions.",
+    "strengths": [
+      "Correctly derives \\(c=v_2(7^b-1)=v_2(b)+3\\) when \\(c\\ge3\\).",
+      "The factorization argument completely resolves the \\(m=1\\) case.",
+      "The modular-order chain for \\(m\\ge2\\) yields a valid final contradiction modulo \\(7\\)."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,22 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Correctly reduces the problem to a matching removal problem in the regime $q=1$ (i.e., $k > n^2/2$), showing that if $q=1$, monochromatic edges form a matching $M$ of size $m = n^2 - k$. Establishes the relation $a(n) = n^2 - f(n) + 1$, where $f(n)$ is the minimum matching size whose removal eliminates all paths of length $n-1$.
+Claim gap: The proof asserts $f(n) \le n+1$ (Line 22) and uses an asymptotic dominance argument to force $L=1$ (Line 14). Both are mathematically defective. The claim that a matching of size $n+1$ can block all paths of length $n-1$ in an $n \times n$ grid is false; grid graphs retain long paths after removing $O(n)$ edges. Consequently, $f(n)$ is $\Theta(n^2)$, not $O(n)$, and the asymptotic deduction $L=1$ is circular (it assumes $a(n) \sim n^2$ to justify $L=1$, contradicting the matching analysis which shows $a(n) \le n^2/2$).
+Qualifications and supplied repairs: NONE. The false bound $f(n) \le n+1$ cannot be repaired without fundamentally changing the approach. The asymptotic argument for $L$ lacks justification from the problem's actual scaling.
+Decisive checks: 
+- Line 22: Claim that a matching of size $n+1$ ensures longest path $\le n-2$. VERIFIED DEFECT. For $n=5$, removing 6 edges from a 25-vertex grid leaves 34 edges. The grid's edge connectivity and cycle structure guarantee paths of length $\ge 4$ persist. A matching of size $O(n)$ cannot fragment the grid into components of size $< n$.
+- Line 14: Asymptotic argument for $L=1$. DEMONSTRATED DEFECT. Assumes $a(n) \sim n^2$ without proof. If $a(n) \sim c n^2$, the inequality requires $L = 1/c$. The matching reduction shows $k$ scales with $n^2/2$, implying $c=1/2$ and $L=2$.
+
+## Proof B
+Established theorem: Correctly identifies the critical regime $k \approx n^2/2$ where $q=1$ and monochromatic edges form a matching $S$. Establishes $a(n) \le \lfloor n^2/2 \rfloor + 1$ by arguing $G \setminus S$ contains a path of length at least $n-1$. Correctly identifies $L=2$ and verifies $|2a(n) - n^2| \le 2 \le n + 2\sqrt{n} + 3$ for $n \ge 5$.
+Claim gap: Line 7 cites a "known result" that removing a matching from a Hamiltonian bipartite graph leaves a path of length $\ge N/2$. This general statement is false (e.g., removing a perfect matching from a cycle $C_N$ leaves disjoint edges). However, the specific application to grid graphs still yields paths of length $\ge n-1$ due to the grid's orthogonal structure and high edge connectivity. The proof does not establish a lower bound for $a(n)$, but only an upper bound is needed to verify the inequality for $L=2$.
+Qualifications and supplied repairs: The cited lemma is overgeneralized and requires grid-specific justification (e.g., using the fact that grid graphs minus a matching retain minimum degree $\ge 1$ and contain long paths via standard grid traversal arguments). This is a local missing justification, not a structural flaw. The inequality verification and constant identification are exact.
+Decisive checks:
+- Line 5-6: Correctly computes $m = \lceil n^2/2 \rceil - 1$ and identifies $S$ as a matching. VERIFIED.
+- Line 11-15: Algebraic verification of $|2a(n) - n^2| \le 2$ and comparison with RHS. VERIFIED. For $n \ge 5$, $2 \le n + 2\sqrt{n} + 3$ holds strictly.
+- Line 7: Lemma citation. DEMONSTRATED DEFECT in general form, but the required conclusion (path length $\ge n-1$) remains true for grids. The gap is repairable with elementary grid graph properties.
+
+## Decision
+Winner: B
+Reason: Proof B correctly identifies the asymptotic scaling $a(n) \sim n^2/2$ and selects $L=2$, which satisfies the inequality with a verified margin. Its only defect is an overgeneralized citation of a graph theory lemma, but the core conclusion (existence of a path of length $n-1$ after removing a matching in a grid) is mathematically sound and easily justifiable with grid-specific arguments. Proof A fundamentally misidentifies the scaling, incorrectly assumes $L=1$ via circular asymptotic reasoning, and relies on a demonstrably false claim that $O(n)$ matching edges can block all paths of length $n-1$ in an $n \times n$ grid. B's verified inequality check and correct constant identification decisively outweigh A's structural errors.

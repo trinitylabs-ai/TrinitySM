@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "4674555b0b8dc58eb9d112cea4ba86d3a30412aa813c79404244504af8306d95",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "c2ae201acd1b70fd5ef6668cb1856d67a7d04707483c5c4209bc89a786616007",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The final assertion that the displayed trigonometric expression simplifies to \\(\\tfrac14(b^2-c^2)\\) is not derived: the remaining angle constraints are never converted into compatibility equations or used in an elimination.",
+    "summary": "The coordinate reduction, sine-law computations, cotangent relations, and circumcenter projection formulas are coherent and reduce the goal to an explicit true equality. However, proving that equality from \\(\\angle LBK=\\beta\\) and \\(\\angle LCK=\\gamma\\) is the load-bearing heart of the problem, and it is replaced entirely by an assertion. This is a substantial omitted calculation under Rules B and F; because the exact remaining equality is displayed and the preceding reduction is valid, score 4 is eligible, but no higher score is justified.",
+    "strengths": [
+      "Correctly reduces \\(OM=ON\\) to the dot-product identity \\(bz-cx=\\tfrac14(b^2-c^2)\\).",
+      "Correctly applies the sine law to obtain the two cotangent relations for \\(\\theta_K\\) and \\(\\theta_L\\).",
+      "Correctly writes and solves the circumcenter projection equations, producing an explicit expression whose verification would finish the proof."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "No computation or compatibility argument is supplied for the decisive final trigonometric identity; merely citing the two unused angle constraints does not establish it."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T09:03:57.990232+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

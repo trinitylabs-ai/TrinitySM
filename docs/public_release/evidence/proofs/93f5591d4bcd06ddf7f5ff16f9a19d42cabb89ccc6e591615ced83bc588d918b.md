@@ -1,0 +1,41 @@
+To find the number of pairs of paths $f(n)$ on an $n \times n$ grid such that both paths start at $(0, 0)$ and end at $(n, n)$, allow only right (R) and up (U) movements, and satisfy the condition that the $y$-coordinate of the first path $y_1(t)$ never exceeds the $y$-coordinate of the second path $y_2(t)$ at any timestep $t \in \{0, 1, \dots, 2n\}$, we proceed as follows:
+
+### 1. Combinatorial Interpretation
+A path from $(0, 0)$ to $(n, n)$ consists of $n$ right moves and $n$ up moves, for a total of $2n$ steps. Let the two paths be $P_1$ and $P_2$. The condition $y_1(t) \le y_2(t)$ for all $t$ implies that $P_1$ always stays "below" or "to the right" of $P_2$.
+
+This is a classic problem of counting non-crossing paths. According to the Lindström-Gessel-Viennot (LGV) Lemma, the number of pairs of non-intersecting paths from start points $A_1, A_2$ to end points $B_1, B_2$ is given by the determinant of the matrix of path counts between these points. To allow paths to touch but not cross, we shift the coordinates to create a non-intersecting problem.
+
+### 2. Applying the LGV Lemma
+We define the shifted start and end points:
+- $A_1 = (0, 0), B_1 = (n, n)$
+- $A_2 = (-1, 1), B_2 = (n-1, n+1)$
+
+A pair of non-intersecting paths $P_1'$ from $A_1$ to $B_1$ and $P_2'$ from $A_2$ to $B_2$ corresponds to a pair of paths $P_1, P_2$ from $(0, 0)$ to $(n, n)$ such that $y_1(t) \le y_2(t)$. The number of such pairs is:
+\[ f(n) = \det \begin{pmatrix} N(A_1, B_1) & N(A_1, B_2) \\ N(A_2, B_1) & N(A_2, B_2) \end{pmatrix} \]
+where $N(A, B)$ is the number of paths from $A$ to $B$ using only R and U moves.
+- $N(A_1, B_1) = \binom{n+n}{n} = \binom{2n}{n}$
+- $N(A_2, B_2) = \binom{(n-1 - (-1)) + (n+1 - 1)}{n-1 - (-1)} = \binom{2n}{n}$
+- $N(A_1, B_2) = \binom{(n-1 - 0) + (n+1 - 0)}{n-1 - 0} = \binom{2n}{n-1}$
+- $N(A_2, B_1) = \binom{(n - (-1)) + (n - 1)}{n - (-1)} = \binom{2n}{n+1} = \binom{2n}{n-1}$
+
+Substituting these into the determinant:
+\[ f(n) = \binom{2n}{n}^2 - \binom{2n}{n-1}^2 \]
+
+### 3. Calculation for $n = 10$
+We calculate the binomial coefficients for $n = 10$:
+\[ \binom{20}{10} = \frac{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 184756 \]
+\[ \binom{20}{9} = \binom{20}{10} \cdot \frac{10}{11} = 184756 \cdot \frac{10}{11} = 16796 \cdot 10 = 167960 \]
+
+Now, apply the difference of squares formula:
+\[ f(10) = 184756^2 - 167960^2 = (184756 - 167960)(184756 + 167960) \]
+\[ f(10) = 16796 \cdot 352716 \]
+
+Performing the final multiplication:
+\[ 16796 \cdot 352716 = 16796(350000 + 2716) \]
+\[ 16796 \cdot 350000 = 5878600000 \]
+\[ 16796 \cdot 2716 = 45617936 \]
+\[ f(10) = 5878600000 + 45617936 = 5924217936 \]
+
+The number of such pairs of paths is $5924217936$.
+
+\(\square\)

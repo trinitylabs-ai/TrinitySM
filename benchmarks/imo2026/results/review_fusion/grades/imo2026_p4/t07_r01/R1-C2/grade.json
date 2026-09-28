@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T17:01:39.963301+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "case_id": "imo2026_p4.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "1fcc43601af78d86b1fbc493ec6071d700962e95af2dea7c291b23b8af90f5d5",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the necessity argument, the submission simply asserts that Shan-Yu can initially choose a triangle whose three angles are not positive integer multiples of θ, without proving such a triangle exists. This is required to initiate the invariant, though it is repaired directly by choosing {θ/2, θ/2, 180°−θ}.",
+    "summary": "The characterization is correct, and both main arguments are essentially sound. The four-case invariant proves that at least one child remains free of multiples of θ, while the sufficiency strategy correctly produces (k−1)θ from a sub-θ angle and then peels multiples down to θ. The omitted construction of the initial safe triangle is load-bearing but routine. The θ=90° case also should specify choosing a vertex whose altitude foot lies inside the opposite side.",
+    "strengths": [
+      "Correctly identifies exactly θ=180°/k for integers k≥2.",
+      "The four possible ways both children could acquire a multiple of θ are exhaustive and correctly yield contradictions.",
+      "The peeling strategy for an angle nθ is valid and guarantees termination.",
+      "The construction from an angle C'<θ correctly produces the angle 180°−θ=(k−1)θ."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Existence of an initial triangle with no angle a positive integer multiple of θ is asserted but not justified; the explicit triangle {θ/2, θ/2, 180°−θ} supplies the missing argument."
+      },
+      {
+        "severity": "minor",
+        "description": "For θ=90°, the perpendicular foot need not lie on the opposite side for an arbitrary chosen vertex. Mulan must choose a suitable vertex—an obtuse vertex in an obtuse triangle, or any vertex in an acute triangle; a right triangle is already terminal."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

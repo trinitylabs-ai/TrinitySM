@@ -1,0 +1,80 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T18:35:45.014700+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "per_problem": {
+    "4": {
+      "scores": [
+        3
+      ],
+      "mean": 3.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T18:35:45.013128+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 4,
+      "problem_id": "imo2026_p4",
+      "case_id": "imo2026_p4.explicit.t10_r01",
+      "candidate_id": "t10_r01",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q4_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t10_r01/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "b25f698d5ac018d1f5a0191545a1ce228e7f59fb951d5c9b32a5783393751420",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "In Case 3's second subcase, the claim that repeatedly cutting the largest angle must eventually make the largest angle less than 180°−θ or equal to θ is unsupported and false. For θ=90° and angles (60°,100°,20°), such cuts merely transfer 90° between angles, so one angle remains greater than 90° indefinitely.",
+        "summary": "The final characterization is correct, and much of the sufficiency argument is sound. The second subcase of sufficiency has a false termination claim, although it could be repaired locally: after its first cut, the angle β−θ already satisfies (β−θ)+θ=β<180°, so the preceding subcase applies. More seriously, necessity rests entirely on the unproved and explicitly false assertion that every W_k is a countable union of lines for any θ. Projection after eliminating the cut parameter can impose no condition on the parent when the two child equations become dependent; the proof does not classify or exclude this degeneracy under θ≠180°/n. Thus the central necessity direction is not established as submitted.",
+        "strengths": [
+          "The claimed answer θ=180°/n for integers n≥2 is correct.",
+          "Peeling an angle kθ into θ and (k−1)θ is a valid strategy.",
+          "The reduction when all angles exceed θ is essentially correct: the retained nonterminal child has a new smallest angle decreased by θ.",
+          "The first subcase for an angle γ<θ correctly constructs one terminal child and another containing (n−1)θ.",
+          "The recursive definition of bounded-depth winning sets is conceptually appropriate."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "The termination assertion in the second subcase of Case 3 is false. It can be repaired with a short different observation, but that observation is absent."
+          },
+          {
+            "severity": "major",
+            "description": "The countable-union-of-lines induction in the necessity proof does not handle dependent child constraints whose elimination becomes an identity. The statement is even claimed for every θ, contradicting the already-proved sufficiency cases; for example, when θ=90°, the conditions x=90° and 180°−x=90° coincide and yield an open set of winning parents. Merely saying the other child condition still restricts the parent does not prove the required nondegeneracy for θ≠180°/n."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

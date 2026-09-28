@@ -1,0 +1,483 @@
+{
+  "run_id": "refinement_bf_B6_selection_first_20260920_1426",
+  "source_runs": [
+    "refinement_bf_cues_six_20260920_0657",
+    "refinement_bf_cues_p4_archived_seeds_20260920_0615"
+  ],
+  "problems": [
+    {
+      "problem_id": "imo2026_p1",
+      "source_plan": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/plan.json",
+        "source_file_sha256": "42fadcad651bf83db42d5f43b503f4f2a6550dce257646e5162e3dd293013f98"
+      },
+      "source_summary": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p1/pairs/imo2026_p1__seed0/role_specific/summary.json",
+        "source_file_sha256": "e3c46ee9c1fd9014e7daa5c6a4a7af1457eb49e1c9846e837c1653ec2d1f5dd2"
+      },
+      "plan_version": "0.1.0",
+      "base_git_commit": "245c49ba426d248967ac3fd915a8faa32d6bedf6",
+      "source_code_sha256": {
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/__init__.py": "ab4f67b9fdb19f9de9cdc04b5630b0519d0dd0e01587fde12c62ba9b704efab1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/archive.py": "a283535cffd5f09e176e8e2811fd1703565794c03319e8a7e373c717b4e1dfe1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/inputs.py": "a35d2236ae55c226b7b978b2658e1a946e2f435d49e5f21a4d65f8533a98af96",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/policy.py": "16a4eb0d47bb1a2528aaa3738d0745902e0f289e283852337866c4c5045c966b",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/report.py": "3e47df284e1c40f4a37e945d7943a018f0fc74c5dd17838e561b014bf22a94a8",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/runner.py": "abd47994b11e20e2f60e13a82e973fee7dca91714244a21dd7b1988c8900cfa4",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/worker.py": "f1097ba474fba2fb28f5526be4a36f6abdef59af3d247979b3fe1f0a17fb17be",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/scripts/run_refinement_bf_ablation.py": "fa98d0ebb25df85caa2c742aedf8f1850cfee8c9a72b2713a33b8723f0f9e4ef"
+      },
+      "input_manifest_sha256": "c11a7e53c3bf67f7ddf0420dd74457cc6265778a84c3e86e6c38e5ab562c834c",
+      "release_identity": {
+        "release": "1.7.0",
+        "release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+        "upstream": {
+          "backend": "0.3.290+goldfree.1",
+          "freeze_sha256": "125d12169969a986b2a3998846c2a26b7256fe9797893d9496b2d2d1df77a88b",
+          "frontend": "0.3.263",
+          "release_id": "imo-proof-pipeline-1.7.0-retry-450s-20260914"
+        },
+        "verified_servers": {
+          "gemma": {
+            "pid": 2663263,
+            "model": "google/gemma-4-31B-it",
+            "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "262144",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "8",
+              "--gpu-memory-utilization": "0.95",
+              "--reasoning-parser": "gemma4"
+            }
+          },
+          "qwen": {
+            "pid": 2663264,
+            "model": "Qwen/Qwen3.6-27B",
+            "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "196608",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "4",
+              "--gpu-memory-utilization": "0.90",
+              "--reasoning-parser": "qwen3"
+            }
+          }
+        }
+      },
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "model_timeout_sec": 600,
+        "workers": 4,
+        "seed_namespace": "v263-v290:problem-only:imo2026_p1:r1"
+      },
+      "contrast": "Archived original chat BF versus fresh role-specific chat BF with the archived seed policy",
+      "seed_policy": "archived; pair_seed 0 is a pair label, not a new seed namespace",
+      "generation_state": "completed",
+      "started_at": "2026-09-20T08:12:19.513800+00:00",
+      "finished_at": "2026-09-20T09:19:05.284004+00:00",
+      "wall_seconds": 4005.770200743922
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "source_plan": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/plan.json",
+        "source_file_sha256": "d6b7104f80c8ca6fc21d24bfa0108fd20b2cbc6b77ddfd6f59423fa3099027a6"
+      },
+      "source_summary": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p2/pairs/imo2026_p2__seed0/role_specific/summary.json",
+        "source_file_sha256": "1d29b28124663b29d92e21ca91f3a0787a2b306b5eb7b10033b3b4be3f1beea3"
+      },
+      "plan_version": "0.1.0",
+      "base_git_commit": "245c49ba426d248967ac3fd915a8faa32d6bedf6",
+      "source_code_sha256": {
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/__init__.py": "ab4f67b9fdb19f9de9cdc04b5630b0519d0dd0e01587fde12c62ba9b704efab1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/archive.py": "a283535cffd5f09e176e8e2811fd1703565794c03319e8a7e373c717b4e1dfe1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/inputs.py": "a35d2236ae55c226b7b978b2658e1a946e2f435d49e5f21a4d65f8533a98af96",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/policy.py": "16a4eb0d47bb1a2528aaa3738d0745902e0f289e283852337866c4c5045c966b",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/report.py": "3e47df284e1c40f4a37e945d7943a018f0fc74c5dd17838e561b014bf22a94a8",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/runner.py": "abd47994b11e20e2f60e13a82e973fee7dca91714244a21dd7b1988c8900cfa4",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/worker.py": "f1097ba474fba2fb28f5526be4a36f6abdef59af3d247979b3fe1f0a17fb17be",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/scripts/run_refinement_bf_ablation.py": "fa98d0ebb25df85caa2c742aedf8f1850cfee8c9a72b2713a33b8723f0f9e4ef"
+      },
+      "input_manifest_sha256": "8540c16eef20fe97a478596d3c278b1623c30f0ed446bc14f0223d8f821d4b35",
+      "release_identity": {
+        "release": "1.7.0",
+        "release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+        "upstream": {
+          "backend": "0.3.290+goldfree.1",
+          "freeze_sha256": "125d12169969a986b2a3998846c2a26b7256fe9797893d9496b2d2d1df77a88b",
+          "frontend": "0.3.263",
+          "release_id": "imo-proof-pipeline-1.7.0-retry-450s-20260914"
+        },
+        "verified_servers": {
+          "gemma": {
+            "pid": 2663263,
+            "model": "google/gemma-4-31B-it",
+            "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "262144",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "8",
+              "--gpu-memory-utilization": "0.95",
+              "--reasoning-parser": "gemma4"
+            }
+          },
+          "qwen": {
+            "pid": 2663264,
+            "model": "Qwen/Qwen3.6-27B",
+            "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "196608",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "4",
+              "--gpu-memory-utilization": "0.90",
+              "--reasoning-parser": "qwen3"
+            }
+          }
+        }
+      },
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "model_timeout_sec": 600,
+        "workers": 4,
+        "seed_namespace": "v263-v290:problem-only:imo2026_p2:r1"
+      },
+      "contrast": "Archived original chat BF versus fresh role-specific chat BF with the archived seed policy",
+      "seed_policy": "archived; pair_seed 0 is a pair label, not a new seed namespace",
+      "generation_state": "completed",
+      "started_at": "2026-09-20T09:19:10.246824+00:00",
+      "finished_at": "2026-09-20T10:39:16.160515+00:00",
+      "wall_seconds": 4805.913689873996
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "source_plan": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/plan.json",
+        "source_file_sha256": "d5ea598b347c3ffdf9d1c0e4f21ead670dd993666c1dcec9c022dfb5a66d55a1"
+      },
+      "source_summary": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p3/pairs/imo2026_p3__seed0/role_specific/summary.json",
+        "source_file_sha256": "16d8da5ca87e19e803e41d6d7da34ef07346b47a95411a02f8a39528cb14e98f"
+      },
+      "plan_version": "0.1.0",
+      "base_git_commit": "245c49ba426d248967ac3fd915a8faa32d6bedf6",
+      "source_code_sha256": {
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/__init__.py": "ab4f67b9fdb19f9de9cdc04b5630b0519d0dd0e01587fde12c62ba9b704efab1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/archive.py": "a283535cffd5f09e176e8e2811fd1703565794c03319e8a7e373c717b4e1dfe1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/inputs.py": "a35d2236ae55c226b7b978b2658e1a946e2f435d49e5f21a4d65f8533a98af96",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/policy.py": "16a4eb0d47bb1a2528aaa3738d0745902e0f289e283852337866c4c5045c966b",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/report.py": "3e47df284e1c40f4a37e945d7943a018f0fc74c5dd17838e561b014bf22a94a8",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/runner.py": "abd47994b11e20e2f60e13a82e973fee7dca91714244a21dd7b1988c8900cfa4",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/worker.py": "f1097ba474fba2fb28f5526be4a36f6abdef59af3d247979b3fe1f0a17fb17be",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/scripts/run_refinement_bf_ablation.py": "fa98d0ebb25df85caa2c742aedf8f1850cfee8c9a72b2713a33b8723f0f9e4ef"
+      },
+      "input_manifest_sha256": "ff51aa0cbefebd7b20cc0f760ff841b07123748adb2c5a34e6b59bdcc8db27bc",
+      "release_identity": {
+        "release": "1.7.0",
+        "release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+        "upstream": {
+          "backend": "0.3.290+goldfree.1",
+          "freeze_sha256": "125d12169969a986b2a3998846c2a26b7256fe9797893d9496b2d2d1df77a88b",
+          "frontend": "0.3.263",
+          "release_id": "imo-proof-pipeline-1.7.0-retry-450s-20260914"
+        },
+        "verified_servers": {
+          "gemma": {
+            "pid": 2663263,
+            "model": "google/gemma-4-31B-it",
+            "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "262144",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "8",
+              "--gpu-memory-utilization": "0.95",
+              "--reasoning-parser": "gemma4"
+            }
+          },
+          "qwen": {
+            "pid": 2663264,
+            "model": "Qwen/Qwen3.6-27B",
+            "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "196608",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "4",
+              "--gpu-memory-utilization": "0.90",
+              "--reasoning-parser": "qwen3"
+            }
+          }
+        }
+      },
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "model_timeout_sec": 600,
+        "workers": 4,
+        "seed_namespace": "v263-v290:problem-only:imo2026_p3:r1"
+      },
+      "contrast": "Archived original chat BF versus fresh role-specific chat BF with the archived seed policy",
+      "seed_policy": "archived; pair_seed 0 is a pair label, not a new seed namespace",
+      "generation_state": "completed_with_fallbacks",
+      "started_at": "2026-09-20T10:39:21.453538+00:00",
+      "finished_at": "2026-09-20T12:24:06.929234+00:00",
+      "wall_seconds": 6285.4756876890315
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "source_plan": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/plan.json",
+        "source_file_sha256": "e1e4e93e0ffa2b137be25dd69a088ca20023ac825cb8b6741755ec3fcf5f6e59"
+      },
+      "source_summary": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_p4_archived_seeds_20260920_0615/pairs/imo2026_p4__seed0/role_specific/summary.json",
+        "source_file_sha256": "4f0308e4df6846c68135cf27ad252ff4d8336fdf421225a4acf514941b50fa76"
+      },
+      "plan_version": "0.1.0",
+      "base_git_commit": "245c49ba426d248967ac3fd915a8faa32d6bedf6",
+      "source_code_sha256": {
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/__init__.py": "ab4f67b9fdb19f9de9cdc04b5630b0519d0dd0e01587fde12c62ba9b704efab1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/archive.py": "acbe2bed901ae8cb95276052d4031ece9188e54455d634df793dddece07c802e",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/inputs.py": "a35d2236ae55c226b7b978b2658e1a946e2f435d49e5f21a4d65f8533a98af96",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/policy.py": "16a4eb0d47bb1a2528aaa3738d0745902e0f289e283852337866c4c5045c966b",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/report.py": "3e47df284e1c40f4a37e945d7943a018f0fc74c5dd17838e561b014bf22a94a8",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/runner.py": "abd47994b11e20e2f60e13a82e973fee7dca91714244a21dd7b1988c8900cfa4",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/harnesses/refinement_bf_ablation/worker.py": "f1097ba474fba2fb28f5526be4a36f6abdef59af3d247979b3fe1f0a17fb17be",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_p4_20260920/scripts/run_refinement_bf_ablation.py": "fa98d0ebb25df85caa2c742aedf8f1850cfee8c9a72b2713a33b8723f0f9e4ef"
+      },
+      "input_manifest_sha256": "27ac1cc11f9fbb0a5d4a8b692891b8b7b598b5ea4a2d9a486807392bf94c628e",
+      "release_identity": {
+        "release": "1.7.0",
+        "release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+        "upstream": {
+          "backend": "0.3.290+goldfree.1",
+          "freeze_sha256": "125d12169969a986b2a3998846c2a26b7256fe9797893d9496b2d2d1df77a88b",
+          "frontend": "0.3.263",
+          "release_id": "imo-proof-pipeline-1.7.0-retry-450s-20260914"
+        },
+        "verified_servers": {
+          "gemma": {
+            "pid": 2663263,
+            "model": "google/gemma-4-31B-it",
+            "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "262144",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "8",
+              "--gpu-memory-utilization": "0.95",
+              "--reasoning-parser": "gemma4"
+            }
+          },
+          "qwen": {
+            "pid": 2663264,
+            "model": "Qwen/Qwen3.6-27B",
+            "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "196608",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "4",
+              "--gpu-memory-utilization": "0.90",
+              "--reasoning-parser": "qwen3"
+            }
+          }
+        }
+      },
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "model_timeout_sec": 600,
+        "workers": 4,
+        "seed_namespace": "v263-v290:problem-only:imo2026_p4:r1"
+      },
+      "contrast": "Archived original chat BF versus fresh role-specific chat BF with the archived seed policy",
+      "seed_policy": "archived; pair_seed 0 is a pair label, not a new seed namespace",
+      "generation_state": "completed",
+      "started_at": "2026-09-20T06:15:47.794616+00:00",
+      "finished_at": "2026-09-20T08:12:04.917917+00:00",
+      "wall_seconds": 6977.123296604026
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "source_plan": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/plan.json",
+        "source_file_sha256": "735c47a6cca1404c0b491ca8fb43ec23af4c8829ada2418cea9f6ce77602bd93"
+      },
+      "source_summary": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p5/pairs/imo2026_p5__seed0/role_specific/summary.json",
+        "source_file_sha256": "ca147674acb72a1a1a8103a692a46568e95d0aa893aafd99c4de598e33ad858d"
+      },
+      "plan_version": "0.1.0",
+      "base_git_commit": "245c49ba426d248967ac3fd915a8faa32d6bedf6",
+      "source_code_sha256": {
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/__init__.py": "ab4f67b9fdb19f9de9cdc04b5630b0519d0dd0e01587fde12c62ba9b704efab1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/archive.py": "a283535cffd5f09e176e8e2811fd1703565794c03319e8a7e373c717b4e1dfe1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/inputs.py": "a35d2236ae55c226b7b978b2658e1a946e2f435d49e5f21a4d65f8533a98af96",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/policy.py": "16a4eb0d47bb1a2528aaa3738d0745902e0f289e283852337866c4c5045c966b",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/report.py": "3e47df284e1c40f4a37e945d7943a018f0fc74c5dd17838e561b014bf22a94a8",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/runner.py": "abd47994b11e20e2f60e13a82e973fee7dca91714244a21dd7b1988c8900cfa4",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/worker.py": "f1097ba474fba2fb28f5526be4a36f6abdef59af3d247979b3fe1f0a17fb17be",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/scripts/run_refinement_bf_ablation.py": "fa98d0ebb25df85caa2c742aedf8f1850cfee8c9a72b2713a33b8723f0f9e4ef"
+      },
+      "input_manifest_sha256": "c8da9d2aeca9b70f36cbb6f5ab8fd248b4c187b504534e813dc7976d160efc32",
+      "release_identity": {
+        "release": "1.7.0",
+        "release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+        "upstream": {
+          "backend": "0.3.290+goldfree.1",
+          "freeze_sha256": "125d12169969a986b2a3998846c2a26b7256fe9797893d9496b2d2d1df77a88b",
+          "frontend": "0.3.263",
+          "release_id": "imo-proof-pipeline-1.7.0-retry-450s-20260914"
+        },
+        "verified_servers": {
+          "gemma": {
+            "pid": 2663263,
+            "model": "google/gemma-4-31B-it",
+            "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "262144",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "8",
+              "--gpu-memory-utilization": "0.95",
+              "--reasoning-parser": "gemma4"
+            }
+          },
+          "qwen": {
+            "pid": 2663264,
+            "model": "Qwen/Qwen3.6-27B",
+            "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "196608",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "4",
+              "--gpu-memory-utilization": "0.90",
+              "--reasoning-parser": "qwen3"
+            }
+          }
+        }
+      },
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "model_timeout_sec": 600,
+        "workers": 4,
+        "seed_namespace": "v263-v290:problem-only:imo2026_p5:r1"
+      },
+      "contrast": "Archived original chat BF versus fresh role-specific chat BF with the archived seed policy",
+      "seed_policy": "archived; pair_seed 0 is a pair label, not a new seed namespace",
+      "generation_state": "completed",
+      "started_at": "2026-09-20T12:24:12.043167+00:00",
+      "finished_at": "2026-09-20T13:45:51.092068+00:00",
+      "wall_seconds": 4899.048896441003
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "source_plan": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/plan.json",
+        "source_file_sha256": "084371231b0a687ed2062cdf1a2b3e808a6e52fac3622495a4d894c68de820a7"
+      },
+      "source_summary": {
+        "source_path": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/generation/imo2026_p6/pairs/imo2026_p6__seed0/role_specific/summary.json",
+        "source_file_sha256": "cc8402024a50544ef04e4d2517ae2460249484df6ba18a31473a184484b7f3d6"
+      },
+      "plan_version": "0.1.0",
+      "base_git_commit": "245c49ba426d248967ac3fd915a8faa32d6bedf6",
+      "source_code_sha256": {
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/__init__.py": "ab4f67b9fdb19f9de9cdc04b5630b0519d0dd0e01587fde12c62ba9b704efab1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/archive.py": "a283535cffd5f09e176e8e2811fd1703565794c03319e8a7e373c717b4e1dfe1",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/inputs.py": "a35d2236ae55c226b7b978b2658e1a946e2f435d49e5f21a4d65f8533a98af96",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/policy.py": "16a4eb0d47bb1a2528aaa3738d0745902e0f289e283852337866c4c5045c966b",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/report.py": "3e47df284e1c40f4a37e945d7943a018f0fc74c5dd17838e561b014bf22a94a8",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/runner.py": "abd47994b11e20e2f60e13a82e973fee7dca91714244a21dd7b1988c8900cfa4",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/harnesses/refinement_bf_ablation/worker.py": "f1097ba474fba2fb28f5526be4a36f6abdef59af3d247979b3fe1f0a17fb17be",
+        "source_workspace/harnesses/experimental/refinement_bf_cues_all_20260920/scripts/run_refinement_bf_ablation.py": "fa98d0ebb25df85caa2c742aedf8f1850cfee8c9a72b2713a33b8723f0f9e4ef"
+      },
+      "input_manifest_sha256": "58b75e304c0a292f1d042a4b4c041cae992887c3e832baa536722aea1294dc20",
+      "release_identity": {
+        "release": "1.7.0",
+        "release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+        "upstream": {
+          "backend": "0.3.290+goldfree.1",
+          "freeze_sha256": "125d12169969a986b2a3998846c2a26b7256fe9797893d9496b2d2d1df77a88b",
+          "frontend": "0.3.263",
+          "release_id": "imo-proof-pipeline-1.7.0-retry-450s-20260914"
+        },
+        "verified_servers": {
+          "gemma": {
+            "pid": 2663263,
+            "model": "google/gemma-4-31B-it",
+            "snapshot": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "262144",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "8",
+              "--gpu-memory-utilization": "0.95",
+              "--reasoning-parser": "gemma4"
+            }
+          },
+          "qwen": {
+            "pid": 2663264,
+            "model": "Qwen/Qwen3.6-27B",
+            "snapshot": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+            "mtp": 4,
+            "flags": {
+              "--dtype": "bfloat16",
+              "--kv-cache-dtype": "bfloat16",
+              "--max-model-len": "196608",
+              "--max-num-batched-tokens": "8192",
+              "--max-num-seqs": "4",
+              "--gpu-memory-utilization": "0.90",
+              "--reasoning-parser": "qwen3"
+            }
+          }
+        }
+      },
+      "runtime": {
+        "gemma_endpoint": "http://127.0.0.1:8030/v1",
+        "qwen_endpoint": "http://127.0.0.1:8027/v1",
+        "model_timeout_sec": 600,
+        "workers": 4,
+        "seed_namespace": "v263-v290:problem-only:imo2026_p6:r1"
+      },
+      "contrast": "Archived original chat BF versus fresh role-specific chat BF with the archived seed policy",
+      "seed_policy": "archived; pair_seed 0 is a pair label, not a new seed namespace",
+      "generation_state": "completed",
+      "started_at": "2026-09-20T13:45:56.142611+00:00",
+      "finished_at": "2026-09-20T15:31:04.955399+00:00",
+      "wall_seconds": 6308.812783980975
+    }
+  ]
+}

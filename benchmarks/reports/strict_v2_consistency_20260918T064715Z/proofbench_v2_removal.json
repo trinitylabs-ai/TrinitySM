@@ -1,0 +1,20 @@
+{
+  "schema": "workshop-proofbench-v2-removal-v1",
+  "removed_at": "2026-09-18T19:12:16.275671+00:00",
+  "reason": "User requested deleting all strict-v2 IMO-ProofBench grading results and retaining IMOBench B.5.",
+  "deleted": {
+    "imo-proofbench/basic": {
+      "portable_grades": 612,
+      "private_files": 10628
+    },
+    "imo-proofbench/advanced": {
+      "portable_grades": 683,
+      "private_files": 11688
+    }
+  },
+  "retained_benchmark": "imo2026",
+  "retained_grades": 150,
+  "generated_proofs_preserved": true,
+  "b5_scores_preserved": true,
+  "original_manifest_preserved_as_input_inventory": true
+}

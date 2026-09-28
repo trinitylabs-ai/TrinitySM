@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "1f7a4b2d3245bd1813f00c681d5fb544b12ee891627691ac72c8b74cc0d2ec50",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "42c6330c45178bbebdc3e3d482709786d6c2abc19f9a3f92a9a85d46cdda59d1",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "22a4f4cfacaaba8ab65ebd80cb225cd4680cc99b09fa27b90e19db7b7cc2484c",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive error occurs in applying the sine law to triangle ABL: the angle opposite AB is ∠ALB, whose sine is sin(α+β+∠BAL), not sin(α+β+θ_L), since θ_L was defined as ∠CAL. No relation ∠BAL=∠CAL is proved. The analogous substitution of θ_K in triangle AKC is also unjustified.",
+    "summary": "The coordinate reduction of OM=ON and several initial sine-law computations are useful, but the derivation of the side-ratio relation f(tan β)f(tan γ)=1 rests on incorrect angle substitutions. More importantly, the final load-bearing calculation of the circumcenter scalar product is entirely replaced by an assertion about symmetry, with no displayed identity or verification. This is an unsupported central inference under Rule E. The omitted calculation is not eligible for 4 under Rule B because the preceding reduction is not correct and complete; tangent singularities are also untreated.",
+    "strengths": [
+      "Correctly reduces OM=ON to a linear scalar-product identity for the circumcenter.",
+      "Correctly obtains the two linear circumcenter equations and gives a valid general vector formula for the circumcenter, assuming A,K,L are noncollinear.",
+      "The sine-law computations in triangles BMK, ABK, CNL, and ACL are essentially correct when the scalar side notation and tangent domains are interpreted appropriately."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The sine-law equations for triangles ABL and AKC use θ_L=∠CAL and θ_K=∠BAK where the required angles are ∠BAL and ∠KAC, respectively. Thus the claimed formulas for b/c and c/b, and hence f(tan β)f(tan γ)=1, are unsupported."
+      },
+      {
+        "severity": "major",
+        "description": "The decisive computation of o·(c−b) is not supplied. Merely saying that calculation and symmetry ensure the target equality does not prove the necessary compatibility identity."
+      },
+      {
+        "severity": "substantial",
+        "description": "The proof uses tangents and divisions without treating admissible right-angle or vanishing-denominator cases."
+      },
+      {
+        "severity": "minor",
+        "description": "The scalar side lengths b and c are not explicitly defined after b and c have already been introduced as vectors, creating avoidable ambiguity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T08:58:28.070502+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

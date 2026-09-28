@@ -1,0 +1,50 @@
+{
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_0bb18853ac1a86e5512b88a1479e44a9",
+  "pass_index": 2,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; the proof is complete under standard Olympiad conventions.",
+    "summary": "The submission gives a valid well-founded lexicographic descent using the total number of prime factors and the number of entries greater than 1, proving finite termination with exactly one nontrivial entry. It then correctly proves that, for each prime, the gcd of all valuation exponents is invariant under the move and reconstructs the unique terminal value from these invariants.",
+    "strengths": [
+      "Correctly computes that the total Omega-value decreases when the selected gcd exceeds 1 and otherwise remains fixed while the number of nontrivial entries decreases.",
+      "Correctly rules out a terminal board consisting entirely of 1s by showing the total Omega-value remains positive.",
+      "Correctly applies the Euclidean algorithm identity to show invariance of the gcd of the p-adic valuations for every prime p.",
+      "The terminal reconstruction formula determines M solely from the initial board and therefore proves choice-independence."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "proof_sha256": "0bb18853ac1a86e5512b88a1479e44a9ccd01c3fd3462b01e900feb27598b3f4",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "evidence_sha256": "8cae12c14ca6ddd4d30560b0fadc6f2705e840247d942846ec29498b459bc4f9",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p1/t10_r01_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "3fe511e4ef3b2b3acde872fcc2bfbf6e83395b210b9c45b9790877c6d8ad831a",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "d69bf732b03572dd78b35477515526024f547f5f7fe95953fcc7fe6fb5502374",
+    "raw_response_1.txt": "0b11aa5f2cae9e044f7a2e674c8b43887cfdeb03ed88910f6fb1c53f22e62fea",
+    "summary.json": "d45cc4ecf259d1b25d5eaa2a3fab037be2ae44142eaec4f96686f8fe3c248d03"
+  }
+}

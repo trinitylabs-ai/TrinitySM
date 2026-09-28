@@ -1,0 +1,35 @@
+To prove that one specific flag color is held by at least 200 Googlers, we model the problem using graph theory and the properties of intersecting families of sets.
+
+**1. Graph Construction**
+Let $V$ be the set of $n = 2024$ Googlers. We define a graph $G = (V, E)$ where an edge exists between two Googlers $i$ and $j$ if and only if they share at least one flag color. Let $S_i$ denote the set of colors of the flags held by Googler $i$. By the problem statement, $|S_i| \le 5$ for all $i \in V$.
+The condition that any group of three Googlers contains at least two people holding flags of the same color implies that for any three vertices $\{i, j, k\} \subseteq V$, at least one pair is connected by an edge. In graph-theoretic terms, this means the independence number of the graph is $\alpha(G) \le 2$.
+
+**2. Structural Property of $G$**
+Let $v$ be any vertex in $V$. Let $N(v)$ be the set of neighbors of $v$, and let $N^c(v) = V \setminus (N(v) \cup \{v\})$ be the set of non-neighbors of $v$.
+For any two vertices $u, w \in N^c(v)$, the set $\{v, u, w\}$ is a group of three vertices. Since $\alpha(G) \le 2$, at least one pair among them must be connected. However, by the definition of $N^c(v)$, $v$ is not connected to $u$ and $v$ is not connected to $w$. Therefore, $u$ and $w$ must be connected. This implies that $N^c(v)$ is a clique in $G$.
+
+**3. Intersecting Family Lemma**
+We use the following lemma: If $\mathcal{F} = \{S_1, S_2, \dots, S_m\}$ is a collection of sets such that every pair $S_i, S_j$ has a non-empty intersection ($S_i \cap S_j \neq \emptyset$) and $|S_i| \le k$ for all $i$, then there exists an element contained in at least $\frac{m+k-1}{k}$ sets.
+
+*Proof:* Pick any set $S_1 \in \mathcal{F}$. Since every other set $S_j \in \mathcal{F} \setminus \{S_1\}$ intersects $S_1$, and $S_1$ contains at most $k$ elements, by the Pigeonhole Principle, at least one element $c \in S_1$ must be contained in at least $\lceil \frac{m-1}{k} \rceil$ of the other sets. Including $S_1$ itself, the element $c$ is contained in at least $1 + \frac{m-1}{k} = \frac{m+k-1}{k}$ sets. $\square$
+
+**4. Bounding the Maximum Color Frequency**
+Let $\omega$ be the maximum number of Googlers who hold a flag of the same color. That is, $\omega = \max_c |V_c|$, where $V_c = \{i \in V : c \in S_i\}$.
+A Googler $u$ is a neighbor of $v$ if they share at least one color. Thus, $N(v)$ is the union of the color-cliques $V_c$ for all $c \in S_v$:
+$$N(v) = \bigcup_{c \in S_v} (V_c \setminus \{v\})$$
+Since $|S_v| \le 5$ and $|V_c| \le \omega$ for all $c$, we have $|N(v)| \le 5(\omega - 1)$.
+Now, consider the clique $N^c(v)$. The sets $\{S_u : u \in N^c(v)\}$ form an intersecting family of sets of size at most $k=5$. Applying the lemma with $m = |N^c(v)|$:
+$$\omega \ge \frac{|N^c(v)| + 5 - 1}{5} = \frac{|N^c(v)| + 4}{5}$$
+
+**5. Final Synthesis**
+We know $|N^c(v)| = n - 1 - |N(v)|$. Substituting the bound for $|N(v)|$:
+$$|N^c(v)| \ge 2024 - 1 - 5(\omega - 1) = 2023 - 5\omega + 5 = 2028 - 5\omega$$
+Substituting this into the bound for $\omega$:
+$$\omega \ge \frac{(2028 - 5\omega) + 4}{5} = \frac{2032 - 5\omega}{5} = \frac{2032}{5} - \omega$$
+Adding $\omega$ to both sides:
+$$2\omega \ge \frac{2032}{5} \implies \omega \ge \frac{1016}{5} = 203.2$$
+Since $\omega$ must be an integer, $\omega \ge 204$. Thus, at least one flag color is held by at least 204 Googlers, which is greater than 200.
+
+(Note: If $S_v = \emptyset$ for some $v$, then $N(v) = \emptyset$, and $N^c(v)$ contains all other $n-1$ Googlers. In this case, $\omega \ge \frac{2023+4}{5} = 405.4$, so $\omega \ge 406$, which also satisfies the requirement.)
+
+\(\square\)

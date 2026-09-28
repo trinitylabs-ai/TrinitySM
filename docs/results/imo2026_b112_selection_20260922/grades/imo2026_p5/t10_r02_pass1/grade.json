@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_05a0e3c2033d1cde4e345714013a3de5",
+  "pass_index": 1,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In the mixed-defect case, the proof assumes only one fixed point y with c(y)=0. The resulting bounds hold for that particular y, so it is invalid to optimize them over y or choose y=x. Thus the conclusion f(x)=x does not follow. This is an unsupported decisive compatibility inference under Rule E.",
+    "summary": "The claimed classification is correct, and the submission correctly proves nonnegativity of the defect, invariance along forward orbits, equality of all positive defect values, and the converse construction. However, it does not rule out coexistence of zero and positive defect values. Its attempted argument for doing so contains a quantifier error and leaves a central structural case unresolved, requiring a genuinely new argument such as a local-separation/connectedness lemma.",
+    "strengths": [
+      "Correctly squares the inequalities using positivity.",
+      "Correctly derives f(f(y))=2f(y)-y, orbit invariance, and c(y)>=0.",
+      "Provides a coherent asymptotic argument showing that any two positive defect values must coincide.",
+      "Correctly verifies every function f(x)=x+c with c>=0."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "From a single y satisfying f(y)=y, the proof obtains bounds depending on that fixed y, but then treats y as freely variable and invokes extrema attained at y=x. Since x is not known to be a fixed point, these extrema are unavailable. Consequently, the mixed case c(y) in {0,c} with both values present is not excluded, and the necessity proof is incomplete."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "proof_sha256": "05a0e3c2033d1cde4e345714013a3de5df6058b238c7a9cff28cdc50d5b36024",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "evidence_sha256": "86fcc85c6a1d3f03303b3caed1b770ea5c0b85ca0995cd96a517f3f6959a1571",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p5/t10_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "7d3ee18dcc09e2110b74639b472f91d05a605485373e4eb144629e18d4c21192",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "726e43072238b4e19e00dcff815ad2692e5bbe3da78d649fd86d11248e2bf54f",
+    "raw_response_1.txt": "cb4c22e7a62c7fdde96848b480fefae6d4a2bff145ddca30a76b4b9b1610d9f4",
+    "summary.json": "2c726ae7990f1b0b684fc52967dee834dd34fb00bc7464382cfca4e8efbc2dd7"
+  }
+}

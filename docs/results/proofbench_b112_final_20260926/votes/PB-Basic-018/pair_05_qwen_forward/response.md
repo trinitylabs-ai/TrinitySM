@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The transformation to the Pell-like equation $3u^2 - 2w^2 = 1$, the recurrence relations, and the modular condition $w_n \equiv 1 \pmod 6 \iff n$ is even are correctly derived. The expansion of $6u_m^2$ in lines 31-34 is algebraically correct.
+Claim gap: The proof fails to rigorously establish $3u_{2m} + 2w_{2m} + 1 = 6u_m^2$. Line 27 gives an incorrect sign for the $\mu^n$ term in the closed-form expression for $w_n$. The correct formula, obtained by subtracting the conjugate equation from line 16, is $w_n = \frac{2+\sqrt{6}}{4}\lambda^n - \frac{2-\sqrt{6}}{4}\mu^n$. Using the incorrect plus sign in line 27 artificially inflates the $\mu^{2m}$ coefficient in line 30 to $\frac{5-2\sqrt{6}}{2}$, which coincidentally matches the coefficient in $6u_m^2$ (line 34). However, the true value of $3u_{2m} + 2w_{2m} + 1$ has a $\mu^{2m}$ coefficient of $\frac{1}{2}$, breaking the equality claimed in line 35. The central identity is therefore unjustified.
+Qualifications and supplied repairs: NONE. The sign error is load-bearing and cannot be repaired without rewriting the algebraic verification step.
+Decisive checks: Line 27 contains a demonstrated defect: the conjugate subtraction $2w_n\sqrt{2} = (\sqrt{3}+\sqrt{2})\lambda^n - (\sqrt{3}-\sqrt{2})\mu^n$ necessitates a minus sign, not a plus. This invalidates line 30's calculation of $3u_{2m}+2w_{2m}+1$. While $6u_m^2$ is correctly expanded in lines 31-34, the claimed equality in line 35 relies on the flawed expression for $w_n$. The proof does not establish the target identity.
+
+## Proof B
+Established theorem: For all positive integer solutions $(x,y)$ to $2x^2+x=3y^2+y$, the quantity $2x+2y+1$ equals $k_m^2$ (where $k_m = 4x+1$ for the $m$-th valid solution), proving it is a perfect square. All intermediate steps, including the Pell transformation, solution generation, modular filtering, and algebraic identities, are verified correct.
+Claim gap: NONE supported by checks. The derivation is complete and rigorous.
+Qualifications and supplied repairs: NONE. Routine algebraic simplifications (e.g., $\lambda_1 = (\sqrt{3}+\sqrt{2})^2$) are correctly applied and explicitly noted.
+Decisive checks: Line 17 correctly derives $3k^2 - 2w^2 = 1$. Lines 23-25 correctly generate solutions via the fundamental unit $5+2\sqrt{6}$. Lines 27-28 correctly filter $n$ to even values $2m$ using modular arithmetic. Lines 36-38 correctly compute $3k_n + 2w_n = \frac{\lambda_1^{n+1} + \lambda_2^{n+1}}{2}$ by properly handling the conjugate signs. Lines 41-44 correctly expand $k_m^2$ and match it to the expression for $2x+2y+1$ at $n=2m$. The chain of implications is unbroken and arithmetically verified.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, algebraically sound derivation where every step is verified. Proof A contains a load-bearing sign error in the Binet formula for $w_n$ (line 27), which causes the expression for $3u_{2m} + 2w_{2m} + 1$ to be incorrectly computed. Although this error coincidentally makes the flawed expression match $6u_m^2$, it invalidates the logical bridge to the conclusion. Proof B correctly handles the conjugate subtraction, derives the accurate coefficient for the $\mu^{n+1}$ term, and rigorously establishes the perfect square property without relying on accidental cancellations.

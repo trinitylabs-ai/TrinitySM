@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7cc6167df60bdb080e50403cda780814183da0d09d057961b950853e82949afd",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "754157c37cb52ece376091a825b816cdb677ed030bda0593b7103b8fe15e367e",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "c27806aab187144bdde68a808bcf4cab72090abcf03c7cdb1813e6f966cf3422",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None.",
+    "summary": "The proof is complete and correct. Lexicographic descent of the board product and the number of entries greater than 1 proves termination. Primewise, the gcd of all p-adic valuations is invariant under the Euclidean transformation (a,b)→(min(a,b),|a−b|). At a terminal board these invariants determine the unique remaining nonunit, and a prime appearing initially gives a positive invariant, ruling out a terminal board consisting entirely of 1s.",
+    "strengths": [
+      "Uses a valid well-founded lexicographic monovariant for termination.",
+      "Correctly identifies and proves the primewise valuation-gcd invariant.",
+      "Correctly rules out zero remaining entries greater than 1.",
+      "Derives an explicit terminal value depending only on the initial board."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:01:22.348507+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00048",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "367b862149c96a41ac2307b7a2df80b7b62869c0a2c2639e81811207d125b746",
+  "problem_id": "imo2026_p3",
+  "repeat": 1,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "094ea4343b0b815e54c3fb6804a5bda883e9145ece62b3cea10db4f15d50339d",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "01821899b5a3449f71bdadb24d35eff57eefffef806565b640a12af2a9b986c1",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive failure is the claimed n=2 lower bound. With Liu's proposed marks 1/5 and 2/5, Xiang may use just one mark at 7/10, producing lengths 3/10, 3/10, 1/5, 1/5; optimal claiming gives Liu only 1/2, not 3/5. The final classification is also false: the correct value for n=2 is 4/7. Thus Rule A applies and caps the score at 2.",
+    "summary": "The solution correctly identifies the alternating-rank payoff and obtains useful work for n=1, but its proposed construction fails already for n=2 and the general bound is merely asserted. It also supplies no valid universal Xiang strategy proving maximality. Since the claimed formula (n+1)/(2n+1) differs from the correct 2^n/(2^(n+1)-1) for every n>=2, this is an incorrect final answer under Rule A.",
+    "strengths": [
+      "Correctly reduces optimal piece claiming to the sum of the odd-ranked lengths.",
+      "Gives a valid lower-bound analysis for Liu's mark 1/3 when n=1.",
+      "Correctly states the n=1 value 2/3."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer is false: for n=2 it gives 3/5, whereas the correct value is 4/7."
+      },
+      {
+        "severity": "major",
+        "description": "The n=2 sorting assertion is false. For example, if the 3/5 interval is split into 3/10, 29/100, and 1/100, the sorted lengths are 3/10, 29/100, 1/5, 1/5, 1/100, so the even-ranked sum is 49/100 rather than 2/5."
+      },
+      {
+        "severity": "major",
+        "description": "The proof repeatedly assumes Xiang uses exactly n marks, although the problem permits at most n; the one-mark n=2 response already defeats the proposed construction."
+      },
+      {
+        "severity": "major",
+        "description": "The central general claim that the even-ranked sum is at most n/(2n+1) is unsupported and false. No argument is given for arbitrary distributions of Xiang's cuts."
+      },
+      {
+        "severity": "major",
+        "description": "There is no valid upper-bound argument showing that Xiang can prevent Liu from obtaining more than the claimed amount for arbitrary Liu markings."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T09:02:27.172298+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "p4-v027-nvfp4-exact-chain-replication-v1",
+  "created_at": "2026-08-23T03:35:19.718965+00:00",
+  "problem_id": "imo2026_p4",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p4.json",
+  "reference_solution_access": false,
+  "generator_model": "nvidia/Gemma-4-31B-IT-NVFP4",
+  "base_master_seed": 2026081302,
+  "pipeline_index": 0,
+  "candidate_index": 1,
+  "stage_name": "p1_i1_zero",
+  "generation_endpoint": "http://127.0.0.1:8020/v1",
+  "fusion_and_refinement_endpoint": "http://127.0.0.1:8022/v1",
+  "runtime_plan": {
+    "generate": "NVFP4 GPU0; no MTP; port 8020",
+    "refine": "GPU0 local OPC/GPT-OSS; NVFP4 GPU1; no MTP; port 8022"
+  },
+  "expected": {
+    "draft_seed": 2306781093,
+    "lazy_seed": 809773801,
+    "explicit_resolve_seed": 813872613,
+    "refinement_seed": 3395916590,
+    "checked_proof_sha256": "19cb3a2255b87406ee392de99384fdd56116faf0d28437c3038590891e625dc5",
+    "ensemble_feedback_sha256": "a142df7e00184d51c3f2d15f35719734967eff68bb3459a3b94fb4ba265c7da1",
+    "first_revision_sha256": "d5edef081e351980bb743fc68ae5944762623c6373806871bf3313c3152ce7de"
+  }
+}

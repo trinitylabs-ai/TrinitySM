@@ -1,0 +1,47 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_53a6dcbebe41763d5cea9785",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "b9fb449d4fc945b1b4ae88147984b3ffa2568821b288d487a20612ee0cf13548",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "587327c2bbfaa6d15d55a523511dc7475771f25969e76c2d914fc26f1eb9ac1d",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Step 3, the assertion that for every n one can choose m∈N with |z+nC-(w+mD)|≤D is false. For example, even for the valid solution f(t)=t+1, taking z=2, w=100, and n=0 makes this impossible. This approximation is load-bearing for proving equality of the positive defect values, so Rule C applies.",
+    "summary": "The claimed classification f(x)=x+c, c≥0, is correct, and nearly all of the proof—including orbit invariance, nonnegativity of c, the range estimate, the connectedness argument, and verification—is sound. The false quantifier in the orbit-approximation step prevents the proof from being complete as submitted. It is repaired directly by restricting to all sufficiently large n (so z+nC≥w) and taking m=floor((z+nC-w)/D), which gives distance less than D. Because the false statement is load-bearing, Rule C caps the score at 5.",
+    "strengths": [
+      "Correctly derives f(f(y))=2f(y)-y and c(f(y))=c(y).",
+      "Correctly obtains f^n(x)=x+nc(x) and hence c(x)≥0.",
+      "Derives a valid quadratic bound for differences of c on Im(f).",
+      "The mixed-value exclusion via two relatively open sets is correct.",
+      "Correctly verifies every translation f(x)=x+c with c≥0."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The lattice-approximation claim is stated for every n, although it is only true for sufficiently large n when m is required to be a natural number. This false assertion supplies the central comparison of positive defect values; its correction is routine but load-bearing."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:50:59.032047+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_2/p5/proof_53a6dcbebe41763d5cea9785"
+}

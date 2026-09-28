@@ -1,0 +1,16 @@
+{
+  "validated_at": "2026-09-17T15:52:04.510228+00:00",
+  "source_tree": "ca8389597d98bcc1f1a0753e5694bdfc7e454453",
+  "method": "git archive of staged tree, extracted into a clean temporary directory",
+  "targeted_tests_passed": 115,
+  "test_wall_seconds": 174.62,
+  "pipeline_release": "1.7.0",
+  "pipeline_release_integrity_passed": true,
+  "pipeline_release_files_verified": 366,
+  "benchmark_launcher_help_passed": true,
+  "external_scores": {
+    "p2": 6,
+    "basic008": 6,
+    "basic009": 7
+  }
+}

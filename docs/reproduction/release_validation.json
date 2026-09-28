@@ -1,0 +1,108 @@
+{
+  "schema": "workshop-public-release-validation-v1",
+  "scope": "release/public-rc1 current tree; no Git history rewrite",
+  "focused_tests": {
+    "passed": 28,
+    "failed": 0,
+    "command": "python -B -m pytest -q -p no:cacheprovider tests/test_pipeline_regression.py tests/test_public_reproduction.py tests/test_release_prompt_boundary.py benchmarks/test_environment_capture.py harnesses/imo_proof_pipeline/tests/test_releases.py"
+  },
+  "bundled_generation_boundary_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "entire_historical_backend_suite": {
+    "passed": 64,
+    "failed": 22,
+    "limitation": "Historical run fixtures absent from the dependency bundle; see generation_boundary_audit.md. This suite is not green.",
+    "scope": "Earlier audit of the frozen backend; not rerun during dependency cleanup. Historical fixture-dependent failures are distinct from the passing current pipeline replay tests."
+  },
+  "statement_input_preflight": {
+    "state": "passed",
+    "benchmark_problem": "PB-Basic-001",
+    "model_calls": 0,
+    "terminal_stage": "refinement_3",
+    "limitation": "No fresh GPU inference; full scripted pipeline regression covers all three passes separately.",
+    "public_benchmark_launcher": "passed"
+  },
+  "pipeline_releases_verified": [
+    "1.7.0"
+  ],
+  "experimental_tool_source_hashes_verified": 145,
+  "submitted_proof_files_byte_unchanged": 806,
+  "score_evidence_artifacts_verified": 465,
+  "score_lane_records_verified": 264,
+  "scored_selections_verified": 223,
+  "numeric_score_matrix_changed": false,
+  "physical_log_directories": 0,
+  "model_weights_distributed": false,
+  "private_pattern_scan": "No findings after scanning all tracked release files.",
+  "model_downloads_performed": false,
+  "fresh_gpu_proof_run_performed": false,
+  "public_visibility_changed": false,
+  "source_commit_before_cleanup": "739fe38",
+  "pipeline_regression": {
+    "cases": [
+      "certified_repair_brief",
+      "rejected_repair_brief"
+    ],
+    "candidate_lanes_per_case": 4,
+    "refinement_passes_per_lane": 3,
+    "audited_handoffs_per_case": 12,
+    "final_proof_hashes_matching_before_cleanup": 8,
+    "prompt_hashes_matching_before_cleanup": 192,
+    "model_calls": 0,
+    "network_calls": 0,
+    "scope": "Actual frontend/backend scheduling, protocol validation, proof binding and final exports with scripted model responses."
+  },
+  "experimental_runtime_tests": {
+    "passed": 1028,
+    "failed": 0,
+    "subtests_passed": 20,
+    "seconds": 263.86,
+    "scope": "Current Workshop Tools package after relocation, including exact algebra workers and Singular certificate tests. Model calls blocked.",
+    "dependencies": "Local Python 3.11 with SymPy, Z3 and pytest; installed Singular 4.2.1 supplied through a temporary link removed after testing. No binaries distributed."
+  },
+  "experimental_runtime_files_verified": 827,
+  "experimental_files_byte_identical_to_previous_copy": 824,
+  "experimental_packaging_changes": [
+    "Consolidation regression compares saved hashes instead of reading deleted standalone harness copies.",
+    "New JSON hash fixture and adjusted test/source inventories.",
+    "Required string-dispatched algebra worker retained inside the experimental runtime."
+  ],
+  "current_core_release_files_byte_identical": 367,
+  "obsolete_top_level_harness_directories_remaining": 0,
+  "published_benchmark_columns": "Core pipeline only; experimental scores removed from tables and summaries, saved evidence retained.",
+  "saved_score_values_changed": false,
+  "readme_method_highlight": [
+    "budget forcing",
+    "Gemma generation/reviews/fusion/revision",
+    "Qwen review and acceptance/repair audits",
+    "three refinement passes"
+  ],
+  "score_report_update": {
+    "recorded_at": "2026-09-18T04:12:26.103859+00:00",
+    "source_commit_before_update": "1acd5c80db72f1922ba4c3a03968c4f252e7b8d5",
+    "scope": "Report-only fallback expansion, equal problem weighting, normalized score fractions, per-problem IMO matrix and references. Earlier top-level validation fields describe the dependency-cleanup snapshot.",
+    "test_command": "python -B -m pytest -q -p no:cacheprovider tests/test_score_report.py tests/test_public_reproduction.py",
+    "tests_passed": 19,
+    "tests_failed": 0,
+    "scored_selections_verified": 263,
+    "score_lane_records_verified": 264,
+    "score_evidence_artifacts_verified": 545,
+    "previous_selections_unchanged": 223,
+    "previous_evidence_hashes_unchanged": 465,
+    "added_saved_proofs": 40,
+    "added_saved_grade_exports": 40,
+    "graded_raw_fallbacks": 0,
+    "remaining_missing_proofs": 1,
+    "offline_reproduction": "passed",
+    "core_release_integrity": "passed (366 inventoried files plus the unchanged inventory)",
+    "model_calls": 0,
+    "harness_or_prompt_files_changed": false,
+    "published_metric": "Percentage of maximum with acquired-score/maximum fraction; problem-weighted average and Oracle@4.",
+    "saved_grade_values_changed": false,
+    "new_grade_identity_checks": "Proof, problem, reference and guideline/dataset hashes match; same rubric, grader and effort; completed before the original snapshot cutoff.",
+    "private_pattern_scan": "6243 tracked files checked; zero findings.",
+    "whitespace_check": "Edited report/code files pass git diff --check. Trailing whitespace in copied historical proofs is retained to preserve their graded proof hashes."
+  }
+}

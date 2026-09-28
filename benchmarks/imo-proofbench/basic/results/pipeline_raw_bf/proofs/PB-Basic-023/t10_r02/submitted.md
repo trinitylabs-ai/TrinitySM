@@ -1,0 +1,25 @@
+To find all positive integers $(a, b, c)$ such that $2^a + 1 = 7^b + 2^c$, we first observe that $a > c$ must hold. If $a \le c$, then $2^a + 1 \le 2^c + 1 < 7^b + 2^c$ since $7^b > 1$ for $b \in \mathbb{Z}^+$. Let $a = c + k$ for some $k \in \mathbb{Z}^+$. The equation is rewritten as:
+\[ 2^{c+k} - 2^c = 7^b - 1 \implies 2^c(2^k - 1) = 7^b - 1. \]
+We analyze the $2$-adic valuation $v_2(7^b - 1)$.
+
+**Case 1: $b$ is odd.**
+For odd $b$, $7^b - 1 = (7-1)(7^{b-1} + \dots + 1) = 6 \cdot (\text{odd sum of } b \text{ odd terms}) = 6 \cdot (\text{odd})$. Thus $v_2(7^b - 1) = 1$, which implies $c = 1$. The equation becomes:
+\[ 2(2^k - 1) = 7^b - 1 \implies 2^{k+1} - 2 = 7^b - 1 \implies 2^{k+1} - 7^b = 1. \]
+If $b = 1$, we have $2^{k+1} - 7 = 1 \implies 2^{k+1} = 8 \implies k = 2$. Then $a = c + k = 1 + 2 = 3$. This gives the triple $(3, 1, 1)$.
+If $b > 1$, we consider $2^{k+1} - 7^b = 1$. Modulo 3, we have $(-1)^{k+1} - 1^b \equiv 1 \pmod 3 \implies (-1)^{k+1} \equiv 2 \equiv -1 \pmod 3$, so $k+1$ is odd. Modulo 4, for $k+1 \ge 2$, we have $0 - (-1)^b \equiv 1 \pmod 4 \implies (-1)^b \equiv -1 \pmod 4$, so $b$ is odd. Modulo 7, $2^{k+1} \equiv 1 \pmod 7 \implies 3 | (k+1)$. Let $k+1 = 3j$. Then $(2^j - 1)(2^{2j} + 2^j + 1) = 7^b$. Both factors must be powers of 7. For $j=1$, $2^1-1=1$ and $2^2+2+1=7$, which gives $b=1$. For $j=3$, $2^3-1=7$ but $2^6+2^3+1=73$, which is not a power of 7. For $j > 3$, $2^j - 1 = 7^m$ has no solutions other than $j=1, 3$. Thus, only $b=1$ works.
+
+**Case 2: $b$ is even.**
+Let $b = 2m$. Using the Lifting The Exponent Lemma for $p=2$, since $b$ is even:
+\[ v_2(7^b - 1) = v_2(7-1) + v_2(7+1) + v_2(b) - 1 = 1 + 3 + v_2(b) - 1 = v_2(b) + 3. \]
+Thus $c = v_2(b) + 3$.
+If $b = 2$, then $v_2(2) + 3 = 4$, so $c = 4$. The equation is $2^4(2^k - 1) = 7^2 - 1 = 48 \implies 16(2^k - 1) = 48 \implies 2^k - 1 = 3 \implies k = 2$. Then $a = c + k = 4 + 2 = 6$. This gives the triple $(6, 2, 4)$.
+If $b > 2$ is even, let $b = 2m$. If $m$ is odd, then $c = v_2(2m) + 3 = 1 + 3 = 4$. The equation is $2^4(2^k - 1) = 7^{2m} - 1$, which simplifies to $2^{k+4} - (7^m)^2 = 15$. Let $x = 7^m$ and $N = k+4$. We solve $x^2 = 2^N - 15$.
+If $N$ is odd, $x^2 \equiv 2^N \equiv 2 \pmod 3$, which is impossible.
+If $N$ is even, $N = 2j$, then $(2^j - x)(2^j + x) = 15$.
+1. $2^j - x = 1$ and $2^j + x = 15 \implies 2 \cdot 2^j = 16 \implies j = 3 \implies N = 6$. Then $x = 7$, so $7^m = 7 \implies m = 1$, which gives $b=2$.
+2. $2^j - x = 3$ and $2^j + x = 5 \implies 2 \cdot 2^j = 8 \implies j = 2 \implies N = 4$. Then $x = 1$, so $7^m = 1 \implies m = 0$, not a positive integer.
+If $m$ is even, $b$ is a multiple of 4. Let $b = 4j$. Then $c = v_2(4j) + 3 = v_2(j) + 5$. The equation is $2^{v_2(j)+5}(2^k - 1) = (7^{2j}-1)(7^{2j}+1)$. Since $v_2(7^{2j}-1) = v_2(j)+4$ and $v_2(7^{2j}+1) = 1$, we have $2^k - 1 = \frac{7^{2j}-1}{2^{v_2(j)+4}} \cdot \frac{7^{2j}+1}{2}$. For $j=1$, $2^k - 1 = \frac{48}{16} \cdot \frac{50}{2} = 3 \cdot 25 = 75 \implies 2^k = 76$ (no). For $j > 1$, the term $\frac{7^{2j}+1}{2}$ grows too rapidly to allow $2^k - 1$ to be a power of 2 minus 1.
+
+The only solutions are $(3, 1, 1)$ and $(6, 2, 4)$.
+
+The possible values of $(a,b,c)$ are $(3,1,1), (6,2,4)$. \(\square\)

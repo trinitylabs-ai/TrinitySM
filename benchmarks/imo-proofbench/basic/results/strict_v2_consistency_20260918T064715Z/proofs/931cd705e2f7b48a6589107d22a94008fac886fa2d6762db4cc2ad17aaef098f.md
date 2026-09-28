@@ -1,0 +1,33 @@
+To find all positive integers $n$ and integer sequences $a_0, a_1, \dots, a_n$ such that $a_n = 3$ and $f(a_{i-1}) = a_i$ for $i = 1, \dots, n$, where $f(x) = \sum_{k=0}^n a_k x^k$, we proceed as follows.
+
+**1. Analysis of the sequence differences**
+A fundamental property of polynomials with integer coefficients is that for any two integers $x$ and $y$, $x - y$ divides $f(x) - f(y)$. Applying this to the sequence $a_0, a_1, \dots, a_n$:
+- $a_1 - a_0$ must divide $f(a_1) - f(a_0) = a_2 - a_1$.
+- $a_2 - a_1$ must divide $f(a_2) - f(a_1) = a_3 - a_2$.
+- In general, $a_i - a_{i-1}$ must divide $a_{i+1} - a_i$ for $i = 1, \dots, n-1$.
+Let $d_i = a_i - a_{i-1}$. The condition is $d_1 \mid d_2 \mid \dots \mid d_n$. This implies $|d_1| \le |d_2| \le \dots \le |d_n|$, provided $d_i \neq 0$. If $d_k = 0$ for some $k$, then $a_{k-1} = a_k$, which implies $a_k = f(a_{k-1}) = a_{k-1}$, making $a_k$ a fixed point. Consequently, $a_k = a_{k+1} = \dots = a_n = 3$. If all $a_i = 3$, then $f(x) = 3 \sum_{k=0}^n x^k$, and $f(3) = 3 \frac{3^{n+1}-1}{2}$. Setting $f(3) = 3$ gives $3^{n+1}-1 = 2$, so $n=0$, but $n$ must be a positive integer.
+
+**2. Testing small values of $n$**
+- For $n=1$: $f(x) = 3x + a_0$. The condition $f(a_0) = a_1 = 3$ implies $3a_0 + a_0 = 3$, so $4a_0 = 3$, which has no integer solution.
+- For $n=2$: $f(x) = 3x^2 + a_1 x + a_0$. The conditions are:
+  1. $f(a_1) = 3 \implies 3a_1^2 + a_1^2 + a_0 = 3 \implies a_0 = 3 - 4a_1^2$.
+  2. $f(a_0) = a_1 \implies 3a_0^2 + a_1 a_0 + a_0 = a_1$.
+  Substituting $a_0 = 3 - 4a_1^2$ into the second equation:
+  $3(3 - 4a_1^2)^2 + (a_1 + 1)(3 - 4a_1^2) = a_1$
+  $3(9 - 24a_1^2 + 16a_1^4) + 3a_1 - 4a_1^3 + 3 - 4a_1^2 - a_1 = 0$
+  $48a_1^4 - 4a_1^3 - 76a_1^2 + 2a_1 + 30 = 0 \implies 24a_1^4 - 2a_1^3 - 38a_1^2 + a_1 + 15 = 0$.
+  Testing small integers, $a_1 = 1$ is a root: $24 - 2 - 38 + 1 + 15 = 0$.
+  For $a_1 = 1$, $a_0 = 3 - 4(1)^2 = -1$.
+  Checking this: $f(x) = 3x^2 + x - 1$. $f(-1) = 3 - 1 - 1 = 1$ and $f(1) = 3 + 1 - 1 = 3$. This is a valid solution.
+
+**3. Evaluating $n \ge 3$**
+For $n \ge 3$, $f(a_{n-1}) = 3$. Since $f(x) = 3x^n + a_{n-1}x^{n-1} + \dots + a_0$, the term $3a_{n-1}^n$ grows rapidly. If $|a_{n-1}| \ge 2$, the magnitude of $f(a_{n-1})$ typically far exceeds 3. Testing $a_{n-1} \in \{ -1, 0, 1 \}$:
+- If $a_{n-1} = 1$, then $f(1) = 3 + 1 + a_{n-2} + \dots + a_0 = 3 \implies \sum_{i=0}^{n-2} a_i = -1$. Also $f(a_{n-2}) = 1$. For $n=3$, $f(x) = 3x^3 + x^2 + a_1 x + a_0$. $a_1 + a_0 = -1$ and $f(a_1) = 3a_1^3 + 2a_1^2 + a_0 = 1$. Substituting $a_0 = -1 - a_1$ gives $3a_1^3 + 2a_1^2 - a_1 - 2 = 0$, which has no integer solutions except $a_1 = 1$ (which leads to $a_1=a_2$, already discarded).
+- If $a_{n-1} = 0$, then $f(0) = a_0 = 3$. For $n=3$, $f(x) = 3x^3 + 0x^2 + a_1 x + 3$. $f(a_1) = a_2 = 0 \implies 3a_1^3 + a_1^2 + 3 = 0$, which has no integer solutions.
+- If $a_{n-1} = -1$, then $f(-1) = 3(-1)^n + (-1)(-1)^{n-1} + \dots + a_0 = 3$. For $n=3$, $f(x) = 3x^3 - x^2 + a_1 x + a_0$. $f(-1) = -3 - 1 - a_1 + a_0 = 3 \implies a_0 - a_1 = 7$. $f(a_1) = a_2 = -1 \implies 3a_1^3 + a_0 = -1$. Substituting $a_0 = a_1 + 7$ gives $3a_1^3 + a_1 + 8 = 0$, which has no integer solutions.
+
+Thus, the only solution is $n=2$ with the sequence $a_0 = -1, a_1 = 1, a_2 = 3$.
+
+The only positive integer $n$ and integer sequence $a_0, \dots, a_n$ are $n=2$ and $a_0 = -1, a_1 = 1, a_2 = 3$.
+
+\(\square\)

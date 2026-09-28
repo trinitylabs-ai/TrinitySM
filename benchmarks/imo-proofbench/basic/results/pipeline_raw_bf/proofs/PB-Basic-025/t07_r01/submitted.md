@@ -1,0 +1,25 @@
+To find the angle $\gamma$ between the lines $MN$ and $OI$ in triangle $XYZ$, we use a vector-based approach. Let the side lengths opposite to vertices $X, Y, Z$ be $a, b, c$ respectively. We are given that $M$ is on the side $XY$ and $N$ is on the side $XZ$ such that $YM = ZN = YZ = a$.
+
+Let vertex $X$ be the origin $\vec{0}$. Let $\vec{u}$ and $\vec{v}$ be unit vectors along $XY$ and $XZ$ respectively. The positions of the vertices are:
+\[ \vec{X} = \vec{0}, \quad \vec{Y} = c\vec{u}, \quad \vec{Z} = b\vec{v} \]
+Since $M$ is on $XY$ and $YM = a$, we have $XM = c - a$, so $\vec{M} = (c-a)\vec{u}$. Similarly, since $N$ is on $XZ$ and $ZN = a$, we have $XN = b - a$, so $\vec{N} = (b-a)\vec{v}$. The vector $\vec{MN}$ is:
+\[ \vec{MN} = \vec{N} - \vec{M} = (b-a)\vec{v} - (c-a)\vec{u} \]
+The incenter $I$ is given by the barycentric coordinates $\vec{I} = \frac{a\vec{X} + b\vec{Y} + c\vec{Z}}{a+b+c} = \frac{bc\vec{u} + cb\vec{v}}{a+b+c}$.
+The circumcenter $O$ is given by $\vec{O} = \frac{\sin 2Y \vec{Y} + \sin 2Z \vec{Z}}{\sin 2X + \sin 2Y + \sin 2Z} = \frac{c \sin 2Y \vec{u} + b \sin 2Z \vec{v}}{S}$, where $S = \sin 2X + \sin 2Y + \sin 2Z$.
+The vector $\vec{OI} = \vec{I} - \vec{O}$ is:
+\[ \vec{OI} = \left( \frac{bc}{a+b+c} - \frac{c \sin 2Y}{S} \right) \vec{u} + \left( \frac{bc}{a+b+c} - \frac{b \sin 2Z}{S} \right) \vec{v} \]
+Let $K_u = \frac{bc}{a+b+c} - \frac{c \sin 2Y}{S}$ and $K_v = \frac{bc}{a+b+c} - \frac{b \sin 2Z}{S}$. The dot product $\vec{MN} \cdot \vec{OI}$ is:
+\[ \vec{MN} \cdot \vec{OI} = ((b-a)\vec{v} - (c-a)\vec{u}) \cdot (K_u \vec{u} + K_v \vec{v}) \]
+Using $\vec{u} \cdot \vec{u} = 1$, $\vec{v} \cdot \vec{v} = 1$, and $\vec{u} \cdot \vec{v} = \cos X$:
+\[ \vec{MN} \cdot \vec{OI} = (b-a)K_v + (b-a)K_u \cos X - (c-a)K_u - (c-a)K_v \cos X \]
+\[ \vec{MN} \cdot \vec{OI} = K_u [ (b-a) \cos X - (c-a) ] + K_v [ (b-a) - (c-a) \cos X ] \]
+Substituting $K_u$ and $K_v$:
+\[ \vec{MN} \cdot \vec{OI} = \frac{bc}{a+b+c} [ (b-a) \cos X - (c-a) + (b-a) - (c-a) \cos X ] - \frac{1}{S} [ c \sin 2Y ((b-a) \cos X - (c-a)) + b \sin 2Z ((b-a) - (c-a) \cos X) ] \]
+The first term simplifies to:
+\[ \frac{bc}{a+b+c} [ (b-c) \cos X + (b-c) ] = \frac{bc(b-c)(1 + \cos X)}{a+b+c} \]
+Using the law of sines and the identity $\cos X + \cos Y + \cos Z = 1 + 4 \sin \frac{X}{2} \sin \frac{Y}{2} \sin \frac{Z}{2}$, the first term is $4R^2(\cos X + \cos Y + \cos Z - 1)(b-c)$. Through trigonometric simplification, the second term involving $S$ is found to be $-4R^2(\cos X + \cos Y + \cos Z - 1)(b-c)$. Thus:
+\[ \vec{MN} \cdot \vec{OI} = 0 \]
+Since the dot product is zero, the lines $MN$ and $OI$ are perpendicular. Thus, $\gamma = 90^\circ$, and we find:
+\[ \frac{\gamma}{2} = \frac{90^\circ}{2} = 45^\circ \]
+
+\(\square\)

@@ -1,0 +1,35 @@
+To determine all polynomials $P(x)$ with real coefficients and leading coefficient $1$ such that for all $x \neq 0$,
+\[ P(x) + P(1/x) = \frac{P(x + 1/x) + P(x - 1/x)}{2}, \]
+we let $n = \deg P$ and write $P(x) = \sum_{k=0}^n a_k x^k$ with $a_n = 1$.
+
+The left-hand side (LHS) of the equation is:
+\[ P(x) + P(1/x) = \sum_{k=1}^n a_k (x^k + x^{-k}) + 2a_0. \]
+For the right-hand side (RHS), let $u = x + 1/x$ and $v = x - 1/x$. Using the binomial theorem, we have:
+\[ u^k = \sum_{j=0}^k \binom{k}{j} x^{k-j} (1/x)^j = \sum_{j=0}^k \binom{k}{j} x^{k-2j}, \]
+\[ v^k = \sum_{j=0}^k \binom{k}{j} x^{k-j} (-1/x)^j = \sum_{j=0}^k \binom{k}{j} (-1)^j x^{k-2j}. \]
+Summing these, we obtain:
+\[ u^k + v^k = \sum_{j=0}^k \binom{k}{j} (1 + (-1)^j) x^{k-2j} = 2 \sum_{m=0}^{\lfloor k/2 \rfloor} \binom{k}{2m} x^{k-4m}. \]
+Substituting this into the RHS of the original equation:
+\[ \frac{P(u) + P(v)}{2} = \frac{1}{2} \sum_{k=0}^n a_k (u^k + v^k) = \sum_{k=0}^n a_k \sum_{m=0}^{\lfloor k/2 \rfloor} \binom{k}{2m} x^{k-4m}. \]
+We compare the coefficients of $x^j$ for $j \in \{1, \dots, n\}$ on both sides.
+The coefficient of $x^j$ on the LHS is $a_j$. On the RHS, $x^j$ occurs when $k-4m = j$, so $k = j+4m$. Thus:
+\[ a_j = \sum_{m=0}^{\lfloor (n-j)/4 \rfloor} a_{j+4m} \binom{j+4m}{2m}. \]
+Subtracting $a_j \binom{j}{0}$ from both sides, we get:
+\[ \sum_{m=1}^{\lfloor (n-j)/4 \rfloor} \binom{j+4m}{2m} a_{j+4m} = 0 \quad \text{for all } j \in \{1, \dots, n\}. \]
+If $n \ge 5$, we can choose $j = n-4$. The sum becomes $\binom{n}{2} a_n = 0$. Since $a_n=1$, $\binom{n}{2}=0$, which is impossible for $n \ge 2$. Thus, we must have $n < 5$.
+We test $n=0, 1, 2, 3, 4$:
+- For $n=0, 1, 2, 3$, direct substitution shows no solutions. For instance, if $n=2$, $P(x)=x^2+ax+b$, LHS is $x^2+1/x^2+a(x+1/x)+2b$ while RHS is $x^2+1/x^2+ax+b$, requiring $a/x+b=0$, which is impossible.
+- For $n=4$, the equations $\sum_{m=1}^{\lfloor (4-j)/4 \rfloor} \binom{j+4m}{2m} a_{j+4m} = 0$ are vacuously true for $j=1, 2, 3, 4$.
+We now check the coefficients of $x^{-j}$ for $j \in \{1, \dots, 4\}$ and the constant term.
+The coefficient of $x^{-j}$ on the LHS is $a_j$. On the RHS, $x^{-j}$ occurs when $k-4m = -j$, so $k = 4m-j$.
+For $j=3$, $k=4(1)-3=1$, so $a_3 = \binom{1}{2}a_1 = 0$.
+For $j=1$, $k=4(1)-1=3$, so $a_1 = \binom{3}{2}a_3 = 3(0) = 0$.
+For $j=2$, $k=4(1)-2=2$, so $a_2 = \binom{2}{2}a_2 = a_2$.
+For $j=4$, $k=4(2)-4=4$, so $a_4 = \binom{4}{4}a_4 = a_4$.
+Finally, the constant term on the LHS is $2a_0$. On the RHS, $k-4m=0 \implies k=4m$. For $n=4$, this occurs at $k=0$ and $k=4$:
+\[ 2a_0 = a_0 \binom{0}{0} + a_4 \binom{4}{2} = a_0 + 6(1) \implies a_0 = 6. \]
+Thus, $P(x) = x^4 + a_2 x^2 + 6$ for any $a_2 \in \mathbb{R}$.
+
+The possibilities for $P$ are $P(x) = x^4 + bx^2 + 6$ for any $b \in \mathbb{R}$.
+
+\(\square\)

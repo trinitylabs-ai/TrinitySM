@@ -1,0 +1,129 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Find all pairs of primes $(a, b)$ such that $a^2 - ab - b^3 = 1$.
+
+**GROUND-TRUTH SOLUTION**
+
+Step 1. Lemma. If for a prime $p$, $p\equiv 2 \pmod{3}$, then $p$ cannot divide $q^2-q+1$ for any prime $q$.
+ Proof. Assume $p \mid q^2-q+1$ (so $p$ is odd); then $p \mid q^3+1$, so $q^3 \equiv -1 \pmod{p}$, thus $q^6 \equiv 1 \pmod{p}$. Let $\nu$ be the multiplicative order of $q$ modulo $p$; then $\nu \mid 6$, and $\nu \mid p-1$ (by Fermat's Little theorem). That forces $\nu = 2$ (since $\nu = 1$ means $q \equiv 1 \pmod{p}$, so $-1 \equiv q^3 \equiv 1 \pmod{p}$, forcing $p=2$, absurd), and so $q \equiv -1 \pmod{p}$. But then $0\equiv q^2-q+1 \equiv 1 + 1 + 1 = 3 \pmod{p}$, forcing $p=3$, absurd.
+
+ Step 2. Easily $a>3$, then $a^2=ab+b^3+1>2b+b^3+1>2b+b^2+1=(b+1)^2$, hence $a>b+1$; but then from $a\mid b^3+1=(b+1)(b^2-b+1)$ follows that $a\mid b^2-b+1$, hence $a\equiv 1 \pmod{3}$.
+
+ Step 3. If $b\equiv 1\pmod{3}$, then $1=a^2-ab-b^3 \equiv 1-1-1 = -1 \pmod{3}$, a contradiction. If $b\equiv 2\pmod{3}$, then $1=a^2 - ab - b^3 \equiv 1 - 2 + 1 = 0 \pmod{3}$, a contradiction again. Hence $b=3$ (the only moment where the primality of $b$ is actually used), and from this we easily get $a=7$. So $(a,b)=(7,3)$ is the only solution.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved that $a$ should divide $b^2 - b+1$. Also partial points for proving that $a-2$ cannot be a multiple of $3$.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To find all pairs of primes $(a, b)$ such that $a^2 - ab - b^3 = 1$, we begin by rearranging the equation to isolate the prime $b$.
+
+The given equation is:
+\[ a^2 - 1 = ab + b^3 \]
+Factoring both sides:
+\[ (a-1)(a+1) = b(a + b^2) \]
+Since $b$ is a prime number and divides the product $(a-1)(a+1)$, by Euclid's Lemma, $b$ must divide either $a-1$ or $a+1$. This leads us to two cases.
+
+**Case 1: $b$ divides $a-1$**
+Let $a-1 = nb$ for some positive integer $n$. Then $a = nb + 1$. Substituting this into the original equation:
+\[ (nb+1)^2 - (nb+1)b - b^3 = 1 \]
+\[ n^2b^2 + 2nb + 1 - nb^2 - b - b^3 = 1 \]
+\[ n^2b^2 + 2nb - nb^2 - b - b^3 = 0 \]
+Since $b$ is a prime, $b \neq 0$, so we can divide by $b$:
+\[ n^2b + 2n - nb - 1 - b^2 = 0 \]
+Rearranging this as a quadratic in $b$:
+\[ b^2 + (n-n^2)b + (1-2n) = 0 \]
+Using the quadratic formula to solve for $b$:
+\[ b = \frac{(n^2-n) \pm \sqrt{(n-n^2)^2 - 4(1-2n)}}{2} = \frac{n^2-n \pm \sqrt{n^4 - 2n^3 + n^2 + 8n - 4}}{2} \]
+For $b$ to be an integer, the discriminant $D = n^4 - 2n^3 + n^2 + 8n - 4$ must be a perfect square.
+- For $n=1$, $D = 1-2+1+8-4 = 4 = 2^2$. Then $b = \frac{0 \pm 2}{2} = \pm 1$. (Not prime)
+- For $n=2$, $D = 16-16+4+16-4 = 16 = 4^2$. Then $b = \frac{2 \pm 4}{2}$. Thus $b=3$ or $b=-1$. For $b=3$, $a = 2(3)+1 = 7$. Check: $7^2 - 7(3) - 3^3 = 49 - 21 - 27 = 1$. (Valid)
+- For $n=3$, $D = 81-54+9+24-4 = 56$. (Not a square)
+- For $n=4$, $D = 256-128+16+32-4 = 172$. (Not a square)
+- For $n \ge 5$, we observe that $(n^2-n)^2 = n^4 - 2n^3 + n^2$. Since $8n-4 > 0$, $D > (n^2-n)^2$.
+Also, $(n^2-n+1)^2 = n^4 - 2n^3 + 3n^2 - 2n + 1$.
+The difference $(n^2-n+1)^2 - D = 2n^2 - 10n + 5$. For $n=5$, $50-50+5=5 > 0$. For $n > 5$, the derivative $4n-10$ is positive. Thus $D < (n^2-n+1)^2$ for $n \ge 5$.
+Since $D$ lies strictly between two consecutive squares for $n \ge 5$, it cannot be a square.
+
+**Case 2: $b$ divides $a+1$**
+Let $a+1 = nb$ for some positive integer $n$. Then $a = nb - 1$. Substituting this into the original equation:
+\[ (nb-1)^2 - (nb-1)b - b^3 = 1 \]
+\[ n^2b^2 - 2nb + 1 - nb^2 + b - b^3 = 1 \]
+\[ n^2b^2 - 2nb - nb^2 + b - b^3 = 0 \]
+Dividing by $b$:
+\[ n^2b - 2n - nb + 1 - b^2 = 0 \]
+Rearranging as a quadratic in $b$:
+\[ b^2 + (n-n^2)b + (2n-1) = 0 \]
+Solving for $b$:
+\[ b = \frac{(n^2-n) \pm \sqrt{(n-n^2)^2 - 4(2n-1)}}{2} = \frac{n^2-n \pm \sqrt{n^4 - 2n^3 + n^2 - 8n + 4}}{2} \]
+Let $D = n^4 - 2n^3 + n^2 - 8n + 4$.
+- For $n=1$, $D = 1-2+1-8+4 = -4$.
+- For $n=2$, $D = 16-16+4-16+4 = -8$.
+- For $n=3$, $D = 81-54+9-24+4 = 16 = 4^2$. Then $b = \frac{6 \pm 4}{2}$. Thus $b=5$ or $b=1$. For $b=5$, $a = 3(5)-1 = 14$. (Not prime)
+- For $n=4$, $D = 256-128+16-32+4 = 116$. (Not a square)
+- For $n \ge 5$, we observe that $D < (n^2-n)^2$ since $8n-4 > 0$.
+Also, $(n^2-n-1)^2 = n^4 - 2n^3 - n^2 + 2n + 1$.
+The difference $D - (n^2-n-1)^2 = 2n^2 - 10n + 3$. For $n=5$, $50-50+3 = 3 > 0$. For $n > 5$, the derivative $4n-10$ is positive. Thus $D > (n^2-n-1)^2$ for $n \ge 5$.
+Since $D$ lies strictly between two consecutive squares for $n \ge 5$, it cannot be a square.
+
+The only pair of primes that satisfies the equation is $(7, 3)$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,29 @@
+To determine the real values of $\theta \in (0, 180^\circ)$ for which Mulan (M) can guarantee victory, we analyze the game as a reachability problem on the space of triangles.
+
+**1. The Winning Condition**
+Mulan wins if the current triangle $T$ has an angle $\theta$. If $T$ does not, Mulan makes a cut from vertex $A$ to point $P$ on the opposite side $BC$. This splits $T$ into two triangles, $T_1$ and $T_2$. Shan-Yu (SY) chooses which triangle to discard. For Mulan to guarantee a win in the next step, she must choose the cut such that both $T_1$ and $T_2$ contain an angle $\theta$.
+
+Let the angles of $T$ be $\alpha, \beta, \gamma$. Let the cut from $A$ to $P$ divide $\alpha$ into $\alpha_1$ and $\alpha_2$, and the angle at $P$ be $\delta$.
+The angles are: $T_1: (\alpha_1, \beta, \delta)$ and $T_2: (\alpha_2, \gamma, 180^\circ - \delta)$.
+Mulan wins in one move if:
+$(\alpha_1 = \theta \text{ or } \beta = \theta \text{ or } \delta = \theta) \text{ AND } (\alpha_2 = \theta \text{ or } \gamma = \theta \text{ or } 180^\circ - \delta = \theta)$.
+
+**2. Analysis of Winning Moves**
+Assuming no angle is already $\theta$:
+- If $\delta = \theta$ and $180^\circ - \delta = \theta$, then $\theta = 90^\circ$. In this case, Mulan can drop a perpendicular from a vertex to the opposite side. If the altitude falls inside the triangle, both resulting triangles have a $90^\circ$ angle. If it falls outside, the triangle is obtuse, and the altitude from another vertex will necessarily fall inside. Thus, $\theta = 90^\circ$ is a winning value.
+- If $\alpha_1 = \theta$ and $\alpha_2 = \theta$, then $\alpha = 2\theta$. Mulan can split an angle $2\theta$ into $\theta$ and $\theta$. Both $T_1$ and $T_2$ then have an angle $\theta$.
+- Other combinations (e.g., $\alpha_1 = \theta$ and $180^\circ - \delta = \theta$) lead to $\beta = 0$ or $\alpha + \beta = 180^\circ$, which are impossible for a triangle.
+
+Thus, for $\theta \neq 90^\circ$, Mulan can force a win in one move if and only if $T$ has an angle $2\theta$.
+
+**3. Recursive Winning Set**
+Mulan can guarantee victory if she can force the triangle to eventually have an angle $\theta$. This is possible if she can force it to have an angle $2\theta$, which in turn is possible if she can force an angle $4\theta$, and so on.
+Crucially, since SY chooses $T_0$, Mulan must be able to force a win for *any* initial triangle. If $\theta \neq 90^\circ$ and $\theta \neq 90^\circ/2^k$, SY can choose $T_0$ such that no angle is of the form $2^n \theta$ or $180^\circ - 2^n \theta$. 
+For $\theta = 90^\circ/2^k$, Mulan can force a $90^\circ$ angle (which is $2^k \theta$), then use that to force $2^{k-1}\theta, \dots, 2\theta$, and finally $\theta$.
+
+**4. Verification**
+If $\theta = 90^\circ/2^k$, Mulan uses the altitude to force $90^\circ$. Once $T$ has an angle $\phi > \theta$, Mulan cannot force $\theta$ unless she can force both $T_1, T_2$ to have it. But if $\phi = 2\theta$, she splits $\phi$ into $\theta$ and $\theta$. Since $90^\circ = 2^k \theta$, Mulan can repeatedly bisect the forced angle until she reaches $\theta$. If $\theta$ is not of this form, SY can avoid these "doubling" points indefinitely.
+
+The values are $\theta = \frac{90^\circ}{2^k}$ for $k = 0, 1, 2, \dots$.
+
+\boxed{\theta = \frac{90^\circ}{2^k}, k \in \{0, 1, 2, \dots\}}

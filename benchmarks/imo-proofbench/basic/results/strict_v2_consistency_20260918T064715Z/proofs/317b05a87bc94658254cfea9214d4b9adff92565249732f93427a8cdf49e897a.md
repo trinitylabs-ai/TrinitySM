@@ -1,0 +1,43 @@
+To prove that $x_{n-1}$ divides $x_n$ for all integers $n \ge 2$, we will use the principle of mathematical induction.
+
+**1. Definitions and Base Case**
+The sequence is defined by $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$ for $n \ge 2$.
+For $n=2$, we have $x_2 = 2^{x_1} + 2 = 2^6 + 2 = 64 + 2 = 66$.
+Since $66 = 6 \times 11$, we see that $x_1 \mid x_2$. Moreover, the quotient $x_2/x_1 = 11$ is an odd integer.
+
+**2. Inductive Hypotheses**
+Let $P(n)$ be the statement: $x_n \mid x_{n+1}$ and the quotient $\frac{x_{n+1}}{x_n}$ is an odd integer.
+Let $w_n = x_n - 1$. Let $Q(n)$ be the statement: $w_n \mid w_{n+1}$ and the quotient $\frac{w_{n+1}}{w_n}$ is an odd integer.
+
+We have already verified that $P(1)$ is true since $x_2/x_1 = 11$.
+We also check $Q(1)$: $w_1 = x_1 - 1 = 5$ and $w_2 = x_2 - 1 = 65$. Since $65/5 = 13$, $Q(1)$ is true.
+
+**3. Logical Implications**
+We will prove that $P(n) \implies Q(n+1)$ and $Q(n) \implies P(n+1)$.
+
+*   **Proof of $P(n) \implies Q(n+1)$:**
+    Assume $P(n)$ is true, meaning $x_{n+1}/x_n$ is an odd integer.
+    By definition, $w_{n+1} = x_{n+1} - 1 = 2^{x_n} + 1$ and $w_{n+2} = x_{n+2} - 1 = 2^{x_{n+1}} + 1$.
+    A known property of exponents states that for any $a > 1$ and odd positive integers $A$ and $B$, if $A \mid B$ and $B/A$ is odd, then $a^A + 1 \mid a^B + 1$.
+    Applying this with $a=2, A=x_n, B=x_{n+1}$, since $x_{n+1}/x_n$ is an odd integer, we have:
+    $$2^{x_n} + 1 \mid 2^{x_{n+1}} + 1 \implies w_{n+1} \mid w_{n+2}$$
+    Since $w_{n+1}$ and $w_{n+2}$ are both odd, their quotient $w_{n+2}/w_{n+1}$ must also be an odd integer. Thus, $Q(n+1)$ is true.
+
+*   **Proof of $Q(n) \implies P(n+1)$:**
+    Assume $Q(n)$ is true, meaning $w_{n+1}/w_n$ is an odd integer.
+    Note that $x_{n+1} = 2^{x_n} + 2 = 2(2^{x_n-1} + 1) = 2(2^{w_n} + 1)$.
+    Similarly, $x_{n+2} = 2(2^{w_{n+1}} + 1)$.
+    Using the same exponent property with $a=2, A=w_n, B=w_{n+1}$, since $w_{n+1}/w_n$ is an odd integer, we have:
+    $$2^{w_n} + 1 \mid 2^{w_{n+1}} + 1$$
+    Multiplying both sides by 2, we get:
+    $$2(2^{w_n} + 1) \mid 2(2^{w_{n+1}} + 1) \implies x_{n+1} \mid x_{n+2}$$
+    The quotient $x_{n+2}/x_{n+1} = \frac{2^{w_{n+1}} + 1}{2^{w_n} + 1}$ is a quotient of two odd integers, hence it is an odd integer. Thus, $P(n+1)$ is true.
+
+**4. Synthesis**
+We have established the chain of implications:
+$$P(1) \implies Q(2) \implies P(2) \implies Q(3) \implies P(3) \dots$$
+Since $P(1)$ is true, $P(n)$ is true for all $n \ge 1$.
+The statement $P(n)$ implies $x_n \mid x_{n+1}$ for all $n \ge 1$.
+By shifting the index $n \to n-1$, we conclude that $x_{n-1} \mid x_n$ for all $n \ge 2$.
+
+\(\square\)

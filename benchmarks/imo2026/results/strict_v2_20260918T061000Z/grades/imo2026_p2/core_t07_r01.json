@@ -1,0 +1,64 @@
+{
+  "problem_id": "imo2026_p2",
+  "candidate": "t07_r01",
+  "group": "core",
+  "grader_candidate": "core_t07_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t07_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe.md",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/09210773bcd3c5313e9ea23539fc744a2da319258a07619072cde906d3d3ce8e.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t07_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:15:23.101289+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first load-bearing error is a sign reversal when expanding P·(b−c). The cross terms should be +kc sin(phi_L)−lc sin(A−theta_K), whereas the submission obtains their negatives. This is a false load-bearing calculation under Rule C. More importantly, the subsequent conclusion PB=PC is only asserted, triggering Rule E and the lower cap of 3.",
+    "summary": "The reduction of OM=ON to PB=PC for P=2O and the circumcenter dot-product relations are useful and largely correct. However, after a sign error in the coordinate calculation, the proof never translates the conditions angle LBK=beta and angle LCK=gamma into equations or derives the required equality. The statement that the terms 'balance' is not an explicit checkable identity, so Rule B does not make score 4 eligible and Rule E caps the solution at 3.",
+    "strengths": [
+      "Correctly proves that OM=ON is equivalent to P=2O lying on the perpendicular bisector of BC.",
+      "Correctly derives P·k=|k|² and P·l=|l|² from the circumcenter equations.",
+      "Obtains useful sine-law relations for the lengths AK and AL and sets up a plausible coordinate strategy."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "In expanding P·(b−c), both mixed-term signs are reversed. The correct expression contains +kc sin(phi_L)−lc sin(A−theta_K), invalidating all subsequent displayed formulas."
+      },
+      {
+        "severity": "major",
+        "description": "The decisive claim PB=PC is not proved. The two remaining angle conditions are never converted into usable relations; saying that the terms balance merely restates the required compatibility. This is an unsupported central inference under Rule E, and the omitted derivation also fails Rule B's explicit-equality requirement."
+      },
+      {
+        "severity": "minor",
+        "description": "The tangent formulas divide by cosine factors and denominators without treating possible right-angle or zero-denominator cases. They are not subsequently used, so this is not the controlling defect."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "40648c963a7cee8bcd98db3f72dfe647a1e04c252080bc8fe06a84505f8f5197",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

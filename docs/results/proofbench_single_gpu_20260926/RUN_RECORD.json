@@ -1,0 +1,62 @@
+{
+  "schema": "workshop-recorded-single-gpu-v1",
+  "suite": "proofbench_B_1_12_0_twice_20260923T032058Z",
+  "continuation": "gpu0_bulk_recovery_20260924T211003Z",
+  "release": "1.12.0",
+  "release_sha256": "e8d94232e00c0c3297fbbfa466df7634055ed6aa2876ba1786d94a87858041c9",
+  "hardware": "one NVIDIA RTX PRO 6000 Blackwell 96 GB GPU; other GPU offline and unused",
+  "host_ram_observed_gib": 125.47,
+  "previously_processed_portfolios": 16,
+  "pending_portfolios_admitted": 44,
+  "server_preparation": "Gemma awake, Qwen asleep; both processes loaded sequentially",
+  "model_switches": 26,
+  "released_logical_leases": {
+    "gemma": 4329,
+    "qwen": 1965
+  },
+  "proof_concurrency_by_model": {
+    "gemma": 8,
+    "qwen": 12
+  },
+  "comparison_concurrency": 12,
+  "switch_quiet_seconds": 20,
+  "scheduler_error": null,
+  "snapshot_updated_at": "2026-09-26T20:01:19.398631+00:00",
+  "gemma_kv_cache_memory_bytes": 30064771072,
+  "offload_storage": "byte-preserving file-backed CPU mmap; vLLM sleep level 1",
+  "queue_time_excluded_from_inference_deadlines": true,
+  "prompts_seeds_sampling_bf_and_generation_limits_unchanged": true,
+  "adapter_sources": [
+    {
+      "file": "broker.py",
+      "source_sha256": "155f8f3a828a33bbea4786d7503e33fb945f16c7b48985643793bb5f0b3505c3",
+      "source_record": "broker_concurrency_20260925T081734241855Z.py"
+    },
+    {
+      "file": "client.py",
+      "source_sha256": "94f140dafabf72578e27f3c569c4b2440262034cff2a7f21d53437a369c74d83",
+      "source_record": "runtime/client.py"
+    },
+    {
+      "file": "client_compat/sitecustomize.py",
+      "source_sha256": "b408ccbc1b2ce4dd9e0ee9a96700038afa77de65aff04aae7ae479f09afff156",
+      "source_record": "runtime/client_compat/sitecustomize.py"
+    },
+    {
+      "file": "server_compat/sitecustomize.py",
+      "source_sha256": "dfa22f342912c29f7c164d4591e76288e850296dbc32335c28f894695feda128",
+      "source_record": "runtime/server_compat/sitecustomize.py"
+    },
+    {
+      "file": "server_compat/swap_storage.py",
+      "source_sha256": "c4f993cb90f203613dc01265c2dfc78921e55a53527b9334d76689ad757659bd",
+      "source_record": "runtime/server_compat/swap_storage.py"
+    }
+  ],
+  "publication_changes": [
+    "portable repository/cache/storage paths",
+    "managed process ownership and cleanup",
+    "fresh generation-only runner; no grading or recovery of private run directories",
+    "private response replay and automatic server restart omitted"
+  ]
+}

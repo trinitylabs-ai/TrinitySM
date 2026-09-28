@@ -1,0 +1,8 @@
+# Submitted proofs are hash-bound evidence; preserve their exact whitespace.
+benchmarks/**/proofs/** -whitespace
+docs/public_release/evidence/proofs/** -whitespace
+
+# All published result bundles preserve proof and response whitespace.
+docs/results/**/proofs/** -whitespace
+docs/results/**/grades/**/response.md -whitespace
+docs/results/**/votes/** -whitespace

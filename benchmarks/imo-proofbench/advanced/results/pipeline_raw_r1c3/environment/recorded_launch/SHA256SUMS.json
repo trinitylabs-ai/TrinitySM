@@ -1,0 +1,15 @@
+{
+  "run_id": "advanced001_030_v263_v290_frozen_run01",
+  "files": {
+    "qwen_startup_config.txt": "aeb6c32f75fe23cb2da875c6157c59153eb6a6cd56abff273c397ad4e8393d92",
+    "launch_scoring.sh": "f3063664d04727100960ca8d4f08867e0e50beb6a8c2c9e70f474069d5cc7304",
+    "generation_requests.jsonl": "cc2d2dac2d5b6dd9b7a3a1341dba8f93c215706b3a38efef51fbd21ae9717076",
+    "launch_solver.sh": "3de9c3e17cbd3411c64572fe8d030323bacb5cdf745a7ed6203ed31817455444",
+    "pci_link_observation.json": "fa8811a705a7608c560eca24ef78465443798ad1b3e037706cd25f4ff478edb4",
+    "manifest.json": "5362468de54306bd67747c3909e98bb44a207d1b2386401c5c2aaf706e8ad2ab",
+    "launch.json": "e36d8d197f593ba3a8bed617215472865c6d8c66cd53309ee09374cc8a2b7707",
+    "actual_launch.json": "bfc3146682728cd6fc8cd7022e679bd9af4954a90a8effa0a27f4d535d53b18a",
+    "qwen_restore.json": "ae9dbea55e50c95e5de92ebee54d392020cb80debf249ceac747b70d83d55625",
+    "scoring_manifest.json": "0aff1ad7e838334b2a21640ed71682747a26d94bc86e3cfb8a2ed5ab18e2b85f"
+  }
+}

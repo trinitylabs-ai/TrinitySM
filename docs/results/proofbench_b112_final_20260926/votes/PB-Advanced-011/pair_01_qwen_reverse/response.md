@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: $f(x) = 1/x$ is a solution. If $f$ is injective, then $f(x) = 1/x$ is the unique solution. The algebraic derivation of the form $f(x) = 1/x + C$ and the constraint $C=0$ are rigorously correct.
+Claim gap: The injectivity proof contains a domain-range mapping gap. It establishes $f(u+T) = f(u)$ for $u \in \{1/x_1 + f(y) \mid y \in \mathbb{R}^+\}$, but then asserts $f(y+T) = f(y)$ for large $y$ (line 17). This incorrectly transfers periodicity from the shifted image set to the domain variable $y$, requiring unjustified surjectivity or range density. The justification citing $x \to 0^+$ (line 14) is irrelevant to the fixed $x_1, x_2$ in the injectivity assumption.
+Qualifications and supplied repairs: The contradiction $h(y)=0$ (lines 22-28) is algebraically valid *conditional* on $f$ being periodic on a tail of the domain. No substantive repairs were supplied; the gap is identified as a missing surjectivity/range coverage lemma.
+Decisive checks: Lines 12-14 correctly derive $f(1/x_1 + f(y)) = f(1/x_2 + f(y))$. Line 14's claim that this implies periodicity on $(a', \infty)$ is unresolved without proving $\text{Im}(f)$ covers a tail. Lines 17-28 correctly show that domain periodicity leads to $h(y)=0$, contradicting the codomain $\mathbb{R}^+$.
+
+## Proof B
+Established theorem: $f(x) = 1/x$ is a solution. If $f$ is injective, then $f(x) = 1/x$ is the unique solution. The algebraic derivation of the form $f(x) = 1/x + a$ and $a=0$ are rigorously correct.
+Claim gap: The injectivity proof contains fatal logical errors. The induction $f(w_n) = k^{-n} f(w_0)$ (line 15) requires $z_n = (w_n-1)/y_1 \in \text{Im}(f)$ for all $n$, which implies $\text{Im}(f)$ is closed under multiplication by $k$; this is not justified. Furthermore, line 17 claims "we can choose $y_n$ such that $f(y_n) \to 0$ (by picking $y_n$ from the sequence $w_m$)", but $y_n$ is rigidly defined by $y_n f(x) + 1 = w_n$ and cannot be freely chosen. Line 18 also assumes continuity of $f$ to pass the limit inside $f(\cdot)$, which is not given.
+Qualifications and supplied repairs: The limit argument and sequence selection are mathematically invalid as written. No repairs were supplied; these are identified as false deductions rather than missing lemmas.
+Decisive checks: Lines 10-14 correctly set up the scaling relation $f(y_1 z + 1) = k f(y_2 z + 1)$. Line 15's induction step fails without $z_n \in \text{Im}(f)$. Lines 17-18 contain demonstrated defects: $y_n$ is fixed by the equation, making the claimed selection impossible, and the limit passage requires unproven continuity.
+
+## Decision
+Winner: A
+Reason: Both proofs correctly derive the functional form $f(x)=1/x$ assuming injectivity, but both fail to rigorously prove injectivity. Proof A's gap is a missing justification for range coverage (surjectivity) to extend periodicity to the domain, which is a common structural omission in Olympiad solutions. Proof B, however, contains fatal logical errors: it claims freedom to choose a sequence $y_n$ that is actually fixed by the equation, and it assumes continuity to evaluate a limit. Proof A's error is a gap in implication; Proof B's errors are false deductions. Thus, Proof A presents a stronger and more structurally sound argument.

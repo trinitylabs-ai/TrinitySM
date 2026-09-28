@@ -1,0 +1,9 @@
+{
+  "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+  "started_at": "2026-09-17T07:25:39.610951+00:00",
+  "completed_at": "2026-09-17T07:40:13.969172+00:00",
+  "wall_seconds": 874.3582535081077,
+  "worker_exited": true,
+  "returncode": 0,
+  "excludes_environment_capture_and_grading": true
+}

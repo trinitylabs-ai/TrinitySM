@@ -1,0 +1,36 @@
+To determine all monic polynomials $P(x)$ with real coefficients such that
+\[ P(x) + P(1/x) = \frac{P(x + 1/x) + P(x - 1/x)}{2} \]
+for all nonzero real numbers $x$, let $P(x) = \sum_{k=0}^n a_k x^k$ with $a_n = 1$.
+Let $f_k(x) = \frac{(x + 1/x)^k + (x - 1/x)^k}{2}$. Using the binomial theorem,
+\[ (x + 1/x)^k = \sum_{j=0}^k \binom{k}{j} x^{k-j} (1/x)^j = \sum_{j=0}^k \binom{k}{j} x^{k-2j} \]
+\[ (x - 1/x)^k = \sum_{j=0}^k \binom{k}{j} x^{k-j} (-1/x)^j = \sum_{j=0}^k \binom{k}{j} (-1)^j x^{k-2j} \]
+Thus, $f_k(x) = \frac{1}{2} \sum_{j=0}^k \binom{k}{j} (1 + (-1)^j) x^{k-2j} = \sum_{j=0, j \text{ even}}^k \binom{k}{j} x^{k-2j}$.
+The given equation is $\sum_{k=0}^n a_k (x^k + x^{-k}) = \sum_{k=0}^n a_k f_k(x)$.
+Expanding $f_k(x)$, we have $f_k(x) = \binom{k}{0} x^k + \binom{k}{2} x^{k-4} + \binom{k}{4} x^{k-8} + \dots$.
+Equating the coefficients of $x^m$ for $m > 0$:
+The coefficient of $x^m$ on the LHS is $a_m$. On the RHS, $x^m$ appears in $f_k(x)$ if $m = k - 2j$ for some even $j$. Thus $k = m + 2j$.
+\[ a_m = \sum_{j=0, 2, 4, \dots} a_{m+2j} \binom{m+2j}{2j} \]
+For $m = n$, we have $a_n = a_n \binom{n}{0}$, which is $1=1$.
+For $m = n-1$, we have $a_{n-1} = a_{n-1} \binom{n-1}{0}$, which is $a_{n-1} = a_{n-1}$.
+For $m = n-2$, $x^{n-2}$ only appears in $f_k$ when $k-2j = n-2$. For $k=n$, $j=1$ (not even). For $k=n-2$, $j=0$. Thus $a_{n-2} = a_{n-2}$, which is trivial.
+For $m = n-4$, we must have:
+\[ a_{n-4} = a_{n-4} \binom{n-4}{0} + a_{n-2} \binom{n-2}{2} (\text{only if } 2 \text{ even}) + a_n \binom{n}{4} (\text{only if } 4 \text{ even}) \]
+Actually, the term $x^{n-4}$ comes from $f_{n-4}$ ($j=0$), $f_{n-2}$ ($j=1$, impossible), and $f_n$ ($j=2$).
+Thus, $a_{n-4} = a_{n-4} + a_n \binom{n}{2} \cdot 0 + a_n \binom{n}{2}$? No, the index $j$ in $f_k$ is the binomial coefficient index. For $f_n$, $x^{n-4}$ corresponds to $j=2$. So:
+\[ a_{n-4} = a_{n-4} + a_n \binom{n}{2} \implies \binom{n}{2} = 0 \text{ for } n-4 > 0. \]
+This implies $n < 5$. We test $n=0, 1, 2, 3, 4$:
+- $n=0: P(x)=1 \implies 2 = 1$ (False).
+- $n=1: P(x)=x+a \implies a+1/x=0$ (False).
+- $n=2: P(x)=x^2+ax+b$. Comparing coefficients of $x$ and $x^0$: $a=0, 2b=b \implies a=b=0$. Thus $P(x)=x^2$.
+- $n=3: P(x)=x^3+ax^2+bx+c$. Coeff $x^{-3}$ on LHS is $1$, on RHS it is $0$ since $j$ must be even. (False).
+- $n=4: P(x)=x^4+ax^3+bx^2+cx+d$.
+  $x^3, x^2, x^1$ terms match trivially.
+  $x^0$ term: LHS $2d$, RHS $d + \binom{4}{2} a_4 = d+6$. Thus $d=6$.
+  $x^{-1}$ term: LHS $c$, RHS $3a_3 = 3a$. Thus $c=3a$.
+  $x^{-3}$ term: LHS $a$, RHS $0$. Thus $a=0$, which implies $c=0$.
+  $x^{-4}$ term: $1=1$.
+  The coefficient $b$ (for $x^2$) cancels out. Thus $P(x) = x^4 + bx^2 + 6$.
+
+The possibilities for $P$ are $P(x) = x^2$ and $P(x) = x^4 + ax^2 + 6$ for any $a \in \mathbb{R}$.
+
+\(\square\)

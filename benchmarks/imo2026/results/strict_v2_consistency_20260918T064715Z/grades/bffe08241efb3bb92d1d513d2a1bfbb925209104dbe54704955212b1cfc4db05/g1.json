@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "bffe08241efb3bb92d1d513d2a1bfbb925209104dbe54704955212b1cfc4db05",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "76086a1504bdbc8006f5d971ad5852b273b1b860991f0ead7899a96d0e15adc6",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the unsupported claim that, after the minimum product stabilizes, only a fixed finite set of hitting sets can determine future terms. Finiteness of the minimum-product family does not imply that events with a larger hitting set can occur only finitely often: such a hitting set may intersect the persistent minimum hitting set and remove none of it, while the alternative bound m(H)≤(a_n+m*)/2 is not uniform. This is an unsupported central structural inference under Rule E, so the score is capped at 3.",
+    "summary": "The prime-support reformulation is useful, and the argument would yield eventual translation-periodicity if a fixed finite family of relevant moduli were established. That crucial finiteness is not proved. Moreover, the last step improperly upgrades eventual periodicity to the required identity for every positive index, triggering Rule D independently. Establishing the theorem requires new global structural and compatibility arguments.",
+    "strengths": [
+      "Correctly reformulates admissibility using hitting sets of prime supports and gives the corresponding greedy minimum formula.",
+      "Correctly observes the nesting of the hitting-set families and monotonicity of their minimum products.",
+      "Conditional on having a fixed finite family of moduli, the translation-equivariance of the recurrence and the resulting eventual periodicity of increments are essentially correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The existence of a uniform bound M and a fixed finite family of relevant hitting sets is asserted without justification. The stated dichotomy does not provide such a bound, and finiteness of the minimum-product family does not rule out infinitely many larger competing hitting sets."
+      },
+      {
+        "severity": "major",
+        "description": "The proof obtains at most a_{n+T}=a_n+L for all sufficiently large n. Merely choosing T and L larger cannot make the same equality hold throughout the initial segment; the required compatibility with every positive n is entirely unproved, as covered by Rule D."
+      },
+      {
+        "severity": "minor",
+        "description": "The stabilization of m_n is only vaguely attributed to the finite set P_1. It can be repaired by explicitly noting that P_1 intersects every P_i, hence P_1 itself is a uniformly available hitting set and bounds m_n."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:03:26.371800+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00050",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T20:07:27.059378+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 28,
+  "problem_id": "PB-Basic-028",
+  "case_id": "PB-Basic-028.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/p28/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/p28/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/p28/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "85f3b26c7decfd4b54801f9388779c6380fe9a809093698294c23a0183fb8b19",
+  "reference_sha256": "dbad64fe6dfad8a0e4d6c3d0c19da15955195bc4b4ce538dd181477de939441d",
+  "proof_sha256": "8be91bba451efcc46fb4fe7ecfb0687ff63f7422c62bb236aa201bea4e2b6896",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/tasks.json",
+  "task_manifest_sha256": "7d1d26f45d20dee35c6ace65437c3df928504109f7c940f9dc262c8190cf3a66",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "After finding one root of the tangency quadratic, the solution merely asserts that the “closer to \\(A\\)” condition selects it; it does not exclude the other root.",
+    "summary": "The analytic derivation is coherent and correctly reduces the rhombus condition to \\(AX=r\\cot\\alpha\\), then obtains the corresponding radius of \\((W)\\). The omitted root-selection check is load-bearing but routine: Vieta gives the other root, whose center is farther from \\(A\\). The proof should also explicitly justify that the stated configuration forces \\(\\alpha\\) to be acute rather than leave this as an assumption.",
+    "strengths": [
+      "Correctly establishes the similarity of \\(\\triangle AEF\\) and \\(\\triangle ABC\\), derives the required side length, and verifies the proposed radius through a detailed tangency calculation.",
+      "Correctly uses symmetry about the angle bisector to reduce the rhombus claim to \\(AX=XI'\\)."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The second root of the tangency quadratic is not calculated or excluded, so the proposed root is not rigorously identified with the given circle \\((W)\\)."
+      },
+      {
+        "severity": "minor",
+        "description": "Acuteness of \\(\\angle A\\) is assumed without being derived from the configuration."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

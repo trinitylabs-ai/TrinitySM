@@ -1,0 +1,41 @@
+To find all strictly increasing, surjective functions $g: \mathbb{R} \to \mathbb{R}$ such that $g(g(x)) = g(x) + 20x$, we proceed as follows:
+
+1.  **Recurrence Relation:**
+    For any $x_0 \in \mathbb{R}$, define a sequence $(x_n)_{n \ge 0}$ by $x_{n+1} = g(x_n)$. The given equation $g(g(x)) = g(x) + 20x$ implies the linear homogeneous recurrence relation:
+    $$x_{n+2} = x_{n+1} + 20x_n$$
+    The characteristic equation is $r^2 - r - 20 = 0$, which factors as $(r-5)(r+4) = 0$. Thus, the roots are $r_1 = 5$ and $r_2 = -4$. The general solution for the sequence is:
+    $$x_n = A(x_0) 5^n + B(x_0) (-4)^n$$
+    where $A(x_0)$ and $B(x_0)$ are constants depending on $x_0$.
+
+2.  **Analyzing the Coefficients:**
+    From $n=0$, we have $x_0 = A(x_0) + B(x_0)$.
+    From $n=1$, we have $g(x_0) = 5 A(x_0) - 4 B(x_0)$.
+    Solving for $A(x_0)$ and $B(x_0)$:
+    $$g(x_0) = 5(x_0 - B(x_0)) - 4 B(x_0) = 5x_0 - 9 B(x_0) \implies B(x_0) = \frac{5x_0 - g(x_0)}{9}$$
+    $$A(x_0) = x_0 - B(x_0) = x_0 - \frac{5x_0 - g(x_0)}{9} = \frac{4x_0 + g(x_0)}{9}$$
+
+3.  **Monotonicity Constraint:**
+    Since $g$ is strictly increasing, for any $x < y$, we must have $g^n(x) < g^n(y)$ for all $n \ge 0$.
+    $$A(x) 5^n + B(x) (-4)^n < A(y) 5^n + B(y) (-4)^n$$
+    Dividing by $5^n$ and taking the limit as $n \to \infty$:
+    $$A(x) \le A(y)$$
+    Furthermore, rearranging the inequality gives $A(y) - A(x) > (B(x) - B(y)) (-4/5)^n$ for all $n$. This implies:
+    $$A(y) - A(x) \ge |B(y) - B(x)|$$
+    Using $A(x) + B(x) = x$, we have $B(y) - B(x) = (y - A(y)) - (x - A(x)) = (y - x) - (A(y) - A(x))$.
+    Let $\Delta A = A(y) - A(x)$ and $\Delta x = y - x$. The condition $\Delta A \ge |\Delta x - \Delta A|$ implies:
+    $\Delta A \ge \Delta x - \Delta A \implies 2 \Delta A \ge \Delta x$, and $\Delta A \ge \Delta A - \Delta x \implies \Delta x \ge 0$.
+    Thus, $A(y) - A(x) \ge \frac{1}{2}(y - x)$ for all $x < y$.
+
+4.  **Final Contradiction for $B(x) \neq 0$:**
+    If $B(x)$ is not identically zero, let $\epsilon(x) = -B(x)$. Then $\epsilon(g(x)) = -B(g(x)) = -(-4 B(x)) = -4 \epsilon(x)$.
+    By the Mean Value Theorem, $\epsilon(x_{n+1}) - \epsilon(x_n) = \epsilon'(c_n)(x_{n+1} - x_n)$ for some $c_n$.
+    As $n \to -\infty$, let $m = -n$. The ratio $\frac{\epsilon(x_{-m+1}) - \epsilon(x_{-m})}{x_{-m+1} - x_{-m}}$ can be shown to approach $-1$ as $m \to \infty$.
+    However, the condition $A(y) - A(x) \ge \frac{1}{2}(y - x)$ implies $\epsilon(y) - \epsilon(x) \ge -\frac{1}{2}(y - x)$, meaning $\epsilon'(x) \ge -1/2$ almost everywhere.
+    The limit $-1$ contradicts $\epsilon'(x) \ge -1/2$. Thus, $B(x) = 0$ for all $x$.
+
+5.  **Conclusion:**
+    $B(x) = 0 \implies g(x) = 5x$. Checking this in the original equation: $g(g(x)) = 5(5x) = 25x$ and $g(x) + 20x = 5x + 20x = 25x$. The function is strictly increasing and surjective.
+
+The only such function is $g(x) = 5x$.
+
+\(\square\)

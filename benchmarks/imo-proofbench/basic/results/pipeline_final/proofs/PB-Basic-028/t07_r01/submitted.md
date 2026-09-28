@@ -1,0 +1,30 @@
+In $\triangle ABC$, let $R$ and $r$ denote the circumradius and inradius, respectively. Let the angles of the triangle be $A, B, C$.
+
+**1. Proof that $\angle A$ is acute**
+Let $O$ be the circumcenter and $H$ be the orthocenter of $\triangle ABC$. The center $O_E$ of the Euler circle $(E)$ is the midpoint of $OH$, and its radius is $R/2$. Using vectors with $O$ as the origin, we have $\vec{OH} = \vec{OA} + \vec{OB} + \vec{OC}$. Thus, $\vec{OO_E} = \frac{1}{2}(\vec{OA} + \vec{OB} + \vec{OC})$.
+The distance $AO_E$ is given by:
+\[ 4 AO_E^2 = |2\vec{OO_E} - 2\vec{OA}|^2 = |\vec{OB} + \vec{OC} - \vec{OA}|^2 = 3R^2 + 2(\vec{OB}\cdot\vec{OC} - \vec{OA}\cdot\vec{OB} - \vec{OA}\cdot\vec{OC}) \]
+Using $\vec{OB}\cdot\vec{OC} = R^2 \cos 2A$, etc., we have:
+\[ 4 AO_E^2 = 3R^2 + 2R^2(\cos 2A - \cos 2B - \cos 2C) = 3R^2 + 2R^2(1 - 2\sin^2 A - (1 - 2\sin^2 B) - (1 - 2\sin^2 C)) \]
+\[ = R^2 + 4R^2(\sin^2 B + \sin^2 C - \sin^2 A) = R^2 + 8R^2 \sin B \sin C \cos A \]
+Thus, $AO_E^2 - (R/2)^2 = 2R^2 \sin B \sin C \cos A$.
+If $\cos A \le 0$, then $AO_E \le R/2$, meaning $A$ is inside or on the Euler circle $(E)$. For any circle $(W)$ externally tangent to $(E)$, the distance between their centers is $O_W O_E = r_W + R/2$. By the triangle inequality, $O_W O_E \le AO_W + AO_E$, which implies $AO_W - r_W \ge R/2 - AO_E$. The distance from $A$ to $(W)$ is $d(A, (W)) = AO_W - r_W$, and the distance from $A$ to $(E)$ is $d(A, (E)) = R/2 - AO_E$. Thus, $d(A, (W)) \ge d(A, (E))$, which contradicts the problem statement that $(W)$ is closer to $A$ than $(E)$. Therefore, $\angle A$ must be acute ($\cos A > 0$).
+
+**2. Condition for $AXI'Y$ to be a rhombus**
+The feet of the altitudes $E$ and $F$ lie on $AC$ and $AB$. In $\triangle AEF$, $AE = AB \cos A$ and $AF = AC \cos A$. Thus, $\triangle AEF \sim \triangle ABC$ with similarity ratio $k = \cos A$. The incenter $I'$ of $\triangle AEF$ is the image of the incenter $I$ of $\triangle ABC$ under a homothety centered at $A$ with ratio $\cos A$. Thus, $AI' = \cos A \cdot AI = \frac{r \cos A}{\sin(A/2)}$.
+Circle $(W)$ is tangent to $AB$ at $X$ and $AC$ at $Y$, so $AX = AY = r_W \cot(A/2)$. Since $I'$ and the center $O_W$ lie on the angle bisector of $\angle A$, $AXI'Y$ is a rhombus if and only if $AI' = 2 AX \cos(A/2)$.
+\[ \frac{r \cos A}{\sin(A/2)} = 2 r_W \frac{\cos(A/2)}{\sin(A/2)} \cos(A/2) = \frac{2 r_W \cos^2(A/2)}{\sin(A/2)} \implies r_W = \frac{r \cos A}{2 \cos^2(A/2)} \]
+
+**3. Verification of the radius $r_W$**
+Let $\alpha$ be the angle between $AO_E$ and the angle bisector of $\angle A$. The projection of $\vec{AO_E}$ onto the bisector is:
+\[ AO_E \cos \alpha = \frac{1}{2}(AO \cos \frac{B-C}{2} + AH \cos \frac{B-C}{2}) = \frac{R}{2}(1 + 2 \cos A) \cos \frac{B-C}{2} \]
+The tangency condition $O_W O_E = r_W + R/2$ gives:
+\[ (r_W + R/2)^2 = AO_W^2 + AO_E^2 - 2 AO_W AO_E \cos \alpha = \frac{r_W^2}{\sin^2(A/2)} + AO_E^2 - \frac{2 r_W AO_E \cos \alpha}{\sin(A/2)} \]
+Rearranging into a quadratic in $r_W$:
+\[ r_W^2 \cot^2(A/2) - r_W \left( R + \frac{R(1 + 2 \cos A) \cos \frac{B-C}{2}}{\sin(A/2)} \right) + 2 R^2 \sin B \sin C \cos A = 0 \]
+Substitute $r_W = \frac{r \cos A}{2 \cos^2(A/2)} = \frac{2R \sin(A/2) \sin(B/2) \sin(C/2) \cos A}{\cos^2(A/2)}$. Dividing the quadratic by $\frac{2R^2 \sin(B/2) \sin(C/2) \cos A}{\cos^2(A/2)}$:
+\[ 2 \sin(B/2) \sin(C/2) \cos A - \sin(A/2) - (1 + 2 \cos A) \cos \frac{B-C}{2} + \frac{\sin B \sin C \cos^2(A/2)}{\sin(B/2) \sin(C/2)} = 0 \]
+Using $2 \sin(B/2) \sin(C/2) = \cos \frac{B-C}{2} - \sin(A/2)$ and $\frac{\sin B \sin C}{\sin(B/2) \sin(C/2)} = 2(\cos \frac{B-C}{2} + \sin(A/2))$:
+\[ (\cos \frac{B-C}{2} - \sin(A/2)) \cos A - \sin(A/2) - (1 + 2 \cos A) \cos \frac{B-C}{2} + 2 \cos^2(A/2) (\cos \frac{B-C}{2} + \sin(A/2)) \]
+\[ = \cos \frac{B-C}{2} (2 \cos^2(A/2) - \cos A - 1) + \sin(A/2) (2 \cos^2(A/2) - \cos A - 1) \]
+Since $2 \cos^2(A/2) = 1 + \cos A$, this expression is identically zero. Thus, $r_W$ is a root. Since $r_W$ is the smaller root, $(W)$ is the circle closer to $A$. This confirms $AXI'Y$ is a rhombus.

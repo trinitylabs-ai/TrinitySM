@@ -1,0 +1,40 @@
+To prove that circles $(W_3)$ and $(W_4)$ are tangent, we use a coordinate-based approach and the properties of the centers of circles passing through given segments.
+
+**1. Setup and Notation**
+Let $ABCD$ be a trapezoid with legs $AB$ and $CD$, meaning $AD \parallel BC$. Let $L_1 = AB$ and $L_2 = CD$. Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$, respectively.
+The center $O$ of a circle passing through a segment $XY$ of length $L$ with inscribed angle $\theta$ (opposite to the arc $XY$) lies on the perpendicular bisector of $XY$ at a distance $h = \frac{L}{2} \cot \theta$ from the midpoint of $XY$.
+
+Let $\vec{u_1}$ be the unit vector perpendicular to $AB$ pointing towards the side of $C$ and $D$, and $\vec{u_2}$ be the unit vector perpendicular to $CD$ pointing towards the side of $A$ and $B$.
+The centers of the circles are:
+- $O_1 = M_1 + \epsilon_1 \frac{L_1}{2} \cot \alpha \vec{u_1}$
+- $O_2 = M_2 + \epsilon_2 \frac{L_2}{2} \cot \beta \vec{u_2}$
+- $O_3 = M_1 + \epsilon_1 \frac{L_1}{2} \cot \beta \vec{u_1}$
+- $O_4 = M_2 + \epsilon_2 \frac{L_2}{2} \cot \alpha \vec{u_2}$
+where $\epsilon_1, \epsilon_2 \in \{-1, 1\}$ are signs determined by the positions of the centers relative to the segments. The radii are $R_1 = \frac{L_1}{2 \sin \alpha}, R_2 = \frac{L_2}{2 \sin \beta}, R_3 = \frac{L_1}{2 \sin \beta}, R_4 = \frac{L_2}{2 \sin \alpha}$.
+
+**2. Distance Equations**
+Let $\vec{v} = M_2 - M_1$. The distance squared between centers $O_1$ and $O_2$ is:
+$O_1O_2^2 = \|\vec{v} + \epsilon_2 h_2 \vec{u_2} - \epsilon_1 h_1 \vec{u_1}\|^2 = v^2 + h_1^2 + h_2^2 + 2\epsilon_2 h_2 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_1 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_1 h_2 (\vec{u_1} \cdot \vec{u_2})$
+where $h_1 = \frac{L_1}{2} \cot \alpha$ and $h_2 = \frac{L_2}{2} \cot \beta$.
+Since $(W_1)$ and $(W_2)$ are tangent, $O_1O_2^2 = (R_1 \pm R_2)^2 = R_1^2 + R_2^2 \pm 2R_1 R_2$.
+Using $R_1^2 = h_1^2 + (L_1/2)^2$ and $R_2^2 = h_2^2 + (L_2/2)^2$, we have:
+$v^2 + 2\epsilon_2 h_2 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_1 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_1 h_2 (\vec{u_1} \cdot \vec{u_2}) = \frac{L_1^2 + L_2^2}{4} \pm 2R_1 R_2$.
+
+**3. Proving Tangency of $(W_3)$ and $(W_4)$**
+For $(W_3)$ and $(W_4)$, we substitute $h_3 = \frac{L_1}{2} \cot \beta$ and $h_4 = \frac{L_2}{2} \cot \alpha$:
+$O_3O_4^2 = v^2 + h_3^2 + h_4^2 + 2\epsilon_2 h_4 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_3 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_3 h_4 (\vec{u_1} \cdot \vec{u_2})$.
+We check if $O_3O_4^2 - (R_3 \pm R_4)^2 = 0$:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = v^2 + 2\epsilon_2 h_4 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_3 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_3 h_4 (\vec{u_1} \cdot \vec{u_2}) - \frac{L_1^2 + L_2^2}{4} \mp 2R_3 R_4$.
+Note that $2R_1 R_2 = 2R_3 R_4 = \frac{L_1 L_2}{2 \sin \alpha \sin \beta}$. Substituting the expression for $\frac{L_1^2 + L_2^2}{4} \pm 2R_1 R_2$ from the $(W_1, W_2)$ tangency:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = 2\epsilon_2 (h_4 - h_2) (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 (h_3 - h_1) (\vec{v} \cdot \vec{u_1})$.
+Substituting $h_4 - h_2 = \frac{L_2}{2}(\cot \alpha - \cot \beta)$ and $h_3 - h_1 = \frac{L_1}{2}(\cot \beta - \cot \alpha)$:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = \epsilon_2 L_2 (\cot \alpha - \cot \beta) (\vec{v} \cdot \vec{u_2}) - \epsilon_1 L_1 (\cot \beta - \cot \alpha) (\vec{v} \cdot \vec{u_1})$.
+Factoring out $(\cot \alpha - \cot \beta)$, we get:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = (\cot \alpha - \cot \beta) [ \epsilon_2 L_2 (\vec{v} \cdot \vec{u_2}) + \epsilon_1 L_1 (\vec{v} \cdot \vec{u_1})]$.
+
+**4. Geometry of the Trapezoid**
+Let $A=(0,h), D=(d,h), B=(b,0), C=(c,0)$. Then $\vec{v} = (\frac{d+c-b}{2}, 0)$, $L_1 \vec{u_1} = (h, b)$, and $L_2 \vec{u_2} = (-h, d-c)$.
+Then $L_1 (\vec{v} \cdot \vec{u_1}) = \frac{h(d+c-b)}{2}$ and $L_2 (\vec{v} \cdot \vec{u_2}) = \frac{-h(d+c-b)}{2}$.
+Since $\epsilon_1 = \epsilon_2$ (both centers are on the opposite side of the legs to maintain the "opposite arc" definition), we have:
+$\epsilon_2 L_2 (\vec{v} \cdot \vec{u_2}) + \epsilon_1 L_1 (\vec{v} \cdot \vec{u_1}) = \epsilon \left( \frac{-h(d+c-b)}{2} + \frac{h(d+c-b)}{2} \right) = 0$.
+Thus, $O_3O_4 = R_3 \pm R_4$, proving that $(W_3)$ and $(W_4)$ are tangent. \(\square\)

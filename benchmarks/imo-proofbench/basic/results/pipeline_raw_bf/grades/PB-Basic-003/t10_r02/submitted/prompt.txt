@@ -1,0 +1,128 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Find all functions $f\colon \mathbb{R} \rightarrow \mathbb{R}$ such that for all $a,b \in \mathbb{R}$,
+ \[ (b - a)f(f(a)) = a f(a + f(b)). \]"
+
+**GROUND-TRUTH SOLUTION**
+
+Let $P(a,b)$ denote the given assertion.
+ $P(a,a) \implies f(a+f(a))=0$
+ $P(0,b) \implies f(f(0))=0$
+ $P(f(0),b) \implies f(0)f(f(0)+f(b))=(b-f(0))f(0)$
+
+ So $f(0)=0$ or $ f(f(0)+f(b))=(b-f(0))$
+
+ If $ f(f(0)+f(b))=(b-f(0))$, setting $b \rightarrow f(b)+b \implies f(b)=-b+f(0)$ and checking we see that $f(a)=-a+k$ truly satisfies the condition
+ Suppose now $f(0)=0$
+
+ $P(a,0) \implies f(f(a))=-f(a)$
+ So $P(a,b)$ becomes $af(a+f(b))=(a-b)f(a)$
+ So $P(a,f(b)+b)$ gives us $f(a)=0$ or $f(a)=-a$
+
+ Finally $f(a)=0, f(a)=-a+k$ where $k$ is a constant
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved that either $f(0)=0$ or $f(x)=-x+k$ for some constant $k$
+(Almost)
+ 1. Solved correctly by handling the case $f(0)=0$, but did not check that the candidates are indeed the solutions to given equation.
+
+**PROPOSED SOLUTION**
+
+To find all functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that for all $a, b \in \mathbb{R}$,
+\[ (b - a)f(f(a)) = a f(a + f(b)), \]
+we proceed as follows:
+
+**1. Constant Solutions**
+If $f(x) = c$ for all $x$, the equation becomes $(b - a)c = ac$. For this to hold for all $a, b$, we must have $c = 0$. Checking $f(x) = 0$:
+LHS: $(b - a) \cdot 0 = 0$.
+RHS: $a \cdot 0 = 0$.
+Thus, $f(x) = 0$ is a solution.
+
+**2. Initial Values and Properties**
+Setting $a = 0$ in the original equation gives:
+\[ (b - 0)f(f(0)) = 0 \cdot f(0 + f(b)) = 0. \]
+This implies $b f(f(0)) = 0$ for all $b \in \mathbb{R}$, so $f(f(0)) = 0$.
+Let $f(0) = c$. Then $f(c) = 0$.
+
+**3. Case $c = 0$**
+If $c = 0$, then $f(0) = 0$. The original equation becomes $(b - a)f(f(a)) = a f(a + f(b))$.
+If $f$ is not identically zero, there exists $a \neq 0$ such that $f(f(a)) \neq 0$. For such a fixed $a$, $f(a + f(b)) = \frac{f(f(a))}{a}(b - a)$. Since the right-hand side is a linear function of $b$, $f$ is surjective. Furthermore, if $f(b_1) = f(b_2)$, then $f(a + f(b_1)) = f(a + f(b_2))$, which implies $b_1 - a = b_2 - a$, so $b_1 = b_2$. Thus, $f$ is a bijection.
+Setting $b = a$ in $(b - a)f(f(a)) = a f(a + f(b))$ gives $0 = a f(a + f(a))$. For $a \neq 0$, $f(a + f(a)) = 0$. Since $f$ is a bijection and $f(0) = 0$, we must have $a + f(a) = 0$, so $f(a) = -a$ for all $a \neq 0$. Since $f(0) = 0$, $f(x) = -x$ for all $x \in \mathbb{R}$.
+
+**4. Case $c \neq 0$**
+Substituting $a = c$ into the original equation:
+\[ (b - c)f(f(c)) = c f(c + f(b)). \]
+Since $f(c) = 0$, $f(f(c)) = f(0) = c$. Thus, $(b - c)c = c f(c + f(b))$, and since $c \neq 0$, we have $f(c + f(b)) = b - c$. This implies $f$ is a bijection.
+For $a \neq 0$, let $C_a = \frac{f(f(a))}{a}$. Then $f(a + f(b)) = C_a(b - a)$. Let $f(b) = y$; then $f(a + y) = C_a(f^{-1}(y) - a)$.
+Setting $y = 0$ and noting $f^{-1}(0) = c$, we get $f(a) = C_a(c - a)$, so $C_a = \frac{f(a)}{c - a}$ for $a \neq c$.
+Then $f(a + y) = \frac{f(a)}{c - a}(f^{-1}(y) - a)$.
+From $f(c + f(b)) = b - c$, let $f(b) = y$, so $f(c + y) = f^{-1}(y) - c$, which means $f^{-1}(y) = f(c + y) + c$.
+Substituting this into the equation for $f(a + y)$:
+\[ f(a + y) = \frac{f(a)}{c - a}(f(c + y) + c - a). \]
+Setting $y = c$ and noting $f^{-1}(c) = 0$, we get $f(a + c) = \frac{f(a)}{c - a}(0 - a) = \frac{-a f(a)}{c - a}$.
+Let $f(x) = (c - x)g(x)$. Then $f(a + c) = (c - (a + c))g(a + c) = -a g(a + c)$ and $\frac{-a f(a)}{c - a} = \frac{-a(c - a)g(a)}{c - a} = -a g(a)$.
+Thus, $-a g(a + c) = -a g(a)$, so $g(a + c) = g(a)$ for $a \neq 0$.
+Now substitute $f^{-1}(y) = f(c + y) + c = -y g(c + y) + c = -y g(y) + c$ into $f(a + y) = \frac{f(a)}{c - a}(f^{-1}(y) - a)$:
+\[ (c - a - y)g(a + y) = g(a)(-y g(y) + c - a). \]
+Setting $y = c - a$, the left-hand side is 0:
+\[ 0 = g(a)(-(c - a)g(c - a) + c - a) = g(a)(c - a)(1 - g(c - a)). \]
+Since $f$ is a bijection and $f(c) = 0$, $f(a) \neq 0$ for $a \neq c$, so $g(a) \neq 0$. For $a \notin \{0, c\}$, we must have $g(c - a) = 1$. This implies $g(x) = 1$ for all $x \notin \{0, c\}$. Since $f(0) = c$ and $f(c) = 0$, the formula $f(x) = c - x$ holds for all $x$.
+
+**Conclusion**
+The solutions are $f(x) = 0$ and $f(x) = c - x$ for any constant $c \in \mathbb{R}$. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

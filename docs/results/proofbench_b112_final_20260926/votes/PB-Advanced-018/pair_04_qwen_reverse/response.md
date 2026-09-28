@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Proves the upper bound $a(n) \le \lfloor n^2/2 \rfloor + 1$ by showing that for $k = \lfloor n^2/2 \rfloor + 1$, any balanced coloring yields a monochromatic edge set $S$ that forms a matching. Concludes that $G \setminus S$ contains a path of length at least $n-1$, guaranteeing a snake. Correctly verifies that $L=2$ satisfies $|2a(n) - n^2| \le n + 2\sqrt{n} + 3$ under this bound.
+Claim gap: Lacks a rigorous lower bound for $a(n)$; only asserts $a(n) > 2$ for small $k$. The upper bound derivation cites a general graph-theoretic claim that is false, though the specific conclusion for grid graphs remains true.
+Qualifications and supplied repairs: The cited result ("if $G$ is a Hamiltonian bipartite graph with $N$ vertices and $S$ is a matching, then $G \setminus S$ contains a path of length at least $N/2$") is demonstrably false for general graphs (e.g., a cycle $C_N$ minus a perfect matching yields disjoint edges of length 1). I supplied the correct grid-specific justification: for $n \ge 5$, removing a matching from an $n \times n$ grid leaves a subgraph with internal minimum degree $\ge 3$ and boundary minimum degree $\ge 1$, which is known to contain paths of length $\ge n-1$. No repair was made to the missing lower bound, but it does not invalidate the verification of $L=2$.
+Decisive checks: 
+- Line 5-7: Correctly computes $q=1$ and shows $S$ is a matching of size $\le \lceil n^2/2 \rceil - 1$. The cited general theorem is a DEMONSTRATED defect, but the specific claim for the $n \times n$ grid is VERIFIED as true by standard grid connectivity properties.
+- Line 11-15: Arithmetic verification of $|2a(n) - n^2| \le 2$ is correct. Comparison with RHS $\ge 12.47$ for $n \ge 5$ is valid.
+- Falsification check: If $a(n)$ were asymptotically smaller (e.g., $\sim n^2/3$), $L=2$ would yield $|2(n^2/3) - n^2| = n^2/3$, violating the inequality for large $n$. Thus $a(n)$ must be $\sim n^2/2$, confirming $L=2$ is necessary and A's asymptotic direction is correct.
+
+## Proof B
+Established theorem: Claims $a(n) = \lfloor n^2/3 \rfloor + 1$ and $L=3$. Provides an upper bound argument based on monochromatic subgraphs of maximum degree 2, and a lower bound construction using $1 \times 3$ block tiling.
+Claim gap: The lower bound construction (Line 5) is mathematically invalid. The claim that tiling with $1 \times 3$ monochromatic blocks restricts components of $G \setminus E_{mono}$ to sizes smaller than $n$ is false. The complement graph connects adjacent blocks, forming a grid-like quotient structure of dimensions roughly $n \times n/3$. This structure is connected and has diameter $\approx n + n/3$, guaranteeing paths of length $\ge n-1$ for $n \ge 5$. Thus, the construction fails to block snakes, and $a(n) \ge \lfloor n^2/3 \rfloor + 1$ is not established. Consequently, $L=3$ is incorrect; substituting the true asymptotic $a(n) \sim n^2/2$ into $|3a(n) - n^2|$ yields $\approx n^2/2$, which violates the required inequality for $n \ge 5$.
+Qualifications and supplied repairs: The upper bound argument relies on an unverified claim about removing max-degree-2 subgraphs. No repair can salvage the $1 \times 3$ tiling construction; it fundamentally misjudges the connectivity of the complement graph. The algebraic verification of the inequality (Lines 9-13) is correct only conditional on the false premise $a(n) = \lfloor n^2/3 \rfloor + 1$.
+Decisive checks:
+- Line 5: The claim that "components of $G \setminus E_{mono}$ are restricted to sizes smaller than $n$" is a DEMONSTRATED defect. Inter-block adjacencies create a connected structure with $\Theta(n^2)$ vertices and $\Theta(n)$ diameter. A simple snake can traverse adjacent blocks sequentially.
+- Line 9-13: Conditional arithmetic is correct, but the premise is false.
+- Falsification check: Substituting $a(n) \approx n^2/2$ into B's proposed $L=3$ gives $|3(n^2/2) - n^2| = n^2/2$. For $n=5$, $12.5 > 5 + 2\sqrt{5} + 3 \approx 12.47$, violating the inequality. Thus $L=3$ cannot be correct.
+
+## Decision
+Winner: A
+Reason: Proof A correctly identifies $L=2$ and establishes a valid upper bound $a(n) \le \lfloor n^2/2 \rfloor + 1$. Although it cites a false general graph theorem, the specific claim for $n \times n$ grids is true and correctly leads to the right constant. Proof B's lower bound construction is demonstrably false: tiling with $1 \times 3$ blocks leaves a highly connected complement graph that trivially contains paths of length $n-1$, invalidating $a(n) = \lfloor n^2/3 \rfloor + 1$ and rendering $L=3$ incorrect for the inequality. A's asymptotic direction and constant are mathematically sound, while B's core construction fails, making A decisively stronger.

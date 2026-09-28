@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T21:46:51.705689+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 8,
+  "problem_id": "PB-Basic-008",
+  "case_id": "PB-Basic-008.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/problems/PB-Basic-008.json",
+  "reference_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/references/PB-Basic-008.md",
+  "proof_path": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/proofs/PB-Basic-008/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b4e115dedc46518b040fdd16422262926ed680a0d45811908e3b5e6d035e648b",
+  "reference_sha256": "ad671ff51b719ad08d069a872df41c8f8b089a5976e753f040ea64b9b784dfb8",
+  "proof_sha256": "9c1ad05b03476cfb9c468729a914f81cc11300c4fd25983679f0ebf5d7417dbc",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic007_008_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "4310784e5fc3c310ebaaa7de17e98ba61275c55b46669bf5d8cdcf19d9bea15b",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Step 2, continuity and the endpoint values of \\(H\\) establish some threshold crossings, but do not establish that there are exactly two crossings or that \\(H\\) has the asserted sign on all four intervals.",
+    "summary": "The derivative computations and reduction strategy are meaningful, but the global minimum conclusion depends on an unproved shape analysis of \\(H\\). The claimed derivative sign chart therefore does not follow from the submitted argument, leaving the central one-variable minimization unsupported.",
+    "strengths": [
+      "The derivative factorizations and evaluations at \\(a=\\frac13,0,\\frac12\\) are correct.",
+      "The smoothing reduction to equal-variable or boundary cases is a viable strategy."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The decisive sign chart for \\(f'\\) assumes unproved monotonicity or uniqueness-of-crossings properties of \\(H\\); continuity alone is insufficient."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

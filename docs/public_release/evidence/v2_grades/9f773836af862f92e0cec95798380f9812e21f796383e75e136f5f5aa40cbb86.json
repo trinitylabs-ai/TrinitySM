@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7428e107ff81add64d4e294f461647b1918046b10729fd18840e0741f8f8af89",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "7fb90983e6f37afa4170f83eb77140844b1127de7371ff87c8ff01b4af7087f8",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "bd2d304fdb78c7cedfbe14c077b5ff0dcf962b76c53c26c02defe311115268c9",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive defect is Step 4: the claim that the infinite hitting-set condition makes C_infinity a finite union of sets mZ is merely asserted. No induction, stabilization argument, or finiteness proof is supplied, and containing mZ only gives positive density, not periodicity. This is an unsupported central structural inference, so Rule E caps the score at 3.",
+    "summary": "The submission identifies the useful global accepted set and the intended route from a finite union of divisibility classes to translation periodicity. However, it omits the central and difficult finiteness argument. It also falsely states that the sequence equals all of C_infinity rather than the elements of C_infinity at least a_1. Thus the correct conclusion is not proved.",
+    "strengths": [
+      "Correctly reformulates the gcd conditions using prime-factor hitting sets.",
+      "Correctly observes that every sequence term belongs to C_infinity.",
+      "Recognizes that a finite union of sets of multiples would be periodic and would lead to a fixed index shift."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed induction proving that C_infinity is a finite union of sets mZ is not given. The preceding observations do not establish this claim, and the statement that the smallest element's multiples give positive density and hence periodicity is invalid. This missing lemma is the core of the problem and requires a new substantive argument."
+      },
+      {
+        "severity": "substantial",
+        "description": "Step 3 falsely claims that the sequence is exactly C_infinity merely because it is increasing. For example, if a_1=6, the sequence is 6,8,10,... while C_infinity also contains 2 and 4. The correct statement is that the sequence enumerates C_infinity intersected with [a_1,infinity), which must be proved using the greedy rule. This is a load-bearing false assertion under Rule C, although locally repairable."
+      },
+      {
+        "severity": "minor",
+        "description": "The final listing r_1<...<r_k<M does not clearly account for the residue class 0 modulo M; interpreted literally as positive elements of C_infinity below M, it can give the wrong value of k."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:42:23.864822+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

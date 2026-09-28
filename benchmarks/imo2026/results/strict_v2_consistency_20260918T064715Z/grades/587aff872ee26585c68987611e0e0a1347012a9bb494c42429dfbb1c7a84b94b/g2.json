@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "587aff872ee26585c68987611e0e0a1347012a9bb494c42429dfbb1c7a84b94b",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "e590f80df04677f188e5302520ea93b9d88505142c7542b442cd21cf0f8495bf",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9eae1cb89670c44a4bebcfb1b298f5b0dc87d50825dc0005c6361b799d786583",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the unsupported claim that the families of minimal hitting sets \\(\\mathcal M_n\\) must stabilize. No finite universe of primes or terminating invariant is established; new supports can introduce new primes indefinitely. This is the central structural step, so Rule E caps the score at 3.",
+    "summary": "The submission gives a useful hitting-set reformulation and correctly observes that, conditional on stabilization to a finite family, the admissible integers form a finite union of divisibility classes and hence are periodic modulo an lcm. However, stabilization is essentially the main difficulty of the problem and is only asserted through an invalid termination heuristic. The subsequent extension from eventual periodicity to all indices also relies on a false claim that \\(a_1\\) is the first admissible multiple; a correct threshold-enumeration argument is not supplied.",
+    "strengths": [
+      "Correctly translates the gcd conditions into intersections of prime-support sets.",
+      "Correctly notes that hitting sets contain minimal hitting sets.",
+      "Conditional on a fixed finite family of minimal supports, correctly obtains periodicity of the corresponding union of sets of multiples."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that \\(\\mathcal M_n\\) stabilizes is unproved. The statement that adding primes 'fills the available prime space' provides no finite bound or monotone terminating measure, since later terms may contain new primes. Proving the relevant finiteness requires the principal new argument of the problem."
+      },
+      {
+        "severity": "substantial",
+        "description": "The statement that \\(a_1\\) is the first multiple in the stabilized periodic set is false. For example, with \\(a_1=6\\), the greedy sequence is \\(6,8,10,12,\\ldots\\), while the stabilized admissible set is all even integers and includes 2 and 4. One must instead prove that the sequence enumerates all stabilized admissible integers from the threshold \\(a_1\\) onward; that argument is omitted."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:48:49.761628+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

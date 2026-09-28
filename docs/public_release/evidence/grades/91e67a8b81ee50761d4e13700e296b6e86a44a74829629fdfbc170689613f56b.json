@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-009",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c",
+  "proof": "evidence/proofs/9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c.md",
+  "completed_at": "2026-09-17T07:31:50.106505+00:00",
+  "grade": {
+    "score": 7,
+    "category": "Correct"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/grades/PB-Basic-009/t07_r01/tool_rewrite/result.json",
+    "native_record_file_sha256": "10c6fca9363303ea931d843381062e2bf787aa107ece0ce6cc67a835799f6117",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/grades/PB-Basic-009/t07_r01/tool_rewrite/result.json",
+    "selected_record_file_sha256": "10c6fca9363303ea931d843381062e2bf787aa107ece0ce6cc67a835799f6117",
+    "proof": "benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/proofs/PB-Basic-009/t07_r01/tool_rewrite.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "3e89a2e3a7dbc0c9987d5b01829dd0d23269e6b0bcd234c1c9d63acb9dbdba56",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "38ddc6b8f92fbe75b0a849bcf58418169c490526ec752691ec959df0e802586a",
+  "reference_sha256": "9d402d87386bcc57d6e799c2e7235c54c3eb7a6d3466ba66487e54443eb91c48",
+  "guidelines_sha256": "62579e8ba3747725b3216f232f136fd511f47ac2d1d64e25c5257e3a934433f3",
+  "response_sha256": "05abff11681047f7efa3e24e2246bb7dd02e3175f4656548485f7e14d80c4f2d",
+  "isolation_verified": true
+}

@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-012",
+  "problem": "Let $p$ be a prime number and $a, b$ be positive integers such that\n\n \\[\n p^{n}=a^{4}+b^{4}\n \\]\n\n for some integer $n \\geq 2$. Prove that $n \\geq 5$."
+}

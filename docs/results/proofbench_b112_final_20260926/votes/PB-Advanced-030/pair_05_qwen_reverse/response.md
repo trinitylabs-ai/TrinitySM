@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The problem is correctly reduced to finding a rainbow matching of size $n$ in the families $\mathcal{F}_1, \dots, \mathcal{F}_n$ of circular intervals with score $\ge 1$. The proof verifies that the Hall-type condition $\nu(\bigcup_{i \in S} \mathcal{F}_i) \ge |S|$ holds for all $S \subseteq \{1,\dots,n\}$, and correctly applies a known structural result for circular interval hypergraphs to conclude the existence of disjoint intervals $S_1, \dots, S_n$ with $S_i \in \mathcal{F}_i$. This yields a valid distribution satisfying the conclusion.
+Claim gap: NONE. The reduction to rainbow matching is exact, the subset condition is rigorously verified, and the cited theorem's hypotheses are fully met. The argument is internally complete.
+Qualifications and supplied repairs: NONE. The proof treats the Aharoni-Berger extension for circular intervals as a valid external result; its applicability is confirmed by the explicit verification of the union-matching condition in line 9. No silent repairs were needed.
+Decisive checks:
+- VERIFIED: Line 5 correctly translates the partition hypothesis into $\nu(\mathcal{F}_i) \ge n$.
+- VERIFIED: Line 9 correctly establishes $\nu(\bigcup_{i \in S} \mathcal{F}_i) \ge \nu(\mathcal{F}_j) \ge n \ge |S|$ for any $j \in S$, satisfying the necessary and sufficient condition for rainbow matchings in interval hypergraphs.
+- VERIFIED: Lines 11-13 correctly conclude that disjoint $S_i \in \mathcal{F}_i$ provide the required distribution. Quantifiers and domains are handled correctly; no boundary cases are overlooked.
+
+## Proof B
+Established theorem: The continuous relaxation is correctly modeled using measures $\mu_i$ (lines 1-3). Woodall's Theorem is correctly cited to guarantee a continuous partition $I_1, \dots, I_n$ with $\mu_i(I_i) \ge 1$ (line 5). The proof successfully establishes the existence of a fractional assignment satisfying the score constraints.
+Claim gap: The discretization/rounding step (lines 13-21) contains a load-bearing defect. The greedy strategy fails to guarantee $S_k \ge 1$ when the previous boundary decision forces $y_{k-1}=1$. Specifically, line 20's inequality chain relies on $1-y_{k-1} \ge 1-\delta_{k-1}$, which only holds when $y_{k-1}=0$. If $y_{k-1}=1$, the left split cupcake contributes $0$ to $P_k$'s score, potentially dropping $S_k$ below $1$ despite $y_k=1$. Line 21's appeal to "abundance of total score" does not mathematically bridge this gap or rule out configurations where forced $y_{k-1}=1$ choices cascade into a failure for $P_n$.
+Qualifications and supplied repairs: To verify the continuous step, I accepted Woodall's Theorem as stated. To expose the gap, I noted that the greedy rounding lacks a case analysis for $y_{k-1}=1$ and provides no invariant or potential function to guarantee the final person's score. A complete repair would require a non-greedy rounding scheme, a careful rotation argument, or an inductive discrete proof, none of which are present in the submission.
+Decisive checks:
+- VERIFIED: Lines 1-5 correctly set up the continuous measure model and apply Woodall's Theorem.
+- DEMONSTRATED DEFECT: Line 20 assumes $1-y_{k-1} \ge 1-\delta_{k-1}$ to bound $S_k$, but explicitly restricts this to $y_{k-1}=0$. The algorithm can legally set $y_{k-1}=1$ (when $P_{k-1}$ needs the cupcake), breaking the inequality and leaving $S_k$ unbounded below $1$.
+- UNRESOLVED: Line 21's claim that total score abundance prevents failure is unsubstantiated; no quantitative bound or structural argument is provided to handle the cumulative loss from forced $y_{k-1}=1$ choices.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete, logically closed argument. It correctly translates the hypothesis into a hypergraph matching condition, rigorously verifies the union-matching requirement for all subsets, and correctly applies a known structural theorem to reach the conclusion. Proof B correctly handles the continuous relaxation but contains a demonstrable defect in the discretization step: the greedy rounding argument fails to account for the case $y_{k-1}=1$, leaving the score guarantee for intermediate and final persons unproven. While both proofs rely on external theorems, A's application is internally verified and gap-free, whereas B's rounding step breaks the chain of implications. A's solution is mathematically stronger as written.

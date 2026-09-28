@@ -1,0 +1,64 @@
+{
+  "problem_id": "imo2026_p4",
+  "candidate": "t10_r01",
+  "group": "core",
+  "grader_candidate": "core_t10_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p4/core_t10_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e.md",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+  "v1_score": 3,
+  "v1_grade": "docs/public_release/evidence/grades/3c6cdc7ae843e9bab412c1788c6a1175e72170dcd8d19be8d8e4948503ebd8e4.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t10_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:18:15.530264+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity proof first fails when it claims that, outside the two proposed families, no s in S can have 180°−s also in S. For θ=36°, which belongs to neither proposed family, s=36° and 180°−s=144°=4θ are both in S. Thus the claimed classification excludes a valid value, so Rule A applies and caps the score at 2.",
+    "summary": "The final classification is false: the actual winning values are θ=180°/n for every integer n≥2, including omitted values such as 36°=180°/5. The two sufficiency arguments correctly establish some valid subfamilies, which constitutes meaningful progress, but the necessity argument is fundamentally invalid.",
+    "strengths": [
+      "The angle-bisection observation correctly shows that a triangle containing 2^kθ can be converted to one containing θ after finitely many retained-child choices.",
+      "The altitude construction correctly proves sufficiency for θ=180°/2^n.",
+      "The 60°/120° cut correctly proves sufficiency for θ=60°/2^n."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The arithmetic assertion about sums of two powers of two ignores cases such as 1+4=5. Hence the claimed complementary-angle obstruction is false; θ=36°, s=36° gives 180°−s=144°=4θ."
+      },
+      {
+        "severity": "major",
+        "description": "The proposed initial condition that α, β, 180°, θ be linearly independent over Q cannot hold whenever θ/180° is rational. The hypothesis being considered still includes many such values, including θ=36°."
+      },
+      {
+        "severity": "major",
+        "description": "The one-move argument is applied only to the specially chosen initial triangle, but the proof never establishes that the required linear-independence properties persist in the retained child. Therefore the conclusion that Shan-Yu can maintain a nonwinning triangle indefinitely is unsupported."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "76c0b8f33143c2f3c5cd684af6e3c5d918b3c95636f3b8473e1ace1b386442ab",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

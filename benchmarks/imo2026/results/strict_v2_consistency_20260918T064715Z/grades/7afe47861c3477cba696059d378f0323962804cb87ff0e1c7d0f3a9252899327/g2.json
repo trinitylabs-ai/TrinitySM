@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7afe47861c3477cba696059d378f0323962804cb87ff0e1c7d0f3a9252899327",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "bc2b3e558d77419c8da6407857878bfecd060e97776312a6c52389836fd298bb",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the converse, the proof shows that every triangle having no angle in S is losing, but it never explicitly establishes that such a starting triangle exists when 180°/θ is nonintegral. This is needed because Shan-Yu must choose an actual counterexample starting triangle. It is a directly repairable minor omission, not a Rule E central gap: the equilateral triangle works, since 60°=mθ would imply 180°/θ=3m is an integer.",
+    "summary": "The claimed classification θ=180°/N for integers N≥2 is correct. The sufficiency argument correctly finds a cut whose two children contain positive integer multiples of θ, and the necessity argument correctly proves that the property of having no such multiple can be maintained by Shan-Yu. Only the final explicit choice or existence justification for an initial triangle with that property is missing.",
+    "strengths": [
+      "Correctly proves that a triangle containing nθ is winning by successively splitting that angle.",
+      "For 180°=Nθ, correctly derives the admissibility interval and uses integer points in the relevant cyclic intervals to make both children winning.",
+      "Correctly analyzes all ways both children could contain multiples of θ and obtains contradictions when 180°/θ is nonintegral.",
+      "The final answer and its quantifiers are correct."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The necessity direction omits an explicit existence argument for a starting triangle with no angle in S; a one-line equilateral-triangle construction completes the proof."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:47:30.825374+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

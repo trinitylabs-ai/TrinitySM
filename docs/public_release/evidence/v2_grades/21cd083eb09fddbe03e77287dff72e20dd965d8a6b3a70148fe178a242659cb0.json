@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "86f4a0d0aac87ea61a80169de4da06df0218445c46ed2241d58c9c4837f21eed",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "0e7f4196735f830837491f90fa5ffd94446536da64532ca4afb6c56db10632be",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "25fef57a319677465fcb32c080751bd55194281326bf3f608a82e7bc82bb170d",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The score-determining defect is the final unsupported assertion that the angle constraints force c x_O - b x'_O = (c^2-b^2)/4. No derivation is given, and the two crucial compatibility conditions angle LBK = alpha_2 and angle LCK = alpha_3 are never used. This is an unsupported central inference under Rule E; moreover, Rule B does not permit a 4 because the preceding coordinate reduction contains sign and domain errors.",
+    "summary": "The submission makes meaningful coordinate progress and correctly reduces OM = ON to a linear condition on O, but it merely asserts that condition at the decisive step. Establishing it is essentially the main content of the problem and requires substantial use of the omitted angle constraints. The proof also uses an incorrectly oriented coordinate for L and does not handle angles for which tangent is undefined. Thus the claimed conclusion is not proved.",
+    "strengths": [
+      "The formulas comparing OM squared and ON squared correctly identify the required linear relation on the circumcenter.",
+      "The perpendicular-bisector equations for AK and AL are the appropriate coordinate equations for the circumcenter.",
+      "The generic computation of K from angle KBA and angle BMK is useful partial progress."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final linear relation is justified only by an appeal to 'symmetry.' The construction is not symmetric for arbitrary side lengths and angles, and the proof supplies no calculation connecting the two circumcenter equations to the remaining angle constraints."
+      },
+      {
+        "severity": "substantial",
+        "description": "The equalities angle LBK = alpha_2 and angle LCK = alpha_3, which impose the essential compatibility between K and L, are not used in any equation."
+      },
+      {
+        "severity": "substantial",
+        "description": "With the explicitly stated transformation y' = -x sin A + y cos A, triangle BNC lies on the negative-y' side of AC, so L must have y'_L < 0. The submitted formula has the opposite orientation; its line equations correspond instead to the reflected transverse coordinate."
+      },
+      {
+        "severity": "minor",
+        "description": "The tangent parametrization does not address admissible cases in which one of the relevant angles is 90 degrees, so the displayed equations and divisions are not universally defined."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:47:27.647871+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

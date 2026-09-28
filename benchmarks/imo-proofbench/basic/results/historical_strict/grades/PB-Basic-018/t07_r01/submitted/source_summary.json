@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T18:53:07.287807+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 18,
+  "problem_id": "PB-Basic-018",
+  "case_id": "PB-Basic-018.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "562502eef0fc90b89936157bd6f7c3c1d6bfa4a126ac6c00ba1bc4f0dec3c5af",
+  "reference_sha256": "3ebc02426db3c6c46b48852a9bcf2281caff784d98ea26251096b3335a515c46",
+  "proof_sha256": "fe4db499ce65e6e98b35c317bd26dde26b259b0655661b892d4ac9473ccd18ad",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/tasks.json",
+  "task_manifest_sha256": "244b2f67b78db8fb886af3b88f37ed0a69dae24d9f1a066d79e4557b1e9a46bd",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The proof asserts without justification that every positive integer solution of \\(3u^2-2v^2=1\\) has the displayed parametrization. Multiplication by the fundamental unit generates one orbit, but exhaustiveness for this generalized Pell equation requires a descent or classification argument.",
+    "summary": "The algebra, congruence filtering, and final square computation are correct for the parametrized sequence. However, the unproved claim that this sequence contains every solution is load-bearing, since otherwise the argument does not cover all admissible \\(x,y\\).",
+    "strengths": [
+      "Correctly converts the original equation into \\(3u^2-2v^2=1\\).",
+      "Correctly shows that parametrized solutions corresponding to integral \\(x,y\\) have even index.",
+      "Correctly derives \\(2x+2y+1=b_k^2\\) for those solutions."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "Exhaustiveness of the generalized Pell parametrization is asserted rather than proved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

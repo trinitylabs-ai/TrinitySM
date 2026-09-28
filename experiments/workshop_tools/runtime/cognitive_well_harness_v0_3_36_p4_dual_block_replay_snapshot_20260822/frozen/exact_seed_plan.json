@@ -1,0 +1,58 @@
+{
+  "schema": "cognitive-well-v036-seed-plan-v2",
+  "mode": "frozen",
+  "notes": "Exact historical seeds. Repair seeds are stored even when a stochastic fusion result does not request a repair call.",
+  "qwen": {
+    "two_block": {
+      "p1_s2_first_revision": {
+        "fusion": 1586375840,
+        "repair": 77196414
+      },
+      "p4_s2_first_revision": {
+        "fusion": 3632369394,
+        "repair": 2190888492
+      },
+      "p5_s1_second_revision": {
+        "fusion": 97059627,
+        "repair": 1608434677
+      }
+    },
+    "three_block": {
+      "p1_s2_first_revision": {
+        "fusion": 1586375840,
+        "repair": 77196414
+      },
+      "p4_s2_first_revision": {
+        "fusion": 3632369394,
+        "repair": 2190888492
+      },
+      "p5_s1_second_revision": {
+        "fusion": 97059627,
+        "repair": 1608434677
+      }
+    }
+  },
+  "cold_start": {
+    "draft": 2306781093,
+    "lazy_scan": 809773801,
+    "explicit_resolve": 813872613,
+    "initial_review_base": 2870579314,
+    "initial_opc": 2870579314,
+    "initial_gptoss": 2870579315,
+    "initial_fusion": 2870579316,
+    "nvfp4_refinement": 3395916590,
+    "revision_review_base": 3632369392,
+    "revision_opc": 3632369392,
+    "revision_gptoss": 3632369393,
+    "revision_fusion": 3632369394
+  },
+  "gemma": {
+    "two_block": 2040359711,
+    "three_block": 2040359711
+  },
+  "codex": {
+    "seed_control": "not_exposed_by_codex_exec",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "xhigh"
+  }
+}

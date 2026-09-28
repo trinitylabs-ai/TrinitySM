@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T13:11:45.906974+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 2,
+  "problem_id": "imo2026_p2",
+  "case_id": "imo2026_p2.explicit.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q2_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r01/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "218a6fdb9717141046e23880f2fcf1dc2513c9e3feafceecbdf303d7341054b4",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The decisive assertion that the determinant Δ vanishes after substitution is not demonstrated; it hides the central, substantial trigonometric elimination.",
+    "summary": "The submission correctly reduces OM=ON to a linear condition on the circumcentre, derives plausible sine-law and cotangent relations, and reformulates the goal as a determinant identity. However, it then replaces the main proof with the unsupported statement that all trigonometric terms cancel. Since this is precisely the load-bearing calculation and is not routine one-line algebra, the proof is incomplete under the strict policy and is capped at 4.",
+    "strengths": [
+      "Correctly expresses OM=ON as O·(C−B)=(b²−c²)/4.",
+      "Obtains coherent sine-law formulas and the cotangent identities for θ_K and θ_L.",
+      "Correctly sets up the circumcentre equations and reduces the desired conclusion to vanishing of an explicit determinant."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "No calculation is supplied to prove Δ=0 from the several sine-law, length-ratio, and cotangent relations. The phrases “we can verify” and “cancel identically” conceal a substantial multi-step elimination on which the entire conclusion depends."
+      },
+      {
+        "severity": "minor",
+        "description": "The necessary angle-order, nonzero-denominator, and independence conditions for the trigonometric divisions and the uniqueness of the intersection of the first two lines are not explicitly justified from the strict interior hypotheses."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

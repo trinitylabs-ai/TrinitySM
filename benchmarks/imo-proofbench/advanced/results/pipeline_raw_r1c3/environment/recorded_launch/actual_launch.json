@@ -1,0 +1,47 @@
+{
+  "launched_at": "2026-09-13T01:56:17.958785+00:00",
+  "tmux_window": "proofbench-basic:8",
+  "servers": {
+    "gemma": {
+      "pid": 32690,
+      "model": "google/gemma-4-31B-it",
+      "port": 8030,
+      "mtp": 4,
+      "dtype": "bfloat16",
+      "gpu": 0
+    },
+    "qwen": {
+      "pid": 163281,
+      "model": "Qwen/Qwen3.6-27B",
+      "port": 8027,
+      "mtp": 4,
+      "dtype": "bfloat16",
+      "gpu": 1
+    }
+  },
+  "existing_frozen_harness": "/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-assets-20260912T181928Z/source/scripts/run_v263_v290.py",
+  "command": [
+    "/home/user/miniconda3/envs/math/bin/python",
+    "-u",
+    "-B",
+    "/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-assets-20260912T181928Z/source/scripts/run_v263_v290.py",
+    "--problem-dir",
+    "/opt/proof-workshop/data/imo_proofbench_advanced_problem_only",
+    "--output-dir",
+    "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01",
+    "--gemma-endpoint",
+    "http://127.0.0.1:8030/v1",
+    "--qwen-endpoint",
+    "http://127.0.0.1:8027/v1",
+    "--model-timeout-sec",
+    "600",
+    "--seed-namespace",
+    "v263-v290:problem-only",
+    "--raw-seed-offset",
+    "0",
+    "--resume",
+    "--execute-models"
+  ],
+  "source_only_inputs": true,
+  "harness_changes": false
+}

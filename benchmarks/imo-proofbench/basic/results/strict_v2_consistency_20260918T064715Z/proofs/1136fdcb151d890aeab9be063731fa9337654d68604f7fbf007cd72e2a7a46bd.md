@@ -1,0 +1,39 @@
+To find the number of pairs of paths $f(n)$ on an $n \times n$ grid such that the $y$-coordinate of the first path $P_1$ never exceeds the $y$-coordinate of the second path $P_2$ at any timestep $t \in \{0, 1, \dots, 2n\}$, we can model this as a problem of non-intersecting paths.
+
+### 1. Transformation to Non-Intersecting Paths
+Let the paths be defined by their coordinates at each timestep $t$: $P_1(t) = (x_1(t), y_1(t))$ and $P_2(t) = (x_2(t), y_2(t))$. The condition is $y_1(t) \le y_2(t)$ for all $t$. Since $x_i(t) + y_i(t) = t$, this is equivalent to $x_1(t) \ge x_2(t)$.
+
+To apply the Lindström-Gessel-Viennot (LGV) Lemma, we shift the paths so they have distinct start and end points. Define:
+- $P_1'$ as $P_1$ shifted by the vector $(1, 0)$. Thus, $P_1'$ starts at $A_1 = (1, 0)$ and ends at $B_1 = (n+1, n)$.
+- $P_2'$ as $P_2$ shifted by the vector $(0, 1)$. Thus, $P_2'$ starts at $A_2 = (0, 1)$ and ends at $B_2 = (n, n+1)$.
+
+The shifted paths $P_1'$ and $P_2'$ intersect at some timestep $t$ if and only if $(x_1(t)+1, y_1(t)) = (x_2(t), y_2(t)+1)$. This equality is equivalent to $y_1(t) = y_2(t) + 1$ (which then implies $x_1(t)+1 = x_2(t)$ since $x_i(t)+y_i(t)=t$).
+
+Let $d(t) = y_1(t) - y_2(t)$. We have $d(0) = 0 - 0 = 0$. Since each path moves either right or up at each step, $y_i(t+1) - y_i(t) \in \{0, 1\}$, which implies $d(t+1) - d(t) \in \{-1, 0, 1\}$. By the discrete intermediate value theorem, if there exists any $t$ such that $y_1(t) > y_2(t)$ (i.e., $d(t) \ge 1$), there must exist some $t' \le t$ such that $d(t') = 1$. Thus, $y_1(t) \le y_2(t)$ for all $t$ if and only if $y_1(t) \neq y_2(t) + 1$ for all $t$, which is exactly the condition that $P_1'$ and $P_2'$ are non-intersecting.
+
+### 2. Applying the LGV Lemma
+The number of pairs of non-intersecting paths from $\{A_1, A_2\}$ to $\{B_1, B_2\}$ is given by the determinant of the path matrix:
+\[ f(n) = \det \begin{pmatrix} N(A_1, B_1) & N(A_1, B_2) \\ N(A_2, B_1) & N(A_2, B_2) \end{pmatrix} \]
+where $N(A, B)$ is the number of paths from $A$ to $B$ using only right and up moves. Note that any pair of paths from $A_1 \to B_2$ and $A_2 \to B_1$ must intersect, so only the identity permutation contributes to the LGV sum.
+- $N(A_1, B_1) = \binom{(n+1-1) + (n-0)}{n} = \binom{2n}{n}$
+- $N(A_1, B_2) = \binom{(n-1) + (n+1-0)}{n-1} = \binom{2n}{n-1}$
+- $N(A_2, B_1) = \binom{(n+1-0) + (n-1)}{n+1} = \binom{2n}{n+1}$
+- $N(A_2, B_2) = \binom{(n-0) + (n+1-1)}{n} = \binom{2n}{n}$
+
+Since $\binom{2n}{n-1} = \binom{2n}{n+1}$, the formula for $f(n)$ simplifies to:
+\[ f(n) = \binom{2n}{n}^2 - \binom{2n}{n-1}^2 \]
+
+### 3. Calculation for $n = 10$
+For $n=10$, we have:
+\[ f(10) = \binom{20}{10}^2 - \binom{20}{9}^2 \]
+First, calculate the binomial coefficients:
+\[ \binom{20}{10} = \frac{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 184,756 \]
+\[ \binom{20}{9} = \frac{10}{11} \binom{20}{10} = \frac{10}{11} \cdot 184,756 = 10 \cdot 16,796 = 167,960 \]
+
+Now, use the difference of squares to compute $f(10)$:
+\[ f(10) = (184,756 - 167,960)(184,756 + 167,960) \]
+\[ 184,756 - 167,960 = 16,796 \]
+\[ 184,756 + 167,960 = 352,716 \]
+\[ f(10) = 16,796 \times 352,716 = 5,924,217,936 \]
+
+The total number of such pairs of paths for $n=10$ is $5,924,217,936$.

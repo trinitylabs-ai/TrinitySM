@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T14:35:16.919124+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 3,
+  "problem_id": "PB-Basic-003",
+  "case_id": "PB-Basic-003.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/problems/PB-Basic-003.json",
+  "reference_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/references/PB-Basic-003.md",
+  "proof_path": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/proofs/PB-Basic-003/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "16462e4803bedfc97a953b1a9c8f6f9e16ec677093b9e8d65333fdfcac01c177",
+  "reference_sha256": "1e4a8c99a55a3f90754e4d740d058bf6fd392ac6897e955daa646ad1c9001667",
+  "proof_sha256": "eb51824d24eada2939f9dcbaa0027ba6153e5706e28bd98786b703b0344b7f5e",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic001_005_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "5c6c59ab7923c1836314a3f0571a75282ff4dfe8144f5538e5463dcc07744719",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the \\(c\\ne0\\) case, several divisions by \\(a\\), \\(a-c\\), and \\(f(b)\\) are made without stating the necessary restrictions, and the resulting quadratic is initially asserted for every \\(x\\).",
+    "summary": "The classification \\(f\\equiv0\\) or \\(f(x)=c-x\\) is correct, and the main arguments are sound. The omitted domain checks are directly repairable: \\(f(c+f(b))=b-c\\) and \\(f(c)=0\\) imply \\(f(b)=0\\) only when \\(b=c\\), while \\(x=0,c\\) are covered by the already known values \\(f(0)=c\\) and \\(f(c)=0\\).",
+    "strengths": [
+      "The \\(f(0)=0\\) case correctly derives surjectivity and hence \\(f(x)=-x\\).",
+      "The nonzero-\\(f(0)\\) case obtains a valid quadratic restriction and successfully excludes mixed choices of its roots.",
+      "Both resulting families are checked directly in the original equation."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The nonzero-\\(f(0)\\) derivation suppresses exceptional-value and nonvanishing checks needed to justify its divisions."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,107 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Given a triangle $XYZ$ with circumcenter $O$, the incircle of triangle
+ $XYZ$ has center $I$. Let $M,N$ on the sides $XY,XZ$
+ respectively such that $YM=ZN=YZ$. If $\gamma$ is the angle created
+ by two lines $MN,OI$, what is $\frac{\gamma}{2}$ in terms of degree?
+
+**GROUND-TRUTH SOLUTION**
+
+Let the incircle of $XYZ$ meet the sides of $XYZ$ at points $D,E,F$. Let $G$ be the centroid of triangle $DEF$, it is well-known that
+ $I,G,O$ are collinear. Let $r$ be the inradius and $\vec{v}$ be
+ the unit vector perpendicular to $MN$ pointing outward, we have $YZ\vec{ID}+ZN\vec{IE}+YM\vec{IF}+rMN\vec{v}=\vec{0}$.
+ Since $YZ=YM=ZN=a$, we have $YZ\vec{ID}+ZN\vec{IE}+YM\vec{IF}+rMN\vec{v}=\vec{0}$
+ is equivalent to $3a\vec{IG}=-rMN\vec{v}$, which implies that $IG$
+ is parallel with $\vec{v}$. Since $\vec{v}$ is perpendicular to
+ $MN$, this implies that $MN$ is perpendicular to $IG$. Combining
+ this with the fact that $I,G,O$ is collinear, we have $\gamma=90^{\circ}$,
+ which means that $\frac{\gamma}{2}=45^{\circ}$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Considered the point $G$, the centroid of the triangle formed by the points of tangency of the incircle and the sides of $XYZ$, and explained that $I,G,O$ is collinear.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To find the angle $\gamma$ between the lines $MN$ and $OI$ in triangle $XYZ$, we use a vector-based approach. Let the side lengths opposite to vertices $X, Y, Z$ be $a, b, c$ respectively. We are given that $M$ is on the side $XY$ and $N$ is on the side $XZ$ such that $YM = ZN = YZ = a$.
+
+Let vertex $X$ be the origin $\vec{0}$. Let $\vec{u}$ and $\vec{v}$ be unit vectors along $XY$ and $XZ$ respectively. The positions of the vertices are:
+\[ \vec{X} = \vec{0}, \quad \vec{Y} = c\vec{u}, \quad \vec{Z} = b\vec{v} \]
+Since $M$ is on $XY$ and $YM = a$, we have $XM = c - a$, so $\vec{M} = (c-a)\vec{u}$. Similarly, since $N$ is on $XZ$ and $ZN = a$, we have $XN = b - a$, so $\vec{N} = (b-a)\vec{v}$. The vector $\vec{MN}$ is:
+\[ \vec{MN} = \vec{N} - \vec{M} = (b-a)\vec{v} - (c-a)\vec{u} \]
+The incenter $I$ is given by the barycentric coordinates $\vec{I} = \frac{a\vec{X} + b\vec{Y} + c\vec{Z}}{a+b+c} = \frac{bc\vec{u} + cb\vec{v}}{a+b+c}$.
+The circumcenter $O$ is given by $\vec{O} = \frac{\sin 2Y \vec{Y} + \sin 2Z \vec{Z}}{\sin 2X + \sin 2Y + \sin 2Z} = \frac{c \sin 2Y \vec{u} + b \sin 2Z \vec{v}}{S}$, where $S = \sin 2X + \sin 2Y + \sin 2Z$.
+The vector $\vec{OI} = \vec{I} - \vec{O}$ is:
+\[ \vec{OI} = \left( \frac{bc}{a+b+c} - \frac{c \sin 2Y}{S} \right) \vec{u} + \left( \frac{bc}{a+b+c} - \frac{b \sin 2Z}{S} \right) \vec{v} \]
+Let $K_u = \frac{bc}{a+b+c} - \frac{c \sin 2Y}{S}$ and $K_v = \frac{bc}{a+b+c} - \frac{b \sin 2Z}{S}$. The dot product $\vec{MN} \cdot \vec{OI}$ is:
+\[ \vec{MN} \cdot \vec{OI} = ((b-a)\vec{v} - (c-a)\vec{u}) \cdot (K_u \vec{u} + K_v \vec{v}) \]
+Using $\vec{u} \cdot \vec{u} = 1$, $\vec{v} \cdot \vec{v} = 1$, and $\vec{u} \cdot \vec{v} = \cos X$:
+\[ \vec{MN} \cdot \vec{OI} = (b-a)K_v + (b-a)K_u \cos X - (c-a)K_u - (c-a)K_v \cos X \]
+\[ \vec{MN} \cdot \vec{OI} = K_u [ (b-a) \cos X - (c-a) ] + K_v [ (b-a) - (c-a) \cos X ] \]
+Substituting $K_u$ and $K_v$:
+\[ \vec{MN} \cdot \vec{OI} = \frac{bc}{a+b+c} [ (b-a) \cos X - (c-a) + (b-a) - (c-a) \cos X ] - \frac{1}{S} [ c \sin 2Y ((b-a) \cos X - (c-a)) + b \sin 2Z ((b-a) - (c-a) \cos X) ] \]
+The first term simplifies to:
+\[ \frac{bc}{a+b+c} [ (b-c) \cos X + (b-c) ] = \frac{bc(b-c)(1 + \cos X)}{a+b+c} \]
+Using the law of sines and the identity $\cos X + \cos Y + \cos Z = 1 + 4 \sin \frac{X}{2} \sin \frac{Y}{2} \sin \frac{Z}{2}$, the first term is $4R^2(\cos X + \cos Y + \cos Z - 1)(b-c)$. Through trigonometric simplification, the second term involving $S$ is found to be $-4R^2(\cos X + \cos Y + \cos Z - 1)(b-c)$. Thus:
+\[ \vec{MN} \cdot \vec{OI} = 0 \]
+Since the dot product is zero, the lines $MN$ and $OI$ are perpendicular. Thus, $\gamma = 90^\circ$, and we find:
+\[ \frac{\gamma}{2} = \frac{90^\circ}{2} = 45^\circ \]
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

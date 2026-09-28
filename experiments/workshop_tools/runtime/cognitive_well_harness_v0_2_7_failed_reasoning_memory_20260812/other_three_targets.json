@@ -1,0 +1,21 @@
+{
+  "schema": "cognitive-well-pilot-targets-v1",
+  "selection_policy": "Other three category-balanced IMO-Hard targets from the frozen four-problem pilot; excludes the already studied combinatorics target 0154.",
+  "targets": [
+    {
+      "problem_id": "imo_answerbench_0097",
+      "category": "Algebra",
+      "difficulty": "IMO-Hard"
+    },
+    {
+      "problem_id": "imo_answerbench_0289",
+      "category": "Geometry",
+      "difficulty": "IMO-Hard"
+    },
+    {
+      "problem_id": "imo_answerbench_0354",
+      "category": "Number Theory",
+      "difficulty": "IMO-Hard"
+    }
+  ]
+}

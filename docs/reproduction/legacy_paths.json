@@ -1,0 +1,367 @@
+{
+  "schema": "workshop-legacy-paths-v1",
+  "source_commit": "8d2052f9940f86f3b517b392afdd702cf5e2f230",
+  "note": "Former symlinks to absent research workspaces. Targets are historical provenance, not included files or a resume plan. Proofs, grades, source receipts and frozen engines are preserved.",
+  "paths": [
+    {
+      "path": "benchmarks/imo-proofbench/advanced/reports/raw_and_r1c3_scores.md",
+      "original_target": "../../../../runs/advanced_raw_r1c3_imobench_incremental_20260913/report.md",
+      "target_text_sha256": "15ecd1a7faedbe39db1146afb25c65f6b51bb30f4eb20dd6518f61fb3a7e6944"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/advanced/results/pipeline_raw_r1c3/generation/composite_1_0_0_engine",
+      "original_target": "../../../../../../harnesses/imo_proof_pipeline/releases/1.0.0/engine",
+      "target_text_sha256": "8f6e4af1f36ecb0ba849d3f5a32833a5bd9b6962405663df8ad895f0fb4981cc"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/advanced/results/pipeline_raw_r1c3/original_artifacts",
+      "original_target": "../../../../../runs/advanced_raw_r1c3_imobench_incremental_20260913",
+      "target_text_sha256": "5653e76d4311b668f377e21bb63f7860afd9e60d3892c037f1d3a52ebb15f2a8"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/advanced/runs/pipeline_run01",
+      "original_target": "../../../../runs/advanced001_030_v263_v290_frozen_run01",
+      "target_text_sha256": "50e80df53bbf6781d49b5ab78fa6557a033979165d63238f810ea9644ae91b32"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/advanced/scores/raw_and_r1c3",
+      "original_target": "../../../../runs/advanced_raw_r1c3_imobench_incremental_20260913",
+      "target_text_sha256": "5d23c13f63c659609f7905aea1a4ed2bcebcab6b0b326b07301e50fce8a4a586"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/reports/full_final_scores.md",
+      "original_target": "../../../../runs/basic_imobench_rescore_isolated_20260912T221125479258Z/scores_after_p9/report.md",
+      "target_text_sha256": "7cdb685107dce938cda5280bf69fe9549a185fe2ea7e2058e81019391e71616f"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/reports/full_raw_scores.md",
+      "original_target": "../../../../runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/report.md",
+      "target_text_sha256": "d69b8f5013ecee265865a448a5625cd6ccc434320c3e207e28afb6a5ae575bf5"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/reports/no_bf_raw_bf_final_comparison.md",
+      "original_target": "../../../../runs/basic_raw_no_bf_imobench_every5_20260913/comparison_to_basic_pipeline.md",
+      "target_text_sha256": "e6b4646ed2b5d4f4b4e6919c69076e293db64c502ba83e440620f8ed23e914d1"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/reports/raw_no_budget_forcing_scores.md",
+      "original_target": "../../../../runs/basic_raw_no_bf_imobench_every5_20260913/report.md",
+      "target_text_sha256": "4e79ace5c2428ce923ec407cebee381f525864c475b8f86439834c2150cee774"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/reports/raw_to_final_comparison.md",
+      "original_target": "../../../../runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/comparison.md",
+      "target_text_sha256": "e0d3d2e838e9c218ded36d413603c3432772059cd6252ada9f40217b17caff15"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/historical_strict/generation/composite_1_0_0_engine",
+      "original_target": "../../../../../../harnesses/imo_proof_pipeline/releases/1.0.0/engine",
+      "target_text_sha256": "8f6e4af1f36ecb0ba849d3f5a32833a5bd9b6962405663df8ad895f0fb4981cc"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/historical_strict/grading/current_scorer_source.py",
+      "original_target": "../../../../../../scripts/run_gold_informed_calibrated_codex_scores.py",
+      "target_text_sha256": "e0bc3e8ad54e51951f15885402ccceab6bd3aff6f39b1c5c38c2da338aa0dea0"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/historical_strict/original_artifacts",
+      "original_target": "../../../../../runs/basic_imobench_rescore_isolated_20260912T221125479258Z",
+      "target_text_sha256": "a67c703ebccdd33b1dd926e3965ad92c4647ced18fb79c8430b9a472ad10ef1f"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/pipeline_final/generation/composite_1_0_0_engine",
+      "original_target": "../../../../../../harnesses/imo_proof_pipeline/releases/1.0.0/engine",
+      "target_text_sha256": "8f6e4af1f36ecb0ba849d3f5a32833a5bd9b6962405663df8ad895f0fb4981cc"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/pipeline_final/original_artifacts",
+      "original_target": "../../../../../runs/basic_imobench_rescore_isolated_20260912T221125479258Z/scores_after_p9",
+      "target_text_sha256": "afd50969408630235afe053722a3f685c4ee19365e43cf8e3ee329b8e11ae9ac"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/pipeline_raw_bf/generation/composite_1_0_0_engine",
+      "original_target": "../../../../../../harnesses/imo_proof_pipeline/releases/1.0.0/engine",
+      "target_text_sha256": "8f6e4af1f36ecb0ba849d3f5a32833a5bd9b6962405663df8ad895f0fb4981cc"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/pipeline_raw_bf/original_artifacts",
+      "original_target": "../../../../../runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/scores",
+      "target_text_sha256": "1c1a85106f6fd0bb0c09268921f9dd6fe509ca614be4d5041544a02f8a469634"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/results/raw_no_bf/original_artifacts",
+      "original_target": "../../../../../runs/basic_raw_no_bf_imobench_every5_20260913",
+      "target_text_sha256": "f6de3ea98fbd3d43176016988a15789bf747c89d4fc35d30dfd0ed8114be48d8"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_main",
+      "original_target": "../../../../runs/basic002_030_v263_v290_run01",
+      "target_text_sha256": "706a1e53aec5fc73be45438c913048f3c684f2280cf95b45eef2033679608f51"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_p1",
+      "original_target": "../../../../runs/basic001_v263_v290_run01",
+      "target_text_sha256": "df2f16dc71d87232cd86ee70c48b42b837049f38977f624399107bf4f06924c8"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_p26_rerun",
+      "original_target": "../../../../runs/basic026_no_fresh_retry_20260912T131929Z",
+      "target_text_sha256": "fbcc7f9db2bd2175ed8a3d1a06ca614607239dd421f2514dab6316bc2bcb3a12"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_p27",
+      "original_target": "../../../../runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030",
+      "target_text_sha256": "60b792cf32bf5ceadc1856067705530ef4402b16cb766da20a26c64c12dc2f3f"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_p28_30",
+      "original_target": "../../../../runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030",
+      "target_text_sha256": "a31c42faf66927ea01b6e50edfadb69f82db5361944ca8c2a4fcadcc7686e929"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_p9_rerun",
+      "original_target": "../../../../runs/basic028_030_then009_frozen_20260912T183451065979Z/rerun_009",
+      "target_text_sha256": "1c9d0a7364ea294d072b25acfc019b56ad7f3652b3786437b8e41ace553b636b"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-001",
+      "original_target": "../../../../../runs/basic001_v263_v290_run01/problems/PB-Basic-001",
+      "target_text_sha256": "40d32a660a8f1937dd0aafe3529b714e8d11f91e1113e66fb8ada83b9282541b"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-002",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-002",
+      "target_text_sha256": "14989addefbb121759d258fdf9874b2a6c21200908b952f6dd5e4965e49b9462"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-003",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-003",
+      "target_text_sha256": "a4eeb2ab5ed10dfe7228083ea3ad82607b69eaf1ea3173e80b026c81bc40fc1b"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-004",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-004",
+      "target_text_sha256": "0f758869c5a87e4834fbd90976ff00aa5892388dd63ef79993dc5f9e31469ca9"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-005",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-005",
+      "target_text_sha256": "14dbf8f583a6933795e255d3f97f3e95433d607901dc9a1610a9766cb3cc43e6"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-006",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-006",
+      "target_text_sha256": "5454c1be43a5fc059101901b66c46849fa3b72756e2326b20d9bfd828b1be4c3"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-007",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-007",
+      "target_text_sha256": "bf46997574eb5685c0fa91609ef1c0536a85add61da25d057574b6ae9de9f1c3"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-008",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-008",
+      "target_text_sha256": "34012110827e9e8ce131147382c4d1c31c72975e6ccda2e7befb4d7990a682cd"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-009",
+      "original_target": "../../../../../runs/basic028_030_then009_frozen_20260912T183451065979Z/rerun_009/problems/PB-Basic-009",
+      "target_text_sha256": "13e6bfcb145214525b5e0ba2299bce0c35c6b59c380849eed53c7d3259b84f36"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-010",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-010",
+      "target_text_sha256": "8e21a106bbb9565d9f1c0e3e4f2b7526da36dec0d2c1d4f1b1859941fcac29b3"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-011",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-011",
+      "target_text_sha256": "4df797e14662b6df0622e1373fa5520cc0d8d7bbdbfb67b979f45c98b499c7c8"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-012",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-012",
+      "target_text_sha256": "2294d202f2c9b361c70277cefce404d9940f81ca53f1c7bfc758cf25efd7ab58"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-013",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-013",
+      "target_text_sha256": "215918c021257e438707e6c229cb6a525fee515c9f1cfc55467b5ec507d6df53"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-014",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-014",
+      "target_text_sha256": "0a5c5ae2f5ce2301be905f2d222c5990475305feceb0b848d542f51684a393ac"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-015",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-015",
+      "target_text_sha256": "3492c2de49fa87dbde20e7c1fb167de18bebadf05bed2c96e02470614e6d26db"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-016",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-016",
+      "target_text_sha256": "e866a148ba7e7a13ceac29a7257ef4d772d7c3301a3d6b4687378a1475e49ced"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-017",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-017",
+      "target_text_sha256": "7030ceba3239e60c856a396d17ae480c2d8e4d29bff00082ad587530f19f691b"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-018",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-018",
+      "target_text_sha256": "f7aa103e0c049a1b65806cf1e8e10596ffefe9a08f086b4bcf9683908f029487"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-019",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-019",
+      "target_text_sha256": "ce3bec86e7ed24ca806f48a045e0ae2da4c2e535d1d882470a6795a33184d892"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-020",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-020",
+      "target_text_sha256": "0cef9ca0488197da4215960e87cb75356b4ec7cfe6dd7eef659423f1a1729ece"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-021",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-021",
+      "target_text_sha256": "6fd35facbb95a1431f9dd27c023faba9cbae41fd0ca46f7fd615b382d15ba0ef"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-022",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-022",
+      "target_text_sha256": "5c213c3ce29a796ee540c0ece225ed943d4e6af7ef46527eb6188b40ea0ffaf8"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-023",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-023",
+      "target_text_sha256": "d92731cfc5b0d61ec1457078bafbf9dbc80ddbb9c771a9219b60debe56d049ee"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-024",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-024",
+      "target_text_sha256": "b12976c8a5b2f6dcf9fc07a6c8d6f8fd5e465be05854b283c042ab7d1e03167e"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-025",
+      "original_target": "../../../../../runs/basic002_030_v263_v290_run01/problems/PB-Basic-025",
+      "target_text_sha256": "d35ad525d8b05508d14f81327604a31bf230af0cd7ead354e91db44d8095d32f"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-026",
+      "original_target": "../../../../../runs/basic026_no_fresh_retry_20260912T131929Z/problems/PB-Basic-026",
+      "target_text_sha256": "85fdda568bc2043283d2d65e26ce598e585a84dfe93d33c17cf31f5167a1f1f9"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-027",
+      "original_target": "../../../../../runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027",
+      "target_text_sha256": "11e4476903273575fa48e3b63fc93f69e69008bdf1443dd1ebbfe2afba822029"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-028",
+      "original_target": "../../../../../runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-028",
+      "target_text_sha256": "6e412fabeb48f40cb8746086868221c45c7e9e83c4f2027256498b087c389ae9"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-029",
+      "original_target": "../../../../../runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-029",
+      "target_text_sha256": "65e1e269743a945c0482fd7abefd53ba29bb41f43c32329ae6d60b56da6501b8"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/pipeline_selected/PB-Basic-030",
+      "original_target": "../../../../../runs/basic028_030_then009_frozen_20260912T183451065979Z/primary_028_030/problems/PB-Basic-030",
+      "target_text_sha256": "11a8c79f17d692116e17bedf65af52ac091300045439e41685c5a6e9f4fba71c"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/runs/raw_no_budget_forcing",
+      "original_target": "../../../../runs/basic_raw_mtp4_no_bf_dual_20260913T005619877016Z",
+      "target_text_sha256": "f29c70b6245642e3700642c85dafdf0bd64f28c0c0ec717f281b941147913b26"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/scores/final",
+      "original_target": "../../../../runs/basic_imobench_rescore_isolated_20260912T221125479258Z/scores_after_p9",
+      "target_text_sha256": "670adea540e415602a4fb7801afc91efb004b1c38cee41520e775491318437f2"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/scores/raw_before_lazy",
+      "original_target": "../../../../runs/basic_raw_before_lazy_imobench_20260913T000946272949Z/scores",
+      "target_text_sha256": "85556fd594b318d8e957d95ed105de980dc73971a0f49e729cfa00169ff2fe6d"
+    },
+    {
+      "path": "benchmarks/imo-proofbench/basic/scores/raw_no_budget_forcing",
+      "original_target": "../../../../runs/basic_raw_no_bf_imobench_every5_20260913",
+      "target_text_sha256": "129f1dd77ceb8fa9e09ff2cda34bed8813cd6e06503122f19fc36de956690460"
+    },
+    {
+      "path": "benchmarks/imo2026/reports/review_fusion_strict.md",
+      "original_target": "../../../runs/imo2026_review_fusion_strict_matrix_20260913/report.md",
+      "target_text_sha256": "6dbd01a382e635ae79686b7b78d1ac9af03d149f4c09231308903e4b98892b04"
+    },
+    {
+      "path": "benchmarks/imo2026/results/p2_tool_call_r47/generation/harness_snapshot",
+      "original_target": "../../../../../exports/v0324_frozen_r47_20260909",
+      "target_text_sha256": "d5bb3f59c8f7e58e872d5b9379c606dadd2daa3ce98915ef4f641e96ddf46e23"
+    },
+    {
+      "path": "benchmarks/imo2026/results/p2_tool_call_r47/grading/current_scorer_source.py",
+      "original_target": "../../../../../scripts/run_gold_informed_calibrated_codex_scores.py",
+      "target_text_sha256": "3605688837b7ef785c7d8b873e8536101473131e17aaa7139733599a6f37079d"
+    },
+    {
+      "path": "benchmarks/imo2026/results/p2_tool_call_r47/original_artifacts",
+      "original_target": "../../../../runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score",
+      "target_text_sha256": "457090a0fecb8cd47d36cdcf64ebba1e799a329a44bf762fd6c591bbdb6b6e37"
+    },
+    {
+      "path": "benchmarks/imo2026/results/review_fusion/generation/cycle1_recovery_records",
+      "original_target": "../../../../../runs/v0290r3_rejected_cycle1_synthesis_20260908",
+      "target_text_sha256": "ed84acbbeb6e4670cd85d201269e35256cb2d92deb6a96dd14094631cc8ac181"
+    },
+    {
+      "path": "benchmarks/imo2026/results/review_fusion/grading/current_scorer_source.py",
+      "original_target": "../../../../../scripts/run_gold_informed_calibrated_codex_scores.py",
+      "target_text_sha256": "3605688837b7ef785c7d8b873e8536101473131e17aaa7139733599a6f37079d"
+    },
+    {
+      "path": "benchmarks/imo2026/results/review_fusion/original_artifacts",
+      "original_target": "../../../../runs/imo2026_review_fusion_strict_matrix_20260913",
+      "target_text_sha256": "fc732f1642bea68e32a740fc51fd0f9441008a832d6003ac162b8ff0892e41fa"
+    },
+    {
+      "path": "benchmarks/imo2026/runs/cycle1_recoveries",
+      "original_target": "../../../runs/v0290r3_rejected_cycle1_synthesis_20260908",
+      "target_text_sha256": "1d90784b4729c6358bc63e40dc1ee4654a4e66ff9fefa7e6da38969f9c0b3499"
+    },
+    {
+      "path": "benchmarks/imo2026/runs/p2_tool_call_r47",
+      "original_target": "../../../runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909",
+      "target_text_sha256": "32600a5a6822e34b63138bc55fd6512deeedb807a6f26a663198ca7c839de70e"
+    },
+    {
+      "path": "benchmarks/imo2026/runs/raw_lazy",
+      "original_target": "../../../runs/v0257_v108_six_problem_bf_temp_transition_20260904",
+      "target_text_sha256": "ea342d10295161a73b79f78b5c4ed3947826e69a9a36cbe869d3965a6426b91a"
+    },
+    {
+      "path": "benchmarks/imo2026/runs/review_fusion_p5",
+      "original_target": "../../../runs/v0290r1_p5_lazy_checked_fusion_gate_20260908",
+      "target_text_sha256": "ef2bc024025308b8dc8d0efea4b43cfb2730264e57f8c2cdc267370fdc2a3430"
+    },
+    {
+      "path": "benchmarks/imo2026/runs/review_fusion_remaining",
+      "original_target": "../../../runs/v0290r2_remaining_problems_fusion_gate_20260908",
+      "target_text_sha256": "0ee7c460069d19e86eb3a185ce2400220f058bb02a5e3cd93793003c1cee2776"
+    },
+    {
+      "path": "benchmarks/imo2026/scores/p2_tool_call_r47_strict",
+      "original_target": "../../../runs/v0324r47_p2_t07_r01_r1c3_fresh_qwen_20260909/t07_r01/strict_score",
+      "target_text_sha256": "4312f48e2653dfafc01288ee96c1bc202cf4d502ac78816dd731bd9347aa7cae"
+    },
+    {
+      "path": "benchmarks/imo2026/scores/review_fusion_strict",
+      "original_target": "../../../runs/imo2026_review_fusion_strict_matrix_20260913",
+      "target_text_sha256": "945a50e6491f50dab80a86c2797c61bbb21ff65baa096b4c4271ded36f9106ef"
+    }
+  ]
+}

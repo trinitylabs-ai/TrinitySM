@@ -1,0 +1,48 @@
+To find all functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that for all $a, b \in \mathbb{R}$,
+\[ (b - a)f(f(a)) = a f(a + f(b)), \]
+we consider several cases based on the properties of $f$.
+
+**Case 1: $f$ is a constant function.**
+Let $f(x) = c$ for all $x \in \mathbb{R}$. The equation becomes $(b - a)c = ac$. For this to hold for all $a, b \in \mathbb{R}$, we must have $c = 0$. Thus, $f(x) = 0$ is a solution.
+
+**Case 2: $f$ is a linear function.**
+Let $f(x) = kx + m$.
+The LHS is $(b - a) f(ka + m) = (b - a)(k(ka + m) + m) = (b - a)(k^2a + km + m) = k^2ab + kmb + mb - k^2a^2 - kma - ma$.
+The RHS is $a f(a + kb + m) = a(k(a + kb + m) + m) = a(ka + k^2b + km + m) = ka^2 + k^2ab + kma + ma$.
+Equating the two:
+$-k^2a^2 + kmb + mb - kma - ma = ka^2 + kma + ma$
+Rearranging terms:
+$-(k^2 + k)a^2 + (km + m)b - (2km + 2m)a = 0$.
+For this to hold for all $a, b \in \mathbb{R}$, the coefficients must be zero:
+1) $k^2 + k = 0 \implies k(k+1) = 0 \implies k = 0$ or $k = -1$.
+2) $(k+1)m = 0$.
+3) $2(k+1)m = 0$.
+If $k = 0$, then $m = 0$, giving $f(x) = 0$.
+If $k = -1$, then $m$ can be any constant $c$, giving $f(x) = -x + c$.
+
+**Case 3: $f$ is not necessarily linear.**
+Suppose $f$ is not identically zero.
+If $f(0) = 0$, then $(b-a)f(f(a)) = a f(a + f(b))$. For $b=a$, $0 = a f(a + f(a))$. Thus $f(a + f(a)) = 0$ for all $a \neq 0$.
+If $f(x) = 0$ for some $x \neq 0$, then $f(x + f(b)) = 0$ for all $b \in \mathbb{R}$. This implies that $x + \text{Im}(f) \subseteq \text{Ker}(f)$. If $\text{Im}(f)$ contains any $y \neq 0$, we can show $\text{Ker}(f) = \mathbb{R}$ by shifting, which leads back to $f(x) = 0$.
+If $f(0) = c \neq 0$, then for $a = 0$, $b f(f(0)) = 0 \cdot f(f(b)) \implies b f(c) = 0$ for all $b$, so $f(c) = 0$.
+Substituting $a = c$ into the original equation:
+$(b - c) f(f(c)) = c f(c + f(b))$.
+Since $f(c) = 0$ and $f(0) = c$, we have $f(f(c)) = f(0) = c$.
+$(b - c) c = c f(c + f(b)) \implies f(c + f(b)) = b - c$.
+Since $f(c + f(b)) = b - c$, $f$ must be injective.
+For $a \neq 0, c$, $(b - a) f(f(a)) = a f(a + f(b))$. For $b = c$, we get $(c - a) f(f(a)) = a f(a + 0) = a f(a)$, so $f(f(a)) = \frac{a f(a)}{c - a}$.
+Substituting this into the original equation:
+$f(a + f(b)) = \frac{(b - a) f(a)}{c - a}$ for $a \neq 0, c$.
+Taking the limit as $a \to 0$ (or substituting $a \to 0$ formally), we find $f(f(b)) = \frac{b f(0)}{c} = \frac{bc}{c} = b$.
+Given $f(f(x)) = x$ and $f(x + f(y)) = y - x$ (from $f(a + f(b)) = b - a$ when $f(f(a)) = a$), we have $f(x + f(0)) = 0 - x = -x$.
+Since $f(0) = c$, $f(x + c) = -x$. Let $u = x + c$, then $f(u) = -(u - c) = -u + c$.
+This matches the linear form $f(x) = -x + c$.
+
+Testing $f(x) = -x + c$ in the original equation:
+LHS: $(b - a) f(f(a)) = (b - a) a = ab - a^2$.
+RHS: $a f(a + f(b)) = a f(a - b + c) = a (-(a - b + c) + c) = a(-a + b) = ab - a^2$.
+The equation is satisfied for all $a, b$.
+
+The functions are $f(x) = 0$ and $f(x) = -x + c$ for any constant $c \in \mathbb{R}$. Note that $f(x) = -x + c$ includes the solution $f(x) = -x$ when $c = 0$.
+
+Final solutions: $f(x) = 0$ and $f(x) = -x + c$ for $c \in \mathbb{R}$. \(\square\)

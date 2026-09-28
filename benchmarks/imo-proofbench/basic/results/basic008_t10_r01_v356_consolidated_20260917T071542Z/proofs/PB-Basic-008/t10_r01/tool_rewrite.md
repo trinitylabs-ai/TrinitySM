@@ -1,0 +1,121 @@
+**Proof.**
+
+Let $a, b, c$ be positive real numbers satisfying $a+b+c=1$. We aim to prove the inequality
+\[ \sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca). \]
+
+### 1. Change of Variables and Problem Setup
+Define $x = \sqrt{a}$, $y = \sqrt{b}$, and $z = \sqrt{c}$. Since $a,b,c > 0$, we have $x,y,z > 0$. The constraint $a+b+c=1$ transforms into
+\[ x^2 + y^2 + z^2 = 1. \]
+The inequality to be proved becomes
+\[ x + y + z \geq 3\sqrt{3}(x^2y^2 + y^2z^2 + z^2x^2). \]
+Let $F(x,y,z) = x + y + z - 3\sqrt{3}(x^2y^2 + y^2z^2 + z^2x^2)$. We seek to show that $F(x,y,z) \geq 0$ on the compact set $S = \{(x,y,z) \in \mathbb{R}^3_{\geq 0} : x^2+y^2+z^2=1\}$. Since $F$ is continuous and $S$ is compact, $F$ attains a global minimum on $S$.
+
+### 2. Interior Critical Points via Lagrange Multipliers
+Consider the interior of $S$, where $x,y,z > 0$. We apply the method of Lagrange multipliers to minimize $F$ subject to $G(x,y,z) = x^2+y^2+z^2-1=0$. The condition $\nabla F = \lambda \nabla G$ yields the system:
+\[
+\begin{cases}
+1 - 6\sqrt{3}x(y^2+z^2) = 2\lambda x \\
+1 - 6\sqrt{3}y(x^2+z^2) = 2\lambda y \\
+1 - 6\sqrt{3}z(x^2+y^2) = 2\lambda z
+\end{cases}
+\]
+Subtracting the second equation from the first gives:
+\[ 6\sqrt{3}\big[y(x^2+z^2) - x(y^2+z^2)\big] = 2\lambda(x-y). \]
+Expanding and factoring the left-hand side:
+\[ 6\sqrt{3}\big[xy(x-y) - z^2(x-y)\big] = 2\lambda(x-y) \implies (x-y)\big[6\sqrt{3}(xy-z^2) - 2\lambda\big] = 0. \]
+Thus, for any pair of variables, either they are equal or $2\lambda = 6\sqrt{3}(xy-z^2)$. By symmetry, the same holds for pairs $(y,z)$ and $(z,x)$.
+
+Suppose, for contradiction, that $x,y,z$ are pairwise distinct. Then we must have:
+\[ xy-z^2 = yz-x^2 = zx-y^2. \]
+From $xy-z^2 = yz-x^2$, we rearrange to obtain $x^2-z^2 + y(x-z) = 0$, which factors as $(x-z)(x+z+y) = 0$. Since $x,y,z > 0$, the sum $x+z+y$ is strictly positive, forcing $x=z$. This contradicts the assumption that the variables are distinct. Therefore, at any interior critical point, at least two variables must be equal. By symmetry, we may assume without loss of generality that $x=y$.
+
+### 3. Reduction to a Single Variable
+Assume $x=y$. The constraint $x^2+y^2+z^2=1$ becomes $2x^2+z^2=1$, so $z = \sqrt{1-2x^2}$. Since $z>0$ in the interior, we require $1-2x^2 > 0$, which restricts $x$ to the open interval $(0, 1/\sqrt{2})$. Substituting $y=x$ and $z=\sqrt{1-2x^2}$ into $F$ defines a single-variable function:
+\[ g(x) = 2x + \sqrt{1-2x^2} - 3\sqrt{3}\big(x^4 + 2x^2(1-2x^2)\big) = 2x + \sqrt{1-2x^2} - 3\sqrt{3}(2x^2 - 3x^4). \]
+We analyze $g(x)$ on the closed interval $[0, 1/\sqrt{2}]$. The endpoints correspond to the boundary of $S$ (where one variable vanishes), which are included in our compact set analysis. For $x \in (0, 1/\sqrt{2})$, the radicand $1-2x^2$ is strictly positive, so $\sqrt{1-2x^2} \neq 0$, justifying all subsequent divisions and derivative calculations. Differentiating $g(x)$ yields:
+\[ g'(x) = 2 - \frac{2x}{\sqrt{1-2x^2}} - 12\sqrt{3}x(1-3x^2). \]
+To determine the stationary points, we solve $g'(x) = 0$ in $(0, 1/\sqrt{2})$. Combining terms over the common denominator $\sqrt{1-2x^2}$ (which is strictly positive on this interval), we obtain:
+\[ g'(x) = \frac{2\sqrt{1-2x^2} - 2x - 12\sqrt{3}x(1-3x^2)\sqrt{1-2x^2}}{\sqrt{1-2x^2}}. \]
+Expanding the numerator explicitly:
+\[ \text{Numerator} = 2\sqrt{1-2x^2} - 2x - 12\sqrt{3}x\sqrt{1-2x^2} + 36\sqrt{3}x^3\sqrt{1-2x^2}. \]
+Rearranging terms to match the standard polynomial ordering in $x$:
+\[ \text{Numerator} = 36\sqrt{3}x^3\sqrt{1-2x^2} - 12\sqrt{3}x\sqrt{1-2x^2} - 2x + 2\sqrt{1-2x^2}. \]
+Since the denominator $\sqrt{1-2x^2}$ is strictly positive on $(0, 1/\sqrt{2})$, the roots and sign changes of $g'(x)$ are identical to those of the numerator expression. We apply the certified root-classification lemma to this expression on the interval $(0, 1/\sqrt{2})$.
+
+## Exact root-classification lemma
+
+For the supplied expression `(36*sqrt(3)*x**3*sqrt(1 - 2*x**2) - 12*sqrt(3)*x*sqrt(1 - 2*x**2) - 2*x + 2*sqrt(1 - 2*x**2))/sqrt(1 - 2*x**2)` in `x`,
+on interval `{"left":"0","right":"sqrt(2)/2","left_open":true,"right_open":true}`, the complete root count is **3**.
+
+- `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)`: local_maximum; signs 1 → -1.
+- `CRootOf(3*x**2 - 1, 1)`: local_minimum; signs -1 → 1.
+- `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)`: local_maximum; signs 1 → -1.
+
+According to Appendix A, the equation $g'(x) = 0$ possesses exactly three roots in the interval $(0, 1/\sqrt{2})$. One root is explicitly $x_0 = 1/\sqrt{3}$ (corresponding to $CRootOf(3x^2-1, 1)$). The remaining two roots are algebraic numbers identified as the 4th and 7th roots of the degree-12 elimination polynomial. Crucially, the sign-change analysis certified in Appendix A classifies $x_0 = 1/\sqrt{3}$ as a local minimum (derivative signs change from $-1$ to $1$), while the other two roots are local maxima (derivative signs change from $1$ to $-1$).
+
+Since $x_0$ is the unique local minimum in the interior $(0, 1/\sqrt{2})$, the global minimum of $g(x)$ on $[0, 1/\sqrt{2}]$ must occur either at $x_0$ or at the endpoints $x=0$ or $x=1/\sqrt{2}$.
+
+### 4. Evaluation at Critical Points and Boundaries
+We evaluate $g(x)$ at these candidate points:
+- At the interior critical point $x_0 = 1/\sqrt{3}$:
+  \[ g(1/\sqrt{3}) = \frac{2}{\sqrt{3}} + \sqrt{1-\frac{2}{3}} - 3\sqrt{3}\left(\frac{2}{3} - \frac{3}{9}\right) = \frac{3}{\sqrt{3}} - 3\sqrt{3}\left(\frac{1}{3}\right) = \sqrt{3} - \sqrt{3} = 0. \]
+- At the left endpoint $x=0$:
+  \[ g(0) = 0 + 1 - 0 = 1 > 0. \]
+- At the right endpoint $x=1/\sqrt{2}$:
+  \[ g(1/\sqrt{2}) = \sqrt{2} + 0 - 3\sqrt{3}\left(1 - \frac{3}{4}\right) = \sqrt{2} - \frac{3\sqrt{3}}{4}. \]
+  To verify positivity, compare squares: $(\sqrt{2})^2 = 2$ and $\left(\frac{3\sqrt{3}}{4}\right)^2 = \frac{27}{16} = 1.6875$. Since $2 > 1.6875$, we have $\sqrt{2} > \frac{3\sqrt{3}}{4}$, hence $g(1/\sqrt{2}) > 0$.
+
+Thus, the minimum value of $g(x)$ on $[0, 1/\sqrt{2}]$ is $0$, attained uniquely at $x = 1/\sqrt{3}$. This establishes $g(x) \geq 0$ for all $x \in [0, 1/\sqrt{2}]$.
+
+### 5. Conclusion
+Every interior critical point of $F$ on $S$ requires at least two equal coordinates. The reduction to the case $x=y$ demonstrates that $F(x,x,z) = g(x) \geq 0$. By symmetry, the same holds for $y=z$ and $z=x$. The boundary of $S$ (where at least one variable is zero) is covered by the endpoints of $g(x)$ and their symmetric counterparts, all of which yield strictly positive values. Consequently, the global minimum of $F$ on $S$ is $0$.
+
+This proves $x+y+z \geq 3\sqrt{3}(x^2y^2+y^2z^2+z^2x^2)$ for all non-negative $x,y,z$ with $x^2+y^2+z^2=1$. Reverting to the original variables $a,b,c$, we obtain
+\[ \sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca) \]
+for all positive reals $a,b,c$ satisfying $a+b+c=1$. Equality holds if and only if $x=y=z=1/\sqrt{3}$, which corresponds to $a=b=c=1/3$.
+
+$\square$
+
+# Appendix A — Exact root isolation and sign classification
+
+The polynomial below is an elimination superset. Exact real-root isolation covers all its real roots. Each candidate is checked against the positive square-root branch. Original denominators and the radicand domain are checked before classification. On each remaining interval the continuous expression has no zero or pole, so its sign equals the exact sign at the recorded rational sample. In stationary-points mode the expression is the derivative of the supplied function; its sign changes determine the listed local extrema.
+
+The expression classified is `(36*sqrt(3)*x**3*sqrt(1 - 2*x**2) - 12*sqrt(3)*x*sqrt(1 - 2*x**2) - 2*x + 2*sqrt(1 - 2*x**2))/sqrt(1 - 2*x**2)`.
+
+It is the derivative of `9*sqrt(3)*x**4 - 6*sqrt(3)*x**2 + 2*x + sqrt(1 - 2*x**2)`.
+
+The elimination polynomial is `7776*x**8 - 9072*x**6 + 288*sqrt(3)*x**5 + 3456*x**4 - 240*sqrt(3)*x**3 - 420*x**2 + 48*sqrt(3)*x - 4`, over `QQ<sqrt(3)>`.
+
+A `CRootOf(P,k)` denotes the root of the indicated polynomial with zero-based index k in the exact root ordering. Each recorded rational isolating interval below contains exactly one root of its polynomial, checked by a Sturm root count.
+
+| Candidate root | Rational isolating interval | Signs of A, B in A+B√R | Original branch |
+| --- | --- | --- | --- |
+| `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)` | `['49306969229/549755813888', '98613938459/1099511627776']` | [-1, 1] | accepted |
+| `CRootOf(3*x**2 - 1, 1)` | `['634803334273/1099511627776', '317401667137/549755813888']` | [-1, 1] | accepted |
+| `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)` | `['383690571915/549755813888', '767381143831/1099511627776']` | [-1, 1] | accepted |
+| `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 5)` | `['122245063093/1099511627776', '61122531547/549755813888']` | [-1, -1] | rejected |
+| `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 6)` | `['518360900275/1099511627776', '129590225069/274877906944']` | [-1, -1] | rejected |
+
+Original-domain checks (each condition has no zero in the specified interval):
+
+- `1 - 2*x**2 > 0`; exact sign 1 at rational sample `181/512`.
+- `sqrt(2) != 0`; exact sign 1 at rational sample `181/512`.
+- `sqrt(1 - 2*x**2) != 0`; exact sign 1 at rational sample `181/512`.
+
+The accepted roots divide the interval into the following zero-free, pole-free open cells:
+
+- Between `0` and `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)`, sample `11/256` has exact sign 1.
+- Between `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)` and `CRootOf(3*x**2 - 1, 1)`, sample `85/256` has exact sign -1.
+- Between `CRootOf(3*x**2 - 1, 1)` and `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)`, sample `163/256` has exact sign 1.
+- Between `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)` and `sqrt(2)/2`, sample `45/64` has exact sign -1.
+
+## Exact root-classification lemma
+
+For the supplied expression `(36*sqrt(3)*x**3*sqrt(1 - 2*x**2) - 12*sqrt(3)*x*sqrt(1 - 2*x**2) - 2*x + 2*sqrt(1 - 2*x**2))/sqrt(1 - 2*x**2)` in `x`,
+on interval `{"left":"0","right":"sqrt(2)/2","left_open":true,"right_open":true}`, the complete root count is **3**.
+
+- `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 4)`: local_maximum; signs 1 → -1.
+- `CRootOf(3*x**2 - 1, 1)`: local_minimum; signs -1 → 1.
+- `CRootOf(419904*x**12 - 699840*x**10 + 431568*x**8 - 117072*x**6 + 12312*x**4 - 216*x**2 + 1, 7)`: local_maximum; signs 1 → -1.
+
+These computations classify the supplied expression; the source correspondence and its use in the full proof are separately audited.

@@ -1,0 +1,65 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "36753d18d3d151e24d5f0959cb273275ce5f04a31a8d914d09cdb86a244feaa3",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "861c18188a5be788a212b15d5f2804d56484645d9f354a3107f48c712dad40de",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4e3128d88426cc66fb4dc7ea36bc8c10e549f2f127b2db0b7cc4456895e0057f",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "After correctly reducing the goal to a dot-product identity, the submission merely calls that identity “a trigonometric identity” and invokes unspecified symmetry; it never derives the required compatibility among B, C, K, and L. This is an unsupported central inference under Rule E, so the score is capped at 3.",
+    "summary": "The coordinate reduction and several sine-law relations are useful preliminary work, but the entire load-bearing step proving the target dot-product identity is absent. The purported circumcentre formula is unfinished, and the final coordinate/line assertion uses undefined objects and is not a proof that O lies on the perpendicular bisector of MN. Rule B does not permit a score of 4 because no complete parameter reduction, angle-domain treatment, or explicit final calculation is supplied.",
+    "strengths": [
+      "Correctly expresses M and N after taking A as the origin.",
+      "Correctly reduces OM=ON to O·(C−B)=(|C|²−|B|²)/4.",
+      "Correctly records the circumcentre equations 2O·k=|k|² and 2O·l=|l|².",
+      "The sine-law calculations leading to the cotangent relations are largely valid and constitute relevant preliminary progress."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The essential dot-product identity is asserted from “symmetry” without any derivation. No argument connects the obtained angle relations and length equations to this identity."
+      },
+      {
+        "severity": "substantial",
+        "description": "The displayed formula for O contains an undefined vector n, has both terms in the same direction, and is left with an ellipsis; it cannot be used to compute the required dot product."
+      },
+      {
+        "severity": "substantial",
+        "description": "The concluding statement about an x-component and a line through the midpoint of AP uses an undefined point P and an unspecified coordinate direction. It neither establishes nor correctly identifies the perpendicular bisector of MN."
+      },
+      {
+        "severity": "minor",
+        "description": "The transformations through tangent expressions do not address cases where one of the relevant tangents is undefined, although the final cotangent relations could instead be derived directly."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:43:06.673960+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

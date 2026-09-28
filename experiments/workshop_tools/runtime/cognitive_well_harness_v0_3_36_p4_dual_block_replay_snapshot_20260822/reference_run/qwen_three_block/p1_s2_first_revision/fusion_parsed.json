@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "errors": [],
+  "score": 7,
+  "verdict": "CORRECT",
+  "repair_status": "NOT REQUIRED",
+  "accepted_defect_ids": [],
+  "round_count": 0,
+  "branch_statuses": [],
+  "severities": []
+}

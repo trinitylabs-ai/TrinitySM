@@ -1,0 +1,45 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p4",
+  "grader_candidate_id": "t10_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+  "proof": "evidence/proofs/3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c.md",
+  "completed_at": "2026-09-15T16:39:34.772350+00:00",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The sufficiency proof does not justify that Mulan can force the minimum angle to become arbitrarily small regardless of which child Shan-Yu retains.",
+    "summary": "The characterization and necessity argument are essentially correct, and the subsequent forcing and peeling steps work once a sufficiently small angle is available. However, the proof only identifies one child with a small angle and overlooks Shan-Yu’s option to retain the other child; it also gives no finite-progress argument. This load-bearing gap is readily repairable by repeatedly bisecting an angle, since both children then contain half of it, but that argument is absent.",
+    "strengths": [
+      "The safe-angle obstruction in the necessity direction correctly treats all four possible pairings.",
+      "Once an angle below \\(\\theta\\) is secured, the supplementary-angle and peeling arguments correctly force \\(\\theta\\).",
+      "The final set of values \\(\\theta=180^\\circ/n\\) for integers \\(n\\ge2\\) is correct."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The claimed ability to make the minimum angle arbitrarily small considers only the favorable child and does not establish a finite strategy against Shan-Yu’s choices."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p4_c3_t10r02_20260915T144230Z/grading/work/strict_c3_20260915T163357Z/scores/p4/t10_r02/summary.json",
+    "native_record_file_sha256": "b178a8e22c126c20fc8d207e8e720d61c1a55ac9338281e1107f67a0a39cfb1e",
+    "selected_record": "benchmarks/imo2026/results/p4_c3_t10r02_20260915T144230Z/grades/imo2026_p4/t10_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "07c25fd5a8231a69430a193ecb1ee78fafdb8fa7d27f1636752576d22057579c",
+    "proof": "benchmarks/imo2026/results/p4_c3_t10r02_20260915T144230Z/proofs/imo2026_p4/t10_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb"
+}

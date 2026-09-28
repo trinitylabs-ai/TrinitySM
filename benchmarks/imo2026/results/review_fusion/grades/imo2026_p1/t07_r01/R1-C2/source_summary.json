@@ -1,0 +1,76 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T10:56:24.046635+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 0
+  },
+  "per_problem": {
+    "1": {
+      "scores": [
+        6
+      ],
+      "mean": 6.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T10:56:24.045450+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "case_id": "imo2026_p1.explicit.t07_r01",
+      "candidate_id": "t07_r01",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r01/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "local",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "At termination, the proof says that for every prime p the nonzero-exponent multiset S_p^* is the singleton {v_p(M)}. This is false when p does not divide M, since then S_p^* is empty; the defined empty-gcd convention makes the intended conclusion valid, but this case must be stated separately.",
+        "summary": "The termination argument and primewise gcd invariant are correct and establish both claims. The only defect is a minor omitted case distinction for primes not dividing the terminal integer; adding it immediately yields the claimed reconstruction and choice-independence.",
+        "strengths": [
+          "Correctly uses the product and the count of entries greater than 1 to prove finite termination.",
+          "Correctly proves that at least one entry greater than 1 survives every move.",
+          "Correctly identifies the valuation transformation (x,y) to (min(x,y),|x-y|).",
+          "Correctly observes that the gcd of the positive p-adic valuations is invariant.",
+          "The resulting primewise reconstruction of M is independent of all choices."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "For p not dividing M, the terminal S_p^* is empty rather than a singleton. A direct two-case argument—p divides M or not—repairs the proof using the submission's convention gcd(empty)=0."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

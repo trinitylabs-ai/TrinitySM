@@ -1,0 +1,22 @@
+Let $S = \{ 2^k \theta \mid k \in \{0, 1, 2, \dots\}, 2^k \theta < 180^\circ \}$. A triangle $T$ is called winning if at least one of its angles is in $S$. If a triangle has an angle $2\phi$, Mulan can force both resulting triangles to have an angle $\phi$ by making a cut from the vertex of the $2\phi$ angle such that the cut divides the angle into $\phi$ and $\phi$. By repeating this process, if $T$ has an angle $2^n \theta$, Mulan can guarantee victory in $n$ steps.
+
+We claim that Mulan can guarantee victory if and only if $\theta = \frac{180^\circ}{2^n}$ or $\theta = \frac{60^\circ}{2^n}$ for some $n \in \{0, 1, 2, \dots\}$.
+
+First, we prove sufficiency.
+Case 1: $\theta = \frac{180^\circ}{2^n}$. For $n \ge 1$, $90^\circ = 2^{n-1} \theta \in S$. For any triangle $T$, Mulan can cut the altitude to the longest side. This creates two right triangles, both of which have an angle of $90^\circ \in S$. Thus, both resulting triangles are winning, and Mulan can force a win. (If $n=0$, $\theta=180^\circ$, which is excluded).
+
+Case 2: $\theta = \frac{60^\circ}{2^n}$. Then $60^\circ = 2^n \theta \in S$ and $120^\circ = 2^{n+1} \theta \in S$ (provided $120^\circ < 180^\circ$). Let $T$ have angles $\alpha \ge \beta \ge \gamma$. If $T$ is not winning, then $\gamma < 60^\circ$ (since $\gamma=60^\circ \implies \alpha=\beta=\gamma=60^\circ \in S$). Mulan chooses a cut from the vertex of angle $\alpha$ with angle $\phi = 120^\circ - \beta$. The cut is admissible since $0 < 120^\circ - \beta < \alpha$ is equivalent to $\beta < 120^\circ$ (true) and $\alpha + \beta > 120^\circ \iff \gamma < 60^\circ$ (true). The resulting triangles are $T_L$ with angles $(\phi, \beta, 180^\circ - \beta - \phi) = (120^\circ - \beta, \beta, 60^\circ)$ and $T_R$ with angles $(\alpha - \phi, \gamma, \beta + \phi) = (\alpha + \beta - 120^\circ, \gamma, 120^\circ)$. Both $T_L$ and $T_R$ have angles in $S$, so Mulan forces a win.
+
+Next, we prove necessity. Suppose $\theta \neq \frac{180^\circ}{2^n}$ and $\theta \neq \frac{60^\circ}{2^n}$ for all $n \in \{0, 1, 2, \dots\}$. This implies that for any $s \in S$, $180^\circ - s \notin S$. Indeed, if $s = 2^k \theta$ and $180^\circ - s = 2^m \theta$, then $(2^k + 2^m) \theta = 180^\circ$, so $\theta = \frac{180^\circ}{2^k + 2^m}$. Since $2^k + 2^m = 2^m(2^{k-m} + 1)$, this is a power of 2 if $2^{k-m}+1=2 \implies k=m$, giving $\theta = \frac{180^\circ}{2^{m+1}}$, or it is $3 \cdot 2^n$ if $2^{k-m}+1=3 \implies k-m=1$, giving $\theta = \frac{180^\circ}{3 \cdot 2^m} = \frac{60^\circ}{2^m}$.
+
+Shan-Yu chooses an initial triangle $T_0$ with angles $\alpha, \beta, \gamma$ such that $\alpha, \beta, 180^\circ, \theta$ are linearly independent over $\mathbb{Q}$. Let $V = \text{span}_\mathbb{Q} \{ \theta, 180^\circ \}$. Then $\alpha, \beta, \gamma \notin V$. Mulan makes a cut $\phi$ from vertex $\alpha$. The resulting triangles are $T_L = (\phi, \beta, 180^\circ - \phi - \beta)$ and $T_R = (\alpha - \phi, \gamma, \beta + \phi)$.
+For $T_L$ to be winning, we must have $\phi \in S$ or $180^\circ - \phi - \beta \in S$ (since $\beta \notin V$).
+1. If $\phi \in S$, then $\phi \in V$. Then $\alpha - \phi \notin V, \gamma \notin V, \beta + \phi \notin V$ because $\alpha, \beta, \gamma \notin V$. Thus $T_R$ is not winning.
+2. If $180^\circ - \phi - \beta \in S$, let $s = 180^\circ - \phi - \beta$. Then $\phi + \beta = 180^\circ - s$. For $T_R$ to be winning, we need $\alpha - \phi \in S$ or $\beta + \phi \in S$.
+   - $\beta + \phi \in S \implies 180^\circ - s \in S$, which contradicts our assumption on $\theta$.
+   - $\alpha - \phi \in S \implies \phi \in \alpha - S \subset \alpha - V$. But $\phi = 180^\circ - s - \beta \in V - \beta$. Thus $\alpha - V = V - \beta \implies \alpha + \beta \in V \implies \gamma \in V$, a contradiction.
+3. If neither $\phi$ nor $180^\circ - \phi - \beta$ is in $S$, $T_L$ is not winning.
+
+In all cases, Shan-Yu can always discard the winning triangle (if one exists) and keep a non-winning triangle. Since he can maintain a triangle with no angles in $S$ indefinitely, Mulan cannot guarantee victory.
+
+Mulan can guarantee victory if and only if $\theta = \frac{180^\circ}{2^n}$ or $\theta = \frac{60^\circ}{2^n}$ for $n \in \{0, 1, 2, \dots\}$.

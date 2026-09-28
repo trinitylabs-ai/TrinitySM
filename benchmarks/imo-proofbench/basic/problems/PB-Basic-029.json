@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-029",
+  "problem": "Let $p$ and $n$ be integers with $0\\le p\\le n-2$. Consider a set\n $S$ of $n$ lines in the plane such that no two of them are parallel\n and no three have a common point. Denote by $I$ the set of intersections\n of lines in $S$. Let $O$ be a point in the plane not lying on any\n line of $S$. A point $X\\in I$ is colored red if the open line segment\n $OX$ intersects at most $p$ lines in $S$. What is the minimum number\n of red points that is contained in $I$?"
+}

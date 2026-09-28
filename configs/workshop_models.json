@@ -1,0 +1,25 @@
+{
+  "models": {
+    "gemma": {
+      "download_url": "https://huggingface.co/google/gemma-4-31B-it",
+      "license": "Apache-2.0",
+      "repository": "google/gemma-4-31B-it",
+      "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    },
+    "gemma_assistant": {
+      "download_url": "https://huggingface.co/google/gemma-4-31B-it-assistant",
+      "license": "Apache-2.0",
+      "repository": "google/gemma-4-31B-it-assistant",
+      "revision": "627c5ec1458b9086b841a91e0512fd31fd2fbbf1"
+    },
+    "qwen": {
+      "download_url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+      "license": "Apache-2.0",
+      "repository": "Qwen/Qwen3.6-27B",
+      "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
+    }
+  },
+  "pipeline_release": "1.12.0",
+  "schema": "workshop-models-v1",
+  "weights_distributed": false
+}

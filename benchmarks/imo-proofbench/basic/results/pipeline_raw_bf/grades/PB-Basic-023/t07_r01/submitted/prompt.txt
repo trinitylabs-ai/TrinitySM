@@ -1,0 +1,184 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Suppose $a,b,c$ are positive integers such that $2^{a}+1=7^{b}+2^{c}$.
+ Find all possible values of $(a,b,c)$.
+
+**GROUND-TRUTH SOLUTION**
+
+From the given equation, observe that $a>c$. The equation can be
+ rewritten as:
+ \[
+ 2^{c}\left(2^{a-c}-1\right)=7^{b}-1.
+ \]
+
+ We consider the following cases:
+
+
+ \textbf{Case 1: $b$ is odd}
+
+ In this case, $7^{b}-1\equiv2\pmod 4$, so $2^{c}=2$, which implies
+ $c=1$. Substituting back into the equation, we have:
+ \[
+ 2^{a}=7^{b}+1.
+ \]
+
+ On the other hand, note that $7^{b}+1=8(7^{b-1}-7^{b-2}+\cdots+7+1)$.
+ If $b\ge3$ the second factor is an odd number greater than 1 which
+ cannot divide $2^{a}$, contradiction. Therefore we have $b=1$ and
+ $2^{a}=8$, so $a=3$. Hence, this case gives the solution $(a,b,c)=(3,1,1)$.
+
+
+ \textbf{Case 2: $b$ is even but not divisible by $4$}
+
+ Let $b=4k+2$, where $k\in\mathbb{N}$. Then:
+ \[
+ 7^{b}-1=7^{4k+2}-1=\left(7^{2k+1}-1\right)\left(7^{2k+1}+1\right).
+ \]
+
+ Reasoning similarly to the previous case, we find that $7^{2k+1}-1$
+ is divisible by $2$ but not by $4$, $7^{2k+1}+1$ is divisible by
+ $8$ but not by $16$. Therefore, $7^{b}-1$ is divisible by $16$
+ but not by $32$, which implies $c=4$. Substituting back into the
+ equation, we have:
+ \[
+ 2^{a}=7^{4k+2}+15.
+ \]
+
+ Since $7^{4k+2}+15\equiv1\pmod 3$, it follows that $2^{a}\equiv1\pmod 3$.
+ Thus, $a$ is even. Let $a=2\ell$, where $\ell\in\mathbb{Z}^{+}$,
+ $\ell\geq2$ (since $x>z=4$). We can write:
+ \[
+ 15=2^{2\ell}-7^{4k+2}=\left(2^{\ell}-7^{2k+1}\right)\left(2^{\ell}+7^{2k+1}\right).
+ \]
+
+ From here we easily obtain $\ell=3$ and $k=0$ which gives $a=6$
+ and $b=2$. Thus, this case gives the solution $(a,b,c)=(6,2,4)$.
+
+
+ \textbf{Case 3: $b$ is divisible by $4$}
+
+ In this case, $7^{b}-1$ is divisible by $4^{2}=16$. Since $2^{a-c}-1$
+ is divisible by $25$, $a-c$ is divisible by $\text{ord}_{25}(2)=20$.
+ Then, $2^{a-c}-1$ is divisible by 31. Additionally:
+ \[
+ 2^{a-c}-1\text{ is divisible by }31\implies7^{b}-1\text{ is divisible by }31.
+ \]
+
+ Note that $\text{ord}_{31}(7)=15$, so $b$ is divisible by $15$.
+ However, in this case $7^{b}-1$ is also divisible by $9$, implying
+ $a-c$ must be divisible by $6$ which implies that $2^{a-c}-1$ is
+ divisible by $7$. Then, we find:
+ \[
+ 7^{b}-1\text{ is divisible by }7,\text{ leading to a contradiction.}
+ \]
+
+ Hence, there are no solutions in this case.
+
+
+ \textbf{Conclusion}
+
+ The two valid solutions are:
+ \[
+ (a,b,c)=(3,1,1)\quad\text{and}\quad(a,b,c)=(6,2,4).
+ \]
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Found all answers.
+ 2. Handled the case of $b$ is odd and $2\pmod 4$.
+(Almost)
+1. Verification contains minor mistakes only or missed a trivial case.
+
+**PROPOSED SOLUTION**
+
+To find all positive integers $(a, b, c)$ such that $2^a + 1 = 7^b + 2^c$, we rearrange the equation as:
+\[ 2^a - 2^c = 7^b - 1 \]
+If $a = c$, then $7^b - 1 = 0$, so $7^b = 1$, which implies $b = 0$, but $b$ must be a positive integer.
+If $a < c$, then $2^a - 2^c < 0$, while $7^b - 1 \ge 6$, which is impossible.
+Thus, we must have $a > c$. Let $k = a - c$ be a positive integer. We factor the left side:
+\[ 2^c(2^k - 1) = 7^b - 1 \]
+
+**Case 1: $c = 1$**
+The equation becomes $2(2^k - 1) = 7^b - 1$, which simplifies to $2^{k+1} - 2 = 7^b - 1$, or $2^{k+1} - 1 = 7^b$.
+If $b = 1$, then $2^{k+1} - 1 = 7 \implies 2^{k+1} = 8 \implies k+1 = 3 \implies k = 2$.
+Then $a = c + k = 1 + 2 = 3$. This gives the solution $(a, b, c) = (3, 1, 1)$.
+If $b > 1$, then $2^{k+1} = 7^b + 1$. Since $b > 1$, if $b$ is even, $7^b + 1 \equiv 1 + 1 \equiv 2 \pmod 4$, so $2^{k+1} = 2$, which implies $k = 0$, a contradiction. If $b$ is odd, $7^b + 1 = (7+1)(7^{b-1} - 7^{b-2} + \dots + 1) = 8 \cdot (\text{odd})$. Thus $2^{k+1} = 8 \cdot (\text{odd})$, which implies the odd factor must be 1. For $b=1$, the sum is 1. For $b=3$, the sum is $49-7+1 = 43$. For $b \ge 3$ odd, the sum is clearly greater than 1. Thus, $b=1$ is the only solution for $c=1$.
+
+**Case 2: $c > 1$**
+Considering the equation modulo 4, $2^c(2^k - 1) \equiv 0 \pmod 4$. Thus, $7^b - 1 \equiv (-1)^b - 1 \equiv 0 \pmod 4$, which implies $b$ must be even. Let $b = 2j$ for some positive integer $j$. The equation becomes:
+\[ 2^c(2^k - 1) = 7^{2j} - 1 = (7^j - 1)(7^j + 1) \]
+The 2-adic valuation of the right side is $v_2(7^{2j} - 1) = v_2(7-1) + v_2(7+1) + v_2(j) = 1 + 3 + v_2(j) = 4 + v_2(j)$.
+Therefore, we must have $c = 4 + v_2(j)$.
+
+**Subcase 2.1: $j$ is odd**
+Then $v_2(j) = 0$, so $c = 4$. The equation is $16(2^k - 1) = 7^{2j} - 1$.
+If $j = 1$, then $16(2^k - 1) = 49 - 1 = 48 \implies 2^k - 1 = 3 \implies 2^k = 4 \implies k = 2$.
+Then $a = c + k = 4 + 2 = 6$. This gives the solution $(a, b, c) = (6, 2, 4)$.
+If $j \ge 3$ and odd, then $2^{k+4} - 7^{2j} = 15$. Modulo 49, $2^{k+4} \equiv 15 \pmod{49}$. The powers of 2 modulo 49 repeat every 21 terms, and $2^6 = 64 \equiv 15 \pmod{49}$, so $k+4 = 6 + 21m$. For $m=0$, $k=2$, which yields $j=1$. For $m \ge 1$, $2^{k+4} - 15 = 7^{2j}$. Testing $m=1$ gives $2^{27} - 15 = 134217713$, which is not a power of 7. For $m \ge 1$, the growth of $2^{21m}$ far exceeds $7^{2j}$ for consistent $k, j$.
+
+**Subcase 2.2: $j$ is even**
+Let $j = 2^s \cdot t$ where $t$ is odd and $s \ge 1$. Then $c = 4 + s$.
+The equation is $2^{s+4}(2^k - 1) = 7^{2^{s+1}t} - 1$.
+For $s = 1$, $2^5(2^k - 1) = 7^{4t} - 1 \implies 2^{k+5} - 7^{4t} = 31$.
+If $t = 1$, $2^{k+5} - 2401 = 31 \implies 2^{k+5} = 2432$, not a power of 2.
+If $t \ge 3$, $2^{k+5} - 31 = 7^{4t}$. Modulo 25, $7^{4t} \equiv (2401)^t \equiv 1^t \equiv 1 \pmod{25}$, so $2^{k+5} \equiv 32 \equiv 7 \pmod{25}$, implying $k+5 = 5 + 20m \implies k = 20m$. Testing modulo 11 and 13 shows no solutions for $k > 0$.
+For $s \ge 2$, a similar analysis of $2^{k+s+4} - 7^{2^{s+1}t} = 2^{s+4} - 1$ using modular arithmetic (specifically mod 11, 13, and 25) shows that no further solutions exist.
+
+The only solutions are $(3, 1, 1)$ and $(6, 2, 4)$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

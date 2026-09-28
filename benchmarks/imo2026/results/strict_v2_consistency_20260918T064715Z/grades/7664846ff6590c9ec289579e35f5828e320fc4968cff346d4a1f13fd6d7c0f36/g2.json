@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "7664846ff6590c9ec289579e35f5828e320fc4968cff346d4a1f13fd6d7c0f36",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "6208a397d16ce6c483f674f233bd0b17008b2728b6a90dac2d7ba3e40352be39",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "dc9f7dc37616a973cfe8da01e21b300d8b5ec6d5eb5d91e15f85026c7dc49f3c",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Section 4 falsely extrapolates the one-move characterization to arbitrary finite strategies, asserting that only 90° and repeated halvings of existing angles can be forced. A multi-step strategy may make one child terminal while placing the other in a different winning state, so this restriction does not follow.",
+    "summary": "The final classification is false, so Rule A caps the score at 2. For example, θ=60° is forceable although it is not 180°/2^n: every triangle either contains 60°, contains an angle below 60° from which a cut can give one child a 60° angle and the other a 120° angle, or is impossible by the angle sum; a 120° angle can then be bisected into two 60° angles. The correct set is θ=180°/n for every integer n≥2. The submitted one-move analysis and dyadic constructions provide meaningful partial progress, but repairing the necessity argument and extending sufficiency require new central ideas.",
+    "strengths": [
+      "The characterization of when both children can immediately contain θ is essentially correct under the stated assumption that the current triangle does not already contain θ.",
+      "The construction forcing 90° in one move is valid, notwithstanding some hesitant algebra in its presentation.",
+      "Repeatedly bisecting an existing angle correctly proves sufficiency for the dyadic subfamily θ=180°/2^n."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed necessity in Section 4 is unsupported and false: one-move forcing possibilities do not characterize recursively winning positions."
+      },
+      {
+        "severity": "major",
+        "description": "The final answer excludes valid values such as 60°=180°/3, making the requested full classification incorrect and invoking Rule A."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:45:49.259185+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

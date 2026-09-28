@@ -1,0 +1,19 @@
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists an integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Assume that for all $k \geq 1$, the polynomial $P_k(x)$ has $k$ distinct real roots.
+
+1.  **Newton's Inequalities**: A known result in the theory of polynomials states that if a polynomial $P(x) = \sum_{i=0}^k a_i x^i$ has all real roots, then its coefficients $a_i$ must satisfy Newton's Inequalities:
+    \[ a_i^2 \geq a_{i-1} a_{i+1} \frac{(i+1)(k-i+1)}{i(k-i)} \quad \text{for } 1 \leq i \leq k-1. \]
+    Since we assume $P_k(x)$ has $k$ distinct real roots for all $k \geq 1$, the coefficients $c_i$ must satisfy this for every $k > i$. Taking the limit as $k \to \infty$, we have:
+    \[ c_i^2 \geq c_{i-1} c_{i+1} \frac{i+1}{i} \quad \text{for all } i \geq 1. \]
+
+2.  **Analysis of Coefficients**: If $c_i = 0$ for any $i \geq 1$, then $P_i(x) = P_{i-1}(x)$, meaning $N(P_i) = N(P_{i-1}) \leq i-1 < i$, which contradicts our assumption. Thus, $c_i \neq 0$ for all $i \geq 0$.
+    From the inequality $c_i^2 \geq c_{i-1} c_{i+1} \frac{i+1}{i}$, if $c_{i-1} c_{i+1} > 0$ for all $i$, then the sequence $|c_i|$ must decay rapidly. Specifically, letting $b_i = |c_i / c_{i-1}|$, we have $b_i^2 \geq b_{i-1} b_{i+1} \frac{i+1}{i}$ is not quite right; rather, $\frac{c_i^2}{c_{i-1} c_{i+1}} \geq \frac{i+1}{i}$ implies $\frac{b_i}{b_{i+1}} \geq \frac{i+1}{i}$, so $b_{i+1} \leq b_i \frac{i}{i+1}$. This leads to $|c_k| \leq |c_0| \frac{b_1^k}{k!}$. Since $c_k$ are integers, $c_k$ must eventually be 0, a contradiction.
+
+3.  **The Laguerre-Pólya Class**: A more robust approach uses the fact that if a sequence of polynomials $P_k(x)$ with only real roots converges uniformly on compact subsets of $\mathbb{C}$ to a function $f(z)$, then $f(z)$ belongs to the Laguerre-Pólya class. Such functions are entire and satisfy the same Newton-like inequalities $c_i^2 \geq c_{i-1} c_{i+1} \frac{i+1}{i}$ for all $i$.
+    If $P_k(x)$ does not converge to an entire function, the radius of convergence $R = 1 / \limsup |c_n|^{1/n}$ must be finite. However, for a polynomial to have $k$ distinct real roots, its coefficients must satisfy increasingly stringent conditions. The property that $P_k(x)$ has $k$ real roots for all $k$ implies that the power series $f(x) = \sum c_i x^i$ must converge everywhere (i.e., $R = \infty$), making $f(x)$ an entire function.
+
+4.  **Integer Coefficients**: For any entire function $f(z) = \sum_{n=0}^\infty c_n z^n$, the coefficients must satisfy $\lim_{n \to \infty} |c_n|^{1/n} = 0$. Since $c_n$ are integers, if $c_n \neq 0$, then $|c_n| \geq 1$, which implies $|c_n|^{1/n} \geq 1$. The only way for the limit to be 0 is if $c_n = 0$ for all sufficiently large $n$.
+    If $c_n = 0$ for all $n > K$, then for $k > K$, $P_k(x) = P_K(x)$. The number of roots $N(P_k) = N(P_K) \leq K < k$. This contradicts the assumption that $N(P_k) = k$ for all $k$.
+
+Thus, there must exist some $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots. \(\square\)

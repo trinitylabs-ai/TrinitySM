@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "anchor_candidate_id",
+    "supplement_candidate_id",
+    "candidate_assessments",
+    "anchor_rationale",
+    "supplement_rationale",
+    "complementarity_axes",
+    "external_information_used"
+  ],
+  "properties": {
+    "anchor_candidate_id": {"type": "string"},
+    "supplement_candidate_id": {"type": "string"},
+    "candidate_assessments": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "strategy_summary",
+          "load_bearing_ideas",
+          "distinctive_gap",
+          "hypothesis_seed_value"
+        ],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "strategy_summary": {"type": "string"},
+          "load_bearing_ideas": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "distinctive_gap": {"type": "string"},
+          "hypothesis_seed_value": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          }
+        }
+      }
+    },
+    "anchor_rationale": {"type": "string"},
+    "supplement_rationale": {"type": "string"},
+    "complementarity_axes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "external_information_used": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_e28b66b433ff097c1147bd07",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "67415abdd69757dca427b5fa5c71156a1460ea87d666981eb74012102f2af824",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "eaa9ada19372fc6eb6ed1c5ec3d37bc6c066615bfa5db4a7bbe8635db9742373",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete and no grading-rule defect applies.",
+    "summary": "The submission correctly classifies all solutions as f(x)=x+c with c≥0. It verifies the candidates, derives orbit invariance and nonnegativity of g=f-id, proves all positive values of g coincide via a limsup argument, and excludes coexistence of zero and positive defect values through the expanding-interval argument.",
+    "strengths": [
+      "The substitution x=f(y) correctly yields f(f(y))=2f(y)-y and hence linear forward orbits.",
+      "The limsup argument rigorously shows that every positive value of g is the same finite constant.",
+      "The interval propagation from the right-hand inequality correctly eliminates a mixed zero/positive defect.",
+      "The converse is verified by reversible squaring and explicit nonnegative-square identities."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:47:30.579904+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_1/p5/proof_e28b66b433ff097c1147bd07"
+}

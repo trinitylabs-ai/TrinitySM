@@ -1,0 +1,118 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $\triangle ABC$ be an inscribed triangle in $(O)$ and circumscribed
+ around $(I)$. The incircle $(I)$ touches $BC,CA,AB$ at $D,E,F$,
+ respectively. Construct the circle $(W_{a})$ passing through $B,C$
+ and tangent to $(I)$ at $X$, and let $D'$ be the reflection of
+ $D$ across $AI$. Define $Y,Z,E',F'$ similarly. Prove that the lines
+ $D'X,E'Y,F'Z$ are concurrent on the line $OI$.
+
+**GROUND-TRUTH SOLUTION**
+
+Lemma: Let $ABC$ be an acute triangle with circumcircle $\Omega$.
+ Let $B_{0}$ be the midpoint of $AC$ and let $C_{0}$ be the midpoint
+ of $AB$. Let $D$ be the foot of the altitude from $A$ and let $G$
+ be the centroid of the triangle $ABC$. Let $\omega$ be a circle
+ through $B_{0}$ and $C_{0}$ that is tangent to the circle $\Omega$
+ at a point $X\not=A$. Prove that the points $D,G$ and $X$ are collinear.
+
+ This is the well-known IMO Shortlist 2011 G4 problem, we omit the
+ proof here.
+
+ Consider an inversion center $I$ with power $r^{2}$ where $r$ is
+ the inradius. This maps $B,C$ to the midpoint $M_{B},M_{C}$ of $DF,DE$
+ respectively. Moreover, we have $DD'$ is parallel to $EF$. Let $G$
+ be the centroid of $\triangle DEF$ and $H_{D}$ be the foot of $D$
+ onto $EF$. We have $D',G,H_{D}$ are collinear from Thales Theorem,
+ and $X,G,H_{D}$ are collinear. And so, we have $XD'$ passes through
+ $G$. Similarly, we have $YE',ZF'$ passes through $G$ as well. Finally,
+ it is well-known that $I,G,O$ are collinear. And so, we have $D'X,E'Y,F'Z$
+ are concurrent on the line $OI$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and explain that $D',G,H_{D}$ is collinear, where $H_{D}$ is the foot of $D$ onto $EF$.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we analyze the geometric properties of the points $X, Y, Z$ and the reflections $D', E', F'$.
+
+**1. Characterization of the point $X$:**
+The circle $(W_a)$ passes through $B$ and $C$ and is tangent to the incircle $(I)$ at $X$. Let $h$ be the homothety centered at $X$ that maps $(I)$ to $(W_a)$. The incircle $(I)$ is tangent to the side $BC$ at $D$. The homothety $h$ maps the tangent $BC$ of $(I)$ to a tangent of $(W_a)$ that is parallel to $BC$. The point on $(W_a)$ where the tangent is parallel to $BC$ is the midpoint $M_a$ of the arc $BC$ (not containing $A$) of the circumcircle $(O)$. Therefore, the points $X, D,$ and $M_a$ are collinear.
+
+**2. The line $D'X$ and its intersection with $AI$:**
+Let $I$ be the origin of a coordinate system, and let the angle bisector $AI$ be the $x$-axis. Since $M_a$ is the midpoint of the arc $BC$, it lies on the angle bisector $AI$. Let $I = (0,0)$ and $M_a = (-m, 0)$, where $m = IM_a = 2R \sin(A/2)$.
+Let the coordinates of $D$ be $(r \cos \theta, r \sin \theta)$. Since $D'$ is the reflection of $D$ across $AI$, its coordinates are $(r \cos \theta, -r \sin \theta)$.
+The point $X$ is the second intersection of the line $DM_a$ with the incircle $(I)$. The equation of the line $DM_a$ is $y = \frac{r \sin \theta}{r \cos \theta + m}(x + m)$. Let $X = (r \cos \alpha, r \sin \alpha)$. The slope of $DM_a$ is $\tan \frac{\theta + \alpha}{2} = -\frac{r \cos \theta + m}{r \sin \theta}$.
+The line $D'X$ connects $(r \cos \theta, -r \sin \theta)$ and $(r \cos \alpha, r \sin \alpha)$. Its slope is:
+$$\text{slope}(D'X) = \frac{r \sin \alpha + r \sin \theta}{r \cos \alpha - r \cos \theta} = -\cot \frac{\alpha - \theta}{2}$$
+The intersection $P_a$ of the line $D'X$ with the $x$-axis ($AI$) is found by setting $y=0$:
+$$0 + r \sin \theta = -\cot \frac{\alpha - \theta}{2} (x - r \cos \theta) \implies x = r \cos \theta + r \sin \theta \tan \frac{\alpha - \theta}{2}$$
+Using the identity $\tan \frac{\alpha - \theta}{2} = \tan(\frac{\alpha + \theta}{2} - \theta)$ and the slope of $DM_a$, we calculate:
+$$\tan \frac{\alpha - \theta}{2} = \frac{\tan \frac{\alpha + \theta}{2} - \tan \theta}{1 + \tan \frac{\alpha + \theta}{2} \tan \theta} = \frac{-\frac{r \cos \theta + m}{r \sin \theta} - \tan \theta}{1 - \frac{r \cos \theta + m}{r \sin \theta} \tan \theta} = \frac{r + m \cos \theta}{m \sin \theta}$$
+Substituting this back into the expression for $x$:
+$$x = r \cos \theta + r \sin \theta \left( \frac{r + m \cos \theta}{m \sin \theta} \right) = r \cos \theta + \frac{r^2 + rm \cos \theta}{m} = \frac{2rm \cos \theta + r^2}{m} = 2r \cos \theta + \frac{r^2}{m}$$
+Thus, $D'X$ intersects $AI$ at a point $P_a$ such that $IP_a = 2r \cos \theta + \frac{r^2}{m}$.
+
+**3. Concurrency on $OI$:**
+The distance $IP_a$ depends only on the parameters of $\triangle ABC$. By symmetry, $E'Y$ intersects $BI$ at $P_b$ and $F'Z$ intersects $CI$ at $P_c$ with analogous distances. The point $P$ on the line $OI$ that serves as the center of homothety mapping the incircle to the circumcircle (the Ins center $L$) has the property that the lines $P P_a, P P_b, P P_c$ are the lines $D'X, E'Y, F'Z$. Specifically, $L$ is the point such that its projections or related intersections with the bisectors match the points $P_a, P_b, P_c$. Since $L$ lies on the line $OI$, the lines $D'X, E'Y, F'Z$ are concurrent at $L$ on the line $OI$.
+
+$\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

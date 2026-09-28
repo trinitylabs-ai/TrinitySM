@@ -1,0 +1,58 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "b9e5e19bdb100ce9a1778758757cb3239632bfe10bc08f8acfbf48306c1eb87a",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "c1d681a9e358f999e2079b389e09c587aa8f9c8509272042ed252053d1d6012f",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The first angle-to-polynomial conversion uses a false signed-cotangent formula. If det(B,C)>0 and L=pB+qC with p>0, then det(CA,CL)=-det(C,L)>0, so the denominator for cot∠ACL is cy·lx−cx·ly, the negative of the displayed denominator. Consequently the assertion that equating the two displayed fractions expands to E1=0 is false. The stated E1 is in fact the polynomial obtained after correcting this sign. This is a load-bearing false statement, so Rule C applies.",
+    "summary": "The coordinate strategy, circumcentre computation, final scaling argument, and explicit algebraic certificate form a largely complete approach. Moreover, the displayed polynomials E1,E2,E3 appear to be the correct consequences of the angle conditions once determinant signs are handled properly. However, the submitted derivation of E1 has a sign error, and the blanket justification of all nonzero guards is false. These defects invalidate the proof as written, though they can be repaired locally: correct the ∠ACL denominator and prove directly the few guards actually used by the Appendix's stronger algebraic lemma.",
+    "strengths": [
+      "The Cartesian normalization and identities M=B/2, N=C/2, O'=2O are correct.",
+      "The final implication from |O'−B|²=|O'−C|² to OM=ON is correct.",
+      "The circumcentre coordinates and residual reduction are explicitly given.",
+      "The Appendix supplies an explicit finite algebraic certificate rather than merely asserting that computer algebra proves the target.",
+      "After correcting the signed-angle issue, the displayed E1,E2,E3 agree with the corresponding unsigned-angle equalities."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The formula cot angle(u,v)=(u·v)/(u×v) is false for ordinary unsigned angles; an absolute determinant or a justified orientation choice is required. In particular, the displayed denominator for ∠ACL has the wrong sign, so the claimed derivation of E1 is false. This is load-bearing and triggers Rule C."
+      },
+      {
+        "severity": "substantial",
+        "description": "The claim that the strict interior hypotheses force every triple among A,B,C,M,N,K,L to be noncollinear is false, and the listed guards are not all simply areas of such triples. Hence the stated verification of the lemma's domain assumptions is invalid. The Appendix ultimately needs only det(K,L)≠0 and two additional guards; these can be repaired routinely using affine coordinates, but that verification is not actually written."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:51:02.687787+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

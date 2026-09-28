@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Correctly identifies red points as the vertices of the $\le p$-level of a line arrangement via projective transformation. States the lower bound $\binom{p+2}{2}$ and provides a geometric construction for tightness.
+Claim gap: The lower bound is cited as a "known result" with an informal inductive sketch that lacks rigorous justification for the recurrence $V(\le p) \ge V(\le p-1) + (p+1)$. The tightness construction is heuristic ("placed far above") without verification that it preserves the $\le p$-level structure or avoids creating new red points.
+Qualifications and supplied repairs: Relies on external discrete geometry theorems. The inductive step's justification ("must contain at least 2 vertices to connect the lines") is insufficient to establish the recurrence. The construction requires the unverified assumption that adding lines sufficiently far above does not alter the count of vertices in the $\le p$-level. No substantive repairs were supplied; the gap remains in the proof of the lower bound.
+Decisive checks: Lines 3-7 correctly map the segment-intersection condition to the $\le p$-level. Line 9 cites the correct bound $\binom{p+2}{2}$ but provides only a hand-wavy induction. Lines 11-12 sketch a valid tightness idea but omit verification. The core lower bound remains unproven within the submission.
+
+## Proof B
+Established theorem: Correctly maps the problem to the $\le p$-level via projective transformation and point-line duality. Provides a complete inductive proof on $n$ for the lower bound $\binom{p+2}{2}$. Provides an explicit algebraic construction that exactly achieves the bound.
+Claim gap: NONE. The inductive step correctly accounts for gain ($p+1$ new red edges from the hull point) and loss (at most $p+1$ existing red edges lose status), relying on a standard geometric property of level chains. The construction is fully algebraically verified.
+Qualifications and supplied repairs: Assumes standard properties of point-line duality and convex hulls. The claim in line 15 that a hull point lies above at most $p+1$ edges of the $p$-level chain is a standard lemma in arrangement theory (the $p$-level is a monotone chain, and an extreme point can separate at most $p+1$ edges of it). This is correctly applied but not proven in the text; it is treated as a routine geometric fact. All other steps are explicit and verified.
+Decisive checks: Lines 5-6 correctly establish duality and the half-plane correspondence. Lines 11-15 rigorously handle the inductive gain/loss, correctly bounding the loss by $p+1$ using the monotone chain structure of the $p$-level. Lines 17-20 provide a fully verified algebraic construction: intersection coordinates, above/below condition, and pair counting all compute exactly to $\binom{p+2}{2}$. Quantifiers and domains ($0 \le p \le n-2$, $n \ge p+2$) are correctly handled throughout.
+
+## Decision
+Winner: B
+Reason: Proof B provides a self-contained, rigorous inductive proof of the lower bound and a fully verified algebraic construction for tightness. Proof A correctly identifies the level structure but leaves the core lower bound unproven, citing it as a known result with an informal sketch, and offers only a heuristic construction. B's mathematical justification is complete and explicit, whereas A's leaves the decisive lower bound derivation unsupported within the submission. The minor reliance on a standard geometric lemma in B is well-justified by context and does not affect the validity of the argument.

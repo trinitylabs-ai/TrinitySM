@@ -1,0 +1,30 @@
+To find all polynomials $P(x) \in \mathbb{Z}[x]$ such that $P(x) = s$ has an integer solution for every $s \in S = \{n^{2024} \mid n \in \mathbb{N}_0\}$, let $k = 2024$. The condition is that for every $n \in \mathbb{N}_0$, there exists $x \in \mathbb{Z}$ such that $P(x) = n^k$.
+
+1.  **Degree and Form Analysis**:
+    Let $m$ be the degree of $P$. If $m=0$, $P(x) = C$ cannot equal $n^k$ for all $n$. Thus $m \ge 1$.
+    For large $n$, let $x_n$ be a solution to $P(x) = n^k$. Since $P(x) = a_m x^m + \dots + a_0$, we have $a_m x_n^m \sim n^k$, so $x_n \sim (1/a_m)^{1/m} n^{k/m}$.
+    For $x_n$ to be an integer for all $n$, the growth rate $k/m$ must be an integer. Let $k/m = d$. Then $x_n \approx C n^d$. If $d$ were not an integer, the difference $x_{n+1} - x_n$ would not behave like an integer sequence. Specifically, for large $n$, if $d$ is not an integer, the $d$-th differences of $x_n$ would not be constant, and the sequence cannot consist of integers unless it is a polynomial in $n$.
+
+2.  **Hilbert's Irreducibility Theorem**:
+    Consider the polynomial $F(x, n) = P(x) - n^k \in \mathbb{Z}[x, n]$. For every $n \in \mathbb{Z}$, $F(x, n)$ has an integer root $x_n$, so $F(x, n)$ is reducible in $\mathbb{Z}[x]$ for all $n$. By Hilbert's Irreducibility Theorem, if a polynomial $F(x, n)$ is reducible for all $n$, it must be reducible as a polynomial in $\mathbb{Z}[x, n]$.
+    The factorization of $n^k - P(x)$ in $\mathbb{Z}[x, n]$ is a known problem. A result by Schinzel states that $n^k - P(x)$ is reducible in $\mathbb{C}[x, n]$ if and only if $P(x) = c(Q(x))^d$ for some $d > 1$ where $d \mid k$, or in the specific case $k=4, P(x) = -4Q(x)^4$.
+
+3.  **Testing Candidates**:
+    -   **Case 1: $P(x) = (ax+b)^m$ where $m \mid k$**.
+        Then $(ax+b)^m = n^k \implies ax+b = \pm n^{k/m}$. For $n=0$, $ax+b=0 \implies a \mid b$. Let $b=aq$. Then $a(x+q) = \pm n^{k/m}$. For $n=1$, $a(x+q) = \pm 1 \implies a = \pm 1$.
+        Thus $P(x) = (\pm x + b)^m$.
+        If $m$ is even, $P(x) = (x+b)^m$ or $P(x) = (-x+b)^m$, which are equivalent since $(-x+b)^m = (x-b)^m$.
+        If $m$ is odd, $P(x) = (x+b)^m$ or $P(x) = (-x+b)^m = -(x-b)^m$.
+    -   **Case 2: $P(x) = -(ax+b)^m$**.
+        If $m$ is even, $P(x) = -(ax+b)^m \le 0$. Since $n^k \ge 0$, this only has solutions for $n=0$. Thus $m$ must be odd.
+        If $m$ is odd, $-(ax+b)^m = n^k \iff (ax+b)^m = -n^k \iff ax+b = -n^{k/m}$. This requires $a = \pm 1$ as before.
+    -   **Case 3: $P(x) = -4Q(x)^4$**.
+        $-4Q(x)^4 = n^k$ for $n=1$ implies $Q(x)^4 = -1/4$, which has no real solutions.
+
+4.  **Conclusion**:
+    The polynomials that satisfy the condition are $P(x) = (x+b)^m$ for any $m \mid 2024$ and $b \in \mathbb{Z}$, and $P(x) = -(x+b)^m$ for any odd $m \mid 2024$ and $b \in \mathbb{Z}$.
+    Checking these:
+    - If $P(x) = (x+b)^m$, $x = n^{k/m} - b$ is an integer.
+    - If $P(x) = -(x+b)^m$ with $m$ odd, $x = -n^{k/m} - b$ is an integer (since $k/m$ is even, $n^{k/m} \ge 0$).
+
+The set of all such polynomials $P$ is $\{P(x) = (x+b)^m : m \mid 2024, b \in \mathbb{Z}\} \cup \{P(x) = -(x+b)^m : m \mid 2024, m \text{ is odd}, b \in \mathbb{Z}\}$. \(\square\)

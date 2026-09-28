@@ -1,0 +1,128 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Define the sequence $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$ for all integers $n \ge 2$. Prove that $x_{n-1}$ divides $x_n$ for all integers $n \ge 2$.
+
+**GROUND-TRUTH SOLUTION**
+
+We will prove this using induction. Note that $x_{2}=2^{6}+2=66$
+ which is divisible by $x_{1}$ and $x_{3}=2^{66}+2=2(2^{65}+1)$,
+ which is divisible by $2(2^{5}+1)=2^{6}+2=x_{2}$.
+
+
+ For $a,b\in\mathbb{N}$, it is well known that $2^{a}+1|2^{ab}+1$
+ and $2^{a}-1|2^{ab}-1$ if $2\not|b$.
+
+
+ We will prove the result by induction. Note that $\nu_{2}(x_{i})=1$,
+ so $\frac{x_{n-1}}{x_{n-2}}$ is odd. Also, note that $x_{1}|x_{2}$,
+ as $2|6$, and $x_{2}|x_{3}$, as $6|66$.
+
+ $x_{n}|x_{n+1}\Longleftrightarrow2^{x_{n-1}-1}+1|2^{x_{n}-1}+1\Longleftarrow x_{n-1}-1|x_{n}-1\Longleftrightarrow2^{x_{n-2}}+1|2^{x_{n-1}}+1\Longleftarrow x_{n-2}|x_{n-1}\text{ and that \ensuremath{\frac{x_{n-1}}{x_{n-2}}} is odd.}$
+ Thus $x_{n-2}|x_{n-1}\implies x_{n}|x_{n+1}$, we can prove by induction
+ that $x_{i}|x_{i+1}$ for all $i\in\mathbb{N}$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved $x_{n-1}-1|x_{n}-1$.
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that $x_{n-1}$ divides $x_n$ for all $n \ge 2$, where $x_1 = 6$ and $x_n = 2^{x_{n-1}} + 2$, we define the following two properties for an integer $m$:
+Property $P(m)$: $m$ divides $2^m + 2$.
+Property $Q(m)$: $m-1$ divides $2^m + 1$ and the quotient $\frac{2^m + 1}{m-1}$ is an odd integer.
+
+We will prove that $P(x_n)$ is true for all $n \ge 1$.
+First, we check the base cases:
+For $n=1$, $x_1 = 6$. $2^6 + 2 = 64 + 2 = 66$. Since $6 \mid 66$, $P(x_1)$ is true.
+For $n=2$, $x_2 = 66$. We need to check if $66 \mid 2^{66} + 2$.
+- $2^{66} + 2$ is clearly even, so $2 \mid 2^{66} + 2$.
+- $2^{66} + 2 \equiv (-1)^{66} + 2 = 1 + 2 = 3 \equiv 0 \pmod 3$.
+- By Fermat's Little Theorem, $2^{10} \equiv 1 \pmod{11}$. Thus, $2^{66} = (2^{10})^6 \cdot 2^6 \equiv 1^6 \cdot 64 \equiv 9 \pmod{11}$. Then $2^{66} + 2 \equiv 9 + 2 = 11 \equiv 0 \pmod{11}$.
+Since $2, 3, 11$ are pairwise coprime, their product $66$ divides $2^{66} + 2$. Thus, $P(x_2)$ is true.
+
+Next, we prove that $P(x_n) \implies Q(x_{n+1})$ for all $n \ge 1$:
+Suppose $P(x_n)$ is true. Then $x_n \mid 2^{x_n} + 2$. Let $k = \frac{2^{x_n} + 2}{x_n}$.
+Note that $x_n = 2^{x_{n-1}} + 2 = 2(2^{x_{n-1}-1} + 1)$ for $n \ge 2$, so $x_n$ is twice an odd number. Similarly, $2^{x_n} + 2 = 2(2^{x_n-1} + 1)$ is twice an odd number. Thus, $k$ is a quotient of two odd numbers (after dividing by 2), which means $k$ must be odd.
+We want to show $Q(x_{n+1})$, which is $x_{n+1}-1 \mid 2^{x_{n+1}} + 1$.
+$x_{n+1}-1 = 2^{x_n} + 1$.
+$2^{x_{n+1}} + 1 = 2^{2^{x_n} + 2} + 1$.
+Since $2^{x_n} \equiv -1 \pmod{x_{n+1}-1}$, we have:
+$2^{x_{n+1}} = 2^{k x_n} = (2^{x_n})^k \equiv (-1)^k \pmod{x_{n+1}-1}$.
+Since $k$ is odd, $2^{x_{n+1}} \equiv -1 \pmod{x_{n+1}-1}$, so $x_{n+1}-1 \mid 2^{x_{n+1}} + 1$.
+Because both $2^{x_{n+1}} + 1$ and $x_{n+1}-1$ are odd, the quotient is odd. Thus, $Q(x_{n+1})$ is true.
+
+Now we prove that $Q(x_n) \implies P(x_{n+1})$ for all $n \ge 2$:
+Suppose $Q(x_n)$ is true. Then $q = \frac{2^{x_n} + 1}{x_n - 1}$ is an odd integer.
+We want to show $P(x_{n+1})$, which is $x_{n+1} \mid 2^{x_{n+1}} + 2$.
+$x_{n+1} = 2^{x_n} + 2 = 2(2^{x_n-1} + 1)$.
+$x_{n+1} \mid 2^{x_{n+1}} + 2 \iff 2(2^{x_n-1} + 1) \mid 2(2^{x_{n+1}-1} + 1) \iff 2^{x_n-1} + 1 \mid 2^{x_{n+1}-1} + 1$.
+We know $x_{n+1}-1 = 2^{x_n} + 1$. Thus we need $2^{x_n-1} + 1 \mid 2^{2^{x_n} + 1} + 1$.
+Using the lemma that $2^a + 1 \mid 2^b + 1$ if $b/a$ is an odd integer, let $a = x_n - 1$ and $b = 2^{x_n} + 1$.
+Then $\frac{b}{a} = \frac{2^{x_n} + 1}{x_n - 1} = q$, which is an odd integer by the hypothesis $Q(x_n)$.
+Thus, $2^{x_n-1} + 1 \mid 2^{2^{x_n} + 1} + 1$ is true, and $P(x_{n+1})$ is true.
+
+By induction:
+$P(x_1) \implies Q(x_2) \implies P(x_3) \implies Q(x_4) \dots$
+$P(x_2) \implies Q(x_3) \implies P(x_4) \implies Q(x_5) \dots$
+Since $P(x_1)$ and $P(x_2)$ are true, $P(x_n)$ is true for all $n \ge 1$.
+The statement $P(x_{n-1})$ is $x_{n-1} \mid 2^{x_{n-1}} + 2$, which is $x_{n-1} \mid x_n$.
+Therefore, $x_{n-1}$ divides $x_n$ for all integers $n \ge 2$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

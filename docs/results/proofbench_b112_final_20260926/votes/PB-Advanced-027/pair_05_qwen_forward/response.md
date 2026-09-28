@@ -1,0 +1,24 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Bob has a winning strategy for any valid choice of $P, Q, S$ by Alice. The proof partitions the complement set $F = \mathbb{C} \setminus (L \cup (1-L))$ into three exhaustive topological cases: (1) $F$ has non-empty interior, (2a) $F$ is dense with empty interior, (2b) $F$ is nowhere dense. In each case, Bob inductively constructs an infinite sequence of cities satisfying the distance and collinearity constraints while forcing the road graph to be either disconnected or non-planar ($K_\infty$).
+Claim gap: NONE supported by checks. The case division covers all subsets of $\mathbb{C}$. The inductive constructions correctly maintain all constraints and achieve the stated graph properties.
+Qualifications and supplied repairs: NONE. The argument relies on standard topological facts (finite unions of nowhere dense sets are nowhere dense; complements are dense open; open sets minus finitely many closed sets with empty interior remain non-empty), all of which are correctly applied and explicitly justified in the text.
+Decisive checks: 
+- Lines 1-2: Correctly translates direct similarity to complex ratios and defines the edge-killing condition via $F$. Verified.
+- Lines 5-11 (Case 1): $F$ contains an open disk $U$. Bob isolates $v_1$ by picking $v_{n+1} \in v_1 + (v_n-v_1)U$. Since $U$ is open, the target is an open disk. Avoiding finitely many closed disks ($d>1$) and lines (collinearity) leaves a non-empty open set. Valid.
+- Lines 14-15 (Case 2a): $F$ dense. Target sets $v_i + F(v_j-v_i)$ are dense. Bob kills each enumerated edge by picking a city in the dense target set while avoiding finitely many closed constraints. Valid.
+- Lines 17-30 (Case 2b): $F$ nowhere dense. Forbidden sets $S_{i,j}$ and $T_{i,k}$ are homeomorphic images of $F$ (via scaling/translation and Möbius inversion). Homeomorphisms preserve the nowhere dense property. Finite union is nowhere dense; complement is dense open. Bob picks $v_n$ in the complement, preserving all existing edges and preventing new edges from being killed. Inductively yields $K_\infty$. Valid.
+
+## Proof B
+Established theorem: Bob has a winning strategy. The proof partitions $U = \mathbb{C} \setminus T$ into two cases: (1) $U$ is contained in a finite union of lines and disks, (2) $U$ is not. In Case 1, Bob constructs a $K_5$ subgraph; in Case 2, Bob kills all edges.
+Claim gap: NONE supported by checks, though Case 1's geometric avoidance argument lacks the topological precision of standard methods. The dichotomy is exhaustive, and the strategies correctly force non-planarity or disconnectedness.
+Qualifications and supplied repairs: NONE supplied. The argument in Case 1 relies on scaling distances to make forbidden "complements of disks" large enough to intersect, which is geometrically plausible but omits explicit topological justification (density/interior properties) for why the intersection minus lower-dimensional constraints remains non-empty.
+Decisive checks:
+- Lines 1-10: Correctly sets up complex ratios and defines $U$. Verified.
+- Lines 14-24 (Case 1): Claims $U$ in finite union of lines/disks implies $L_{C_i C_j}(U)$ and $V_{C_i C_j}(U)$ are finite unions of lines/disks/complements. Correct. The avoidance strategy for complements of disks via large $|C_1-C_2|$ is geometrically sound but hand-wavy; it assumes the intersection of large disks minus lines/disks is non-empty without invoking density/interior properties explicitly.
+- Lines 26-34 (Case 2): If $U$ is not contained in a finite union of lines/disks, $L_{C_i C_j}(U)$ cannot be covered by the finite union of distance/collinearity constraints. Bob picks $C_n$ in the difference to kill edges. Logically valid, though the case division is arbitrary compared to standard topological classifications.
+
+## Decision
+Winner: A
+Reason: Both proofs correctly conclude Bob wins and cover all cases. Proof A is mathematically superior due to its rigorous topological case division (interior vs. nowhere dense vs. dense) and precise application of Baire category principles. It cleanly justifies that finite unions of nowhere dense sets have empty interior, guaranteeing the existence of valid city placements via dense open complements. Proof B's case division is ad-hoc, and its geometric avoidance argument in Case 1 relies on hand-wavy radius scaling rather than established topological density properties. Proof A's handling of the Möbius transformation in Case 2b is also more precise, explicitly noting it preserves the "no interior" property, whereas B's treatment of complements of disks is less formal. A provides a complete, airtight justification with no unresolved technical gaps.

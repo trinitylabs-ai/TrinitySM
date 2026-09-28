@@ -1,0 +1,30 @@
+Use a harsh proof-as-submitted Olympiad grading policy.
+
+Compare the submission with the gold reference, but credit only mathematics actually
+written in the submitted proof. Do not import a missing lemma, calculation, invariant,
+or compatibility argument from the reference. Standard one-line algebra and standard
+named results may be implicit, but a load-bearing step must be demonstrated well enough
+that a skeptical Olympiad jury can verify it from the text.
+
+Apply these strict caps:
+- If the proof merely asserts a decisive identity or simplification whose verification
+  requires a substantial multi-step calculation or elimination, the maximum score is 4.
+- If a false or unjustified decisive inference replaces the central argument, the
+  maximum score is 3.
+- Do not award 5 merely because the missing work might preserve the same strategy.
+  Score 5 requires the localized nontrivial lemma or calculation to be substantially
+  present, with only a bounded repair remaining.
+
+Use this scale:
+- 7: complete and correct as submitted by normal Olympiad jury standards.
+- 6: correct proof with only a genuinely minor, directly checkable omission.
+- 5: mostly complete proof with one localized nontrivial but bounded repair.
+- 4: meaningful and coherent strategy, but a load-bearing derivation is missing or
+  unverified.
+- 3: major central gap, unsupported decisive claim, or serious invalid step, despite
+  meaningful progress.
+- 1--2: limited correct progress.
+- 0: no meaningful progress.
+
+Be exacting rather than charitable, while still accepting genuinely equivalent
+approaches and routine Olympiad terseness.

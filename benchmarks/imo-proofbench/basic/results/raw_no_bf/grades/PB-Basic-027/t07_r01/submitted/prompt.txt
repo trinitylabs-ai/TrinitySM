@@ -1,0 +1,126 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Given an acute triangle $ABC$, let $D$ and $E$ be the feet of
+ the altitudes from $B$ to $AC$ and $C$ to $AB$, respectively.
+ Let $E_{1}$ and $E_{2}$ be the reflections of $E$ with respect
+ to $AC$ and $BC$, respectively. If $X$ (not equal to $C$) is an
+ intersection point of the circumcircle of $\triangle CE_{1}E_{2}$
+ and $AC$, and $O$ is the circumcenter of $\triangle CE_{1}E_{2}$,
+ prove that $XO$ is perpendicular to $DE$.
+
+**GROUND-TRUTH SOLUTION**
+
+\textbf{Claim.} $X,E,E_{2}$ are colinear.
+
+
+ \noindent\emph{Proof. }Let $T$ be a intersection of $EE_{2}$ and
+ $AC$. Observe that $CE_{1}=CE=CE_{2}$ and $(B,C,E,E_{1},E_{2})$
+ are cyclic. This gives $\angle E_{2}E_{1}C=\frac{1}{2}(180^{\circ}-2\angle C)=\angle E_{2}TC$,
+ so $(E_{2},T,C,E_{1})$ are cyclic. Thus, $T=X$, and we have $X,E,E_{2}$
+ colinear.
+
+
+ Now, observe $\angle OXC=90-\angle XE_{2}C=90-\angle EE_{2}C=90-\angle ABC=90-\angle ADE=90-\angle XDE$.
+ Thus, $\angle OXC+\angle XDE=90^{\circ}$, and we have $XO\perp DE$
+ as desired.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Proved that $X,E,E_{2}$ are colinear.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that $XO$ is perpendicular to $DE$ in an acute triangle $ABC$, we set up a coordinate system. Let $C$ be the origin $(0,0)$ and let the side $CA$ lie along the $x$-axis. Thus, $C = (0,0)$ and $A = (b, 0)$, where $b$ is the length of $AC$. The coordinates of $B$ are $(a \cos C, a \sin C)$, where $a$ is the length of $BC$.
+
+**1. Coordinates of $D$ and $E$**
+$D$ is the foot of the altitude from $B$ to $AC$, so $D$ is the projection of $B$ onto the $x$-axis:
+$D = (a \cos C, 0)$.
+$E$ is the foot of the altitude from $C$ to $AB$. The line $AB$ passes through $(b, 0)$ and $(a \cos C, a \sin C)$. The projection of $C(0,0)$ onto $AB$ is given by:
+$x_E = \frac{a^2 b \sin^2 C}{c^2}, \quad y_E = \frac{ab \sin C (b - a \cos C)}{c^2}$, where $c$ is the length of $AB$.
+The length $CE$ is $CE = \sqrt{x_E^2 + y_E^2} = \frac{ab \sin C}{c} = a \sin B$.
+
+**2. Coordinates of $E_1, E_2$ and $O$**
+$E_1$ is the reflection of $E$ across $AC$ (the $x$-axis), so $E_1 = (x_E, -y_E)$.
+$E_2$ is the reflection of $E$ across $BC$. The line $BC$ is $y = (\tan C)x$. The reflection $(x', y')$ of $(x, y)$ across $y = x \tan \theta$ is $x' = x \cos 2\theta + y \sin 2\theta$ and $y' = x \sin 2\theta - y \cos 2\theta$. With $\theta = C$:
+$E_2 = (x_E \cos 2C + y_E \sin 2C, x_E \sin 2C - y_E \cos 2C)$.
+$O(x_O, y_O)$ is the circumcenter of $\triangle CE_1E_2$. Since $C$ is the origin, $OC^2 = OE_1^2 = OE_2^2$.
+$x_O^2 + y_O^2 = (x_O - x_E)^2 + (y_O + y_E)^2 \implies 2(x_O x_E - y_O y_E) = x_E^2 + y_E^2 = CE^2$.
+$x_O^2 + y_O^2 = (x_O - x_{E2})^2 + (y_O - y_{E2})^2 \implies 2(x_O x_{E2} + y_O y_{E2}) = x_{E2}^2 + y_{E2}^2 = CE^2$.
+Solving this system for $x_O$ and $y_O$:
+$x_O = \frac{1}{2} x_E + \frac{1}{2} y_E \tan C, \quad y_O = \frac{1}{2} x_E \tan C - \frac{1}{2} y_E$.
+
+**3. Coordinates of $X$ and Vector $XO$**
+$X$ is the intersection of the circumcircle of $\triangle CE_1E_2$ and $AC$ (the $x$-axis), other than $C$. Since $C$ is the origin and $X$ is on the circle with center $O$, $CX$ is a chord. The $x$-coordinate of $X$ is $x_X = 2x_O$ because $C$ is the origin and $X$ lies on the $x$-axis.
+$X = (2x_O, 0) = (x_E + y_E \tan C, 0)$.
+The vector $\vec{XO} = O - X = (-x_O, y_O) = \frac{1}{2} (-x_E - y_E \tan C, x_E \tan C - y_E)$.
+
+**4. Perpendicularity of $XO$ and $DE$**
+The vector $\vec{DE} = E - D = (x_E - a \cos C, y_E)$.
+We compute the dot product $\vec{XO} \cdot \vec{DE}$:
+$2(\vec{XO} \cdot \vec{DE}) = (-x_E - y_E \tan C)(x_E - a \cos C) + (x_E \tan C - y_E)y_E$
+$= -x_E^2 + x_E a \cos C - y_E x_E \tan C + y_E a \cos C \tan C + x_E y_E \tan C - y_E^2$
+$= -(x_E^2 + y_E^2) + a(x_E \cos C + y_E \sin C)$.
+Substitute $x_E$ and $y_E$:
+$x_E \cos C + y_E \sin C = \frac{a^2 b \sin^2 C \cos C + ab \sin^2 C (b - a \cos C)}{c^2} = \frac{ab^2 \sin^2 C}{c^2}$.
+Then $a(x_E \cos C + y_E \sin C) = \frac{a^2 b^2 \sin^2 C}{c^2} = CE^2$.
+Thus, $2(\vec{XO} \cdot \vec{DE}) = -CE^2 + CE^2 = 0$.
+Since the dot product is zero, $XO \perp DE$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

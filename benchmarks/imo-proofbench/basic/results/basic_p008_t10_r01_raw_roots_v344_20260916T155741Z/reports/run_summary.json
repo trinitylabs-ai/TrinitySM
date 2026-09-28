@@ -1,0 +1,14 @@
+{
+  "run_id": "basic_p008_t10_r01_raw_roots_v344_20260916T155741Z",
+  "problem_id": "PB-Basic-008",
+  "outcome": "REWRITTEN_AUDIT_PASS",
+  "returncode": 0,
+  "wall_seconds": 648.5026724520139,
+  "proof_audit_passed": true,
+  "verified_samples": 8,
+  "grading_status": "completed",
+  "external_grade": {
+    "score": 6,
+    "category": "Almost"
+  }
+}

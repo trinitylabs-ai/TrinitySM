@@ -1,0 +1,25 @@
+To prove that $\left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1$ for any positive integer $N$, where $\delta(n)$ is the largest odd divisor of $n$, we start by analyzing the term $\frac{\delta(n)}{n}$.
+
+For any positive integer $n$, we can write $n = 2^{v_2(n)} \cdot \delta(n)$, where $v_2(n)$ is the exponent of 2 in the prime factorization of $n$. Thus, $\frac{\delta(n)}{n} = \frac{1}{2^{v_2(n)}}$. Let $S(N) = \sum_{n=1}^N \frac{\delta(n)}{n} = \sum_{n=1}^N \frac{1}{2^{v_2(n)}}$.
+
+We can group the terms of the sum by the value of $v_2(n)$. The number of integers $n \in [1, N]$ such that $v_2(n) = k$ is equal to the number of multiples of $2^k$ minus the number of multiples of $2^{k+1}$ in that range, which is $\lfloor \frac{N}{2^k} \rfloor - \lfloor \frac{N}{2^{k+1}} \rfloor$. Let $M = \lfloor \log_2 N \rfloor$. Then:
+\[ S(N) = \sum_{k=0}^M \frac{1}{2^k} \left( \lfloor \frac{N}{2^k} \rfloor - \lfloor \frac{N}{2^{k+1}} \rfloor \right) \]
+Expanding the sum, we have:
+\[ S(N) = \left( \lfloor N \rfloor - \lfloor \frac{N}{2} \rfloor \right) + \frac{1}{2} \left( \lfloor \frac{N}{2} \rfloor - \lfloor \frac{N}{4} \rfloor \right) + \frac{1}{4} \left( \lfloor \frac{N}{4} \rfloor - \lfloor \frac{N}{8} \rfloor \right) + \dots + \frac{1}{2^M} \left( \lfloor \frac{N}{2^M} \rfloor - \lfloor \frac{N}{2^{M+1}} \rfloor \right) \]
+Rearranging the terms gives:
+\[ S(N) = \lfloor N \rfloor - \frac{1}{2} \lfloor \frac{N}{2} \rfloor - \frac{1}{4} \lfloor \frac{N}{4} \rfloor - \dots - \frac{1}{2^M} \lfloor \frac{N}{2^M} \rfloor + \frac{1}{2^M} \lfloor \frac{N}{2^{M+1}} \rfloor \]
+Since $M = \lfloor \log_2 N \rfloor$, we have $2^{M+1} > N$, so $\lfloor \frac{N}{2^{M+1}} \rfloor = 0$. Also, $\lfloor N \rfloor = N$. Thus:
+\[ S(N) = N - \sum_{k=1}^M \frac{1}{2^k} \lfloor \frac{N}{2^k} \rfloor \]
+Let the binary representation of $N$ be $N = \sum_{j=0}^M a_j 2^j$ where $a_j \in \{0, 1\}$ and $a_M = 1$. Then $\lfloor \frac{N}{2^k} \rfloor = \sum_{j=k}^M a_j 2^{j-k}$. Substituting this into the sum:
+\[ \sum_{k=1}^M \frac{1}{2^k} \lfloor \frac{N}{2^k} \rfloor = \sum_{k=1}^M \frac{1}{2^k} \sum_{j=k}^M a_j 2^{j-k} = \sum_{j=1}^M a_j \sum_{k=1}^j 2^{j-2k} \]
+The inner sum is a geometric series:
+\[ \sum_{k=1}^j 2^{j-2k} = 2^j \sum_{k=1}^j \left(\frac{1}{4}\right)^k = 2^j \cdot \frac{1/4(1 - (1/4)^j)}{3/4} = \frac{2^j}{3} (1 - \frac{1}{4^j}) = \frac{2^j}{3} - \frac{1}{3 \cdot 2^j} \]
+Substituting this back into the equation for $S(N)$:
+\[ S(N) = N - \sum_{j=1}^M a_j \left( \frac{2^j}{3} - \frac{1}{3 \cdot 2^j} \right) = N - \frac{1}{3} \sum_{j=1}^M a_j 2^j + \sum_{j=1}^M \frac{a_j}{3 \cdot 2^j} \]
+Since $\sum_{j=1}^M a_j 2^j = N - a_0$, we have:
+\[ S(N) = N - \frac{1}{3}(N - a_0) + \sum_{j=1}^M \frac{a_j}{3 \cdot 2^j} = \frac{2}{3}N + \frac{a_0}{3} + \sum_{j=1}^M \frac{a_j}{3 \cdot 2^j} = \frac{2}{3}N + \sum_{j=0}^M \frac{a_j}{3 \cdot 2^j} \]
+Thus:
+\[ S(N) - \frac{2}{3}N = \sum_{j=0}^M \frac{a_j}{3 \cdot 2^j} \]
+Since $a_j \in \{0, 1\}$, the minimum value is achieved when $a_0 = \dots = a_{M-1} = 0$, giving $S(N) - \frac{2}{3}N = \frac{1}{3 \cdot 2^M} > 0$. The maximum value is achieved when all $a_j = 1$:
+\[ S(N) - \frac{2}{3}N \le \sum_{j=0}^M \frac{1}{3 \cdot 2^j} = \frac{1}{3} \cdot \frac{1 - (1/2)^{M+1}}{1 - 1/2} = \frac{2}{3} \left( 1 - \frac{1}{2^{M+1}} \right) < \frac{2}{3} \]
+Therefore, $0 < S(N) - \frac{2}{3}N < \frac{2}{3}$ for all $N > 0$, which implies $|S(N) - \frac{2}{3}N| < 1$. \(\square\)

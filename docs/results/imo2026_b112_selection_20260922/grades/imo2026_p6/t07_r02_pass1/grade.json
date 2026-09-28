@@ -1,0 +1,63 @@
+{
+  "problem_id": "imo2026_p6",
+  "submission_id": "proof_29583b6bd982b2e9d2753938018a0ed8",
+  "pass_index": 1,
+  "score": 3,
+  "verdict": "major_gap",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first load-bearing assertion is false: a_n+M need not be divisible by the primes dividing a_1. For example, with a_1=15 the sequence begins 15,18,20; then M=15 but gcd(20+15,18)=1. Thus the proposed candidate does not establish the gap bound as written (Rule C), although this particular lemma is routinely repaired by using the next multiple of M.",
+    "summary": "The claimed theorem is correct, but the proof has a central unsupported finite-prime reduction. Bounded gaps do not imply that primes greater than M are irrelevant, and no argument shows that P(a_{n+1}) intersected with the primes at most M hits every truncated past support. Consequently S'_N does not characterize the admissibility condition, so the finite-state and eventual-periodicity conclusion is unsupported, invoking Rule E's ceiling of 3. The attempted extension to all indices is also circular: it assumes early congruences a_{n+T} congruent to a_n modulo L_0 and incorrectly identifies S_{n+T} with S'_N, neither of which follows from eventual periodicity. This also leaves the required initial range unhandled under Rule D. Repairing the proof requires the new structural finiteness argument that identifies all globally relevant prime supports.",
+    "strengths": [
+      "Correctly observes that every term shares a prime factor with a_1, so P(a_1) is a hitting set.",
+      "The bounded-gap conclusion itself can be obtained by a routine correction using the next multiple of M.",
+      "Correctly notes that the collections of truncated supports stabilize because the underlying prime set is finite.",
+      "Recognizes the potentially useful finite-state route to eventual periodicity and the pairwise gcd property of all sequence terms."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The statement that a_n+M is a multiple of every prime dividing a_1 is false, so the submitted proof of bounded gaps is invalid as written."
+      },
+      {
+        "severity": "major",
+        "description": "The claim that a_{n+1} is determined by a hitting set contained in the primes at most M is neither proved nor implied by bounded gaps. Large common prime factors with older terms may matter, so stabilization of S'_n does not yield stabilization of the actual greedy condition."
+      },
+      {
+        "severity": "major",
+        "description": "The final backward extension assumes S_{n+T}=S'_N despite these being different kinds of collections, and assumes a_{n+T} congruent to a_n modulo L_0 for early n even though only eventual periodicity was claimed. This is circular and does not handle the finite initial range."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "proof_sha256": "29583b6bd982b2e9d2753938018a0ed8037c50e8a639b5789f5cfab26b4afbce",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "evidence_sha256": "4d11a584c63e07b48f07345205d6c0da97ec7beddd1d07c8fe20fb3752ab1a53",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p6/t07_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "7c7a179c5f5343a4f610d7ae839e326219b1d953e5d96e08cf1b38b6f6092aeb",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "e8ae3497fa92ae1e2c858c73354df017d0a7adb05f15147432e8d394f29b7e28",
+    "raw_response_1.txt": "6e024de19a4d17b1736534f7d3bfb382f1c50c5e8c940897ca3b6dbedd15c165",
+    "summary.json": "c7f53f2291e133d2163940b79343837f23c62fc1b1833ec63313af2032c3f259"
+  }
+}

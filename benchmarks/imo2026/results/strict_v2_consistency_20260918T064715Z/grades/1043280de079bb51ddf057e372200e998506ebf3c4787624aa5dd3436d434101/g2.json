@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "1043280de079bb51ddf057e372200e998506ebf3c4787624aa5dd3436d434101",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "5f35280d4178e8178e14da6b463f88209e45eb6ae79d49bbf41f08ddd2dcbd1b",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the submitted proof is complete.",
+    "summary": "The coordinate reduction is correct: the circumcentre formula and the equivalence of OM=ON with T=0 are valid. The three angle conditions yield the displayed polynomial equations, with strict interiority supplying the required nondegeneracy, orientation compatibility, and nonzero guards. Appendix A gives an explicit algebraic certificate proving that those equations and guards force T=0. Although extremely computational, the certificate is finite and checkable, so the conclusion follows as submitted.",
+    "strengths": [
+      "Correctly establishes that A,K,L are noncollinear and hence that the circumcentre and all cleared denominators are legitimate.",
+      "Correctly reduces the desired metric equality to the explicit polynomial identity T=0.",
+      "Correctly translates all three angle equalities into polynomial equations, with interiority controlling the signed-cross branches.",
+      "Provides a fully specified contradiction certificate for the central algebraic lemma rather than merely asserting a computer calculation."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:18:17.972439+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00005",
+  "native_rejection_count": 0
+}

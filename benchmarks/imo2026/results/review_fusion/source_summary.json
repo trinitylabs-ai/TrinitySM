@@ -1,0 +1,2959 @@
+{
+  "retrieved_at": "2026-09-13T03:34:01.283810+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "new_grading_calls": 0,
+  "verified_scoring_records": 69,
+  "recovered_c1_records": 9,
+  "separate_p2_tool_experiments_included": false,
+  "sources": [
+    {
+      "path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/summary.json",
+      "sha256": "0e7172a07401e2d269df8c5bc6325445b4dd621fd91c886c34e71878ed00a94b"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/summary.json",
+      "sha256": "7e810356b5b5a72dca712e7d12051e0ae03f610343fd075116b11525c149c9b1"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/summary.json",
+      "sha256": "33103025bbb453f1ade124e660c2c3fe219cf58ea2e838a051b54bb86afc1e02"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/summary.json",
+      "sha256": "f1a2de6249b4b2afade55a660afa92ec9518e9eb482b30313a4b375ae0d7f756"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/summary.json",
+      "sha256": "ebe1e22022251c4aa6d455693d3c96f123f3c179f7e241f0b44162a1617f4930"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/summary.json",
+      "sha256": "1f6813d6bb7716f56ef410831b10612871813c0f3cdaeafddbc0c643666f2998"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/model/summary.json",
+      "sha256": "7656938e5a11eac5467fa9dfb851283f62aabda0545c47a4e872e3c81e93cffb"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/strict_scores/summary.json",
+      "sha256": "e297d12a4530e4e2c8e75ea1480182c44c1cb0266e0d73ea3bd4259101c661c7"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/summary.json",
+      "sha256": "5509e817fc7175ed91302e9d0d66fe35f59aee0c9a72043a6f639441afe6d81a"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/summary.json",
+      "sha256": "91aa3ca75daa4d2657de38c569f3df21ad73edac3f91a8dd4977883edd5c4503"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p6/model/summary.json",
+      "sha256": "450eb676158df3748ac5851f0d4c5ca7f7829b910afcdbd254aa6dcb1048b119"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p6/strict_scores/summary.json",
+      "sha256": "d9da3dfdf22def0ee94e5f149e80b8ade6a055cc0f12ba10f061a4564069a32a"
+    },
+    {
+      "path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/summary.json",
+      "sha256": "00fe5e3e3bb049719b2b83d0ca3346f025c31f80f2699f614f58908b237ff9c4"
+    }
+  ],
+  "p5_identical_proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+  "rows": [
+    {
+      "problem": 1,
+      "candidate_id": "t10_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof of both termination and choice-independence. The integer-valued potential Φ is nonincreasing and strictly decreases whenever the chosen numbers have nontrivial gcd; otherwise the number k of entries greater than 1 strictly decreases. Since neither quantity increases, infinitely many moves are impossible. The primewise gcd of all valuations is then correctly shown invariant and reconstructs the unique terminal entry.",
+            "strengths": [
+              "Correctly proves that every move leaves at least one entry greater than 1 and that a terminal board therefore has exactly one such entry.",
+              "The valuation-square potential is computed correctly: for ordered exponents x≤y, the decrease is x(2y−x), strictly positive exactly when x>0.",
+              "Correctly combines the potential with the nonincreasing count k to establish finite termination.",
+              "Correctly identifies the valuation transformation as (e,f)↦(min(e,f),|e−f|).",
+              "Correctly uses the Euclidean-algorithm identity gcd(e,f)=gcd(e,f−e) to establish the primewise invariant.",
+              "Correctly reconstructs M from its prime valuations, proving independence from all choices."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "No substantive mathematical defect.",
+            "summary": "The submission gives a complete equivalent proof. The pair consisting of the prime-exponent square sum and the number of entries greater than 1 provides a terminating lexicographic descent, and the primewise gcd of all valuation exponents is invariant and uniquely reconstructs the terminal integer.",
+            "strengths": [
+              "Correctly analyzes how the number of entries greater than 1 changes and proves it never reaches zero.",
+              "Uses a valid finite primewise sum-of-squares potential: it strictly decreases whenever the selected numbers have nontrivial gcd, while the count of nonunit entries decreases when they are coprime.",
+              "Correctly proves invariance of the gcd of the valuation multiset under the Euclidean transformation (e,f) to (min(e,f),|e-f|).",
+              "Correctly reconstructs the unique terminal value from the invariant primewise exponents."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof. The lexicographic monovariant consisting of the valuation-square sum and the number of entries greater than 1 proves finite termination, while the primewise gcd of all valuation coordinates is invariant and uniquely reconstructs the terminal integer.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (min(e,f), |e-f|).",
+              "Shows that the square-sum strictly decreases whenever the selected integers have a nontrivial gcd, while the count of entries greater than 1 decreases in the coprime case.",
+              "Establishes that at least one entry greater than 1 is always retained, so a terminal board has exactly one such entry.",
+              "Correctly proves invariance of the gcd of the valuation coordinates and uses it to give an explicit choice-independent formula for M."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "No substantive mathematical defect.",
+            "summary": "The submission gives a complete proof. The integer-valued potential Φ strictly decreases whenever the selected numbers have nontrivial gcd, while in the coprime case Φ stays constant and the number k of entries greater than 1 strictly decreases; this supplies a valid lexicographic termination argument. It also correctly proves that k never falls below 1, so the terminal board has exactly one entry greater than 1. Primewise, the move applies the Euclidean transformation (e,f) ↦ (min(e,f),|e−f|), preserving the gcd of all p-adic exponents. At termination this invariant equals v_p(M), uniquely determining M from the initial board.",
+            "strengths": [
+              "Correctly analyzes every possible change in the number of entries greater than 1.",
+              "Provides a valid finite integer monovariant together with the secondary parameter k.",
+              "Correctly identifies and proves the primewise exponent-gcd invariant.",
+              "Reconstructs the terminal value M explicitly, establishing independence of all choices."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r01/05_resolver2/cases/imo2026_p1.t10_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof. The lexicographic monovariant consisting of the valuation-square sum and the number of entries greater than 1 proves finite termination, while the primewise gcd of all valuation coordinates is invariant and uniquely reconstructs the terminal integer.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (min(e,f), |e-f|).",
+              "Establishes strict descent of the valuation-square sum whenever the chosen integers have nontrivial gcd, and strict descent of the count otherwise.",
+              "Correctly proves that at least one entry greater than 1 always remains.",
+              "Uses the Euclidean-algorithm identity gcd(e,f)=gcd(e,f-e) to obtain a valid primewise invariant.",
+              "Correctly reconstructs the unique terminal value from the initial valuation gcds."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "4fcea832a7a63f265df4b83eeea29309327469ebf96416fa23a335fd55f250c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r01/06_resolver3/cases/imo2026_p1.t10_r01/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t10_r01/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 1,
+      "candidate_id": "t10_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof. The lexicographically decreasing pair consisting of the total prime-exponent sum and the number of entries greater than 1 proves termination, while each move preserves at least one entry greater than 1. Primewise, the gcd of all valuation exponents is invariant under the Euclidean-algorithm transformation, and at a terminal board it equals the corresponding valuation of the unique remaining integer, determining that integer uniquely from the initial board.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (e,f) -> (min(e,f), |e-f|).",
+              "Uses a valid well-founded lexicographic descent to prove termination.",
+              "Correctly establishes that a move can never replace two eligible entries by two 1s.",
+              "Proves the load-bearing primewise gcd invariant, including the zero-exponent cases.",
+              "Correctly reconstructs the terminal integer from its prime valuations and thereby proves choice-independence."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The proof is complete and correct. The lexicographically decreasing pair (total prime-exponent sum, number of entries greater than 1) proves termination; the operation never eliminates all entries greater than 1; and the primewise gcd of all valuations is invariant, uniquely determining the terminal integer.",
+            "strengths": [
+              "Correctly distinguishes the cases gcd(m,n)>1 and gcd(m,n)=1 to obtain a well-founded descent.",
+              "Correctly proves that every move leaves at least one of the two replacement entries greater than 1.",
+              "Correctly identifies and justifies the invariant gcd(v_p(a_1),…,v_p(a_{2026})) for every prime p.",
+              "Correctly reconstructs the unique terminal value from its prime valuations."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submitted proof is complete and correct. The lexicographically decreasing pair consisting of the total prime-exponent sum and the number of entries greater than 1 proves termination. The proof also establishes that every move leaves at least one entry greater than 1. Finally, the gcd of the valuation tuple for each prime is invariant under the Euclidean-algorithm transformation, and at termination these invariants uniquely determine M.",
+            "strengths": [
+              "The total exponent sum is finite and strictly decreases whenever the selected integers have nontrivial gcd.",
+              "When the selected integers are coprime, the exponent sum is unchanged but the number of entries greater than 1 decreases, giving valid lexicographic descent.",
+              "The argument that the two replacement values cannot both equal 1 ensures that a terminal board contains exactly one entry greater than 1.",
+              "The primewise identity gcd(x,y)=gcd(min(x,y),|x-y|) is correctly justified, including zero and equal-exponent cases.",
+              "At a terminal board the invariant gcd of the p-adic valuations equals v_p(M), so all prime exponents of M depend only on the initial board."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t10_r02.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof of both termination and invariance. The lexicographically decreasing pair consisting of total prime-exponent sum and the number of entries greater than 1 proves termination, while the primewise gcd of all valuations is correctly shown to be invariant and to determine the unique terminal integer.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (e,f) -> (min(e,f),|e-f|).",
+              "Provides a valid well-founded lexicographic descent for termination.",
+              "Correctly proves that a move can never eliminate all entries greater than 1.",
+              "Correctly identifies and proves invariance of the gcd of the valuation multiset for every prime.",
+              "Reconstructs the terminal integer primewise solely from the initial board."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r02/05_resolver2/cases/imo2026_p1.t10_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof of both termination and choice-independence. The lexicographically decreasing pair consisting of the total prime-exponent sum and the number of entries greater than 1 proves termination, while the primewise gcd of all valuation coordinates is correctly shown to be invariant and reconstructs the unique terminal integer.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (e,f) -> (min(e,f), |e-f|).",
+              "Establishes strict lexicographic descent: the exponent sum decreases when gcd(m,n)>1, and otherwise the number of entries greater than 1 decreases.",
+              "Correctly proves that a move cannot eliminate all entries greater than 1, so a terminal board has exactly one such entry.",
+              "Uses the Euclidean-algorithm identity gcd(x,y)=gcd(min(x,y),|x-y|) to prove the primewise invariant.",
+              "Correctly reconstructs the terminal value M from the invariant valuation gcds, proving independence of all choices."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "ba7caebabe3b4928ede3ad61bb8f2886f2e3af0b31b582f040a76cbdd372db99",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t10_r02/06_resolver3/cases/imo2026_p1.t10_r02/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t10_r02/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 1,
+      "candidate_id": "t07_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "The claim that the terminal set S_p^* contains the single element v_p(M) is false when p does not divide M; then S_p^* is empty.",
+            "summary": "The termination argument and the primewise gcd invariant are correct and establish both conclusions. The only defect is an omitted empty-set case for primes not dividing M. Since the solution explicitly defines the gcd of an empty S_p^* as 0, the argument is repaired immediately by splitting into p dividing M and p not dividing M.",
+            "strengths": [
+              "Correctly shows that the product is unchanged when gcd(m,n)=1 and strictly decreases otherwise.",
+              "Correctly shows that gcd-one moves reduce the number of entries greater than 1, yielding termination.",
+              "Correctly proves that at least one entry greater than 1 always remains.",
+              "Correctly identifies the valuation transformation as (x,y) to (min(x,y),|x-y|).",
+              "Correctly establishes invariance of the gcd of the positive p-adic valuations and reconstructs M from these invariants."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "For p not dividing the terminal integer M, the positive-exponent multiset is empty, not a singleton containing 0. The stated convention gcd(empty)=0 supplies the missing case directly."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "At termination, the proof says that for every prime p the nonzero-exponent multiset S_p^* is the singleton {v_p(M)}. This is false when p does not divide M, since then S_p^* is empty; the defined empty-gcd convention makes the intended conclusion valid, but this case must be stated separately.",
+            "summary": "The termination argument and primewise gcd invariant are correct and establish both claims. The only defect is a minor omitted case distinction for primes not dividing the terminal integer; adding it immediately yields the claimed reconstruction and choice-independence.",
+            "strengths": [
+              "Correctly uses the product and the count of entries greater than 1 to prove finite termination.",
+              "Correctly proves that at least one entry greater than 1 survives every move.",
+              "Correctly identifies the valuation transformation (x,y) to (min(x,y),|x-y|).",
+              "Correctly observes that the gcd of the positive p-adic valuations is invariant.",
+              "The resulting primewise reconstruction of M is independent of all choices."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "For p not dividing M, the terminal S_p^* is empty rather than a singleton. A direct two-case argument—p divides M or not—repairs the proof using the submission's convention gcd(empty)=0."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "At the terminal board, the proof says that for every prime p the positive-exponent set S_p^* is the singleton {v_p(M)}. This is false when p does not divide M: then S_p^* is empty. The conclusion is repaired immediately by treating that case separately and using the stated convention gcd(∅)=0.",
+            "summary": "The main proof is correct. Termination follows from the product being nonincreasing, with a strict decrease when the selected gcd exceeds 1, while the count of entries greater than 1 decreases when the product is unchanged. Primewise, the gcd of the positive valuations is invariant under the Euclidean transformation (x,y)↦(min(x,y),|x−y|), which determines every exponent of the unique terminal entry. Only a minor zero-exponent case and a slightly terse descent justification need clarification.",
+            "strengths": [
+              "Correctly identifies the product/count descent governing termination.",
+              "Correctly proves that at least one entry greater than 1 always remains.",
+              "Correctly derives the prime-valuation transformation under a move.",
+              "Correctly identifies the gcd of the positive p-adic valuations as an invariant and reconstructs the terminal integer from it."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "For primes not dividing the terminal M, S_p^* is empty rather than a singleton; the proof should explicitly invoke the empty-set convention to obtain g_p=v_p(M)=0."
+              },
+              {
+                "severity": "minor",
+                "description": "The termination sentence should explicitly use lexicographic descent of (P,C), or state that P never increases and that only finitely many C-decreasing moves can occur between strict decreases of P. This is directly recoverable from the preceding case analysis."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "At the terminal board, the claim that for every prime p the positive-exponent multiset S_p^* consists of the single element v_p(M) is false when p does not divide M; then S_p^* is empty.",
+            "summary": "The submission gives a correct termination argument using the product and the number of entries greater than 1, and it identifies the correct primewise invariant: the gcd of the positive p-adic valuations. This determines every exponent of the terminal integer. The only defect is a minor failure to state the empty-support case correctly; the previously declared convention that the gcd of an empty S_p^* is 0 makes the intended conclusion immediate.",
+            "strengths": [
+              "Correctly shows that a coprime move preserves the product and decreases the number of entries greater than 1.",
+              "Correctly shows that a non-coprime move strictly decreases the positive integer product, yielding termination.",
+              "Correctly proves that at least one entry greater than 1 always remains.",
+              "Correctly derives the valuation transformation (x,y) to (min(x,y),|x-y|).",
+              "Correctly identifies the gcd of the positive valuations as invariant and reconstructs M prime by prime."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "For primes not dividing the terminal M, S_p^* is empty rather than the singleton {v_p(M)}={0}. The proof should split into p dividing M and p not dividing M; its empty-set gcd convention then gives v_p(M)=g_p in both cases."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r01/05_resolver2/cases/imo2026_p1.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "At the terminal board, the proof says that for every prime p the positive-exponent multiset S_p^* is the singleton {v_p(M)}. This is false when p does not divide M: then v_p(M)=0 and S_p^* is empty.",
+            "summary": "The solution gives a correct termination argument using the product and the number of entries greater than 1, and it identifies the correct primewise invariant: the gcd of the positive p-adic valuations. This determines every exponent of the terminal integer from the initial board. The only defect is the omitted empty-set case for primes not dividing M; with the proof's convention that the gcd of an empty set is 0, this is repaired immediately.",
+            "strengths": [
+              "Correctly shows that a coprime move preserves the product while reducing the number of entries greater than 1.",
+              "Correctly shows that a non-coprime move strictly decreases the positive-integer product.",
+              "Correctly proves that at least one entry greater than 1 persists, so the terminal board has exactly one such entry.",
+              "Correctly derives the valuation transformation (x,y) to (min(x,y),|x-y|) and the invariance of the gcd of positive valuations.",
+              "The resulting formula for M depends only on the initial board and establishes choice-independence."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "The terminal valuation multiset is empty, rather than a singleton, for primes p not dividing M. A one-line case distinction gives gcd(S_p^*)=0=v_p(M), so the main argument remains valid."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r01/06_resolver3/cases/imo2026_p1.t07_r01/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r01/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 1,
+      "candidate_id": "t07_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof of both termination and choice-independence. The lexicographically decreasing pair (N,S) is a valid well-founded measure, and the primewise gcd of valuations is correctly shown to be invariant and to reconstruct the unique terminal integer.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (a,b) -> (min(a,b), |a-b|).",
+              "Establishes termination using a valid lexicographic descent: N decreases when the chosen numbers are coprime, while S decreases whenever their gcd exceeds 1.",
+              "Correctly proves that at least one entry greater than 1 persists, so a terminal board has exactly one such entry.",
+              "Correctly identifies the gcd of all p-adic valuations as an invariant for each prime p.",
+              "Correctly reconstructs the terminal value M solely from the initial valuation gcds."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "940cfe58a4c7c31fd8e541a7171f4e69b0184eb15c4d9efbe434fdaf6fa0bd99",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/input/lazy_checked_baseline/t07_r02.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C1/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submitted solution is complete and correct. The lexicographically decreasing pair (N,S) proves termination and preservation of at least one entry greater than 1 gives the exact terminal count. Primewise gcds of valuations are correctly shown invariant and reconstruct the unique terminal value.",
+            "strengths": [
+              "Correctly computes the change in total prime valuations.",
+              "Uses a valid well-founded lexicographic descent argument.",
+              "Correctly proves that at least one integer greater than 1 persists.",
+              "Identifies and proves the primewise valuation-gcd invariant.",
+              "Correctly reconstructs the terminal integer solely from the initial board."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submitted solution completely proves both claims. The lexicographically decreasing pair (N,S) establishes finite termination and, together with preservation of at least one entry greater than 1, yields the required terminal state. Primewise, the gcd of all valuations is correctly shown to be invariant under the Euclidean transformation (a,b)↦(min(a,b),|a−b|), which uniquely reconstructs the terminal integer M from the initial board.",
+            "strengths": [
+              "The termination measure is valid and every possible case of a move is handled correctly.",
+              "The proof correctly establishes that at least one entry remains greater than 1, so a terminal board has exactly one such entry.",
+              "The prime-valuation transformation and gcd invariance are correctly derived.",
+              "The terminal prime factorization formula uniquely determines M from the initial entries."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p1.t07_r02/resolver/temperature_0_4/gpu0/p1/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R1-C3/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete and correct proof. The lexicographically decreasing pair (N,S) establishes finite termination while preserving at least one entry greater than 1, and the primewise gcd of all valuations is correctly shown invariant and used to reconstruct the unique terminal value.",
+            "strengths": [
+              "Correctly computes the valuation transformation as (a,b) to (min(a,b), |a-b|).",
+              "Provides a valid well-founded termination measure covering both coprime and non-coprime moves.",
+              "Correctly proves that a terminal board has exactly one entry greater than 1.",
+              "Correctly identifies and applies the primewise gcd invariant to determine M uniquely from the initial board."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/05_resolver2/cases/imo2026_p1.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None; the proof is complete under normal Olympiad standards.",
+            "summary": "The submission correctly proves termination using the strictly decreasing lexicographic measure (N,S), establishes that at least one entry greater than 1 is always preserved, and hence obtains exactly one such entry at termination. It then proves primewise invariance of the gcd of all valuations and reconstructs the terminal integer uniquely from these invariants.",
+            "strengths": [
+              "The change in the total valuation sum S is calculated correctly for every move.",
+              "All cases for the number N of entries greater than 1 are handled, yielding a valid well-founded lexicographic descent.",
+              "The proof correctly observes that a move cannot eliminate every entry greater than 1.",
+              "The primewise valuation transformation is identified correctly as (a,b) mapping to (min(a,b),|a-b|).",
+              "The gcd invariant is justified by the Euclidean algorithm and determines every exponent in the terminal integer."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "19c5a271ad6d4fc6be910bb4a6ff4e01cbf7bedd5de3302a6a9ee6d867a15b95",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/model/lanes/t07_r02/06_resolver3/cases/imo2026_p1.t07_r02/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r02/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 2,
+      "candidate_id": "t10_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claimed identity b cos(φ₂) − c cos(A − φ₂) = −a cos(C − φ₂) is false. With AL lying inside angle BAC, the left side equals a cos(C + φ₂).",
+            "summary": "The submission correctly reduces the conclusion to a dot-product identity and derives usable formulas for the circumcenter. However, the subsequent projection computation contains a false trigonometric identity, and the stated sine-law ratio incorrectly uses CL where CK is required. Most decisively, the difficult general-case identity is simply asserted; the symmetric special case and an unsupported claim of “linear dependence” do not prove it. Thus the central argument is absent and partly invalid.",
+            "strengths": [
+              "Correctly shows that OM = ON is equivalent to O·(C−B) = (b²−c²)/4.",
+              "Correctly derives the circumcenter relations and solves for the coefficients of O in the basis AK, AL.",
+              "Obtains some valid preliminary relations from triangles BKM and CNL."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The formula for AL·(C−B) uses a false trigonometric identity; the correct expression is r_L a cos(C+φ₂), not −r_L a cos(C−φ₂)."
+              },
+              {
+                "severity": "major",
+                "description": "The sine-law calculation gives sin∠BLK/sin∠CLK = BK sin(α₂)/(CK sin(α₃)), not the displayed expression with CL."
+              },
+              {
+                "severity": "major",
+                "description": "The decisive simplification to (b²−c²)/4 is not demonstrated. Proving one symmetric case and invoking unspecified “linear dependence” cannot establish the nonlinear general configuration."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "51b99dae6103e0a337d96023eca9fa2f2934642e36c84710e217ebf4721437ac",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "After deriving the cotangent relations, the submission merely asserts that the remaining angle constraints make the decisive trigonometric expression equal to (b^2-c^2)/4; no derivation of this identity is given.",
+            "summary": "The proof correctly reduces OM=ON to a linear identity involving O and correctly derives several useful circumcenter and sine-law formulas. However, the entire general case is then replaced by an unsupported claim that the geometric constraints force the required simplification. Verifying that claim is the central, substantial elimination in the problem; the symmetric special case does not establish the general result.",
+            "strengths": [
+              "Correctly reduces the desired distance equality to O·(C-B)=(b^2-c^2)/4.",
+              "Correctly expresses the circumcenter vector in the basis AK, AL.",
+              "Obtains plausible and useful sine-law relations, including cot(phi_1)=cot(alpha_1)+2cot(alpha_3) and its analogue for phi_2.",
+              "Verifies a symmetric special case."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The decisive general identity is asserted without calculation or proof. Neither the claimed unique determination of alpha_2 and alpha_3 nor mere 'consistency' of the constraints implies the required dot-product identity."
+              },
+              {
+                "severity": "substantial",
+                "description": "The submission never derives r_K/r_L, theta, or the necessary compatibility relations from the two remaining angle conditions, so its displayed formula for O·(C-B) cannot actually be evaluated in the general case."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "bca3c901fd41469ae92d08c17166a0f67cd150f7711e83c112ad6e0704b0405e",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "gate",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 2,
+      "candidate_id": "t10_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "gate",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 2,
+      "candidate_id": "t07_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claimed constraint k = b sin(α+γ)/sin(α+γ+θ_K) is incorrect. In triangle ACK, the angles at A and C are A−θ_K and α+γ, so the sine law gives k = b sin(α+γ)/sin(A−θ_K+α+γ).",
+            "summary": "The submission develops a meaningful coordinate strategy and correctly reduces the goal to a linear condition on the circumcentre. However, its closing argument uses an incorrect sine-law relation and then replaces the entire load-bearing compatibility calculation with the unsupported assertion that substitution “confirms” Δ=0. Establishing that determinant identity requires substantial elimination, not routine omitted algebra, so the proof does not establish the conclusion.",
+            "strengths": [
+              "Correctly rewrites OM=ON as O·(C−B)=(b²−c²)/4.",
+              "The sine-law calculations leading to cot θ_K=2cot γ+cot α and cot θ_L=2cot β+cot α are valid under the given interior ordering.",
+              "Correctly writes the two circumcentre equations and expresses the desired conclusion as concurrence of three linear equations.",
+              "The displayed determinant expansion and its trigonometric simplification are correct."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The additional formula asserted for k has the wrong denominator: it omits A and reverses the θ_K contribution."
+              },
+              {
+                "severity": "major",
+                "description": "No calculation is supplied to show that the angle constraints determine the required ratio b/c or that substituting them makes Δ vanish. This is the central, highly nontrivial compatibility/elimination step of the proof."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "6fe8c0123d1eb83abf9559ae005868a59690dcd21f82c04115f0404dafbc4bc8",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 4,
+          "grade": {
+            "score": 4,
+            "verdict": "substantial_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "local_nontrivial",
+            "olympiad_treatment": "partial_credit",
+            "first_issue": "The decisive assertion that the determinant Δ vanishes after substitution is not demonstrated; it hides the central, substantial trigonometric elimination.",
+            "summary": "The submission correctly reduces OM=ON to a linear condition on the circumcentre, derives plausible sine-law and cotangent relations, and reformulates the goal as a determinant identity. However, it then replaces the main proof with the unsupported statement that all trigonometric terms cancel. Since this is precisely the load-bearing calculation and is not routine one-line algebra, the proof is incomplete under the strict policy and is capped at 4.",
+            "strengths": [
+              "Correctly expresses OM=ON as O·(C−B)=(b²−c²)/4.",
+              "Obtains coherent sine-law formulas and the cotangent identities for θ_K and θ_L.",
+              "Correctly sets up the circumcentre equations and reduces the desired conclusion to vanishing of an explicit determinant."
+            ],
+            "errors": [
+              {
+                "severity": "substantial",
+                "description": "No calculation is supplied to prove Δ=0 from the several sine-law, length-ratio, and cotangent relations. The phrases “we can verify” and “cancel identically” conceal a substantial multi-step elimination on which the entire conclusion depends."
+              },
+              {
+                "severity": "minor",
+                "description": "The necessary angle-order, nonzero-denominator, and independence conditions for the trigonometric divisions and the uniqueness of the intersection of the first two lines are not explicitly justified from the strict interior hypotheses."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "218a6fdb9717141046e23880f2fcf1dc2513c9e3feafceecbdf303d7341054b4",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 4,
+          "grade": {
+            "score": 4,
+            "verdict": "substantial_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "partial_credit",
+            "first_issue": "The decisive final trigonometric identity is merely asserted: the proof says that after substitution “the trigonometric terms cancel identically” but supplies none of the substantial elimination needed to verify this.",
+            "summary": "The submission develops a coherent trigonometric-coordinate framework and correctly reduces OM=ON to an explicit identity. However, that identity is the central difficulty of the problem, and its proof is entirely omitted. Under the stated strict cap for an asserted load-bearing simplification requiring substantial calculation, the solution merits 4/7.",
+            "strengths": [
+              "Correctly translates OM=ON into a linear condition on the circumcentre.",
+              "Derives plausible sine-law formulas and the relations cot(theta_K)=2cot(gamma)+cot(alpha) and cot(theta_L)=2cot(beta)+cot(alpha).",
+              "Correctly solves the two perpendicular-bisector equations and reduces the conclusion to a concrete trigonometric identity."
+            ],
+            "errors": [
+              {
+                "severity": "substantial",
+                "description": "The final cancellation is neither expanded nor supported by a lemma or certificate. Establishing it requires substantial multi-step elimination using all compatibility relations, so it cannot be treated as routine algebra."
+              },
+              {
+                "severity": "minor",
+                "description": "The proof divides by D=sin(A-theta_L-theta_K) without explicitly establishing D≠0, and it does not fully justify the angle branches used in its sine-law formulas from the strict interiority assumptions."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "dadf9e9aacf7e24603aaa23110e85995613680ce112faba196a128c4e03de2b1",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p2.t07_r01/resolver/temperature_0_4/gpu0/p2/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C3/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 4,
+          "grade": {
+            "score": 4,
+            "verdict": "substantial_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "local_nontrivial",
+            "olympiad_treatment": "partial_credit",
+            "first_issue": "After expressing the circumcentre and deriving several sine-law relations, the submission simply asserts that substituting them makes the decisive dot-product expression equal to \\((b^2-c^2)/4\\); this substantial trigonometric elimination is not shown.",
+            "summary": "The solution develops a coherent coordinate-and-trigonometric strategy and correctly reduces the conclusion to a linear identity for the circumcentre. However, the entire central compatibility calculation is replaced by an unsupported claim of simplification. The additional statement that the needed side ratios follow from the inside-triangle conditions is also unjustified: those conditions primarily determine geometric branches and signs, while the ratios must come from the angle and sine-law relations. Under the strict policy, the omitted load-bearing multi-step elimination caps the proof at 4.",
+            "strengths": [
+              "Correctly rewrites OM=ON as a dot-product condition involving C-B.",
+              "Obtains useful sine-law relations for AK, AL, and the auxiliary angles.",
+              "Correctly writes and solves the two linear circumcentre equations.",
+              "The proposed framework is plausibly capable of proving the result if the missing elimination is supplied."
+            ],
+            "errors": [
+              {
+                "severity": "substantial",
+                "description": "The decisive trigonometric identity is asserted without calculation. Verifying it requires combining both expressions for AK and AL, extracting the compatibility relation among A, b/c, and the auxiliary angles, and carrying out a nontrivial elimination."
+              },
+              {
+                "severity": "minor",
+                "description": "The claim that the ratios b/c and c/b are derived from the inside-triangle conditions is inaccurate and does not explain the required compatibility argument."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "31d3aa64197a55dd74497d7720ddccc8028e932c6c1f276fa24dd65f68f851fb",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/05_resolver2/cases/imo2026_p2.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The sine-law formula for triangle AKC is incorrect: since ∠KAC=A−θ_K, the denominator should be sin(A−θ_K+α+γ), not sin(θ_K+α+γ).",
+            "summary": "The submission correctly reduces OM=ON to a linear condition on the circumcentre and derives several useful sine-law and cotangent relations. However, it then uses an incorrect side-length formula and merely asserts the decisive trigonometric elimination without displaying it. That elimination is the central argument of the problem, so the conclusion is not established as submitted.",
+            "strengths": [
+              "Correctly formulates the perpendicular-bisector condition as O·(C−B)=(b²−c²)/4.",
+              "Correctly derives the circumcentre equations and solves the resulting linear system.",
+              "The initial sine-law derivations leading to cot θ_K=cot α+2cot γ and cot θ_L=cot α+2cot β are essentially correct."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "In triangle AKC, the angle at A is A−θ_K, so the asserted formula k=b sin(α+γ)/sin(θ_K+α+γ) is generally false."
+              },
+              {
+                "severity": "major",
+                "description": "The final claim that substitution and the unspecified “consistency” of the side lengths make the expression equal (b²−c²)/4 is unsupported. Verifying this requires the substantial compatibility/elimination calculation that constitutes the load-bearing part of the proof."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "65d7d0fde854f947285c85099276610479acef7fd671d411e23545f9079cbfc0",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r01/06_resolver3/cases/imo2026_p2.t07_r01/third_ungrouped_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R3/t07_r01/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 2,
+      "candidate_id": "t07_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The displayed algebraic condition for equality of the two powers has a sign error: since the circumcentre formula uses the denominator −Im(K·conj(L)), multiplying through gives the negative of the submitted right-hand side.",
+            "summary": "The solution correctly reduces OM=ON to equality of powers and obtains useful sine-law coordinates for K and L. However, the subsequent algebra contains sign/branch errors, and the entire decisive elimination is replaced by the unsupported statement that substitution verifies the required identity. That verification is a substantial, load-bearing calculation, so the conclusion is not proved as submitted.",
+            "strengths": [
+              "Correctly reformulates OM=ON as equality of the powers of M and N with respect to the circumcircle of AKL.",
+              "Correctly applies the sine law in triangles BMK and LNC to obtain useful lengths and coordinate parametrizations.",
+              "Identifies a potentially viable complex-coordinate strategy involving the two remaining angle conditions."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The power-equality identity following the circumcentre formula has the wrong overall sign on its right-hand side after clearing the denominator −Im(K·conj(L))."
+              },
+              {
+                "severity": "major",
+                "description": "With C taken above the real axis, the ray order at B gives L−B=r·e^(−iβ)(K−B), whereas the proof uses e^(iβ). Thus its compatibility equations do not encode the stated configuration."
+              },
+              {
+                "severity": "major",
+                "description": "The central claim that substituting the compatibility equations verifies the required algebraic identity is asserted without any elimination or calculation. This is precisely the nontrivial heart of the problem and cannot be treated as routine algebra."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "f92288ff1ae160ef24da6c3ea53c62637cc422ee8128f69090e8d47bd05b0ebb",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The displayed solution for the coefficients of O=xK+yL is algebraically wrong: writing a=|K|^2, c=|L|^2, and d=K·L, the first numerator should be c(a-d), not c(a-2d), with the analogous correction for y.",
+            "summary": "The submission correctly reduces OM=ON to equality of two powers and obtains useful sine-law expressions for K and L. However, its circumcentre computation is erroneous, and the decisive compatibility calculation using ∠LBK=β and ∠LCK=γ is never performed. The claim that the remaining terms cancel by symmetry is unsupported; the construction has no evident symmetry that implies the desired identity. Thus the central argument is absent despite meaningful preliminary progress.",
+            "strengths": [
+              "Correctly reformulates the desired distance equality as a linear identity involving O, b, and c, equivalently as equality of powers of M and N.",
+              "Correctly applies the sine law in triangles BMK and LNC to obtain relevant lengths and begins a plausible coordinate approach."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "Solving the two circumcentre equations gives x=|L|^2(|K|^2-K·L)/(2D) and y=|K|^2(|L|^2-K·L)/(2D), where D=|K|^2|L|^2-(K·L)^2. The submitted formulas incorrectly contain twice the mixed product."
+              },
+              {
+                "severity": "major",
+                "description": "The two remaining cross-angle conditions are not converted into any equations or trigonometric identities. The asserted cancellation of the power difference is precisely the load-bearing result and requires substantial elimination; an appeal to unspecified symmetry does not prove it."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "512d53a6080cebf98c944399f7ab33efc453ac7d5fa011b909e0ed0f49e01231",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The final claim that the displayed expression “simplifies” to \\((b^2-c^2)/4\\) is unsupported and is not an identity following from the stated tangent formulas alone.",
+            "summary": "The submission develops a coherent power-of-a-point and trigonometric setup, but omits the central compatibility argument. In particular, it never translates the conditions involving the actual rays \\(BL\\) and \\(CK\\) into equations relating \\(b,c,\\angle BAC\\) and the auxiliary angles. Those missing constraints are essential; the asserted final simplification is false for arbitrary parameters satisfying only the formulas derived in the proof. Establishing the conclusion would require a substantial new elimination, not routine omitted algebra.",
+            "strengths": [
+              "Correctly reduces the desired distance equality to equality of the powers of M and N with respect to the circumcircle of AKL.",
+              "The sine-law calculations in triangles BMK and LNC and the resulting formulas for the auxiliary angles are largely sound.",
+              "Correctly expresses the circumcentre in an AK–AL coordinate frame and reduces the goal to an explicit trigonometric equation."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The decisive last step is merely asserted. The proof uses beta through angle LNC but never imposes the positional constraint angle LBK = beta, and similarly uses gamma through angle BMK without imposing angle LCK = gamma. Consequently the necessary relations among the side lengths and angle BAC are absent, so the claimed simplification does not follow from the displayed substitutions."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "9ac9429947234642de7b417b984b190a34c1c876d4613ea6ef9967a1b80148b1",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C3/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "With the solution's implicit notation b=AB, c=AC, and a=BC, the claimed identity b sin(A−θ_L)+c sin θ_L=a sin(B+θ_L) is false; its right-hand side should be a sin(C+θ_L), with B and C likewise interchanged in the following identity.",
+            "summary": "The submission makes meaningful progress by reducing OM=ON to equality of powers and deriving several useful trigonometric and circumcentre formulas. However, it then uses incorrect sine-law identities and concludes with an unproved decisive trigonometric assertion. In particular, the derived tangent formulas use only the local configurations BMK and CNL; the essential compatibility information from ∠LBK=β and ∠LCK=γ is never converted into equations or used. Establishing the final identity therefore requires the missing central elimination, not routine simplification.",
+            "strengths": [
+              "Correctly reformulates OM=ON as equality of the powers of M and N with respect to the circumcircle of AKL.",
+              "The sine-law calculations in triangles BMK, ABK, CNL, and ALC, together with the formulas for tan θ_K and tan θ_L, are largely coherent under the implied side-length notation.",
+              "The coordinate expression for the circumcentre relative to the rays AK and AL and the resulting dot-product reduction are useful and essentially correct."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The two stated consequences of the Law of Sines in triangle ABC interchange the vertex angles B and C under the side notation already used. Thus the subsequent displayed target identity is not validly obtained."
+              },
+              {
+                "severity": "major",
+                "description": "The final statement that substitution of AK, AL, tan θ_K, and tan θ_L makes the required identity hold is unsupported. Its verification is the load-bearing part of the problem and requires substantial compatibility/elimination work."
+              },
+              {
+                "severity": "major",
+                "description": "The proof never algebraically uses the cross-configuration conditions ∠LBK=β and ∠LCK=γ. The formulas for θ_K and θ_L alone do not constrain ABC sufficiently to imply the desired power equality."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "a61555204742b510e6bfd325aec585aab16db792ea41acb6a49e45382036985f",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/05_resolver2/cases/imo2026_p2.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claim ∠K'BA = ∠KBA is false: the homothety centered at A makes A,K,K' collinear, but it does not make B,K,K' collinear, so the rays BK and BK' generally differ.",
+            "summary": "The power-of-a-point and homothety reduction is correct and usefully reformulates the goal. However, the subsequent trigonometric argument begins with false angle identifications involving K' and L'. Consequently the derived formulas for AK' and AL' and all following coordinate calculations lack a valid basis. Moreover, the final decisive simplification to c²−b² is merely asserted without stating or proving the required constraints. The central proof is therefore unsupported.",
+            "strengths": [
+              "Correctly reformulates OM = ON as equality of the powers of M and N with respect to the circumcircle of AKL.",
+              "Correctly transfers that equality under the ratio-2 homothety to equality of the powers of B and C with respect to the image circle.",
+              "Correctly observes that the latter equality is equivalent to the image circumcenter lying on the perpendicular bisector of BC."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "From K'=2K about A, it does not follow that ∠K'BA=∠KBA. Likewise, ∠L'CA=∠LCA is generally false. These invalid angle substitutions undermine the claimed triangle angles and sine-law formulas."
+              },
+              {
+                "severity": "major",
+                "description": "The parallelism MK∥BK' does not justify ∠BK'A=∠BKM, because only one corresponding pair of rays is parallel; the other rays K'A and KB are unrelated."
+              },
+              {
+                "severity": "major",
+                "description": "The final statement that the trigonometric expression 'simplifies to c²−b² given the constraints' omits the entire load-bearing compatibility argument. No such constraints are derived or used explicitly, and the asserted simplification is not directly checkable."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "24b502cb6b5e2c1db2cd78fdf567bb0e635c0446ea432d2b65923bb5321770c7",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/model/lanes/t07_r02/06_resolver3/cases/imo2026_p2.t07_r02/third_ungrouped_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R3/t07_r02/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 3,
+      "candidate_id": "t10_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 2,
+          "grade": {
+            "score": 2,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "In the n=1 upper bound, for x≤1/2 the pieces are x,(1−x)/2,(1−x)/2, whose median is (1−x)/2, not max(x,(1−x)/2); thus the proposed response does not prove the claimed bound.",
+            "summary": "The submission correctly identifies the greedy-picking payoff and proves the universal lower bound 1/2, and its n=1 lower-bound strategy is valid. However, the upper-bound argument for n=1 contains false median calculations, and the main conclusion for n≥2 is false. The correct value is 2^n/(2^(n+1)−1), which is strictly greater than 1/2 for every finite n. Establishing this requires essentially new lower- and upper-bound constructions.",
+            "strengths": [
+              "Correctly observes that optimal piece selection gives Liu the odd-ranked lengths.",
+              "Correctly derives the elementary universal bound S≥1/2.",
+              "Gives a valid strategy showing Liu can guarantee 2/3 when n=1.",
+              "Recognizes that values approach 1/2 asymptotically, although it incorrectly replaces the finite-n value by the limit."
+            ],
+            "errors": [
+              {
+                "severity": "substantial",
+                "description": "Both median formulas in the attempted n=1 upper bound are wrong: repeated equal pieces determine the median, rather than the stated maximum. Consequently, the specified Xiang responses do not cover all x, although the n=1 result could be repaired with different responses."
+              },
+              {
+                "severity": "major",
+                "description": "The assertion that Xiang can pair all relevant pieces closely enough to force S→1/2 for every initial partition is unsupported and false. For example, when n=2 Liu can create gaps 1/7,2/7,4/7 and guarantee 4/7>1/2."
+              },
+              {
+                "severity": "substantial",
+                "description": "The n=2 illustrative split of a 1/3 piece into ε,1/6,1/6 does not preserve length; the pieces sum to 1/3+ε. The intended two larger pieces would each have length (1/3−ε)/2."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "14020e1e604ec17ce7272a41529720b9022af14c0213a59d65e827567b340fbe",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p3.t10_r01/resolver/temperature_0_4/gpu0/p3/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p3/strict_scores/R1-C1/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "gate",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 3,
+      "candidate_id": "t10_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 2,
+          "grade": {
+            "score": 2,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "In the n=1 lower bound, the submission checks only equal-halves splits, although Xiang may place his mark anywhere; therefore the claimed guarantee is not proved as written.",
+            "summary": "The general conclusion is false: the true value is 2^n/(2^(n+1)-1), which is strictly greater than 1/2 for every n. For k_L>=2, the submission replaces a proof with two numerical examples. Its proposed splits do not generally yield 1/2; for instance, with initial lengths 0.6, 0.25, 0.15, splitting 0.6 equally leaves Liu 0.55. Substantial new ideas are required for both the general lower and upper bounds.",
+            "strengths": [
+              "Correctly identifies the alternating sum of odd-ranked piece lengths as Liu's payoff under optimal drafting.",
+              "Correctly proves the universal lower bound S_L>=1/2.",
+              "Finds the correct value 2/3 for n=1, though its proof omits arbitrary split positions."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "For n>=2, the assertion that Xiang can force 1/2 is unsupported and false. The two displayed examples establish nothing for arbitrary initial segment lengths, and the proposed one-cut responses often give Liu more than 1/2."
+              },
+              {
+                "severity": "substantial",
+                "description": "The n=1 lower-bound analysis considers only midpoint cuts by Xiang, not all legal cut locations."
+              },
+              {
+                "severity": "minor",
+                "description": "The n=1 upper bound does not explicitly cover all placements of Liu's mark, such as when both initial lengths lie between 1/3 and 2/3 or when the second labeled length is below 1/3."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "aed3f9f27a8177f8d8d2c24408e7e793da784b28bef0a14d4ff5c4a6c21a06fb",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t10_r02/resolver/temperature_0_4/gpu0/p3/t10_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t10_r02/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 3,
+      "candidate_id": "t07_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 1,
+          "grade": {
+            "score": 1,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The reduction to k=n is unjustified and false: splitting an additional piece need not decrease Liu's alternating-rank payoff, so responses using fewer than n marks cannot be discarded.",
+            "summary": "The claimed value (n+1)/(2n+1) is false; the correct value is 2^n/(2^(n+1)-1), already differing for n=2. The submission correctly models optimal claiming as the sum of odd-ranked lengths, but neither bound is proved. The lower bound ends with an unsupported assertion and can fail for the proposed partition; for n=2, splitting the 3/5 piece into 1/4,1/4,1/10 produces lengths 1/4,1/4,1/5,1/5,1/10, giving Liu 11/20<3/5. The upper-bound discussion is heuristic, uses an approximate calculation, and provides no valid response against an arbitrary initial partition.",
+            "strengths": [
+              "Correctly identifies the fixed-partition payoff as the sum of the first, third, fifth, and subsequent sorted piece lengths.",
+              "Attempts both a guaranteeing construction and an adversarial upper bound."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The assertion that fewer Xiang marks can only improve Liu's payoff is false; alternating-rank payoff is not monotone under refinement."
+              },
+              {
+                "severity": "major",
+                "description": "The proposed lower-bound construction does not guarantee the claimed amount. For n=2, Xiang can obtain Liu's payoff 11/20, below 3/5."
+              },
+              {
+                "severity": "major",
+                "description": "The sentence 'it can be shown' replaces the entire load-bearing lower-bound argument with no derivation."
+              },
+              {
+                "severity": "major",
+                "description": "The purported upper bound merely splits the largest initial piece and gives an approximate heuristic; it does not prove a bound for arbitrary Liu markings."
+              },
+              {
+                "severity": "major",
+                "description": "The final formula is incorrect for every n beyond the coincidental case n=1."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "9604fe13ea70f38af96ca160b637a0acd846f3456bcaf66fe6b34b771b1e4dad",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t07_r01/resolver/temperature_0_4/gpu0/p3/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r01/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 3,
+      "candidate_id": "t07_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 2,
+          "grade": {
+            "score": 2,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The decisive claim that Xiang maximizes the even-ranked sum by splitting the large piece into equal parts is false. For n=2, the proposed Liu partition is (1/5,1/5,3/5); Xiang can split 3/5 into 3/10 and 3/10 using one mark, producing sorted lengths (3/10,3/10,1/5,1/5), so Liu receives only 1/2, not the claimed 3/5.",
+            "summary": "The submission correctly reduces the claiming phase to alternating ranks and obtains the n=1 value, but its general construction fails already for n=2. It also supplies no upper-bound argument ruling out better initial markings. The claimed formula (n+1)/(2n+1) is incorrect; the reference value is 2^n/(2^(n+1)-1).",
+            "strengths": [
+              "Correctly identifies the relevance of the odd-ranked sum of the sorted piece lengths.",
+              "Correctly handles the special case n=1 and performs some useful bookkeeping of Xiang's cuts."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The optimization assertion underlying the proposed lower bound is false, as shown by the n=2 counterexample."
+              },
+              {
+                "severity": "major",
+                "description": "No valid proof is given that Liu's proposed marking guarantees the claimed amount."
+              },
+              {
+                "severity": "major",
+                "description": "There is no upper bound showing that arbitrary Liu markings cannot guarantee more, and the final formula disagrees with the true value for n>=2."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "510a835111e1e9b4e9fdc393534a02d2ec619f4acceefc66b04d01f2d1fa6e29",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p3.t07_r02/resolver/temperature_0_4/gpu0/p3/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p3.t07_r02/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 4,
+      "candidate_id": "t10_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The necessity proof falsely asserts that Mulan can only make progress through Moves A and B; a general cut may have two nonterminal children that are both winning after further play.",
+            "summary": "The final characterization is correct, and the sufficiency argument is substantially sound: repeated angle peeling and the small-angle construction force a multiple of theta. However, the necessity direction does not handle arbitrary strategies. Its countability argument neither justifies restricting Mulan to Moves A and B nor proves that every arbitrary cut leaves Shan-Yu a safe child. This is a central missing obstruction and triggers the score-3 cap.",
+            "strengths": [
+              "Correctly identifies theta = 180 degrees/n for integers n at least 2.",
+              "Correctly models how a cut splits the apex angle.",
+              "Provides a coherent finite winning strategy for the sufficiency direction using multiple reduction and a final cut producing 180 degrees-theta."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The necessity argument ignores cuts for which neither child immediately contains theta but both children may be winnable later; therefore the claimed restriction to Moves A and B is invalid."
+              },
+              {
+                "severity": "major",
+                "description": "The statement that Shan-Yu can choose a child avoiding a countable set of dangerous angles is asserted without an invariant or proof. The countability of certain linear equations does not establish that at least one child of every possible cut remains nonwinning."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "87caeae2d1ce58c5cdae53be32606fb0d91b63d39a9df3499d053e3727f5c8fd",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/01_r1_cycle_1/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The necessity argument unjustifiably claims that Mulan can only make relevant transitions through Moves A and B. A winning strategy may instead cut to two nonterminal triangles that are both recursively winning, so neither child need contain θ immediately.",
+            "summary": "The claimed characterization is correct, and the sufficiency direction gives a substantially valid peeling strategy, including the treatment of angles below θ. However, the entire necessity direction rests on a false restriction of Mulan's possible winning moves. The subsequent countability argument neither defines a preserved safe class nor proves that every arbitrary cut has at least one child from which Shan-Yu can continue avoiding θ. Repairing this requires a new load-bearing invariant, such as the reference solution's marked-angle safe-triangle lemma. Under the stated strict policy, the unsupported decisive inference caps the score at 3.",
+            "strengths": [
+              "Derives the child-angle formulas correctly.",
+              "Correctly shows how an angle kθ can be peeled down to θ.",
+              "Gives a workable sufficiency strategy for reaching an angle at most θ and then producing the multiple 180°−θ=(n−1)θ.",
+              "States the correct final set of values θ=180°/n for integers n≥2."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The necessity proof ignores branching winning moves in which neither immediate child contains θ but both children are winning after further play."
+              },
+              {
+                "severity": "major",
+                "description": "The countability discussion does not prove a Shan-Yu strategy: it never establishes that after every arbitrary cut at least one child avoids the alleged dangerous set, and its claimed form for all relevant future angles is unsupported."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "091b8c955e1798f61fd1f5aab81ea88c43fb50bf22c5171883fb04b0170420a4",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/02_r1_cycle_2/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "In Case 3's second subcase, the claim that repeatedly cutting the largest angle must eventually make the largest angle less than 180°−θ or equal to θ is unsupported and false. For θ=90° and angles (60°,100°,20°), such cuts merely transfer 90° between angles, so one angle remains greater than 90° indefinitely.",
+            "summary": "The final characterization is correct, and much of the sufficiency argument is sound. The second subcase of sufficiency has a false termination claim, although it could be repaired locally: after its first cut, the angle β−θ already satisfies (β−θ)+θ=β<180°, so the preceding subcase applies. More seriously, necessity rests entirely on the unproved and explicitly false assertion that every W_k is a countable union of lines for any θ. Projection after eliminating the cut parameter can impose no condition on the parent when the two child equations become dependent; the proof does not classify or exclude this degeneracy under θ≠180°/n. Thus the central necessity direction is not established as submitted.",
+            "strengths": [
+              "The claimed answer θ=180°/n for integers n≥2 is correct.",
+              "Peeling an angle kθ into θ and (k−1)θ is a valid strategy.",
+              "The reduction when all angles exceed θ is essentially correct: the retained nonterminal child has a new smallest angle decreased by θ.",
+              "The first subcase for an angle γ<θ correctly constructs one terminal child and another containing (n−1)θ.",
+              "The recursive definition of bounded-depth winning sets is conceptually appropriate."
+            ],
+            "errors": [
+              {
+                "severity": "substantial",
+                "description": "The termination assertion in the second subcase of Case 3 is false. It can be repaired with a short different observation, but that observation is absent."
+              },
+              {
+                "severity": "major",
+                "description": "The countable-union-of-lines induction in the necessity proof does not handle dependent child constraints whose elimination becomes an identity. The statement is even claimed for every θ, contradicting the already-proved sufficiency cases; for example, when θ=90°, the conditions x=90° and 180°−x=90° coincide and yield an open set of winning parents. Merely saying the other child condition still restricts the parent does not prove the required nondegeneracy for θ≠180°/n."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "b25f698d5ac018d1f5a0191545a1ce228e7f59fb951d5c9b32a5783393751420",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p4.t10_r01/resolver/temperature_0_4/gpu0/p4/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The necessity argument wrongly assumes that a forcing move must produce a child already containing θ; a valid strategy may instead produce two nonterminal children that are both recursively winning.",
+            "summary": "The claimed characterization is correct, and the sufficiency direction gives an essentially valid cutting strategy. However, the necessity direction does not establish an invariant against arbitrary cuts. Its discussion only treats a restricted class of immediate-threat transitions, and the final assertion that Shan-Yu can avoid all reachable winning states is unsupported. Since this missing argument is one of the two central directions and requires the safe-triangle invariant or an equivalent new idea, the proof is incomplete under the harsh policy.",
+            "strengths": [
+              "Correctly identifies the answer θ=180°/n for integers n≥2.",
+              "The reduction of an angle kθ to (k−1)θ via a vertex cut is valid.",
+              "The construction for an angle γ<θ correctly forces either θ or 180°−θ=(n−1)θ.",
+              "Together, the three cases provide a substantially correct sufficiency argument."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The necessity proof restricts attention to cuts where one child immediately contains θ. This does not rule out a multi-step strategy in which both children lack θ but are recursively winning."
+              },
+              {
+                "severity": "major",
+                "description": "For rational θ/180 not of reciprocal-integer form, the statement that Shan-Yu can choose a triangle avoiding all reachable winning states is merely asserted. No invariant is defined or proved to survive every possible cut, so the decisive obstruction is absent."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "09d0ce1bade2d3756287ea257e1bf6e9a76d9ea54769c7beb0fefa5ab85d0fc9",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/05_resolver2/cases/imo2026_p4.t10_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t10_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The necessity argument begins by requiring x, y, θ, and 180° to be linearly independent over Q, which is impossible whenever θ/180° is rational but not a reciprocal integer, such as θ=72°.",
+            "summary": "The claimed characterization is correct, and the sufficiency construction is essentially sound. However, necessity is not proved: besides the impossible independence condition for many excluded θ, the argument unjustifiably assumes that every relevant Mulan move must make one child immediately contain θ. A winning strategy may make a cut whose two children are nonterminal but recursively winning, so analyzing only the two listed 'forced moves' does not rule out general strategies. Establishing necessity requires a safe-triangle invariant covering every admissible cut, which is a new central argument.",
+            "strengths": [
+              "Correct final characterization θ=180°/n for integers n≥2.",
+              "The peeling strategy for an angle kθ is valid and handles both choices of retained child.",
+              "The construction from an angle smaller than θ correctly creates one child containing θ and the other containing (n−1)θ.",
+              "The repeated subtraction argument covers triangles whose angles initially all exceed θ."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The proposed Q-linear independence of x, y, θ, and 180° cannot hold when θ/180° is rational. The hypothesis θ≠180°/n does not imply θ and 180° are Q-linearly independent."
+              },
+              {
+                "severity": "major",
+                "description": "The necessity proof restricts attention to cuts for which one child immediately contains θ. No justification is given that an arbitrary finite winning strategy must use only such cuts; both children of an earlier cut may instead be nonterminal winning positions. Consequently, the H-invariant analysis does not address all admissible strategies."
+              },
+              {
+                "severity": "minor",
+                "description": "In Case 3, the claim that α<θ<180° implies α+θ<180° is not valid by itself, although the missing conclusion follows routinely from θ=180°/n≤90°."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "8e260fab58564bbf2db27db29b5627ed89165684c293542c48924a80139d7d6a",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t10_r01/06_resolver3/cases/imo2026_p4.t10_r01/third_ungrouped_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t10_r01/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 4,
+      "candidate_id": "t10_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 2,
+          "grade": {
+            "score": 2,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claim that every triangle containing an angle in the modular set W_theta is winning is false: when an angle alpha<theta is changed to alpha+theta, subsequently subtracting theta can simply return to alpha, so Shan-Yu may cycle between these states rather than eventually permit theta.",
+            "summary": "The claimed characterization is wrong: the correct values are theta=180°/n for integers n>=2, not all rational multiples of 180° at most 90°. The proof's central modular-angle invariant does not imply finite victory, its main forcing cut in Section 2 is geometrically invalid, and the necessity argument is unsupported. Substantial new ideas—particularly the safe-triangle obstruction—are required.",
+            "strengths": [
+              "The valid peeling observation for an angle alpha>theta correctly produces one child containing theta and another containing alpha-theta.",
+              "The altitude construction correctly proves the special case theta=90°.",
+              "The submission recognizes that Mulan must account for either child being retained."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "Membership in W_theta modulo 180° does not support the asserted reduction to theta. For example, with theta=72°, the residues 36° and 108° lie in W_theta, but the proposed increase and reduction steps can alternate 36°↔108° indefinitely."
+              },
+              {
+                "severity": "major",
+                "description": "The principal forcing cut in Section 2 is invalid. Setting phi=180°-beta-theta while assuming gamma>theta gives phi=alpha+gamma-theta>alpha, so phi cannot be one part of the angle alpha. Equivalently, the alleged second child has the negative angle theta-gamma."
+              },
+              {
+                "severity": "major",
+                "description": "The necessity argument does not establish a strategy for Shan-Yu over multiple moves. Avoiding a cut whose two children both immediately contain theta is not enough; one must prove that at least one child remains non-winning after every cut."
+              },
+              {
+                "severity": "major",
+                "description": "The proposed irrational obstruction is invalid: alpha,beta,gamma cannot be algebraically independent over a field containing 180° because alpha+beta+gamma=180°. The further claim that an angle in W_theta cannot be forced is merely asserted."
+              },
+              {
+                "severity": "substantial",
+                "description": "The statement W_theta={theta} for theta>90° is false, for example theta=120° also gives the residue 60°, and irrational theta gives a dense modular orbit."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "8cccd632870b387aa3965ec0445d244fd0124e4ccb9b30a6b13766700f1f36e7",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p4.t10_r02/resolver/temperature_0_4/gpu0/p4/t10_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p4.t10_r02/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 4,
+      "candidate_id": "t07_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "In the necessity argument, the submission simply asserts that Shan-Yu can initially choose a triangle whose angles are not positive integer multiples of θ, without proving such a triangle exists. This essential point is repaired directly by choosing (θ/2, θ/2, 180°−θ).",
+            "summary": "The characterization is correct, and both main strategies are mathematically sound. The invariant argument correctly proves that one child remains free of multiples of θ, while the sufficiency argument first creates a small angle and then produces and peels the multiple (k−1)θ. Only minor, directly repairable existence details are omitted.",
+            "strengths": [
+              "Correctly obtains exactly θ=180°/k for integers k≥2.",
+              "The four-case invariant analysis in the necessity direction is complete and algebraically correct.",
+              "The construction from an angle smaller than θ correctly yields the angles θ−C′, C′, and (k−1)θ.",
+              "The repeated peeling of a multiple nθ gives a valid finite winning strategy."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "Existence of the initial triangle having no angle equal to a positive integer multiple of θ is asserted rather than demonstrated."
+              },
+              {
+                "severity": "minor",
+                "description": "For k=2, the proof does not explicitly justify choosing a vertex whose altitude foot lies in the interior of the opposite side; this follows routinely by choosing the vertex opposite the two acute angles, unless the triangle is already right."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "1fcc43601af78d86b1fbc493ec6071d700962e95af2dea7c291b23b8af90f5d5",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/input/lazy_checked_baseline/t07_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "In the necessity argument, the submission simply asserts that Shan-Yu can initially choose a triangle whose three angles are not positive integer multiples of θ, without proving such a triangle exists. This is required to initiate the invariant, though it is repaired directly by choosing {θ/2, θ/2, 180°−θ}.",
+            "summary": "The characterization is correct, and both main arguments are essentially sound. The four-case invariant proves that at least one child remains free of multiples of θ, while the sufficiency strategy correctly produces (k−1)θ from a sub-θ angle and then peels multiples down to θ. The omitted construction of the initial safe triangle is load-bearing but routine. The θ=90° case also should specify choosing a vertex whose altitude foot lies inside the opposite side.",
+            "strengths": [
+              "Correctly identifies exactly θ=180°/k for integers k≥2.",
+              "The four possible ways both children could acquire a multiple of θ are exhaustive and correctly yield contradictions.",
+              "The peeling strategy for an angle nθ is valid and guarantees termination.",
+              "The construction from an angle C'<θ correctly produces the angle 180°−θ=(k−1)θ."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "Existence of an initial triangle with no angle a positive integer multiple of θ is asserted but not justified; the explicit triangle {θ/2, θ/2, 180°−θ} supplies the missing argument."
+              },
+              {
+                "severity": "minor",
+                "description": "For θ=90°, the perpendicular foot need not lie on the opposite side for an arbitrary chosen vertex. Mulan must choose a suitable vertex—an obtuse vertex in an obtuse triangle, or any vertex in an acute triangle; a right triangle is already terminal."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "1fcc43601af78d86b1fbc493ec6071d700962e95af2dea7c291b23b8af90f5d5",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/input/lazy_checked_baseline/t07_r01.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "For k=2, the proof says to drop AP perpendicular to BC without ensuring that the perpendicular foot lies on the segment BC. One must choose A so that B and C are acute (unless the initial triangle is already right), which makes the cut admissible.",
+            "summary": "The characterization and both central strategies are correct. The sufficiency argument validly peels angles by theta, converts a sub-theta angle into the multiple (k-1)theta, and then peels that multiple to theta. The necessity argument establishes the correct safe-triangle invariant through an exhaustive four-case analysis. However, it omits justification that a safe initial triangle exists, contains a sign error in one case, and leaves a small admissibility detail unresolved in the 90-degree case. All are routine, directly checkable repairs, so the proof merits 6 rather than 7.",
+            "strengths": [
+              "Correct final characterization theta=180 degrees/k for integers k at least 2.",
+              "The peeling strategy for k at least 3 is coherent, finite, and produces a multiple of theta from any angle below theta.",
+              "The four-case invariant argument correctly captures all ways both children could acquire multiples of theta.",
+              "The proof accounts for Shan-Yu retaining either child by making one child immediately winning and controlling the other."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "The k=2 altitude construction is not admissible for an arbitrary labeling because an altitude foot may lie outside the opposite side; an appropriate choice of vertex must be stated."
+              },
+              {
+                "severity": "minor",
+                "description": "The necessity proof merely asserts the existence of an initial triangle with no angle a positive multiple of theta. This load-bearing existence claim should be supplied, for example by choosing (theta/2, theta/2, 180 degrees-theta)."
+              },
+              {
+                "severity": "minor",
+                "description": "In the third case of the necessity analysis, the algebra gives C=(n-m)theta, not C=(m-n)theta. Positivity still yields that C is a positive multiple after correcting the sign, so the invariant survives."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/03_r1_cycle_3/cases/imo2026_p4.t07_r01/resolver/temperature_0_4/gpu0/p4/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "In the k=2 case, the proof chooses P as the foot of the altitude from A without ensuring that this foot lies in the interior of BC, as required. This is repaired directly by choosing an appropriate vertex—for example, a largest-angle vertex—whose altitude is internal when the triangle does not already contain a right angle.",
+            "summary": "The characterization is correct, and both directions are essentially proved. The sufficiency strategy correctly produces a small angle, converts it into the multiple (k−1)θ, and peels multiples down to θ. The necessity argument establishes the invariant that a triangle with no positive-integer multiple of θ always has at least one similarly safe child. The proof has only directly repairable local defects, chiefly the unqualified altitude choice, a missing explicit justification that a safe starting triangle exists, and one harmless sign reversal in the third case of the invariant calculation.",
+            "strengths": [
+              "Correct final set θ=180°/k for integers k≥2.",
+              "The small-angle construction is explicitly checked for positivity and produces the crucial angle (k−1)θ.",
+              "The peeling argument correctly handles every positive multiple of θ.",
+              "The necessity proof exhausts all four ways both children could acquire a multiple of θ and thereby gives Shan-Yu a valid invariant strategy."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "For θ=90°, the perpendicular from an arbitrarily labeled vertex A need not meet the interior of BC. The proof should specify an internal altitude, obtainable by choosing a suitable vertex."
+              },
+              {
+                "severity": "minor",
+                "description": "The necessity proof asserts without construction that Shan-Yu can initially choose three nonmultiples of θ summing to 180°. This is easy to supply, for instance with (θ/2, θ/2, 180°−θ)."
+              },
+              {
+                "severity": "cosmetic",
+                "description": "In the third of the four necessity cases, nθ−C=mθ implies C=(n−m)θ, not C=(m−n)θ. Since C>0, the corrected equality still gives the claimed contradiction."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/05_resolver2/cases/imo2026_p4.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "In the case θ=90°, the proof says to drop AP perpendicular to BC without ensuring that the perpendicular foot lies on the side segment BC; this fails for an arbitrary choice of vertex A in an obtuse triangle. One must choose A so that the other two angles are acute, which is always possible unless the triangle is already right.",
+            "summary": "The characterization θ=180°/k is correct, and both directions are substantially proved. The peeling strategy and the invariant using angles that are not positive multiples of θ are valid. The remaining defects are directly repairable: the 90° case needs the correct choice of altitude, existence of an initial triangle with no multiple-of-θ angle is asserted rather than demonstrated, and one displayed calculation has a harmless sign reversal.",
+            "strengths": [
+              "Correctly identifies all and only the values θ=180°/k for integers k≥2.",
+              "For k≥3, gives a valid procedure to create an angle below θ, convert it into the multiple (k−1)θ, and peel that multiple down to θ.",
+              "The necessity argument correctly checks the four possible ways both children could contain multiples of θ, establishing that Shan-Yu can preserve the stated invariant."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "The θ=90° altitude argument omits the required choice of a vertex whose altitude meets the opposite side internally."
+              },
+              {
+                "severity": "minor",
+                "description": "The existence of a valid starting triangle having no angle equal to a positive multiple of θ is asserted without an example or argument; for instance, (θ/2, θ/2, 180°−θ) supplies one when 180°/θ is not an integer."
+              },
+              {
+                "severity": "cosmetic",
+                "description": "In the third case of the necessity calculation, the equation implies C=(n−m)θ, not C=(m−n)θ. Positivity still yields the intended contradiction."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "c26aeba2c627701292c2091b61da3bff935b428e18ce0abdf8af137b0bdfd912",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r01/06_resolver3/cases/imo2026_p4.t07_r01/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r01/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 4,
+      "candidate_id": "t07_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "Part 4 falsely infers that every forceable angle must arise in a single move as either 90° or half of an existing angle. A multi-step strategy can instead create and reduce integer multiples of the target; for example, θ=60° is forceable although it is not of the claimed dyadic form.",
+            "summary": "The submission correctly proves that all dyadic angles 180°/2^n are sufficient, including a valid construction forcing 90° and repeated angle bisection. However, its necessity argument is false, and the resulting classification omits every 180°/n with non-power-of-two n. The correct answer is θ=180°/n for every integer n≥2. Repairing the proof requires a fundamentally different invariant for necessity and a broader peeling strategy for sufficiency.",
+            "strengths": [
+              "Correctly shows that 90° can be forced from any triangle.",
+              "Correctly observes that bisecting an existing angle forces its half in both retained-child possibilities.",
+              "Thus establishes sufficiency for the genuine subfamily θ=180°/2^n."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The claim that Mulan can guarantee a newly appearing angle only through a one-move forcing configuration is unjustified and false; it ignores strategies whose intermediate triangles do not yet contain the final target."
+              },
+              {
+                "severity": "major",
+                "description": "The asserted reachable-set restriction R is therefore invalid. In particular, θ=60° is forceable by the correct theorem but excluded by the submitted conclusion."
+              },
+              {
+                "severity": "major",
+                "description": "The final answer gives only the dyadic subfamily instead of all θ=180°/n for integers n≥2."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "268d18adb39500c8fc3d51edded3aa17e03601f3e143faebeadef006d77330cd",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C1/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "Step 4 falsely asserts that a newly forceable angle must be either 90° or half of an existing angle; the one-move analysis does not justify this restriction on multi-move strategies.",
+            "summary": "The submission correctly models a cut and proves the sufficient subfamily θ=180°/2^n. However, its claimed necessity is false: every θ=180°/n with integer n≥2 is winning, including values such as 60° that are not in the submitted family. Establishing the correct classification requires a fundamentally different invariant for necessity and a broader recursive strategy for sufficiency.",
+            "strengths": [
+              "The angle description of the two child triangles is correct.",
+              "The proof that 90° can always be forced in one move is valid.",
+              "Bisecting a retained angle shows correctly that every θ=180°/2^n is sufficient."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The transition from the characterization of one-move forcing to a characterization of all angles forceable over arbitrarily many moves is unsupported and false."
+              },
+              {
+                "severity": "major",
+                "description": "The set R is not an invariant of the game. Multi-step strategies can create and exploit angles outside the asserted dyadic closure; in particular θ=60° is forceable although excluded by the claimed answer."
+              },
+              {
+                "severity": "substantial",
+                "description": "Consequently, the final classification omits all θ=180°/n for non-powers-of-two n≥3 and does not prove the required necessity direction."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "268d18adb39500c8fc3d51edded3aa17e03601f3e143faebeadef006d77330cd",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "incorrect",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The inference in Part 3 that every universally forceable angle must be obtained from 90° by integer division does not follow from the preceding one-move analysis and is false.",
+            "summary": "The submission correctly proves that Mulan can force 90° and then 90°/k, giving the valid subfamily θ=180°/(2k). Its one-move characterization also provides some meaningful progress. However, the claimed necessity is unsupported and the final classification is false: the actual winning values are θ=180°/n for every integer n≥2, including values such as 60° that the submission excludes. Establishing necessity requires a genuine invariant or safe-triangle argument, while sufficiency for odd n requires a different recursive strategy.",
+            "strengths": [
+              "Correctly shows that 90° can be forced in one move.",
+              "Correctly explains how an existing angle φ can be reduced to φ/m against either choice of retained triangle.",
+              "Correctly establishes sufficiency for the subfamily θ=90°/k.",
+              "The analysis of when a single cut can place θ in both children is essentially correct when θ is not already inherited."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "A characterization of one-move forcing is incorrectly promoted to a characterization of arbitrary finite adaptive strategies. Multi-step strategies can force θ=180°/n even when n is odd."
+              },
+              {
+                "severity": "major",
+                "description": "The final answer excludes valid values such as θ=60°=180°/3, so the stated if-and-only-if classification is wrong."
+              },
+              {
+                "severity": "major",
+                "description": "The proposed transcendence or linear-independence obstruction is neither precisely possible as stated, since the three triangle angles sum to 180°, nor shown to be preserved under Mulan's cuts; it cannot support the necessity direction."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "7ef38987bf43b9e6693efe143f6a149a5cc96eda449ee64934234cebaae150d3",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p4.t07_r02/resolver/temperature_0_4/gpu0/p4/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R1-C3/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "Step 2 does not establish that D is exactly the set of integer multiples of θ. The asserted difference closure may use an inadmissible cut, and even the stated closure properties would only show that D contains certain multiples, not that it contains no other angles.",
+            "summary": "The final classification is correct, and the repeated angle-splitting idea gives meaningful progress. However, the necessity rests on an unsupported characterization of D and an obstruction that is not proved to persist through later moves. The sufficiency also omits the legality conditions for its universal cut. These are central, not bounded, omissions, so the proof merits 3 under the harsh policy.",
+            "strengths": [
+              "States the correct answer θ=180°/k for integers k≥2.",
+              "Correctly observes that an angle φ can be successively split so as to force φ/k.",
+              "Recognizes that a valid strategy must control both possible triangles retained by Shan-Yu.",
+              "Moves toward the relevant integer-multiple obstruction used in the reference solution."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The equality D={nθ:n∈Z}∩(0°,180°) is simply asserted. No argument excludes non-multiple angles from D; doing so requires the load-bearing safe-triangle invariant or an equivalent recursive obstruction."
+              },
+              {
+                "severity": "major",
+                "description": "The final linear-independence argument only discusses a proposed one-move creation of D and does not justify an invariant after Shan-Yu selects a child. Moreover, α+β+γ=180° makes the stated joint rational independence of α,β,γ,θ,180° impossible."
+              },
+              {
+                "severity": "substantial",
+                "description": "In Step 3 the proposed split is legal only when γ<φ1<α+γ. The mere existence of complementary φ1,φ2∈D does not guarantee this, and the proof neither relabels the triangle nor chooses an appropriate multiple of θ to establish the inequalities."
+              },
+              {
+                "severity": "substantial",
+                "description": "The claimed closure of D under differences uses a split α=φ1+(α−φ1) without proving α>φ1; hence the prescribed cut need not exist."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "03f58221b4ba564525c0f8a67aba120320432f6addb53c630b0a777bac221de0",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/05_resolver2/cases/imo2026_p4.t07_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The necessity argument assumes that α, β, θ, and 180° can be linearly independent over Q whenever θ≠180°/k. This is impossible whenever θ/180° is rational, including excluded values such as θ=72°, so a large class of necessary cases is not addressed.",
+            "summary": "The claimed answer is correct, and the sufficiency direction contains a substantially valid angle-peeling strategy. However, the necessity direction—the central argument excluding every other θ—is invalid. Its proposed initial triangle does not exist for rational nonreciprocal targets, its coset calculation has a sign error, and the asserted preservation of linear independence after Shan-Yu's choice is neither proved nor generally justified. Establishing necessity requires a fundamentally different invariant or obstruction.",
+            "strengths": [
+              "Correctly identifies the answer θ=180°/k for integers k≥2.",
+              "Correctly observes that an angle kθ can be peeled into θ and (k−1)θ, giving a finite recursive winning strategy.",
+              "The sufficiency construction for an angle below θ correctly aims to make one child contain θ and the other contain 180°−θ=(k−1)θ.",
+              "The remainder-based descent in the all-angles-at-least-θ case is broadly coherent."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The Q-linear-independence construction in the necessity direction is unavailable whenever θ/180° is rational. The hypothesis θ≠180°/k does not imply irrationality."
+              },
+              {
+                "severity": "major",
+                "description": "The conditions for both children to contain an angle in V are calculated incorrectly. From 180°−φ₁−β∈V one obtains φ₁∈−β+V, not β+V. Indeed, choosing a legal φ₁ in −β+V makes the newly created third angle of each child lie in V; such choices exist because V contains the dense set 180°Q. Thus the claimed first-move obstruction is false."
+              },
+              {
+                "severity": "major",
+                "description": "The statement that the retained child's angles remain linearly independent with θ and 180° is merely asserted. No invariant is formulated or proved, so even the irrational case is not established."
+              },
+              {
+                "severity": "minor",
+                "description": "In the small-angle sufficiency construction, legality requires choosing α as the larger of the two other angles so that α+γ>θ. This choice and the resulting positivity of α₁ are omitted, although the omission is directly repairable."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "de10ebc3d1a981800998ab3b24c0d0e8f4bfbf16b7197558dd7aa84c5f7740a3",
+          "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/model/lanes/t07_r02/06_resolver3/cases/imo2026_p4.t07_r02/third_ungrouped_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p4/strict_scores/R3/t07_r02/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 5,
+      "candidate_id": "t10_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The inference that continuity of a on S=Im(f), together with constancy on each connected component of S, makes a locally constant on S is false: connected components of an arbitrary subset of R need not be relatively open.",
+            "summary": "The candidate family is verified correctly, and the proof validly derives f(f(y))=2f(y)-y, invariance a(f(y))=a(y), nonnegativity of a, and useful quadratic comparison bounds. However, the sole argument establishing global constancy of a rests on a false topological inference. It neither proves that different components of Im(f) have the same defect value nor excludes coexistence of zero and positive defect values. Those are the central difficulties of the problem and require substantial orbit-comparison and separation arguments. Thus the correct final classification is not proved as submitted.",
+            "strengths": [
+              "Correctly verifies every function f(x)=x+C with C>=0.",
+              "Correctly obtains the iterate formula f^(n)(y)=y+n a(y) and hence a(y)>=0.",
+              "Correctly derives two-sided estimates comparing a(x) with a(z) for z in Im(f)."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "Continuity on Im(f) and constancy on its connected components do not imply local constancy there; the components may accumulate and need not be open."
+              },
+              {
+                "severity": "major",
+                "description": "Even local constancy of a on Im(f) would not, merely from a(x)=a(f(x)), imply local constancy on the whole domain without continuity or another control on f. Consequently the decisive conclusion that a is globally constant is unsupported."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "6192634914cc9e90ff2b92ac38050af2fddc9c90c9c51f924a1595e142da10c8",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p5.t10_r01/resolver/temperature_0_4/gpu0/p5/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p5.t10_r01/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 5,
+      "candidate_id": "t10_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "After proving continuity only at points of the range R_f, the submission asserts that injectivity makes f strictly increasing. Injectivity implies monotonicity only when continuity on the entire domain has been established; continuity merely on R_f is insufficient.",
+            "summary": "The solution correctly identifies and verifies f(x)=x+c with c≥0, and it derives the important orbit identity ε(f(y))=ε(y), the nonnegativity ε≥0, injectivity, and a useful estimate on ε over the range. However, the uniqueness proof then relies on an invalid monotonicity inference. The subsequent claim that any jump propagates with size 2^nδ is neither proved nor generally justified by the functional identity, so global continuity and the assertion that R_f is an interval remain unsupported. Consequently, the final constancy argument cannot be applied. Repair requires a new load-bearing argument comparing forward orbits and excluding coexistence of zero and positive defects.",
+            "strengths": [
+              "Correctly squares and combines the original inequalities.",
+              "Correctly verifies every function f(x)=x+c for c≥0.",
+              "Correctly obtains f(f(y))+y=2f(y), orbit invariance of ε, and ε(y)≥0.",
+              "Correctly proves injectivity and derives |ε(x)-ε(z)|≤(√x-√z)^2 for x,z in R_f.",
+              "Correctly observes that the displayed squeeze establishes continuity at each point of R_f."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The inference from injectivity plus continuity on R_f to strict monotonicity is false and is essential to the remainder of the proof."
+              },
+              {
+                "severity": "major",
+                "description": "The asserted propagation of a jump to f^{(n)}(x_0) with size 2^nδ is unproved; the vague exponential-versus-linear comparison therefore does not establish continuity on the full domain."
+              },
+              {
+                "severity": "substantial",
+                "description": "Without global continuity and monotonicity, R_f has not been shown to be an interval, so the partition argument proving ε constant on R_f—and hence everywhere—has no valid foundation."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "19e0842f9da03d571ea5f58ad0841727db1dc7f5a113e18836b7c953f9957260",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/01_r1_cycle_1/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The exclusion of simultaneous zero and positive defect values is invalid: from s_n→∞ and s_{n+1}-s_n→0 it does not follow that the increasing sequence s_n enters the fixed interval around √x_0; it may start above that interval and remain above it forever.",
+            "summary": "The submission correctly derives defect invariance, nonnegativity, and—up to a small Diophantine-approximation omission—the equality of all positive defect values. However, its decisive argument ruling out coexistence of defects 0 and c is false. Thus the correct classification f(x)=x+c is not proved as submitted; a substantive local-control and connectedness argument is still needed. The mandatory cap of 3 applies because a false inference replaces this central step.",
+            "strengths": [
+              "Correctly squares and reformulates both inequalities.",
+              "Correctly obtains f(f(y))+y=2f(y), invariance ε(f(y))=ε(y), and ε(y)≥0 via forward iteration.",
+              "Derives a useful bound |ε(x)-ε(z)|≤(√x-√z)^2 on the range and gives a substantially valid orbit argument showing all positive range defects are equal.",
+              "Correctly verifies every function f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The proof that S cannot coexist with a zero-defect range point relies on the false claim that an increasing unbounded sequence with vanishing increments must enter an arbitrary fixed bounded interval. If its initial term lies above the interval, it never enters. This leaves the mixed-defect case completely unresolved."
+              },
+              {
+                "severity": "minor",
+                "description": "In the irrational-ratio case, density is used without explicitly producing a sequence of pairs n,m→∞ with bounded orbit-point difference. Such a sequence follows from standard Diophantine approximation, but the submitted sentence does not fully justify the limiting step."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "e43220e816e803e3450ba6d1f6eac6d9edabdd77b8826ce9fb878bce1ab33b1c",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/02_r1_cycle_2/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claim that the two arithmetic progressions x_0+nc_1 and z_0+mc_2 can be chosen arbitrarily close is false in general; for example, equal step sizes with noncongruent initial terms remain a fixed positive distance apart. This unsupported claim is used decisively to prove equality of all positive defect values.",
+            "summary": "The submission finds the correct family and correctly derives defect invariance, nonnegativity, and a useful estimate on the range. However, its proof of constancy contains two load-bearing invalid inferences. First, arbitrary closeness of two arithmetic progressions is not guaranteed; the valid argument must instead choose terms at uniformly bounded distance and show their square-root difference tends to zero. Second, the assertion that an unbounded set Z must equal all of (0,∞) is false. The mixed-defect case requires an additional argument that S is relatively open, followed by connectedness. Because false decisive inferences replace central parts of the classification, the stated strict cap limits the score to 3.",
+            "strengths": [
+              "Correctly squares the inequalities and obtains the equivalent two-sided algebraic bounds.",
+              "Correctly derives f(f(y))+y=2f(y), defect invariance, the orbit formula, and nonnegativity of the defect.",
+              "Derives a valid bound |ε(x)-ε(z)|≤(√x-√z)^2 for points in the range.",
+              "Correctly verifies every function f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The arithmetic-progressions argument assumes arbitrary closeness, which need not occur. Only uniformly bounded separation is guaranteed, and the necessary limiting calculation is absent."
+              },
+              {
+                "severity": "major",
+                "description": "In the mixed-defect argument, sup Z=∞ does not imply Z=(0,∞). Thus coexistence of zero and positive defect values is not excluded as written; relative openness of S and connectedness must still be established."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/03_r1_cycle_3/cases/imo2026_p5.t10_r02/resolver/temperature_0_4/gpu0/p5/t10_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C3/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "local_nontrivial",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "In Step 4, the proof falsely asserts that two arbitrary arithmetic progressions can be made arbitrarily close; commensurable progressions with incompatible residues can remain a fixed positive distance apart.",
+            "summary": "The submitted solution reaches the correct classification and establishes several important preliminary facts, but two decisive constancy arguments are invalid as written. The first can be repaired by choosing indices whose orbit points remain uniformly bounded apart, which is enough for their square-root difference to tend to zero. More seriously, the assertion that an unbounded set Z must equal all of (0,∞) does not follow from the preceding work. A connected-component or two-sided openness argument is required to exclude coexistence of zero and positive defects. Under the mandated harsh policy, these unsupported central inferences cap the score at 3.",
+            "strengths": [
+              "Correctly squares the inequalities and derives the two-sided algebraic form.",
+              "Correctly obtains f(f(y))+y=2f(y), invariance of the defect, the orbit formula, and nonnegativity of the defect.",
+              "Derives a useful defect estimate on the range of f.",
+              "Correctly verifies every function f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The claim that the progressions x0+nc1 and z0+mc2 can always be made arbitrarily close is false. Although a nearest-integer choice gives bounded distance and would suffice after an additional calculation, that argument is not supplied."
+              },
+              {
+                "severity": "major",
+                "description": "The mixed-defect case is not eliminated: from sup Z=∞ the proof simply concludes Z=(0,∞), which is invalid. The neighborhood property only shows that Z is open; unbounded open subsets need not be the whole interval. A connected-component argument or a proof that both Z and S are relatively open is load-bearing and missing."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/05_resolver2/cases/imo2026_p5.t10_r02/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R2/t10_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "local_nontrivial",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The proof of constancy among positive defect values relies on the false assertion that two arbitrary arithmetic progressions x₀+nc₁ and z₀+mc₂ can be chosen arbitrarily close while tending to infinity; for rational c₁/c₂ their distances may be bounded away from zero.",
+            "summary": "The final classification is correct, and the iteration argument establishing ε≥0 is sound. However, two decisive classification steps are unsupported: constancy of positive defect values uses a false approximation claim, and the exclusion of mixed defect levels asserts without justification that an unbounded set Z must equal all positive reals. These are load-bearing gaps, so the proof does not establish the answer as submitted.",
+            "strengths": [
+              "Correctly converts the original inequalities into squared form.",
+              "Correctly derives f(f(y))+y=2f(y), invariance of ε along forward orbits, and ε(y)≥0.",
+              "Derives a useful estimate |ε(x)−ε(z)|≤(√x−√z)² on the range of f.",
+              "Correctly verifies every function f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The claim that the two forward arithmetic progressions can be made arbitrarily close is false in general. One can repair the strategy by choosing indices whose terms remain at bounded distance and observing that their square-root difference tends to zero, but that argument is not written."
+              },
+              {
+                "severity": "major",
+                "description": "In excluding coexistence of ε=0 and ε=c, the statement “if sup Z=∞, then Z=R_{>0}” does not follow from unboundedness. A further clopen/connectedness or interval-propagation argument is required, and this step is essential to the conclusion."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t10_r02/06_resolver3/cases/imo2026_p5.t10_r02/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t10_r02/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 5,
+      "candidate_id": "t07_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The proof concludes that g is constant on S from a quadratic continuity estimate and the assertion g'=0 on S, but S is only the range of an arbitrary function and is not shown to be an interval, connected, dense, or even to contain neighborhoods of its points.",
+            "summary": "The submitted solution correctly obtains orbit invariance g(f(y))=g(y), the iterate formula f^{(n)}(y)=y+ng(y), nonnegativity of g, and a useful estimate on the range S. However, its decisive step proving constancy is invalid: differentiability on an arbitrary subset S is not established, and even a function with zero relative derivative on a disconnected set need not be constant. Repairing this requires a substantial orbit-comparison or connectedness argument, including exclusion of mixed zero and positive defect values. The final family is correct, and its verification is valid, but necessity is not proved as submitted.",
+            "strengths": [
+              "Correctly derives f(f(y))=2f(y)-y and hence g(f(y))=g(y).",
+              "Correctly proves f^{(n)}(y)=y+ng(y) and uses positivity to obtain g(y)>=0.",
+              "Correctly derives |g(x)-g(z)|<=(sqrt(x)-sqrt(z))^2 for x,z in the range S.",
+              "Correctly verifies that every f(x)=x+c with c>=0 satisfies both inequalities."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The implication from the estimate on S to g being constant on S is false without proving suitable connectedness or chainability of S. The claimed derivative is not ordinarily defined on an arbitrary range S; isolated or disconnected components invalidate the argument. Moreover, zero derivative on a disconnected set would not imply global constancy. This unsupported inference is the central necessity argument, and the preceding iterate calculation explicitly fails to yield a contradiction when two defect values differ."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "53122980d795d192e722bfcf9390c27555ce6cb809b51c53e52e66e1c27c8430",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/01_r1_cycle_1/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "The claim that repeatedly applying the neighborhoods around points of B forces B=(0,∞) is asserted without a rigorous propagation or connectedness argument.",
+            "summary": "The solution correctly derives orbit invariance, nonnegativity of g=f-id, equality of all positive defect values, and verifies the resulting translations. The only notable omission is the final justification excluding coexistence of zero and positive defect values. This can be repaired directly: the displayed neighborhood property makes nonempty B both open and closed in (0,∞), or one can explicitly propagate intervals in both directions. Thus the classification f(x)=x+c, c≥0, is supported.",
+            "strengths": [
+              "Correctly obtains g(f(y))=g(y), the iterate formula f^n(y)=y+ng(y), and g(y)≥0.",
+              "Uses a valid orbit-approximation argument to prove that all positive values of g coincide.",
+              "Correctly verifies every function f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "The load-bearing sentence 'By iterating this expansion, B must be R_{>0}' is not demonstrated. A short rigorous argument showing that B has no positive boundary point, or that B is clopen, is needed."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "The assertion that repeatedly applying the neighborhoods contained in B forces B=(0,∞) is not explicitly justified.",
+            "summary": "The classification f(x)=x+c, c≥0, is correctly supported. The iteration identity, nonnegativity of g, equality of all positive defect values, and converse verification are sound. The sole material omission is a short local-to-global argument excluding coexistence of zero and positive defects.",
+            "strengths": [
+              "Correctly derives g(f(y))=g(y), the iterate formula f^(n)(y)=y+ng(y), and hence g≥0.",
+              "Uses asymptotically close forward orbits to prove that all positive values of g coincide.",
+              "Correctly verifies every translation f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "From the fact that each w∈B has (w−2√(wc),w+2√(wc))∩(0,∞)⊆B, the proof simply says iteration gives B=(0,∞). A rigorous completion should take the connected component of B containing w₀ and rule out finite positive endpoints using the same neighborhood property. This is short and direct, but it is load-bearing in eliminating the mixed case."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/02_r1_cycle_2/cases/imo2026_p5.t07_r01/resolver/temperature_0_4/gpu0/p5/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C3/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R2",
+          "state": "scored",
+          "score": 7,
+          "grade": {
+            "score": 7,
+            "verdict": "pass",
+            "answer_supported": true,
+            "dependency_impact": "none",
+            "repair_complexity": "none",
+            "olympiad_treatment": "full_credit",
+            "first_issue": "None.",
+            "summary": "The submission gives a complete equivalent proof that all solutions are exactly f(x)=x+c with c≥0. It correctly derives orbit invariance and nonnegativity of g=f-id, proves equality of all positive defect values using nearby forward-orbit points, excludes coexistence of zero and positive defects via the stated neighborhood-propagation argument, and verifies the converse.",
+            "strengths": [
+              "Correctly obtains g(f(y))=g(y) and f^(n)(y)=y+ng(y), hence g(y)≥0.",
+              "Derives the decisive range estimate |g(x)-g(z)|≤(√x-√z)^2 and uses it correctly to equate positive defect values.",
+              "Correctly rules out mixed defect levels; the iteration of the explicit neighborhoods is routine and sufficient.",
+              "Checks both inequalities for f(x)=x+c by exact square identities."
+            ],
+            "errors": [],
+            "contract_consistent": true,
+            "full_credit": true
+          },
+          "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/05_resolver2/cases/imo2026_p5.t07_r01/gemma_ungrouped_ledger_resolve/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R2/t07_r01/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R3",
+          "state": "scored",
+          "score": 6,
+          "grade": {
+            "score": 6,
+            "verdict": "minor_gap",
+            "answer_supported": true,
+            "dependency_impact": "local",
+            "repair_complexity": "routine_direct",
+            "olympiad_treatment": "minor_deduction",
+            "first_issue": "The claim that the neighborhood-expansion property forces a nonempty set B to equal all of (0,∞) is asserted without proof.",
+            "summary": "The orbit argument, nonnegativity of g, comparison of positive defect values, exclusion of mixed defect levels, and converse verification are mathematically sound. The only notable omission is a short propagation argument: the connected component of B containing w₀ cannot have a finite positive endpoint, since the radii 2√(wc) stay bounded away from zero near such an endpoint. Thus that component is (0,∞). This is routine and directly repairable.",
+            "strengths": [
+              "Correctly derives g(f(y))=g(y), the iterate formula f^(n)(y)=y+ng(y), and hence g≥0.",
+              "Correctly proves that all positive values of g coincide by comparing suitably close forward-orbit points.",
+              "Correctly obtains the local separation between the zero-defect and positive-defect sets.",
+              "Correctly verifies every function f(x)=x+c with c≥0."
+            ],
+            "errors": [
+              {
+                "severity": "minor",
+                "description": "The sentence 'By iterating this expansion, B must be R_{>0}' omits the direct connected-component/endpoint justification. It is true, but under a harsh proof-as-submitted standard it should be supplied."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r01/06_resolver3/cases/imo2026_p5.t07_r01/promoted_unchanged/third_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t07_r01/score/summary.json",
+          "recovery": false
+        }
+      ]
+    },
+    {
+      "problem": 5,
+      "candidate_id": "t07_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The proof does not justify passing from differentiability of g at points in the range of f to differentiability at an arbitrary y. It assumes, circularly, both that f(y+ε)→f(y) and effectively that g'(y) exists and is finite.",
+            "summary": "The submitted answer is correct, and the proof correctly verifies all translations f(x)=x+c, derives f(f(x))=2f(x)-x, proves orbit invariance g(f(x))=g(x), and establishes g≥0. However, the decisive uniqueness step is invalid: differentiability with derivative zero on the range of f does not imply differentiability everywhere, especially without continuity or local control of f. Repairing this requires a new load-bearing argument comparing defect values and excluding mixed levels. Under the stated harsh policy, this unsupported central inference caps the score at 3.",
+            "strengths": [
+              "Correctly verifies that every f(x)=x+c with c≥0 satisfies both inequalities.",
+              "Correctly obtains f(f(y))=2f(y)-y and hence g(f(y))=g(y).",
+              "Correctly derives f^n(x)=x+ng(x) and uses positivity to prove g(x)≥0.",
+              "Develops potentially useful quadratic local control of g near points f(y)."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "From g(f(t))=g(t) and g'(f(y))=0, the proof claims g'(y)=0. Differentiability at f(y) can only be invoked if f(y+ε)→f(y), which has not been proved. Moreover, the computation explicitly assumes that g'(y) exists in order to conclude that it exists and equals zero. This circular step is the entire argument that g is constant."
+              },
+              {
+                "severity": "minor",
+                "description": "The asserted inequality sqrt(1+u)≥1+u/2-u²/8 for every u>-1 is false for negative u near 0, so the claimed two-sided quadratic estimate is not established as written. A modified local estimate with a different constant could repair this point, but it would not fix the central uniqueness gap."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "54a30ec37ef9533df62c673797aeb5216303138033d3b73e8e4197ce9b83ef50",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r02/01_r1_cycle_1/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C1/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "local_nontrivial",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claim that continuity of g at f(y), together with g(f(y))=g(y), implies continuity of g at y is unjustified and false in general; equality of function values does not transfer neighborhood behavior.",
+            "summary": "The classification is correct, and the proof validly establishes the candidate family, the iterate identity, nonnegativity of g, and a quadratic local estimate at points in the image of f. However, the decisive extension of this local regularity to every positive point relies on an invalid continuity inference. The subsequent argument that h(epsilon) tends to zero and must lie near the smaller quadratic root therefore lacks its necessary premise, so constancy of g is not proved as submitted.",
+            "strengths": [
+              "Correctly verifies every function f(x)=x+c with c>=0.",
+              "Correctly derives f(f(y))=2f(y)-y, invariance g(f(x))=g(x), the iterate formula, and g(x)>=0.",
+              "The Taylor estimates do establish continuity and derivative zero at each point belonging to the image of f."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "Continuity at f(y) cannot be pulled back to continuity at y merely from g(f(y))=g(y). This is load-bearing because the proof then uses h(epsilon)->0 to apply the local quadratic estimate at f(y) and select the small solution branch."
+              },
+              {
+                "severity": "minor",
+                "description": "The final quadratic-root discussion is informal; once continuity at y is separately proved, the stated O(epsilon^2) conclusion can be made rigorous by a short smallness argument."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "768cc88f92dfe933e60806ce70e6367c79bf161ccb4ea03a870427ab5935083b",
+          "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_fusion_gate_20260908/lanes/t07_r02/02_r1_cycle_2/cases/imo2026_p5.t07_r02/resolver/temperature_0_4/gpu0/p5/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R1-C2/t07_r02/score/summary.json",
+          "recovery": false
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "gate",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 6,
+      "candidate_id": "t10_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 2,
+          "grade": {
+            "score": 2,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claimed uniform bound on primes occurring in the minimal hitting sets is not proved: saying that a large prime will eventually fail to divide some term does not exclude that prime from a particular minimal hitting set, and the unspecified constant N provides no bound at all.",
+            "summary": "The submission correctly proves a uniform gap bound and gives a useful hitting-set description of admissible successors. However, the central finiteness claim is unsupported, so the finite-state argument cannot begin. Moreover, even eventual periodicity would not imply pure periodicity by the asserted minimality argument; eliminating the preperiod is another unproved load-bearing step. Thus only limited correct progress is established.",
+            "strengths": [
+              "Correctly observes that the prime divisors of a_1 hit every sequence term.",
+              "Correctly derives the uniform bound a_{n+1}-a_n<=M_1.",
+              "Gives an essentially correct characterization of admissible integers using minimal prime hitting sets."
+            ],
+            "errors": [
+              {
+                "severity": "substantial",
+                "description": "The assertion that every inclusion-minimal hitting set H has |H|<=|P_1| is false in general; minimal transversals can be larger than another available hitting set."
+              },
+              {
+                "severity": "major",
+                "description": "No uniform finite set of primes containing all primes from all minimal hitting sets is established. The argument involving p>a_k only concerns one term and does not justify the existence of a fixed N or P_bound."
+              },
+              {
+                "severity": "major",
+                "description": "The passage from eventual periodicity to pure periodicity is merely asserted. Forward determinism or greedy minimality does not by itself rule out a preperiod, and no backward or global accepted-set argument is supplied."
+              },
+              {
+                "severity": "minor",
+                "description": "The displayed definition L=sum_{i=n+1}^{n+T}g_i has an index shift and telescopes to a_{n+T+1}-a_{n+1}, not a_{n+T}-a_n."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "31754efffdff90e0580e40f24e17d7195b7dd502ab2f04f1f450719bfc86f426",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t10_r01/resolver/temperature_0_4/gpu0/p6/t10_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r01/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 6,
+      "candidate_id": "t10_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claimed eventual stabilization of \\(\\mathcal G_n\\) does not follow from the preceding argument. Although every minimal hitting set \\(H\\) lies in \\(\\bigcup\\mathcal G_n\\), the set actually added is \\(S_{n+1}=H^*\\cup\\mathcal P(k)\\), which may introduce new primes and be incomparable with every old member; thus there is no fixed finite universe and no demonstrated decreasing process.",
+            "summary": "The solution correctly reformulates admissibility using hitting sets and gives a valid periodicity argument conditional on eventual stabilization of the minimal prime-support family. However, stabilization is the central finiteness theorem of the problem, and the submitted justification for it is invalid. The new support is not generally a minimal hitting set and may contain arbitrarily new prime factors, so the asserted finite-state argument cannot be applied. Establishing stabilization requires a substantially new, load-bearing finiteness argument. Under the mandatory cap for an unjustified decisive inference replacing the central argument, the proof merits 3.",
+            "strengths": [
+              "Correctly translates the gcd conditions into a hitting-set formulation.",
+              "The argument that \\(\\mathcal G_n\\) remains intersecting is essentially correct despite imprecise wording about its updated members.",
+              "The formula expressing the next admissible integer through minimal hitting sets is sound.",
+              "Once a finite stabilized family is assumed, the congruence-periodicity and consecutive-enumeration argument is substantially correct."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "The proof of eventual stabilization is invalid: finiteness of the subsets of the stage-dependent set \\(\\bigcup\\mathcal G_n\\) gives no global bound, because subsequent supports can introduce new primes through the quotient \\(k\\)."
+              },
+              {
+                "severity": "major",
+                "description": "The statement that the process adds minimal hitting sets and replaces elements by smaller sets misdescribes the process. It adds \\(S_{n+1}\\), which may strictly contain \\(H^*\\), may be incomparable with all existing members, and may enlarge rather than decrease the minimal family."
+              },
+              {
+                "severity": "substantial",
+                "description": "Several later claims, including that every \\(S_k\\) contains a member of the limiting family and that hitting the limit implies hitting every earlier \\(\\mathcal G_n\\), are asserted without proof; they would follow only after a valid stabilization-and-containment argument."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "9bff7d3bd750f092048183db4af424bcbc775dff3c5b07a4587fe1609f599d80",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t10_r02/resolver/temperature_0_4/gpu0/p6/t10_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t10_r02/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 6,
+      "candidate_id": "t07_r01",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The claim that the nondecreasing sequence L_{min,n} must stabilize because otherwise it would eventually exceed a_n is unjustified: both sequences may grow indefinitely, and nothing proved forces L_{min,n} to overtake a_n.",
+            "summary": "The submission gives a useful covering-modulus characterization of the greedy step and a valid conditional finite-state periodicity argument. However, it never proves the crucial finiteness/stabilization needed for that reduction, and its later attempt to extend eventual periodicity to all indices contains further invalid inferences. The theorem is therefore not established.",
+            "strengths": [
+              "Correctly expresses a_{n+1} as the least next multiple among covering moduli.",
+              "Correctly observes that L_{min,n} is nondecreasing.",
+              "If a fixed finite family of covering moduli were available, the argument that the increment function is periodic modulo their common multiple and hence yields eventual translation-periodicity is essentially sound."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "Unbounded growth of L_{min,n} does not imply that it eventually exceeds the independently growing sequence a_n. This unsupported assertion replaces the central finiteness argument."
+              },
+              {
+                "severity": "major",
+                "description": "Even assuming L_{min,n} stabilizes, it is false that every member of L_n must eventually be formed using only a subset of Q*. Coverings may select prime divisors outside Q* from later terms, so the claimed fixed finite family L is not obtained."
+              },
+              {
+                "severity": "major",
+                "description": "The assertion L_{n+T}⊆L_n is false; only every element of L_{n+T} is divisible by some element of L_n. Although that particular step might be repaired using such a divisor, the written inference is invalid."
+              },
+              {
+                "severity": "major",
+                "description": "From d_n≤d_{n+T}≤d_{n+2T}≤⋯ and eventual equality of successive tail values, one obtains only that the chain eventually becomes constant, not that its eventual value equals d_n. Thus the final backward extension from eventual periodicity to all n is unsupported."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "fa45003e1a40603c6467c4fc4ac0eb0e1d707580c478686147dde27ee64cfc96",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t07_r01/resolver/temperature_0_4/gpu0/p6/t07_r01/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r01/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    },
+    {
+      "problem": 6,
+      "candidate_id": "t07_r02",
+      "checkpoints": [
+        {
+          "checkpoint": "R1-C1",
+          "state": "scored",
+          "score": 3,
+          "grade": {
+            "score": 3,
+            "verdict": "major_gap",
+            "answer_supported": false,
+            "dependency_impact": "load_bearing",
+            "repair_complexity": "new_idea",
+            "olympiad_treatment": "major_deduction",
+            "first_issue": "The inference that, because the gap a_{n+1}-a_n is at most m^*, the minimizing multiple must come from some modulus m in M_n with m≤m^*, is false. A modulus much larger than m^* can have a multiple very close to a_n, so stabilization of M_n^{small} does not yield the asserted fixed recurrence.",
+            "summary": "The proof correctly finds a permanent hitting set from the prime divisors of a_1 and consequently obtains bounded gaps. However, its eventual-periodicity argument depends on an invalid restriction to bounded hitting-set products. Independently, the final extension from eventual translation-periodicity to all indices is unsupported: monotonicity of M_n does not rule out a finite preperiod, and the claimed contradiction applies a tail identity outside the range where it was proved. Repairing these issues requires the substantial finiteness and pure-periodicity machinery absent from the submission.",
+            "strengths": [
+              "Correctly observes that the prime support of a_1 hits every later prime support.",
+              "Correctly deduces the uniform gap bound a_{n+1}-a_n≤rad(a_1).",
+              "The conditional claim that a recurrence based on a fixed finite set of moduli is translation-equivariant is sound."
+            ],
+            "errors": [
+              {
+                "severity": "major",
+                "description": "Bounded output gaps do not imply that a minimizing admissible integer is witnessed by a hitting-set product bounded by m^*. Thus M_n^{small} may stabilize while larger moduli continue to affect the greedy choices."
+              },
+              {
+                "severity": "major",
+                "description": "The passage from eventual periodicity to pure periodicity is merely asserted. Uniqueness of the sequence and the inclusions M_n⊇M_{n+T} do not force d_n=d_{n+T} before n_0, and the proposed summation contradiction relies on periodicity not established for those early indices."
+              }
+            ],
+            "contract_consistent": true,
+            "full_credit": false
+          },
+          "proof_sha256": "963c4e8881c4157c5984abec55814c39a3c3ca9f8fd703a50b62bc135a6eccb2",
+          "proof_path": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/cases/imo2026_p6.t07_r02/resolver/temperature_0_4/gpu0/p6/t07_r02/resolved_proof.md",
+          "score_summary": "/opt/proof-workshop/runs/v0290r3_rejected_cycle1_synthesis_20260908/strict_scores/imo2026_p6.t07_r02/score/summary.json",
+          "recovery": true
+        },
+        {
+          "checkpoint": "R1-C2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R1-C3",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R2",
+          "state": "not_run",
+          "score": null
+        },
+        {
+          "checkpoint": "R3",
+          "state": "not_run",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "best_observed": {
+    "1": 7,
+    "2": 4,
+    "3": 2,
+    "4": 6,
+    "5": 7,
+    "6": 3
+  },
+  "sum_best_observed": 29,
+  "sum_best_denominator": 42
+}

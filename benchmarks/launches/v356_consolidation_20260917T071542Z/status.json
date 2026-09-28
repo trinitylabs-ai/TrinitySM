@@ -1,0 +1,193 @@
+{
+  "state": "completed",
+  "updated_at": "2026-09-17T07:44:58.713996+00:00",
+  "trials": [
+    {
+      "candidate": "p2",
+      "case": "p2",
+      "problem_id": "imo2026_p2",
+      "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+      "launch": "/opt/proof-workshop/benchmarks/launches/v356_consolidation_20260917T071542Z/p2",
+      "experiment": "/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z",
+      "mode": "selected_certificate_resume",
+      "previous_score": 6,
+      "baseline_score": 4,
+      "supervisor": {
+        "state": "completed",
+        "completed_at": "2026-09-17T07:44:52.681644+00:00",
+        "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+        "outcome": "REWRITTEN_AUDIT_PASS",
+        "grade": {
+          "score": 6,
+          "verdict": "minor_gap",
+          "answer_supported": true,
+          "dependency_impact": "load_bearing",
+          "repair_complexity": "routine_direct",
+          "olympiad_treatment": "minor_deduction",
+          "first_issue": "The proof uses dot/cross as the cotangent of an unsigned angle, although the correct general formula has an absolute value on the cross product; it only broadly asserts, without explicitly verifying, that the relevant oriented cross products have matching signs.",
+          "summary": "The coordinate reduction, circumcenter formula, target polynomial T, and explicit algebraic certificate form a valid route to the conclusion. The remaining issue is a routine but load-bearing orientation check: for each of the three angle equalities, the two signed cross products must be shown to have the same sign before the displayed polynomial equation follows. This can be repaired directly from positive barycentric coordinates supplied by the interiority hypotheses.",
+          "strengths": [
+            "Correctly reduces OM=ON to the vanishing of an explicit polynomial T.",
+            "Correctly establishes that A,K,L are noncollinear and hence that the circumcenter formulas have nonzero determinant denominator.",
+            "Supplies the three expanded angle polynomials rather than merely claiming that an elimination exists.",
+            "Provides a fully specified Nullstellensatz-style certificate for the decisive implication E1=E2=E3=0 implies T=0 under the two guards."
+          ],
+          "errors": [
+            {
+              "severity": "minor",
+              "description": "For unsigned angles, cot(angle(u,v))=(u\u00b7v)/|u\u00d7v|, not generally (u\u00b7v)/(u\u00d7v). The proof needs three explicit sign checks, as well as a brief derivation of the two guards, from the relevant positive barycentric representations. These checks are straightforward but necessary because the polynomial equations are the premises of the central certificate."
+            }
+          ],
+          "contract_consistent": true,
+          "full_credit": false
+        },
+        "report": "/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/reports/run_summary.json"
+      },
+      "native_stage": "completed",
+      "native_state": "completed",
+      "outcome": "REWRITTEN_AUDIT_PASS",
+      "drafts_returned": 0,
+      "compiled": 0,
+      "calls": [
+        {
+          "stage": "modular_exact_evidence_whole_proof_rewrite",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_audit",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_rewrite",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_audit",
+          "state": "completed"
+        }
+      ],
+      "external_grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "The proof uses dot/cross as the cotangent of an unsigned angle, although the correct general formula has an absolute value on the cross product; it only broadly asserts, without explicitly verifying, that the relevant oriented cross products have matching signs.",
+        "summary": "The coordinate reduction, circumcenter formula, target polynomial T, and explicit algebraic certificate form a valid route to the conclusion. The remaining issue is a routine but load-bearing orientation check: for each of the three angle equalities, the two signed cross products must be shown to have the same sign before the displayed polynomial equation follows. This can be repaired directly from positive barycentric coordinates supplied by the interiority hypotheses.",
+        "strengths": [
+          "Correctly reduces OM=ON to the vanishing of an explicit polynomial T.",
+          "Correctly establishes that A,K,L are noncollinear and hence that the circumcenter formulas have nonzero determinant denominator.",
+          "Supplies the three expanded angle polynomials rather than merely claiming that an elimination exists.",
+          "Provides a fully specified Nullstellensatz-style certificate for the decisive implication E1=E2=E3=0 implies T=0 under the two guards."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "For unsigned angles, cot(angle(u,v))=(u\u00b7v)/|u\u00d7v|, not generally (u\u00b7v)/(u\u00d7v). The proof needs three explicit sign checks, as well as a brief derivation of the two guards, from the relevant positive barycentric representations. These checks are straightforward but necessary because the polynomial equations are the premises of the central certificate."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      }
+    },
+    {
+      "candidate": "basic008",
+      "case": "basic008",
+      "problem_id": "PB-Basic-008",
+      "run_id": "basic008_t10_r01_v356_consolidated_20260917T071542Z",
+      "launch": "/opt/proof-workshop/benchmarks/launches/v356_consolidation_20260917T071542Z/basic008",
+      "experiment": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z",
+      "mode": "selected_certificate_resume",
+      "previous_score": 6,
+      "baseline_score": 1,
+      "supervisor": {
+        "state": "completed",
+        "completed_at": "2026-09-17T07:38:29.949619+00:00",
+        "run_id": "basic008_t10_r01_v356_consolidated_20260917T071542Z",
+        "outcome": "REWRITTEN_AUDIT_PASS",
+        "grade": {
+          "score": 6,
+          "category": "Almost"
+        },
+        "report": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/reports/run_summary.json"
+      },
+      "native_stage": "completed",
+      "native_state": "completed",
+      "outcome": "REWRITTEN_AUDIT_PASS",
+      "drafts_returned": 0,
+      "compiled": 0,
+      "calls": [
+        {
+          "stage": "modular_exact_evidence_whole_proof_rewrite",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_audit",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_rewrite",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_audit",
+          "state": "completed"
+        }
+      ],
+      "external_grade": {
+        "score": 6,
+        "category": "Almost"
+      }
+    },
+    {
+      "candidate": "basic009",
+      "case": "basic009",
+      "problem_id": "PB-Basic-009",
+      "run_id": "basic009_t07_r01_v356_consolidated_20260917T071542Z",
+      "launch": "/opt/proof-workshop/benchmarks/launches/v356_consolidation_20260917T071542Z/basic009",
+      "experiment": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z",
+      "mode": "selected_certificate_resume",
+      "previous_score": 7,
+      "baseline_score": 1,
+      "supervisor": {
+        "state": "completed",
+        "completed_at": "2026-09-17T07:31:50.316097+00:00",
+        "run_id": "basic009_t07_r01_v356_consolidated_20260917T071542Z",
+        "outcome": "REWRITTEN_AUDIT_PASS",
+        "grade": {
+          "score": 7,
+          "category": "Correct"
+        },
+        "report": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/reports/run_summary.json"
+      },
+      "native_stage": "completed",
+      "native_state": "completed",
+      "outcome": "REWRITTEN_AUDIT_PASS",
+      "drafts_returned": 0,
+      "compiled": 0,
+      "calls": [
+        {
+          "stage": "modular_exact_evidence_whole_proof_rewrite",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_audit",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_rewrite",
+          "state": "completed"
+        },
+        {
+          "stage": "modular_exact_evidence_whole_proof_audit",
+          "state": "completed"
+        }
+      ],
+      "external_grade": {
+        "score": 7,
+        "category": "Correct"
+      }
+    }
+  ]
+}

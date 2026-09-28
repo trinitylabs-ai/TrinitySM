@@ -1,0 +1,55 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "09feec4d18161c8e64bc71c0aa707238202bee41abb83c306069c4938d10c324",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3543c519e2d6a6a82362b675d31617c62ed8b3e2e7ffb1d5034fdaf3ff8572cf",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In translating ∠LBK = ∠LNC, the proof clears denominators incorrectly: with its notation the correct relation is DQ−2UH=0, whereas it writes DQ−UH=0. The analogous factor-of-two error occurs for ∠LCK = ∠BMK. These are false load-bearing statements, so Rule C applies.",
+    "summary": "The reduction of OM=ON to PB=PC is correct, and the lengthy algebraic certificate is explicit. Moreover, the later polynomials E2 and E3 appear to be the polynomials obtained from the correctly cleared angle equations. Nevertheless, the submitted derivation of those necessary polynomial hypotheses contains explicit factor-of-two errors. The use of signed cross products as cotangents also requires a ray-order/sign argument that is not supplied. Both issues are locally repairable, but the false load-bearing equations cap the score at 5 under Rule C.",
+    "strengths": [
+      "Correctly derives P·K=|K|² and P·L=|L|² and proves OM=ON is equivalent to PB=PC.",
+      "Provides explicit circumcenter coordinates and an explicit finite algebraic certificate for the final polynomial implication."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "For ∠LBK=∠LNC, equating the displayed cotangents gives 2(lx·cy−ly·cx)U−DQ=0, not the displayed equation with only one copy of U(lx·cy−ly·cx). The same missing factor 2 occurs in the third angle translation."
+      },
+      {
+        "severity": "minor",
+        "description": "The stated general cotangent formula uses vectors based at the wrong point and omits the absolute value of the determinant. The later coordinate formulas can be justified using signed determinants only after proving that the paired determinants have matching signs from the interior-induced ray orders; this justification is absent."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:51:52.715950+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

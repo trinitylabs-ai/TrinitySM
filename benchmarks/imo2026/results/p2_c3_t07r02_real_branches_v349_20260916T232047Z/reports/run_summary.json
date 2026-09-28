@@ -1,0 +1,242 @@
+{
+  "run_id": "p2_c3_t07r02_real_branches_v349_20260916T232047Z",
+  "problem_id": "imo2026_p2",
+  "candidate": "t07_r02",
+  "checkpoint": "R1-C3",
+  "baseline_score": 4,
+  "version": "0.3.349",
+  "outcome": "REWRITTEN_AUDIT_PASS",
+  "proof_audit_passed": true,
+  "returncode": 0,
+  "wall_seconds": 2496.108481694013,
+  "cycles": [
+    {
+      "sample": "sample_01",
+      "cycle": "cycle_01",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {
+        "backend": "checked-real-polynomial-branches-v1",
+        "verified": false,
+        "verdict": "INCONCLUSIVE",
+        "reason": "unresolved real branches",
+        "statistics": {
+          "visited_nodes": 1,
+          "reductions": 117,
+          "closed_targets": 0,
+          "closed_contradictions": 0,
+          "splits": 0,
+          "squares": 0,
+          "unresolved_branches": 1
+        }
+      },
+      "exact_verified": true,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_02",
+      "cycle": "cycle_01",
+      "parser_valid": false,
+      "compiled": false,
+      "semantic_accepted": false,
+      "real_branch_verified": false,
+      "real_branch_result": {},
+      "exact_verified": false,
+      "parser_error": "ValueError: geometry type check [t1]: norm2 requires 1 operands; got 2"
+    },
+    {
+      "sample": "sample_02",
+      "cycle": "cycle_02",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {},
+      "exact_verified": false,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_03",
+      "cycle": "cycle_01",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {
+        "backend": "checked-real-polynomial-branches-v1",
+        "verified": false,
+        "verdict": "INCONCLUSIVE",
+        "reason": "unresolved real branches",
+        "statistics": {
+          "visited_nodes": 1,
+          "reductions": 117,
+          "closed_targets": 0,
+          "closed_contradictions": 0,
+          "splits": 0,
+          "squares": 0,
+          "unresolved_branches": 1
+        }
+      },
+      "exact_verified": false,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_04",
+      "cycle": "cycle_01",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {
+        "backend": "checked-real-polynomial-branches-v1",
+        "verified": false,
+        "verdict": "INCONCLUSIVE",
+        "reason": "unresolved real branches",
+        "statistics": {
+          "visited_nodes": 1,
+          "reductions": 117,
+          "closed_targets": 0,
+          "closed_contradictions": 0,
+          "splits": 0,
+          "squares": 0,
+          "unresolved_branches": 1
+        }
+      },
+      "exact_verified": false,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_05",
+      "cycle": "cycle_01",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {
+        "backend": "checked-real-polynomial-branches-v1",
+        "verified": false,
+        "verdict": "INCONCLUSIVE",
+        "reason": "unresolved real branches",
+        "statistics": {
+          "visited_nodes": 1,
+          "reductions": 117,
+          "closed_targets": 0,
+          "closed_contradictions": 0,
+          "splits": 0,
+          "squares": 0,
+          "unresolved_branches": 1
+        }
+      },
+      "exact_verified": false,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_06",
+      "cycle": "cycle_01",
+      "parser_valid": false,
+      "compiled": false,
+      "semantic_accepted": false,
+      "real_branch_verified": false,
+      "real_branch_result": {},
+      "exact_verified": false,
+      "parser_error": "ValueError: geometry type check [om_eq_on]: norm2 requires 1 operands; got 2"
+    },
+    {
+      "sample": "sample_06",
+      "cycle": "cycle_02",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {},
+      "exact_verified": false,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_07",
+      "cycle": "cycle_01",
+      "parser_valid": false,
+      "compiled": false,
+      "semantic_accepted": false,
+      "real_branch_verified": false,
+      "real_branch_result": {},
+      "exact_verified": false,
+      "parser_error": "ValueError: geometry type check [t1]: norm2 requires 1 operands; got 2"
+    },
+    {
+      "sample": "sample_07",
+      "cycle": "cycle_02",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": false,
+      "real_branch_verified": false,
+      "real_branch_result": {},
+      "exact_verified": false,
+      "parser_error": null
+    },
+    {
+      "sample": "sample_08",
+      "cycle": "cycle_01",
+      "parser_valid": true,
+      "compiled": true,
+      "semantic_accepted": true,
+      "real_branch_verified": false,
+      "real_branch_result": {
+        "backend": "checked-real-polynomial-branches-v1",
+        "verified": false,
+        "verdict": "INCONCLUSIVE",
+        "reason": "unresolved real branches",
+        "statistics": {
+          "visited_nodes": 1,
+          "reductions": 117,
+          "closed_targets": 0,
+          "closed_contradictions": 0,
+          "splits": 0,
+          "squares": 0,
+          "unresolved_branches": 1
+        }
+      },
+      "exact_verified": false,
+      "parser_error": null
+    }
+  ],
+  "drafts_checked": 11,
+  "compiled": 8,
+  "semantic_accepted": 7,
+  "exact_verified": 1,
+  "real_branch_verified": 0,
+  "detection_reused": true,
+  "matching_reused": false,
+  "external_grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "local",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The unsigned-angle equalities are converted to signed cross\u2013dot equations without explicitly proving, for each pair, that the two oriented cross products have the same sign. Interiority gives the required ray orders, but Step 4 only asserts this generically.",
+    "summary": "The coordinate reduction, circumcenter computation, target polynomial T, and explicit algebraic certificate form a correct and essentially complete proof. The appendix supplies a finite verifiable certificate showing that the three angle polynomials and two nonvanishing guards imply T=0. The sole material omission is the short but necessary orientation/branch verification behind the angle-polynomial encoding; this is directly repairable from the convexity hypotheses.",
+    "strengths": [
+      "Correctly reduces OM=ON to the explicit polynomial identity T=0.",
+      "Correctly identifies that A,K,L are noncollinear and gives the circumcenter coordinates.",
+      "Supplies a complete explicit algebraic certificate rather than merely invoking computer algebra.",
+      "The two guards actually used in the appendix follow directly from K\u2208int(BMC) and L\u2208int(BNC)."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Nondegeneracy and cotangent injectivity alone do not justify the displayed signed cross\u2013dot equations for unsigned angles. The proof should explicitly establish the ray orders BA,BK,BL,BC and CA,CL,CK,CB (and the analogous orders at M and N), or directly show that the paired cross products have matching signs."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "grading_status": "completed",
+  "error": null,
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "failed_grader_calls": []
+}

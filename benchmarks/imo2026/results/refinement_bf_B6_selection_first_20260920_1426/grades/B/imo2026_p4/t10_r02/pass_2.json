@@ -1,0 +1,42 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_42e2a00ee4d7912924ef789f",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "f6a802f5de11cd153b160c36092d3ea4e6050ca68e027567411ad99be5ff3554",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "c6ad3e3716f91f1730724985db042de8c0a3b9c98df8c49d6d8cfcc46cff68ad",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F applies.",
+    "summary": "The submitted solution correctly proves both directions. For sufficiency, it uses continuity to make both child triangles contain complementary multiples of theta, then repeatedly splits an angle m theta into theta and (m-1)theta. The acute n=2 case is separately covered by showing 90 degrees lies in the relevant interval. For necessity, it maintains the invariant that no angle is an integer multiple of theta and correctly verifies that every cut has at least one child preserving this invariant.",
+    "strengths": [
+      "The claimed classification theta = 180 degrees/n for integers n at least 2 is correct.",
+      "The geometric interval for the angle at the cutting point is correctly identified and used.",
+      "The descent from m theta to (m-1)theta handles either choice made by Shan-Yu and terminates finitely.",
+      "The four possible ways the two children could acquire multiples are effectively covered by the two conditional cases in the invariant argument.",
+      "The proof addresses arbitrary choices of the cut side by relabeling the triangle."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T08:15:42.617412+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p4/pass_2/p4/proof_42e2a00ee4d7912924ef789f"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_6a8f2ca6dd341abf295c118e",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "86ec13e22ef290ac2a9f545f5efbe9a33721b69d1b2a9cc562233730f00b6bc7",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "a597ed772fea19cc3b8865302cd6c28cd3b914500145afbd84966554a51cc02d",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "In the necessity direction, the proof assumes a starting triangle with no angle in W_theta but does not explicitly establish that such a triangle exists. This is a minor, directly repairable omission rather than a Rule E central gap: take the equilateral triangle, since 60°=mθ would imply 180°=3mθ, contrary to the hypothesis.",
+    "summary": "The classification is correct. The peeling argument, the constructions for N=2 and N>=3, and the safe-triangle invariant are all valid. The missing one-line construction of an initial safe triangle warrants a minor deduction. Two statements about winning “in one move” and requiring both immediate children to contain multiples are literally inaccurate but nonessential; deleting them leaves the later invariant argument intact.",
+    "strengths": [
+      "Correctly identifies exactly theta=180°/N for integers N>=2.",
+      "The induction reducing an angle nθ to (n-1)θ is valid.",
+      "The reciprocal-angle constructions handle N=2 and N>=3 correctly, including cut validity.",
+      "The four-case analysis correctly proves that every cut of a W_theta-free triangle has a W_theta-free child, yielding Shan-Yu's avoidance strategy."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "No valid W_theta-free initial triangle is explicitly exhibited in the necessity direction, though the equilateral triangle supplies one immediately."
+      },
+      {
+        "severity": "cosmetic",
+        "description": "Containing an arbitrary element of W_theta does not mean winning in one move, and a winning strategy need not put an element of W_theta in both immediate children. These assertions are not used essentially because the preceding induction and subsequent safe-child invariant supply the correct arguments."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T08:16:33.459813+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p4/pass_2/p4/proof_6a8f2ca6dd341abf295c118e"
+}

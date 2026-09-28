@@ -1,0 +1,27 @@
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists some integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Assume that for every $k \geq 1$, the polynomial $P_k(x)$ has at least $k$ distinct real roots. Since $P_k(x)$ is a polynomial of degree at most $k$, it can have at most $k$ roots. Therefore, the assumption implies that for all $k \geq 1$, $P_k(x)$ has exactly $k$ distinct real roots. This further implies that $c_k \neq 0$ for all $k \geq 1$, because if $c_k = 0$ for some $k$, the degree of $P_k(x)$ would be at most $k-1$, making it impossible to have $k$ distinct roots.
+
+Let $r_{1,k}, r_{2,k}, \ldots, r_{k,k}$ be the $k$ distinct real roots of $P_k(x)$. Since $c_0 \neq 0$, no root is zero. We define the reciprocal polynomial $Q_k(x) = x^k P_k(1/x)$, given by:
+\[ Q_k(x) = c_0 x^k + c_1 x^{k-1} + c_2 x^{k-2} + \dots + c_k. \]
+The roots of $Q_k(x)$ are $\rho_{i,k} = 1/r_{i,k}$ for $i=1, \dots, k$. These roots are also distinct and real. To utilize properties of monic polynomials with integer coefficients, we define a new polynomial $R_k(y)$ by substituting $y = c_0 x$:
+\[ R_k(y) = c_0^{k-1} Q_k\left(\frac{y}{c_0}\right) = c_0^{k-1} \left[ c_0 \left(\frac{y}{c_0}\right)^k + c_1 \left(\frac{y}{c_0}\right)^{k-1} + \dots + c_k \right] \]
+\[ R_k(y) = y^k + c_1 y^{k-1} + c_0 c_2 y^{k-2} + c_0^2 c_3 y^{k-3} + \dots + c_0^{k-1} c_k. \]
+Since $c_i \in \mathbb{Z}$ for all $i$, $R_k(y)$ is a monic polynomial with integer coefficients. The roots of $R_k(y)$ are $y_{i,k} = c_0 \rho_{i,k}$, which are $k$ distinct real numbers.
+
+The discriminant $\Delta_k$ of a monic polynomial is defined as the square of the Vandermonde determinant of its roots:
+\[ \Delta_k = \prod_{1 \le i < j \le k} (y_{i,k} - y_{j,k})^2. \]
+Since $R_k(y)$ has integer coefficients and is monic, its discriminant $\Delta_k$ is an integer. Because the roots are real and distinct, $\Delta_k$ must be a positive integer, so $\Delta_k \geq 1$.
+
+By the Arithmetic Mean-Geometric Mean (AM-GM) inequality, we have:
+\[ \frac{1}{\binom{k}{2}} \sum_{1 \le i < j \le k} (y_{i,k} - y_{j,k})^2 \ge \left( \prod_{1 \le i < j \le k} (y_{i,k} - y_{j,k})^2 \right)^{1/\binom{k}{2}} = \Delta_k^{1/\binom{k}{2}} \ge 1. \]
+Thus, we obtain the inequality $\sum_{i < j} (y_{i,k} - y_{j,k})^2 \geq \binom{k}{2} = \frac{k(k-1)}{2}$.
+Using the algebraic identity $\sum_{i < j} (y_i - y_j)^2 = k \sum_{i=1}^k y_i^2 - (\sum_{i=1}^k y_i)^2$, we apply Vieta's formulas to the coefficients of $R_k(y)$:
+\[ \sum_{i=1}^k y_{i,k} = -c_1, \quad \sum_{i=1}^k y_{i,k}^2 = (-c_1)^2 - 2(c_0 c_2) = c_1^2 - 2c_0 c_2. \]
+Substituting these values into the discriminant inequality:
+\[ k(c_1^2 - 2c_0 c_2) - (-c_1)^2 \geq \frac{k(k-1)}{2}. \]
+Rearranging the terms, we get:
+\[ k(c_1^2 - 2c_0 c_2) - c_1^2 \geq \frac{1}{2}k^2 - \frac{1}{2}k. \]
+The left-hand side of this inequality is a linear function of $k$, while the right-hand side is a quadratic function of $k$. As $k \to \infty$, the quadratic term $\frac{1}{2}k^2$ grows faster than any linear term, meaning this inequality must fail for sufficiently large $k$.
+
+This contradiction proves that the assumption—that $P_k(x)$ has $k$ distinct real roots for all $k \ge 1$—is false. Therefore, there must exist some integer $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots. \(\square\)

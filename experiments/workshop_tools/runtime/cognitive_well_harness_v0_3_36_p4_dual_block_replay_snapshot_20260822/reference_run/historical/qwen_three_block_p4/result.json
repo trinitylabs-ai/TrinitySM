@@ -1,0 +1,60 @@
+{
+  "sample_id": "p4_s2_first_revision",
+  "case": "p4_s2",
+  "stage": "first_ensemble_feedback_revision",
+  "fusion": {
+    "valid": true,
+    "errors": [],
+    "score": 3,
+    "verdict": "INCORRECT",
+    "repair_status": "REQUIRED",
+    "accepted_defect_ids": [
+      "D1"
+    ],
+    "round_count": 1,
+    "branch_statuses": [
+      "INVALID"
+    ],
+    "severities": [
+      "FATAL"
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 12527,
+      "total_tokens": 16675,
+      "completion_tokens": 4148,
+      "prompt_tokens_details": null
+    },
+    "latency_seconds": 163.5706903040409,
+    "seed": 3632369394,
+    "report_sha256": "063bbc059479101ef5a622037d4e8d9ff5ba1d36d724571291888e4a49f3bf9b"
+  },
+  "repair": {
+    "valid": true,
+    "errors": [],
+    "addressed_defect_ids": [
+      "D1"
+    ],
+    "chief_architects": [
+      "PARTIAL REBUILD"
+    ],
+    "round_count": 1,
+    "status": "UNVERIFIED",
+    "ran": true,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 2877,
+      "total_tokens": 10374,
+      "completion_tokens": 7497,
+      "prompt_tokens_details": null
+    },
+    "latency_seconds": 276.8292332775891,
+    "seed": 2190888492,
+    "report_sha256": "c97ebdaff2c9417af665befc6f112b922c504fc69beeae9f5b3e6274fdbbc92f",
+    "repair_system_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+    "repair_user_sha256": "67557895c45e732fe7a59fbf0923ac455429e47ad5e30066699bcd9d5b77fa58"
+  },
+  "prior_strict_score": 3,
+  "gold_score": 3,
+  "gold_verdict": "fallacy"
+}

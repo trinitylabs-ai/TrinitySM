@@ -1,0 +1,56 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p3",
+  "grader_candidate_id": "t10_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+  "proof": "evidence/proofs/e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc.md",
+  "completed_at": "2026-09-15T18:28:15.095213+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proposed lower-bound strategy already fails for \\(n=2\\): from pieces \\(3/5,1/5,1/5\\), Xiang can bisect the \\(3/5\\) piece, producing \\(3/10,3/10,1/5,1/5\\), so Liu receives only \\(1/2<3/5\\).",
+    "summary": "The claimed value \\((n+1)/(2n+1)\\) is incorrect; the actual value is \\(2^n/(2^{n+1}-1)\\). Although the submission correctly identifies the alternating-rank payoff and proves the basic \\(1/2\\) bound, both decisive bounds fail.",
+    "strengths": [
+      "Correctly models optimal piece selection via the odd-ranked lengths and introduces the corresponding alternating discrepancy.",
+      "Establishes the universal elementary lower bound \\(S_L\\ge 1/2\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The lower-bound assertion that equalizing all pieces is Xiang’s best response is unsupported and false, as the \\(n=2\\) counterexample shows."
+      },
+      {
+        "severity": "major",
+        "description": "In upper-bound Case 2, \\(x_{n+1}=2L_{(1)}-1+n\\epsilon\\) need not be positive; for equal initial pieces and \\(n\\ge2\\), it is negative for sufficiently small \\(\\epsilon\\), so the proposed cuts may be impossible."
+      },
+      {
+        "severity": "substantial",
+        "description": "The upper-bound argument assumes Liu creates exactly \\(n+1\\) pieces and does not address his permitted use of fewer marks."
+      },
+      {
+        "severity": "minor",
+        "description": "In Case 1, the uncut smallest piece need not be last after sorting, so the asserted rank-by-rank ordering is not generally valid, even though a cancellation argument could repair that local point."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p3_c3_t10r02_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p3/t10_r02/summary.json",
+    "native_record_file_sha256": "234ba15833bc33143f6b158dad4290655108a1f93395e26ded271148d3de1307",
+    "selected_record": "benchmarks/imo2026/results/p3_c3_t10r02_20260915T164615Z/grades/imo2026_p3/t10_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "8648212bc4517408f296c7ba158a213c2bd40aaed47ee811343826f708af0817",
+    "proof": "benchmarks/imo2026/results/p3_c3_t10r02_20260915T164615Z/proofs/imo2026_p3/t10_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66"
+}

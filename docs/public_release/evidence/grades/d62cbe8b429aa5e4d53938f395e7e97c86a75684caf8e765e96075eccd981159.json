@@ -1,0 +1,56 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p6",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+  "proof": "evidence/proofs/73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf.md",
+  "completed_at": "2026-09-15T18:30:00.742590+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The central claim that \\(S=\\bigcup_n Q_n\\) is finite is false: if \\(a_1=2\\), then \\(a_n=2n\\), so every prime occurs in some \\(a_n\\).",
+    "summary": "The hitting-set formulation and bounded-gap observation are useful, but the proof relies on a false finiteness assertion. Moreover, the attempted passage from eventual to global periodicity chooses an impossible multiplier and contains invalid index-shifting claims. Establishing the theorem requires a substantially different finiteness argument, such as one involving minimal accepted prime supports.",
+    "strengths": [
+      "Correctly identifies admissible integers through hitting sets of prime supports and derives \\(a_{n+1}\\le a_n+\\operatorname{rad}(a_1)\\).",
+      "Under a genuinely finite hitting-set universe, the translation-equivariance calculation for the eventual recurrence is essentially sound."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion that the union of all prime divisors of the terms is finite is false, as demonstrated by \\(a_n=2n\\)."
+      },
+      {
+        "severity": "major",
+        "description": "The counting argument only produces a companion prime \\(q\\) whose bound depends on \\(n\\), and even a uniform bound on such a \\(q\\) would not preclude arbitrarily large additional primes \\(p\\)."
+      },
+      {
+        "severity": "major",
+        "description": "The required \\(K\\) cannot exist: eventual periodicity gives \\(a_{N+KT}=a_N+KL'=a_N+L>L\\), so \\(a_{N+KT}\\) cannot divide \\(L\\)."
+      },
+      {
+        "severity": "major",
+        "description": "In the backward-induction argument, writing \\(i=j+T_{\\mathrm{new}}\\) with \\(j<N-1\\) does not justify \\(a_i=a_j+L\\); the established eventual relation applies only when \\(j\\ge N\\)."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p6_c3_t07r01_20260915T164615Z/grading/work/strict_c3_20260915T182601Z/scores/p6/t07_r01/summary.json",
+    "native_record_file_sha256": "d62cbe8b429aa5e4d53938f395e7e97c86a75684caf8e765e96075eccd981159",
+    "selected_record": "benchmarks/imo2026/results/p6_c3_t07r01_20260915T164615Z/grades/imo2026_p6/t07_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "2e98d79fd05eb3818734fb76d027d53a6ecae2ed353d93694d3adf3daf92196b",
+    "proof": "benchmarks/imo2026/results/p6_c3_t07r01_20260915T164615Z/proofs/imo2026_p6/t07_r01/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c"
+}

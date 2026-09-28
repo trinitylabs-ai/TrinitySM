@@ -1,0 +1,65 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2f4af91ea47a3a575d5394ce0191b7f4a37a0a65d198a671244ce97eb4ce0139",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "7b0cacfeef75a47038361b368dde5553c57a31958746e1088eeca14e73453ecb",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2b597acdba0dfbb48785bdfeb16740a89743bc5f1c495aab924b6583ab12baae",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument asserts, without proving for an arbitrary cut, that Shan-Yu can always retain a triangle having no angle equal to a positive multiple of θ. It checks only two forms of cuts that immediately give T1 an angle θ, leaving the central invariant unsupported; Rule E therefore caps the score at 3.",
+    "summary": "The stated classification is correct, and the sufficiency strategy is essentially sound. However, necessity requires analyzing all possible cuts and proving that at least one child remains free of every positive multiple of θ; cuts producing higher multiples in one or both children are not addressed. No explicit safe starting triangle is supplied either. This missing central compatibility argument does not satisfy Rule B's conditions for a score of 4.",
+    "strengths": [
+      "States the correct answer θ=180°/k for integers k≥2.",
+      "The peeling operation on an angle nθ correctly reduces it to (n−1)θ in the child Shan-Yu must retain to avoid immediate defeat.",
+      "The construction from an angle C<θ correctly produces a child containing (k−1)θ, modulo a small legality omission.",
+      "Identifies the useful invariant of avoiding all positive integer multiples of θ."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed invariant in the necessity direction is not proved for arbitrary Mulan moves. The proof must consider the possibilities that both children contain possibly different multiples mθ and nθ, not merely cuts that place θ in T1."
+      },
+      {
+        "severity": "minor",
+        "description": "The proof does not explicitly construct an initial triangle whose three angles are all nonmultiples of θ, which is required for Shan-Yu's counterstrategy."
+      },
+      {
+        "severity": "minor",
+        "description": "For the small-angle sufficiency cut, A must be chosen as the larger of the other two angles to ensure α=180°−B−θ=A+C−θ is positive; this choice and legality check are omitted."
+      },
+      {
+        "severity": "minor",
+        "description": "For θ=90°, the altitude must be drawn from a vertex whose perpendicular foot lies on the opposite side; an arbitrary chosen vertex need not have this property."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:00:16.197675+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00043",
+  "native_rejection_count": 0
+}

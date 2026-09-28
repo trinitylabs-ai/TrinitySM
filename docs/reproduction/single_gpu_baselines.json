@@ -1,0 +1,17 @@
+{
+  "schema": "workshop-single-gpu-comparison-baselines-v1",
+  "release": "1.12.0",
+  "release_sha256": "e8d94232e00c0c3297fbbfa466df7634055ed6aa2876ba1786d94a87858041c9",
+  "winner_selection_policy": "qwen_only_full_round_robin_seed_order_ties",
+  "generation_parameters": {
+    "raw_seed_offset": 0,
+    "seed_namespace": "v263-v290:problem-only",
+    "model_timeout_sec": 600
+  },
+  "baselines": [
+    {
+      "path": "docs/results/qwen_selection_20260928/SCORECARD.json",
+      "sha256": "cb8d53d4819c8c6408bf02aec37cb6de308b08623ff4565679f4055f060f4423"
+    }
+  ]
+}

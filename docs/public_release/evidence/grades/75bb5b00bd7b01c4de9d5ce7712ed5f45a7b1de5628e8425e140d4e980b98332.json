@@ -1,0 +1,51 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+  "proof": "evidence/proofs/cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222.md",
+  "completed_at": "2026-09-17T07:02:33.793619+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The angle-to-polynomial translation is invalid as written: the formula using a signed determinant is not the cotangent of an ordinary unsigned angle unless the relevant orientation signs are established, which the submission never does.",
+    "summary": "The reduction from OM=ON to PB=PC is correct and the coordinate-algebra strategy is meaningful. However, the essential polynomial hypotheses of the algebraic lemma are not validly derived. Besides the missing orientation analysis, the displayed clearings for the second and third angle equalities each omit a factor of 2, so they do not expand to the asserted polynomials. The blanket assertion that all numerous nonzero guards follow from strict interiority is also left unproved. These are load-bearing defects in applying the central certificate, so the proof is not complete as submitted.",
+    "strengths": [
+      "Correctly derives the circumcenter identities P·K=|K|² and P·L=|L|² for P=2O.",
+      "Correctly proves that OM=ON is equivalent to PB=PC.",
+      "Provides a coherent coordinate-elimination strategy and an explicit algebraic certificate rather than merely citing an external lemma."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "For unsigned angles, cotangent is dot product divided by the absolute value of the determinant. The proof instead uses signed determinants without proving that the two orientations in each angle equality have matching signs; nonvanishing alone is insufficient."
+      },
+      {
+        "severity": "substantial",
+        "description": "For the second angle equality, the displayed denominators imply the cleared equation cross·(2L·C−|C|²)−2 dot·det(L,C)=0, but the proof writes only one copy of the second term. The analogous factor-of-2 error occurs for the third equality. Consequently the claim that these displayed equations expand to E2 and E3 is false."
+      },
+      {
+        "severity": "substantial",
+        "description": "The application asserts without barycentric or determinant calculations that strict interiority supplies every listed nonzero guard. Several guards are non-obvious linear combinations, and the lemma as stated requires them, so this blanket assertion leaves another load-bearing hypothesis unverified."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_t07r01_v355_export_20260917T063618Z/grades/imo2026_p2/t07_r01/tool_rewrite/strict/summary.json",
+    "native_record_file_sha256": "75bb5b00bd7b01c4de9d5ce7712ed5f45a7b1de5628e8425e140d4e980b98332",
+    "selected_record": "benchmarks/imo2026/results/p2_t07r01_v355_export_20260917T063618Z/grades/imo2026_p2/t07_r01/tool_rewrite/strict/summary.json",
+    "selected_record_file_sha256": "75bb5b00bd7b01c4de9d5ce7712ed5f45a7b1de5628e8425e140d4e980b98332",
+    "proof": "benchmarks/imo2026/results/p2_t07r01_v355_export_20260917T063618Z/proofs/imo2026_p2/t07_r01/tool_rewrite.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf"
+}

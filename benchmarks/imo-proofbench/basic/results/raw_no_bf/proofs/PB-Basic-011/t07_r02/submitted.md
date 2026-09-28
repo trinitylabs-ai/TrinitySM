@@ -1,0 +1,29 @@
+To find the minimum possible value of $m_A = \min A$ for a set $A \subset \{1, 2, \ldots, 2000\}$ with $|A| = 1000$ such that no element of $A$ divides another, we first analyze the structure of maximum antichains in the poset $(S, |)$ where $S = \{1, 2, \ldots, 2000\}$.
+
+**1. Chain Cover and Maximum Antichains**
+The set $S$ can be partitioned into 1000 chains of the form $C_k = \{k \cdot 2^j \in S \mid j \ge 0\}$ for each odd number $k \in \{1, 3, \ldots, 1999\}$. By Dilworth's Theorem, any antichain $A$ can contain at most one element from each chain. Since $|A| = 1000$, $A$ must contain exactly one element $x_k$ from each $C_k$. Thus, we can write $x_k = k \cdot 2^{v_k}$ for some integers $v_k \ge 0$.
+
+**2. Divisibility Constraints**
+For $A$ to be an antichain, we must have $x_k \nmid x_m$ for all distinct $k, m$. If $k$ divides $m$, then $k \cdot 2^{v_k}$ divides $m \cdot 2^{v_m}$ if and only if $v_k \le v_m$. Therefore, we must have $v_k > v_m$ whenever $k | m$ for odd $k, m$.
+Let $k_0, k_1, \ldots, k_p$ be a chain of odd numbers such that $k_0 | k_1 | \ldots | k_p \le 1999$. The condition $v_{k_i} > v_{k_{i+1}}$ implies that $v_{k_0} \ge p$. The length of the longest chain of odd numbers in $S$ is $p+1 = 7$, given by $1 | 3 | 9 | 27 | 81 | 243 | 729$. Thus, $v_1 \ge 6$.
+
+**3. Constructing the Minimal Antichain**
+We seek to minimize $m_A = \min \{k \cdot 2^{v_k}\}$. Let $v_k$ be the length of the longest chain of odd numbers starting at $k$:
+\[ v_k = \max \{ p \mid \exists k=k_0, k_1, \ldots, k_p \in \{1, 3, \ldots, 1999\} \text{ such that } k_i | k_{i+1} \}. \]
+This can be calculated as $v_k = \lfloor \log_3(1999/k) \rfloor$ since the most efficient way to build a chain is by multiplying by 3.
+We check if $x_k = k \cdot 2^{v_k}$ satisfies $x_k \le 2000$:
+Since $3^{v_k} \le 1999/k < 3^{v_k+1}$, we have $x_k = k \cdot 2^{v_k} \le \frac{1999}{3^{v_k}} \cdot 2^{v_k} = 1999 \cdot (2/3)^{v_k} \le 1999$.
+The condition $k | m \implies v_k > v_m$ is satisfied by the definition of $v_k$. Thus, $A = \{k \cdot 2^{v_k} \mid k=1, 3, \ldots, 1999\}$ is a valid antichain.
+
+**4. Determining the Minimum Element**
+We compute $x_k$ for small $k$:
+- For $k=1$, $v_1 = \lfloor \log_3 1999 \rfloor = 6$, so $x_1 = 1 \cdot 2^6 = 64$.
+- For $k=3$, $v_3 = \lfloor \log_3(1999/3) \rfloor = 5$, so $x_3 = 3 \cdot 2^5 = 96$.
+- For $k \ge 65$, $x_k \ge 65$.
+- For $3 \le k < 65$, $x_k = k \cdot 2^{v_k}$. If $v_k \ge 6$, $x_k \ge 3 \cdot 64 = 192$. If $v_k \le 5$, we check values:
+  - $k=3, 5, 7 \implies v_k=5 \implies x_k \ge 96$.
+  - $k=9, \ldots, 25 \implies v_k=4 \implies x_k \ge 9 \cdot 16 = 144$.
+  - $k=27, \ldots, 81 \implies v_k \le 3 \implies x_k \ge 27 \cdot 8 = 216$.
+The minimum value is $x_1 = 64$. To see if $m_A < 64$ is possible, note that $v_1 \ge 6$ is required to avoid $x_1 | x_k$ for the chain $1|3|9|27|81|243|729$. If $x_1 < 64$, then $x_1$ must be $2^{v_1}$ with $v_1 \le 5$. But then the chain of odd numbers requires $v_1 \ge 6$ to maintain the antichain property. If $x_1$ is not a power of 2, it must be $1 \cdot 2^{v_1}$, which is a power of 2.
+
+The minimum $m_A$ is 64. \(\square\)

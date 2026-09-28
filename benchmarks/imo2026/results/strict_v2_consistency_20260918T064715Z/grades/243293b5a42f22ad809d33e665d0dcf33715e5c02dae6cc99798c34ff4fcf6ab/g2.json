@@ -1,0 +1,52 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "243293b5a42f22ad809d33e665d0dcf33715e5c02dae6cc99798c34ff4fcf6ab",
+  "problem_id": "imo2026_p2",
+  "repeat": 2,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "64dfa303e75178ba5da260238d196d3bd3577a82efa63cc3d9585d2280d34167",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "After reducing the goal to the displayed trigonometric identity, the submission merely asserts that the angle conditions force that identity. The claimed uniqueness of K and L is unproved and, even if true, would not imply the identity. Thus the central compatibility/elimination argument is missing.",
+    "summary": "The sine-law calculations and the reduction via the antipode O'=2O are essentially correct, and the final displayed equality is an explicit, checkable equality equivalent to OM=ON. However, no calculation proves it from the unused coupling information in ∠LBK=β and ∠LCK=γ. Because the omitted substantial derivation is explicitly identified and the equality is true under the hypotheses, Rule B makes score 4 eligible, but the proof does not support the conclusion as submitted.",
+    "strengths": [
+      "Correctly derives the cotangent relations for φ1 and φ3.",
+      "Correctly observes that O' is the antipode of A and reduces OM=ON to O'B=O'C.",
+      "Correctly obtains an explicit coordinate identity equivalent to the desired perpendicular-bisector condition."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The decisive final identity is asserted without derivation from the angle constraints. This is the load-bearing part of the problem; the unsupported uniqueness sentence supplies no valid inference."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:48:42.937442+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

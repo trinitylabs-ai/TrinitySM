@@ -1,0 +1,44 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p5",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+  "proof": "evidence/proofs/f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4.md",
+  "completed_at": "2026-09-15T16:40:58.417136+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Case 2, the claim that the distance from \\(x_0\\) to the forward orbit \\(\\{y+nc(y):n\\in\\mathbb N\\}\\) is at most \\(c(y)\\) is false when \\(y>x_0\\).",
+    "summary": "The solution correctly derives defect invariance, nonnegativity, and equality of all positive defect values. However, its decisive argument excluding coexistence of zero and positive defects relies on a false assertion, so constancy of \\(c\\) is not established as submitted.",
+    "strengths": [
+      "Correctly obtains \\(f^{(n)}(x)=x+nc(x)\\), \\(c(x)\\ge0\\), and proves that any two positive defect values coincide.",
+      "Correctly verifies that every \\(f(x)=x+c\\), \\(c\\ge0\\), satisfies the inequalities."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The false forward-orbit distance claim invalidates the entire mixed zero/positive defect case and all subsequent interval propagation."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p5_c3_t07r02_20260915T144230Z/grading/work/strict_c3_20260915T163357Z/scores/p5/t07_r02/summary.json",
+    "native_record_file_sha256": "5627e78d24d19dd279469e769a48335f2eca5216f48a942da37876d6c2b13417",
+    "selected_record": "benchmarks/imo2026/results/p5_c3_t07r02_20260915T144230Z/grades/imo2026_p5/t07_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "dc6c824158225babff61fbb44e8569a035abd3c72005388e7b5529172325cdd5",
+    "proof": "benchmarks/imo2026/results/p5_c3_t07r02_20260915T144230Z/proofs/imo2026_p5/t07_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb"
+}

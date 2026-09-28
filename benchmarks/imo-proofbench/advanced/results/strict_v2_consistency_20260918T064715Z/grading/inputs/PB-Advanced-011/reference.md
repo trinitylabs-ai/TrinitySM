@@ -1,0 +1,3 @@
+Let $P(x,y)$ be the given assertion.
+$$P(c+1, \frac{c}{f(c+1)}): \quad c= \frac{c}{f(c+1)} f(\frac{c}{f(c+1)} \times f(c+1)+1)= f(\frac{1}{c+1} + f(\frac{c}{f(c+1)}))$$, hence $f$ is surjective. \\ Now assume that $f(x) = f(b)$ for some $a>b>0$. Since $f$ is surjective, there exists some $t\in \mathbb{R}^+$ such that $f(t)=1$. comparing $P(a,t)$ and $f(b,t)$ gives $f(1+\frac{1}{a}) = f(1+\frac{1}{b})$. Again since $f$ is surjective, there exists some $t\in \mathbb{R}^+$ such that $f(t)=\frac{1}{ab}$. Comparing $P(s,a)$ and $P(s,b)$ gives $af(\frac{1}{b} +1) = b f(\frac{1}{a}+1)$, which is a contradiction. Therefore $f$ is injective. \\
+Now $P(x,1)$ implies $f(x) = \frac{1}{x}+c$, and by surjectivity, $c=0$, thus $f(x) = \frac{1}{x}$, which is indeed a solution.

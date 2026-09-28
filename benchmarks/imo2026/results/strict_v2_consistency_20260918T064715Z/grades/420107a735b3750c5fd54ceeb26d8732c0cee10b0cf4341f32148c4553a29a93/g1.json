@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "420107a735b3750c5fd54ceeb26d8732c0cee10b0cf4341f32148c4553a29a93",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "e9740227ab1e50a32f6ff8daaae8b3b47c9a3cdf5fb9079c5c9511d8474a7e2d",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "381e48e08126d37caa5d326bd501a8a8f4f956cd9807e8b9bbda70c8a0316897",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is Section 3's unsupported and false assertion that every θ<90° can eventually be forced. For example, θ=80° is included in the claimed answer, but Shan-Yu can start with angles (40°,40°,100°). Marking all positive multiples of 80°, a cut of a triangle with no marked angle always has at least one child with no marked angle; otherwise the marked angles in the two children would force either 180° or a parent angle to be a multiple of 80°. Shan-Yu can therefore avoid 80° forever. Thus the final classification is demonstrably false, so Rule A caps the score at 2.",
+    "summary": "The claimed interval (0°,90°] is incorrect; the actual winning values are θ=180°/n for integers n≥2. The submission correctly handles θ=90° and gives a valid obstruction for θ>90°, but it neither proves nor correctly states the classification for smaller angles.",
+    "strengths": [
+      "The explicit construction forcing a right angle in both children is correct after choosing the two acute angles as the base angles.",
+      "The invariant argument for θ>90° is essentially valid: from a triangle whose angles are all below θ, every cut leaves at least one child whose angles are all below θ.",
+      "The angle-halving observation gives meaningful support for the special family θ=90°/2^k."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer includes many non-winning values, such as θ=80°, and is therefore subject to Rule A."
+      },
+      {
+        "severity": "major",
+        "description": "The claimed general strategy for all θ≤90° is only asserted through phrases such as “manipulate” and “carefully selecting cuts”; no construction or invariant establishes this central claim, and the claim itself is false."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:22:32.757349+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00012",
+  "native_rejection_count": 0
+}

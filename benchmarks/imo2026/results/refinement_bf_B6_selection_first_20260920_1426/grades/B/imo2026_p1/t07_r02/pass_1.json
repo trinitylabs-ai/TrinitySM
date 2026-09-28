@@ -1,0 +1,41 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_7b3b7a00af137823c4077945",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "76d4c3a1b565ff1225650798f114ca47e9bacecd288af7b736e0dd92ccb3f798",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "65399f229454663f231a46e0e99cc8182c979bb44cd8ef0ca55349783fb9ffbe",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "None; the proof is complete and correct, so no grading-rule cap applies.",
+    "summary": "The lexicographic potential (product, number of entries greater than 1) proves finite termination, and the argument correctly ensures that the terminal board has exactly one entry greater than 1. Primewise, each move performs a Euclidean-algorithm step on the valuations, preserving their overall gcd; at termination these invariants equal the valuations of the sole nonunit, uniquely determining it from the initial board.",
+    "strengths": [
+      "Correctly computes that the board product is divided by gcd(m,n), with the secondary count decreasing when the gcd is 1.",
+      "Correctly rules out a terminal board with no entry greater than 1.",
+      "Establishes the primewise valuation-gcd invariant under the transformation (a,b) to (min(a,b),|a-b|).",
+      "Reconstructs the unique terminal value and verifies that it is greater than 1."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T09:20:01.649906+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p1/pass_1/p1/proof_7b3b7a00af137823c4077945"
+}

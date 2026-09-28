@@ -1,0 +1,49 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+  "proof": "evidence/proofs/90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2.md",
+  "completed_at": "2026-09-15T16:37:08.931211+00:00",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The final required identity is merely asserted to follow from the remaining angle conditions, without any derivation.",
+    "summary": "The solution correctly reduces \\(OM=ON\\) to showing that \\(O'=2O\\) lies on the perpendicular bisector of \\(BC\\), and obtains a coordinate identity sufficient for this. However, proving that identity is the central difficulty, and the submission replaces it with an unsupported claim about the angle conditions and unproved uniqueness.",
+    "strengths": [
+      "Correctly derives useful cotangent relations for \\(\\phi_1\\) and \\(\\phi_3\\).",
+      "Correctly interprets \\(O'=2O\\) as the antipode of \\(A\\) and reduces the goal to \\(O'B=O'C\\).",
+      "Correctly computes coordinates of \\(O'\\) from the perpendicularity conditions."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The decisive trigonometric identity involving \\(AK,AL,\\phi_i,b,c\\) is not proved; the unused cross-conditions \\(\\angle LBK=\\beta\\) and \\(\\angle LCK=\\gamma\\) are only said to enforce it."
+      },
+      {
+        "severity": "substantial",
+        "description": "The assertion that \\(K\\) and \\(L\\) are uniquely determined by the angle conditions is unproved and, even if established, would not imply the required identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_c3_t10r01_then_v327_20260915T063548Z/grading/work/strict_c3_20260915T163357Z/scores/p2/t10_r01/summary.json",
+    "native_record_file_sha256": "7d05db928c9dd1072ab5217cdd76b911cfe0552662542b9777ebca42204e3bd7",
+    "selected_record": "benchmarks/imo2026/results/p2_c3_t10r01_then_v327_20260915T063548Z/grades/imo2026_p2/t10_r01/R1-C3.strict.json",
+    "selected_record_file_sha256": "513c63694ec94cce43998533855908e1ea82434add30780af1a4579d5954f163",
+    "proof": "benchmarks/imo2026/results/p2_c3_t10r01_then_v327_20260915T063548Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/imo2026_p2.t10_r01/resolver/temperature_0_4/gpu0/p2/t10_r01/resolved_proof.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd"
+}

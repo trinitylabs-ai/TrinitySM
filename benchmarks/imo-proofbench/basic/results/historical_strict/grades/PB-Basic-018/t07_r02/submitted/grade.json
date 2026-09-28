@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T18:54:46.346473+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 18,
+  "problem_id": "PB-Basic-018",
+  "case_id": "PB-Basic-018.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/p18/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "562502eef0fc90b89936157bd6f7c3c1d6bfa4a126ac6c00ba1bc4f0dec3c5af",
+  "reference_sha256": "3ebc02426db3c6c46b48852a9bcf2281caff784d98ea26251096b3335a515c46",
+  "proof_sha256": "403e8e7be3b4aa493ca4edbc195499fdff34aeb004bb8380f54eccc2e4831500",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T185138002966Z/inputs/tasks.json",
+  "task_manifest_sha256": "244b2f67b78db8fb886af3b88f37ed0a69dae24d9f1a066d79e4557b1e9a46bd",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The proof invokes without explicit justification that every positive solution of \\(3v^2-2u^2=1\\) belongs to the displayed Pell orbit.",
+    "summary": "The transformations, congruence restrictions, closed forms, and final identity \\(2x+2y+1=v_k^2\\) are correct. The only omission is the completeness of the Pell parametrization; this follows routinely by dividing \\(v\\sqrt3+u\\sqrt2\\) by \\(\\sqrt3+\\sqrt2\\) and applying the standard unit classification in \\(\\mathbb Z[\\sqrt6]\\).",
+    "strengths": [
+      "Correctly derives the Pell-type equation and proves the desired square identity for every solution in the stated orbit.",
+      "Correctly identifies that the original integrality conditions force the Pell index to be even."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "Completeness of the asserted Pell parametrization is not explicitly established."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

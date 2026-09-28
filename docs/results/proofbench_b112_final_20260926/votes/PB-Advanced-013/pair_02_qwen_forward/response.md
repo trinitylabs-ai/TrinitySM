@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof correctly transforms the problem into showing $\sum_{k=1}^n \frac{1}{2^k} \tanh(2^{k-1} x_k) \leq 0$ subject to $\sum x_k = 0$ and $x_1 \leq \dots \leq x_n$. It correctly identifies that the maximum of the positive part ($V_{pos}$) occurs when $2^{k-1}x_k$ are constant, yielding $V_{pos} \leq \gamma \tanh \alpha$.
+Claim gap: The proof contains a demonstrated defect in the estimation of the negative part ($V_{neg}$). In lines 18–20, it claims that $h(j, S) = \sum_{k=1}^j \frac{1}{2^k} \tanh(2^{k-1} S/j) \geq \frac{1}{2} \tanh S$ for all $j \geq 1$. This inequality is false for large $j$ and small $S$. A Taylor expansion for small $S$ shows $h(j, S) \approx \frac{S}{2} - \frac{4^j-1}{18j^3}S^3$, while $\frac{1}{2} \tanh S \approx \frac{S}{2} - \frac{1}{6}S^3$. For $j=4$, the coefficient $\frac{255}{1152} \approx 0.22$ exceeds $1/6 \approx 0.167$, making $h(4, S) < \frac{1}{2} \tanh S$. Consequently, the claimed upper bound $V_{neg} \leq -\frac{1}{2} \tanh S$ is invalid. Additionally, the final step (lines 21–23) treats the parameter $\alpha$ as constant while varying $\gamma$, which is mathematically imprecise, though the final result happens to hold due to other factors.
+Qualifications and supplied repairs: NONE. The defect in the bound for $V_{neg}$ is a substantive error in the derivation.
+Decisive checks: Line 18-20 claim $h(j,S) \geq \frac{1}{2}\tanh S$. Counterexample check: $j=4, S \to 0$. $h(4,S) \approx S/2 - 0.22 S^3$. $\frac{1}{2}\tanh S \approx S/2 - 0.167 S^3$. Since $-0.22 < -0.167$, $h(4,S) < \frac{1}{2}\tanh S$. The claim is false.
+
+## Proof B
+Established theorem: The proof establishes the inequality by splitting the sum into positive and negative parts based on the sign of $y_k = \ln a_k$. It uses Jensen's inequality for the convex part (positive $y_k$) and minimization of a concave function at extreme points for the negative part. It correctly derives a lower bound $S \geq h(w_m) - h(W_P)$ and shows this is positive because $w_m > W_P$ and $h$ is increasing.
+Claim gap: NONE supported by checks. The relaxation of the ordering constraint $y_1 \leq \dots \leq y_n$ is valid because it enlarges the feasible set for the minimization problem; proving the minimum over the larger set is positive implies the minimum over the original set is positive.
+Qualifications and supplied repairs: NONE. The steps are rigorous and verified.
+Decisive checks: Line 21 Jensen application is correct for convex $g$ on positive domain. Line 23 minimization of concave sum at vertices is correct. Line 27 derivative of $h(w)$ is positive, so $h$ is increasing. Line 32 calculation $W_P < w_m$ is correct. Thus $h(w_m) > h(W_P)$ and $S > 0$.
+
+## Decision
+Winner: B
+Reason: Proof B provides a rigorous and complete derivation using convexity arguments (Jensen's inequality and extreme point minimization). Proof A contains a mathematical error in lines 18-20, claiming an inequality $h(j, S) \geq \frac{1}{2} \tanh S$ that is false for $j \geq 4$ and small $S$, as demonstrated by Taylor expansion. This invalidates the upper bound used for the negative terms in Proof A. Proof B's method of relaxing the ordering constraint is logically sound for establishing a lower bound.

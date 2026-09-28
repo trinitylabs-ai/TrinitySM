@@ -1,0 +1,1 @@
+Let $x$ and $y$ be positive integers satisfying $2x^2 + x = 3y^2 + y$. Prove that $2x+2y+1$ is a perfect square.

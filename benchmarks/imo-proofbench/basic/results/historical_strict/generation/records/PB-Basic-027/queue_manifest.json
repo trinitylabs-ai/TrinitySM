@@ -1,0 +1,52 @@
+{
+  "schema": "v263_lazy_refined_to_v290_r1c3_queue_v1",
+  "problem_dir": "/opt/proof-workshop/data/imo_proofbench_basic_problem_only",
+  "output_dir": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030",
+  "problems": [
+    {
+      "problem_id": "PB-Basic-027",
+      "problem": "Given an acute triangle $ABC$, let $D$ and $E$ be the feet of\n the altitudes from $B$ to $AC$ and $C$ to $AB$, respectively.\n Let $E_{1}$ and $E_{2}$ be the reflections of $E$ with respect\n to $AC$ and $BC$, respectively. If $X$ (not equal to $C$) is an\n intersection point of the circumcircle of $\\triangle CE_{1}E_{2}$\n and $AC$, and $O$ is the circumcenter of $\\triangle CE_{1}E_{2}$,\n prove that $XO$ is perpendicular to $DE$.",
+      "problem_number": 27
+    },
+    {
+      "problem_id": "PB-Basic-028",
+      "problem": "In $\\triangle ABC$ the altitudes $BE$ and $CF$ intersect at $H$. A circle $(W)$ is\n externally tangent to the Euler circle $(E)$ of $\\triangle ABC$ and also tangent\n to the sides $AB$ and $AC$ at $X$ and $Y$, respectively, with\n $(W)$ being closer to $A$ than the Euler circle. Let $I'$ be the\n incenter of $\\triangle AEF$. Prove that $AXI'Y$ is a rhombus.",
+      "problem_number": 28
+    },
+    {
+      "problem_id": "PB-Basic-029",
+      "problem": "Let $p$ and $n$ be integers with $0\\le p\\le n-2$. Consider a set\n $S$ of $n$ lines in the plane such that no two of them are parallel\n and no three have a common point. Denote by $I$ the set of intersections\n of lines in $S$. Let $O$ be a point in the plane not lying on any\n line of $S$. A point $X\\in I$ is colored red if the open line segment\n $OX$ intersects at most $p$ lines in $S$. What is the minimum number\n of red points that is contained in $I$?",
+      "problem_number": 29
+    },
+    {
+      "problem_id": "PB-Basic-030",
+      "problem": "Given a trapezoid $ABCD$ with $AB,CD$ as the two legs. Circle $(W_{1})$ passes through $A,B$, and $(W_{2})$ passes through $C,D$ so that they are tangent to each other. The inscribed angle on circle $W_1$ corresponding to the arc AB on the side opposite to C and D is alpha, and the inscribed angle on circle $W_2$ corresponding to the arc CD on the side opposite to  A and B is beta. Construct $(W_{3})$ passing through $A,B$, $(W_{4})$ passing through $C,D$ such that the inscribed angle on circle W3 corresponding to the arc AB on the side opposite to C and D is $\\beta$, and the inscribed angle on circle $W_4$ corresponding to the arc CD on the side opposite to  A and B is b $\\alpha$. Prove that $(W_{3}),(W_{4})$ are tangent to each other.",
+      "problem_number": 30
+    }
+  ],
+  "gemma_endpoint": "http://127.0.0.1:8030/v1",
+  "qwen_endpoint": "http://127.0.0.1:8027/v1",
+  "gemma_model": "google/gemma-4-31B-it",
+  "qwen_model": "Qwen/Qwen3.6-27B",
+  "seed_namespace": "v263-v290:problem-only",
+  "model_timeout_sec": 600,
+  "dry_run": false,
+  "stage_order": [
+    "raw_generation",
+    "lazy_check",
+    "conditional_in_place_expansion",
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "frontend": "0.3.263",
+  "backend": "0.3.290+goldfree.1",
+  "budget_forcing": true,
+  "raw_bf_temperature_transition": "1.0 -> 0.7",
+  "workers_per_endpoint": 4,
+  "optional_exact_evidence": false,
+  "model_output": "Markdown",
+  "strict_scoring_inside_pipeline": false,
+  "reference_inputs_allowed": false
+}

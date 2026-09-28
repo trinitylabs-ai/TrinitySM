@@ -1,0 +1,48 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t07_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+  "proof": "evidence/proofs/eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7.md",
+  "completed_at": "2026-09-15T16:37:46.751023+00:00",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The decisive final simplification is merely asserted: the remaining angle constraints are never translated into equations or used to derive \\(bz-cx=\\frac14(b^2-c^2)\\).",
+    "summary": "The coordinate reduction, sine-law calculations, and circumcenter projection formulas are largely coherent. However, the omitted trigonometric elimination is the central difficulty of the problem and requires substantial verification, so the conclusion is not proved as submitted.",
+    "strengths": [
+      "Correctly reduces \\(OM=ON\\) to a linear scalar-product identity.",
+      "Correctly derives the cotangent relations and sets up the circumcenter equations."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The load-bearing trigonometric identity is asserted without any calculation, despite depending on the two remaining geometric compatibility constraints."
+      },
+      {
+        "severity": "minor",
+        "description": "Nonvanishing of \\(\\sin(A-\\theta_L-\\theta_K)\\) and the required angle-branch assumptions are not justified."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/grading/work/strict_c3_20260915T163357Z/scores/p2/t07_r02/summary.json",
+    "native_record_file_sha256": "8949bbf3cf2be5423b3334d99a0fe19b8bbb085fcae0207d0198a13ac0aef7c9",
+    "selected_record": "benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/grades/imo2026_p2/t07_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "d8993d946af71dfb610bd09416ee4186bec3e853615b806a340e035ff53a3985",
+    "proof": "benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/generation/run/lanes/t07_r02/03_r1_cycle_3/cases/imo2026_p2.t07_r02/resolver/temperature_0_4/gpu0/p2/t07_r02/resolved_proof.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd"
+}

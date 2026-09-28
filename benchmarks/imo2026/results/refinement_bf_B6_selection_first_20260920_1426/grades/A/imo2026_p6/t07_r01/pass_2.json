@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "18dfd0199a98fb663a142a274c24f4595ffb01178bbced58c8df646745e21c4e",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9e80b2120c8c733384f3dbbab0c0904e2a19f6a8d3722b004f94122ec4458806",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Step 1's claim that S is finite is false and is the first decisive defect. For example, if a_1=2, the greedy sequence is a_n=2n, so every prime divides some term and S contains all primes. The argument merely suggests that the accompanying prime q may be bounded; this is compatible with arbitrarily large p (here q=2 always). Thus the central finiteness inference fails, invoking Rule E's maximum of 3.",
+    "summary": "The hitting-set formulation and the uniform bound a_{n+1}-a_n<=m_{Q_1} are useful observations, but the proof's central finiteness assertion is demonstrably false. Consequently the stabilization argument does not apply. Moreover, the attempted passage from eventual to global translation periodicity contains an independently false choice of K and invalid backward-induction steps. Substantial new structural ideas are required, so only limited partial credit is warranted.",
+    "strengths": [
+      "Correctly observes that the prime support of every new term hits all preceding prime supports.",
+      "Correctly notes that Q_1 hits every Q_i and derives a uniform upper bound on consecutive gaps.",
+      "Conditional on a genuinely finite family of relevant moduli, the translation-equivariance calculation f(x+L_0)=f(x)+L_0 is correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion S=union Q_n is finite is false. For a_1=2, one obtains a_n=2n and hence S contains every prime. The pigeonhole argument only bounds a possible common prime q and gives no bound on p."
+      },
+      {
+        "severity": "major",
+        "description": "All stabilization and finite-state reasoning in Step 2 depends on the false finiteness of S, so it establishes no applicable eventual periodicity for the given sequence."
+      },
+      {
+        "severity": "major",
+        "description": "The choice of K with KL' divisible by a_1,...,a_{N+KT} is unjustified and can be impossible. For a_n=2n, T=1 and L'=2, it would require 2(N+K) to divide 2K."
+      },
+      {
+        "severity": "major",
+        "description": "The backward induction is circular and uses unavailable translation identities. For instance, while proving the case n=N-1 it assumes a_{N-2+T_new}=a_{N-2}+L, and it writes a_i=a_{i-T_new}+L in a range where i-T_new need not be at least N."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:42:41.710530+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

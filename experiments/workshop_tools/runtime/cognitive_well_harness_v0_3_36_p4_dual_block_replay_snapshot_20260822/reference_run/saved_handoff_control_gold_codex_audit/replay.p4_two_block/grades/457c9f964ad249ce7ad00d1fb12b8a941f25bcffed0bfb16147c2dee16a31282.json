@@ -1,0 +1,43 @@
+{
+  "schema": "gold-informed-codex-math-grade-v1",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "reference_informed": true,
+  "qwen_grades_visible": false,
+  "gemma_grades_visible": false,
+  "terra_grades_visible": false,
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "stage": "qwen36_exact_branch_replay_audit",
+  "position": 1,
+  "selection_role": "gemma4_bf16_mtp4",
+  "candidate_id": "replay.p4_two_block",
+  "solution_id": "p4_two_block",
+  "source_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_two_block/resolved_proof.md",
+  "proof_sha256": "457c9f964ad249ce7ad00d1fb12b8a941f25bcffed0bfb16147c2dee16a31282",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_slip",
+    "answer_supported": true,
+    "complete": true,
+    "requires_new_math": false,
+    "first_break": "In the sufficiency argument, the solution says “since C is the largest angle” without previously specifying that the angles were relabeled so that C is largest.",
+    "summary": "The characterization is correct, and both directions are substantively rigorous. The sufficiency proof works after the harmless clarification that C is chosen as a largest angle. The safe-triangle obstruction in the necessity direction is correctly analyzed through all four possible pairs of newly created angles.",
+    "strengths": [
+      "Correctly proves that a triangle containing kθ is winning by splitting that angle into θ and (k−1)θ.",
+      "Correctly uses the interval of possible cut angles and the θ-lattice when 180=nθ.",
+      "Correctly handles the exceptional small-largest-angle case, forcing n=2.",
+      "The four-case obstruction for nonintegral 180/θ is exhaustive and algebraically correct.",
+      "Reaches the exact required set θ=180°/n for integers n≥2."
+    ],
+    "errors": [
+      {
+        "severity": "slip",
+        "description": "The proof should explicitly begin the arbitrary-triangle argument by relabeling the angles so that C is largest. This is a purely notational repair and requires no new mathematical argument."
+      }
+    ],
+    "contract_consistent": true,
+    "strict_pass": false
+  },
+  "attempt": 1
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claims_are_exact_negations",
+    "positive_proof_relation",
+    "negative_proof_relation",
+    "first_inconsistency",
+    "external_information_used"
+  ],
+  "properties": {
+    "claims_are_exact_negations": {"type": "boolean"},
+    "positive_proof_relation": {
+      "type": "string",
+      "enum": ["proves_positive", "refutes_negative", "proves_negative", "refutes_positive", "unresolved"]
+    },
+    "negative_proof_relation": {
+      "type": "string",
+      "enum": ["proves_positive", "refutes_negative", "proves_negative", "refutes_positive", "unresolved"]
+    },
+    "first_inconsistency": {"type": ["string", "null"]},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

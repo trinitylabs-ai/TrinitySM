@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "c41c2ee68b2b4a78fc7b64e356e17c9f889f8ec7debd4e1b7529dec2436172f9",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "704773a8961bc737764c7e9232cd875fb20afb2ed0d7f1ce3905ec523f6b38cb",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "96714248d31cdee86b6a4eafdff482a357a6d69a8f505a0762875d5ec24d601f",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The estimate for c(x)-c(z) is obtained only when z=f(y), but the proof then substitutes z=x+ε and lets z→x without proving that such nearby values lie in the range of f. Surjectivity or density is neither established nor true for all claimed solutions (for c>0, f(t)=t+c is not onto). Thus the central constancy argument is invalid, invoking Rule E and capping the score at 3.",
+    "summary": "The submitted answer is correct, and the entire family f(x)=x+c with c≥0 is verified correctly. However, the proof that no other functions exist relies on an unjustified extension of an estimate from z in the image of f to arbitrary nearby z. Repairing this requires a genuinely new structural argument, such as analysis of forward orbits and exclusion of different defect values. Hence the classification is not proved as submitted.",
+    "strengths": [
+      "Correctly identifies the solution family f(x)=x+c with c≥0.",
+      "Correctly verifies both inequalities for that family by reducing each to (x-y-c)^2≥0.",
+      "The substitution x=f(y) points toward the useful orbit invariance c(f(y))=c(y).",
+      "Derives a valid quadratic comparison estimate when z=f(y)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "Treats z=f(y) as an arbitrary positive number and in particular as x+ε. No range or density property of f is proved, so the difference-quotient argument does not follow."
+      },
+      {
+        "severity": "substantial",
+        "description": "The conclusion that c is constant from derivative language is not adequately justified as written: saying c'(x)=0 wherever it exists does not establish differentiability everywhere or constancy. If the claimed two-point quadratic estimate held for all pairs, this could be repaired routinely, but it does not hold on the proved domain."
+      },
+      {
+        "severity": "minor",
+        "description": "After setting z=f(y), the lower endpoint is incorrectly written as √(zy); it should be √(z f(y))=z. The preceding line contains the correct calculation, so c(f(y))=c(y) is recoverable by a one-line correction."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:00:10.234045+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00045",
+  "native_rejection_count": 0
+}

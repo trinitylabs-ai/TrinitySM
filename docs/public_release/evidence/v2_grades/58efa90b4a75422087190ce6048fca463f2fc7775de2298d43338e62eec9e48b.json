@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "a0be0bd92339d0ca010fa4d440ae57a3d537f37ee21773d7403f88ccf2e269b9",
+  "problem_id": "imo2026_p3",
+  "repeat": 1,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "14f823ce106869e0be4376d2cceee5e2cdd697547d90205f8ede37ec9be5ebb2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "58d61c3286d7c496fbd800b3a020a301579b104e2fdc8c1f16451a9b7ed23296",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive defect is the Case 2 assertion that Xiang can force the payoff arbitrarily close to 1/2 for every Liu marking. This is false: for n=2, Liu can mark 1/7 and 3/7 and guarantee at least 4/7. Hence the claimed classification is demonstrably incorrect, so Rule A caps the score at 2.",
+    "summary": "The submission establishes the elementary universal lower bound 1/2 and identifies the correct value for n=1, but it does not prove the required upper bound even for n=1 and gives a false answer for every n≥2. The correct general value is 2^n/(2^{n+1}-1), not 1/2 for n≥2.",
+    "strengths": [
+      "Correctly recognizes that, after sorting the pieces, Liu can secure the odd-ranked lengths and hence at least 1/2.",
+      "The marking x=1/3 and response y=2/3 correctly exhibit payoff 2/3 for that particular n=1 strategy.",
+      "For Liu's no-mark strategy when n≥2, the construction with cuts near 1/2 correctly shows that its guaranteed payoff is only 1/2."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed value 1/2 for n≥2 is false. Already for n=2, the marks 1/7 and 3/7 guarantee Liu at least 4/7 against every response."
+      },
+      {
+        "severity": "major",
+        "description": "The proposed general upper-bound argument is unsupported and false: Xiang cannot make pieces created by Liu's existing marks negligible, and splitting one largest gap cannot generally create two pieces of length approximately 1/2."
+      },
+      {
+        "severity": "substantial",
+        "description": "The n=1 analysis uses incorrect piece lengths when y<1/3: the gaps are y, 1/3-y, and 2/3, not 1/3, |y-1/3|, and 1-y. Moreover, showing that y=2/3 limits the single chosen marking x=1/3 does not prove an upper bound over all possible Liu markings."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:49:20.639583+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

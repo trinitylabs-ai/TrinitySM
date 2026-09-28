@@ -1,0 +1,40 @@
+{
+  "updated_at": "2026-09-13T04:25:58.034961+00:00",
+  "experiments": [
+    {
+      "benchmark": "imo2026",
+      "experiment": "review_fusion",
+      "checkpoints": 69
+    },
+    {
+      "benchmark": "imo2026",
+      "experiment": "p2_tool_call_r47",
+      "checkpoints": 1
+    },
+    {
+      "benchmark": "imo-proofbench/basic",
+      "experiment": "pipeline_raw_bf",
+      "checkpoints": 120
+    },
+    {
+      "benchmark": "imo-proofbench/basic",
+      "experiment": "pipeline_final",
+      "checkpoints": 120
+    },
+    {
+      "benchmark": "imo-proofbench/basic",
+      "experiment": "raw_no_bf",
+      "checkpoints": 120
+    },
+    {
+      "benchmark": "imo-proofbench/basic",
+      "experiment": "historical_strict",
+      "checkpoints": 116
+    },
+    {
+      "benchmark": "imo-proofbench/advanced",
+      "experiment": "pipeline_raw_r1c3",
+      "checkpoints": 14
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $p$ and $n$ be integers with $0\le p\le n-2$. Consider a set
+ $S$ of $n$ lines in the plane such that no two of them are parallel
+ and no three have a common point. Denote by $I$ the set of intersections
+ of lines in $S$. Let $O$ be a point in the plane not lying on any
+ line of $S$. A point $X\in I$ is colored red if the open line segment
+ $OX$ intersects at most $p$ lines in $S$. What is the minimum number
+ of red points that is contained in $I$?
+
+**GROUND-TRUTH SOLUTION**
+
+Let $\ell$ be the nearest to $O$ line from $L$ and $\ell\cap I=\left\{ X_{1},X_{2},...,X_{n-1}\right\} $
+ with $|OX_{i}|\leq|OX_{i+1}|$ for every $i.$
+
+ Claim. Open segment $OX_{i}$ intersects at most $i-1$ line from
+ $S$.
+
+ Proof. Suppose the contrary, so $OX_{i}$ intersects $i$ lines and
+ in particular it intersects line $\ell'$ such that $Y=\ell\cap\ell'\notin\bigcup_{t=1}^{i-1}\{X_{t}\}.$
+ If $Z=OX_{i}\cap\ell'$ we get the contradiction with
+ \[
+ |OY|\geq|OX_{i}|\implies\angle OYX_{i}<90^{\circ}\implies d(O,\ell')=|OY|\cdot\sin\angle OYZ<|OY|\cdot\sin\angle OYX_{i}=d(O,\ell)\text{ }\Box
+ \]
+ Now with fixed $n$ we apply induction by $p.$ By the claim $X_{1}$
+ is always red, so the base case $p=0$ follows. Now consider problem
+ statement for $S\backslash\ell$ and $p=k,$ so there exist at least
+ $C_{p+2}^{2}$ red points. After backing $\ell$ to $L$ and increasing
+ $p$ to $p+1$ all red points are preserved and by claim all points
+ $X_{1},X_{2},...,X_{p+2}$ are red, so totally there are at least
+ $C_{p+3}^{2}$ red points.
+
+ For the example construction, we take $X=(-1,-1)$ and $n$ lines
+ to be the lines connecting $(0,n-1-i)$ and $(i,0)$ for $0\le i\le n-1$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the correct answer along with the optimal case construction.
+(Almost)
+ 1. Verification contains minor mistakes only.
+ 2. Proof is correct, but does not provided the optimal case construction.
+
+**PROPOSED SOLUTION**
+
+To find the minimum number of red points, we first translate the problem into a dual setting. Let $O$ be the origin $(0,0)$ and each line $L_i$ in $S$ be given by $a_i x + b_i y = 1$. This is possible since $O$ does not lie on any line of $S$. The lines $L_i$ correspond to points $P_i = (a_i, b_i)$ in the dual plane. No two lines in $S$ are parallel implies no two $P_i$ are collinear with $O$, and no three lines are concurrent implies no three $P_i$ are collinear. Thus, the $n$ points $P_i$ are in general position.
+
+An intersection point $X_{ij} = L_i \cap L_j$ is colored red if the open line segment $OX_{ij}$ intersects at most $p$ lines $L_k$. The segment $OX_{ij}$ intersects $L_k$ if and only if $O$ and $X_{ij}$ lie on opposite sides of $L_k$. In the dual plane, $O$ and $X_{ij}$ are on opposite sides of $L_k$ if and only if $P_k$ and $O$ are on opposite sides of the line $P_i P_j$. Let $h_{ij}$ be the number of points $P_k \in \{P_1, \dots, P_n\} \setminus \{P_i, P_j\}$ such that $P_k$ and $O$ are on opposite sides of the line $P_i P_j$. Then $X_{ij}$ is red if $h_{ij} \le p$.
+
+We seek to minimize the number of pairs $(i, j)$ such that $h_{ij} \le p$. Consider the convex hull $C$ of the set of $n+1$ points $\{P_1, \dots, P_n, O\}$. Let $m$ be the number of vertices of $C$.
+1. If $O$ is a vertex of $C$, it is connected to two edges of $C$. The remaining $m-2$ edges of $C$ are of the form $(P_i, P_j)$. For these edges, all other points, including $O$, lie on the same side, so $h_{ij} = 0$.
+2. If $O$ is not a vertex of $C$, then $O$ is inside $C$, and all $m$ edges of $C$ are of the form $(P_i, P_j)$, so $h_{ij} = 0$ for these $m$ edges.
+
+In both cases, there are at least $m-2 \ge 1$ edges with $h_{ij} = 0$. For $p=0$, the minimum number of red points is 1 (achieved when $m=3$ and $O$ is a vertex). For $p > 0$, we use a known result from combinatorial geometry: for any set of $n$ points in general position, the number of $k$-edges (edges with exactly $k$ points on one side) satisfies $\sum_{k=0}^p E_k \ge \binom{p+2}{2}$. In our case, the "side" is determined by the position of $O$. If $O$ is placed at infinity in a specific direction, $h_{ij}$ becomes the number of points below the line $P_i P_j$. The number of edges with $\le p$ points below them is minimized when the points are in a specific configuration.
+
+Specifically, for any set of $n$ points, the number of pairs $(i, j)$ such that $h_{ij} \le p$ is at least $\binom{p+2}{2}$. This minimum is achieved, for example, when the points $P_i$ are in a convex position and $O$ is placed such that it is "very far" from the points, effectively making the hull of $\{P_i\} \cup \{O\}$ have $O$ as a vertex and the points $P_i$ arranged to minimize the $k$-edge count. For $n \ge p+2$, the minimum number of red points is $\binom{p+2}{2}$.
+
+The minimum number of red points is $\binom{p+2}{2}$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

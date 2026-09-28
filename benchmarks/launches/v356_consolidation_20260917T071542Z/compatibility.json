@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "p2",
+      "baseline_package": "cognitive_well_harness_v0_3_349_checked_real_branches_20260916",
+      "source_run": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run",
+      "operation": "exact_geometry",
+      "certificate_replayed": true,
+      "original_selection_reused": true,
+      "statement_byte_identical": true,
+      "appendix_byte_identical": true,
+      "tool_purpose_byte_identical": true,
+      "explicit_source_update_identical": true,
+      "certificate_sources_unchanged": true,
+      "statement_sha256": "034546c89ef677b2cc8163d2604c2d6a0f36c3d5c0c0547749f59792c19e7aec",
+      "appendix_sha256": "1999d1cc5029f48b749c01049ba099a4b42a6aa7daf120f09ad66a10bb35d193",
+      "new_model_calls": 0,
+      "seconds": 56.679613071959466
+    },
+    {
+      "case": "basic008",
+      "baseline_package": "cognitive_well_harness_v0_3_344_root_syntax_normalization_20260916",
+      "source_run": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic_p008_t10_r01_raw_roots_v344_20260916T155741Z/generation/run",
+      "operation": "real_root_classification",
+      "certificate_replayed": true,
+      "original_selection_reused": true,
+      "statement_byte_identical": true,
+      "appendix_byte_identical": true,
+      "tool_purpose_byte_identical": true,
+      "explicit_source_update_identical": true,
+      "certificate_sources_unchanged": true,
+      "statement_sha256": "59ea6eb73a0156b83fffc4e5bbce264e8ff98176fdbae758f48362337fdc6ae4",
+      "appendix_sha256": "175a4758422e2bf3e00e331666000592b368273ee1d2006650f84c8f6535cca9",
+      "new_model_calls": 0,
+      "seconds": 17.042805408942513
+    },
+    {
+      "case": "basic009",
+      "baseline_package": "cognitive_well_harness_v0_3_353_discrete_synthesis_binding_20260917",
+      "source_run": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v352_20260917T033155Z/generation/run",
+      "operation": "uniform_partition_count",
+      "certificate_replayed": true,
+      "original_selection_reused": true,
+      "statement_byte_identical": true,
+      "appendix_byte_identical": true,
+      "tool_purpose_byte_identical": true,
+      "explicit_source_update_identical": true,
+      "certificate_sources_unchanged": true,
+      "statement_sha256": "d19bd2ed264fc8070c7f9a5eb9ee6306586f0736763de9e1181bae7c2b291071",
+      "appendix_sha256": "722af759d9925af750a749723ddad477e423a3ebdb9ebbc941b86888a1674e62",
+      "new_model_calls": 0,
+      "seconds": 3.8393857390619814
+    }
+  ]
+}

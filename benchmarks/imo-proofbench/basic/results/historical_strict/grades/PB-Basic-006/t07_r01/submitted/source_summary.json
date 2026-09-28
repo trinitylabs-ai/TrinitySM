@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T16:41:28.084435+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 6,
+  "problem_id": "PB-Basic-006",
+  "case_id": "PB-Basic-006.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "22d0c6b0648fe9c157399fff4040aa2c9986b79f5c1baa6e249cfd185df8fe85",
+  "reference_sha256": "efb06b200a3c566e85c10e0b573679e8344c15ac772401aa6728ec42d72dfea1",
+  "proof_sha256": "39fb00a6bbedcc1138e15e1603dd33a9af25cd4c81665df3c4d93bef631bdf85",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "97bd329f154ea9e75ac04500fe39cc13f7b3fc6e3aa0c443f4f38ec9104b1c3f",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive claim that real-rootedness of every partial sum forces the formal power series to define an entire function is merely attributed to Pólya–Schur, without a precise statement or proof.",
+    "summary": "The contradiction after establishing infinite radius of convergence is correct, as is the preliminary deduction that every \\(c_k\\neq0\\). However, the asserted entire-function theorem contains essentially the whole difficult step and is neither standard enough for an Olympiad proof nor justified here. Proving the needed coefficient decay requires a substantive root/coefficient inequality such as the one in the reference solution.",
+    "strengths": [
+      "Correctly reduces the problem to nonzero coefficients and derives the final contradiction from coefficient decay.",
+      "The overall contradiction strategy is mathematically coherent."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "An unproved, specialized Pólya–Schur assertion replaces the load-bearing argument that the real-rooted partial sums impose superexponential decay on their coefficients."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,19 @@
+{
+  "state": "completed",
+  "stage": "done",
+  "initial_scores": {
+    "ensemble": 3,
+    "terra": 3
+  },
+  "blind_regrade_matrix": {
+    "ensemble_feedback_revision": {
+      "ensemble": 6,
+      "terra": 3
+    },
+    "terra_feedback_revision": {
+      "ensemble": 3,
+      "terra_preserved": 7
+    }
+  },
+  "updated_at": "2026-08-21T04:39:25.842148+00:00"
+}

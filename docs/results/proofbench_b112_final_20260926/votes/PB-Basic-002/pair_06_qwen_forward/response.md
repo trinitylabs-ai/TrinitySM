@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for all $x, y, z, t > 0$ satisfying $2(x + y + z + t) \ge xyzt$.
+Claim gap: NONE supported by checks.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Lines 5-7 correctly apply AM-GM to the positive squares, yielding $Q \ge 4\sqrt{P}$. Lines 8-10 correctly apply Cauchy-Schwarz (or QM-AM), yielding $Q \ge S^2/4$. Lines 13-14 substitute the given condition $S \ge P/2$ into the quadratic bound; since $S, P > 0$, the function $f(S)=S^2/4$ is strictly increasing, preserving the inequality direction to give $Q \ge P^2/16$. Lines 19-29 perform a complete case split on $P>0$: for $P \le 16$, $P \le 4\sqrt{P}$ chains with the AM-GM bound to give $Q \ge P$; for $P > 16$, $P^2/16 > P$ chains with the Cauchy-Schwarz bound to give $Q > P$. All quantifiers ($\forall x,y,z,t>0$) and domain restrictions are respected. No hidden assumptions or boundary exceptions exist.
+
+## Proof B
+Established theorem: $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for all $x, y, z, t > 0$ satisfying $2(x + y + z + t) \ge xyzt$.
+Claim gap: The optimization argument in Lines 17-18 lacks rigorous justification. The claim that the maximum of $\sum \ln(1+\delta_i)$ subject to $\sum \delta_i^2 \le 4$ and $\delta_i > -1$ occurs at $\delta_1 = \delta_2 = \delta_3 = \delta_4$ is asserted without proof. Jensen's inequality bounds the sum by a function of $\sum \delta_i$, but does not directly handle the quadratic constraint $\sum \delta_i^2 \le 4$ without an additional step linking the linear sum to the quadratic constraint.
+Qualifications and supplied repairs: To verify the claim, one must combine Jensen's inequality ($\frac{1}{4}\sum \ln(1+\delta_i) \le \ln(1+\frac{1}{4}\sum \delta_i)$) with Cauchy-Schwarz ($\sum \delta_i \le \sqrt{4\sum \delta_i^2} \le 4$) to deduce $\sum \ln(1+\delta_i) \le 4\ln 2 = \ln 16$. This repair is not present in the text; the submission relies on an unproven heuristic about symmetric concave functions over symmetric convex sets.
+Decisive checks: Lines 4-7 correctly handle Case 1 via AM-GM. Lines 10-15 correctly reduce Case 2 to proving $\sum (x-1)^2 \ge 4$. Lines 16-23 attempt the contrapositive via optimization. The concavity of $\ln(1+\delta)$ is correct. The assertion of equal coordinates at the maximum (Line 18) is a demonstrated defect in rigor. The arithmetic in Lines 20-22 is correct given the assumption. The final chain in Lines 24-25 is valid. The domain shift to $\delta_i > -1$ is handled, but the optimization step remains incomplete.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete, rigorous derivation using standard inequalities and a clean case split, with every step algebraically verified and correctly chained across the full domain $x,y,z,t>0$. Proof B reaches the correct conclusion but contains a load-bearing gap in Lines 17-18: it asserts that the maximum of a symmetric concave objective under a quadratic constraint occurs at equal coordinates without justification. While the claim is true and repairable via Jensen + Cauchy-Schwarz, the submission omits this necessary link, leaving the optimization step hand-wavy. Proof A's method is more direct, avoids optimization entirely, and requires no external repairs, making it mathematically stronger as written.

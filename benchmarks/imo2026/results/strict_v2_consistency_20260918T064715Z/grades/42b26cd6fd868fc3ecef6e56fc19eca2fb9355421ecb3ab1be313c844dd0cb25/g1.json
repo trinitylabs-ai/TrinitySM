@@ -1,0 +1,65 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "42b26cd6fd868fc3ecef6e56fc19eca2fb9355421ecb3ab1be313c844dd0cb25",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "b860c4dd940ecb8d7e83d76b4e35f3c26ff062b1be56911cacf6dd6971c3ce48",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "4a3a963934638d0105fae0272a137ffab82f3b787e022822628ef9b31e481754",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the claim that being bounded between two continuous functions makes f continuous. This implication is false in general, and continuity of the supremum/infimum envelopes is not established either. The ensuing surjectivity claim therefore has no foundation. This is an unsupported central inference under Rule E.",
+    "summary": "The submitted answer is correct, and the converse verification is valid: both inequalities reduce to the square (x-y-c)^2. However, the necessity proof is not established. Its continuity and range assertions are unsupported; moreover, even if they were granted, the relation f(x)-x=f(y)-y whenever f(y)=x only proves invariance along forward orbits, not that the defect is globally constant. The claimed extension to the remaining domain is also merely asserted. Proving global constancy requires substantial new structural arguments, so the proof has a major central gap.",
+    "strengths": [
+      "Correctly identifies the solution family f(x)=x+c with c>=0.",
+      "Correctly derives useful upper and lower bounds from the original inequalities.",
+      "Correctly verifies the proposed family, since both squared gaps equal (x-y-c)^2.",
+      "The substitution involving f(y)=x recognizes the useful orbit-invariance relation for f(t)-t."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The inference that a function sandwiched between two continuous functions must itself be continuous is invalid; additionally, continuity of the displayed supremum and infimum envelopes is not proved."
+      },
+      {
+        "severity": "major",
+        "description": "Consequently, the assertion that f assumes every value in (inf f,infinity) is unsupported."
+      },
+      {
+        "severity": "major",
+        "description": "Even granting the range assertion, f(x)-x=f(y)-y when f(y)=x establishes only invariance along an orbit. It does not imply that f(x)-x has one common value for all large x."
+      },
+      {
+        "severity": "major",
+        "description": "The extension of the purported constant defect from x>a to all positive x is asserted without any argument."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:50:43.296270+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

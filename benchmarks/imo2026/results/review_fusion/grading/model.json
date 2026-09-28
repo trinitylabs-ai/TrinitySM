@@ -1,0 +1,12 @@
+{
+  "recorded_configurations": [
+    {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict"
+    }
+  ],
+  "deployment_note": "These are the saved grader model identifiers. No unrecorded provider revision or sampling setting is inferred.",
+  "source_note": "Saved policy bytes are hash-verified. current_scorer_source.py is a navigation link to current code; a historical scorer source digest was not recorded in these manifests.",
+  "reference_note": "Strict rubric and available gold references are preserved. Strict grading did not use the IMOBench per-problem guidelines. Historical references lack separate recorded hashes in some strict manifests."
+}

@@ -1,0 +1,13 @@
+{
+  "unit_tests": "9 passed",
+  "offline_integration": "passed",
+  "snapshot_preceded_solver": true,
+  "native_manifest_dry_run": true,
+  "worker_returncode": 0,
+  "artifact_records_verified": 32,
+  "model_response_artifacts": 0,
+  "grading_calls": 0,
+  "frozen_release_verified_files": 354,
+  "helper_sha256": "88785b357bd857b1bf4535ec2ccf2989bf963d2536fef31989a7f1deb85b936f",
+  "launcher_sha256": "365ca0cab9fa98afd7e1c7975da0fcc39ffe667f460a629626e54d69da5ed6aa"
+}

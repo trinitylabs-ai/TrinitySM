@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "17cc0d50295a40b2a5712a035d5efbe3621299a9e1ae6ea2fa5d7ba294579611",
+  "problem_id": "imo2026_p1",
+  "repeat": 2,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "80fb7593992e82b41e505cb39d4e38fdc698c4b5ae98cbf64342214412350be5",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The submission gives a complete and correct solution. The lexicographic potential (product, number of entries greater than 1) proves termination, and the process cannot reach a board with no entry greater than 1. Primewise, the gcd of all p-adic valuations is invariant under the Euclidean transformation (a,b)↦(min(a,b),|a−b|), which uniquely reconstructs the terminal integer and proves independence of choices.",
+    "strengths": [
+      "Correctly proves strict lexicographic descent in every move.",
+      "Correctly establishes that a terminal board has exactly one entry greater than 1.",
+      "Identifies and proves the appropriate primewise invariant.",
+      "Correctly reconstructs the unique terminal value from the initial data."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T09:00:04.156942+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00002",
+  "native_rejection_count": 0
+}

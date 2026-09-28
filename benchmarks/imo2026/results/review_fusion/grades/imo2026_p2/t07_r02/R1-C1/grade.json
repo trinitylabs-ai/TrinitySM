@@ -1,0 +1,51 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T12:40:25.812186+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 2,
+  "problem_id": "imo2026_p2",
+  "case_id": "imo2026_p2.explicit.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+  "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q2_solution.txt",
+  "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R1-C1/t07_r02/submitted_proof.md",
+  "proof_source_kind": "explicit_terminal_proof",
+  "proof_sha256": "f92288ff1ae160ef24da6c3ea53c62637cc422ee8128f69090e8d47bd05b0ebb",
+  "resolver_outcome": "EXPLICIT_ARTIFACT",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The displayed algebraic condition for equality of the two powers has a sign error: since the circumcentre formula uses the denominator −Im(K·conj(L)), multiplying through gives the negative of the submitted right-hand side.",
+    "summary": "The solution correctly reduces OM=ON to equality of powers and obtains useful sine-law coordinates for K and L. However, the subsequent algebra contains sign/branch errors, and the entire decisive elimination is replaced by the unsupported statement that substitution verifies the required identity. That verification is a substantial, load-bearing calculation, so the conclusion is not proved as submitted.",
+    "strengths": [
+      "Correctly reformulates OM=ON as equality of the powers of M and N with respect to the circumcircle of AKL.",
+      "Correctly applies the sine law in triangles BMK and LNC to obtain useful lengths and coordinate parametrizations.",
+      "Identifies a potentially viable complex-coordinate strategy involving the two remaining angle conditions."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The power-equality identity following the circumcentre formula has the wrong overall sign on its right-hand side after clearing the denominator −Im(K·conj(L))."
+      },
+      {
+        "severity": "major",
+        "description": "With C taken above the real axis, the ray order at B gives L−B=r·e^(−iβ)(K−B), whereas the proof uses e^(iβ). Thus its compatibility equations do not encode the stated configuration."
+      },
+      {
+        "severity": "major",
+        "description": "The central claim that substituting the compatibility equations verifies the required algebraic identity is asserted without any elimination or calculation. This is precisely the nontrivial heart of the problem and cannot be treated as routine algebra."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

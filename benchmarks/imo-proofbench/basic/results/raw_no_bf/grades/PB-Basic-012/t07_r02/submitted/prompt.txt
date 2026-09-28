@@ -1,0 +1,120 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Consider a positive integer $n$. We define $f(n)$ as the number of pairs of paths on an $n \times n$ grid that:
+
+ (1) Both paths start at $(0, 0)$ (bottom left corner) and end at $(n, n)$ (top right corner).
+
+ (2) Both paths allow only right or up movements (one unit each).
+
+ (3) The $y$ coordinate of the first path never exceeds the y coordinate of the second path at any timestep.
+
+ For example, when $n = 2$, consider the following pair of paths:
+
+ The first path: $(0,0) \rightarrow (1,0) \rightarrow (1,1) \rightarrow (2,1) \rightarrow (2,2)$
+ The second path: $(0,0) \rightarrow (1,0) \rightarrow (2,0) \rightarrow (2,1) \rightarrow(2,2)$
+ The example is invalid because after 2 steps, the y coordinate of the first path (1) is larger than the y coordinate of the second path (0).
+
+ However, the following example is valid,
+
+ The first path: $(0,0) \rightarrow (1,0) \rightarrow (2,0) \rightarrow (2,1) \rightarrow (2,2)$
+ The second path: $(0,0) \rightarrow (1,0) \rightarrow (1,1) \rightarrow (2,1) \rightarrow (2,2)$
+
+ since the y coordinate of the first path is never larger than the second path. Find $f(10)$.
+
+**GROUND-TRUTH SOLUTION**
+
+If we move the second path up-left by one unit, the pair of paths corresponds to a pair of paths from (0,0) to (10,10) and from (-1,1) to (9,11) which are non-intersecting. The total number of path pairs is $\binom{20}{10}^2$. The number of intersecting pairs corresponds to the number of pair of paths from (0,0) to (9, 11) and paths from (-1, 1) to (10,10), because interchanging the two paths at the first intersection point gives a one-to-one correspondence, and thus equals $\binom{20}{9}^2$. Therefore there are $\binom{20}{10}^2 - \binom{20}{9}^2$ paths.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Came up with an idea of correcting shifting (shifting only one path by $+1$ in the $y$-coordinate) or found an equivalent idea with it.
+(Almost)
+ 1. Made a minor mistake when counting.
+
+**PROPOSED SOLUTION**
+
+To find the number of pairs of paths $f(n)$ on an $n \times n$ grid that satisfy the given conditions, let us denote the two paths as $P_1$ and $P_2$. Both paths start at $(0,0)$ and end at $(n,n)$, using only right (R) and up (U) movements.
+
+Let $P_1 = \{(x_{1,t}, y_{1,t}) : t=0, 1, \dots, 2n\}$ and $P_2 = \{(x_{2,t}, y_{2,t}) : t=0, 1, \dots, 2n\}$ be the coordinates of the paths at each timestep $t$. The condition is that $y_{1,t} \le y_{2,t}$ for all $t \in \{0, 1, \dots, 2n\}$. Since $x_t + y_t = t$ for any path, this condition is equivalent to $t - x_{1,t} \le t - x_{2,t}$, which simplifies to $x_{2,t} \le x_{1,t}$.
+
+We can solve this using the Lindström-Gessel-Viennot (LGV) Lemma. We shift the paths to transform the problem into one of counting non-intersecting paths. Let $P_1'$ be the path $P_1$ shifted by $(1, 0)$ and $P_2'$ be the path $P_2$ shifted by $(0, 1)$.
+- $P_1'$ starts at $A_1 = (1, 0)$ and ends at $B_1 = (n+1, n)$.
+- $P_2'$ starts at $A_2 = (0, 1)$ and ends at $B_2 = (n, n+1)$.
+
+The shifted paths $P_1'$ and $P_2'$ intersect at a vertex if $(x_{1,t}+1, y_{1,t}) = (x_{2,s}, y_{2,s}+1)$ for some $t, s$. Since the sum of coordinates must be equal, $t+1 = s+1$, so $t=s$. The intersection condition becomes $x_{1,t}+1 = x_{2,t}$ and $y_{1,t} = y_{2,t}+1$, which means $y_{1,t} > y_{2,t}$. Thus, $P_1'$ and $P_2'$ are non-intersecting if and only if $y_{1,t} \le y_{2,t}$ for all $t$.
+
+By the LGV Lemma, the number of such non-intersecting pairs is given by the determinant:
+\[ f(n) = \det \begin{pmatrix} N(A_1, B_1) & N(A_1, B_2) \\ N(A_2, B_1) & N(A_2, B_2) \end{pmatrix} \]
+where $N(A, B)$ is the number of paths from $A$ to $B$.
+- $N(A_1, B_1) = \binom{n + n}{n} = \binom{2n}{n}$
+- $N(A_2, B_2) = \binom{n + n}{n} = \binom{2n}{n}$
+- $N(A_1, B_2) = \binom{(n-1) + (n+1)}{n-1} = \binom{2n}{n-1}$
+- $N(A_2, B_1) = \binom{(n+1) + (n-1)}{n+1} = \binom{2n}{n+1}$
+
+Since $\binom{2n}{n-1} = \binom{2n}{n+1}$, we have:
+\[ f(n) = \binom{2n}{n}^2 - \binom{2n}{n-1}^2 \]
+For $n=10$:
+\[ \binom{20}{10} = \frac{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 184,756 \]
+\[ \binom{20}{9} = \binom{20}{10} \cdot \frac{10}{11} = \frac{184,756 \cdot 10}{11} = 16,796 \cdot 10 = 167,960 \]
+Then:
+\[ f(10) = 184,756^2 - 167,960^2 = (184,756 - 167,960)(184,756 + 167,960) \]
+\[ f(10) = 16,796 \cdot 352,716 \]
+Performing the multiplication:
+\[ 16,796 \cdot 352,716 = 5,924,217,936 \]
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

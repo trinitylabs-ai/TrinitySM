@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-10T16:43:46.846957+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 6,
+  "problem_id": "PB-Basic-006",
+  "case_id": "PB-Basic-006.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "22d0c6b0648fe9c157399fff4040aa2c9986b79f5c1baa6e249cfd185df8fe85",
+  "reference_sha256": "efb06b200a3c566e85c10e0b573679e8344c15ac772401aa6728ec42d72dfea1",
+  "proof_sha256": "06eebc81ebfd9872c55e2f77aa2751db8809155e1582ed51b49c5257f7033d16",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic006_strict_inputs_20260910/tasks.json",
+  "task_manifest_sha256": "97bd329f154ea9e75ac04500fe39cc13f7b3fc6e3aa0c443f4f38ec9104b1c3f",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The decisive assertion that real-rootedness of every ordinary partial sum forces the formal power series to converge everywhere is merely attributed to Pólya–Schur, without proving or correctly formulating an applicable standard theorem.",
+    "summary": "The contradiction setup and the argument from infinite radius of convergence to eventual vanishing of the integer coefficients are correct. However, establishing infinite radius is essentially the central task, and the submission replaces it with an unsupported specialized assertion. A valid repair requires the missing Viète and AM–GM coefficient estimate.",
+    "strengths": [
+      "Correctly deduces that every \\(P_k\\) would have degree \\(k\\) and hence \\(c_k\\ne0\\).",
+      "Correctly applies Cauchy–Hadamard and integrality once infinite radius is established."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The load-bearing convergence theorem is unsupported and does not follow from the standard Pólya–Schur theorem as cited; no argument is supplied showing that the initially formal series has infinite radius of convergence."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

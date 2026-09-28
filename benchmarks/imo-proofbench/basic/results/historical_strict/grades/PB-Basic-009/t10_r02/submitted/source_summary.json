@@ -1,0 +1,52 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T16:10:10.836720+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 9,
+  "problem_id": "PB-Basic-009",
+  "case_id": "PB-Basic-009.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/p9/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "38ddc6b8f92fbe75b0a849bcf58418169c490526ec752691ec959df0e802586a",
+  "reference_sha256": "9d402d87386bcc57d6e799c2e7235c54c3eb7a6d3466ba66487e54443eb91c48",
+  "proof_sha256": "efe1d7115898427c40e77ed0b08986bf9137d405e52a1b82c74eb0ae7ce5ac92",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic009_011_014_strict_inputs_20260911/tasks.json",
+  "task_manifest_sha256": "96eefc6afaf2a959b6ee9e90483f78c627cb0993157e0057b51004e32b3e04be",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In the \\(p=2\\) case, the proof examines only the uniform and one maximally skewed distribution of the \\(y_k\\), then concludes without justification that all intermediate distributions give \\(A\\ge136\\).",
+    "summary": "The answer \\(136\\), normalization, construction, and cases \\(p=1\\) and \\(p\\ge11\\) are correct. However, the essential range \\(2\\le p\\le10\\) is not proved: selected distributions or limiting configurations are treated as universal minimizers without any extremal argument. Establishing the lower bound requires a new load-bearing idea, such as the partition double count in the reference.",
+    "strengths": [
+      "Correctly reduces the problem to zero-sum variables.",
+      "Gives a valid construction attaining \\(136\\).",
+      "Correctly handles \\(p=1\\) and \\(p\\ge11\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The \\(p=2\\) lower bound is inferred from two examples rather than proved for arbitrary \\(y_k\\)."
+      },
+      {
+        "severity": "major",
+        "description": "For \\(3\\le p\\le10\\), analyzing a “skewed” limiting distribution does not imply \\(A\\ge f(p)\\) for every distribution; no minimization argument is supplied."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

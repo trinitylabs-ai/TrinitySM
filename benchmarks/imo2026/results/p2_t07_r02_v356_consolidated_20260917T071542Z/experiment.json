@@ -1,0 +1,22 @@
+{
+  "schema": "imo-experiment-v1",
+  "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+  "benchmark": "imo2026",
+  "created_at": "2026-09-17T07:25:37.977336+00:00",
+  "harness_release": "1.7.0",
+  "launcher_sha256": "ba56b4c0223f8104e14566550e6d7540461ad237412812474bd3bff6ccdca83b",
+  "state": "completed",
+  "generation_output": "generation/run",
+  "grading_output": "grading/work",
+  "tool_harness": {
+    "version": "0.3.356",
+    "release_sha256": "b899438a603c521d5b40f1fc97fbedc0bbfb7c82d086223014e1e3f706b11e68",
+    "proof_file": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/proofs/imo2026_p2/t07_r02/R1-C3.md",
+    "proof_file_sha256": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c"
+  },
+  "selected_certificate_resume": {
+    "source_run": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run",
+    "scope": "originally_selected_typed_certificate_replay_and_synthesis"
+  },
+  "snapshot_sha256": "70bd4ca927a836deb39aa424ad208a0744d2a08104a07a47644feaeb757b5541"
+}

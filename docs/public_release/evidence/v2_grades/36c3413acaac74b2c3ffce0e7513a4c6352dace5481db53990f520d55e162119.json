@@ -1,0 +1,65 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "6aba01adc7844ff535eec975e5debcb3fbb1ee4a2ed0262daed75246374f9190",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "b37c9bb4336f2a1e36dcf006dc6d6538206bddc28e60fb38d71040cb9f2bfe39",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "8f2cd1bb79a3799c05f7e670d33a8c1b87186f18b2cf4546377c862055cf40dc",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument first fails when the displayed bounds on ε(y+c) are asserted without derivation; this is the central step meant to restrict an arbitrary function, so Rule E applies.",
+    "summary": "The claimed classification is correct, and the submission correctly verifies every translation f(x)=x+c with c≥0. However, it does not prove that these are the only solutions. The asserted ε-recurrence is unsupported, and even that recurrence would not imply the claimed convergence: when c=0, its two inequalities are tautological and impose no convergence at all. Moreover, asymptotic convergence of ε would not establish that ε is constant on the whole domain. Repairing the proof requires the missing central rigidity argument, not a local correction.",
+    "strengths": [
+      "Correctly verifies the right inequality for f(x)=x+c using AM-GM.",
+      "Correctly verifies the left inequality for f(x)=x+c using RMS-AM.",
+      "Correctly determines that the only solutions within the restricted family f(x)=ax are obtained when a=1.",
+      "States the correct final classification."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The displayed bounds involving ε(y+c) are introduced merely by saying they were found through growth analysis; no derivation from the original inequalities is supplied."
+      },
+      {
+        "severity": "major",
+        "description": "The inference that those bounds force ε(y) to converge is invalid. In particular, for c=0 the bounds reduce to inequalities that hold identically for arbitrary ε."
+      },
+      {
+        "severity": "major",
+        "description": "Even convergence of ε at infinity would not imply that ε is constant for all positive inputs, so it would not complete the required uniqueness proof."
+      },
+      {
+        "severity": "minor",
+        "description": "The choice x=y+c is not justified for all y because c=f(1)-1 has not yet been shown nonnegative; it is only automatically admissible for sufficiently large y."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:43:54.919423+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

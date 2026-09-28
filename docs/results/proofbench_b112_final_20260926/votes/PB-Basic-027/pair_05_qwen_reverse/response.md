@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof establishes that the product of the slopes of lines $DE$ and $XO$ is $-1$, which implies $XO \perp DE$ for any acute triangle $ABC$.
+Claim gap: The derivation of the circumcenter $O$'s angular direction contains a minor logical leap. The proof correctly notes that $\triangle CE_1E_2$ is isosceles and that $O$ lies on the perpendicular bisectors of $CE_1$ and $CE_2$, but it does not explicitly state that the circumcenter of an isosceles triangle must lie on the angle bisector of the vertex angle. This geometric property is required to justify that the polar angle of $\vec{CO}$ is the average of the polar angles of $E_1$ and $E_2$.
+Qualifications and supplied repairs: The gap is resolved by the standard theorem that the circumcenter, centroid, and orthocenter of an isosceles triangle are collinear on the axis of symmetry (the vertex angle bisector). This property holds for all acute triangles and validates the angle averaging step. All trigonometric simplifications and slope calculations are verified.
+Decisive checks: Coordinates of $D$ and $E$ are correctly derived. The slope $m_{DE} = \tan B$ is verified via Law of Sines substitution and trigonometric identities. The slope $m_{XO} = -\cot B$ is verified. The product $m_{DE} \cdot m_{XO} = -1$ correctly establishes perpendicularity. Domain checks confirm denominators are non-zero for acute triangles.
+
+## Proof B
+Established theorem: The proof establishes that the dot product of vectors $\vec{XO}$ and $\vec{DE}$ is $0$, which implies $XO \perp DE$ for any acute triangle $ABC$.
+Claim gap: NONE supported by checks. The derivation of the circumcenter coordinates $O(x_0, y_0)$ is performed algebraically by solving the linear system obtained from substituting $E_1$ and $E_2$ into the circle equation. This approach is fully self-contained and requires no external geometric lemmas.
+Qualifications and supplied repairs: The algebraic solution for $x_0$ and $y_0$ is verified step-by-step. The dot product expansion and subsequent trigonometric simplification to zero are verified. The acute triangle condition ensures $\cos \gamma \neq 0$ and $\sin \gamma \neq 0$, validating all divisions.
+Decisive checks: Coordinates of $E_1$ and $E_2$ are correctly derived using reflection angles. The system of equations for the circle center is set up correctly. The sum-to-product identities are applied correctly to isolate the relationship between $x_0$ and $y_0$. The final dot product calculation correctly reduces to $\frac{r_0}{2}(a \sin \beta - r_0) = 0$, confirming perpendicularity.
+
+## Decision
+Winner: B
+Reason: Both proofs are mathematically correct and successfully establish the perpendicularity. Proof B is preferred because it provides a more rigorous and self-contained derivation of the circumcenter $O$. Proof A relies on a geometric property (circumcenter lying on the angle bisector of an isosceles triangle) to determine the direction of $O$, stating the result without explicitly deriving it from the perpendicular bisector conditions. Proof B derives the coordinates of $O$ algebraically from first principles, eliminating any reliance on geometric intuition or implicit lemmas. Additionally, Proof B's use of the dot product avoids potential edge-case ambiguities with slope definitions, making it slightly more robust in a formal coordinate geometry audit.

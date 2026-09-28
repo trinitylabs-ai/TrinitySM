@@ -1,0 +1,34 @@
+{
+  "sample_id": "p1_s2_first_revision",
+  "case": "p1_s2",
+  "stage": "first_ensemble_feedback_revision",
+  "fusion": {
+    "valid": true,
+    "errors": [],
+    "score": 7,
+    "verdict": "CORRECT",
+    "repair_status": "NOT REQUIRED",
+    "accepted_defect_ids": [],
+    "round_count": 0,
+    "branch_statuses": [],
+    "severities": [],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 6759,
+      "total_tokens": 9588,
+      "completion_tokens": 2829,
+      "prompt_tokens_details": null
+    },
+    "latency_seconds": 114.25216870009899,
+    "seed": 1586375840,
+    "report_sha256": "aa600183fbe2282542c985f14d37dfab1130b715d504b4f582ab84722ae4ede6"
+  },
+  "repair": {
+    "ran": false,
+    "valid": true,
+    "status": "NOT REQUIRED"
+  },
+  "prior_strict_score": 7,
+  "gold_score": 6,
+  "gold_verdict": "minor_slip"
+}

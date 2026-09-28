@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "bffe08241efb3bb92d1d513d2a1bfbb925209104dbe54704955212b1cfc4db05",
+  "problem_id": "imo2026_p6",
+  "repeat": 2,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "76086a1504bdbc8006f5d971ad5852b273b1b860991f0ead7899a96d0e15adc6",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the unsupported inference that stabilization of the minimum hitting-set product implies that all future steps are determined by a fixed finite family of hitting sets of bounded product. The claim that the case a_{n+1}=m(H)>m^* can occur only finitely often does not follow from finiteness of \\mathcal M_n and is false: for the admissible sequence 2,4,6,8,\\ldots, the full prime support H=P_{n+1} gives m(H)=a_{n+1}>2 for infinitely many squarefree terms while removing no minimum hitting set. This leaves the central finiteness assertion unproved, so Rule E caps the score at 3.",
+    "summary": "The hitting-set reformulation and the later finite-state argument are useful, but the proof omits the central theorem needed to obtain a fixed finite collection of relevant hitting sets. Moreover, even the resulting argument establishes only eventual translation-periodicity. The final statement that larger T and L can absorb an arbitrary initial transient is invalid in general and does not prove the required identity for every n, invoking Rule D as a second cap of 3. Establishing both global finiteness and pure periodicity from the first term requires new structural ideas.",
+    "strengths": [
+      "Correctly expresses each greedy step as the least next multiple arising from a hitting set.",
+      "Correctly notes that the hitting-set families are nested and that their minimum products are nondecreasing; boundedness can be made routine using P_1 as a hitting set for every stage.",
+      "Conditional on having a fixed finite family, correctly obtains a translation-equivariant transition map and eventual periodicity of its increments."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The existence of a fixed finite family \\mathcal S_N with uniformly bounded products is simply asserted. The preceding dichotomy supplies no uniform bound, and finiteness of the minimum-product family does not imply that the stated exceptional events occur only finitely often. This is an unsupported central structural inference under Rule E."
+      },
+      {
+        "severity": "major",
+        "description": "The proof obtains at most a_{n+T}=a_n+L for all sufficiently large n. Enlarging T and L does not generally make an eventually periodic increment sequence periodic from its beginning. No compatibility argument for the finite initial range is supplied, so the universal quantifier is unhandled under Rule D."
+      },
+      {
+        "severity": "minor",
+        "description": "The assertion that m_n becomes constant immediately after m_n>a_n is only demonstrated for the next index; an induction using the fact that every later term shares a prime with a_{n+1} would be needed. This point is locally repairable."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:03:55.129062+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00051",
+  "native_rejection_count": 0
+}

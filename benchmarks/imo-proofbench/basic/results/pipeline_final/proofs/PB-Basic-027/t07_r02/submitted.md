@@ -1,0 +1,39 @@
+To prove that $XO$ is perpendicular to $DE$, we employ a coordinate geometry approach. Let the vertices of the acute triangle $ABC$ be denoted by their coordinates. We set the vertex $C$ as the origin $(0,0)$ and the line $CA$ as the $x$-axis. Let $a, b, c$ denote the side lengths $BC, AC, AB$, respectively.
+
+**1. Coordinates of the points $D$ and $E$**
+The vertex $C$ is $(0,0)$ and $A$ is $(b, 0)$. Since $C$ is the origin and $CA$ is the $x$-axis, the vertex $B$ is at $(a \cos C, a \sin C)$. 
+$D$ is the foot of the altitude from $B$ to $AC$, so $D$ is the projection of $B$ onto the $x$-axis:
+\[ D = (a \cos C, 0) \]
+$E$ is the foot of the altitude from $C$ to $AB$. In the right triangle $BCE$, we have $CE = BC \sin B = a \sin B$. The angle $\angle ECA = 90^\circ - A$. Thus, the coordinates of $E$ are:
+\[ E = (CE \cos(90^\circ - A), CE \sin(90^\circ - A)) = (a \sin B \sin A, a \sin B \cos A) \]
+
+**2. The circumcircle $\Gamma$ of $\triangle CE_1 E_2$**
+$E_1$ is the reflection of $E$ across $AC$ (the $x$-axis), so $E_1 = (a \sin B \sin A, -a \sin B \cos A)$. $E_2$ is the reflection of $E$ across $BC$. Since reflections preserve distance, $CE_1 = CE = CE_2 = a \sin B$.
+The angle $\angle E_1 C E_2$ is calculated as follows:
+\[ \angle E_1 C E_2 = \angle E_1 C A + \angle A C B + \angle B C E_2 = \angle E C A + \angle A C B + \angle E C B = 2 \angle A C B = 2C \]
+The circumradius $R_\Gamma$ of $\triangle CE_1 E_2$ is given by:
+\[ R_\Gamma = \frac{E_1 E_2}{2 \sin(\angle E_1 C E_2)} = \frac{2 CE \sin C}{2 \sin(2C)} = \frac{CE}{2 \cos C} = \frac{a \sin B}{2 \cos C} \]
+The center $O$ lies on the angle bisector of $\angle E_1 C E_2$. The angle $\angle E_1 C A = 90^\circ - A$. Thus, the angle $\angle OCA$ is:
+\[ \angle OCA = \angle E_1 C O - \angle E_1 C A = C - (90^\circ - A) = A + C - 90^\circ = 90^\circ - B \]
+The coordinates of $O$ are:
+\[ O = (R_\Gamma \cos(90^\circ - B), R_\Gamma \sin(90^\circ - B)) = (R_\Gamma \sin B, R_\Gamma \cos B) = \left( \frac{a \sin^2 B}{2 \cos C}, \frac{a \sin B \cos B}{2 \cos C} \right) \]
+
+**3. The point $X$**
+$X$ is the intersection of $\Gamma$ and $AC$ other than $C$. Since $C$ is the origin and $O$ is the center, the distance $CX$ is the projection of the diameter $2R_\Gamma$ onto the $x$-axis:
+\[ X = (2 x_O, 0) = \left( \frac{a \sin^2 B}{\cos C}, 0 \right) \]
+
+**4. Perpendicularity of $XO$ and $DE$**
+We define the vectors $\vec{XO}$ and $\vec{DE}$:
+\[ \vec{XO} = O - X = \left( -\frac{a \sin^2 B}{2 \cos C}, \frac{a \sin B \cos B}{2 \cos C} \right) \]
+\[ \vec{DE} = E - D = (a \sin B \sin A - a \cos C, a \sin B \cos A) \]
+The dot product $\vec{XO} \cdot \vec{DE}$ is:
+\[ \vec{XO} \cdot \vec{DE} = -\frac{a \sin^2 B}{2 \cos C}(a \sin B \sin A - a \cos C) + \frac{a \sin B \cos B}{2 \cos C}(a \sin B \cos A) \]
+Factoring out $\frac{a^2 \sin^2 B}{2 \cos C}$:
+\[ \vec{XO} \cdot \vec{DE} = \frac{a^2 \sin^2 B}{2 \cos C} \left[ -\sin B \sin A + \cos C + \cos B \cos A \right] \]
+Using the cosine addition formula $\cos(A+B) = \cos A \cos B - \sin A \sin B$:
+\[ \vec{XO} \cdot \vec{DE} = \frac{a^2 \sin^2 B}{2 \cos C} \left[ \cos(A+B) + \cos C \right] \]
+Since $A+B = 180^\circ - C$, we have $\cos(A+B) = -\cos C$. Thus:
+\[ \vec{XO} \cdot \vec{DE} = \frac{a^2 \sin^2 B}{2 \cos C} [ -\cos C + \cos C ] = 0 \]
+Since the dot product is zero, $XO$ is perpendicular to $DE$.
+
+\(\square\)

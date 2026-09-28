@@ -1,0 +1,42 @@
+{
+  "schema": "gold-informed-codex-math-grade-v1",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "reference_informed": true,
+  "qwen_grades_visible": false,
+  "gemma_grades_visible": false,
+  "terra_grades_visible": false,
+  "problem_number": 4,
+  "problem_id": "imo2026_p4",
+  "stage": "qwen36_exact_branch_replay_audit",
+  "position": 2,
+  "selection_role": "gemma4_bf16_mtp4",
+  "candidate_id": "replay.p4_three_block",
+  "solution_id": "p4_three_block",
+  "source_path": "/opt/proof-workshop/math_harness_runs/p4_qwen36_two_three_gemma_exact_branch_replay_20260822/gemma4_bf16_mtp4_saved_handoffs/p4_three_block/resolved_proof.md",
+  "proof_sha256": "13f58a927a37b2d8f60a67d26a0af2bf630262d3820e1e00954a4b360b00f1c7",
+  "grade": {
+    "score": 3,
+    "verdict": "fallacy",
+    "answer_supported": false,
+    "complete": false,
+    "requires_new_math": true,
+    "first_break": "In Case 2, the solution begins with a triangle whose three angles avoid S but never proves that Shan-Yu can actually choose such a valid starting triangle.",
+    "summary": "The claimed characterization is correct, and both the sufficiency construction and the safe-child invariant are essentially rigorous. However, the necessity direction omits the existential starting-triangle obstruction required to refute Mulan's universal guarantee. This needs an additional argument—for example, choosing the equilateral triangle and observing that 60°=kθ would force 180°/θ=3k to be an integer.",
+    "strengths": [
+      "Correctly characterizes the winning angles as θ=180°/n for integers n≥2.",
+      "The induction showing that triangles containing a positive multiple of θ are winning is valid.",
+      "The interval argument for finding a multiple of θ is correct, including the separate n=2 treatment.",
+      "The four implicit possibilities in the safe-child argument are covered correctly, so the invariant itself is sound."
+    ],
+    "errors": [
+      {
+        "severity": "fallacy",
+        "description": "The proof does not exhibit or establish the existence of any valid triangle with no angle in S. Without such a starting triangle, the safe-child invariant alone does not disprove a guarantee from every starting triangle. Supplying an equilateral or generic-avoidance construction is new mathematical reasoning absent from the candidate."
+      }
+    ],
+    "contract_consistent": true,
+    "strict_pass": false
+  },
+  "attempt": 1
+}

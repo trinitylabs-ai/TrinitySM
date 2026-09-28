@@ -1,0 +1,110 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Each of 8 boxes contains 6 balls. Each ball has been colored with one of 22 colors. If no two balls in the same box are the same color, prove that there are two colors that occur together in more than one box.
+
+**GROUND-TRUTH SOLUTION**
+
+Let’s say a color "connects" two boxes if it appears in both. We want to show there are two colors that connect the same pair of boxes.
+
+ Let $c_i$ denote the number of balls with color $i$. Then, the total number of times a color connects two boxes is $N = \sum_{i=1}^{22} \binom{c_i}{2}$. We also know the total number of balls is $48$, so $\sum_{i=1}^{22} c_i = 48$. We now try to find the minimum possible value of $N$.
+
+ To do this, we first analyze the quantity $X = \sum_{i=1}^{22} (c_i - 2)^2$. If at $|c_i - 2| >= 2$ for some $i$, then clearly $X \ge 4$. Otherwise, all the $c_i$ are 1, 2, or 3. Then, in order for them to sum to 48, at most 18 of them can be 2, so once again $X \ge 4$. We then have
+
+ $4 \le X = 2N - 3 \sum_{i=1}^{22} c_i + 4 * 22 = 2N - 3 * 48 + 4 * 22 = 2N - 56$,
+
+ so that $N \ge 30$. But note that there are only $\binom{8}{2} = 28$ pairs of boxes. Thus, by the pigeonhole principle, some two colors connect the same pair of boxes, as desired.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied some double counting argument but did not progress further.
+(Almost)
+ 1. Solved the problem with some mistakes (such as calculation mistakes).
+
+**PROPOSED SOLUTION**
+
+To prove that there are two colors that occur together in more than one box, we can use a counting argument based on the number of colors shared between pairs of boxes.
+
+**1. Definitions and Notation**
+Let $B_1, B_2, \dots, B_8$ be the sets of colors in each of the 8 boxes. According to the problem:
+- Each box contains 6 balls of distinct colors, so $|B_i| = 6$ for $i = 1, \dots, 8$.
+- There are 22 available colors in total. Let $C$ be the set of these colors, so $|C| = 22$.
+- For each color $c \in C$, let $n_c$ be the number of boxes in which color $c$ appears.
+
+**2. Counting Pairs of Boxes sharing a Color**
+Consider the set of triples $S = \{ (c, i, j) : c \in C, 1 \le i < j \le 8, c \in B_i, c \in B_j \}$. This set represents all instances where a color $c$ is shared between two different boxes $B_i$ and $B_j$. We can calculate the size of $S$ in two different ways:
+
+- **Summing over colors:** For a fixed color $c$, the number of pairs of boxes $(B_i, B_j)$ that both contain $c$ is $\binom{n_c}{2}$. Therefore,
+  \[ |S| = \sum_{c \in C} \binom{n_c}{2} \]
+- **Summing over pairs of boxes:** For a fixed pair of boxes $B_i$ and $B_j$, the number of colors they share is $|B_i \cap B_j|$. Therefore,
+  \[ |S| = \sum_{1 \le i < j \le 8} |B_i \cap B_j| \]
+
+**3. Lower Bound for $|S|$**
+We know that the total number of balls is $8 \times 6 = 48$, so $\sum_{c \in C} n_c = 48$. To find the minimum possible value for $|S| = \sum_{c \in C} \binom{n_c}{2}$, we distribute the 48 occurrences among the 22 colors as evenly as possible (since $\binom{n}{2}$ is a convex function).
+Dividing 48 by 22 gives $48 = 2 \times 22 + 4$. Thus, the sum is minimized when 4 colors appear in 3 boxes each and $22 - 4 = 18$ colors appear in 2 boxes each:
+\[ |S| \ge 4 \binom{3}{2} + 18 \binom{2}{2} = 4(3) + 18(1) = 12 + 18 = 30 \]
+
+**4. Upper Bound for $|S|$ if No Two Colors are Repeated**
+Assume for contradiction that no two colors occur together in more than one box. This means that for any two boxes $B_i$ and $B_j$, they can share at most one color:
+\[ |B_i \cap B_j| \le 1 \quad \text{for all } 1 \le i < j \le 8 \]
+The number of pairs of boxes is $\binom{8}{2} = \frac{8 \times 7}{2} = 28$. If each pair shares at most one color, then:
+\[ |S| = \sum_{1 \le i < j \le 8} |B_i \cap B_j| \le 28 \times 1 = 28 \]
+
+**5. Conclusion**
+We have found that $|S| \ge 30$ and $|S| \le 28$, which is a contradiction. Therefore, our assumption must be false. There must exist at least one pair of boxes $B_i$ and $B_j$ such that $|B_i \cap B_j| \ge 2$. This means there are at least two colors that appear in both boxes $B_i$ and $B_j$, and thus these two colors occur together in more than one box.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

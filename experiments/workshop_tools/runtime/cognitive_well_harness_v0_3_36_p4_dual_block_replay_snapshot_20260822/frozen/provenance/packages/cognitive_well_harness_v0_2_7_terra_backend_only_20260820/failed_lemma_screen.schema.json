@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_index",
+          "verdict",
+          "matched_memory_ids",
+          "addressed_failures",
+          "rationale"
+        ],
+        "properties": {
+          "candidate_index": {"type": "integer", "minimum": 0, "maximum": 2},
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "new",
+              "repaired",
+              "equivalent_refuted",
+              "equivalent_unproved",
+              "equivalent_grader_conflict",
+              "reuses_failed_reasoning",
+              "sibling_duplicate"
+            ]
+          },
+          "matched_memory_ids": {
+            "type": "array",
+            "maxItems": 18,
+            "items": {"type": "string", "minLength": 1, "maxLength": 128}
+          },
+          "addressed_failures": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {"type": "string", "minLength": 1, "maxLength": 1000}
+          },
+          "rationale": {"type": "string", "minLength": 1, "maxLength": 1800}
+        }
+      }
+    }
+  }
+}

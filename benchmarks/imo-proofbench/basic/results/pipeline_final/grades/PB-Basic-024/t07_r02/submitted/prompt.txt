@@ -1,0 +1,152 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Find all non-negative integers $a,b,c$ such that $20^{a}+b^{4}=2024^{c}$
+
+**GROUND-TRUTH SOLUTION**
+
+We state the following well-known lemma: If $p=4k+3$ is a prime
+ number for some positive integer $k$, and there exists integers $x,y$
+ such that $x^{2}+y^{2}$ is divisible by $p$, then we have $x,y$
+ are both divisible by $p$.
+
+ We omit the proof of this lemma since it is a well-known result.
+
+ Now, return to the main problem. It is obvious that $(a,b,c)=(0,0,0)$
+ is a solution. Now, consider $c>0$, we have the following cases:
+
+
+ \textbf{Case 1: $a$ is even.}
+
+ In this case, we have $a=2k$ for some non-negative integer $k$.
+ This gives $(20^{k})^{2}+(b^{2})^{2}$ is divisible by $2024$, which
+ is divisible by $11$. Since $11$ is a prime in the form of $4n+3$
+ for some positive integer $n$, we must have that $20^{k},b^{2}$
+ are all divisible by $11$, which is a contradiction since $\gcd(20,11)=1$.
+ Hence, $a$ cannot be even.
+
+
+ \textbf{Case 2: $a$ is odd.}
+
+ In this case, we have $a,c\geq1$, and so $b$ must be even. Let $b=2^{t}q$
+ for some non-negative integer $t,q$ where $q$ is odd, we have the
+ equation becomes $2^{2a}5^{a}+2^{4t}q^{4}=2^{3c}253^{c}$. Consider
+ quadratic residue modulo $11$, we have the LHS gives us $-5$ is
+ a quadratic residue modulo $11$. However, since $11$ has the form
+ $4n+3$ we have $-1$ is a quadratic nonresdue, while $5$ is a quadratic
+ residue modulo $11$ from the Law of Quadratic Reciprocity. Hence,
+ we have that $-5$ is a quadratic nonresidue modulo $11$, which a
+ contradiction.
+
+ Hence, $(a,b,c)=(0,0,0)$ is the only solution.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Correctly analyzed either the $a$ is even case or $a$ is odd case but not both.
+(Almost)
+ 1. Verification contains minor mistakes only or missed a trivial case.
+
+**PROPOSED SOLUTION**
+
+To find all non-negative integers $a, b, c$ such that $20^{a}+b^{4}=2024^{c}$, we analyze the equation through modular arithmetic and case analysis.
+
+### 1. Boundary Cases
+*   **Case $c=0$:** The equation becomes $20^a + b^4 = 2024^0 = 1$. Since $a, b$ are non-negative integers, the only possibility is $a=0$ and $b=0$. This gives the solution $(0, 0, 0)$.
+*   **Case $b=0$:** The equation becomes $20^a = 2024^c$. The prime factorization of $20$ is $2^2 \cdot 5$, and the prime factorization of $2024$ is $2^3 \cdot 11 \cdot 23$. For $20^a = 2024^c$ to hold, the sets of prime factors must be identical. Since $20$ has a factor of 5 and $2024$ does not, we must have $a=0$. Then $1 = 2024^c$, which implies $c=0$. This returns the solution $(0, 0, 0)$.
+*   **Case $a=0$:** The equation becomes $1 + b^4 = 2024^c$.
+    *   If $c=0$, we have $1 + b^4 = 1$, so $b=0$, giving $(0, 0, 0)$.
+    *   If $c>0$, we check modulo 5: $1 + b^4 \equiv 2024^c \equiv (-1)^c \pmod 5$. Since $b^4 \equiv 0$ or $1 \pmod 5$, we have $1 + b^4 \equiv 1$ or $2 \pmod 5$. For this to equal $(-1)^c \pmod 5$, we must have $1 \equiv (-1)^c \pmod 5$, which implies $c$ is even. Let $c=2k$ for $k \in \mathbb{Z}^+$.
+    *   Then $b^4 = 2024^{2k} - 1 = (2024^k - 1)(2024^k + 1)$.
+    *   The greatest common divisor $\gcd(2024^k - 1, 2024^k + 1) = \gcd(2024^k - 1, 2) = 1$ because $2024^k - 1$ is odd.
+    *   Since the product of two coprime integers is a fourth power, each factor must be a fourth power. Let $2024^k - 1 = u^4$ and $2024^k + 1 = v^4$ for some non-negative integers $u, v$.
+    *   Subtracting these gives $v^4 - u^4 = 2$. The only fourth powers are $0, 1, 16, \dots$, and no two fourth powers differ by 2. Thus, there are no solutions for $c > 0$.
+
+### 2. General Case: $a, b, c > 0$
+Consider the equation modulo 5:
+$20^a + b^4 = 2024^c \implies 0 + b^4 \equiv (-1)^c \pmod 5$.
+Since $b^4 \equiv 0$ or $1 \pmod 5$, we must have $b^4 \equiv 1 \pmod 5$ and $c$ must be even. Let $c=2k$ for $k \in \mathbb{Z}^+$.
+The equation is $20^a = 2024^{2k} - b^4 = (2024^k - b^2)(2024^k + b^2)$.
+Let $X = 2024^k - b^2$ and $Y = 2024^k + b^2$. Then $XY = 20^a = 2^{2a} \cdot 5^a$.
+The factors must be of the form $X = 2^x 5^y$ and $Y = 2^z 5^w$ with $x+z=2a$ and $y+w=a$.
+Summing these gives:
+$X + Y = 2^x 5^y + 2^z 5^w = 2 \cdot 2024^k = 2 \cdot (2^3 \cdot 253)^k = 2^{3k+1} \cdot 253^k$.
+Assuming $x \le z$, we divide by $2^x$:
+$5^y + 2^{z-x} 5^w = 2^{3k+1-x} \cdot 253^k$.
+
+**Subcase A: $z > x$**
+Since the LHS is odd unless $y=0$ or $w=0$, and the RHS is $2^{3k+1-x} \cdot 253^k$, we must have $x = 3k+1$ for the RHS to be odd. Then:
+$5^y + 2^{z-x} 5^w = 253^k$.
+Since $\gcd(5, 253) = 1$, at least one of $y$ or $w$ must be zero.
+*   If $y=0$, then $w=a$. The equation is $1 + 2^{z-x} 5^a = 253^k$.
+    Modulo 3: $1 + (-1)^{z-x} (-1)^a \equiv 1^k \equiv 1 \pmod 3$, which implies $(-1)^{z-x+a} \equiv 0 \pmod 3$, a contradiction.
+*   If $w=0$, then $y=a$. The equation is $5^a + 2^{z-x} = 253^k$.
+    Note that $z-x = (x+z) - 2x = 2a - 2x = 2(a-x)$, so $z-x$ is even.
+    Modulo 3: $5^a + 2^{z-x} \equiv (-1)^a + 4^{a-x} \equiv (-1)^a + 1 \pmod 3$.
+    Also $253^k \equiv 1^k \equiv 1 \pmod 3$.
+    Thus $(-1)^a + 1 \equiv 1 \pmod 3 \implies (-1)^a \equiv 0 \pmod 3$, a contradiction.
+
+**Subcase B: $z = x$**
+Then $x=z=a$. The sum becomes $2^a (5^y + 5^w) = 2^{3k+1} \cdot 253^k$.
+Dividing by $2^a$ gives $5^y + 5^w = 2^{3k+1-a} \cdot 253^k$.
+Since $\gcd(5, 253)=1$, at least one of $y$ or $w$ must be 0. Assume $y=0, w=a$.
+$1 + 5^a = 2^{3k+1-a} \cdot 253^k$.
+For $k \ge 1$, $1+5^a$ must be divisible by $253 = 11 \cdot 23$.
+Checking $5^a \pmod{11}$: the powers are $5^0 \equiv 1, 5^1 \equiv 5, 5^2 \equiv 3, 5^3 \equiv 4, 5^4 \equiv 9, 5^5 \equiv 1 \pmod{11}$.
+The values of $1+5^a \pmod{11}$ are $\{2, 6, 4, 5, 10\}$. None are $0 \pmod{11}$.
+Thus $1+5^a$ is never divisible by 11, so no solutions exist for $k \ge 1$.
+
+The only non-negative integer solution is $(a, b, c) = (0, 0, 0)$.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "115f908c1b1aedc214e3d00a7eda1db86f1eaecc61558bb41629a749bcbf28cd",
+  "problem_id": "imo2026_p4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "12152d0644ce953d4a7cce57dca6969d3946763ef8b35ce44832fa76714d6e96",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3dd41834a1642e1cd012ebf3eac64991ceabac35ae3a2feea2d58d6cef7a2e7a",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is in Section 2: the one-step characterization does not imply that every multistep winning strategy must follow a doubling chain ending at 90°. This unsupported necessity claim excludes genuine winning values and invalidates the classification; Rule A applies because the final answer is demonstrably false.",
+    "summary": "The claimed set is too small. For example, θ=60° is winning but is not 90°/2^k. Indeed, if a triangle has no angle below 60°, it is already equilateral. Otherwise choose an angle c<60° and let a be the larger remaining angle; then a+c>60°. Cutting from the vertex of angle a with one new angle equal to 60° gives one terminal child and another child containing 120°. If the latter is retained, split its 120° angle into two 60° angles. Thus Mulan wins in at most two cuts. The correct classification is θ=180°/n for every integer n≥2. The submission does identify a valid sufficient dyadic subfamily, so it contains meaningful partial progress, but its incorrect full answer is capped at 2 by Rule A.",
+    "strengths": [
+      "It correctly writes the angle triples produced by a cut.",
+      "It identifies the basic fact that an angle 2θ can be split so both children contain θ.",
+      "The altitude argument for θ=90° and the resulting recursive construction establish a genuine winning subfamily θ=90°/2^k."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final classification excludes valid values such as θ=60°, so Rule A caps the score at 2."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that all possible multistep strategies must arise from repeatedly forcing 2θ,4θ,… until reaching 90° is unsupported and false. A one-step analysis cannot justify this global characterization of the game tree."
+      },
+      {
+        "severity": "minor",
+        "description": "In the one-step calculation, the condition β+φ=θ should give φ=θ−β, not φ=β+θ. Correcting it makes the fourth intersection yield θ=90° directly."
+      },
+      {
+        "severity": "substantial",
+        "description": "The claimed avoidance strategy for non-dyadic θ is not established: choosing a child that avoids θ or 2θ at the current move does not show that θ can be avoided after future cuts."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:43:13.635471+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

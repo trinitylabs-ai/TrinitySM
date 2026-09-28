@@ -1,0 +1,33 @@
+To prove the inequality $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ for positive reals $a, b, c$ such that $a+b+c=1$, we define the function
+\[ f(a,b,c) = \sqrt{a} + \sqrt{b} + \sqrt{c} - 3\sqrt{3}(ab+bc+ca) \]
+We wish to show that $f(a,b,c) \geq 0$ for all $a,b,c > 0$ subject to the constraint $g(a,b,c) = a+b+c-1 = 0$. Since $f$ is continuous on the compact set $S = \{(a,b,c) \in \mathbb{R}^3 : a+b+c=1, a,b,c \geq 0\}$, it must attain a global minimum. This minimum occurs either at an interior critical point or on the boundary of $S$.
+
+**1. Analysis of Critical Points**
+Using the method of Lagrange Multipliers, we set $\nabla f = \lambda \nabla g$. This yields the system:
+\[ \frac{1}{2\sqrt{a}} - 3\sqrt{3}(b+c) = \lambda, \quad \frac{1}{2\sqrt{b}} - 3\sqrt{3}(a+c) = \lambda, \quad \frac{1}{2\sqrt{c}} - 3\sqrt{3}(a+b) = \lambda \]
+Substituting $b+c = 1-a$, $a+c = 1-b$, and $a+b = 1-c$, we have:
+\[ \frac{1}{2\sqrt{a}} - 3\sqrt{3}(1-a) = \lambda, \quad \frac{1}{2\sqrt{b}} - 3\sqrt{3}(1-b) = \lambda, \quad \frac{1}{2\sqrt{c}} - 3\sqrt{3}(1-c) = \lambda \]
+Let $h(x) = \frac{1}{2\sqrt{x}} + 3\sqrt{3}x - 3\sqrt{3}$. A critical point occurs when $h(a) = h(b) = h(c) = \lambda$. 
+The derivative $h'(x) = -\frac{1}{4x^{3/2}} + 3\sqrt{3}$ vanishes at $x_0 = (12\sqrt{3})^{-2/3}$. Since $h'(x) < 0$ for $x < x_0$ and $h'(x) > 0$ for $x > x_0$, the function $h(x)$ is strictly decreasing then strictly increasing. Thus, the equation $h(x) = \lambda$ can have at most two distinct solutions for any $\lambda$. This implies that at any critical point $(a,b,c)$, at least two of the variables must be equal.
+
+**2. The Case of Two Equal Variables**
+Assume $a=b$. Then $c = 1-2a$ for $a \in (0, 1/2)$. We define the single-variable function:
+\[ k(a) = f(a,a,1-2a) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(a^2 + 2a(1-2a)) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(2a - 3a^2) \]
+The derivative of $k(a)$ is:
+\[ k'(a) = \frac{1}{\sqrt{a}} - \frac{1}{\sqrt{1-2a}} - 6\sqrt{3}(1-3a) \]
+We observe that $k'(1/3) = \sqrt{3} - \sqrt{3} - 6\sqrt{3}(0) = 0$. The second derivative is:
+\[ k''(a) = -\frac{1}{2a^{3/2}} - \frac{1}{(1-2a)^{3/2}} + 18\sqrt{3} \]
+At $a=1/3$, $k''(1/3) = -\frac{3\sqrt{3}}{2} - 3\sqrt{3} + 18\sqrt{3} = 13.5\sqrt{3} > 0$, so $a=1/3$ is a local minimum. 
+To determine if other minima exist, let $g(a) = \frac{1}{\sqrt{a}} - \frac{1}{\sqrt{1-2a}}$ and $h(a) = 6\sqrt{3}(1-3a)$. Then $k'(a) = g(a) - h(a)$. The second derivative $g''(a) = \frac{3}{4a^{5/2}} - \frac{3}{(1-2a)^{5/2}}$ changes sign exactly once on $(0, 1/2)$, meaning $g(a)$ is first convex and then concave. A line $h(a)$ can intersect such a curve at most three times. Since $k'(a) \to \infty$ as $a \to 0^+$ and $k'(a) \to -\infty$ as $a \to 1/2^-$, and $k'(1/3)=0$ is a local minimum, there must be exactly two other roots $a_1 < 1/3 < a_2$, which correspond to local maxima.
+The absolute minimum of $k(a)$ on $[0, 1/2]$ is therefore $\min(k(0), k(1/3), k(1/2))$:
+- $k(0) = 0 + 1 - 0 = 1$
+- $k(1/3) = 2/\sqrt{3} + 1/\sqrt{3} - 3\sqrt{3}(2/3 - 1/3) = \sqrt{3} - \sqrt{3} = 0$
+- $k(1/2) = \sqrt{2} + 0 - 3\sqrt{3}(1 - 3/4) = \sqrt{2} - \frac{3\sqrt{3}}{4} \approx 0.115 > 0$
+Thus, $k(a) \geq 0$ for all $a \in [0, 1/2]$.
+
+**3. Boundary Cases and Conclusion**
+The boundary of $S$ occurs when one or more variables are zero. If $c=0$, then $a+b=1$, and $f(a,b,0) = \sqrt{a} + \sqrt{1-a} - 3\sqrt{3}a(1-a)$. Let $m(a) = \sqrt{a} + \sqrt{1-a} - 3\sqrt{3}(a-a^2)$. Then $m'(a) = \frac{1}{2\sqrt{a}} - \frac{1}{2\sqrt{1-a}} - 3\sqrt{3}(1-2a)$. Here $m'(1/2) = 0$ and $m''(1/2) = -\frac{1}{\sqrt{2}} + 6\sqrt{3} > 0$. The minimum on the boundary is $m(1/2) = \sqrt{2} - \frac{3\sqrt{3}}{4} > 0$. If two variables are zero, say $b=c=0$, then $a=1$ and $f(1,0,0) = 1 > 0$.
+
+Since the function $f(a,b,c)$ is non-negative at all critical points and on the boundary, we conclude:
+\[ \sqrt{a} + \sqrt{b} + \sqrt{c} \geq 3\sqrt{3}(ab+bc+ca) \]
+with equality if and only if $a=b=c=1/3$. \(\square\)

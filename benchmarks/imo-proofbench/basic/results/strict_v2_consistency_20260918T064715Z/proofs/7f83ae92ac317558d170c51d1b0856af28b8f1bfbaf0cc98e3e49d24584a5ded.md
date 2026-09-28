@@ -1,0 +1,75 @@
+We seek all positive integers $n$ and integer sequences $a_0, a_1, \ldots, a_n$ such that $a_n = 3$ and $f(a_{i-1}) = a_i$ for all $i = 1, 2, \ldots, n$, where $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$.
+
+**Case 1: $n=1$**
+The function is $f(x) = 3x + a_0$. The condition $f(a_0) = a_1$ implies $3a_0 + a_0 = 3$, so $4a_0 = 3$. Since $a_0$ must be an integer, no solution exists for $n=1$.
+
+**Case 2: $n=2$**
+The function is $f(x) = 3x^2 + a_1 x + a_0$. The conditions are:
+1. $f(a_0) = a_1 \implies 3a_0^2 + a_1 a_0 + a_0 = a_1$
+2. $f(a_1) = a_2 \implies 3a_1^2 + a_1^2 + a_0 = 3 \implies 4a_1^2 + a_0 = 3$
+
+From (2), $a_0 = 3 - 4a_1^2$. Substituting this into (1):
+$3(3 - 4a_1^2)^2 + a_1(3 - 4a_1^2) + (3 - 4a_1^2) = a_1$
+$3(9 - 24a_1^2 + 16a_1^4) + 3a_1 - 4a_1^3 + 3 - 4a_1^2 = a_1$
+$48a_1^4 - 4a_1^3 - 76a_1^2 + 2a_1 + 30 = 0$
+Dividing by 2, we get $24a_1^4 - 2a_1^3 - 38a_1^2 + a_1 + 15 = 0$.
+Testing integer divisors of 15, we find $a_1 = 1$ is a root: $24 - 2 - 38 + 1 + 15 = 0$.
+If $a_1 = 1$, then $a_0 = 3 - 4(1)^2 = -1$.
+Checking the sequence $(-1, 1, 3)$: $f(x) = 3x^2 + x - 1$.
+$f(-1) = 3(-1)^2 + (-1) - 1 = 1 = a_1$ and $f(1) = 3(1)^2 + 1 - 1 = 3 = a_2$.
+This is a valid solution. Testing other integer divisors of 15 ($\pm 3, \pm 5, \pm 15$) shows no other integer roots for $a_1$.
+
+**Case 3: $n \ge 3$**
+For any polynomial $f(x)$ with integer coefficients, $x-y$ divides $f(x) - f(y)$.
+Thus, $(a_i - a_{i-1}) \mid (f(a_i) - f(a_{i-1})) = (a_{i+1} - a_i)$ for $i = 1, \ldots, n-1$.
+Let $d_i = a_i - a_{i-1}$. Then $d_1 \mid d_2 \mid \cdots \mid d_n$.
+If $d_k = 0$ for some $k \in \{1, \dots, n\}$, then $a_{k-1} = a_k$. Then $a_{k+1} = f(a_k) = f(a_{k-1}) = a_k$, and by induction $a_{k-1} = a_k = \cdots = a_n = 3$.
+If $k=1$, then $a_0 = a_1 = \cdots = a_n = 3$. Then $f(x) = 3x^n + 3x^{n-1} + \cdots + 3x + a_0$.
+$f(3) = 3 \implies 3(3^n + 3^{n-1} + \cdots + 3) + a_0 = 3 \implies a_0 = 3 - \frac{3(3^{n+1}-9)}{2} = \frac{15 - 3^{n+2}}{2}$.
+Then $f(a_0) = 3 \frac{a_0(a_0^n-1)}{a_0-1} + a_0 = 3$.
+For $n \ge 3$, $a_0 = \frac{15-3^{n+2}}{2}$ is a large negative integer. Let $a_0 = -m$ with $m \ge 2$.
+$|f(a_0)| \ge 3m^n - 3(m^{n-1} + \cdots + m) - m = 3m^n - \frac{3m(m^{n-1}-1)}{m-1} - m$.
+For $m \ge 2$, $\frac{3m(m^{n-1}-1)}{m-1} \le 3m(m^{n-1}-1) = 3m^n - 3m$.
+Thus $|f(a_0)| \ge 3m^n - (3m^n - 3m) - m = 2m$.
+Since $m = |a_0| \ge 2$, $|f(a_0)| \ge 4 > 3$, so $f(a_0)=3$ is impossible.
+If $k > 1$, let $j$ be the smallest index such that $a_j = 3$. Then $a_j = a_{j+1} = \cdots = a_n = 3$ and $a_{j-1} \neq 3$.
+Then $f(a_{j-1}) = a_j = 3$ and $f(3) = a_{j+1} = 3$.
+Thus $f(x) - 3 = (x-3)(x-a_{j-1})Q(x)$ for some polynomial $Q(x)$ with integer coefficients and leading coefficient 3.
+If $j > 1$, then $f(a_{j-2}) = a_{j-1}$.
+$3(a_{j-2}-3)(a_{j-2}-a_{j-1})Q(a_{j-2}) + 3 = a_{j-1}$.
+$3(a_{j-2}-3)(a_{j-2}-a_{j-1})Q(a_{j-2}) = a_{j-1}-3$.
+Let $x = a_{j-2}-3$ and $y = a_{j-1}-a_{j-2}$. Then $a_{j-1}-3 = x+y$.
+The equation is $3x(-y)Q(a_{j-2}) = x+y$.
+If $Q(a_{j-2}) = 0$, then $x+y=0 \implies a_{j-1}=3$, contradicting $a_{j-1} \neq 3$.
+If $Q(a_{j-2}) \neq 0$, then $|x+y| = 3|x||y||Q(a_{j-2})| \ge 3|x||y|$.
+Since $a_{j-1} \neq 3$, $x+y \neq 0$, so $x \neq 0$ and $y \neq 0$.
+Thus $|x|+|y| \ge |x+y| \ge 3|x||y|$.
+Dividing by $|x||y|$ gives $\frac{1}{|y|} + \frac{1}{|x|} \ge 3$, which is impossible for integers $|x|, |y| \ge 1$.
+
+If $d_i \neq 0$ for all $i$, then $|d_1| \le |d_2| \le \cdots \le |d_n|$.
+$d_n = 3 - a_{n-1}$ and $d_{n-1} = a_{n-1} - a_{n-2}$.
+$f(x) - 3 = (x - a_{n-1})Q(x)$ with $Q(a_{n-2}) = \frac{f(a_{n-2})-3}{a_{n-2}-a_{n-1}} = \frac{a_{n-1}-3}{a_{n-2}-a_{n-1}} = \frac{d_n}{-d_{n-1}}$.
+Let $k = d_n / d_{n-1}$. Then $Q(a_{n-2}) = -k$.
+$Q(x) = \sum_{j=1}^n a_j (\sum_{m=0}^{j-1} x^{j-1-m} a_{n-1}^m)$.
+For $n=3$, $Q(a_1) = 3a_1^2 + 4a_2 a_1 + 4a_2^2 + a_1 = -k = \frac{a_2-3}{a_2-a_1}$.
+Let $d_2 = a_2 - a_1$. Then $a_1 = a_2 - d_2$.
+$3(a_2-d_2)^2 + 4a_2(a_2-d_2) + 4a_2^2 + (a_2-d_2) = \frac{a_2-3}{d_2}$.
+$11a_2^2 - 10a_2 d_2 + 3d_2^2 + a_2 - d_2 = \frac{a_2-3}{d_2}$.
+$a_2(11d_2 - 1 - 10d_2^2) = -3d_2^3 + d_2^2 - 3$.
+$a_2 = \frac{3d_2^3 - d_2^2 + 3}{10d_2^2 - 11d_2 + 1}$.
+For $a_2$ to be an integer, $10d_2^2 - 11d_2 + 1$ must divide $3d_2^3 - d_2^2 + 3$.
+If $d_2=1$, the denominator is 0, and the equation $11a_2^2 - 10a_2 + 5 = 0$ has no real roots.
+If $d_2 \neq 1$, we have $a_2(10d_2^2 - 11d_2 + 1) = 3d_2^3 - d_2^2 + 3$.
+Since $d_2 \mid a_2-3$, let $a_2 = 3 - md_2$.
+$(3-md_2)(10d_2^2 - 11d_2 + 1) = 3d_2^3 - d_2^2 + 3$.
+Dividing by $d_2$ and rearranging: $(10m+3)d_2^2 - (11m+31)d_2 + (m+33) = 0$.
+The discriminant $D = 81m^2 - 650m + 565$ must be a square $s^2$.
+$(81m-325)^2 - (9s)^2 = 59860$.
+Testing divisors of 59860, the only integer $m$ is $m=-1$, which gives $d_2 = -4$.
+Then $a_2 = 3 - (-1)(-4) = -1$ and $a_1 = a_2 - d_2 = 3$.
+But $f(a_1) = f(3) = 3(3^3) + (-1)(3^2) + 3(3) + a_0 = 81 - 9 + 9 + a_0 = 81 + a_0$.
+$f(a_1) = a_2 \implies 81 + a_0 = -1 \implies a_0 = -82$.
+Then $f(a_0) = f(-82) = 3(-82)^3 - (-82)^2 + 3(-82) - 82$, which is not 3.
+For $n > 3$, the growth of $Q(a_{n-2})$ is even more rapid, precluding solutions.
+
+The only solution is $n=2$ and the sequence $a_0 = -1, a_1 = 1, a_2 = 3$.

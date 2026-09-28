@@ -1,0 +1,125 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Given a trapezoid $ABCD$ with $AB,CD$ as the two legs. Circle $(W_{1})$ passes through $A,B$, and $(W_{2})$ passes through $C,D$ so that they are tangent to each other. The inscribed angle on circle $W_1$ corresponding to the arc AB on the side opposite to C and D is alpha, and the inscribed angle on circle $W_2$ corresponding to the arc CD on the side opposite to  A and B is beta. Construct $(W_{3})$ passing through $A,B$, $(W_{4})$ passing through $C,D$ such that the inscribed angle on circle W3 corresponding to the arc AB on the side opposite to C and D is $\beta$, and the inscribed angle on circle $W_4$ corresponding to the arc CD on the side opposite to  A and B is b $\alpha$. Prove that $(W_{3}),(W_{4})$ are tangent to each other.
+
+**GROUND-TRUTH SOLUTION**
+
+If $AB,CD$ are parallel to each other then $(W_{1})$ maps to $(W_{4}),(W_{2})$
+ maps to $(W_{3})$ via a reflection w.r.t. the center $O$ of the
+ parallelogram $ABCD$.
+
+ If $AB,CD$ are not parallel to each other then let $X$ be the intersection
+ of $AB,CD$. Consider the inversion with power $XA.XC$ and then reflect
+ it w.r.t. to the internal bisector $\angle AXD$, we have $A\rightarrow C$,
+ $B\rightarrow D$ (1). Note that inversion preserves the angle between
+ the circles and the lines, and so $(W_{1})$ is mapped to $(W_{4})$
+ since we have (1) and the angle between $(W_{1})$ and $AB$ is $\alpha$,
+ which is also the angle between $(W_{4})$ and $CD$. Similarly, we
+ have $(W_{2})$ is mapped to $(W_{3})$. Since $(W_{1})$ is tangent
+ to $(W_{2})$, we have $(W_{3})$ is tangent to $(W_{4})$. Hence
+ proved.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Performed an inversion w.r.t. $AB\cap CD$ and re-analyzed the given problem.
+(Almost)
+ 1. Verification contains minor mistakes only.
+ 2. Did not consider the case when $AB$ and $CD$ are parallel.
+
+**PROPOSED SOLUTION**
+
+To prove that circles $(W_3)$ and $(W_4)$ are tangent, we use a coordinate-based approach and the properties of the centers of circles passing through given segments.
+
+**1. Setup and Notation**
+Let $ABCD$ be a trapezoid with legs $AB$ and $CD$, meaning $AD \parallel BC$. Let $L_1 = AB$ and $L_2 = CD$. Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$, respectively.
+The center $O$ of a circle passing through a segment $XY$ of length $L$ with inscribed angle $\theta$ (opposite to the arc $XY$) lies on the perpendicular bisector of $XY$ at a distance $h = \frac{L}{2} \cot \theta$ from the midpoint of $XY$.
+
+Let $\vec{u_1}$ be the unit vector perpendicular to $AB$ pointing towards the side of $C$ and $D$, and $\vec{u_2}$ be the unit vector perpendicular to $CD$ pointing towards the side of $A$ and $B$.
+The centers of the circles are:
+- $O_1 = M_1 + \epsilon_1 \frac{L_1}{2} \cot \alpha \vec{u_1}$
+- $O_2 = M_2 + \epsilon_2 \frac{L_2}{2} \cot \beta \vec{u_2}$
+- $O_3 = M_1 + \epsilon_1 \frac{L_1}{2} \cot \beta \vec{u_1}$
+- $O_4 = M_2 + \epsilon_2 \frac{L_2}{2} \cot \alpha \vec{u_2}$
+where $\epsilon_1, \epsilon_2 \in \{-1, 1\}$ are signs determined by the positions of the centers relative to the segments. The radii are $R_1 = \frac{L_1}{2 \sin \alpha}, R_2 = \frac{L_2}{2 \sin \beta}, R_3 = \frac{L_1}{2 \sin \beta}, R_4 = \frac{L_2}{2 \sin \alpha}$.
+
+**2. Distance Equations**
+Let $\vec{v} = M_2 - M_1$. The distance squared between centers $O_1$ and $O_2$ is:
+$O_1O_2^2 = \|\vec{v} + \epsilon_2 h_2 \vec{u_2} - \epsilon_1 h_1 \vec{u_1}\|^2 = v^2 + h_1^2 + h_2^2 + 2\epsilon_2 h_2 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_1 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_1 h_2 (\vec{u_1} \cdot \vec{u_2})$
+where $h_1 = \frac{L_1}{2} \cot \alpha$ and $h_2 = \frac{L_2}{2} \cot \beta$.
+Since $(W_1)$ and $(W_2)$ are tangent, $O_1O_2^2 = (R_1 \pm R_2)^2 = R_1^2 + R_2^2 \pm 2R_1 R_2$.
+Using $R_1^2 = h_1^2 + (L_1/2)^2$ and $R_2^2 = h_2^2 + (L_2/2)^2$, we have:
+$v^2 + 2\epsilon_2 h_2 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_1 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_1 h_2 (\vec{u_1} \cdot \vec{u_2}) = \frac{L_1^2 + L_2^2}{4} \pm 2R_1 R_2$.
+
+**3. Proving Tangency of $(W_3)$ and $(W_4)$**
+For $(W_3)$ and $(W_4)$, we substitute $h_3 = \frac{L_1}{2} \cot \beta$ and $h_4 = \frac{L_2}{2} \cot \alpha$:
+$O_3O_4^2 = v^2 + h_3^2 + h_4^2 + 2\epsilon_2 h_4 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_3 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_3 h_4 (\vec{u_1} \cdot \vec{u_2})$.
+We check if $O_3O_4^2 - (R_3 \pm R_4)^2 = 0$:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = v^2 + 2\epsilon_2 h_4 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_3 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_3 h_4 (\vec{u_1} \cdot \vec{u_2}) - \frac{L_1^2 + L_2^2}{4} \mp 2R_3 R_4$.
+Note that $2R_1 R_2 = 2R_3 R_4 = \frac{L_1 L_2}{2 \sin \alpha \sin \beta}$. Substituting the expression for $\frac{L_1^2 + L_2^2}{4} \pm 2R_1 R_2$ from the $(W_1, W_2)$ tangency:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = 2\epsilon_2 (h_4 - h_2) (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 (h_3 - h_1) (\vec{v} \cdot \vec{u_1})$.
+Substituting $h_4 - h_2 = \frac{L_2}{2}(\cot \alpha - \cot \beta)$ and $h_3 - h_1 = \frac{L_1}{2}(\cot \beta - \cot \alpha)$:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = \epsilon_2 L_2 (\cot \alpha - \cot \beta) (\vec{v} \cdot \vec{u_2}) - \epsilon_1 L_1 (\cot \beta - \cot \alpha) (\vec{v} \cdot \vec{u_1})$.
+Factoring out $(\cot \alpha - \cot \beta)$, we get:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = (\cot \alpha - \cot \beta) [ \epsilon_2 L_2 (\vec{v} \cdot \vec{u_2}) + \epsilon_1 L_1 (\vec{v} \cdot \vec{u_1})]$.
+
+**4. Geometry of the Trapezoid**
+Let $A=(0,h), D=(d,h), B=(b,0), C=(c,0)$. Then $\vec{v} = (\frac{d+c-b}{2}, 0)$, $L_1 \vec{u_1} = (h, b)$, and $L_2 \vec{u_2} = (-h, d-c)$.
+Then $L_1 (\vec{v} \cdot \vec{u_1}) = \frac{h(d+c-b)}{2}$ and $L_2 (\vec{v} \cdot \vec{u_2}) = \frac{-h(d+c-b)}{2}$.
+Since $\epsilon_1 = \epsilon_2$ (both centers are on the opposite side of the legs to maintain the "opposite arc" definition), we have:
+$\epsilon_2 L_2 (\vec{v} \cdot \vec{u_2}) + \epsilon_1 L_1 (\vec{v} \cdot \vec{u_1}) = \epsilon \left( \frac{-h(d+c-b)}{2} + \frac{h(d+c-b)}{2} \right) = 0$.
+Thus, $O_3O_4 = R_3 \pm R_4$, proving that $(W_3)$ and $(W_4)$ are tangent. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

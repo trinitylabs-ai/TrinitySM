@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The candidate polynomials $P(x) = (x+b)^d$ ($d \mid 2024$) and $P(x) = -(x+b)^d$ ($d \mid 2024$, $d$ odd) satisfy the problem condition. The degree bound $\deg P \le 2024$ is correctly established.
+Claim gap: The deduction that $P(x)$ must take the form $a(cx+b)^m$ with $m \mid k$ (Lines 8-9) relies on an unproven application of Siegel's Theorem. The submission skips the necessary algebraic geometry steps: computing the genus of $y^k = P(x)$, showing genus 0 implies $P$ has at most two distinct roots with specific multiplicity constraints, and proving the curve admits a rational parametrization yielding the claimed monomial form. This is a load-bearing gap; Siegel's Theorem only guarantees finitely many integral points for genus $\ge 1$, not the exact algebraic structure of $P$.
+Qualifications and supplied repairs: NONE. The gap is structural; completing it requires independent genus calculations and rational curve parametrization not present in the text.
+Decisive checks: Lines 4-5 correctly bound $\deg P \le k$ using asymptotic growth and integer spacing (VERIFIED). Lines 8-9 cite Siegel's Theorem but do not justify the jump to $P(x) = a(L(x))^m$ with $m \mid k$; this is a DEMONSTRATED defect. Lines 15-16 correctly verify the candidate polynomials satisfy the condition (VERIFIED). The degree bound and final verification are sound, but the central structural deduction is unsupported.
+
+## Proof B
+Established theorem: The same set of polynomials as in A. The derivation is complete, self-contained, and rigorously establishes that $P(x)$ must be of the form $\pm(x+b)^d$ with the stated divisibility and parity constraints.
+Claim gap: NONE supported by checks. All steps are justified within elementary analysis and algebra.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Lines 10-13 correctly use the finite difference operator on the integer sequence $x_n$. Since $x_n$ lies on a real branch of $P(x)=n^k$ with growth $\sim n^{k/d}$, $\Delta^m x_n \to 0$ for $m > k/d$. As an integer sequence converging to 0, $\Delta^m x_n$ is eventually 0, forcing $x_n$ to be eventually a polynomial $Q(n) \in \mathbb{Q}[n]$. This correctly handles the quantifier shift from "for every $n$" to "eventually polynomial" (VERIFIED). Lines 16-27 correctly solve $P(Q(x)) = x^k$ via differentiation and substitution, rigorously deriving $P(x) = a_d(x-b)^d$ without external citations (VERIFIED). Lines 30-35 correctly apply integer coefficient and surjectivity constraints to fix $a_d = \pm 1$, $b \in \mathbb{Z}$, and $d \mid 2024$ (with parity restriction for the negative case) (VERIFIED). All algebraic manipulations, domain extensions, and quantifier scopes are rigorously justified.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, elementary, and self-contained derivation using finite differences and polynomial functional equations, rigorously establishing the necessary form of $P(x)$ without external citations. Proof A correctly identifies the answer and verifies it, but its central deduction (Lines 8-9) relies on Siegel's Theorem and skips the essential genus/parametrization justification required to conclude $P(x) = a(cx+b)^m$. In an Olympiad setting, this constitutes a load-bearing gap. B's method is mathematically superior, fully justified, and leaves no unresolved obligations.

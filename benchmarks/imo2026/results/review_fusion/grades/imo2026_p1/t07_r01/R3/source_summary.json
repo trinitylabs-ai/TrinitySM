@@ -1,0 +1,76 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T12:01:54.120181+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 0
+  },
+  "per_problem": {
+    "1": {
+      "scores": [
+        6
+      ],
+      "mean": 6.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T12:01:54.118690+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 1,
+      "problem_id": "imo2026_p1",
+      "case_id": "imo2026_p1.explicit.t07_r01",
+      "candidate_id": "t07_r01",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p1.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q1_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p1/strict_scores/R3/t07_r01/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "7c2c68fc2f0a059e765138201de30859df976424052818760b2d66292820995b",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "local",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "At the terminal board, the proof says that for every prime p the positive-exponent multiset S_p^* is the singleton {v_p(M)}. This is false when p does not divide M: then v_p(M)=0 and S_p^* is empty.",
+        "summary": "The solution gives a correct termination argument using the product and the number of entries greater than 1, and it identifies the correct primewise invariant: the gcd of the positive p-adic valuations. This determines every exponent of the terminal integer from the initial board. The only defect is the omitted empty-set case for primes not dividing M; with the proof's convention that the gcd of an empty set is 0, this is repaired immediately.",
+        "strengths": [
+          "Correctly shows that a coprime move preserves the product while reducing the number of entries greater than 1.",
+          "Correctly shows that a non-coprime move strictly decreases the positive-integer product.",
+          "Correctly proves that at least one entry greater than 1 persists, so the terminal board has exactly one such entry.",
+          "Correctly derives the valuation transformation (x,y) to (min(x,y),|x-y|) and the invariance of the gcd of positive valuations.",
+          "The resulting formula for M depends only on the initial board and establishes choice-independence."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "The terminal valuation multiset is empty, rather than a singleton, for primes p not dividing M. A one-line case distinction gives gcd(S_p^*)=0=v_p(M), so the main argument remains valid."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

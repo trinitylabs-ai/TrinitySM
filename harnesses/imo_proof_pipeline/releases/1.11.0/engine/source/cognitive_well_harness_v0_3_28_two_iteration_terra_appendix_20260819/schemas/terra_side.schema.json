@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "audited_side",
+    "verdict",
+    "exact_claim_reached",
+    "first_break",
+    "missing_obligations",
+    "counterexample_or_failure_witness",
+    "external_information_used"
+  ],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "audited_side": {"type": "string", "enum": ["positive", "negative"]},
+    "verdict": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+    "exact_claim_reached": {"type": "boolean"},
+    "first_break": {"type": ["string", "null"]},
+    "missing_obligations": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "counterexample_or_failure_witness": {"type": ["string", "null"]},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

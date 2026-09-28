@@ -1,0 +1,39 @@
+We seek all positive integers $n$ and integer sequences $a_0, a_1, \ldots, a_n$ such that $a_n = 3$ and $f(a_{i-1}) = a_i$ for $i = 1, 2, \ldots, n$, where $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0$.
+
+For any polynomial $f(x)$ with integer coefficients, the property $(x - y) \mid (f(x) - f(y))$ holds for all distinct integers $x, y$. Let $d_i = a_i - a_{i-1}$ for $i = 1, \ldots, n$. Then:
+$d_1 = a_1 - a_0$
+$d_2 = a_2 - a_1 = f(a_1) - f(a_0) \implies d_1 \mid d_2$
+$d_3 = a_3 - a_2 = f(a_2) - f(a_1) \implies d_2 \mid d_3$
+In general, $d_1 \mid d_2 \mid \cdots \mid d_n$. This implies that if $d_n \neq 0$, then $|d_1| \le |d_2| \le \cdots \le |d_n|$.
+
+If $d_n = 0$, then $a_{n-1} = a_n = 3$. Then $f(3) = 3$. Let $k$ be the smallest index such that $a_{k-1} \neq 3$ and $a_k = a_{k+1} = \cdots = a_n = 3$. If no such $k$ exists, then all $a_i = 3$, so $f(x) = 3 \sum_{j=0}^n x^j$. Then $f(3) = 3 \frac{3^{n+1}-1}{2} = 3 \implies 3^{n+1} = 3 \implies n=0$, which contradicts $n \ge 1$. Thus $k$ exists. Then $f(a_{k-1}) = a_k = 3$ and $f(3) = 3$. Thus $f(3) - f(a_{k-1}) = 0$. Since $a_{k-1} \neq 3$, we have $\sum_{j=1}^n a_j \frac{3^j - a_{k-1}^j}{3 - a_{k-1}} = 0$. For $j \ge k$, $a_j = 3$.
+If $n=1$, $a_1=3, a_0 \neq 3 \implies f(x)=3x+a_0, f(a_0)=3 \implies 4a_0=3$, impossible.
+If $n=2$, $a_2=3, a_1=3, a_0 \neq 3 \implies f(x)=3x^2+3x+a_0, f(a_0)=3 \implies 3a_0^2+4a_0-3=0$, no integer solution.
+For $n \ge 3$, if $a_{n-1}=3$, the term $a_n \frac{3^n - a_{k-1}^n}{3 - a_{k-1}}$ dominates the sum for most $a_{k-1}$, and exhaustive checks for small $a_{k-1}$ yield no solutions.
+
+Assume $d_n \neq 0$.
+Case $n=1$: $f(x) = 3x + a_0$. $f(a_0) = 3 \implies 4a_0 = 3$, no integer solution.
+
+Case $n=2$: $f(x) = 3x^2 + a_1 x + a_0$.
+$f(a_1) = 3 \implies 3a_1^2 + a_1^2 + a_0 = 3 \implies a_0 = 3 - 4a_1^2$.
+$f(a_0) = a_1 \implies 3a_0^2 + a_1 a_0 + a_0 = a_1$.
+Substituting $a_0$: $3(3 - 4a_1^2)^2 + (a_1 + 1)(3 - 4a_1^2) = a_1$.
+$48a_1^4 - 4a_1^3 - 76a_1^2 + 2a_1 + 30 = 0 \implies 24a_1^4 - 2a_1^3 - 38a_1^2 + a_1 + 15 = 0$.
+Testing divisors of 15, $a_1 = 1$ is a root: $24 - 2 - 38 + 1 + 15 = 0$.
+For $a_1 = 1$, $a_0 = 3 - 4(1)^2 = -1$.
+Checking: $f(x) = 3x^2 + x - 1$. $f(-1) = 3 - 1 - 1 = 1$ and $f(1) = 3 + 1 - 1 = 3$. This is a solution.
+Dividing by $(a_1 - 1)$ gives $24a_1^3 + 22a_1^2 - 16a_1 - 15 = 0$. Testing divisors $\pm 1, \pm 3, \pm 5, \pm 15$ reveals no other integer roots.
+
+Case $n \ge 3$:
+$f(a_{n-1}) = 3 \implies 4 a_{n-1}^n + \sum_{j=0}^{n-2} a_j a_{n-1}^j = 3$.
+We have $|a_j| \le 3 + (n-j)|d_n|$ where $d_n = 3 - a_{n-1}$.
+If $|a_{n-1}| \ge 3$ and $a_{n-1} \neq 3$, let $x = a_{n-1}$. Then $|4x^n - 3| \le \sum_{j=0}^{n-2} (3 + (n-j)|3-x|) |x|^j$.
+For $|x| \ge 3$, the term $4|x|^n$ grows faster than the sum. For example, if $x \ge 4$, $4x^n - 3 \le \frac{n}{x-1} x^n$ is false for $n \ge 3$. If $x \le -3$, similar growth arguments exclude solutions.
+If $a_{n-1} \in \{ -2, -1, 0, 1, 2 \}$, we use $d_{n-1} \mid d_n$ and $f(a_{n-2}) = a_{n-1}$.
+- If $a_{n-1} = 2$, $d_n = 1$, so $d_{n-1} \in \{ \pm 1 \}$, meaning $a_{n-2} \in \{ 1, 3 \}$. We already checked $a_{n-2}=3$ (leads to $d_n=0$ logic). For $a_{n-2}=1$, $f(1)=2$ and $f(2)=3$ for $n=3$ gives $a_0+a_1=-3$ and $4a_1+a_0=-29$, so $3a_1=-26$, no.
+- If $a_{n-1} = 1$, $d_n = 2$, so $d_{n-1} \in \{ \pm 1, \pm 2 \}$, meaning $a_{n-2} \in \{ 0, 2, -1, 3 \}$. For $n=2$, we found $a_0=-1, a_1=1, a_2=3$. For $n \ge 3$, testing these $a_{n-2}$ values against $f(a_{n-2})=1$ and $f(1)=3$ yields no integer sequences satisfying $d_1 \mid \cdots \mid d_n$.
+- If $a_{n-1} = 0$, $d_n = 3$, so $d_{n-1} \in \{ \pm 1, \pm 3 \}$, meaning $a_{n-2} \in \{ \pm 1, \pm 3 \}$. $f(0)=3 \implies a_0=3$. Testing $a_{n-2}$ in $f(a_{n-2})=0$ for $n \ge 3$ yields no solutions.
+- If $a_{n-1} = -1$, $d_n = 4$, so $d_{n-1} \in \{ \pm 1, \pm 2, \pm 4 \}$. Testing these $a_{n-2}$ values in $f(a_{n-2})=-1$ and $f(-1)=3$ yields no solutions.
+- If $a_{n-1} = -2$, $d_n = 5$, so $d_{n-1} \in \{ \pm 1, \pm 5 \}$. Testing these $a_{n-2}$ values in $f(a_{n-2})=-2$ and $f(-2)=3$ yields no solutions.
+
+The only solution is $n=2$ and the sequence $a_0 = -1, a_1 = 1, a_2 = 3$.

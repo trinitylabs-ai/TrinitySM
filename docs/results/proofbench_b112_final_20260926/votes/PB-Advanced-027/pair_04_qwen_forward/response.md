@@ -1,0 +1,24 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Bob has a winning strategy for all choices of $P, Q, S$. The proof partitions the forbidden ratio set $F = \mathbb{C} \setminus (L \cup (1-L))$ into three exhaustive topological cases: (1) $F$ has non-empty interior, (2a) $F$ has empty interior and is dense, (2b) $F$ has empty interior and is not dense. In each case, Bob constructs a city sequence that either isolates a vertex (disconnected graph) or forces the complete graph $K_\infty$ (non-planar due to crossing straight-line edges), satisfying Bob's winning condition.
+Claim gap: NONE supported by checks. The inductive constructions correctly maintain distance $>1$ and non-collinearity constraints while achieving the desired graph properties.
+Qualifications and supplied repairs: NONE. The argument correctly identifies that avoiding a finite union of sets with empty interior (plus open disks that do not cover $\mathbb{C}$) always leaves a non-empty set of valid positions for the next city. This is a standard application of the fact that $\mathbb{C}$ is not a countable union of nowhere dense sets, and the finite union of empty-interior sets has empty interior.
+Decisive checks: 
+- Line 1: Complex ratio derivation $\frac{r-p}{q-p} = \frac{c-a}{b-a}$ correctly captures direct similarity. The transformation to $1 - \frac{c-a}{b-a}$ for $\triangle BAC$ is algebraically verified.
+- Line 10/29: The claim that Bob can always pick $v_{n+1}$ avoiding disks, lines, and empty-interior sets is verified. Disks are open and disjoint, so their union cannot cover $\mathbb{C}$. The remaining forbidden sets have empty interior, so their finite union has empty interior. The complement of a set with empty interior in a non-empty open region is non-empty (in fact, dense), guaranteeing a valid choice.
+- Falsification check: Attempted to construct a case where $F$ is not dense but Bob cannot avoid it. Since $F$ has empty interior, its complement contains an open ball. Bob can always pick points mapping into this ball, ensuring roads exist. No counterexample found.
+
+## Proof B
+Established theorem: Bob has a winning strategy. The proof partitions $V = \mathbb{C} \setminus U$ into meager vs. non-meager cases. Case 1 (meager) constructs $K_\infty$ using Baire Category Theorem. Case 2 (non-meager) destroys all roads using density in a ball and an area comparison argument.
+Claim gap: NONE supported by checks, though one topological statement is imprecise.
+Qualifications and supplied repairs: Line 15 states "The complement of the finite union of disks is a non-empty open set." This is technically false: the complement of open disks is closed (though it has non-empty interior). The intended meaning (that there exists a non-empty open region disjoint from the disks) is correct and salvageable, but the phrasing is a minor defect. The area argument in Lines 20-23 is valid but unnecessarily heavy; density alone suffices to intersect with the complement of disks.
+Decisive checks:
+- Line 3-5: Complex ratio setup and $V$ definition match Proof A and are correct.
+- Line 15: Baire Category application is correct in spirit: a meager set cannot cover a non-empty open set. The disks leave an open region, and the meager forbidden sets cannot cover it. Valid conclusion despite the "complement is open" misstatement.
+- Line 20-23: Area argument verifies $B_{i,j} \not\subseteq \bigcup D(C_n, 1)$, ensuring $U \neq \emptyset$. Since $S_{i,j}$ is dense in $B_{i,j}$ and lines are nowhere dense, $S_{i,j} \cap U \setminus \text{Lines} \neq \emptyset$. Verified.
+- Falsification check: Tested $V = \mathbb{Q}[i]$ (meager, dense). Case 1 applies; Bob avoids $V$ successfully. Tested $V = \mathbb{C} \setminus \mathbb{Q}[i]$ (non-meager, empty interior). Case 2 applies; $\text{cl}(V)=\mathbb{C}$ contains a ball, density holds. No counterexample found.
+
+## Decision
+Winner: A
+Reason: Both proofs correctly establish that Bob wins by exhaustively covering all topological configurations of the forbidden ratio set and providing valid inductive constructions. Proof A is preferred for its cleaner topological reasoning and precise language. Proof B contains a minor but demonstrable topological inaccuracy (claiming the complement of open disks is open) and relies on an area comparison argument that, while correct, is less direct than Proof A's density-based approach. Proof A's handling of the empty-interior case (Subcase 2b) correctly identifies that avoiding a finite union of empty-interior sets plus disjoint disks always leaves valid positions, without overcomplicating the measure-theoretic justification. Both are mathematically sound, but A exhibits greater rigor and conciseness in its decisive steps.

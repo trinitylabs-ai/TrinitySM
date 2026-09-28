@@ -1,0 +1,34 @@
+To prove that circles $(W_3)$ and $(W_4)$ are tangent, we analyze the positions of their centers and their radii using a vector-based approach.
+
+**1. Setup and Definitions**
+Let $ABCD$ be a trapezoid with legs $AB$ and $CD$. This implies the bases are $AD$ and $BC$, so $AD \parallel BC$. Let $L_1 = AB$ and $L_2 = CD$. Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$, respectively.
+For a circle passing through a chord of length $L$ with an inscribed angle $\theta$ corresponding to the arc opposite to the chord's side, the radius is $R = \frac{L}{2 \sin \theta}$ and the distance from the center to the chord is $h = \frac{L}{2} \cot \theta$.
+
+Let $\vec{u_1}$ be the unit vector perpendicular to $AB$ pointing towards the side of $C$ and $D$, and $\vec{u_2}$ be the unit vector perpendicular to $CD$ pointing towards the side of $A$ and $B$.
+The centers of the circles are:
+- $O_1 = M_1 + \epsilon_1 h_1 \vec{u_1}$ where $h_1 = \frac{L_1}{2} \cot \alpha$
+- $O_2 = M_2 + \epsilon_2 h_2 \vec{u_2}$ where $h_2 = \frac{L_2}{2} \cot \beta$
+- $O_3 = M_1 + \epsilon_1 h_3 \vec{u_1}$ where $h_3 = \frac{L_1}{2} \cot \beta$
+- $O_4 = M_2 + \epsilon_2 h_4 \vec{u_2}$ where $h_4 = \frac{L_2}{2} \cot \alpha$
+The radii are $R_1 = \frac{L_1}{2 \sin \alpha}, R_2 = \frac{L_2}{2 \sin \beta}, R_3 = \frac{L_1}{2 \sin \beta}, R_4 = \frac{L_2}{2 \sin \alpha}$. Note that $R_1 R_2 = R_3 R_4 = \frac{L_1 L_2}{4 \sin \alpha \sin \beta}$. The signs $\epsilon_1, \epsilon_2$ are determined by the problem's "opposite side" condition; since the conditions are symmetric for $W_1, W_2$ and $W_3, W_4$, these signs remain constant.
+
+**2. The Tangency Condition for $(W_1)$ and $(W_2)$**
+Let $\vec{v} = M_2 - M_1$. The distance between centers $O_1$ and $O_2$ is:
+$O_1O_2^2 = \|\vec{v} + \epsilon_2 h_2 \vec{u_2} - \epsilon_1 h_1 \vec{u_1}\|^2 = v^2 + h_1^2 + h_2^2 + 2\epsilon_2 h_2 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_1 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_1 h_2 (\vec{u_1} \cdot \vec{u_2})$.
+Since $(W_1)$ and $(W_2)$ are tangent, $O_1O_2^2 = (R_1 \pm R_2)^2 = R_1^2 + R_2^2 \pm 2R_1 R_2$. Using $R_1^2 = h_1^2 + (L_1/2)^2$ and $R_2^2 = h_2^2 + (L_2/2)^2$, we obtain:
+$v^2 + 2\epsilon_2 h_2 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_1 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_1 h_2 (\vec{u_1} \cdot \vec{u_2}) = \frac{L_1^2 + L_2^2}{4} \pm 2R_1 R_2$.
+
+**3. Proving Tangency for $(W_3)$ and $(W_4)$**
+Similarly, the distance between $O_3$ and $O_4$ is:
+$O_3O_4^2 = v^2 + h_3^2 + h_4^2 + 2\epsilon_2 h_4 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_3 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_3 h_4 (\vec{u_1} \cdot \vec{u_2})$.
+We compare $O_3O_4^2$ with $(R_3 \pm R_4)^2 = R_3^2 + R_4^2 \pm 2R_3 R_4 = h_3^2 + h_4^2 + \frac{L_1^2 + L_2^2}{4} \pm 2R_3 R_4$.
+The difference is:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = v^2 + 2\epsilon_2 h_4 (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 h_3 (\vec{v} \cdot \vec{u_1}) - 2\epsilon_1 \epsilon_2 h_3 h_4 (\vec{u_1} \cdot \vec{u_2}) - \frac{L_1^2 + L_2^2}{4} \mp 2R_3 R_4$.
+Substituting the value of $\frac{L_1^2 + L_2^2}{4} \pm 2R_1 R_2$ from the $O_1O_2$ equation and noting $h_1 h_2 = h_3 h_4 = \frac{L_1 L_2}{4} \cot \alpha \cot \beta$ and $R_1 R_2 = R_3 R_4$:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = 2\epsilon_2 (h_4 - h_2) (\vec{v} \cdot \vec{u_2}) - 2\epsilon_1 (h_3 - h_1) (\vec{v} \cdot \vec{u_1})$.
+Substituting $h_4 - h_2 = \frac{L_2}{2}(\cot \alpha - \cot \beta)$ and $h_3 - h_1 = \frac{L_1}{2}(\cot \beta - \cot \alpha)$:
+$O_3O_4^2 - (R_3 \pm R_4)^2 = \epsilon_2 L_2 (\cot \alpha - \cot \beta) (\vec{v} \cdot \vec{u_2}) + \epsilon_1 L_1 (\cot \alpha - \cot \beta) (\vec{v} \cdot \vec{u_1})$
+$= (\cot \alpha - \cot \beta) [\epsilon_2 L_2 (\vec{v} \cdot \vec{u_2}) + \epsilon_1 L_1 (\vec{v} \cdot \vec{u_1})]$.
+
+For any trapezoid with $AD \parallel BC$, the projection of $\vec{v} = M_2 - M_1$ onto the perpendiculars $\vec{u_1}$ and $\vec{u_2}$ satisfies $L_1 (\vec{v} \cdot \vec{u_1}) = - L_2 (\vec{v} \cdot \vec{u_2})$. Since $\epsilon_1 = \epsilon_2$, the term in the brackets is zero.
+Thus, $O_3O_4^2 = (R_3 \pm R_4)^2$, meaning $(W_3)$ and $(W_4)$ are tangent. \(\square\)

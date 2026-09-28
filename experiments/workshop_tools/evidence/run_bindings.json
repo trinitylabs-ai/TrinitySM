@@ -1,0 +1,97 @@
+{
+  "schema": "tool-run-bindings-export-v1",
+  "export_note": "Selected fields from native run manifests and results; submitted proof hashes and operation names are preserved.",
+  "records": [
+    {
+      "problem_id": "PB-Basic-008",
+      "candidate": "t10_r01",
+      "input_proof_sha256": "2448ba9eb2b7ea4607df186570c0b8f9f84e4ffb806baf0562e839ac7f209db7",
+      "rewrite_proof_sha256": "764c0a68d9c521dee3dc453cec8f81cbe0bbd9f852c17d9e9f03e7d92cf0737e",
+      "operation": "real_root_classification",
+      "harness_revision": "0.3.356+v349-discrete-consolidation.1",
+      "certificate_replayed": true,
+      "source_manifest": "benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/manifest.json",
+      "source_manifest_sha256": "077fb1229c6f82a4299a73864a2a24a8133da274c01816c32760ff3842ffdce2",
+      "source_result": "benchmarks/imo-proofbench/basic/results/basic008_t10_r01_v356_consolidated_20260917T071542Z/generation/run/result.json",
+      "source_result_sha256": "3a9d2d33d3dd4abd66fe455791b0add3c0ba29fcb87eeab657aa26ddc86ce55d"
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate": "t07_r01",
+      "input_proof_sha256": "c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8",
+      "rewrite_proof_sha256": "9462ddfd113ae58ed7ea90899b0578934ec0652fa269df188282f1bdd864da3c",
+      "operation": "uniform_partition_count",
+      "harness_revision": "0.3.356+v349-discrete-consolidation.1",
+      "certificate_replayed": true,
+      "source_manifest": "benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/manifest.json",
+      "source_manifest_sha256": "e826e68309019b6057bf23405ff938509395e6a16fd4f75bb30a7efb7d3fcea3",
+      "source_result": "benchmarks/imo-proofbench/basic/results/basic009_t07_r01_v356_consolidated_20260917T071542Z/generation/run/result.json",
+      "source_result_sha256": "06926363db7de02d95e9a28d2b4e82c439ca136d45af0f7c60f317f560352ad8"
+    },
+    {
+      "problem_id": "PB-Advanced-010",
+      "candidate": "t07_r01",
+      "input_proof_sha256": "33ce7086895a867e66d9be525409efd86ddfe5c7cf9818d84cb913998e7c2569",
+      "rewrite_proof_sha256": "348ef8b716784e6aa0a14b2aa4627dcf08e7127a123b7f50085e2d6dd70d2c00",
+      "operation": "exact_geometry",
+      "harness_revision": "0.3.342+scope.1",
+      "certificate_replayed": false,
+      "source_manifest": "benchmarks/imo-proofbench/advanced/results/advanced_p010_t07_r01_selected_lemma_v342_20260916T071654Z/manifest.json",
+      "source_manifest_sha256": "51999fb897bd35406123f36fb355c7e4a8f92488545a7bd7e83be62cadda0c78",
+      "source_result": "benchmarks/imo-proofbench/advanced/results/advanced_p010_t07_r01_selected_lemma_v342_20260916T071654Z/generation/run/result.json",
+      "source_result_sha256": "f00d34900ac64e177c12241952ad6b05ef7e291d306fdebdc778c7604e47951b"
+    },
+    {
+      "problem_id": "PB-Advanced-020",
+      "candidate": "t10_r02",
+      "input_proof_sha256": "a78c1a2afeaad6277cd23284a2ac9a499c687eeee5467389492952d8b55d7aa1",
+      "rewrite_proof_sha256": "60b6ce2ed6a1ed25b60fded131cddcebc64a8ecbe151966b56d917378e86fe79",
+      "operation": "symbolic_modular_order",
+      "harness_revision": "0.3.353+discrete-synthesis-binding.1",
+      "certificate_replayed": true,
+      "source_manifest": "benchmarks/imo-proofbench/advanced/results/advanced020_t10_r02_r1c2_v353_resume_20260917T035234Z/manifest.json",
+      "source_manifest_sha256": "16bb766c0294c647a44d758880db62fc75653b4256ea2f9a79062d62cef829fd",
+      "source_result": "benchmarks/imo-proofbench/advanced/results/advanced020_t10_r02_r1c2_v353_resume_20260917T035234Z/generation/run/result.json",
+      "source_result_sha256": "37af76f34f2b2b0f3d280099729bbdbce8793f1ad0cb28be4235e5bb2fb129e8"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "input_proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+      "rewrite_proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+      "operation": "rational_identity",
+      "harness_revision": "0.3.355+geometry-export-spacing.1",
+      "certificate_replayed": true,
+      "source_manifest": "benchmarks/imo2026/results/p2_t07r01_v355_export_20260917T063618Z/manifest.json",
+      "source_manifest_sha256": "6be6829f49a4b6cd677c625acc1ce15be91742eb29346faab81225e6805d95f7",
+      "source_result": "benchmarks/imo2026/results/p2_t07r01_v355_export_20260917T063618Z/generation/run/result.json",
+      "source_result_sha256": "d0a9d7a4124d1fddf22aac812e265bceacbc3347d5e8d32fedc1a006a12f1e4d"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "input_proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+      "rewrite_proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+      "operation": "exact_geometry",
+      "harness_revision": "0.3.356+v349-discrete-consolidation.1",
+      "certificate_replayed": true,
+      "source_manifest": "benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/manifest.json",
+      "source_manifest_sha256": "43f222e9d31bc7d926d66617cb20c79202e6bf588787b4de663d7df442b21c49",
+      "source_result": "benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/generation/run/result.json",
+      "source_result_sha256": "0c5a49e5d69db27b5e873f1d2cd146fc2c0611530bcbf21efc00bdb6c1e91a36"
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "input_proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+      "rewrite_proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+      "operation": "exact_geometry",
+      "harness_revision": "0.3.355+geometry-export-spacing.1",
+      "certificate_replayed": true,
+      "source_manifest": "benchmarks/imo2026/results/p2_t10r01_v355_export_20260917T063618Z/manifest.json",
+      "source_manifest_sha256": "6fe864e8c3528f54874c765b597f58ab3b255852d27763fd30472f663d2b673f",
+      "source_result": "benchmarks/imo2026/results/p2_t10r01_v355_export_20260917T063618Z/generation/run/result.json",
+      "source_result_sha256": "5640d03bb3ace5cc18058f6250fc5e1c8e554a88dc76d93b81969af89f06f8b1"
+    }
+  ]
+}

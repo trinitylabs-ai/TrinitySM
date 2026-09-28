@@ -1,0 +1,78 @@
+{
+  "schema": "workshop-b5-ablation-grading-v1",
+  "run_id": "b5_ablation_20260918T192201Z",
+  "policy": "imobench-proof-autograder-b5-v1",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "repeats": 1,
+  "benchmark": "imo-proofbench/basic",
+  "tasks": 8,
+  "task_manifest": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/grading/tasks.json",
+  "output": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/grading/work/b5",
+  "bindings": [
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-009/t10_r01.md",
+      "proof_sha256": "8b32b3ce57f9011aad91497bd4d89d890b7fa1b39e68e5c311cb118dd63130a9",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/325026cbdc6fe191c2a2bca48f8566457fc17a7588918387ba6e64a246664b0f.md"
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-009/t10_r02.md",
+      "proof_sha256": "2abfaa4583d3fefab85a4cb2981e979c8bb07bb8b98f096de933b90a385ac82a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/5db338ed6cc64bd81946807d9b0872dd28644348958472d9c444f5cb7d0614bb.md"
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-009/t07_r01.md",
+      "proof_sha256": "c7684f59fd70804f262a4d6fd3815ff2821cf258beee1d8907a4a18da40acc1a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/7a79cdc7576defd468a8d29d00c7304bbf6ddc9528ae137b4c514ade537934fc.md"
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-009/t07_r02.md",
+      "proof_sha256": "6d8553f6dca32d2bb39c35a4b7d05782dda927af674e2f6e3000ea3558c47672",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/aaf7488e9dea1a5314b71e6b60be64e17dbcf0cbbe51173628265546247bf4d2.md"
+    },
+    {
+      "problem_id": "PB-Basic-026",
+      "candidate": "t10_r01",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-026/t10_r01.md",
+      "proof_sha256": "1a5905b02a2aeda5d3ea9c633988cdeaf1e9df6238293444c667002f09a0ec7a",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/fe00b0fa9169e4f922ad4697d2959ef239442ce8280ea265c8407f0356346064.md"
+    },
+    {
+      "problem_id": "PB-Basic-026",
+      "candidate": "t10_r02",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-026/t10_r02.md",
+      "proof_sha256": "c72005cacacfc7a6f473e53fc421f5dbe064487a8a8c3f42d5aac74baaac7ed4",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/5752b93bdd4ac07f3254db525770d02baf6d600347ac418ee41b300a8ce9ef67.md"
+    },
+    {
+      "problem_id": "PB-Basic-026",
+      "candidate": "t07_r01",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-026/t07_r01.md",
+      "proof_sha256": "a538527b600e31abde8d3dfbab75a696e0cc29cb15289c6402113293de02f520",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/75a911c3b0893dcbe9405a8f3222817fa4e09712bd51d60eb2afa1e4980f86ea.md"
+    },
+    {
+      "problem_id": "PB-Basic-026",
+      "candidate": "t07_r02",
+      "proof": "benchmarks/imo-proofbench/basic/results/b5_ablation_20260918T192201Z/proofs/PB-Basic-026/t07_r02.md",
+      "proof_sha256": "e5e29a83e041459dba9311e3f8ba22b21b1aead569cb6e559170bcfb320f79ff",
+      "cohort": "raw_no_bf",
+      "source_proof": "benchmarks/imo-proofbench/basic/results/strict_v2_consistency_20260918T064715Z/proofs/ec3b8421fe1258fbcbc0bd1e546f5b60ed9c720c70d3c5474c6642180f6ddc1b.md"
+    }
+  ]
+}

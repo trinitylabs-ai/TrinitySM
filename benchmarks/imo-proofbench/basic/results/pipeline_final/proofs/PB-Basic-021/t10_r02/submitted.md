@@ -1,0 +1,37 @@
+To prove that $x_{n-1}$ divides $x_n$ for all integers $n \ge 2$, we observe that the condition $x_{n-1} \mid x_n$ is equivalent to the statement that $x_m$ divides $2^{x_m} + 2$ for all $m \ge 1$. We define two properties for any positive integer $m$:
+Property $P(m)$: $x_m \mid 2^{x_m} + 2$.
+Property $Q(m)$: $x_m - 1 \mid 2^{x_m} + 1$.
+
+We will prove that $P(m)$ and $Q(m)$ hold for all $m \ge 1$ by induction.
+
+**Base Case:**
+For $m=1$, $x_1 = 6$.
+$P(1): 6 \mid 2^6 + 2 = 66$, which is true since $66 = 6 \times 11$.
+$Q(1): x_1 - 1 = 5 \mid 2^6 + 1 = 65$, which is true since $65 = 5 \times 13$.
+
+**Inductive Step:**
+Assume $P(m)$ and $Q(m)$ are true for some $m \ge 1$. We will show that $Q(m+1)$ and $P(m+1)$ are true.
+
+First, we show that $Q(m+1)$ is true. The statement $Q(m+1)$ is $x_{m+1} - 1 \mid 2^{x_{m+1}} + 1$. Given $x_{m+1} = 2^{x_m} + 2$, we have $x_{m+1} - 1 = 2^{x_m} + 1$. Thus, we must show:
+$$2^{x_m} + 1 \mid 2^{2^{x_m} + 2} + 1$$
+Let $M = 2^{x_m} + 1$. Then $2^{x_m} \equiv -1 \pmod{M}$, which implies $2^{2x_m} \equiv 1 \pmod{M}$. The order $d$ of $2 \pmod{M}$ therefore divides $2x_m$. 
+Since $x_1 = 6$ and $x_{k+1} = 2(2^{x_k-1} + 1)$, the valuation $v_2(x_k) = 1$ for all $k \ge 1$. Let $x_m = 2k$ where $k$ is odd. By the inductive hypothesis $P(m)$, $x_m \mid 2^{x_m} + 2$. Thus, $q = \frac{2^{x_m} + 2}{x_m} = \frac{2(2^{x_m-1} + 1)}{2k} = \frac{2^{x_m-1} + 1}{k}$ is an integer. Since $2^{x_m-1} + 1$ and $k$ are both odd, $q$ must be an odd integer.
+Thus, $2^{x_m} + 2 = q \cdot x_m = (2j+1)x_m = 2jx_m + x_m$ for some integer $j$. This implies:
+$$2^{x_m} + 2 \equiv x_m \pmod{2x_m}$$
+Since $d \mid 2x_m$, we have:
+$$2^{2^{x_m} + 2} + 1 \equiv 2^{x_m} + 1 \equiv -1 + 1 \equiv 0 \pmod{M}$$
+This proves that $Q(m+1)$ is true.
+
+Next, we show that $P(m+1)$ is true. The statement $P(m+1)$ is $x_{m+1} \mid 2^{x_{m+1}} + 2$.
+Since $x_{m+1} = 2(2^{x_m-1} + 1)$, this is equivalent to:
+$$2(2^{x_m-1} + 1) \mid 2(2^{x_{m+1}-1} + 1) \iff 2^{x_m-1} + 1 \mid 2^{x_{m+1}-1} + 1 \iff 2^{x_m-1} + 1 \mid 2^{2^{x_m} + 1} + 1$$
+Let $M' = 2^{x_m-1} + 1$. Then $2^{x_m-1} \equiv -1 \pmod{M'}$, so $2^{2(x_m-1)} \equiv 1 \pmod{M'}$. The order $d'$ of $2 \pmod{M'}$ divides $2(x_m-1)$.
+From the inductive hypothesis $Q(m)$, we know $x_m - 1 \mid 2^{x_m} + 1$. Let $2^{x_m} + 1 = q'(x_m - 1)$. Since both $2^{x_m} + 1$ and $x_m - 1$ are odd, $q'$ must be an odd integer. Thus:
+$$2^{x_m} + 1 = (2j+1)(x_m - 1) = 2j(x_m - 1) + (x_m - 1) \equiv x_m - 1 \pmod{2(x_m - 1)}$$
+Since $d' \mid 2(x_m - 1)$, we have:
+$$2^{2^{x_m} + 1} + 1 \equiv 2^{x_m-1} + 1 \equiv -1 + 1 \equiv 0 \pmod{M'}$$
+This proves that $P(m+1)$ is true.
+
+By induction, $P(n)$ holds for all $n \ge 1$. Consequently, $x_n \mid 2^{x_n} + 2$ for all $n \ge 1$. Replacing $n$ with $n-1$, we obtain $x_{n-1} \mid 2^{x_{n-1}} + 2$ for all $n \ge 2$. By the definition of the sequence, $x_n = 2^{x_{n-1}} + 2$, so $x_{n-1} \mid x_n$ for all integers $n \ge 2$.
+
+\(\square\)

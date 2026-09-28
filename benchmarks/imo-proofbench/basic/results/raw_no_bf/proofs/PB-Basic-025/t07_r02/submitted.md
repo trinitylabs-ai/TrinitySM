@@ -1,0 +1,25 @@
+To determine the angle $\gamma$ between the lines $MN$ and $OI$, we employ a vector-based approach. Let the circumcenter $O$ of triangle $XYZ$ be the origin of our coordinate system. Let $\vec{x}, \vec{y}, \vec{z}$ be the vectors from $O$ to the vertices $X, Y, Z$, respectively. The circumradius is $R$, so $|\vec{x}| = |\vec{y}| = |\vec{z}| = R$.
+
+The side lengths of the triangle are $YZ = a$, $XZ = b$, and $XY = c$. The incenter $I$ is given by the formula:
+\[ \vec{I} = \frac{a\vec{x} + b\vec{y} + c\vec{z}}{a+b+c} \]
+Thus, the vector $\vec{OI}$ is $\frac{a\vec{x} + b\vec{y} + c\vec{z}}{a+b+c}$.
+
+Points $M$ and $N$ lie on the sides $XY$ and $XZ$ respectively such that $YM = ZN = YZ = a$. Since $M$ is on the segment $XY$, we have $\vec{M} = \vec{y} + \frac{a}{c}(\vec{x} - \vec{y}) = \frac{a\vec{x} + (c-a)\vec{y}}{c}$. Similarly, since $N$ is on the segment $XZ$, we have $\vec{N} = \vec{z} + \frac{a}{b}(\vec{x} - \vec{z}) = \frac{a\vec{x} + (b-a)\vec{z}}{b}$.
+
+The vector $\vec{MN}$ is given by:
+\[ \vec{MN} = \vec{N} - \vec{M} = \frac{a\vec{x} + (b-a)\vec{z}}{b} - \frac{a\vec{x} + (c-a)\vec{y}}{c} = a\left(\frac{1}{b} - \frac{1}{c}\right)\vec{x} - \frac{c-a}{c}\vec{y} + \frac{b-a}{b}\vec{z} = \frac{a(c-b)\vec{x} - b(c-a)\vec{y} + c(b-a)\vec{z}}{bc} \]
+
+To find the angle $\gamma$ between $MN$ and $OI$, we compute the dot product $\vec{OI} \cdot \vec{MN}$. Let $\vec{u} = (a+b+c)\vec{OI} = a\vec{x} + b\vec{y} + c\vec{z}$ and $\vec{v} = bc\vec{MN} = a(c-b)\vec{x} - b(c-a)\vec{y} + c(b-a)\vec{z}$.
+The dot product $\vec{u} \cdot \vec{v}$ is:
+\[ \vec{u} \cdot \vec{v} = a^2(c-b)R^2 - ab(c-a)(\vec{x}\cdot\vec{y}) + ac(b-a)(\vec{x}\cdot\vec{z}) + ab(c-b)(\vec{y}\cdot\vec{x}) - b^2(c-a)R^2 + bc(b-a)(\vec{y}\cdot\vec{z}) + ac(c-b)(\vec{z}\cdot\vec{x}) - bc(c-a)(\vec{z}\cdot\vec{y}) + c^2(b-a)R^2 \]
+Using the identity $\vec{x}\cdot\vec{y} = R^2 - \frac{c^2}{2}$, $\vec{x}\cdot\vec{z} = R^2 - \frac{b^2}{2}$, and $\vec{y}\cdot\vec{z} = R^2 - \frac{a^2}{2}$, we group the terms by $R^2$:
+The coefficient of $R^2$ is:
+\[ a^2(c-b) - b^2(c-a) + c^2(b-a) + ab(c-b - (c-a)) + ac(b-a + c-b) + bc(b-a - (c-a)) \]
+\[ = a^2c - a^2b - b^2c + b^2a + c^2b - c^2a + ab(a-b) + ac(c-a) + bc(b-c) \]
+\[ = a^2c - a^2b - b^2c + b^2a + c^2b - c^2a + a^2b - ab^2 + ac^2 - a^2c + b^2c - bc^2 = 0 \]
+The remaining terms are:
+\[ -\frac{1}{2} [ ab(a-b)c^2 + ac(c-a)b^2 + bc(b-c)a^2 ] = -\frac{abc}{2} [ c(a-b) + b(c-a) + a(b-c) ] \]
+\[ = -\frac{abc}{2} [ ac - bc + bc - ab + ab - ac ] = 0 \]
+Since $\vec{OI} \cdot \vec{MN} = 0$, the lines $MN$ and $OI$ are perpendicular, meaning $\gamma = 90^\circ$. Therefore, $\frac{\gamma}{2} = 45^\circ$.
+
+$\frac{\gamma}{2} = 45^\circ$ \(\square\)

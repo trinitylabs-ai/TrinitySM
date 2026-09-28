@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The submission verifies that the Aharoni-Berger condition $\nu(\bigcup_{i \in S} \mathcal{F}_i) \ge |S|$ holds for linear intervals when each $\nu(\mathcal{F}_i) \ge n$. It asserts, without proof or citation, that a circular extension guarantees disjoint sets $S_i \in \mathcal{F}_i$.
+Claim gap: The transition from linear to circular intervals is unjustified. The "known extension" is not referenced, and its applicability to discrete circular blocks is left as an unresolved assertion. Additionally, the conclusion that disjoint sets $S_i$ constitute a "valid distribution of the $m$ cupcakes" omits the assignment of any remaining cupcakes, failing to fully satisfy the problem's partition requirement.
+Qualifications and supplied repairs: I supplied the explicit distribution of leftover cupcakes (assigning them arbitrarily, justified by non-negative scores). I identified the unnamed extension as the Aharoni-Holzman theorem. These steps are absent from the submission.
+Decisive checks: Line 9 correctly states the Aharoni-Berger theorem for linear intervals. The verification that $\nu(\bigcup_{i \in S} \mathcal{F}_i) \ge n \ge |S|$ is correct but irrelevant to the circular setting. Line 11's claim of a circular extension is a demonstrated defect in rigor: it asserts a non-trivial combinatorial result without reference or derivation. Line 13's conclusion skips the full distribution obligation. The circular case remains an unresolved check.
+
+## Proof B
+Established theorem: The submission correctly applies the Aharoni-Holzman theorem (1998) to guarantee $n$ pairwise disjoint consecutive blocks $A_i \in \mathcal{F}_i$. It explicitly constructs a full distribution by assigning $A_i$ to person $P_i$ and arbitrarily distributing leftovers, preserving the score threshold via non-negative scores.
+Claim gap: NONE. The citation is precise, the theorem statement matches the hypothesis exactly, and the application covers all quantifiers and domain requirements of the problem.
+Qualifications and supplied repairs: NONE. All steps follow directly from the cited theorem and elementary properties of non-negative sums.
+Decisive checks: Line 7 accurately cites Aharoni and Holzman (1998) with the exact hypothesis ($\nu(\mathcal{F}_i) \ge n$) and conclusion (existence of disjoint arcs $A_i \in \mathcal{F}_i$). Line 9 correctly instantiates the theorem. Lines 11-14 explicitly handle the partition of all $m$ cupcakes, correctly noting that arbitrary assignment of leftovers cannot decrease scores. All logical dependencies are verified and complete.
+
+## Decision
+Winner: B
+Reason: Proof B provides a precise, correctly cited application of the Aharoni-Holzman theorem that directly matches the problem's circular structure and hypothesis. It explicitly satisfies the full distribution requirement by handling leftover cupcakes, which Proof A omits. Proof A relies on an uncited "known extension" for the circular case and takes an unnecessary detour through linear intervals, leaving the core circular implication unjustified. While both submissions depend on the same high-level combinatorial result, B's rigorous citation, complete handling of the partition obligation, and absence of unresolved assertions make it mathematically stronger and fully justified as written.

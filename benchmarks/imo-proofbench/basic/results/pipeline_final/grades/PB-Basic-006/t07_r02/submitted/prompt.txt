@@ -1,0 +1,99 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Consider any infinite sequence of integers $c_0, c_1, c_2, \ldots $ such that $c_0 \neq 0$. Prove that for some integer $k \geq 0$, the polynomial $P(x) = \sum_{i = 0}^k c_i x^i$ has fewer than $k$ distinct real roots.
+
+**GROUND-TRUTH SOLUTION**
+
+If there exists an integer $k>0$ such that $c_k = 0$, $P(x)=\sum_{i=0}^k c_i x^i$ has less than $k$ roots. So it suffices to see the cases where $c_k \ne 0$ for all integers $k>0$. Let's prove the following lemma:
+ If a polynomial $\sum_{i=0}^n a_i x^i$ has $n$ different real roots, $(\frac{a_{1}}{a_0})^2 - 2 \frac{a_{2}}{a_0} \geq n\sqrt[n]{\frac{a_n ^2}{a_0^2}}$
+
+ (Proof) The left hand side is the sum of squares of inverses of all roots. The right hand side is $n$ times the $n$th root of the product of square of inverses of roots. By AM-GM, we can see that the inequality holds.
+
+ Going back to the main proof, let's assume that all $P(x)=\sum_{i=0}^k c_i x^i$ has exactly $k$ distinct real roots.
+ By the lemma, $\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}} \geq n\sqrt[n]{c_n^2}$, which shows that $1\leq c_n^2 \leq (\frac{\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}}}{n})^n$. We can easily see that the righthandside tends to $0$ as $n$ goes to infinity. It's a contradiction.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Derived a useful inequality of between $c_n$ based on Vieta's formula (along with the proof by contradiction).
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+We proceed by contradiction. Assume that for all integers $k \geq 1$, the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has $k$ distinct real roots.
+
+First, we establish that $c_k \neq 0$ for all $k \geq 0$. By the premise, $c_0 \neq 0$. For any $k \geq 1$, $P_k(x)$ is a polynomial of degree at most $k$. A polynomial of degree $d$ can have at most $d$ roots. Since $P_k(x)$ is assumed to have $k$ distinct real roots, its degree must be exactly $k$. Thus, the leading coefficient $c_k$ must be non-zero for all $k \geq 1$. Consequently, $c_i \neq 0$ for all $i \geq 0$.
+
+Newton's Inequalities state that if a polynomial $\sum_{i=0}^k a_i x^i$ has only real roots, then its coefficients satisfy
+\[ S_j^2 \geq S_{j-1} S_{j+1} \quad \text{for } 1 \leq j \leq k-1, \]
+where $S_j = a_j / \binom{k}{j}$ are the normalized coefficients. If the roots are distinct, the inequality is strict: $S_j^2 > S_{j-1} S_{j+1}$.
+
+Applying this to $P_k(x)$, we have $S_j = c_j / \binom{k}{j}$. Since $c_j \neq 0$ for all $j$, $S_j$ is never zero. The condition $S_j^2 > S_{j-1} S_{j+1}$ implies that $S_{j-1}$ and $S_{j+1}$ must have the same sign. Since $S_0 = c_0 / \binom{k}{0} = c_0$, all $S_j$ must either all have the same sign as $c_0$ or alternate signs. In either case, we have $|S_j|^2 > |S_{j-1}| |S_{j+1}|$ for $1 \leq j \leq k-1$.
+
+Let $b_j = |S_j|$. The sequence $b_0, b_1, \ldots, b_k$ is strictly log-concave, meaning the ratios $r_j = b_j / b_{j-1}$ are strictly decreasing:
+\[ r_1 > r_2 > \dots > r_k. \]
+We calculate the first and last ratios:
+\[ r_1 = \frac{b_1}{b_0} = \frac{|c_1| / \binom{k}{1}}{|c_0| / \binom{k}{0}} = \frac{|c_1|}{k |c_0|}, \]
+\[ r_k = \frac{b_k}{b_{k-1}} = \frac{|c_k| / \binom{k}{k}}{|c_{k-1}| / \binom{k}{k-1}} = \frac{|c_k|}{ |c_{k-1}| / k} = \frac{k |c_k|}{|c_{k-1}|}. \]
+The condition $r_1 > r_k$ implies:
+\[ \frac{|c_1|}{k |c_0|} > \frac{k |c_k|}{|c_{k-1}|} \implies |c_k| < \frac{|c_1| |c_{k-1}|}{k^2 |c_0|}. \]
+Since $c_k$ is a non-zero integer, $|c_k| \geq 1$. Applying the inequality $|c_k| < \frac{|c_1|}{k^2 |c_0|} |c_{k-1}|$ recursively for $k, k-1, \ldots, 2$:
+\[ |c_k| < \frac{|c_1|}{k^2 |c_0|} \cdot \frac{|c_1|}{(k-1)^2 |c_0|} \cdot \dots \cdot \frac{|c_1|}{2^2 |c_0|} |c_1| = \frac{|c_1|^k}{(k!)^2 |c_0|^{k-1}}. \]
+As $k \to \infty$, the term $\frac{|c_1|^k}{(k!)^2 |c_0|^{k-1}} = |c_0| \left( \frac{|c_1|}{|c_0|} \right)^k \frac{1}{(k!)^2}$ tends to $0$ for any fixed $c_0, c_1$. However, we established that $|c_k| \geq 1$ for all $k$. This is a contradiction.
+
+Therefore, the initial assumption must be false. There must exist some integer $k \geq 1$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

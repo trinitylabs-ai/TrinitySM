@@ -1,0 +1,65 @@
+{
+  "sample_id": "p5_s1_second_revision",
+  "case": "p5_s1",
+  "stage": "severity_corrected_second_revision",
+  "fusion": {
+    "valid": true,
+    "errors": [],
+    "score": 6,
+    "verdict": "INCORRECT",
+    "repair_status": "REQUIRED",
+    "accepted_defect_ids": [
+      "D1"
+    ],
+    "round_count": 1,
+    "branch_statuses": [
+      "IMMEDIATE_OMISSION"
+    ],
+    "severities": [
+      "LOCAL"
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 14747,
+      "total_tokens": 23214,
+      "completion_tokens": 8467,
+      "prompt_tokens_details": null
+    },
+    "latency_seconds": 322.8733038986102,
+    "seed": 97059627,
+    "report_sha256": "84c964aeaf2bf290feca46912c89c5b651ae0d15eff6fd4c519f5768104a4e67"
+  },
+  "repair": {
+    "valid": false,
+    "errors": [
+      "output does not start with the required REPAIR PROPOSAL heading",
+      "FINAL PROPOSAL section count is not one",
+      "PROPOSAL STATUS section count is not one",
+      "repair ROUND defect IDs do not match the frozen handoff",
+      "each repair ROUND must contain one allowed Chief Architect value",
+      "a valid repair handoff must end with UNVERIFIED status",
+      "addressed defect IDs do not match the frozen handoff",
+      "content appears after the addressed defect IDs line"
+    ],
+    "addressed_defect_ids": [],
+    "chief_architects": [],
+    "round_count": 0,
+    "status": null,
+    "ran": true,
+    "finish_reason": "length",
+    "usage": {
+      "prompt_tokens": 2789,
+      "total_tokens": 14789,
+      "completion_tokens": 12000,
+      "prompt_tokens_details": null
+    },
+    "latency_seconds": 433.5630609728396,
+    "seed": 1608434677,
+    "report_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repair_system_sha256": "d4a97bdfd77e529509ab996337d40269dcd0dd766ee0da2b63412f888e34af68",
+    "repair_user_sha256": "bcde4c2668348bee6885959d9ddf039052b682994100fbae92f4910a8b3c1927"
+  },
+  "prior_strict_score": 6,
+  "gold_score": 3,
+  "gold_verdict": "fallacy"
+}

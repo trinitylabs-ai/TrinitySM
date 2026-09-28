@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-017",
+  "problem": "Let $n$ be a positive integer that has a remainder of 6 when divided by 7. Let $d$ be any divisor of $n$.\n\nDefine $c$ such that when the expression $\\left(d+\\frac{n}{d}\\right)^{2}$ is divided by $n$, the remainder is $n-c$.\n\nWhat is the smallest possible value of $c$ among all $d$ and $n$ satisfying the conditions above?\n\n(Note that the remainder when a positive integer $a$ is divided by a positive integer $b$ is the value of $r$ in the expression $a=b q+r, 0 \\leq r \\leq b-1$.)"
+}

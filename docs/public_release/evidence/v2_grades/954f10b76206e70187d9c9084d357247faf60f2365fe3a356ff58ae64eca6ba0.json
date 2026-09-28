@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "a0be0bd92339d0ca010fa4d440ae57a3d537f37ee21773d7403f88ccf2e269b9",
+  "problem_id": "imo2026_p3",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "14f823ce106869e0be4376d2cceee5e2cdd697547d90205f8ede37ec9be5ebb2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "58d61c3286d7c496fbd800b3a020a301579b104e2fdc8c1f16451a9b7ed23296",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the Case 2 assertion that Xiang can always make the two largest pieces approximately 1/2 while making all other pieces negligible. Xiang cannot change the sizes of Liu's other pre-existing gaps in this manner, so this claimed universal upper bound is unsupported and false.",
+    "summary": "The submitted classification is false for every n≥2: the actual value is 2^n/(2^{n+1}-1), which is strictly greater than 1/2. For example, when n=2, Liu's marks at 1/7 and 3/7 guarantee 4/7, directly contradicting the claimed value 1/2. Thus Rule A applies and caps the score at 2. The proof contains useful preliminary observations but lacks the central lower and upper constructions needed for the general result.",
+    "strengths": [
+      "Correctly observes that optimal alternating selection gives Liu the odd-ranked piece lengths.",
+      "Correctly derives the universal elementary lower bound S≥1/2.",
+      "Identifies the correct numerical value 2/3 when n=1, although its proof is incomplete."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer c=1/2 for n≥2 is demonstrably false. For n=2, the marking with initial gaps 1/7, 2/7, and 4/7 guarantees Liu 4/7>1/2."
+      },
+      {
+        "severity": "major",
+        "description": "The proposed upper-bound argument for arbitrary Liu markings is invalid. Splitting Liu's largest gap cannot make Liu's other gaps negligible, and the two resulting halves need not be close to 1/2. The n=2 example asserted in the submission is generally impossible."
+      },
+      {
+        "severity": "substantial",
+        "description": "In the n=1 case, the listed pieces 1/3, |y-1/3|, and 1-y are not the actual gaps when y<1/3. For instance, y=1/10 produces gaps 1/10, 7/30, and 2/3, whose median is not 1/3."
+      },
+      {
+        "severity": "substantial",
+        "description": "The n=1 upper bound is not proved for every possible first mark by Liu. Showing that y=2/3 answers Liu's particular mark x=1/3 only establishes the value of that strategy, not that no other Liu strategy guarantees more."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:49:25.434792+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

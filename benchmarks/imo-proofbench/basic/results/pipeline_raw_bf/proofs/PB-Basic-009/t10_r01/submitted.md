@@ -1,0 +1,25 @@
+To find the minimum possible value of $A$, the number of triples $1 \le i < j < k \le 18$ for which $a_i + a_j + a_k \ge 3m$, we begin by simplifying the condition. Let $x_i = a_i - m$. Since $m$ is the average of the 18 numbers, we have:
+\[ \sum_{i=1}^{18} x_i = \sum_{i=1}^{18} (a_i - m) = \sum_{i=1}^{18} a_i - 18m = 18m - 18m = 0 \]
+The condition $a_i + a_j + a_k \ge 3m$ is equivalent to:
+\[ (x_i + m) + (x_j + m) + (x_k + m) \ge 3m \iff x_i + x_j + x_k \ge 0 \]
+We want to minimize the number of triples $(i, j, k)$ such that $x_i + x_j + x_k \ge 0$ given that the sum of all $x_i$ is zero.
+
+Let $p$ be the number of positive values among $x_1, \dots, x_{18}$. To minimize $A$ for a fixed $p$, we consider the case where all positive values are equal and all negative values are equal. Let $x_1 = \dots = x_p = S/p$ and $x_{p+1} = \dots = x_{18} = -S/(18-p)$ for some $S > 0$. A triple containing $j$ positive values and $3-j$ negative values has a sum:
+\[ \text{Sum} = j \frac{S}{p} - (3-j) \frac{S}{18-p} \]
+The sum is non-negative if and only if:
+\[ \frac{j}{p} \ge \frac{3-j}{18-p} \iff j(18-p) \ge 3p - jp \iff 18j \ge 3p \iff j \ge \frac{p}{6} \]
+The number of such triples for a given $p$ is:
+\[ A(p) = \sum_{j = \lceil p/6 \rceil}^3 \binom{p}{j} \binom{18-p}{3-j} \]
+We evaluate $A(p)$ for various values of $p$:
+- For $p=1$, $j \ge \lceil 1/6 \rceil = 1$. $A(1) = \binom{1}{1} \binom{17}{2} = 1 \cdot \frac{17 \times 16}{2} = 136$.
+- For $p=2$, $j \ge \lceil 2/6 \rceil = 1$. $A(2) = \binom{2}{1} \binom{16}{2} + \binom{2}{2} \binom{16}{1} = 2 \cdot 120 + 16 = 256$.
+- For $p=3$, $j \ge \lceil 3/6 \rceil = 1$. $A(3) = \binom{3}{1} \binom{15}{2} + \binom{3}{2} \binom{15}{1} + \binom{3}{3} \binom{15}{0} = 3 \cdot 105 + 3 \cdot 15 + 1 = 361$.
+- For $p=6$, $j \ge \lceil 6/6 \rceil = 1$. $A(6) = \binom{18}{3} - \binom{12}{3} = 816 - 220 = 596$.
+- For $p=7$, $j \ge \lceil 7/6 \rceil = 2$. $A(7) = \binom{7}{2} \binom{11}{1} + \binom{7}{3} \binom{11}{0} = 21 \cdot 11 + 35 = 266$.
+- For $p=12$, $j \ge \lceil 12/6 \rceil = 2$. $A(12) = \binom{12}{2} \binom{6}{1} + \binom{12}{3} \binom{6}{0} = 66 \cdot 6 + 220 = 616$.
+- For $p=13$, $j \ge \lceil 13/6 \rceil = 3$. $A(13) = \binom{13}{3} \binom{5}{0} = 286$.
+- For $p=17$, $j \ge \lceil 17/6 \rceil = 3$. $A(17) = \binom{17}{3} = 680$.
+
+Comparing these results, the minimum value is achieved at $p=1$. For $x_1 = 17$ and $x_2 = \dots = x_{18} = -1$, the triples with non-negative sums are exactly those containing $x_1$. There are $\binom{17}{2} = 136$ such triples. Any other distribution of $x_i$ for $p=1$ will still result in at least 136 triples (provided $x_{18}$ is large enough to make $x_{18} + x_i + x_j \ge 0$), and increasing $p$ generally increases $A$ unless $p$ is large enough to require $j=3$ positives, but even then $A(13)=286 > 136$.
+
+The minimum possible value of $A$ is 136. \(\square\)

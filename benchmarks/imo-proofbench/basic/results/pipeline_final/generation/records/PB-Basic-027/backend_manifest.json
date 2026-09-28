@@ -1,0 +1,127 @@
+{
+  "schema": "cognitive-well-v0290-p5-iterated-review-fusion-manifest-v1",
+  "harness_version": "0.3.290",
+  "parent_harness_version": "0.3.263",
+  "problem_id": "PB-Basic-027",
+  "problem_number": 27,
+  "source_run": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/01_source",
+  "input_checkpoint": "lazy_checked",
+  "output_dir": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/02_r1_cycles",
+  "candidate_ids": [
+    "t10_r01",
+    "t10_r02",
+    "t07_r01",
+    "t07_r02"
+  ],
+  "r1_cycle_count": 3,
+  "pipeline_policy": "r1_three_cycles_terminal_v1",
+  "stage_order": [
+    "R1-C1",
+    "R1-C2",
+    "R1-C3"
+  ],
+  "terminal_checkpoint": "R1-C3",
+  "runtime": {
+    "gemma_endpoint": "http://127.0.0.1:8030/v1",
+    "qwen_endpoint": "http://127.0.0.1:8027/v1",
+    "workers_per_endpoint": 4,
+    "resolve_workers": 2,
+    "seed_namespace": "v263-v290:problem-only:PB-Basic-027:r1",
+    "model_timeout_sec": 600
+  },
+  "transport_policy": {
+    "reviewer2_http_timeout_floor_sec": 2400,
+    "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+    "qwen_max_output_tokens": 49152,
+    "qwen_retry_on_output_cap": false,
+    "single_model": null,
+    "budget_forcing": true,
+    "reasoning_effort": null
+  },
+  "repair_brief_boundary": {
+    "mandatory_every_r1_cycle": true,
+    "accepting_fusion_audit_mandatory": true,
+    "rejected_acceptance_returns_to_fusion": true,
+    "max_acceptance_reconsiderations": 2,
+    "audit_model": "Qwen/Qwen3.6-27B",
+    "rewrite_model": "google/gemma-4-31B-it",
+    "audit_original_then_every_rewrite": true,
+    "max_rewrite_rounds": 2,
+    "token_caps": [
+      32768,
+      49152,
+      65536
+    ],
+    "qwen_token_policy": "qwen-49152-no-cap-retry-v1",
+    "output_format": "Markdown",
+    "mutation": "replace exactly resolver_brief only",
+    "uncertified_route": "synthesize_with_rejected_brief",
+    "optional_exact_evidence": {
+      "enabled_for_every_repair_brief_audit": false,
+      "operation_policy": "generic allowlist only",
+      "no_tool_or_failure": "contained; audit continues without evidence",
+      "finite_no_witness_is_global_proof": false
+    }
+  },
+  "parallel_lanes": 4,
+  "model_inputs_exclude": [
+    "reference_solution",
+    "v0139_proof",
+    "strict_score",
+    "Codex_feedback",
+    "human_repair_brief_audit"
+  ],
+  "strict_scoring": {
+    "inside_model_pipeline": false,
+    "targets_written_after_each_checkpoint": true,
+    "scores_must_not_control_selection_or_stopping": true
+  },
+  "frozen_inputs": {
+    "problem_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/02_r1_cycles/input/problem.json",
+    "problem_text_sha256": "c5349d2c6f957577b170d4c81f82f09acb10787f247c8265428bdeaedcefa599",
+    "problem_file_sha256": "a9b8ea726afe4540b3db36b9219a2c093285ae376ef1dbe212ab6b9f66450da1",
+    "lanes": [
+      {
+        "candidate_id": "t10_r01",
+        "proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/02_r1_cycles/input/lazy_checked_baseline/t10_r01.md",
+        "proof_sha256": "590c204f6980d791eb48a29ad9d7887e19d2470f0af45384516e30a1e8d6285c",
+        "source_proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/01_source/p27/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p27/candidates/t10_r01/checked_proof.md",
+        "source_proof_sha256": "590c204f6980d791eb48a29ad9d7887e19d2470f0af45384516e30a1e8d6285c"
+      },
+      {
+        "candidate_id": "t10_r02",
+        "proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/02_r1_cycles/input/lazy_checked_baseline/t10_r02.md",
+        "proof_sha256": "e0dd61c463b1a564aef43fc77131127f8abbcefd22eacd9ca4e3252276afbd3a",
+        "source_proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/01_source/p27/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p27/candidates/t10_r02/checked_proof.md",
+        "source_proof_sha256": "e0dd61c463b1a564aef43fc77131127f8abbcefd22eacd9ca4e3252276afbd3a"
+      },
+      {
+        "candidate_id": "t07_r01",
+        "proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/02_r1_cycles/input/raw_draft_baseline/t07_r01.md",
+        "proof_sha256": "c953ab3bd573185911305baffb1edd0b6bcd1a1b40866864eca09d69440f196c",
+        "source_proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/01_source/p27/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p27/candidates/t07_r01/draft_proof.md",
+        "source_proof_sha256": "c953ab3bd573185911305baffb1edd0b6bcd1a1b40866864eca09d69440f196c",
+        "source_failure": {
+          "problem_number": "27",
+          "candidate_id": "t07_r01",
+          "stage": "conditional_in_place_expansion_batch",
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/prompts/lazy_in_place_proof_expansion_v1_20260823.md'",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_97_four_proof_raw_lazy_enhanced_pipeline_20260827/run.py\", line 194, in run_parallel_stage\n    completed.append(future.result())\n                     ^^^^^^^^^^^^^^^\n  File \"/home/user/miniconda3/envs/math/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/miniconda3/envs/math/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/home/user/miniconda3/envs/math/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_97_four_proof_raw_lazy_enhanced_pipeline_20260827/run.py\", line 593, in <lambda>\n    **run_lazy_resolve(\n      ^^^^^^^^^^^^^^^^^\n  File \"/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/run_six_candidate_lazy_test.py\", line 128, in run_lazy_resolve\n    system_prompt=lazy_in_place_expansion_prompt(\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/lazy_expansion.py\", line 52, in lazy_in_place_expansion_prompt\n    assert_frozen_prompt()\n  File \"/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/lazy_expansion.py\", line 40, in assert_frozen_prompt\n    observed = prompt_sha256()\n               ^^^^^^^^^^^^^^^\n  File \"/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/lazy_expansion.py\", line 36, in prompt_sha256\n    return sha256_text(PROMPT_PATH.read_text(encoding=\"utf-8\"))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/miniconda3/envs/math/lib/python3.11/pathlib.py\", line 1058, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/miniconda3/envs/math/lib/python3.11/pathlib.py\", line 1044, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/opt/proof-workshop/exports/v263-v290-mtp4-original-recovery-20260912T141117Z/source/cognitive_well_harness_v0_3_47_lazy_in_place_expansion_20260823/prompts/lazy_in_place_proof_expansion_v1_20260823.md'\n",
+          "state": "failed_closed",
+          "problem_id": "PB-Basic-027",
+          "checkpoint": "raw_draft",
+          "proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/01_source/p27/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p27/candidates/t07_r01/draft_proof.md",
+          "proof_sha256": "c953ab3bd573185911305baffb1edd0b6bcd1a1b40866864eca09d69440f196c"
+        },
+        "source_checkpoint": "raw_draft"
+      },
+      {
+        "candidate_id": "t07_r02",
+        "proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/02_r1_cycles/input/lazy_checked_baseline/t07_r02.md",
+        "proof_sha256": "8b43cc8c51d08a80e6a536e2d2ce2b52160d5f16953e9bdbcd412abd3474a971",
+        "source_proof_path": "/opt/proof-workshop/runs/basic027_030_then009_frozen_20260912T163614758913Z/primary_027_030/problems/PB-Basic-027/01_source/p27/01_raw_lazy_enhanced_resolve/phase_1_raw_lazy/p27/candidates/t07_r02/checked_proof.md",
+        "source_proof_sha256": "8b43cc8c51d08a80e6a536e2d2ce2b52160d5f16953e9bdbcd412abd3474a971"
+      }
+    ]
+  }
+}

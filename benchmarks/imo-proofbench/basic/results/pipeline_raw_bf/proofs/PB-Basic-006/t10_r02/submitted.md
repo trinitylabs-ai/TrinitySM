@@ -1,0 +1,19 @@
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ with $c_0 \neq 0$, there exists some integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Assume that for all $k \geq 1$, the polynomial $P_k(x)$ has at least $k$ distinct real roots. Since the degree of $P_k(x)$ is at most $k$, it must have exactly $k$ distinct real roots. This implies that $P_k(x)$ must have degree exactly $k$ for all $k \geq 1$, so $c_k \neq 0$ for all $k \geq 1$. Given $c_0 \neq 0$, we have $c_k \neq 0$ for all $k \geq 0$.
+
+By Rolle's Theorem, if a polynomial $f(x)$ has $m$ distinct real roots, then its derivative $f'(x)$ has at least $m-1$ distinct real roots. Applying this repeatedly, if $P_k(x)$ has $k$ distinct real roots, then its $(k-2)$-th derivative $P_k^{(k-2)}(x)$ must have at least $k - (k-2) = 2$ distinct real roots. The $(k-2)$-th derivative is:
+\[ P_k^{(k-2)}(x) = \sum_{i=k-2}^k c_i \frac{i!}{(i-k+2)!} x^{i-k+2} = \frac{k!}{2} c_k x^2 + (k-1)! c_{k-1} x + (k-2)! c_{k-2} \]
+This is a quadratic polynomial $Ax^2 + Bx + C$. For it to have two distinct real roots, its discriminant $D = B^2 - 4AC$ must be strictly positive:
+\[ ((k-1)! c_{k-1})^2 - 4 \left(\frac{k!}{2} c_k\right) ((k-2)! c_{k-2}) > 0 \implies c_{k-1}^2 > 2 \frac{k! (k-2)!}{((k-1)!)^2} c_k c_{k-2} = 2 \frac{k}{k-1} c_k c_{k-2} \]
+This inequality $c_{k-1}^2 > 2 \frac{k}{k-1} c_k c_{k-2}$ must hold for all $k \geq 2$. A polynomial whose roots are all real is called a hyperbolic polynomial. A known property of hyperbolic polynomials (Newton's Inequalities) is that their coefficients must satisfy $c_i^2 \geq \frac{i+1}{i} \frac{k-i+1}{k-i} c_{i-1} c_{i+1}$. If $c_i \neq 0$ for all $i$, it is necessary that the coefficients do not change signs in a way that creates "internal" gaps; specifically, for $P_k$ to be hyperbolic for all $k$, the signs must be consistent, implying $c_k c_{k-2} > 0$ for all $k$.
+
+Let $a_k = |c_k|$. Since $c_k c_{k-2} > 0$, the inequality becomes $a_{k-1}^2 > 2 \frac{k}{k-1} a_k a_{k-2}$. Rearranging this gives:
+\[ \frac{a_{k-1}}{a_{k-2}} > 2 \frac{k}{k-1} \frac{a_k}{a_{k-1}} \]
+Let $r_k = \frac{a_k}{a_{k-1}}$. Then $r_{k-1} > 2 \frac{k}{k-1} r_k$, which implies $r_k < \frac{k-1}{2k} r_{k-1}$. Iterating this for $k=2, 3, \ldots, n$:
+\[ r_n < \frac{n-1}{2n} \cdot \frac{n-2}{2(n-1)} \cdots \frac{1}{2(2)} r_1 = \frac{(n-1)!}{2^{n-1} n!} r_1 = \frac{1}{2^{n-1} n} r_1 \]
+The value of $a_n$ is then:
+\[ a_n = a_0 \prod_{k=1}^n r_k < a_0 \cdot r_1 \cdot \prod_{k=2}^n \frac{r_1}{2^{k-1} k} = a_0 \frac{r_1^n}{2^{n(n-1)/2} n!} \]
+As $n \to \infty$, the term $2^{n(n-1)/2} n!$ grows much faster than the exponential $r_1^n$, so $a_n \to 0$. However, $a_n = |c_n|$ is a sequence of positive integers, which cannot converge to 0. This contradiction shows that there must exist some $k \geq 1$ such that $P_k(x)$ has fewer than $k$ distinct real roots.
+
+\(\square\)

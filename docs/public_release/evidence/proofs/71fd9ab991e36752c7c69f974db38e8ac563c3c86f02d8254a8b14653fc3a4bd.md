@@ -1,0 +1,49 @@
+We seek all positive integer solutions $(a, b, c)$ to the equation $2^a + 1 = 7^b + 2^c$.
+
+Case 1: $a \le c$
+If $a = c$, the equation becomes $2^a + 1 = 7^b + 2^a$, which implies $7^b = 1$. Since $b \ge 1$, this is impossible.
+If $a < c$, we have $2^c - 2^a = 1 - 7^b$. Since $b \ge 1$, the right side $1 - 7^b \le -6$, but the left side $2^a(2^{c-a} - 1)$ is positive. Thus, no solutions exist for $a \le c$.
+
+Case 2: $a > c$
+Rearranging the equation gives $2^a - 2^c = 7^b - 1$, which factors as:
+\[ 2^c(2^{a-c} - 1) = 7^b - 1 \]
+Let $k = a - c$. The equation is $2^c(2^k - 1) = 7^b - 1$.
+
+Subcase 2.1: $b$ is odd
+If $b$ is odd, we consider the equation modulo 4. Since $7 \equiv -1 \pmod 4$, $7^b - 1 \equiv (-1)^b - 1 \equiv -2 \equiv 2 \pmod 4$.
+This implies $v_2(7^b - 1) = 1$. Comparing this to $2^c(2^k - 1)$, we must have $c = 1$. The equation becomes $2(2^k - 1) = 7^b - 1$, which simplifies to $2^{k+1} - 1 = 7^b$.
+For $b = 1$, $2^{k+1} - 1 = 7 \implies 2^{k+1} = 8 \implies k = 2$. This gives $c = 1, a = 1 + 2 = 3$.
+Checking: $2^3 + 1 = 9$ and $7^1 + 2^1 = 9$. Thus, $(3, 1, 1)$ is a solution.
+For $b > 1$, $2^{k+1} - 1 = 7^b$ implies $2^{k+1} \equiv 1 \pmod 7$, so $3 \mid (k+1)$. Let $k+1 = 3m$. Then $2^{3m} - 1 = (2^m - 1)(2^{2m} + 2^m + 1) = 7^b$. Both factors must be powers of 7. Let $2^m - 1 = 7^x$ and $2^{2m} + 2^m + 1 = 7^y$. If $x > 0$, then $7 \mid 2^m - 1$, so $2^{2m} + 2^m + 1 \equiv 1 + 1 + 1 = 3 \pmod 7$, which is impossible for a power of 7. Thus $x = 0$, which means $2^m - 1 = 1 \implies m = 1$, returning us to the $b=1$ case.
+
+Subcase 2.2: $b$ is even
+Let $b = 2n$. By the Lifting The Exponent Lemma, $v_2(7^{2n} - 1) = v_2(7^2 - 1) + v_2(n) = v_2(48) + v_2(n) = 4 + v_2(n)$.
+Thus, $c = 4 + v_2(n)$. The equation is $2^c(2^k - 1) = 7^{2n} - 1$.
+
+If $n$ is odd, then $c = 4$. The equation is $16(2^k - 1) = 7^{2n} - 1$, which simplifies to $2^{k+4} - 7^{2n} = 15$.
+Modulo 3, $2^{k+4} - 7^{2n} \equiv (-1)^{k+4} - 1 \equiv 0 \pmod 3$, so $k+4$ is even. Let $k+4 = 2u$.
+Then $(2^u - 7^n)(2^u + 7^n) = 15$. The factor pairs of 15 are $(1, 15)$ and $(3, 5)$.
+1) $2^u + 7^n = 15$ and $2^u - 7^n = 1 \implies 2 \cdot 2^u = 16 \implies u = 3$ and $2 \cdot 7^n = 14 \implies n = 1$.
+This gives $k+4 = 6 \implies k = 2$ and $n = 1$. Thus $b = 2, c = 4, a = 6$.
+Checking: $2^6 + 1 = 65$ and $7^2 + 2^4 = 49 + 16 = 65$. Thus, $(6, 2, 4)$ is a solution.
+2) $2^u + 7^n = 5$ and $2^u - 7^n = 3 \implies 2 \cdot 2^u = 8 \implies u = 2$ and $2 \cdot 7^n = 2 \implies n = 0$, which is not a positive integer.
+
+If $n$ is even, we use a chain of divisibility constraints.
+First, consider $v_5(2^k - 1) = v_5(7^{2n} - 1)$. Since $n$ is even, let $n = 2m$.
+$v_5(7^{4m} - 1) = v_5(7^4 - 1) + v_5(m) = v_5(2400) + v_5(m) = 2 + v_5(m)$.
+Also, $v_5(2^k - 1) = v_5(2^4 - 1) + v_5(k/4) = v_5(15) + v_5(k/4) = 1 + v_5(k/4)$.
+Thus $1 + v_5(k/4) = 2 + v_5(m) \ge 2$, so $v_5(k/4) \ge 1$, which implies $20 \mid k$.
+Since $20 \mid k$, $2^{20} - 1$ divides $2^k - 1$. Note that $2^{20} - 1 = (2^{10}-1)(2^{10}+1) = 1023 \cdot 1025 = (3 \cdot 11 \cdot 31) \cdot (25 \cdot 41)$.
+Thus $31 \mid 2^k - 1$, which implies $31 \mid 7^{2n} - 1$. The order of $7 \pmod{31}$ is 15, so $15 \mid 2n$, which implies $15 \mid n$.
+Similarly, $41 \mid 2^k - 1$, which implies $41 \mid 7^{2n} - 1$. The order of $7 \pmod{41}$ is 40, so $40 \mid 2n$, which implies $20 \mid n$.
+Now consider $v_3(2^k - 1) = v_3(7^{2n} - 1)$.
+$v_3(7^{2n} - 1) = v_3(49^n - 1) = v_3(49 - 1) + v_3(n) = v_3(48) + v_3(n) = 1 + v_3(n)$.
+Since $20 \mid k$, $k$ is even, so $v_3(2^k - 1) = v_3(2^2 - 1) + v_3(k/2) = 1 + v_3(k/2)$.
+Thus $v_3(n) = v_3(k/2) = v_3(k)$. Since $15 \mid n$, $v_3(n) \ge 1$, so $3 \mid k$.
+Since $20 \mid k$ and $3 \mid k$, we have $60 \mid k$.
+This implies $2^{60} - 1$ divides $2^k - 1$. Since $2^3 - 1 = 7$, we have $7 \mid 2^{60} - 1$, so $7 \mid 2^k - 1$.
+Substituting this into $2^c(2^k - 1) = 7^{2n} - 1$, we get $7 \mid 7^{2n} - 1$, which implies $7 \mid -1$, a contradiction.
+
+The only solutions are $(3, 1, 1)$ and $(6, 2, 4)$.
+
+Final Answer: $(a, b, c) \in \{(3, 1, 1), (6, 2, 4)\}$

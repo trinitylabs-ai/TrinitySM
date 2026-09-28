@@ -1,0 +1,203 @@
+{
+  "schema": "proof-workshop-final-refinement-grading-v1",
+  "created_at": "2026-09-19T01:23:27.410468+00:00",
+  "run_id": "refinement3_b5_completion_20260919T012327Z",
+  "benchmark": "imo-proofbench/advanced",
+  "checkpoint": "Refinement 3",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "repeats": 1,
+  "source_coverage": "benchmarks/launches/remaining_r1c3_20260917T163503Z/coverage_current.json",
+  "source_coverage_sha256": "a38b81631243a1b115094bcbc3c88b70e4d4d0a2528b2b47eb5b825e67bcfde7",
+  "proofs": [
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate": "t07_r01",
+      "checkpoint": "Refinement 3",
+      "proof": "proofs/PB-Advanced-017/t07_r01.md",
+      "proof_sha256": "dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/advanced017_c3_t07r01_20260915T183620Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/PB-Advanced-017.t07_r01/resolver/temperature_0_4/gpu0/p17/t07_r01/resolved_proof.md",
+      "source_proof_file_sha256": "dc76b64e63746a508d7598e424178c84c9bc930e874d37aa552cf10f177db43e",
+      "resolver_outcome": "RESOLVED_PROOF",
+      "replaces": {
+        "checkpoint": "R1-C2",
+        "score": 0,
+        "proof": "evidence/proofs/55e888b781a30a1dab8eefccf8e6213f0d9cbd05359ba408dbf7147689f1e072.md",
+        "proof_sha256": "55e888b781a30a1dab8eefccf8e6213f0d9cbd05359ba408dbf7147689f1e072",
+        "grade": "evidence/grades/62e25fce1103e3dbcc0ee12e650212d811fbe8de0db8d4bf1e4dbf4ae3e8137f.json"
+      },
+      "selection": {
+        "checkpoint": "R1-C3",
+        "score": 6,
+        "proof": "evidence/proofs/dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137.md",
+        "proof_sha256": "dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137",
+        "grade": "evidence/grades/2cd72cc7d2893d5de794deb0dd4ee6691b10d547cbf77f1b9387fa2e4699fca0.json"
+      },
+      "grade": "grades/PB-Advanced-017/t07_r01.json",
+      "grade_sha256": "2cd72cc7d2893d5de794deb0dd4ee6691b10d547cbf77f1b9387fa2e4699fca0"
+    },
+    {
+      "problem_id": "PB-Advanced-017",
+      "candidate": "t10_r01",
+      "checkpoint": "Refinement 3",
+      "proof": "proofs/PB-Advanced-017/t10_r01.md",
+      "proof_sha256": "51fe02e23c9b474ea6662f7dedd0f2745874dc9146a1f9fa504da0c886aca20a",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/advanced017_c3_t10r01_20260915T183620Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/PB-Advanced-017.t10_r01/resolver/temperature_0_4/gpu0/p17/t10_r01/resolved_proof.md",
+      "source_proof_file_sha256": "a2e24e4951a12ffe0883f92b6451e276ef90fd1e147a094c185c8e54d39ee781",
+      "resolver_outcome": "RESOLVED_PROOF",
+      "replaces": {
+        "checkpoint": "R1-C2",
+        "score": 7,
+        "proof": "evidence/proofs/0d00a21b32ebc98b11305796a2aea2f556b4379df8f0d3400b5f045a1479b736.md",
+        "proof_sha256": "0d00a21b32ebc98b11305796a2aea2f556b4379df8f0d3400b5f045a1479b736",
+        "grade": "evidence/grades/45f0533832a6c92be7d0210938433835306764b8a36ddbad95954534d067ab0f.json"
+      },
+      "selection": {
+        "checkpoint": "R1-C3",
+        "score": 7,
+        "proof": "evidence/proofs/51fe02e23c9b474ea6662f7dedd0f2745874dc9146a1f9fa504da0c886aca20a.md",
+        "proof_sha256": "51fe02e23c9b474ea6662f7dedd0f2745874dc9146a1f9fa504da0c886aca20a",
+        "grade": "evidence/grades/0c195cf56f4677377a09268c7716069a3cd07e1213b78faeba357034f3cc95c3.json"
+      },
+      "grade": "grades/PB-Advanced-017/t10_r01.json",
+      "grade_sha256": "0c195cf56f4677377a09268c7716069a3cd07e1213b78faeba357034f3cc95c3"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t07_r01",
+      "checkpoint": "Refinement 3",
+      "proof": "proofs/PB-Advanced-018/t07_r01.md",
+      "proof_sha256": "26623a7a4d3065f132bdd8ca551250cb737a25f27895feec3a3834cbd0900987",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/advanced018_c3_t07r01_20260915T191006Z/generation/run/lanes/t07_r01/03_r1_cycle_3/cases/PB-Advanced-018.t07_r01/resolver/temperature_0_4/gpu0/p18/t07_r01/resolved_proof.md",
+      "source_proof_file_sha256": "d246ff1eec39ba9668fdab500995cc5e172056ebfffda013606ed9317367d92e",
+      "resolver_outcome": "RESOLVED_PROOF",
+      "replaces": {
+        "checkpoint": "R1-C2",
+        "score": 0,
+        "proof": "evidence/proofs/7ebf25d14c829f8b22a3e9b947cd95d95fb73af9a71f21f0262170bfe15b79f8.md",
+        "proof_sha256": "7ebf25d14c829f8b22a3e9b947cd95d95fb73af9a71f21f0262170bfe15b79f8",
+        "grade": "evidence/grades/7587e26895d1752c0687d739f20db357e1836408e7caf150739ca26bc13cd0fb.json"
+      },
+      "selection": {
+        "checkpoint": "R1-C3",
+        "score": 0,
+        "proof": "evidence/proofs/26623a7a4d3065f132bdd8ca551250cb737a25f27895feec3a3834cbd0900987.md",
+        "proof_sha256": "26623a7a4d3065f132bdd8ca551250cb737a25f27895feec3a3834cbd0900987",
+        "grade": "evidence/grades/a0d39ce6d2b52ea5f454d1436793be87e04c733693057d8c6aa4bf8fca16aa8d.json"
+      },
+      "grade": "grades/PB-Advanced-018/t07_r01.json",
+      "grade_sha256": "a0d39ce6d2b52ea5f454d1436793be87e04c733693057d8c6aa4bf8fca16aa8d"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t07_r02",
+      "checkpoint": "Refinement 3",
+      "proof": "proofs/PB-Advanced-018/t07_r02.md",
+      "proof_sha256": "afe09e40df76f541708914dcbeb3c8a7410d6a5440a70392d459ad662418de2b",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/advanced018_c3_t07r02_20260915T191006Z/generation/run/lanes/t07_r02/03_r1_cycle_3/cases/PB-Advanced-018.t07_r02/resolver/temperature_0_4/gpu0/p18/t07_r02/resolved_proof.md",
+      "source_proof_file_sha256": "6a0b8cfa0010485d243acfccf961fc3a6acaf15734a926998cb2d40766a9ab03",
+      "resolver_outcome": "RESOLVED_PROOF",
+      "replaces": {
+        "checkpoint": "R1-C2",
+        "score": 0,
+        "proof": "evidence/proofs/0c05c90598ada6c89695c6a7e13e85f835d2fbb46804fe486073803cd69e4aa7.md",
+        "proof_sha256": "0c05c90598ada6c89695c6a7e13e85f835d2fbb46804fe486073803cd69e4aa7",
+        "grade": "evidence/grades/e27e891d70cb0ea385271723d46f84c38e9573444fc338fef39f0d4fbc37757f.json"
+      },
+      "selection": {
+        "checkpoint": "R1-C3",
+        "score": 0,
+        "proof": "evidence/proofs/afe09e40df76f541708914dcbeb3c8a7410d6a5440a70392d459ad662418de2b.md",
+        "proof_sha256": "afe09e40df76f541708914dcbeb3c8a7410d6a5440a70392d459ad662418de2b",
+        "grade": "evidence/grades/6e34603e79b266879ff5f1391fe6a71ee59a89101cc72d18c58c765c11b42aa1.json"
+      },
+      "grade": "grades/PB-Advanced-018/t07_r02.json",
+      "grade_sha256": "6e34603e79b266879ff5f1391fe6a71ee59a89101cc72d18c58c765c11b42aa1"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t10_r01",
+      "checkpoint": "Refinement 3",
+      "proof": "proofs/PB-Advanced-018/t10_r01.md",
+      "proof_sha256": "d0011383f15194dc6914edbe4c75f2dc25235a9ffd5da06f40e95eaf54a133c6",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/advanced018_c3_t10r01_20260915T183620Z/generation/run/lanes/t10_r01/03_r1_cycle_3/cases/PB-Advanced-018.t10_r01/resolver/temperature_0_4/gpu0/p18/t10_r01/resolved_proof.md",
+      "source_proof_file_sha256": "850f2139935b021378956262fdbabc43a45468c2caacf84f74d998f54461aabd",
+      "resolver_outcome": "RESOLVED_PROOF",
+      "replaces": {
+        "checkpoint": "R1-C2",
+        "score": 1,
+        "proof": "evidence/proofs/bd1128309eb29eb6861af32d83e5fa5b76c06916490a24c5dcdfa5e854c88b38.md",
+        "proof_sha256": "bd1128309eb29eb6861af32d83e5fa5b76c06916490a24c5dcdfa5e854c88b38",
+        "grade": "evidence/grades/15bb6e35a3f8a9cb2aa1d9baf91c8bc26bd40dd219123029fdacc10edae83b78.json"
+      },
+      "selection": {
+        "checkpoint": "R1-C3",
+        "score": 1,
+        "proof": "evidence/proofs/d0011383f15194dc6914edbe4c75f2dc25235a9ffd5da06f40e95eaf54a133c6.md",
+        "proof_sha256": "d0011383f15194dc6914edbe4c75f2dc25235a9ffd5da06f40e95eaf54a133c6",
+        "grade": "evidence/grades/cb519dd31a88d3034668b1d2d2e758c1adf5b985740af5049b867312fd339111.json"
+      },
+      "grade": "grades/PB-Advanced-018/t10_r01.json",
+      "grade_sha256": "cb519dd31a88d3034668b1d2d2e758c1adf5b985740af5049b867312fd339111"
+    },
+    {
+      "problem_id": "PB-Advanced-018",
+      "candidate": "t10_r02",
+      "checkpoint": "Refinement 3",
+      "proof": "proofs/PB-Advanced-018/t10_r02.md",
+      "proof_sha256": "f2877495cf0241f57dcaa993162125dc2555be7540671a600a391889d2884f11",
+      "source_proof": "benchmarks/imo-proofbench/advanced/results/advanced018_c3_t10r02_20260915T191006Z/generation/run/lanes/t10_r02/03_r1_cycle_3/cases/PB-Advanced-018.t10_r02/resolver/temperature_0_4/gpu0/p18/t10_r02/resolved_proof.md",
+      "source_proof_file_sha256": "d9399622c8f4661789658bf03a08659099c21389653e9d23e8ae6a8051782910",
+      "resolver_outcome": "RESOLVED_PROOF",
+      "replaces": {
+        "checkpoint": "R1-C2",
+        "score": 1,
+        "proof": "evidence/proofs/4ae29413f3682c02d900e823a80e19c19d3b41a1c5f6344783e179755e6867fc.md",
+        "proof_sha256": "4ae29413f3682c02d900e823a80e19c19d3b41a1c5f6344783e179755e6867fc",
+        "grade": "evidence/grades/0bf9cd86a8b47821cab3c97de496994ca82f2a4a5cdf3184781583a00d3f8f16.json"
+      },
+      "selection": {
+        "checkpoint": "R1-C3",
+        "score": 1,
+        "proof": "evidence/proofs/f2877495cf0241f57dcaa993162125dc2555be7540671a600a391889d2884f11.md",
+        "proof_sha256": "f2877495cf0241f57dcaa993162125dc2555be7540671a600a391889d2884f11",
+        "grade": "evidence/grades/d9948fd31d4a8bd898a913762b1ad23c4d90ed812e5013d3725bfed12d23b5ee.json"
+      },
+      "grade": "grades/PB-Advanced-018/t10_r02.json",
+      "grade_sha256": "d9948fd31d4a8bd898a913762b1ad23c4d90ed812e5013d3725bfed12d23b5ee"
+    }
+  ],
+  "state": "completed",
+  "completed_at": "2026-09-19T01:25:43.100378+00:00",
+  "completed_count": 6,
+  "failed_count": 0,
+  "artifact_sha256": {
+    "task_manifest.json": "1037ef1e68c64dd6dbc22def4664928d70ce2597d6d6d9e396f3133ada9b3c9b",
+    "reports/PB-Advanced-017/t07_r01.md": "906c8903200714edcf26fb43a9209705f5a684dd7e8e05d2ea82613e6833ad6d",
+    "grading/isolation/PB-Advanced-017/t07_r01.json": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa",
+    "proofs/PB-Advanced-017/t07_r01.md": "dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137",
+    "grades/PB-Advanced-017/t07_r01.json": "2cd72cc7d2893d5de794deb0dd4ee6691b10d547cbf77f1b9387fa2e4699fca0",
+    "reports/PB-Advanced-017/t10_r01.md": "48fc5ade886527e911a4e0b9f1bb596eca75e71512743dee2b0b6ed805526d89",
+    "grading/isolation/PB-Advanced-017/t10_r01.json": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa",
+    "proofs/PB-Advanced-017/t10_r01.md": "51fe02e23c9b474ea6662f7dedd0f2745874dc9146a1f9fa504da0c886aca20a",
+    "grades/PB-Advanced-017/t10_r01.json": "0c195cf56f4677377a09268c7716069a3cd07e1213b78faeba357034f3cc95c3",
+    "reports/PB-Advanced-018/t07_r01.md": "9c9e8908958588b6055dc45e9fc18a7127caedffb294eec14ba9ef969b123ece",
+    "grading/isolation/PB-Advanced-018/t07_r01.json": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa",
+    "proofs/PB-Advanced-018/t07_r01.md": "26623a7a4d3065f132bdd8ca551250cb737a25f27895feec3a3834cbd0900987",
+    "grades/PB-Advanced-018/t07_r01.json": "a0d39ce6d2b52ea5f454d1436793be87e04c733693057d8c6aa4bf8fca16aa8d",
+    "reports/PB-Advanced-018/t07_r02.md": "4c7861749fb4d42b7950c511693617a64bc1dd38c9754d701778aa9acbdeb5ee",
+    "grading/isolation/PB-Advanced-018/t07_r02.json": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa",
+    "proofs/PB-Advanced-018/t07_r02.md": "afe09e40df76f541708914dcbeb3c8a7410d6a5440a70392d459ad662418de2b",
+    "grades/PB-Advanced-018/t07_r02.json": "6e34603e79b266879ff5f1391fe6a71ee59a89101cc72d18c58c765c11b42aa1",
+    "reports/PB-Advanced-018/t10_r01.md": "a3d54eef38d23caa66306ec62e8d1ce68783b84e2fcdec984d73fcf40b46352c",
+    "grading/isolation/PB-Advanced-018/t10_r01.json": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa",
+    "proofs/PB-Advanced-018/t10_r01.md": "d0011383f15194dc6914edbe4c75f2dc25235a9ffd5da06f40e95eaf54a133c6",
+    "grades/PB-Advanced-018/t10_r01.json": "cb519dd31a88d3034668b1d2d2e758c1adf5b985740af5049b867312fd339111",
+    "reports/PB-Advanced-018/t10_r02.md": "1616cb72f7990a5c452572a9b64b5a493abd2fe316099bd645b8f2a1ed9f1eae",
+    "grading/isolation/PB-Advanced-018/t10_r02.json": "94feee2ddd71fb7ba82c9bb7bad4375ec72660853a2bb94b11181ac4cd3c78fa",
+    "proofs/PB-Advanced-018/t10_r02.md": "f2877495cf0241f57dcaa993162125dc2555be7540671a600a391889d2884f11",
+    "grades/PB-Advanced-018/t10_r02.json": "d9948fd31d4a8bd898a913762b1ad23c4d90ed812e5013d3725bfed12d23b5ee",
+    "grading/config.json": "1c6474065663767d57c758b8b7af9655563ac9fbf4758abf878a345dc1fcae0b"
+  }
+}

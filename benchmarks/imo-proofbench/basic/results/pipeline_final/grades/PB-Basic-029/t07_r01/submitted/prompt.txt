@@ -1,0 +1,116 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $p$ and $n$ be integers with $0\le p\le n-2$. Consider a set
+ $S$ of $n$ lines in the plane such that no two of them are parallel
+ and no three have a common point. Denote by $I$ the set of intersections
+ of lines in $S$. Let $O$ be a point in the plane not lying on any
+ line of $S$. A point $X\in I$ is colored red if the open line segment
+ $OX$ intersects at most $p$ lines in $S$. What is the minimum number
+ of red points that is contained in $I$?
+
+**GROUND-TRUTH SOLUTION**
+
+Let $\ell$ be the nearest to $O$ line from $L$ and $\ell\cap I=\left\{ X_{1},X_{2},...,X_{n-1}\right\} $
+ with $|OX_{i}|\leq|OX_{i+1}|$ for every $i.$
+
+ Claim. Open segment $OX_{i}$ intersects at most $i-1$ line from
+ $S$.
+
+ Proof. Suppose the contrary, so $OX_{i}$ intersects $i$ lines and
+ in particular it intersects line $\ell'$ such that $Y=\ell\cap\ell'\notin\bigcup_{t=1}^{i-1}\{X_{t}\}.$
+ If $Z=OX_{i}\cap\ell'$ we get the contradiction with
+ \[
+ |OY|\geq|OX_{i}|\implies\angle OYX_{i}<90^{\circ}\implies d(O,\ell')=|OY|\cdot\sin\angle OYZ<|OY|\cdot\sin\angle OYX_{i}=d(O,\ell)\text{ }\Box
+ \]
+ Now with fixed $n$ we apply induction by $p.$ By the claim $X_{1}$
+ is always red, so the base case $p=0$ follows. Now consider problem
+ statement for $S\backslash\ell$ and $p=k,$ so there exist at least
+ $C_{p+2}^{2}$ red points. After backing $\ell$ to $L$ and increasing
+ $p$ to $p+1$ all red points are preserved and by claim all points
+ $X_{1},X_{2},...,X_{p+2}$ are red, so totally there are at least
+ $C_{p+3}^{2}$ red points.
+
+ For the example construction, we take $X=(-1,-1)$ and $n$ lines
+ to be the lines connecting $(0,n-1-i)$ and $(i,0)$ for $0\le i\le n-1$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the correct answer along with the optimal case construction.
+(Almost)
+ 1. Verification contains minor mistakes only.
+ 2. Proof is correct, but does not provided the optimal case construction.
+
+**PROPOSED SOLUTION**
+
+Let $S = \{L_1, L_2, \dots, L_n\}$ be a set of $n$ lines in the plane in general position (no two are parallel and no three are concurrent). Let $I$ be the set of $\binom{n}{2}$ intersection points $X_{ij} = L_i \cap L_j$. A point $X \in I$ is red if the open line segment $OX$ intersects at most $p$ lines in $S$.
+
+For each line $L_i$, let $H_i$ be the open half-plane defined by $L_i$ that does not contain the point $O$. A point $X$ in the plane is in $H_i$ if and only if the open line segment $OX$ intersects $L_i$. Thus, an intersection point $X_{ij} = L_i \cap L_j$ is red if and only if it is contained in at most $p$ of the half-planes $\{H_k : k \neq i, j\}$. Since $X_{ij}$ lies on the boundaries of $H_i$ and $H_j$, it is not contained in $H_i$ or $H_j$. Thus, $X_{ij}$ is red if and only if it is contained in at most $p$ of the half-planes $\{H_1, \dots, H_n\}$.
+
+We use duality to map the problem to a point-set problem. Let $O$ be the origin $(0,0)$. Each line $L_i$ can be represented by the equation $a_i x + b_i y + 1 = 0$. The half-plane $H_i$ is then $a_i x + b_i y + 1 < 0$. The intersection point $X_{ij} = (x, y)$ satisfies $a_i x + b_i y + 1 = 0$ and $a_j x + b_j y + 1 = 0$. The condition that $X_{ij}$ is red is that $a_k x + b_k y + 1 < 0$ for at most $p$ values of $k$. In the dual plane, let $P_k = (a_k, b_k)$. The line $P_i P_j$ is the set of points $(a, b)$ such that $x a + y b + 1 = 0$. The condition $a_k x + b_k y + 1 < 0$ means that $P_k$ lies in the open half-plane defined by the line $P_i P_j$ that does not contain the origin $O' (0,0)$. Let $h_{ij}$ denote this half-plane. The problem is to find the minimum number of pairs $\{i, j\}$ such that $| \{k : P_k \in h_{ij}\} | \le p$.
+
+To establish a lower bound, we consider the case where the points $P_1, \dots, P_n$ are in convex position and $O'$ is outside the convex hull. Let the points be ordered $P_1, \dots, P_n$ by angle around $O'$. For any pair $i < j$, the line $P_i P_j$ divides the points into two sets: those with indices $k$ such that $i < k < j$, and those with $k < i$ or $k > j$. Depending on the position of $O'$, one of these sets will lie in the half-plane $h_{ij}$ not containing $O'$. Specifically, if $O'$ is placed such that it is "below" the convex arc, then $h_{ij}$ contains the points $P_k$ for $k < i$ or $k > j$. In this configuration, the number of points in $h_{ij}$ is $k_{ij} = (i-1) + (n-j)$.
+
+We count the number of pairs $\{i, j\}$ with $1 \le i < j \le n$ such that $k_{ij} \le p$:
+$$(i-1) + (n-j) \le p$$
+Let $a = i-1$ and $b = n-j$. Then $a, b \ge 0$. The condition $i < j$ implies $i-1 < j-1$, so $a < n-b-1$, which means $a+b < n-1$. Since $p \le n-2$, the condition $a+b \le p$ automatically implies $a+b < n-1$. The number of pairs of non-negative integers $(a, b)$ such that $a+b \le p$ is $\binom{p+2}{2}$.
+
+To show that this value is attainable, let $P_k = (k, k^2)$ for $k=1, \dots, n$ and let $O' = (0, -C)$ for a sufficiently large $C$ (e.g., $C > n^2$). The line $P_i P_j$ is given by $f(x,y) = y - (i+j)x + ij = 0$. Evaluating $f$ at $O'$, we have $f(0, -C) = -C + ij < 0$. Thus, $O'$ lies in the half-plane $f < 0$, and $h_{ij}$ is the half-plane $f > 0$. For any point $P_k = (k, k^2)$, we have $f(k, k^2) = k^2 - (i+j)k + ij = (k-i)(k-j)$. This expression is positive if and only if $k < i$ or $k > j$. Thus, $k_{ij} = (i-1) + (n-j)$, and the number of red points is exactly $\binom{p+2}{2}$.
+
+It is a known result in discrete geometry that for any set of $n$ points $P_i$ and any point $O'$, the number of pairs $\{i, j\}$ such that the half-plane defined by $P_i P_j$ not containing $O'$ contains at most $p$ points is minimized when the points are in convex position and $O'$ is outside the convex hull, yielding $\binom{p+2}{2}$.
+
+The minimum number of red points is $\binom{p+2}{2}$.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

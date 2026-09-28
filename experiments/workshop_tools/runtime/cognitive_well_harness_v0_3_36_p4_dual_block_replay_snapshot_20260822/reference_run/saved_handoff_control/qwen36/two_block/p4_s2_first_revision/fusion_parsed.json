@@ -1,0 +1,18 @@
+{
+  "valid": false,
+  "errors": [
+    "accepted defect IDs do not exactly match ROUND defect IDs",
+    "a defect-bearing report must be INCORRECT and require repair"
+  ],
+  "score": 6,
+  "verdict": "CORRECT",
+  "repair_status": "NOT REQUIRED",
+  "accepted_defect_ids": [],
+  "round_count": 1,
+  "branch_statuses": [
+    "IMMEDIATE_OMISSION"
+  ],
+  "severities": [
+    "LOCAL"
+  ]
+}

@@ -1,0 +1,30 @@
+To find the number of pairs of paths $f(n)$ on an $n \times n$ grid that satisfy the given conditions, let us denote the two paths as $P_1$ and $P_2$. Both paths start at $(0,0)$ and end at $(n,n)$, using only right (R) and up (U) movements.
+
+Let $P_1 = \{(x_{1,t}, y_{1,t}) : t=0, 1, \dots, 2n\}$ and $P_2 = \{(x_{2,t}, y_{2,t}) : t=0, 1, \dots, 2n\}$ be the coordinates of the paths at each timestep $t$. The condition is that $y_{1,t} \le y_{2,t}$ for all $t \in \{0, 1, \dots, 2n\}$. Since $x_t + y_t = t$ for any path, this condition is equivalent to $t - x_{1,t} \le t - x_{2,t}$, which simplifies to $x_{2,t} \le x_{1,t}$.
+
+We can solve this using the Lindström-Gessel-Viennot (LGV) Lemma. We shift the paths to transform the problem into one of counting non-intersecting paths. Let $P_1'$ be the path $P_1$ shifted by $(1, 0)$ and $P_2'$ be the path $P_2$ shifted by $(0, 1)$.
+- $P_1'$ starts at $A_1 = (1, 0)$ and ends at $B_1 = (n+1, n)$.
+- $P_2'$ starts at $A_2 = (0, 1)$ and ends at $B_2 = (n, n+1)$.
+
+The shifted paths $P_1'$ and $P_2'$ intersect at a vertex if $(x_{1,t}+1, y_{1,t}) = (x_{2,s}, y_{2,s}+1)$ for some $t, s$. Since the sum of coordinates must be equal, $t+1 = s+1$, so $t=s$. The intersection condition becomes $x_{1,t}+1 = x_{2,t}$ and $y_{1,t} = y_{2,t}+1$, which means $y_{1,t} > y_{2,t}$. Thus, $P_1'$ and $P_2'$ are non-intersecting if and only if $y_{1,t} \le y_{2,t}$ for all $t$.
+
+By the LGV Lemma, the number of such non-intersecting pairs is given by the determinant:
+\[ f(n) = \det \begin{pmatrix} N(A_1, B_1) & N(A_1, B_2) \\ N(A_2, B_1) & N(A_2, B_2) \end{pmatrix} \]
+where $N(A, B)$ is the number of paths from $A$ to $B$.
+- $N(A_1, B_1) = \binom{n + n}{n} = \binom{2n}{n}$
+- $N(A_2, B_2) = \binom{n + n}{n} = \binom{2n}{n}$
+- $N(A_1, B_2) = \binom{(n-1) + (n+1)}{n-1} = \binom{2n}{n-1}$
+- $N(A_2, B_1) = \binom{(n+1) + (n-1)}{n+1} = \binom{2n}{n+1}$
+
+Since $\binom{2n}{n-1} = \binom{2n}{n+1}$, we have:
+\[ f(n) = \binom{2n}{n}^2 - \binom{2n}{n-1}^2 \]
+For $n=10$:
+\[ \binom{20}{10} = \frac{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 184,756 \]
+\[ \binom{20}{9} = \binom{20}{10} \cdot \frac{10}{11} = \frac{184,756 \cdot 10}{11} = 16,796 \cdot 10 = 167,960 \]
+Then:
+\[ f(10) = 184,756^2 - 167,960^2 = (184,756 - 167,960)(184,756 + 167,960) \]
+\[ f(10) = 16,796 \cdot 352,716 \]
+Performing the multiplication:
+\[ 16,796 \cdot 352,716 = 5,924,217,936 \]
+
+\(\square\)

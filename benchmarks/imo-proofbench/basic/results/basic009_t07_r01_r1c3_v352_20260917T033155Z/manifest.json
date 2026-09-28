@@ -1,0 +1,20 @@
+{
+  "schema": "tool-harness-result-artifact-manifest-v1",
+  "run_id": "basic009_t07_r01_r1c3_v352_20260917T033155Z",
+  "harness_revision": "0.3.352+exact-total-inputs.1",
+  "proofs": [
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "path": "proofs/PB-Basic-009/t07_r01/R1-C3.md",
+      "source": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v352_20260917T033155Z/generation/run/input/source_proof.md",
+      "sha256": "9fe853ab7e59d304818d60d76deac4e2a603f70a843db0bfd6e1bd49070199a8",
+      "canonical_text_sha256": "c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8"
+    }
+  ],
+  "reports": [
+    "reports/run_summary.json",
+    "reports/run_summary.md"
+  ]
+}

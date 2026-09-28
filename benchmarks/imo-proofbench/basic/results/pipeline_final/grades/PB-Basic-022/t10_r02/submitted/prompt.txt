@@ -1,0 +1,118 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $S=\{0,1,2^{2024},3^{2024},\ldots\}$ be the set of all perfect
+ 2024-th powers. Find all polynomials $P$ with integer coefficients
+ such that $P(x)=s$ has an integer solution $x$ for every $s\in S$.
+
+**GROUND-TRUTH SOLUTION**
+
+Since $0$ is in $S$, there exists an integer $c$ such that $P(c)=0$.
+ We can write $P(x)=(x-c)^{n}Q(x)$ for some positive integer $n$
+ and integer coefficient polynomial $Q$ such that $Q(c)\ne0$.
+
+ \noindent Pick a prime number $q$ bigger than $|Q(c)|,|Q(c+1)|,|Q(c-1)|$.
+ For every positive integer $m$, there exists an integer $a$ such
+ that $P(a)=q^{2024m}$. Then, $(a-c)$ is a power of $q$.
+
+ \noindent If it is 1, it is a contradiction to the fact that $|Q(c+1)|,|Q(c-1)|<q$.
+ Therefore, $q$ divides $a-c$ and so $Q(a)-Q(c)$ is a multiple of
+ $q$, which shows that $Q(a)$ is not a multiple of $q$. Therefore,
+ $|Q(a)|=1$ and $|(a-c)^{n}|=q^{2024m}$. Therefore, $|Q(x)|=1$ for
+ infinitely many integers $x$ and so $Q(x)=1$ or $Q(x)=-1$. Then
+ $|P(x)|$ is always a $n$th power.
+
+ \noindent In this case we can easily see that $n$ needs to divide
+ $2024$. Moreover if $n$ is even and $Q(x)=-1$, $P$ is always negative
+ or 0 . Hence, the only possible solutions are of the form: $P(x)=(\pm(x+c))^{n}$
+ for some divisor $n$ of 2024. We can easily see that this satisfies
+ the problem conditions.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Observed that there must be an integer root $c$ and tried to analyze $P$ in terms of it (e.g. reducing without loss of generality to the case $P(0)=0$).
+ (Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+Let $k = 2024$. We are looking for all polynomials $P \in \mathbb{Z}[x]$ such that for every $n \in \mathbb{Z}_{\ge 0}$, the equation $P(x) = n^k$ has an integer solution $x_n$.
+
+Let $d$ be the degree of $P$. Since $S = \{n^k : n \in \mathbb{Z}_{\ge 0}\}$ is an infinite set, $P$ must be non-constant, so $d \ge 1$. For large $n$, the equation $P(x) = n^k$ has at most $d$ solutions. We can define a sequence $x_n$ by choosing the largest such integer solution for each $n$. As $|x| \to \infty$, $P(x) \sim a_d x^d$, where $a_d$ is the leading coefficient. For large $n$, $a_d x_n^d \approx n^k$, so $x_n \sim (a_d^{-1} n^k)^{1/d}$.
+
+The root $x_n$ of $P(x) - n^k = 0$ is an algebraic function of $n$. By the Newton-Puiseux Theorem, for sufficiently large $n$, $x_n$ can be expanded as a Puiseux series in $n$:
+\[ x_n = \sum_{j=j_0}^\infty c_j n^{j/m} \]
+for some integer $m \ge 1$. Since $x_n \sim (a_d^{-1} n^k)^{1/d}$, the leading term is $c_{k/d} n^{k/d}$ (where $m$ can be taken as $d$). Thus, the highest power of $n$ in the expansion is $k/d$.
+
+The $m$-th order difference of the sequence $x_n$ is defined as $\Delta x_n = x_{n+1} - x_n$ and $\Delta^m x_n = \Delta(\Delta^{m-1} x_n)$. For any term $n^\alpha$, $\Delta(n^\alpha) = (n+1)^\alpha - n^\alpha = \alpha n^{\alpha-1} + O(n^{\alpha-2})$. Consequently, $\Delta^m (n^\alpha) = O(n^{\alpha-m})$. For any integer $m > k/d$, the growth rate of each term $n^{j/m}$ in the expansion of $x_n$ implies that $\Delta^m (n^{j/m}) \to 0$ as $n \to \infty$ for all $j \le k$. Thus, $\Delta^m x_n \to 0$ as $n \to \infty$. Since $x_n$ are integers, $\Delta^m x_n$ are also integers. A sequence of integers that converges to 0 must eventually be constant at 0. Thus, $\Delta^m x_n = 0$ for all $n > N$ for some $N$. This implies that $x_n$ is eventually a polynomial in $n$, say $x_n = Q(n)$ for $n > N$, where $Q \in \mathbb{Q}[x]$.
+
+Since $P(Q(n)) = n^k$ for all $n > N$, the polynomial identity $P(Q(x)) = x^k$ holds for all $x$. Differentiating the identity $P(Q(x)) = x^k$ with respect to $x$ gives:
+\[ Q'(x) P'(Q(x)) = k x^{k-1} \]
+This implies that every root of $Q'(x)$ must be a root of $k x^{k-1}$. Thus, the only possible root of $Q'(x)$ is $x=0$, which means $Q'(x) = m c x^{m-1}$ for some constant $c$ and $m = \deg Q$. Integrating this, we find $Q(x) = c x^m + b$ for some constant $b$. Substituting $Q(x)$ back into $P(Q(x)) = x^k$, we have:
+\[ P(c x^m + b) = x^k \]
+Let $y = c x^m + b$, then $x^m = (y-b)/c$. Thus, $P(y) = (x^m)^{k/m} = ((y-b)/c)^{k/m}$. Since $P$ is a polynomial, $d = k/m$ must be an integer, and we have $P(y) = c^{-d} (y-b)^d$. Let $a = c^{-d}$. Then $P(x) = a(x-b)^d$.
+
+We now determine the possible values for $a$ and $b$. Since $P(x) \in \mathbb{Z}[x]$, the leading coefficient $a$ must be an integer. The condition that $P(x) = n^k$ has an integer solution $x_n$ for all $n \in \mathbb{Z}_{\ge 0}$ implies:
+1. For $n=0$, $P(x_0) = a(x_0-b)^d = 0$. Since $a \neq 0$, we must have $x_0 = b$. Since $x_0$ is an integer, $b$ must be an integer.
+2. For $n=1$, $P(x_1) = a(x_1-b)^d = 1$. Since $a$ and $x_1-b$ are integers, $a$ must be a divisor of 1. Thus, $a = 1$ or $a = -1$.
+
+We now test these candidates $P(x) = \epsilon(x-b)^d$ where $d|k, b \in \mathbb{Z}, \epsilon \in \{1, -1\}$:
+- If $P(x) = (x-b)^d$, the equation $(x-b)^d = n^k$ becomes $x-b = \pm n^{k/d}$ (since $d|k$, $n^{k/d}$ is an integer). This always has integer solutions $x = b \pm n^{k/d}$.
+- If $P(x) = -(x-b)^d$ and $d$ is even, the equation $-(x-b)^d = n^k$ has no real solution for $n=1$ since $-(x-b)^d \le 0 < 1$.
+- If $P(x) = -(x-b)^d$ and $d$ is odd, the equation $-(x-b)^d = n^k$ becomes $(x-b)^d = -n^k$, which implies $x-b = -n^{k/d}$. This always has an integer solution $x = b - n^{k/d}$.
+
+Thus, the polynomials $P$ are those of the form $P(x) = (x+b)^d$ for any divisor $d$ of 2024 and $b \in \mathbb{Z}$, and $P(x) = -(x+b)^d$ for any odd divisor $d$ of 2024 and $b \in \mathbb{Z}$.
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,42 @@
+To find all non-negative integers $a, b, c$ such that $20^a + b^4 = 2024^c$, we evaluate the equation through modular arithmetic and case analysis.
+
+### 1. Boundary Cases
+*   **Case $c=0$:** The equation becomes $20^a + b^4 = 2024^0 = 1$. Since $a, b$ are non-negative integers, the only possibility is $a=0$ and $b=0$. This gives the solution $(0, 0, 0)$.
+*   **Case $b=0$:** The equation becomes $20^a = 2024^c$. Prime factorization shows $20 = 2^2 \cdot 5$ and $2024 = 2^3 \cdot 11 \cdot 23$. For these to be equal, all prime exponents must match. Since $20$ has a factor of 5 and $2024$ does not, we must have $a=0$. Then $1 = 2024^c$, which implies $c=0$. This returns $(0, 0, 0)$.
+*   **Case $a=0$:** The equation becomes $1 + b^4 = 2024^c$. For $c=0$, we get $b=0$. For $c > 0$, we check modulo 5: $b^4 \equiv 2024^c - 1 \equiv (-1)^c - 1 \pmod 5$. Since $b^4 \equiv 0$ or $1 \pmod 5$, we must have $c$ even. Let $c=2k$. Then $b^4 = (2024^k - 1)(2024^k + 1)$. Since $\gcd(2024^k-1, 2024^k+1) = 1$, both must be 4th powers. However, $2024^k+1 = y^4$ has no integer solutions for $k \ge 1$ as it would require two 4th powers to differ by 1, which only occurs for $0, 1$.
+
+### 2. General Case: $a, b, c > 0$
+Consider the equation modulo 5:
+$20^a + b^4 = 2024^c \implies 0 + b^4 \equiv (-1)^c \pmod 5$.
+Since $b^4 \equiv 0$ or $1 \pmod 5$, we must have $(-1)^c = 1$, so $c$ must be even. Let $c=2k$ for $k \in \mathbb{Z}^+$.
+The equation is $20^a = 2024^{2k} - b^4 = (2024^k - b^2)(2024^k + b^2)$.
+Let $X = 2024^k - b^2$ and $Y = 2024^k + b^2$. Then $XY = 20^a = 2^{2a} \cdot 5^a$.
+The factors must be of the form $X = 2^x 5^y$ and $Y = 2^z 5^w$ with $x+z=2a$ and $y+w=a$.
+Summing these gives:
+$X + Y = 2^x 5^y + 2^z 5^w = 2 \cdot 2024^k = 2 \cdot (2^3 \cdot 253)^k = 2^{3k+1} \cdot 253^k$.
+Assuming $x \le z$, we divide by $2^x$:
+$5^y + 2^{z-x} 5^w = 2^{3k+1-x} \cdot 253^k$.
+Since the LHS is odd unless $z=x$, we have two subcases:
+
+**Subcase A: $z > x$**
+Then $x = 3k+1$ and $5^y + 2^{z-x} 5^w = 253^k$. Since $\gcd(5, 253) = 1$, we must have $y=0$. Then $w=a$.
+Substituting $x=3k+1$ and $z=2a-x$, we get $z-x = 2a-6k-2$.
+The equation becomes $1 + 2^{2a-6k-2} 5^a = 253^k$, or $253^k - 1 = 2^{2a-6k-2} 5^a$.
+For $k=1$, $253-1 = 252 = 2^2 \cdot 3^2 \cdot 7$, which is not of the form $2^p 5^q$.
+For $k > 1$, $253^k - 1 = (253-1)(253^{k-1} + \dots + 1) = 252 \cdot (\dots)$.
+Since $252$ always divides $253^k-1$ and contains prime factors 3 and 7, $253^k-1$ can never be a power of 2 and 5.
+
+**Subcase B: $z = x$**
+Then $x=z=a$. The sum becomes $2^a (5^y + 5^w) = 2^{3k+1} \cdot 253^k$.
+Dividing by $2^a$ and noting $\gcd(5, 253)=1$, we must have $y=0, w=a$.
+$1 + 5^a = 2^{3k+1-a} \cdot 253^k$.
+If $a > 3k+1$, the RHS is not an integer. If $a \le 3k+1$, let $m = 3k+1-a$.
+$1 + 5^a = 2^m \cdot 253^k$.
+Checking small $k$:
+For $k=1$, $1 + 5^a = 2^m \cdot 253$. Testing $a=1, 2, 3, 4$ yields no solutions.
+For $k=2$, $1 + 5^a = 2^m \cdot 64009$. Testing $a=6, 7, 8$ yields no solutions.
+Generally, for $k \ge 3$, $253^k$ grows much faster than $5^{3k+1}$. Specifically, $f(k) = 253^k - 5 \cdot 125^k$ is strictly increasing for $k \ge 3$, and since $f(3) \neq 0$ and $f(4) \neq 0$, no further solutions exist.
+
+The only non-negative integer solution is $(0, 0, 0)$.
+
+The solution is $(a, b, c) = (0, 0, 0)$. \(\square\)

@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Reduction to the case $n=k+1$ is valid. The identity $e_m(S_i) = R_m(r_i)$ and the bound $|S_m| \le \min(m, k-m)-1$ for $2 \le m \le k-2$ are correctly derived. The counting argument successfully yields a contradiction for $k \le 6$.
+Claim gap: The counting bound $\sum_{m=1}^{k-1} |S_m| \ge n$ fails to produce a contradiction for $k \ge 7$ (e.g., for $k=7$, the bound gives $8 \le 8$; for $k=8$, $9 \le 13$). Step 30 asserts without proof that the sum still cannot cover $n$ distinct roots, which is a load-bearing gap. The argument provides no mechanism to tighten the bound or handle the $k \ge 7$ regime.
+Qualifications and supplied repairs: NONE. The assertion in step 30 is left as-is; no independent lemma or refinement is supplied to bridge the counting failure.
+Decisive checks: Verified the sum calculation in step 28. For $k=7$, $\sum_{m=2}^{5} (\min(m,7-m)-1) = 6$, giving total capacity $1+6+1=8=n$, so no contradiction. For $k=8$, capacity is $13 > 9$. The inequality $2k-2 \le \lfloor k^2/4 \rfloor$ holds for all $k \ge 7$. The claim in step 30 that the condition is "extremely restrictive" and thus covers $n$ is an unverified assertion, not a mathematical derivation.
+
+## Proof B
+Established theorem: The condition implies $n \le 2k-2$. The construction $F_U = \{-e_j(U)/e_{j-1}(U)\}_{j=1}^{k-1}$ and the inclusion $S \setminus U \subset F_U$ are rigorously justified. For the maximal case $n=2k-2$, the proof establishes a complete contradiction via sign and magnitude analysis of $F_X$ and $F_Y$. The reduction to $n=k+1$ is correctly stated, and the $k=3, n=4$ case is fully resolved.
+Claim gap: The argument for $k < n < 2k-2$ (specifically $n=k+1$ when $k > 3$) is abbreviated with the claim that the system "over-determines" the roots. This is a gap, but it concerns a strictly less constrained regime than the maximal case already solved.
+Qualifications and supplied repairs: NONE. The gap is acknowledged as an omission of a routine extension (e.g., induction or iterative application of the $F_U$ constraint), but no new substantive lemma is invented.
+Decisive checks: Verified step 10 recurrence $e_j(T_r) = e_j(U) + r e_{j-1}(U)$. Verified step 13-14 equality $Y=F_X$ and $X=F_Y$ for $n=2k-2$. Verified step 16-18: $z_1 = -e_1(Y) = \sum_{j=1}^{k-1} e_j(X)/e_{j-1}(X) = e_1(X) + \sum_{j=2}^{k-1} e_j(X)/e_{j-1}(X) > e_1(X)$. Since $X$ contains $k-1 \ge 2$ positive reals, $\max(X) < e_1(X) < z_1$, so $z_1 \notin X$, contradicting $X=F_Y$. All steps for $n=2k-2$ are mathematically sound and complete.
+
+## Decision
+Winner: B
+Reason: Proof B provides a rigorous, complete contradiction for the maximal case $n=2k-2$ using a well-justified algebraic construction ($F_U$) and precise sign/magnitude analysis. Its only gap is an abbreviated treatment of the $n=k+1$ case for $k>3$, which follows the same structural constraints. Proof A's central counting argument demonstrably fails for $k \ge 7$ (yielding equality or slack), and the author patches this failure with an unverified assertion rather than a mathematical derivation. B's verified core is substantially deeper, correctly handles the most constrained scenario, and leaves a smaller, structurally transparent gap compared to A's broken inequality.

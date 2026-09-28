@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "139dc03afe211ae00d573a5b7c3c483e7a82b403c515de2f65620d892b63d7d8",
+  "problem_id": "imo2026_p4",
+  "repeat": 1,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "76c0b8f33143c2f3c5cd684af6e3c5d918b3c95636f3b8473e1ace1b386442ab",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument first fails when it claims that an equality 180°=(2^k+2^m)θ forces θ to belong to one of the two listed families. For example, k-m=2 gives 2^k+2^m=5·2^m, which is neither a power of 2 nor three times a power of 2. Thus θ=36° is not excluded. This makes the final classification false, so Rule A caps the score at 2.",
+    "summary": "The solution correctly proves sufficiency for the two stated subfamilies, but these are not all winning angles. In fact every θ=180°/n with integer n≥2 works; θ=36°=180°/5 is a concrete omitted value. A peeling induction verifies this example: angles larger than θ can be reduced by θ while making the other child contain θ, and an angle below θ can be cut so that one child contains θ and the other contains 180°−θ=4θ. Hence the submitted final answer is demonstrably incorrect.",
+    "strengths": [
+      "The angle-halving observation is correct.",
+      "The altitude construction correctly handles θ=180°/2^n.",
+      "The explicit 60°/120° cut correctly establishes sufficiency for θ=60°/2^n."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed classification omits valid values such as θ=36°, invoking Rule A."
+      },
+      {
+        "severity": "major",
+        "description": "The assertion that 180°−s cannot also lie in S outside the two listed families is false; sums of two powers of two include values such as 5·2^m, 9·2^m, and others."
+      },
+      {
+        "severity": "major",
+        "description": "For rational omitted values such as θ=36°, it is impossible to choose α,β,180°,θ linearly independent over Q because θ and 180° are already dependent."
+      },
+      {
+        "severity": "major",
+        "description": "The final claim that Shan-Yu can repeat the argument indefinitely is unsupported: the case analysis only applies under the initial linear-independence conditions, and the retained non-winning child is not shown to preserve those conditions."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:47:11.914858+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00030",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "505fa102319f3c4b4ce6cf3fb1b4fdb4fd201a894495608c4d32cd40fc1fd7bd",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "906f269a2ac93a1da25ed980db791b9c123fb1087ff396bc1272c46e24b38810",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "299490f788090dc10ba2f9780bb852881e3b0f367ce818d4c4417e0ad78bc796",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F imposes a cap.",
+    "summary": "The proof is complete and correct. The lexicographically decreasing pair (k,S) proves termination and yields exactly one surviving entry greater than 1. Primewise gcds of the valuation vectors are correctly shown invariant, which uniquely reconstructs the terminal value M from the initial board.",
+    "strengths": [
+      "Correctly computes the change in the total prime-factor count S.",
+      "Handles all cases needed for strict lexicographic descent of (k,S).",
+      "Correctly proves that at least one entry remains greater than 1 throughout.",
+      "Uses the Euclidean-algorithm identity to establish the primewise valuation-gcd invariant.",
+      "Derives an explicit terminal value depending only on the initial entries."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "E_p is called a set although it is subsequently treated as an indexed list or multiset of 2026 exponents. This causes no mathematical problem because repeated arguments do not affect their gcd."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:18:26.018202+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00010",
+  "native_rejection_count": 0
+}

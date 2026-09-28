@@ -1,0 +1,55 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "5f437d6577dda5ee995a5047f95afceab31d4b9f4608e8d84b9a8b29c4ffc478",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "8456b19dccfc32261c663b0f9ec660aa04acedc6693ba4ee6a9d0d6ced38c6ee",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "d2a83ed6660105d5cd0f2853e861168d450e6a97da7a70a90a70911bf2ceea67",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The central claim that the accumulated prime sets P_n eventually stabilize is unsupported and actually false, so Rule E applies. For the admissible initial value a_1=2, the greedy rule gives a_n=2n; hence P_n eventually contains every prime p via a_p=2p and is unbounded.",
+    "summary": "The hitting-set formulation and the conditional argument that a stabilized finite prime universe would yield eventual periodicity are useful observations. However, the proposed proof of stabilization is only a probabilistic smooth-number heuristic and is contradicted by a basic valid sequence. Moreover, even the conditional argument proves the translation law only for n at least N; the assertion that determinism extends it backward to every positive n is unjustified, invoking the quantifier defect in Rule D. Proving the theorem requires a new structural idea, such as finiteness of the relevant minimal global hitting sets rather than finiteness of all primes occurring in the terms.",
+    "strengths": [
+      "Correctly characterizes admissible next terms using minimal prime hitting sets and their squarefree products.",
+      "Correctly observes, conditionally, that stabilization of a finite admissibility pattern modulo a fixed modulus would make the later gaps periodic."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The load-bearing assertion that P_n is bounded is false. With a_1=2 one obtains a_n=2n, whose terms introduce unboundedly many prime factors. The statements about the density of P_n-smooth numbers neither constitute a proof nor hold with the required bounded-gap strength."
+      },
+      {
+        "severity": "major",
+        "description": "The residue argument, even under its false stabilization hypothesis, establishes at most eventual translation-periodicity. Forward determinism does not imply that such a relation extends backward, so the required conclusion for every positive n remains unsupported."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T19:00:34.794829+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00046",
+  "native_rejection_count": 0
+}

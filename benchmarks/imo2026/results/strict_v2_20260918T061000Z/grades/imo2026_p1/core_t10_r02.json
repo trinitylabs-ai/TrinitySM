@@ -1,0 +1,57 @@
+{
+  "problem_id": "imo2026_p1",
+  "candidate": "t10_r02",
+  "group": "core",
+  "grader_candidate": "core_t10_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t10_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed.md",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+  "v1_score": 6,
+  "v1_grade": "docs/public_release/evidence/grades/45e53bd96ec745085c9afdcc6c9752468b07c141d7f3c2c85034fe6ce61d3c97.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t10_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:12:57.517952+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect. The parenthetical claim that h equals lcm(m,n) and is always greater than 1 is false in general, but it is non-load-bearing: the preceding case split already proves that every move leaves an entry greater than 1—namely g when gcd(m,n)>1, and h=mn when gcd(m,n)=1. Thus Rule C does not apply by its deletion-test carve-out.",
+    "summary": "The lexicographically decreasing potential (total prime-factor count, number of entries greater than 1) correctly proves termination and, together with preservation of at least one nonunit, gives exactly one terminal nonunit. Primewise valuations transform by the subtractive Euclidean step, so their board-wide gcds are invariant and uniquely determine the terminal integer.",
+    "strengths": [
+      "Correct well-founded lexicographic potential for termination.",
+      "Correct handling of both gcd cases and terminal-state uniqueness.",
+      "Correct primewise valuation transformation and gcd invariant.",
+      "The invariant determines every prime exponent of the terminal value, proving independence of choices."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "The phrase “h = lcm(m,n) > 1 always” is incorrect when gcd(m,n)>1; for example, m=n gives h=1. It is unnecessary because g itself is then greater than 1."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 2,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 1
+  },
+  "native_scorer_failed": true,
+  "prompt_sha256": "87f9dd76363d870d5d058ed98e5b5b14a3c85b098acf0b3eb11d4bdae3ac59df",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 2
+}

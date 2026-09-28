@@ -1,0 +1,51 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T22:17:10.411978+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 21,
+  "problem_id": "PB-Basic-021",
+  "case_id": "PB-Basic-021.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/p21/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "0e226ac50da7a9d562249e1f9ac21fab78bd358cc35a70fa8b8a686f4f2662b0",
+  "reference_sha256": "b0175cc971e8820aa63dd40c66e9b7f1b7285bc7c38cc1c67b462a2ee970a1a7",
+  "proof_sha256": "6dc0d94f1630b4d1ac874dcecf320fc9af93f8089406d28731f9a111140c4367",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T221542972484Z/inputs/tasks.json",
+  "task_manifest_sha256": "24d0be7dca34d9ff3c84eaf3239d65e93ee7cc8c984a7a08d196689ee98294d5",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The induction establishing \\(Q_n\\) omits the necessary base case \\(Q_3\\), since the proposed transition for \\(n=2\\) invokes the undefined property \\(Q_1\\).",
+    "summary": "The modular divisibility strategy is correct, but the induction needs the routine verification \\(65\\mid 2^{66}+1\\) to establish \\(Q_3\\). There is also a minor parity-justification error that is immediately repairable.",
+    "strengths": [
+      "Correctly proves \\(Q_n\\Rightarrow x_n\\mid x_{n+1}\\) using odd-power factorization modulo \\(2^{x_{n-1}-1}+1\\).",
+      "The factorization used to establish the required quotient divisibility is mathematically appropriate."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The proof of all \\(Q_n\\) cannot start from \\(Q_2\\) alone because its transition also requires \\(Q_{n-1}\\); \\(Q_3\\) must be checked separately."
+      },
+      {
+        "severity": "minor",
+        "description": "Congruence to an odd number modulo an odd modulus does not imply odd parity, although the displayed quotient is odd directly because its constant term is \\(1\\) and every other term is even."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

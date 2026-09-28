@@ -1,0 +1,48 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "9fcd15077dad08a298421f63eae07e0bf702b0b9a845c7fd4cf7d6ff4e6e9afb",
+  "problem_id": "imo2026_p1",
+  "repeat": 1,
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "1fa29cea71590690148c700d830b5eca27018f957fe34fd4544aa8c1bb7df66a",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F applies.",
+    "summary": "The proof is complete and correct. The lexicographic behavior of the number of entries greater than 1 and the integer-valued sum-of-squares potential proves termination, while the primewise gcd of all valuations is invariant and reconstructs the unique terminal entry.",
+    "strengths": [
+      "Correctly computes the valuation transformation as (x,y) -> (min(x,y), |x-y|).",
+      "Provides a valid termination argument: the number of non-unit entries never increases, and whenever it stays constant the nonnegative integer potential strictly decreases.",
+      "Correctly proves that at least one entry remains greater than 1, hence a terminal board has exactly one such entry.",
+      "Correctly identifies and proves the primewise gcd invariants and derives an explicit formula for M depending only on the initial board."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:36:32.485213+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00026",
+  "native_rejection_count": 0
+}

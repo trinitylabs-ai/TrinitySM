@@ -1,0 +1,20 @@
+{
+  "run_id": "p2_t07_r02_v356_consolidated_20260917T071542Z",
+  "argv": [
+    "/home/user/miniconda3/envs/math/bin/python",
+    "-u",
+    "-B",
+    "-m",
+    "cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917.selected_resume",
+    "--source-run",
+    "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run",
+    "--problem-file",
+    "/opt/proof-workshop/benchmarks/imo2026/problems/imo2026_p2.json",
+    "--proof-file",
+    "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_then_v326_20260915T054500Z/proofs/imo2026_p2/t07_r02/R1-C3.md",
+    "--output-dir",
+    "/opt/proof-workshop/benchmarks/imo2026/results/p2_t07_r02_v356_consolidated_20260917T071542Z/generation/run",
+    "--execute-models"
+  ],
+  "cwd": "/opt/proof-workshop"
+}

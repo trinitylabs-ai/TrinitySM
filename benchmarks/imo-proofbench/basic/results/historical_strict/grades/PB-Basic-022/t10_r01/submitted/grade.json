@@ -1,0 +1,55 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T23:36:21.415982+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 22,
+  "problem_id": "PB-Basic-022",
+  "case_id": "PB-Basic-022.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/p22/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "1efea3a9dd6c26c80e0fbe5bf4d31b3a340d8a46fe300c0f17f18033217e5cf8",
+  "reference_sha256": "88f4d123bb4de7af98dc52cc35cdf7c94c2a6dcc73184ef23e250bc4abc71e68",
+  "proof_sha256": "fb7ea98c7613076bee581cc0e00ecdff2573297792888d8b169a373073542370",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T233547472719Z/inputs/tasks.json",
+  "task_manifest_sha256": "02253172db52a934d2fc8810880f2cbedd41a93efcf73a52ee6440114f9f3a4b",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The chosen Puiseux inverse branch is only local near infinity and need not attain every root of \\(P\\); therefore \\(P(Q(x))=x^{2024}\\) does not imply that \\(P\\) has only one distinct root.",
+    "summary": "The final classification is correct, and the coefficient analysis is largely sound once the pure-power form is assumed. However, the central argument establishing that form is invalid: a local inverse branch cannot control all roots of \\(P\\), and the further assertion that a Puiseux series with only one zero must be a monomial is also unjustified. A fundamentally different argument is needed.",
+    "strengths": [
+      "Correctly excludes constant polynomials and states the complete correct family.",
+      "The divisibility, sign, and final verification arguments are essentially correct conditional on \\(P(x)=a'(qx-p)^d\\)."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The local Puiseux inverse \\(Q\\) need not take the value of each root of \\(P\\), so the deduction that \\(P\\) has only one distinct root is false."
+      },
+      {
+        "severity": "major",
+        "description": "Even knowing that \\(Q(x)-r\\) has only one zero would not justify the asserted identity \\(Q(x)-r=c_rx^{m_r}\\)."
+      },
+      {
+        "severity": "substantial",
+        "description": "The use and global interpretation of Puiseux branches, including evaluation near \\(x=0\\), are not established."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2dcfd27140126f4c28514e94f218fda1dd7e2199589ac6c6a55fd177d205834f",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "0651d4867b26391a858a45da627b47ec42d44d65d676c48a00acb960a824b360",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Case 2, the assertion that the distance from x0 to {y+n c(y): n∈N} is at most c(y) is false when y>x0; the forward orbit then lies entirely to the right of y, so its distance from x0 can be much larger than c(y). Consequently, c(y)≥4x0 is not established.",
+    "summary": "The final classification f(x)=x+c with c≥0 is correct, and the proof correctly derives orbit invariance, nonnegativity of the defect, and equality of any two positive defect values. However, the argument excluding coexistence of zero and positive defects rests on a false distance claim, so the central mixed case remains unresolved. This is a false load-bearing inference under Rule C, and because it replaces the decisive argument for an entire case, Rule E gives the lower ceiling of 3.",
+    "strengths": [
+      "Correctly obtains f(f(y))=2f(y)-y, invariance c(f(x))=c(x), the iterate formula, and c(x)≥0.",
+      "Correctly derives the comparison bound on c over Im(f).",
+      "The rational/irrational approximation argument validly shows that all positive defect values on Im(f) are equal.",
+      "Correctly verifies every function f(x)=x+c, c≥0."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The forward arithmetic progression {y+n c(y)} need not approach x0 within c(y), particularly when y>x0. Thus the claimed lower bound on a positive c(y), the ensuing zero interval, and the iterative propagation to all positive reals are unsupported. Repair requires a genuinely new mixed-defect argument, such as deriving local control from the other inequality and using connectedness."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:44:16.756110+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

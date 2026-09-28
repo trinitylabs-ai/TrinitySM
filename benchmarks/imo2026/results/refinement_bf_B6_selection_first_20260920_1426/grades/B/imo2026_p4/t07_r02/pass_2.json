@@ -1,0 +1,41 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_cc8c0808d35910496afebcf4",
+  "repeat": 2,
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "proof_sha256": "712cd38455de80050f13fc2201f1184e51a90c15781c91cf6b421d8b4d79306d",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "a6229af35a8f54b49fa9eb0673b6eab72b608508343534553d8c96f8995cfa08",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F imposes a cap.",
+    "summary": "The submission correctly proves that Mulan can guarantee victory exactly when θ=180°/m for an integer m≥2. The winning-state induction, the construction for sufficiency, and the safe-triangle invariant for necessity are all valid.",
+    "strengths": [
+      "The induction showing that any triangle containing a positive integer multiple of θ is winning uses a valid angle-splitting cut.",
+      "For θ=180°/m, the interval argument correctly finds a multiple kθ making both child triangles contain integer multiples of θ; the remaining m=2,3 cases are handled correctly.",
+      "For nonintegral 180°/θ, the proof correctly shows that two children cannot both contain an angle in S, exhaustively treating all four possible pairings of newly created angles.",
+      "The final classification has the correct quantifiers and range."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T08:14:59.981565+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p4/pass_2/p4/proof_cc8c0808d35910496afebcf4"
+}

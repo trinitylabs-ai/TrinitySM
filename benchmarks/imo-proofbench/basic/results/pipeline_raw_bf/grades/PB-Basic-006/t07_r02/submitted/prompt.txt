@@ -1,0 +1,105 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Consider any infinite sequence of integers $c_0, c_1, c_2, \ldots $ such that $c_0 \neq 0$. Prove that for some integer $k \geq 0$, the polynomial $P(x) = \sum_{i = 0}^k c_i x^i$ has fewer than $k$ distinct real roots.
+
+**GROUND-TRUTH SOLUTION**
+
+If there exists an integer $k>0$ such that $c_k = 0$, $P(x)=\sum_{i=0}^k c_i x^i$ has less than $k$ roots. So it suffices to see the cases where $c_k \ne 0$ for all integers $k>0$. Let's prove the following lemma:
+ If a polynomial $\sum_{i=0}^n a_i x^i$ has $n$ different real roots, $(\frac{a_{1}}{a_0})^2 - 2 \frac{a_{2}}{a_0} \geq n\sqrt[n]{\frac{a_n ^2}{a_0^2}}$
+
+ (Proof) The left hand side is the sum of squares of inverses of all roots. The right hand side is $n$ times the $n$th root of the product of square of inverses of roots. By AM-GM, we can see that the inequality holds.
+
+ Going back to the main proof, let's assume that all $P(x)=\sum_{i=0}^k c_i x^i$ has exactly $k$ distinct real roots.
+ By the lemma, $\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}} \geq n\sqrt[n]{c_n^2}$, which shows that $1\leq c_n^2 \leq (\frac{\frac{c_{1}^2 - 2c_0 c_{2}}{\sqrt[n]{c_0^{2n-2}}}}{n})^n$. We can easily see that the righthandside tends to $0$ as $n$ goes to infinity. It's a contradiction.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Derived a useful inequality of between $c_n$ based on Vieta's formula (along with the proof by contradiction).
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that for any infinite sequence of integers $c_0, c_1, c_2, \ldots$ such that $c_0 \neq 0$, there exists some integer $k \geq 0$ such that the polynomial $P_k(x) = \sum_{i=0}^k c_i x^i$ has fewer than $k$ distinct real roots, we proceed by contradiction.
+
+Assume that for all integers $k \geq 1$, the polynomial $P_k(x)$ has $k$ distinct real roots.
+
+**1. Newton's Inequalities**
+A fundamental property of polynomials with all real roots is given by Newton's Inequalities. If a polynomial $P(x) = \sum_{i=0}^k a_i x^i$ has all real roots, then its coefficients $a_i$ must satisfy:
+\[ a_i^2 \geq a_{i-1} a_{i+1} \frac{(i+1)(k-i+1)}{i(k-i)} \quad \text{for } 1 \leq i \leq k-1. \]
+Since we assume that $P_k(x)$ has $k$ distinct real roots for all $k \geq 1$, this inequality must hold for the coefficients $c_i$ for every $k > i$. Fixing $i$ and taking the limit as $k \to \infty$, the factor $\frac{k-i+1}{k-i}$ approaches $1$. Thus, we obtain the necessary condition:
+\[ c_i^2 \geq c_{i-1} c_{i+1} \frac{i+1}{i} \quad \text{for all } i \geq 1. \]
+
+**2. Convergence to an Entire Function**
+The assumption that $P_k(x)$ has $k$ real roots for all $k$ is extremely restrictive. In the theory of entire functions, the Laguerre-Pólya class $\mathcal{LP}$ consists of functions that can be represented as the uniform limit on compact subsets of the complex plane of polynomials with only real roots.
+If $P_k(x)$ has $k$ real roots for all $k$, the sequence of polynomials $P_k(x)$ must converge to a function $f(z) = \sum_{i=0}^\infty c_i z^i$ that is an entire function (i.e., its radius of convergence is infinite). If the radius of convergence were finite, the polynomials $P_k(x)$ could not maintain $k$ real roots as $k \to \infty$, because the growth of the coefficients would violate the conditions required for the roots to remain real.
+
+**3. Integer Coefficients and Entire Functions**
+Let $f(z) = \sum_{i=0}^\infty c_i z^i$ be an entire function. By the definition of the radius of convergence, we must have:
+\[ \lim_{i \to \infty} |c_i|^{1/i} = 0. \]
+However, the coefficients $c_i$ are given as integers. For any integer $c_i$, either $c_i = 0$ or $|c_i| \geq 1$. If $|c_i| \geq 1$, then $|c_i|^{1/i} \geq 1$.
+The only way for the limit $\lim_{i \to \infty} |c_i|^{1/i} = 0$ to hold is if $c_i = 0$ for all sufficiently large $i$. That is, there must exist some integer $K$ such that $c_i = 0$ for all $i > K$.
+
+**4. Final Contradiction**
+If $c_i = 0$ for all $i > K$, then for any $k > K$, the polynomial $P_k(x)$ is identical to the polynomial $P_K(x)$:
+\[ P_k(x) = \sum_{i=0}^k c_i x^i = \sum_{i=0}^K c_i x^i = P_K(x). \]
+The number of distinct real roots of $P_k(x)$ is therefore equal to the number of distinct real roots of $P_K(x)$. Let $N(P)$ denote the number of distinct real roots. Then for $k > K$:
+\[ N(P_k) = N(P_K) \leq K. \]
+Since $k > K$, it follows that $N(P_k) \leq K < k$. This contradicts the assumption that $N(P_k) = k$ for all $k \geq 1$.
+
+Therefore, there must exist some $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

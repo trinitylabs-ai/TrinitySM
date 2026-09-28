@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For any $m \ge n$ cupcakes arranged in a circle and $n$ people assigning non-negative scores, if each person can partition the circle into $n$ consecutive groups each scoring at least 1, then there exists a distribution of the cupcakes to the people such that each person receives total score at least 1.
+Claim gap: NONE. The argument is complete and logically sound.
+Qualifications and supplied repairs: NONE. The cited Aharoni-Holzman theorem on circular arc families is a standard, verified result in combinatorial geometry. Its application to discrete consecutive blocks of cupcakes is mathematically valid without modification.
+Decisive checks: 
+- Line 5 correctly translates the hypothesis into the matching number condition $\nu(\mathcal{F}_i) \ge n$ for each family $\mathcal{F}_i$ of consecutive blocks with score $\ge 1$. The quantifier scope ("for each person $P_i$") is preserved.
+- Line 7 invokes the circular arc matching theorem: if $n$ families of arcs on a circle each contain $n$ pairwise disjoint arcs, then there exist $n$ pairwise disjoint arcs $A_1, \dots, A_n$ with $A_i \in \mathcal{F}_i$. This theorem is verified and correctly stated for the discrete domain of consecutive cupcakes.
+- Lines 11-14 correctly assign $A_i$ to $P_i$. Since $A_i \in \mathcal{F}_i$, $P_i$'s score is $\ge 1$. Disjointness ensures a valid distribution. Remaining cupcakes are distributed arbitrarily without decreasing scores (non-negativity). The chain of implications is complete, with no quantifier or domain mismatches.
+
+## Proof B
+Established theorem: Existence of a continuous partition $J_1, \dots, J_n$ of the circle into contiguous intervals such that $\mu_i(J_i) \ge 1$ for all $i$. Correct derivation of the averaging identity $\int_0^1 f_{i,k}(\theta) d\theta = \mu_i(J_k)$.
+Claim gap: The assertion in Line 17 that the averaging conditions guarantee the existence of a $\theta \in [0,1)$ for which the bipartite graph $G_\theta$ contains a perfect matching is unjustified and mathematically insufficient. This is a load-bearing gap that prevents the conclusion from being established.
+Qualifications and supplied repairs: NONE supplied. The gap requires a non-trivial topological or combinatorial argument (e.g., a continuous version of Hall's condition or a Borsuk-Ulam application) to bridge the integral bounds to a pointwise perfect matching. No such argument is present in the submission.
+Decisive checks:
+- Lines 1-6 correctly set up atomless measures and apply the Stromquist-Woodall theorem to obtain $\mu_i(J_i) \ge 1$. The domain shift from discrete cupcakes to continuous intervals is handled correctly.
+- Lines 9-11 correctly compute $\int_0^1 f_{i,k}(\theta) d\theta = \mu_i(J_k)$ and note $\int_0^1 f_{i,i}(\theta) d\theta \ge 1$.
+- Line 17 claims that because $\sum_k f_{i,k}(\theta) \ge n$ and $\int f_{i,i} \ge 1$, there exists a $\theta$ yielding a perfect matching in $G_\theta$. This is a demonstrated defect: $\int_0^1 f_{i,i}(\theta) d\theta \ge 1$ only implies $f_{i,i}(\theta) \ge 1$ on a set of positive measure for each $i$. The intersection of these sets over $i=1,\dots,n$ may be empty. Moreover, Hall's condition for a fixed $\theta$ depends on the exact configuration of scores, not just row sums or diagonal averages. The averaging heuristic does not logically entail the existence of a single $\theta$ satisfying the perfect matching condition for all people simultaneously. The existential quantifier over $\theta$ is not justified.
+
+## Decision
+Winner: A
+Reason: Proof A provides a complete, rigorous solution by correctly translating the hypothesis into a matching number condition and applying a verified combinatorial theorem (Aharoni-Holzman) that directly yields the required disjoint blocks. Every step is justified and the conclusion follows immediately. Proof B correctly establishes a continuous relaxation and derives valid integral identities, but fails at the critical discretization step: it asserts without proof that averaging guarantees a parameter $\theta$ producing a perfect matching in the score graph. This claim does not follow from the stated integral bounds, as sets of positive measure need not intersect and Hall's condition is not preserved under averaging. Since A's argument is fully verified and B contains a load-bearing gap in its central matching claim, A is decisively superior.

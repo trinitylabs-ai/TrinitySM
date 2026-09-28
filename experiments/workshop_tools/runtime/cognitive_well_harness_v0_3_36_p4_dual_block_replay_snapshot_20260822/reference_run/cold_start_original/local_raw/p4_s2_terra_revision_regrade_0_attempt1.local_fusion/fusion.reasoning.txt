@@ -1,0 +1,89 @@
+*   Problem: Determine $\theta \in (0, 180^\circ)$ such that Mulan can guarantee victory in finitely many steps.
+    *   Game: Mulan cuts a triangle $T$ into $T_1, T_2$ by a line from a vertex to the opposite side. Shan-Yu discards one. Mulan wins if $T$ has an angle exactly $\theta$.
+    *   Solution Claim: $\theta = 180^\circ/n$ for $n \in \{2, 3, \dots\}$.
+    *   Solution Logic:
+        1.  Winning set $W$: Triangles with an angle in $S = \{k\theta \mid k \in \mathbb{Z}, 0 < k\theta < 180^\circ\}$.
+        2.  Sufficiency: If $180^\circ = n\theta$, any triangle $T$ is in $W$.
+            *   $n=2$ ($\theta=90^\circ$): Altitude cut.
+            *   $n \ge 3$: If $A > \theta$, find $k$ such that $C < k\theta < C+A$. Cut $\alpha = 180^\circ - B - k\theta$. Resulting triangles $T_1, T_2$ have angles $k\theta$ and $(n-k)\theta$ respectively.
+        3.  Necessity: If $180^\circ/\theta \notin \mathbb{Z}$, Shan-Yu can avoid $S$.
+
+    *   Reviewer 1 (OPC): Claims the definition of $W$ is flawed, sufficiency for $n \ge 3$ is incomplete (resulting angles not necessarily in $S$), and necessity is incorrect.
+    *   Reviewer 2 (GPT-OSS): Initially agrees with the logic, then discovers a critical gap: if the largest angle $C > 180^\circ - \theta$, the interval $(C, C+A)$ may not contain a multiple $k\theta$ because $k\theta$ must be $< 180^\circ$. For example, if $\theta=60^\circ$ and $C=179^\circ$, no $k\theta \in (179^\circ, 179.5^\circ)$.
+
+    *   *Sufficiency Proof Gap:* The solution claims that if $A > \theta$, Mulan can always find $k$ such that $C < k\theta < C+A$.
+    *   Let's check this: $C+A = 180^\circ - B$. So the interval is $(C, 180^\circ - B)$.
+    *   The length of the interval is $(180^\circ - B) - C = A$.
+    *   Since $A > \theta$, the interval length is greater than $\theta$.
+    *   Does every interval of length $>\theta$ contain a multiple $k\theta$?
+    *   Multiples of $\theta$ are $0, \theta, 2\theta, \dots, m\theta$ where $m\theta < 180^\circ$.
+    *   If the interval is $(179^\circ, 179.5^\circ)$ and $\theta=60^\circ$, the multiples are $60, 120$. Neither is in the interval.
+    *   The gap is real. The solution assumes that because the interval length is $>\theta$, it *must* contain a multiple. This is only true if the multiples are not bounded by $180^\circ$. But $k\theta$ must be an angle of a triangle, so $k\theta < 180^\circ$.
+    *   If $C$ is very large (e.g., $C > 180^\circ - \theta$), the only possible multiples $k\theta$ are those smaller than $C$. But the interval is $(C, C+A)$. Thus, no multiple $k\theta$ can exist in that interval.
+    *   Therefore, the sufficiency proof fails for any triangle where the largest angle is $> 180^\circ - \theta$.
+
+    *   *Necessity Proof:* The solution argues that if $180^\circ/\theta \notin \mathbb{Z}$, Shan-Yu can avoid $S$. This part seems logically sound (if the initial triangle has no angle in $S$, any cut that produces one angle in $S$ in $T_1$ must not produce one in $T_2$ unless $180^\circ/\theta \in \mathbb{Z}$).
+
+    *   *Is the gap fatal?* Yes. The sufficiency proof is the core of the "if" part. If it fails for a large class of triangles (those with an angle $> 180^\circ - \theta$), Mulan cannot guarantee victory using this strategy.
+    *   *Can it be repaired?* The solution only considers cuts from vertex $A$ to side $BC$. If $C$ is the large angle, Mulan could instead cut from vertex $C$ to side $AB$.
+    *   If she cuts from $C$ to $AB$, she splits angle $C$ into $\gamma$ and $C-\gamma$.
+    *   To win, she needs both resulting triangles to be in $W$.
+    *   $T_1$ has angles $\gamma, A, 180-A-\gamma$. $T_2$ has angles $C-\gamma, B, 180-B-(C-\gamma)$.
+    *   If $C$ is very large, she can easily pick $\gamma = \theta$ (since $C > \theta$). Then $T_1$ has angle $\theta$ (win). But she needs $T_2$ to be in $W$ too. $T_2$ has angles $C-\theta, B, 180-B-C+\theta$.
+    *   Since $C$ is large, $C-\theta$ might be in $S$ or she might be able to cut $T_2$ further.
+    *   However, the *proof provided* does not do this. It only uses the $A > \theta$ case and the specific cut $\alpha = 180 - B - k\theta$.
+
+    *   The proof's valid core: The identification of the set $S$ and the basic inductive step for $k\theta$.
+    *   The gap: The existence of $k$ such that $C < k\theta < C+A$. This fails when $C > 180^\circ - \theta$.
+    *   Reviewer errors:
+        *   OPC claimed the definition of $W$ was flawed. Actually, the definition of $W$ is standard for game theory (winning positions). The claim that $S \subset W$ is proven by induction. This is not a material error.
+        *   OPC claimed the necessity proof is incorrect. The necessity proof is actually quite strong.
+        *   GPT-OSS correctly identified the gap regarding $C > 180^\circ - \theta$.
+
+    *   The gap is a fallacy/incomplete argument. It requires new mathematics (a different cutting strategy for obtuse triangles) to fix.
+    *   According to the rubric: "A fallacy or incomplete answer requiring new mathematics caps the score at 3."
+    *   The proof is substantially flawed because the sufficiency part fails for a wide range of triangles.
+    *   Score: 2 or 3. Since the necessity part is mostly correct and the $n=2$ case is correct, 3 is appropriate for "incomplete or substantially flawed work".
+
+    *   Valid core: The use of the set $S = \{k\theta\}$ and the inductive argument that any triangle with an angle in $S$ is winning.
+    *   Earliest gap: The claim "Such a $k$ always exists because the interval $(C, C+A)$ has length $A > \theta$."
+    *   Quantifier/Domain: For triangles where $C > 180^\circ - \theta$, no $k \in \mathbb{Z}$ exists such that $C < k\theta < 180^\circ$.
+    *   Discarded errors: OPC's claim that the definition of $W$ is flawed (it is a standard recursive definition) and that the necessity proof is incorrect (the logic for $180/\theta \notin \mathbb{Z}$ is sound).
+    *   Fatal? Yes, it invalidates the sufficiency claim for all triangles with an angle $> 180^\circ - \theta$.
+    *   Repair: Provide a separate strategy for triangles with an angle $> 180^\circ - \theta$ (e.g., cutting the large angle itself).
+
+    *   Final Grade: 3/7. (Fallacy cap).
+
+    *   Wait, let me double check the "S" set logic.
+    *   $S = \{k\theta \mid k \in \mathbb{Z}, 0 < k\theta < 180^\circ\}$.
+    *   If $T$ has angle $k\theta$, Mulan cuts it into $\theta$ and $(k-1)\theta$.
+    *   Wait, the cut is from a vertex to the opposite side.
+    *   If angle $A = k\theta$, she can split $A$ into $\theta$ and $(k-1)\theta$ by picking $P$ on $BC$.
+    *   Then $T_1$ has angle $\theta$ (win). $T_2$ has angle $(k-1)\theta$.
+    *   By induction, $T_2$ is also winning.
+    *   So any triangle with an angle in $S$ is indeed in $W$. This part is correct.
+    *   The only failure is the "any triangle $T$ is in $W$" part for $n \ge 3$.
+
+    *   Let's re-verify the $C > 180^\circ - \theta$ case.
+    *   If $C = 170^\circ, \theta = 60^\circ, A = 5^\circ, B = 5^\circ$.
+    *   $S = \{60^\circ, 120^\circ\}$.
+    *   $T$ has no angle in $S$.
+    *   Mulan's options:
+        1. Cut from $A$ to $BC$: $T_1$ has angles $B, \alpha, 180-B-\alpha$. $T_2$ has angles $C, A-\alpha, 180-C-A+\alpha$.
+           $T_2$ has angle $C=170^\circ$. To be in $W$, it needs an angle in $S$. $170$ is not in $S$. $A-\alpha$ is too small. $180-C-A+\alpha = 10-5+\alpha = 5+\alpha$. For $5+\alpha = 60$, $\alpha=55$, but $\alpha < A=5$. Impossible.
+           So $T_2$ is not in $W$ unless $T_1$ is. But Mulan needs *both* to be in $W$.
+        2. Cut from $C$ to $AB$: $T_1$ has angles $\gamma, A, 180-A-\gamma$. $T_2$ has angles $C-\gamma, B, 180-B-C+\gamma$.
+           $T_1$ has $A=5^\circ$. For $T_1 \in W$, we need $\gamma \in S$ or $180-A-\gamma \in S$.
+           If $\gamma=60^\circ$, then $180-A-\gamma = 115^\circ$. $T_1$ has angle $60^\circ$ (win).
+           Now check $T_2$: angles $170-60=110^\circ, B=5^\circ, 180-5-110=65^\circ$.
+           $T_2$ has no angle in $S$. So $T_2 \notin W$.
+           If $\gamma=120^\circ$, $T_1$ has angle $120^\circ$ (win).
+           $T_2$ has angles $170-120=50^\circ, B=5^\circ, 180-5-50=125^\circ$.
+           $T_2$ has no angle in $S$. So $T_2 \notin W$.
+    *   So for $C=170^\circ, \theta=60^\circ$, Mulan cannot make both triangles winning in one step.
+    *   Can she win in more steps?
+    *   If she cuts $C$ into $60$ and $110$, Shan-Yu keeps the $110$ triangle.
+    *   The new triangle has angles $110, 5, 65$.
+    *   Now she can cut $110$ into $60$ and $50$. Shan-Yu keeps the $50$ triangle.
+    *   The new triangle has angles $50, 5, 125$.
+    *   She can cut $125$ into $60$ and $65$. Shan-Yu keeps

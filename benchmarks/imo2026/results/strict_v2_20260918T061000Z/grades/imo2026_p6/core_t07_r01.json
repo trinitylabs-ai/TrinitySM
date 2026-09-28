@@ -1,0 +1,68 @@
+{
+  "problem_id": "imo2026_p6",
+  "candidate": "t07_r01",
+  "group": "core",
+  "grader_candidate": "core_t07_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t07_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf.md",
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+  "v1_score": 2,
+  "v1_grade": "docs/public_release/evidence/grades/d62cbe8b429aa5e4d53938f395e7e97c86a75684caf8e765e96075eccd981159.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t07_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:22:09.339850+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the claim that S, the union of all prime divisors of the terms, is finite. This is false: for a_1=2 the greedy sequence is a_n=2n, so S contains every prime. The pigeonhole argument only finds a possibly bounded prime q accompanying p and does not bound p. This false structural claim supports the entire finite-state argument, so Rule E caps the score at 3.",
+    "summary": "The proof contains useful preliminary observations about hitting sets and bounded gaps, but its central finiteness assertion is demonstrably false. Moreover, the attempted passage from eventual to global translation periodicity is independently invalid: the required choice of K cannot exist and the backward induction uses unproved translation and gcd invariance. Repair requires the new structural idea of isolating finitely many minimal accepted divisors, not a local correction.",
+    "strengths": [
+      "Correctly observes that the prime support of each new term must hit every earlier prime support.",
+      "Correctly obtains the uniform bound a_{n+1}-a_n at most rad(a_1).",
+      "Conditionally on having a genuinely finite stabilized family, the identity f(x+L_0)=f(x)+L_0 and the finite-state residue argument point toward eventual translation periodicity."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The assertion S is finite is false. In the admissible case a_1=2, induction gives a_n=2n, whose terms collectively contain every prime divisor. The displayed inequalities are consistent with every large p appearing together with the fixed small prime q=2, so the claimed conclusion does not follow."
+      },
+      {
+        "severity": "major",
+        "description": "The choice of K in the global-periodicity section is impossible. From the alleged eventual relation, a_{N+KT}=a_N+KL'=a_N+L>L, yet the proof requires a_{N+KT} to divide L."
+      },
+      {
+        "severity": "major",
+        "description": "The backward induction is circular: in proving the case n=N-1 it already uses a_{N-2+T_new}=a_{N-2}+L, which is precisely a later, not yet established, backward-induction case."
+      },
+      {
+        "severity": "major",
+        "description": "The minimality argument incorrectly treats gcd as translation-invariant, for example asserting gcd(w-L,a_j+L)=gcd(w-L,a_j). This is false without an additional divisibility condition on the arbitrary number w-L."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "9e80b2120c8c733384f3dbbab0c0904e2a19f6a8d3722b004f94122ec4458806",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

@@ -1,0 +1,1 @@
+For any 18 labeled real numbers with nonnegative total sum, at least 136 of their unordered 3-subsets have nonnegative sum.

@@ -1,0 +1,8 @@
+{
+  "tmux_window": "qwen36-bf16-mtp4-gpu1-8027:1",
+  "command": "cd /opt/proof-workshop && exec bash /opt/proof-workshop/scripts/launch_qwen36_bf16_mtp4.sh 1 8027 >> /opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01/qwen_gpu1_server.log 2>&1",
+  "model": "Qwen/Qwen3.6-27B",
+  "gpu": 1,
+  "mtp": 4,
+  "dtype": "bfloat16"
+}

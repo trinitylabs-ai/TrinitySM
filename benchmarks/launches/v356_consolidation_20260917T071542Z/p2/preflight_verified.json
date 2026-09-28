@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "resume": {
+    "schema": "selected-typed-certificate-synthesis-resume-v1",
+    "source_run": "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run",
+    "source_harness_revision": "0.3.349+real-branches.1",
+    "selected_sample": 1,
+    "selected_cycle": 1,
+    "operation": "exact_geometry",
+    "route": "geometry",
+    "target_label": "T",
+    "source_selection_reused": true,
+    "certificate_replayed": true,
+    "source_record_sha256": {
+      "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/manifest.json": "abc86338181cf30727c11ffa2b9301c9cc8d19206aaecfa994d784dbd8a432ba",
+      "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/selection.json": "cbdc344a8c3e57c341d11f0755e0ade10d3594e6327066958b0cef47d3489306",
+      "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/completion.json": "e4b247b7b58815657d92a5edc301e4186afa2ebe77c027062e466f266c580c7c",
+      "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/02_formalizations/sample_01/manifest.json": "3cecfadd7197557dfa1d7687d9617b899bd59c7571b4464c2547d483bf2292e1",
+      "/opt/proof-workshop/benchmarks/imo2026/results/p2_c3_t07r02_real_branches_v349_20260916T232047Z/generation/run/02_formalizations/sample_01/result.json": "89ccc823cb12b5edbf5c0ccddc11af699eb8634b21ae79eecc1e0b22ef9a57a1"
+    },
+    "source_artifact_sha256": {
+      "theorem": "7b531be8a62bd615c63a69c2bbbc976950fbe052b6d4be3437353f207ba7be3f",
+      "proof": "a9ab0043054b1190936defc93f31051ddc5726a83cea3ac1b601f3872004490c",
+      "detection": "c79f95e23665f0f034e3115be4d49fe514e43f599842f7e8a4292a2e0ce6c7c5",
+      "matcher": "7087ea0951d6da5fb317ec6d05d5ad2b95f551b37e61296c04d7dc98041bf048",
+      "draft": "e3306a5cb1d23971464231d822df543d771cd909a2160a75889a15b1406319f1",
+      "compilation": "e42de870b31fcfd8f0a36584a9b0f127aa5409f131fa29d08b6a123efe0c3e6d",
+      "semantic_audit": "b531da5f9beea98b5e9f98721101d4acf1918ed8145bfbd6398e99314169dc26",
+      "audit_record": "58545c8584e001f92b8fc33b913ee67451a9e02459ed3eb22a942f3d47a07f56",
+      "audit_call": "ae7349b38f83fe50912186e109fd47f4a689840aaaea1b70e2ba04a40a0d1e23",
+      "formalizer_call": "403e6b28c0cd4a3d74e0e012d6ac5cfb7ef0205c5a5b257d9abbdcbbd3d0b6f7",
+      "system": "c0eb91b4bd7f7428d638221aacbe16f6cc6ac4e36aac3d8ab14d26eef814514d",
+      "certificate": "f68431449b685b2f2fb3d05ba11506ed47fb81c2f3ab8835fd5f8125be4a3e7f",
+      "normalization": "20f25e955aeb623aa41c5843a5805f8b064d2b3f6995f510a6c3432c892c2815",
+      "normalized_draft": "e3306a5cb1d23971464231d822df543d771cd909a2160a75889a15b1406319f1"
+    },
+    "new_detection_calls": 0,
+    "new_matcher_calls": 0,
+    "new_formalization_calls": 0,
+    "new_semantic_audit_calls": 0,
+    "new_certificate_searches": 0,
+    "prior_external_scores_supplied": false,
+    "synthesis_master_seed": 1516923361,
+    "max_logical_model_stages": 8,
+    "mandatory_budget_forcing": true
+  }
+}

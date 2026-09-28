@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The procedure terminates in at most $\binom{n}{2}$ steps, and the final configuration is sorted in increasing order of width for all $n \geq 2$.
+Claim gap: NONE. (Minor omission: the claim that no car initially to the right of the minimum-width car can ever cross to its left is stated without explicitly invoking the length constraint, but the subsequent contradiction step correctly relies on the initial length ordering, making the logic sound.)
+Qualifications and supplied repairs: NONE. The omitted justification is a routine observation: any car initially to the right has strictly greater length, so it can never satisfy the $l_{\text{left}} < l_{\text{right}}$ condition required to swap left past the minimum-width car. This invariant is easily verified and does not require substantive repair.
+Decisive checks: Termination potential function (lines 6-7) correctly identifies that each allowed swap strictly decreases the count of length-increasing pairs by exactly 1, guaranteeing termination. Inductive step (lines 15-27) correctly identifies the minimum-width car, proves it must end at position 1 via a valid stability contradiction, and reduces to the $n-1$ case. The phrasing "does not permanently block any two cars in $X$ from becoming adjacent" (line 26) is informal but mathematically harmless since the minimum-width car is fixed at position 1 and never interacts with the remaining cars.
+
+## Proof B
+Established theorem: The procedure terminates in finite steps, and the final configuration is sorted in increasing order of width for all $n \geq 2$.
+Claim gap: NONE. (Same minor omission as A regarding crossing cars, resolved identically by the length constraint.)
+Qualifications and supplied repairs: NONE.
+Decisive checks: Termination argument (lines 4-8) correctly uses width inversions as a potential function; each allowed swap fixes exactly one adjacent width inversion without creating new ones, strictly decreasing the count. Inductive step (lines 15-25) mirrors A's logic but presents the reduction to $n-1$ cars more directly: once the minimum-width car is fixed at position 1, the remaining cars evolve under identical relative rules, cleanly invoking the inductive hypothesis without extraneous remarks. The contradiction at line 21 correctly leverages the initial length-sorted state and the stability condition.
+
+## Decision
+Winner: B
+Reason: Both proofs are mathematically correct and complete, following the same core strategy (termination via a strictly decreasing potential function, induction on $n$ using the minimum-width car). Proof B is marginally stronger due to tighter phrasing in the inductive reduction: it avoids Proof A's unnecessary and slightly confusing remark about cars "blocking" adjacency (line 26), and its termination argument via width inversions aligns more directly with the final sorted-state property. Both omit an explicit sentence justifying why initially-right cars cannot cross left, but this is a routine consequence of the length condition and does not affect validity. Given identical mathematical substance, B's cleaner execution and precision in the inductive step justify the preference.

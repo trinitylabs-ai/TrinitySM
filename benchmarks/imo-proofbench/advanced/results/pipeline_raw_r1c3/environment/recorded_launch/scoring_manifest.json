@@ -1,0 +1,14 @@
+{
+  "source_run": "/opt/proof-workshop/runs/advanced001_030_v263_v290_frozen_run01",
+  "source_manifest_sha256": "5362468de54306bd67747c3909e98bb44a207d1b2386401c5c2aaf706e8ad2ab",
+  "scorer_sha256": "ff0ec706ca68604bda672f0aca7d7390c757d888366b605c1e22a1b8c14b52ab",
+  "checkpoints": [
+    "raw",
+    "R1-C3"
+  ],
+  "workers": 4,
+  "trigger": "whole_problem_worker_finished",
+  "proof_inputs": "separate_completed_proof_snapshots",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh"
+}

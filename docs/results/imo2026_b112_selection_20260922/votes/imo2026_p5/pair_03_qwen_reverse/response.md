@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The functional equation $f(f(y)) = 2f(y) - y$ holds for all $y > 0$, implying $c(f(x)) = c(x)$ where $c(x) = f(x) - x$. The function $c(x)$ is non-negative on $\mathbb{R}_{>0}$ and satisfies the bounds $-g(x, z) \le c(x) - c(z) \le h(x, z)$ for all $x > 0$ and $z \in \text{Im}(f)$. The function $c$ is continuous at every point in the image of $f$.
+Claim gap: The proof that $c(x)$ is constant on $\text{Im}(f)$ contains a load-bearing gap. The argument in Step 28 relies on the density of $\{nc - mc' : n, m \in \mathbb{N}\}$ to make the sequences $z_1 + nc(z_1)$ and $z_2 + mc(z_2)$ arbitrarily close. This density claim fails when the ratio $c(z_1)/c(z_2)$ is rational, as the sequences form disjoint lattices that may maintain a positive minimum distance. The hand-wavy assertion that they can be made "close to it" does not rigorously force the bounds $g$ and $h$ to vanish, leaving the constancy of $c$ unproven for rational ratios.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Step 28's density argument is a demonstrated defect. For $c(z_1)=1, c(z_2)=2$ (rational ratio), the sequences $1+n$ and $1.1+2m$ maintain a minimum distance of $0.1$. Since $g(x,z)$ and $h(x,z)$ depend continuously on $|x-z|$, they remain bounded away from zero, failing to squeeze $|c(z_1)-c(z_2)|$ to zero. The continuity argument in Step 24 does not bridge this gap because it only establishes continuity on $\text{Im}(f)$, not global constancy.
+
+## Proof B
+Established theorem: All functions $f(x) = x + c$ for $c \ge 0$ are solutions. The proof rigorously establishes $f(f(y)) = 2f(y) - y$, $c(x) \ge 0$, and the symmetric bound $|c(x) - c(z)| \le (\sqrt{x} - \sqrt{z})^2$ for all $x, z \in \text{Range}(f)$. It proves $c(x)$ is constant on $S = \{x : c(x) > 0\}$ and demonstrates that if $S$ is non-empty, the set $Z = \{x : c(x) = 0\}$ must be empty, thereby establishing global constancy.
+Claim gap: NONE supported by checks.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Step 33's limit argument is verified. By selecting $m$ such that $z_{2,m} \le z_{1,n} < z_{2,m+1}$, the numerator $(z_{1,n} - z_{2,m})^2$ is strictly bounded by $c_2^2$, while the denominator $(\sqrt{z_{1,n}} + \sqrt{z_{2,m}})^2$ grows quadratically as $n \to \infty$. This forces the bound to zero for any $c_1, c_2 > 0$, correctly handling rational ratios without density assumptions. Step 38-43's topological argument correctly uses the bound on $f(x)$ and $f(z)$ to show $Z$ is open, and the monotonicity of $t + 2\sqrt{tc}$ rigorously extends $Z$ to cover $\mathbb{R}_{>0}$, forcing the dichotomy $S=\emptyset$ or $Z=\emptyset$.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete and rigorous derivation. Its constancy argument (Step 33) correctly handles all cases, including rational ratios of constants, by exploiting the specific quadratic decay of the bound $(\sqrt{x} - \sqrt{z})^2$ as arguments grow, avoiding the lattice gap that invalidates Proof A's density argument. Proof B's topological treatment of the zero-set $Z$ is also mathematically sound and complete, whereas Proof A leaves a critical gap in establishing that $c(x)$ is globally constant.

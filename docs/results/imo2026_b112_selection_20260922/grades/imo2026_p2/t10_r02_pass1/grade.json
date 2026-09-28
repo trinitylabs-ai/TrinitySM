@@ -1,0 +1,54 @@
+{
+  "problem_id": "imo2026_p2",
+  "submission_id": "proof_d01957b2e2e1ed79bd31f0b0472df20b",
+  "pass_index": 1,
+  "score": 4,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 4,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "local_nontrivial",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The decisive gap occurs after reducing the conclusion to the displayed trigonometric identity: the submission merely asserts that the remaining angle constraints make this identity true, without deriving or even algebraically formulating those constraints. This is the substantial missing elimination covered by Rules B and F.",
+    "summary": "The vector reduction of OM=ON, the sine-law derivations of the cotangent relations, and the circumcenter dot-product calculations are coherent and correct. They lead to an explicit, checkable trigonometric identity that is indeed true under the hypotheses, so Rule B permits a score of 4. However, proving that identity is the central hard part, and uniqueness of K and L does not imply it; the final paragraph supplies no proof of the required compatibility calculation.",
+    "strengths": [
+      "Correctly reduces OM=ON to a linear dot-product identity for the circumcenter.",
+      "Correctly obtains the relations cot(theta_K)=2cot(gamma)+cot(alpha) and cot(theta_L)=2cot(beta)+cot(alpha).",
+      "Correctly expresses the relevant dot products of O and reduces the goal to an explicit trigonometric equality."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The displayed final trigonometric identity is asserted rather than proved. In particular, the equalities angle LBK=beta and angle LCK=gamma are never converted into usable equations or employed in an elimination establishing the identity."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "proof_sha256": "d01957b2e2e1ed79bd31f0b0472df20bb958181043fa0dc91cda80fe47fc86b8",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "evidence_sha256": "b3d50b353fb2e0a83affd88a6b95cffbc3913ff706297a97eaee05450951d9e3",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p2/t10_r02_pass1/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "673a971654f9ee293a6de3f8d2f4a025cd68eb2fb0fc8db693382b24aa121850",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "b21aeb71fb55ef33e4f6ee45ee00103b98a6efc1ded0392cb3d363ceea59d632",
+    "raw_response_1.txt": "4bec6d25926871e343f6dec72127c08c010cd1aabe46e14dcde01a9b96ab8838",
+    "summary.json": "140fc29839102fd92d6f25c456b56aa4a6c0d040876b992fd726d20029365790"
+  }
+}

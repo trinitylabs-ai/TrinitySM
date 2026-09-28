@@ -1,0 +1,50 @@
+{
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_e25320a1c96a78094ed1f62c22ef4206",
+  "pass_index": 2,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; no grading rule imposes a cap.",
+    "summary": "The proof is complete and correct. The lexicographically decreasing pair (S,C) establishes finite termination, including the case gcd(m,n)=1. Primewise, the gcd of all valuation coordinates is invariant because the selected pair (x,y) becomes (min(x,y),|x-y|), which has the same gcd. At termination, the invariant rules out all entries being 1, so exactly one entry M exceeds 1, and its prime exponents are uniquely determined by the initial board.",
+    "strengths": [
+      "Correctly computes the change in the total number of prime factors counted with multiplicity.",
+      "Uses a valid well-founded lexicographic descent to prove termination.",
+      "Correctly identifies and proves the primewise valuation-gcd invariant.",
+      "Correctly reconstructs the unique terminal value M from its prime exponents."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "proof_sha256": "e25320a1c96a78094ed1f62c22ef42061291e99b256c96e8e28bd547b56fc572",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "evidence_sha256": "07044a06c087bb1e4fa0883b2609e51684a01301d7eb5ce7352355a8c214eeaa",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p1/t10_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "21b0213f6f616070a65f1eba394abfcd1b2afb6ad1f2c3436958303fb17e4b24",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "9cb9fde5adb36759b0aa4cd9c8143016f540755dcbe34b3bd57223f02f034b23",
+    "raw_response_1.txt": "1e66fee24357c2fb462506bd3db3b8e607011815a3dc919edfb0025f9a53d92a",
+    "summary.json": "e86a4d895072d958d353d16380d845ffbf1a6d39a73eed0e6e1000d671fb28bf"
+  }
+}

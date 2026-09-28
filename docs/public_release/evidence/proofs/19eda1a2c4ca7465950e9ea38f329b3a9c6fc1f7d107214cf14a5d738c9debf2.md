@@ -1,0 +1,41 @@
+To find the number of pairs of paths $f(n)$ on an $n \times n$ grid from $(0,0)$ to $(n,n)$ such that the $y$-coordinate of the first path $y_1(t)$ never exceeds the $y$-coordinate of the second path $y_2(t)$ at any timestep $t$, we use the Lindström-Gessel-Viennot (LGV) Lemma.
+
+### 1. Transformation to Non-Intersecting Paths
+The paths $P_1$ and $P_2$ are defined by the sequence of points $(x_i(t), y_i(t))$ for $t = 0, 1, \dots, 2n$. The condition $y_1(t) \le y_2(t)$ for all $t$ is equivalent to saying the paths are "non-crossing." To apply the LGV Lemma, which counts strictly non-intersecting paths, we shift the paths.
+Define shifted paths $P_1'$ and $P_2'$ as:
+- $P_1'$ starts at $A_1 = (1, 0)$ and ends at $B_1 = (n+1, n)$.
+- $P_2'$ starts at $A_2 = (0, 1)$ and ends at $B_2 = (n, n+1)$.
+
+A point on $P_1'$ is $(x_1(t)+1, y_1(t))$ and a point on $P_2'$ is $(x_2(t), y_2(t)+1)$. These paths intersect at time $t$ if and only if $x_1(t)+1 = x_2(t)$ and $y_1(t) = y_2(t)+1$, which implies $y_1(t) > y_2(t)$. Thus, the original paths satisfy $y_1(t) \le y_2(t)$ for all $t$ if and only if the shifted paths $P_1'$ and $P_2'$ are strictly non-intersecting.
+
+### 2. Applying the LGV Lemma
+The number of such pairs is given by the determinant of the matrix of the number of paths between the start and end points:
+\[ f(n) = \det \begin{pmatrix} N(A_1, B_1) & N(A_1, B_2) \\ N(A_2, B_1) & N(A_2, B_2) \end{pmatrix} \]
+where $N(A, B)$ is the number of paths from $A$ to $B$ using only right and up steps.
+- $N(A_1, B_1) = \binom{(n+1-1) + (n-0)}{n} = \binom{2n}{n}$
+- $N(A_1, B_2) = \binom{(n-1) + (n+1-0)}{n-1} = \binom{2n}{n-1}$
+- $N(A_2, B_1) = \binom{(n+1-0) + (n-1)}{n+1} = \binom{2n}{n+1}$
+- $N(A_2, B_2) = \binom{(n-0) + (n+1-1)}{n} = \binom{2n}{n}$
+
+Since $\binom{2n}{n-1} = \binom{2n}{n+1}$, the formula becomes:
+\[ f(n) = \binom{2n}{n}^2 - \binom{2n}{n-1}^2 \]
+
+### 3. Simplifying the Formula
+Using the identity $\binom{2n}{n-1} = \frac{n}{n+1} \binom{2n}{n}$, we have:
+\[ f(n) = \binom{2n}{n}^2 \left( 1 - \left(\frac{n}{n+1}\right)^2 \right) = \binom{2n}{n}^2 \frac{(n+1)^2 - n^2}{(n+1)^2} = \binom{2n}{n}^2 \frac{2n+1}{(n+1)^2} \]
+Recognizing the Catalan number $C_n = \frac{1}{n+1} \binom{2n}{n}$, we can write:
+\[ f(n) = C_n^2 (2n+1) \]
+
+### 4. Calculation for $n=10$
+For $n=10$:
+\[ \binom{20}{10} = \frac{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 184756 \]
+\[ C_{10} = \frac{184756}{11} = 16796 \]
+\[ f(10) = 16796^2 \cdot (2 \cdot 10 + 1) = 16796^2 \cdot 21 \]
+Calculating $16796^2$:
+\[ 16796^2 = 282105616 \]
+Multiplying by 21:
+\[ f(10) = 282105616 \cdot 21 = 5924217936 \]
+
+The number of pairs of paths is $5924217936$.
+
+\(\square\)

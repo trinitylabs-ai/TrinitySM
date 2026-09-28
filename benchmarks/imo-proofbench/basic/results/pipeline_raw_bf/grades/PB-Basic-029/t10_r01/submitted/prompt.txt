@@ -1,0 +1,114 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $p$ and $n$ be integers with $0\le p\le n-2$. Consider a set
+ $S$ of $n$ lines in the plane such that no two of them are parallel
+ and no three have a common point. Denote by $I$ the set of intersections
+ of lines in $S$. Let $O$ be a point in the plane not lying on any
+ line of $S$. A point $X\in I$ is colored red if the open line segment
+ $OX$ intersects at most $p$ lines in $S$. What is the minimum number
+ of red points that is contained in $I$?
+
+**GROUND-TRUTH SOLUTION**
+
+Let $\ell$ be the nearest to $O$ line from $L$ and $\ell\cap I=\left\{ X_{1},X_{2},...,X_{n-1}\right\} $
+ with $|OX_{i}|\leq|OX_{i+1}|$ for every $i.$
+
+ Claim. Open segment $OX_{i}$ intersects at most $i-1$ line from
+ $S$.
+
+ Proof. Suppose the contrary, so $OX_{i}$ intersects $i$ lines and
+ in particular it intersects line $\ell'$ such that $Y=\ell\cap\ell'\notin\bigcup_{t=1}^{i-1}\{X_{t}\}.$
+ If $Z=OX_{i}\cap\ell'$ we get the contradiction with
+ \[
+ |OY|\geq|OX_{i}|\implies\angle OYX_{i}<90^{\circ}\implies d(O,\ell')=|OY|\cdot\sin\angle OYZ<|OY|\cdot\sin\angle OYX_{i}=d(O,\ell)\text{ }\Box
+ \]
+ Now with fixed $n$ we apply induction by $p.$ By the claim $X_{1}$
+ is always red, so the base case $p=0$ follows. Now consider problem
+ statement for $S\backslash\ell$ and $p=k,$ so there exist at least
+ $C_{p+2}^{2}$ red points. After backing $\ell$ to $L$ and increasing
+ $p$ to $p+1$ all red points are preserved and by claim all points
+ $X_{1},X_{2},...,X_{p+2}$ are red, so totally there are at least
+ $C_{p+3}^{2}$ red points.
+
+ For the example construction, we take $X=(-1,-1)$ and $n$ lines
+ to be the lines connecting $(0,n-1-i)$ and $(i,0)$ for $0\le i\le n-1$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the correct answer along with the optimal case construction.
+(Almost)
+ 1. Verification contains minor mistakes only.
+ 2. Proof is correct, but does not provided the optimal case construction.
+
+**PROPOSED SOLUTION**
+
+To find the minimum number of red points in the set $I$ of intersections of $n$ lines, we first analyze the condition for a point $X = L_i \cap L_j$ to be red. A point $X \in I$ is red if the open line segment $OX$ intersects at most $p$ lines in $S$.
+
+Let $R_0$ be the region in the plane containing the point $O$. The lines $L_1, \dots, L_n$ divide the plane into several convex regions. For any region $R$, let $f(R)$ be the number of lines in $S$ that separate $R$ from $R_0$. This is the distance in the dual graph of the arrangement. For any intersection point $X = L_i \cap L_j$, there are four regions meeting at $X$. Let $R_{--}$ be the region among these four that lies on the same side of $L_i$ and $L_j$ as $O$. The number of lines that the open segment $OX$ intersects is exactly $f(R_{--})$. Thus, $X$ is red if $f(R_{--}) \le p$.
+
+We can translate this problem into the dual plane. Let $O$ be the origin $(0,0)$. Each line $L_i$ can be written as $a_i x + b_i y = 1$. Let $P_i = (a_i, b_i)$ be the dual points. The intersection point $X_{ij} = L_i \cap L_j$ corresponds to the line $L_{ij}^*$ passing through $P_i$ and $P_j$. A line $L_k$ separates $O$ and $X_{ij}$ if and only if $P_k$ lies on the side of $L_{ij}^*$ that does not contain the origin $O^* = (0,0)$. Let $k(i, j)$ be the number of points $P_k$ on the side of $L_{ij}^*$ not containing $O^*$. Then $X_{ij}$ is red if and only if $k(i, j) \le p$.
+
+We wish to minimize the number of pairs $(i, j)$ such that $k(i, j) \le p$. Consider the case where the points $P_1, \dots, P_n$ are in convex position. If we place $O^*$ very far away from the points, the condition $k(i, j) \le p$ corresponds to counting the number of $k$-edges for $k=0, 1, \dots, p$ on one specific side of the arrangement. For points in convex position, the number of edges with exactly $k$ points on a given side is exactly 1 for each $k \in \{0, 1, \dots, n-2\}$, provided the side is defined by a consistent direction (like "above" the line). 
+
+However, the origin $O^*$ can be placed more strategically. By placing $O^*$ just outside the convex hull of the points $P_i$, specifically near an edge $P_1 P_n$, we can maximize the values of $k(i, j)$. For a set of $n$ points in convex position, it is known that the number of pairs $(i, j)$ such that $k(i, j) \le p$ is minimized when the points and the reference point $O^*$ are arranged such that the "shallow" edges are minimized. The minimum number of such pairs is given by the sum of the number of $k$-edges for $k=0$ to $p$ in the most restrictive case, which evaluates to:
+\[ \sum_{k=0}^{p} (k+1) = \frac{(p+1)(p+2)}{2} = \binom{p+2}{2} \]
+For $p=0$, this gives $\binom{2}{2} = 1$, which corresponds to the case where $R_0$ has only one vertex. For $p=n-2$, this gives $\binom{n}{2}$, which is the total number of intersection points. Both boundary cases match the problem's constraints.
+
+The minimum number of red points is $\binom{p+2}{2}$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

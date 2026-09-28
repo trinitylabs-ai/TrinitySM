@@ -1,0 +1,122 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $S=\{0,1,2^{2024},3^{2024},\ldots\}$ be the set of all perfect
+ 2024-th powers. Find all polynomials $P$ with integer coefficients
+ such that $P(x)=s$ has an integer solution $x$ for every $s\in S$.
+
+**GROUND-TRUTH SOLUTION**
+
+Since $0$ is in $S$, there exists an integer $c$ such that $P(c)=0$.
+ We can write $P(x)=(x-c)^{n}Q(x)$ for some positive integer $n$
+ and integer coefficient polynomial $Q$ such that $Q(c)\ne0$.
+
+ \noindent Pick a prime number $q$ bigger than $|Q(c)|,|Q(c+1)|,|Q(c-1)|$.
+ For every positive integer $m$, there exists an integer $a$ such
+ that $P(a)=q^{2024m}$. Then, $(a-c)$ is a power of $q$.
+
+ \noindent If it is 1, it is a contradiction to the fact that $|Q(c+1)|,|Q(c-1)|<q$.
+ Therefore, $q$ divides $a-c$ and so $Q(a)-Q(c)$ is a multiple of
+ $q$, which shows that $Q(a)$ is not a multiple of $q$. Therefore,
+ $|Q(a)|=1$ and $|(a-c)^{n}|=q^{2024m}$. Therefore, $|Q(x)|=1$ for
+ infinitely many integers $x$ and so $Q(x)=1$ or $Q(x)=-1$. Then
+ $|P(x)|$ is always a $n$th power.
+
+ \noindent In this case we can easily see that $n$ needs to divide
+ $2024$. Moreover if $n$ is even and $Q(x)=-1$, $P$ is always negative
+ or 0 . Hence, the only possible solutions are of the form: $P(x)=(\pm(x+c))^{n}$
+ for some divisor $n$ of 2024. We can easily see that this satisfies
+ the problem conditions.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Observed that there must be an integer root $c$ and tried to analyze $P$ in terms of it (e.g. reducing without loss of generality to the case $P(0)=0$).
+ (Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To find all polynomials $P(x) \in \mathbb{Z}[x]$ such that $P(x) = s$ has an integer solution for every $s \in S = \{n^{2024} \mid n \in \mathbb{N}_0\}$, let $k = 2024$. The condition is that for every $n \in \mathbb{N}_0$, there exists $x \in \mathbb{Z}$ such that $P(x) = n^k$.
+
+1.  **Degree and Form Analysis**:
+    Let $m$ be the degree of $P$. If $m=0$, $P(x) = C$ cannot equal $n^k$ for all $n$. Thus $m \ge 1$.
+    For large $n$, let $x_n$ be a solution to $P(x) = n^k$. Since $P(x) = a_m x^m + \dots + a_0$, we have $a_m x_n^m \sim n^k$, so $x_n \sim (1/a_m)^{1/m} n^{k/m}$.
+    For $x_n$ to be an integer for all $n$, the growth rate $k/m$ must be an integer. Let $k/m = d$. Then $x_n \approx C n^d$. If $d$ were not an integer, the difference $x_{n+1} - x_n$ would not behave like an integer sequence. Specifically, for large $n$, if $d$ is not an integer, the $d$-th differences of $x_n$ would not be constant, and the sequence cannot consist of integers unless it is a polynomial in $n$.
+
+2.  **Hilbert's Irreducibility Theorem**:
+    Consider the polynomial $F(x, n) = P(x) - n^k \in \mathbb{Z}[x, n]$. For every $n \in \mathbb{Z}$, $F(x, n)$ has an integer root $x_n$, so $F(x, n)$ is reducible in $\mathbb{Z}[x]$ for all $n$. By Hilbert's Irreducibility Theorem, if a polynomial $F(x, n)$ is reducible for all $n$, it must be reducible as a polynomial in $\mathbb{Z}[x, n]$.
+    The factorization of $n^k - P(x)$ in $\mathbb{Z}[x, n]$ is a known problem. A result by Schinzel states that $n^k - P(x)$ is reducible in $\mathbb{C}[x, n]$ if and only if $P(x) = c(Q(x))^d$ for some $d > 1$ where $d \mid k$, or in the specific case $k=4, P(x) = -4Q(x)^4$.
+
+3.  **Testing Candidates**:
+    -   **Case 1: $P(x) = (ax+b)^m$ where $m \mid k$**.
+        Then $(ax+b)^m = n^k \implies ax+b = \pm n^{k/m}$. For $n=0$, $ax+b=0 \implies a \mid b$. Let $b=aq$. Then $a(x+q) = \pm n^{k/m}$. For $n=1$, $a(x+q) = \pm 1 \implies a = \pm 1$.
+        Thus $P(x) = (\pm x + b)^m$.
+        If $m$ is even, $P(x) = (x+b)^m$ or $P(x) = (-x+b)^m$, which are equivalent since $(-x+b)^m = (x-b)^m$.
+        If $m$ is odd, $P(x) = (x+b)^m$ or $P(x) = (-x+b)^m = -(x-b)^m$.
+    -   **Case 2: $P(x) = -(ax+b)^m$**.
+        If $m$ is even, $P(x) = -(ax+b)^m \le 0$. Since $n^k \ge 0$, this only has solutions for $n=0$. Thus $m$ must be odd.
+        If $m$ is odd, $-(ax+b)^m = n^k \iff (ax+b)^m = -n^k \iff ax+b = -n^{k/m}$. This requires $a = \pm 1$ as before.
+    -   **Case 3: $P(x) = -4Q(x)^4$**.
+        $-4Q(x)^4 = n^k$ for $n=1$ implies $Q(x)^4 = -1/4$, which has no real solutions.
+
+4.  **Conclusion**:
+    The polynomials that satisfy the condition are $P(x) = (x+b)^m$ for any $m \mid 2024$ and $b \in \mathbb{Z}$, and $P(x) = -(x+b)^m$ for any odd $m \mid 2024$ and $b \in \mathbb{Z}$.
+    Checking these:
+    - If $P(x) = (x+b)^m$, $x = n^{k/m} - b$ is an integer.
+    - If $P(x) = -(x+b)^m$ with $m$ odd, $x = -n^{k/m} - b$ is an integer (since $k/m$ is even, $n^{k/m} \ge 0$).
+
+The set of all such polynomials $P$ is $\{P(x) = (x+b)^m : m \mid 2024, b \in \mathbb{Z}\} \cup \{P(x) = -(x+b)^m : m \mid 2024, m \text{ is odd}, b \in \mathbb{Z}\}$. \(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

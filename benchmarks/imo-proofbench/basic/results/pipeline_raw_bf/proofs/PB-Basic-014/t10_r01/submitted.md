@@ -1,0 +1,35 @@
+To prove that one specific flag color is held by at least 200 Googlers, we can model the problem using the theory of hypergraphs.
+
+**1. Mathematical Modeling**
+Let $N = 2024$ be the number of Googlers. For each Googler $i \in \{1, 2, \dots, N\}$, let $F_i$ be the set of colors of the flags they hold. We are given that each Googler holds up to five flags, so $|F_i| \le 5$ for all $i$.
+The condition "any group of three Googlers will always have at least two people holding flags of the same color" means that for any three indices $i, j, k$, at least one pair among them must share a color. In terms of sets, this is expressed as:
+$$(F_i \cap F_j \neq \emptyset) \lor (F_i \cap F_k \neq \emptyset) \lor (F_j \cap F_k \neq \emptyset)$$
+In hypergraph theory, a matching is a collection of pairwise disjoint edges. The matching number $\nu(\mathcal{H})$ of a hypergraph $\mathcal{H} = \{F_1, \dots, F_N\}$ is the maximum size of a matching. The condition stated above implies that no three edges in $\mathcal{H}$ are pairwise disjoint, which is precisely the definition of $\nu(\mathcal{H}) \le 2$.
+
+**2. The Covering Number Lemma**
+The covering number $\tau(\mathcal{H})$ (also known as the hitting set number) is the minimum number of vertices (colors) needed to intersect every edge (Googler's flag set). We use the following lemma:
+*Lemma:* For any hypergraph $\mathcal{H}$ where the maximum edge size is $k$, $\tau(\mathcal{H}) \le k \cdot \nu(\mathcal{H})$.
+
+*Proof:* Let $M = \{F_{i_1}, \dots, F_{i_m}\}$ be a maximal matching in $\mathcal{H}$, where $m = \nu(\mathcal{H})$. Let $S$ be the set of all vertices contained in the edges of $M$, so $S = \bigcup_{j=1}^m F_{i_j}$. Since each edge in $M$ has size at most $k$, the size of the hitting set is $|S| \le mk = k\nu(\mathcal{H})$. Because $M$ is a maximal matching, any other edge $F_x \in \mathcal{H}$ must intersect at least one edge in $M$ (otherwise, $M \cup \{F_x\}$ would be a matching of size $m+1$, contradicting the maximality of $M$). Thus, every $F_x$ contains at least one element of $S$, making $S$ a hitting set. Therefore, $\tau(\mathcal{H}) \le |S| \le k\nu(\mathcal{H})$.
+
+**3. Application to the Problem**
+In this problem, $k=5$ and $\nu(\mathcal{H}) \le 2$. We must first consider the possibility of Googlers holding no flags ($F_i = \emptyset$).
+If two Googlers $i$ and $j$ held no flags, then for any other Googler $k$, the trio $\{i, j, k\}$ would have $F_i \cap F_j = \emptyset, F_i \cap F_k = \emptyset,$ and $F_j \cap F_k = \emptyset$, which violates the problem's condition. Thus, at most one Googler can have no flags.
+
+- **Case 1: No Googler has an empty set of flags.**
+  Here, $\nu(\mathcal{H}) \le 2$, so by the lemma, $\tau(\mathcal{H}) \le 5 \times 2 = 10$. Let $S$ be a hitting set of size $\tau \le 10$. Every Googler $i$ holds at least one color from $S$. Summing the degrees of the colors in $S$:
+  $$\sum_{c \in S} \text{deg}(c) = \sum_{i=1}^N |F_i \cap S| \ge \sum_{i=1}^N 1 = 2024$$
+  By the Pigeonhole Principle, there exists a color $c \in S$ such that:
+  $$\text{deg}(c) \ge \frac{2024}{\tau} \ge \frac{2024}{10} = 202.4$$
+  Since the number of Googlers must be an integer, $\text{deg}(c) \ge 203$.
+
+- **Case 2: Exactly one Googler $i$ has an empty set of flags.**
+  For any two other Googlers $j, k \neq i$, the trio $\{i, j, k\}$ must have at least two people sharing a color. Since $F_i = \emptyset$, it must be that $F_j \cap F_k \neq \emptyset$. This means the matching number of the remaining $N-1$ Googlers is $\nu(\mathcal{H} \setminus \{F_i\}) \le 1$.
+  By the lemma, $\tau(\mathcal{H} \setminus \{F_i\}) \le 5 \times 1 = 5$. Let $S$ be a hitting set of size $\tau \le 5$. Summing the degrees:
+  $$\sum_{c \in S} \text{deg}(c) \ge N-1 = 2023$$
+  By the Pigeonhole Principle, there exists a color $c \in S$ such that:
+  $$\text{deg}(c) \ge \frac{2023}{5} = 404.6 \implies \text{deg}(c) \ge 405$$
+
+In both cases, there exists a color held by at least 203 Googlers, which is greater than 200.
+
+\(\square\)

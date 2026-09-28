@@ -1,0 +1,68 @@
+{
+  "problem_id": "imo2026_p3",
+  "candidate": "t07_r01",
+  "group": "core",
+  "grader_candidate": "core_t07_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t07_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd.md",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+  "v1_score": 1,
+  "v1_grade": "docs/public_release/evidence/grades/ab97ed8995b70dc8d6e891826642f0b33e08b5debbddab59d11f8bc68a617bb0.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t07_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:15:08.122587+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proposed lower-bound strategy already fails at n=2: from Liu's pieces (3/5,1/5,1/5), Xiang can bisect the 3/5 piece, leaving lengths (3/10,3/10,1/5,1/5), so Liu receives only 1/2 rather than 3/5. Moreover, the true value at n=2 is 4/7, so the claimed final answer 3/5 is false; Rule A caps the score at 2.",
+    "summary": "The submission correctly models the drafting payoff using odd-ranked lengths and obtains the elementary bound S_L≥1/2, with a valid lower-bound construction for n=1. However, its general lower-bound construction is false, and its alleged upper bound consists only of approximation claims and does not prove an exact bound. Since the final formula is incorrect for every n≥2, only limited preliminary progress receives credit.",
+    "strengths": [
+      "Correctly identifies the alternating optimal-selection payoff as the sum of the odd-ranked piece lengths.",
+      "Correctly observes by pairing adjacent ranked pieces that Liu always receives at least half the total length.",
+      "The stated n=1 marking (2/3,1/3) does guarantee at least 2/3."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final formula (n+1)/(2n+1) is incorrect; for example, the actual value for n=2 is 4/7, not 3/5."
+      },
+      {
+        "severity": "major",
+        "description": "The claimed n=2 and general lower-bound construction is explicitly defeated by bisecting the large piece, as shown in the first issue."
+      },
+      {
+        "severity": "major",
+        "description": "The upper-bound argument is not a proof: making pieces merely 'close' to 1/(2n+1), obtaining a bound only 'significantly' close, or reasoning only 'for large n' cannot establish the required exact universal inequality."
+      },
+      {
+        "severity": "substantial",
+        "description": "In the odd-w_1 case the proof falls back on S_L≥1/2, which does not imply S_L≥(n+1)/(2n+1). Several accompanying estimates, such as r_1≥1/(2n+1), are also unjustified or false after the smaller parent pieces have been split."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "ea131f4c632134e46a061c497164a0be5a23c93dfcb38e6caeeb57c0d89c54ee",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

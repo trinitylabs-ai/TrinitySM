@@ -1,0 +1,43 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T17:35:40.805408+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 16,
+  "problem_id": "PB-Basic-016",
+  "case_id": "PB-Basic-016.generic.t07_r01",
+  "candidate_id": "t07_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/proofs/t07_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b7c61f1b0a854f75a7b8ffbb8c95ed45496ae0ef06e52fc526a08babda679cd6",
+  "reference_sha256": "a26399654be52ba0ffb8544a40186c12222e4ac40472531796bbc0390fa4a33e",
+  "proof_sha256": "7fb5b678d6b00be107b938431c15353f7317e44f7066f373a8321e1cf937db3d",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/tasks.json",
+  "task_manifest_sha256": "5039baa647efcb46330330160cdb4692ad07b3a6ab14df28b51c8db7e3f4e244",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The winding-number invariant is correctly defined, rigorously shown to remain unchanged under every permitted recoloring, and accurately evaluated as \\(-3\\) initially and \\(3\\) in the target state. This fully proves impossibility.",
+    "strengths": [
+      "Correctly handles both possible relationships between the neighbors of a repainted stone.",
+      "Computes the invariant accurately in both endpoint colorings.",
+      "Provides a complete equivalent alternative to the reference invariant."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "587aff872ee26585c68987611e0e0a1347012a9bb494c42429dfbb1c7a84b94b",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "e590f80df04677f188e5302520ea93b9d88505142c7542b442cd21cf0f8495bf",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9eae1cb89670c44a4bebcfb1b298f5b0dc87d50825dc0005c6361b799d786583",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Step 2 asserts without proof that the families of minimal hitting sets must stabilize. The stated reason about “filling the available prime space” is invalid because new terms may introduce arbitrarily many new primes. Establishing the required finiteness/stabilization is the central difficulty of the problem, so Rule E applies and caps the score at 3.",
+    "summary": "The support/hitting-set reformulation is useful, and conditional on a finite stabilized family, the periodicity of the corresponding union of sets of multiples is correctly identified. However, the proof omits the central finiteness argument. It also does not validly extend the resulting eventual description to all initial terms: the claim that a1 is the first such multiple is false (for example, with a1=6 the sequence is 6,8,10,..., while the stabilized candidates are all positive even integers, beginning with 2). Thus the submitted argument does not establish pure translation-periodicity for every n.",
+    "strengths": [
+      "Correctly translates the gcd conditions into intersections of prime-support sets.",
+      "Correctly observes that a hitting set contains a minimal hitting set for a finite family.",
+      "Correctly notes that multiples of finitely many fixed squarefree integers form a periodic set, with period given by their least common multiple."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The stabilization of the minimal hitting-set families is merely asserted. No finite universe or descending invariant is supplied, and the suggested termination mechanism is not valid. Proving this stabilization requires the main new structural idea of the problem."
+      },
+      {
+        "severity": "substantial",
+        "description": "Step 4 claims that the sequence coincides from a1 onward with all multiples associated to the stabilized family, but provides no compatibility argument for the terms before stabilization."
+      },
+      {
+        "severity": "minor",
+        "description": "The specific assertion that a1 is the first such multiple is false; a1 is an arbitrary allowed starting value and smaller qualifying multiples may exist."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:48:29.357814+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

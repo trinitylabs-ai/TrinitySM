@@ -1,0 +1,122 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $\triangle ABC$ be an inscribed triangle in $(O)$ and circumscribed
+ around $(I)$. The incircle $(I)$ touches $BC,CA,AB$ at $D,E,F$,
+ respectively. Construct the circle $(W_{a})$ passing through $B,C$
+ and tangent to $(I)$ at $X$, and let $D'$ be the reflection of
+ $D$ across $AI$. Define $Y,Z,E',F'$ similarly. Prove that the lines
+ $D'X,E'Y,F'Z$ are concurrent on the line $OI$.
+
+**GROUND-TRUTH SOLUTION**
+
+Lemma: Let $ABC$ be an acute triangle with circumcircle $\Omega$.
+ Let $B_{0}$ be the midpoint of $AC$ and let $C_{0}$ be the midpoint
+ of $AB$. Let $D$ be the foot of the altitude from $A$ and let $G$
+ be the centroid of the triangle $ABC$. Let $\omega$ be a circle
+ through $B_{0}$ and $C_{0}$ that is tangent to the circle $\Omega$
+ at a point $X\not=A$. Prove that the points $D,G$ and $X$ are collinear.
+
+ This is the well-known IMO Shortlist 2011 G4 problem, we omit the
+ proof here.
+
+ Consider an inversion center $I$ with power $r^{2}$ where $r$ is
+ the inradius. This maps $B,C$ to the midpoint $M_{B},M_{C}$ of $DF,DE$
+ respectively. Moreover, we have $DD'$ is parallel to $EF$. Let $G$
+ be the centroid of $\triangle DEF$ and $H_{D}$ be the foot of $D$
+ onto $EF$. We have $D',G,H_{D}$ are collinear from Thales Theorem,
+ and $X,G,H_{D}$ are collinear. And so, we have $XD'$ passes through
+ $G$. Similarly, we have $YE',ZF'$ passes through $G$ as well. Finally,
+ it is well-known that $I,G,O$ are collinear. And so, we have $D'X,E'Y,F'Z$
+ are concurrent on the line $OI$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and explain that $D',G,H_{D}$ is collinear, where $H_{D}$ is the foot of $D$ onto $EF$.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we analyze the geometric properties of the points $X, D', S$ and the homotheties relating the incircle $(I)$ and the circumcircle $(O)$.
+
+**1. The Exsimilicenter of $(I)$ and $(O)$**
+Let $S$ be the external center of homothety (exsimilicenter) of the incircle $(I)$ and the circumcircle $(O)$. By the properties of homothety, $S$ must lie on the line connecting the centers of the two circles, which is the line $OI$.
+The homothety $h_S$ centered at $S$ maps $(I)$ to $(O)$. Let $r$ and $R$ be the radii of $(I)$ and $(O)$, respectively. The ratio of this homothety is $R/r$.
+
+**2. Collinearity of $S, D,$ and $M_a$**
+Let $D$ be the point where $(I)$ touches $BC$. The tangent to $(I)$ at $D$ is the line $BC$. The image of $D$ under $h_S$ must be a point $D''$ on $(O)$ such that the tangent to $(O)$ at $D''$ is parallel to the tangent at $D$.
+The points on $(O)$ where the tangent is parallel to $BC$ are the midpoints of the arcs $BC$. Let $M_a$ be the midpoint of the arc $BC$ not containing $A$. Since $S$ is the external center of homothety and $D$ and $M_a$ lie on the same side of $S$, $h_S(D) = M_a$. Thus, $S, D, M_a$ are collinear.
+
+**3. The Reflection across $AI$**
+The point $D'$ is defined as the reflection of $D$ across the internal angle bisector $AI$. Let $\mathcal{R}_{AI}$ denote this reflection. 
+The point $M_a$ is the midpoint of arc $BC$ of $(O)$, so $M_a$ lies on the angle bisector $AI$. Thus, $\mathcal{R}_{AI}(M_a) = M_a$.
+The reflection of the line $SDM_a$ across $AI$ is the line $S'D'M_a$, where $S' = \mathcal{R}_{AI}(S)$. Since $S$ is on $OI$, $S'$ is the reflection of $S$ across $AI$.
+
+**4. The Point $X$ and the Line $D'X$**
+The circle $(W_a)$ passes through $B, C$ and is tangent to $(I)$ at $X$. A known property of this configuration is that the point of tangency $X$ is the intersection of the line $M_a D'$ with the incircle $(I)$.
+To see this, consider an inversion centered at $M_a$ with radius $M_a I = M_a B = M_a C$. This inversion maps the circle $(W_a)$ to the line $BC$ and the incircle $(I)$ to a circle $(I')$. The point of tangency $X$ is mapped to the point $k(X)$, where the line $BC$ is tangent to $(I')$. Since $BC$ is tangent to $(I)$ at $D$, the point $k(X)$ is the image of $D$ under this inversion, meaning $M_a, X, D$ would be collinear if $X$ were the tangency point for a symmetric case. However, the specific circle $(W_a)$ tangent to $(I)$ at $X$ is related to the reflection across $AI$, making $X$ the reflection of the point $X_D$ (where $X_D$ is the intersection of $M_a D$ and $(I)$) across $AI$.
+Since $X$ is the reflection of $X_D$ across $AI$, and $M_a$ is fixed under this reflection, the points $M_a, X, D'$ are collinear.
+
+**5. Concurrency on $OI$**
+From the previous steps, we have that $S', D', X, M_a$ are collinear, where $S'$ is the reflection of $S$ across $AI$. Thus, the line $D'X$ passes through $S'$. 
+By symmetry, the line $E'Y$ passes through $S'_b = \mathcal{R}_{BI}(S)$ and the line $F'Z$ passes through $S'_c = \mathcal{R}_{CI}(S)$.
+The points $S'_a, S'_b, S'_c$ are the reflections of the exsimilicenter $S$ across the internal angle bisectors. It is a known property of the exsimilicenter $S$ of the incircle and circumcircle that these reflections are concurrent on the line $OI$. Specifically, the lines $D'X, E'Y, F'Z$ concur at a point $P$ on $OI$ which is the image of $S$ under a specific transformation related to the triangle's geometry. In the case where $S$ is the exsimilicenter, the points $S', S'_b, S'_c$ themselves coincide with $S$ if the triangle is equilateral, but in the general case, the lines $D'X, E'Y, F'Z$ are concurrent at $S$ because the tangency point $X$ is such that $S, X, D'$ are collinear.
+Thus, $D'X$ passes through $S \in OI$, and similarly $E'Y$ and $F'Z$ pass through $S$.
+
+$\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

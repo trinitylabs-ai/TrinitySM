@@ -1,0 +1,59 @@
+{
+  "problem_id": "imo2026_p1",
+  "candidate": "t07_r02",
+  "group": "core",
+  "grader_candidate": "core_t07_r02",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t07_r02.md",
+  "source_proof": "docs/public_release/evidence/proofs/a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b.md",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+  "v1_score": 7,
+  "v1_grade": "docs/public_release/evidence/grades/a87548aa372dd9ea6fa391dfdb7059570172fa04effedb49f7e157f8bfbfd110.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t07_r02.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:11:39.660466+00:00",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F imposes a deduction.",
+    "summary": "The proof is complete and correct. The lexicographic potential establishes termination, the process cannot eliminate every entry greater than 1, and the primewise gcd of valuations is correctly shown to be invariant and to determine the unique terminal value.",
+    "strengths": [
+      "Correctly computes that each move divides the total product by gcd(m,n).",
+      "Uses a valid lexicographic descent argument, including the coprime case.",
+      "Correctly proves that every terminal board has exactly one entry greater than 1.",
+      "Identifies and proves the invariant gcd of the p-adic valuations for every prime p.",
+      "Correctly reconstructs the terminal integer solely from the initial board."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 2,
+    "total_attempts": 2,
+    "rejected_attempts_before_selection": 1,
+    "failed_process_attempts": [
+      {
+        "attempt": 1,
+        "returncode": 1,
+        "reason": "model_capacity"
+      }
+    ],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "80fb7593992e82b41e505cb39d4e38fdc698c4b5ae98cbf64342214412350be5",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 1
+}

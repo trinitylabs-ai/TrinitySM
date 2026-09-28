@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-026",
+  "problem": "Let $n$ and $k$ be positive integers with $k<n$. Let $P(x)$ be\n a polynomial of degree $n$ with real coefficients, nonzero constant\n term, and no repeated roots. Suppose that for any real numbers $a_{0},a_{1},\\dots,a_{k}$\n such that the polynomial $a_{k}x^{k}+\\dots+a_{1}x+a_{0}$ divides\n $P(x)$, the product $a_{0}a_{1}\\dots a_{k}$ is zero. Prove that\n $P(x)$ has a non-real root."
+}

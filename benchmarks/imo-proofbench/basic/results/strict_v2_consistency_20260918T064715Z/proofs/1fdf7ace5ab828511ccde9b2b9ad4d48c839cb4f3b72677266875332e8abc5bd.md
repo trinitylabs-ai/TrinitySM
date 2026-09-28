@@ -1,0 +1,28 @@
+To find the minimum possible value of $A$, the number of triples $1 \le i < j < k \le 18$ for which $a_i + a_j + a_k \ge 3m$, where $m$ is the average of $a_1, a_2, \dots, a_{18}$, we first simplify the expression by shifting the variables.
+
+Let $x_i = a_i - m$ for $i = 1, 2, \dots, 18$. The condition that the average of $a_i$ is $m$ implies that the sum of $x_i$ is zero:
+\[ \sum_{i=1}^{18} x_i = \sum_{i=1}^{18} (a_i - m) = \left( \sum_{i=1}^{18} a_i \right) - 18m = 18m - 18m = 0. \]
+The condition $a_i + a_j + a_k \ge 3m$ is equivalent to $(x_i + m) + (x_j + m) + (x_k + m) \ge 3m$, which simplifies to $x_i + x_j + x_k \ge 0$. We want to find the minimum number of such triples $A$ given $\sum x_i = 0$.
+
+Consider the strategy of having one large positive number and 17 small negative numbers. Let $x_1 = 17$ and $x_2 = x_3 = \dots = x_{18} = -1$.
+- Any triple containing $x_1$ has the form $(x_1, x_j, x_k)$ for $2 \le j < k \le 18$. The sum is $17 + (-1) + (-1) = 15$, which is $\ge 0$. There are $\binom{17}{2}$ such triples.
+- Any triple not containing $x_1$ has the form $(x_i, x_j, x_k)$ for $2 \le i < j < k \le 18$. The sum is $(-1) + (-1) + (-1) = -3$, which is $< 0$. There are $\binom{17}{3}$ such triples.
+Thus, for this distribution, $A = \binom{17}{2} = \frac{17 \times 16}{2} = 136$.
+
+Now we consider if a smaller value of $A$ is possible by varying the number of positive values $k$. Suppose $x_1 = \dots = x_k = M$ and $x_{k+1} = \dots = x_{18} = -\epsilon$ for $M, \epsilon > 0$. To satisfy $\sum x_i = 0$, we have $kM = (18-k)\epsilon$, so $M = \frac{18-k}{k}\epsilon$.
+A triple is $\ge 0$ if:
+1.  It has 3 positive numbers: $\binom{k}{3}$ triples. Always $\ge 0$.
+2.  It has 2 positive numbers and 1 negative number: $\binom{k}{2}(18-k)$ triples. The sum is $2M - \epsilon = \frac{36-2k-k}{k}\epsilon = \frac{36-3k}{k}\epsilon$. This is $\ge 0$ if $k \le 12$.
+3.  It has 1 positive number and 2 negative numbers: $k\binom{18-k}{2}$ triples. The sum is $M - 2\epsilon = \frac{18-k-2k}{k}\epsilon = \frac{18-3k}{k}\epsilon$. This is $\ge 0$ if $k \le 6$.
+
+Calculating $A$ for different $k$:
+- If $k=1$, $A = 0 + 0 + 1 \cdot \binom{17}{2} = 136$.
+- If $k=2$, $A = 0 + 1 \cdot 16 + 2 \cdot \binom{16}{2} = 16 + 240 = 256$.
+- If $6 < k \le 12$, the 1-positive triples are negative, so $A = \binom{k}{3} + \binom{k}{2}(18-k)$. For $k=7$, $A = \binom{7}{3} + \binom{7}{2}(11) = 35 + 231 = 266$.
+- If $k > 12$, the 2-positive triples are also negative, so $A = \binom{k}{3}$. For $k=13$, $A = \binom{13}{3} = 286$.
+
+Comparing these results, the minimum value is 136. Any other distribution of $x_i$ for a fixed $k$ will either increase the number of non-negative triples or fail to decrease them below the symmetric case. For $k=1$, the count is always at least $\binom{17}{2}$ if $x_1$ is large enough to offset any two other numbers; if $x_1$ is smaller, some triples containing $x_1$ become negative, but then some triples not containing $x_1$ must become non-negative to maintain $\sum x_i = 0$.
+
+The minimum possible value of $A$ is 136.
+
+\(\square\)

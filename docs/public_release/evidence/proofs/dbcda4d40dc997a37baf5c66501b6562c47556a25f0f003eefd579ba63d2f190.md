@@ -1,0 +1,22 @@
+To prove that for any positive integer $N$, the inequality $\left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1$ holds, where $\delta(n)$ is the largest odd divisor of $n$, we proceed as follows.
+
+Let $S(N) = \sum_{n=1}^N \frac{\delta(n)}{n}$. We first derive a recurrence relation for $S(N)$. Consider the sum $S(2N)$:
+\[ S(2N) = \sum_{n=1}^{2N} \frac{\delta(n)}{n} = \sum_{m=1}^N \frac{\delta(2m)}{2m} + \sum_{m=1}^N \frac{\delta(2m-1)}{2m-1} \]
+By the definition of $\delta(n)$, for any integer $m$, the largest odd divisor of $2m$ is the same as the largest odd divisor of $m$, so $\delta(2m) = \delta(m)$. For the odd integers $2m-1$, the largest odd divisor is the number itself, so $\delta(2m-1) = 2m-1$. Substituting these into the expression for $S(2N)$, we obtain:
+\[ S(2N) = \sum_{m=1}^N \frac{\delta(m)}{2m} + \sum_{m=1}^N \frac{2m-1}{2m-1} = \frac{1}{2} \sum_{m=1}^N \frac{\delta(m)}{m} + \sum_{m=1}^N 1 = \frac{1}{2} S(N) + N \]
+Now, let $f(N) = S(N) - \frac{2}{3}N$. We examine how $f(N)$ behaves under the recurrences. For $N$ even, let $N = 2m$:
+\[ f(2m) = S(2m) - \frac{2}{3}(2m) = \frac{1}{2} S(m) + m - \frac{4}{3}m = \frac{1}{2} S(m) - \frac{1}{3}m = \frac{1}{2} \left( S(m) - \frac{2}{3}m \right) = \frac{1}{2} f(m) \]
+For $N$ odd, let $N = 2m+1$:
+\[ f(2m+1) = S(2m+1) - \frac{2}{3}(2m+1) = S(2m) + \frac{\delta(2m+1)}{2m+1} - \frac{4}{3}m - \frac{2}{3} \]
+Since $2m+1$ is odd, $\frac{\delta(2m+1)}{2m+1} = 1$. Thus,
+\[ f(2m+1) = \left( S(2m) - \frac{4}{3}m \right) + 1 - \frac{2}{3} = f(2m) + \frac{1}{3} = \frac{1}{2} f(m) + \frac{1}{3} \]
+We now prove by induction that $0 < f(N) < \frac{2}{3}$ for all $N \ge 1$.
+Base case: For $N=1$, $S(1) = \frac{\delta(1)}{1} = 1$, so $f(1) = 1 - \frac{2}{3}(1) = \frac{1}{3}$. Clearly, $0 < \frac{1}{3} < \frac{2}{3}$.
+Inductive step: Assume $0 < f(k) < \frac{2}{3}$ for all $1 \le k < N$.
+- If $N=2m$, then $f(N) = \frac{1}{2} f(m)$. Since $0 < f(m) < \frac{2}{3}$, we have $0 < f(N) < \frac{1}{3} < \frac{2}{3}$.
+- If $N=2m+1$, then $f(N) = \frac{1}{2} f(m) + \frac{1}{3}$. Since $0 < f(m) < \frac{2}{3}$, we have $\frac{1}{3} < f(N) < \frac{1}{3} + \frac{1}{3} = \frac{2}{3}$.
+In both cases, $0 < f(N) < \frac{2}{3}$. By induction, the statement holds for all $N \ge 1$.
+
+Consequently, we have $|f(N)| < \frac{2}{3} < 1$ for all $N > 0$, which is exactly
+\[ \left| \sum_{n=1}^N \frac{\delta(n)}{n} - \frac{2}{3}N \right| < 1. \]
+\(\square\)

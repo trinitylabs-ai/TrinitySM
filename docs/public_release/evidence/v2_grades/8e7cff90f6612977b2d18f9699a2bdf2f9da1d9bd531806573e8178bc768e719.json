@@ -1,0 +1,59 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "6aba01adc7844ff535eec975e5debcb3fbb1ee4a2ed0262daed75246374f9190",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "b37c9bb4336f2a1e36dcf006dc6d6538206bddc28e60fb38d71040cb9f2bfe39",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "8f2cd1bb79a3799c05f7e670d33a8c1b87186f18b2cf4546377c862055cf40dc",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument asserts, without derivation, bounds relating ε(y+c) to ε(y), and then claims these force convergence and constancy. This is the decisive classification step and is unsupported, so Rule E applies (maximum 3).",
+    "summary": "The final classification is correct, and the submission correctly verifies every function f(x)=x+c with c≥0. It also correctly handles the restricted ansatz f(x)=ax. However, it provides essentially no valid proof that an arbitrary solution must be a translation. The asserted recurrence bounds are not derived, c=f(1)-1 is not shown nonnegative before using x=y+c, and the claimed convergence and ensuing constancy do not follow from the displayed bounds. Repairing this requires the missing central structural argument, not a local correction.",
+    "strengths": [
+      "Correctly verifies the whole proposed family f(x)=x+c using AM-GM and RMS-AM.",
+      "Correctly concludes that the only solution within the homogeneous ansatz f(x)=ax is f(x)=x."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed bounds for ε(y+c) are introduced by saying they were found through growth analysis, with no calculation establishing them from the original inequalities."
+      },
+      {
+        "severity": "major",
+        "description": "Even assuming those bounds, the assertion that ε(y) must converge to a constant is unproved, and convergence would not imply that ε is identically constant on (0,∞). Thus the entire only-if direction remains missing."
+      },
+      {
+        "severity": "substantial",
+        "description": "For c=f(1)-1, the proof never establishes c≥0, so x=y+c is not necessarily an admissible positive input for every y>0."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:43:28.789925+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

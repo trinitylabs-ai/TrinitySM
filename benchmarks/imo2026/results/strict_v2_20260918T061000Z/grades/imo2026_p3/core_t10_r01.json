@@ -1,0 +1,67 @@
+{
+  "problem_id": "imo2026_p3",
+  "candidate": "t10_r01",
+  "group": "core",
+  "grader_candidate": "core_t10_r01",
+  "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t10_r01.md",
+  "source_proof": "docs/public_release/evidence/proofs/696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015.md",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+  "v1_score": 2,
+  "v1_grade": "docs/public_release/evidence/grades/9af286c73d5d5d23a4229a952118225062924afbcebdd7142ebb581a950c2870.json",
+  "v1_reconstructed_prompt_sha256": null,
+  "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t10_r01.json",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "completed_at": "2026-09-18T06:17:30.291423+00:00",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive error is the asserted maximization identity for the alternating discrepancy. Alternating signs in sorted order do not maximize the signed sum among all sign assignments of the prescribed cardinalities. For example, for (2/5,2/5,1/10,1/10,0), the alternating sum is 0, while the stated maximum is 4/5. Thus the entire Val_i argument is invalid.",
+    "summary": "The claimed value is false: the correct value is 2^n/(2^(n+1)-1), giving 4/7 when n=2 rather than the submitted 3/5, so Rule A caps the score at 2. Moreover, the proposed lower strategy already fails for n=2: after Liu creates gaps 2/5,2/5,1/5, Xiang can halve the last gap, producing 2/5,2/5,1/10,1/10, from which Liu receives only 1/2. The upper-bound section merely asserts an unproved approximation/pairing construction and does not control the number of cuts. Only the initial sorted-payoff/discrepancy setup is useful, warranting score 1.",
+    "strengths": [
+      "Correctly identifies Liu's drafting payoff as the sum of the odd-ranked lengths after sorting.",
+      "Correctly relates that payoff to the alternating discrepancy through 2L-1."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer is incorrect for every n beyond the coincidental n=1 case; Rule A applies."
+      },
+      {
+        "severity": "major",
+        "description": "The central signed-sum maximization identity is false, so the lower-bound argument does not follow."
+      },
+      {
+        "severity": "major",
+        "description": "The proposed lower-bound construction is explicitly defeated at n=2 by halving the 1/5 segment, yielding Liu only 1/2 instead of 3/5."
+      },
+      {
+        "severity": "major",
+        "description": "The upper bound relies on unsupported claims that n cuts can make all pieces or sorted pairs arbitrarily close; no valid allocation of the cuts or quantitative construction is proved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "native_scorer_failed": false,
+  "prompt_sha256": "d7c32910cfce47394e2db13530cdeb03222f1d1385d1fe39785c191f51f2519b",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true
+  },
+  "native_rejection_count": 0
+}

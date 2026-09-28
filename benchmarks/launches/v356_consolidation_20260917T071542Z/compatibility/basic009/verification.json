@@ -1,0 +1,33 @@
+{
+  "policy": "checked-discrete-certificates-v1",
+  "operation": "uniform_partition_count",
+  "verified": true,
+  "compilation_sha256": "ef38e1061ffadf7f52492aaaf8525819c1de92909adf2d631706cd3a1ad38a97",
+  "source_semantics_verified": false,
+  "numerical_sampling_used": false,
+  "conditional": true,
+  "partitions": 190590400,
+  "fixed_block_incidence": 1401400,
+  "lower_bound": 136,
+  "blocks_per_partition": 6,
+  "source_artifact_sha256": {
+    "theorem": "21facd69bd73bbd101aade54e6b142060098cec25db6843ec61f7a192924e150",
+    "proof": "9fe853ab7e59d304818d60d76deac4e2a603f70a843db0bfd6e1bd49070199a8",
+    "detection": "de2a5da65e1fddc6cd8e672cb4dc4a0e6ffc479af0bc5a37236cd233b48be7a5",
+    "matcher": "0ae45441cf63a8adcf166bfc884b5611377501ed3ba63fcf087ea9db8d2da675",
+    "draft": "9b45172a8c8ce1c95cec0cc12fa602dbb3a59580a0811dd6de61338f11de1226",
+    "compilation": "2d6d01172ab1c7ce3148fef19b42472930ef9a6cd54cc8ae41ec8adfcb805897",
+    "semantic_audit": "b531da5f9beea98b5e9f98721101d4acf1918ed8145bfbd6398e99314169dc26",
+    "audit_record": "63d9bf23efbf61d153383ed81ca2dcacafe475fbb0181323d892958460cb2851",
+    "audit_call": "9c56188f2c8e1fbe67d4c91343c184cb2c9519342cfc0428b1f87920890b6b71",
+    "formalizer_call": "4c97718c0fcc49651e57b3431d21741f4c0204206371d7ae24d81bd4fb30c3c7",
+    "certificate": "9a080fa56a4c58451b0146f84e34d8882bafc2e83989fc021ffd9eb74f677aa5"
+  },
+  "target_label_latex": "D",
+  "appendix_sha256": "722af759d9925af750a749723ddad477e423a3ebdb9ebbc941b86888a1674e62",
+  "certificate_derivation_supplied": true,
+  "model_must_prove_inserted_lemma": false,
+  "presentation_kind": "statement_with_verified_appendix",
+  "discrete_computation_replayed": true,
+  "source_binding": "independent_model_audit"
+}

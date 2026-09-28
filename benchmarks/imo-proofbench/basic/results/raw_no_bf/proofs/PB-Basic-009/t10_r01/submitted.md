@@ -1,0 +1,28 @@
+To find the minimum possible value of $A$, the number of triples $1 \le i < j < k \le 18$ for which $a_i + a_j + a_k \ge 3m$, we first simplify the problem. Let $x_i = a_i - m$. Then $\sum_{i=1}^{18} x_i = 0$, and we want to minimize the number of triples $(i, j, k)$ such that $x_i + x_j + x_k \ge 0$.
+
+Let $p$ be the number of positive $x_i$ and $n$ be the number of negative $x_i$. If $p=0$, then all $x_i = 0$ because their sum is 0, so $A = \binom{18}{3} = 816$. If $p > 0$, we consider the case where $p$ is small.
+For $p=1$, let $x_1 > 0$ and $x_2, \dots, x_{18} < 0$. Since $\sum x_i = 0$, we have $x_1 = \sum_{j=2}^{18} |x_j|$. A triple $(i, j, k)$ satisfies $x_i + x_j + x_k \ge 0$ only if $i=1$ (otherwise the sum of three negative numbers is negative). For $i=1$, the condition is $x_1 + x_j + x_k \ge 0$, which is $\sum_{m=2}^{18} |x_m| - |x_j| - |x_k| \ge 0$. This inequality is always true for any $j, k \in \{2, \dots, 18\}$ because the sum contains 17 terms, all of which are positive. Thus, all $\binom{17}{2}$ triples containing $x_1$ satisfy the condition.
+$A = \binom{17}{2} = \frac{17 \times 16}{2} = 136$.
+
+We test if $p=2$ can yield a smaller $A$. Let $x_1, x_2 > 0$ and $x_3, \dots, x_{18} < 0$. Let $S = \sum_{j=3}^{18} |x_j| = x_1 + x_2$. Triples that could be $\ge 0$ are $\{1, 2, k\}$ (16 triples), $\{1, j, k\}$ ($\binom{16}{2}$ triples), and $\{2, j, k\}$ ($\binom{16}{2}$ triples). The $\{1, 2, k\}$ triples are always positive since $x_1+x_2+x_k = S - |x_k| \ge 0$. For the others, we want to minimize the number of pairs $(j, k)$ such that $|x_j| + |x_k| \le x_1$ and $|x_j| + |x_k| \le x_2$. If we set $x_1$ to be very large and $x_2$ to be very small (approaching 0), the number of pairs satisfying the condition for $x_2$ drops to zero, and for $x_1$, it stays at $\binom{16}{2}$.
+$A \approx 16 + \binom{16}{2} + 0 = 16 + 120 = 136$.
+If we set $x_1 = x_2 = S/2$ and make $|x_j|$ very large for some $j$, say $|x_3| \approx S$ and $|x_j| \approx 0$ for $j > 3$, then $|x_3| + |x_k| > S/2$ for all $k$. The pairs satisfying the condition are those where neither index is 3. There are $\binom{15}{2} = 105$ such pairs.
+$A = 16 + 105 + 105 = 226$.
+
+We consider the case where $p$ is large. For $p=17$, let $x_1 = \dots = x_{17} = 1$ and $x_{18} = -17$. The only triples that can be $\ge 0$ are those with 0 or 1 negative number.
+Triples with 0 negatives: $\binom{17}{3} = \frac{17 \times 16 \times 15}{6} = 680$.
+Triples with 1 negative: $1+1-17 = -15 < 0$.
+So $A = 680$.
+
+For $n=4$, $x_1=x_2=x_3=1, x_4=-3$ gives $A=1$, while $\binom{n-1}{2} = 3$. This suggests a different strategy. For $n=18$, try $x_1 = \dots = x_{17} = 1$ and $x_{18} = -17$ again. We saw $A=680$. What if we take $x_1 = \dots = x_k = 1$ and $x_{k+1} = \dots = x_{18} = -k/(18-k)$?
+For $k=12$, $x_1 \dots x_{12}=1$ and $x_{13} \dots x_{18}=-2$.
+Triples:
+- 3 pos: $\binom{12}{3} = 220$. Sum $3 \ge 0$.
+- 2 pos, 1 neg: $\binom{12}{2} \binom{6}{1} = 66 \times 6 = 396$. Sum $1+1-2 = 0 \ge 0$.
+- 1 pos, 2 neg: $\binom{12}{1} \binom{6}{2} = 12 \times 15 = 180$. Sum $1-2-2 = -3 < 0$.
+- 0 pos, 3 neg: $\binom{6}{3} = 20$. Sum $-6 < 0$.
+$A = 220 + 396 = 616$.
+
+Comparing the cases, the minimum occurs at $p=1$. The minimum value is $\binom{17}{2} = 136$.
+
+\(\square\)

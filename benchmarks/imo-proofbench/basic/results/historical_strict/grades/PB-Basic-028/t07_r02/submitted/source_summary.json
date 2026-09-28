@@ -1,0 +1,48 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T20:06:47.509517+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 28,
+  "problem_id": "PB-Basic-028",
+  "case_id": "PB-Basic-028.generic.t07_r02",
+  "candidate_id": "t07_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/p28/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/p28/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/p28/proofs/t07_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "85f3b26c7decfd4b54801f9388779c6380fe9a809093698294c23a0183fb8b19",
+  "reference_sha256": "dbad64fe6dfad8a0e4d6c3d0c19da15955195bc4b4ce538dd181477de939441d",
+  "proof_sha256": "9039eaa9f8f45288229af3101a5bb5c68a4b9b6ef5e0d8731815bc2ee79a250f",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T200358334248Z/inputs/tasks.json",
+  "task_manifest_sha256": "7d1d26f45d20dee35c6ace65437c3df928504109f7c940f9dc262c8190cf3a66",
+  "grade": {
+    "score": 6,
+    "verdict": "minor_gap",
+    "answer_supported": true,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "minor_deduction",
+    "first_issue": "The proof verifies that the desired value of \\(z=AX\\) is a root of the tangency quadratic but never shows that it is the root corresponding to the circle closer to \\(A\\).",
+    "summary": "The coordinate setup, tangency equation, similarity \\(\\triangle AEF\\sim\\triangle ABC\\), and algebraic verification are correct. However, the quadratic has two positive roots, so merely verifying the desired value does not identify \\((W)\\). This is repaired directly using Vieta: the other root is \\(4R\\cos\\frac A2\\cos\\frac B2\\cos\\frac C2\\), and the submitted root is smaller.",
+    "strengths": [
+      "Correctly reduces the rhombus condition to \\(AX=AI'/(2\\cos(A/2))\\).",
+      "Correctly derives and verifies the quadratic relation imposed by external tangency.",
+      "Correctly computes \\(AI'=4R\\sin\\frac B2\\sin\\frac C2\\cos A\\)."
+    ],
+    "errors": [
+      {
+        "severity": "minor",
+        "description": "The decisive root-selection argument using the hypothesis that \\((W)\\) is closer to \\(A\\) is omitted."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "b4ca2d3fe747059dbd9e14a6afcc1c907674f8efdc236d3fbd0158c6a46a9d9a",
+  "problem_id": "imo2026_p3",
+  "repeat": 1,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "b38bce7da28b2772d24ef7ca9f4855e46a269d026227024ea4ef87f097c211bb",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "2038aac3b3739b8ec1c5870c356868343adc6649c2b8a6f0fc3f3348d27b8654",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claimed n=2 guarantee is false: after Liu creates lengths 1/5,1/5,3/5, Xiang can split the last piece into 1/4,1/4,1/10. The sorted lengths are 1/4,1/4,1/5,1/5,1/10, so Liu receives 1/4+1/5+1/10=11/20<3/5.",
+    "summary": "The final classification is demonstrably incorrect: for n=2 it gives 3/5, whereas the actual value is 4/7. Thus Rule A caps the score at 2. Moreover, the proposed n=2 construction itself fails by the explicit response above, and the general assertion that every other distribution is better for Liu is unsupported and false. No upper-bound strategy for Xiang is supplied, even in the n=1 discussion. Correct work is limited to a valid n=1 lower-bound construction and recognition that Liu receives the odd-ranked lengths.",
+    "strengths": [
+      "Correctly identifies the payoff as the sum of odd-ranked piece lengths under optimal alternating selection.",
+      "The marking at 1/3 correctly guarantees Liu at least 2/3 when n=1.",
+      "Attempts to examine concrete small cases before proposing a general construction."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer (n+1)/(2n+1) is false; already at n=2 the true value is 4/7, not 3/5. Rule A applies."
+      },
+      {
+        "severity": "major",
+        "description": "The load-bearing n=2 inequality p_(2)+p_(4)≤2/5 is false; the lengths 1/4,1/4,1/5,1/5,1/10 give an even-rank sum of 9/20."
+      },
+      {
+        "severity": "major",
+        "description": "The general claim that any alternative placement by Xiang can only improve Liu's payoff is asserted without proof and is contradicted by the n=2 example."
+      },
+      {
+        "severity": "substantial",
+        "description": "The submission supplies no universal Xiang strategy establishing an upper bound, so it would not prove that its claimed guarantees are maximal even if its lower-bound construction worked."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T16:44:19.224671+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00003",
+  "native_rejection_count": 0
+}

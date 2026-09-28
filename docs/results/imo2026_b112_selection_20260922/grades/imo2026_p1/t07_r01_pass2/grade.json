@@ -1,0 +1,51 @@
+{
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_fcf759b70024ce1070733207ecb524a7",
+  "pass_index": 2,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F imposes a cap.",
+    "summary": "The submission gives a complete and correct proof. The nonnegative integer measures N and S never increase and at least one strictly decreases in every move, establishing termination and leaving exactly one entry greater than 1. Primewise, the gcd of all p-adic exponents is invariant under the Euclidean transformation (a,b) to (min(a,b),|a-b|), so the unique terminal integer is determined by the initial board.",
+    "strengths": [
+      "Correctly computes the change in the total number of prime factors.",
+      "Correctly handles both gcd greater than 1 and coprime cases to prove termination.",
+      "Correctly proves that at least one entry greater than 1 always remains.",
+      "Identifies and proves the primewise exponent-gcd invariant.",
+      "Correctly reconstructs the terminal value as the product of primes raised to the invariant exponents."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "proof_sha256": "fcf759b70024ce1070733207ecb524a7f26e158aaea2e67ee919b7e1f93ff3e0",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "evidence_sha256": "c4c0b8e066f6a37c6e3319dfa122a84cddc5bf3f843d3bc2b2f30601197b5646",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p1/t07_r01_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "e5179ce7404e677e6122fd3ebdb0a5bd41013d56b94913671b62e944b008a784",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "9e22438d0a538cbba4e036f6b3e51aa554884b9d59eaca216a76f2304a6a25c8",
+    "raw_response_1.txt": "04a40916cea95251aefa2d51bdbe388e134f7cdbf41669fc21966b6e5f50df89",
+    "summary.json": "7bfd1882f22891b3d5c4cc068356ae1f4c614c6a5f073bd542204aa12e3d3b66"
+  }
+}

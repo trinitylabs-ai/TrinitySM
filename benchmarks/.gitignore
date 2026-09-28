@@ -1,0 +1,3 @@
+# Live work directories; selected proof/grade/provenance snapshots remain trackable.
+**/results/*/generation/run/
+**/results/*/grading/work/

@@ -1,0 +1,43 @@
+To find all polynomials $P(x)$ with real coefficients and leading coefficient 1 such that for all nonzero real numbers $x$,
+\[ P(x) + P(1/x) = \frac{P(x + 1/x) + P(x - 1/x)}{2}, \]
+let $n$ be the degree of $P$. We write $P(x) = \sum_{k=0}^n a_k x^k$ with $a_n = 1$.
+
+Let $L(x) = P(x) + P(1/x) = \sum_{k=1}^n a_k (x^k + x^{-k}) + 2a_0$.
+The right-hand side is $R(x) = \frac{1}{2} \sum_{k=0}^n a_k \left( (x + x^{-1})^k + (x - x^{-1})^k \right)$.
+Using the binomial theorem, we have:
+\[ (x + x^{-1})^k + (x - x^{-1})^k = \sum_{j=0}^k \binom{k}{j} x^{k-j} (x^{-1})^j (1 + (-1)^j) = 2 \sum_{j \text{ even}, 0 \le j \le k} \binom{k}{j} x^{k-2j}. \]
+Thus, $R(x) = \sum_{k=0}^n a_k \sum_{m=0}^{\lfloor k/2 \rfloor} \binom{k}{2m} x^{k-4m}$.
+
+We compare the coefficients of $x^N$ for $N > 0$ in $L(x)$ and $R(x)$. The coefficient of $x^N$ in $L(x)$ is $a_N$ (if $N \le n$, else $0$). The coefficient of $x^N$ in $R(x)$ is the sum of $a_k \binom{k}{2m}$ where $k-4m = N$ and $k \le n$. This can be written as $\sum_{m \ge 0, N+4m \le n} a_{N+4m} \binom{N+4m}{2m}$.
+For $N = n, n-1, n-2, n-3$, the only term in the sum is $m=0$, yielding $a_N = a_N \binom{N}{0} = a_N$, which provides no information.
+For $N = n-4$, if $n \ge 5$, the coefficient in $R(x)$ is $a_{n-4} \binom{n-4}{0} + a_n \binom{n}{2}$.
+Equating this to the coefficient in $L(x)$, we get $a_{n-4} = a_{n-4} + a_n \binom{n}{2}$.
+Since $a_n = 1$, we must have $\binom{n}{2} = 0$, which is impossible for $n \ge 5$. Thus, $n \le 4$.
+
+We now test the remaining possibilities for $n$:
+1.  If $n=0$, $P(x)=1$. Then $L(x)=2$ and $R(x)=1$. No solution.
+2.  If $n=1$, $P(x)=x+a$. Then $L(x)=x+1/x+2a$ and $R(x)=x+a$. No solution.
+3.  If $n=2$, $P(x)=x^2+ax+b$.
+    $L(x) = x^2 + 1/x^2 + a(x+1/x) + 2b$.
+    $R(x) = \frac{(x^2+2+1/x^2+ax+a/x+b) + (x^2-2+1/x^2+ax-a/x+b)}{2} = x^2 + 1/x^2 + ax + b$.
+    Equating coefficients: $a/x + b = 0 \implies a=0, b=0$. Thus $P(x)=x^2$.
+4.  If $n=3$, $P(x)=x^3+ax^2+bx+c$.
+    $L(x) = (x^3+1/x^3) + a(x^2+1/x^2) + b(x+1/x) + 2c$.
+    $R(x) = \frac{(x^3+3x+3/x+1/x^3) + a(x^2+2+1/x^2) + b(x+1/x) + c + (x^3-3x+3/x-1/x^3) + a(x^2-2+1/x^2) + b(x-1/x) + c}{2}$
+    $R(x) = x^3 + 3/x + a(x^2+1/x^2) + bx + c$.
+    Equating coefficients: $1/x^3 + b/x + c = 3/x \implies 1/x^3 + (b-3)/x + c = 0$. No solution.
+5.  If $n=4$, $P(x)=x^4+ax^3+bx^2+cx+d$.
+    $L(x) = (x^4+1/x^4) + a(x^3+1/x^3) + b(x^2+1/x^2) + c(x+1/x) + 2d$.
+    $R(x) = \frac{(x^4+4x^2+6+4/x^2+1/x^4) + a(x^3+3x+3/x+1/x^3) + b(x^2+2+1/x^2) + c(x+1/x) + d + (x^4-4x^2+6-4/x^2+1/x^4) + a(x^3-3x+3/x-1/x^3) + b(x^2-2+1/x^2) + c(x-1/x) + d}{2}$
+    $R(x) = x^4 + 6 + 1/x^4 + a(x^3 + 3/x) + b(x^2 + 1/x^2) + cx + d$.
+    Equating coefficients:
+    $x^3: a=a$
+    $x^1: c=c$
+    $x^{-1}: c=3a$
+    $x^{-3}: a=0 \implies a=0, c=0$.
+    $x^0: 2d = 6+d \implies d=6$.
+    $b$ can be any real number. Thus $P(x)=x^4+bx^2+6$.
+
+The possible polynomials are $P(x) = x^2$ and $P(x) = x^4 + bx^2 + 6$ for $b \in \mathbb{R}$.
+
+\(\square\)

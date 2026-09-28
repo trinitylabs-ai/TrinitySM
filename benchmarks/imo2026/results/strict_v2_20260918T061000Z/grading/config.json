@@ -1,0 +1,40 @@
+{
+  "policy_version": "strict-olympiad-v2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "adapter": "scripts/score_imo_v2.py",
+  "adapter_sha256": "606a0ed615543c0efb7420061b453ecba69aec7e17439d16a2497b976f8b4044",
+  "archived_scorer_hashes": {
+    "runner.py": "f9df6f07c15b0189e483a23a141412ce9e09b6e5b5ed70a4012130e2cc61eeb3",
+    "contract.py": "bae2836fe5e498b23b8607a4a330fa878b195f5d99e980c418a2f4aecf6566d4",
+    "grade_schema.json": "6c731fb4b521bebf050866086e958d343988a318f8f4118640d8bfef93dc4302"
+  },
+  "isolation": {
+    "suppress_unstable_features_warning": true,
+    "features.skip_host_skill_discovery": true,
+    "features.skill_search": false,
+    "features.plugins": false,
+    "features.remote_plugin": false,
+    "features.apps": false,
+    "features.shell_tool": false,
+    "features.unified_exec": false,
+    "features.code_mode": false,
+    "features.code_mode_host": false,
+    "features.multi_agent": false,
+    "features.multi_agent_v2": false,
+    "features.browser_use": false,
+    "features.computer_use": false,
+    "features.image_generation": false,
+    "features.view_image": false,
+    "features.memories": false,
+    "features.hooks": false,
+    "features.sleep_tool": false,
+    "features.goals": false,
+    "tools.view_image": false,
+    "tools.web_search": false,
+    "web_search": "disabled",
+    "project_doc_max_bytes": 0
+  },
+  "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c",
+  "max_attempts_per_proof": 2,
+  "retry_reason": "Process failure or invalid output only; never retry a valid grade for its score."
+}

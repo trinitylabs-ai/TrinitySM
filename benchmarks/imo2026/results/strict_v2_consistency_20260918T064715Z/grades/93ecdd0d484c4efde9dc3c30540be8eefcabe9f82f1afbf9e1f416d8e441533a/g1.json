@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "93ecdd0d484c4efde9dc3c30540be8eefcabe9f82f1afbf9e1f416d8e441533a",
+  "problem_id": "imo2026_p6",
+  "repeat": 1,
+  "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+  "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+  "proof_sha256": "2a5f9d2ad47fccdd0a1d45889d705657d9453c0fe3f3f01b063245bf23ae2815",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "abc685540dbe142432f2dbd784588280b052e0cf1ffffeca1a98a6b4ee3d06b3",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The claim that the families \\(\\mathcal G_n\\) eventually become constant is not proved. The asserted finiteness of minimal hitting sets applies only over a fixed finite prime universe, but no fixed finite universe is established: newly added prime-factor sets may introduce new primes indefinitely. Moreover, adding another set to a family makes the hitting condition harder, not “easier.” Thus the decisive stabilization claim is unsupported, invoking Rule E and capping the score at 3.",
+    "summary": "The proof gives a useful hitting-set formulation and correctly shows that, conditional on eventual stabilization of \\(\\mathcal G_n\\), the tail is periodic up to translation. However, stabilization is the central difficulty of the problem and the submitted termination argument does not establish it; repairing it requires a new finiteness argument comparable to the main content of the reference solution. There is also an additional unsupported jump from tail periodicity to periodicity for every index.",
+    "strengths": [
+      "Correctly translates the gcd conditions into a hitting-set condition on prime supports.",
+      "Correctly observes that for a fixed finite family \\(\\mathcal G\\), admissibility is periodic modulo the product of the primes occurring in \\(\\mathcal G\\).",
+      "Obtains the desired translation law for the tail, assuming the unproved stabilization claim."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The central assertion that \\(\\mathcal G_n\\) must stabilize is unsupported. The proof never bounds the set of primes that can appear, so finiteness for hitting sets over a fixed finite prime set is inapplicable."
+      },
+      {
+        "severity": "major",
+        "description": "The statement that if a chosen minimal hitting set \\(H\\notin\\mathcal G_n\\), then \\(\\mathcal P(a_{n+1})\\) is added to the minimal family is false in general: \\(\\mathcal P(a_{n+1})\\) may still contain another member of \\(\\mathcal G_n\\), leaving the family unchanged."
+      },
+      {
+        "severity": "substantial",
+        "description": "From the fact that all earlier sequence terms lie in the eventual periodic set \\(C\\), it does not immediately follow that the whole sequence is exactly the increasing enumeration of \\(C\\). One must also prove that no element of \\(C\\) was skipped in an earlier greedy gap, via a compatibility argument between \\(\\mathcal G_k\\) and the terminal family. This is not supplied."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:51:35.725039+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

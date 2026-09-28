@@ -1,0 +1,25 @@
+To prove that $\sum_{(a, b) \in S_{AB}} (b - a) \neq \sum_{(a, b) \in S_{BA}} (a - b)$, we define the two sums as follows:
+Let $\Sigma_{AB} = \sum_{(a, b) \in S_{AB}} (b - a)$ and $\Sigma_{BA} = \sum_{(a, b) \in S_{BA}} (a - b)$.
+We are given that the set $X = \{1, 2, \ldots, 2022\}$ is partitioned into two sets $A$ and $B$, each of size $m = 1011$.
+The set $S_{AB}$ consists of all pairs $(a, b) \in A \times B$ such that $a < b$, and the set $S_{BA}$ consists of all pairs $(a, b) \in A \times B$ such that $b < a$.
+
+Since $A$ and $B$ form a partition of $X$, we have $A \cap B = \emptyset$. Thus, for any pair $(a, b) \in A \times B$, it is impossible for $a$ to equal $b$. This implies that every pair $(a, b) \in A \times B$ must satisfy either $a < b$ or $b < a$. Consequently, the sets $S_{AB}$ and $S_{BA}$ partition the Cartesian product $A \times B$.
+
+Consider the difference between the two sums:
+\[ \Sigma_{AB} - \Sigma_{BA} = \sum_{(a, b) \in S_{AB}} (b - a) - \sum_{(a, b) \in S_{BA}} (a - b) \]
+Since $a - b = -(b - a)$, we can rewrite the second sum as:
+\[ -\sum_{(a, b) \in S_{BA}} (a - b) = \sum_{(a, b) \in S_{BA}} (b - a) \]
+Substituting this back into the expression for the difference, we obtain:
+\[ \Sigma_{AB} - \Sigma_{BA} = \sum_{(a, b) \in S_{AB}} (b - a) + \sum_{(a, b) \in S_{BA}} (b - a) = \sum_{(a, b) \in A \times B} (b - a) \]
+We can now evaluate this sum by splitting it:
+\[ \sum_{(a, b) \in A \times B} (b - a) = \sum_{a \in A} \sum_{b \in B} (b - a) = \sum_{a \in A} \left( \sum_{b \in B} b - \sum_{b \in B} a \right) \]
+Let $\Sigma A = \sum_{a \in A} a$ and $\Sigma B = \sum_{b \in B} b$. Since $|B| = m$, the inner sum $\sum_{b \in B} a$ is simply $ma$. Thus:
+\[ \Sigma_{AB} - \Sigma_{BA} = \sum_{a \in A} (\Sigma B - ma) = \sum_{a \in A} \Sigma B - m \sum_{a \in A} a \]
+Since $|A| = m$, the first term is $m \Sigma B$. Therefore:
+\[ \Sigma_{AB} - \Sigma_{BA} = m \Sigma B - m \Sigma A = m (\Sigma B - \Sigma A) \]
+For $\Sigma_{AB}$ to equal $\Sigma_{BA}$, we would need $m(\Sigma B - \Sigma A) = 0$. Since $m = 1011 \neq 0$, this would require $\Sigma A = \Sigma B$.
+However, we know that:
+\[ \Sigma A + \Sigma B = \sum_{i=1}^{2022} i = \frac{2022 \times 2023}{2} = 1011 \times 2023 \]
+Since both $1011$ and $2023$ are odd, their product $1011 \times 2023$ is odd. If $\Sigma A = \Sigma B$, then $\Sigma A + \Sigma B = 2 \Sigma A$, which must be an even number. This contradicts the fact that the total sum is odd. Thus, $\Sigma A \neq \Sigma B$, which implies $\Sigma_{AB} - \Sigma_{BA} \neq 0$.
+
+We conclude that $\sum_{(a, b) \in S_{AB}} (b - a) \neq \sum_{(a, b) \in S_{BA}} (a - b)$. \(\square\)

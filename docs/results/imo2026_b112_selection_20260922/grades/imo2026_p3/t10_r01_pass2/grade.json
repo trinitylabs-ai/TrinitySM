@@ -1,0 +1,66 @@
+{
+  "problem_id": "imo2026_p3",
+  "submission_id": "proof_03d5bd0a2f001ddd9a818b4ab44af3fb",
+  "pass_index": 2,
+  "score": 1,
+  "verdict": "incorrect",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The lower-bound argument first fails when it states that, for even N, S_Liu >= 1/2 > (n+1)/(2n+1); the displayed strict inequality is reversed. More decisively, Rule A applies because the final formula is false: for n=2 it gives 3/5, while the correct value is 4/7.",
+    "summary": "The submission correctly models the fixed-piece game using the odd-ranked lengths, but neither the lower nor upper bound is established. The proposed lower-bound marking already fails for n=2: with initial lengths 1/5, 2/5, 2/5, Xiang may split the 1/5 piece into 1/10+1/10 and one 2/5 piece into 39/100+1/100. The sorted pieces are 2/5, 39/100, 1/10, 1/10, 1/100, giving Liu only 51/100<3/5. The upper-bound section ultimately replaces the exceeded mark budget and failed equalization construction with an unsupported assertion. Substantially different lower and upper constructions are required.",
+    "strengths": [
+      "Correctly identifies that, once all pieces are fixed, Liu's optimal total is the sum of the odd-ranked lengths.",
+      "The proposed initial lengths form a valid partition of the unit stick.",
+      "The claimed formula agrees with the correct value in the isolated case n=1."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed answer (n+1)/(2n+1) is incorrect for n>=2; for example, at n=2 the correct value is 4/7 rather than 3/5. Rule A therefore caps the score at 2."
+      },
+      {
+        "severity": "major",
+        "description": "The lower bound does not handle arbitrary Xiang markings and is explicitly defeated by an admissible n=2 response. It analyzes only the special distribution m_1=0 and m_i=1, which Xiang is not required to use."
+      },
+      {
+        "severity": "substantial",
+        "description": "The even-N argument uses the false inequality 1/2>(n+1)/(2n+1); in fact the target is strictly greater than 1/2."
+      },
+      {
+        "severity": "major",
+        "description": "The upper-bound equalization proposal can require more than n marks, as the submission itself observes. The final claim that splitting the largest pieces ensures the bound is unsupported, so Rule E would independently apply absent the lower Rule A cap."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "proof_sha256": "03d5bd0a2f001ddd9a818b4ab44af3fb3335de68e3c0ec4a7d3323acb4fbb129",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "evidence_sha256": "55f32a138bdd6270b0cc4e3a8ef801c3e6efc31538caf035bc831c642813cc3d",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p3/t10_r01_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "2f2d49bbecb336d8e15afbced6d6b2876726d325dfeeca4b14a3394c60b818bb",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "e33e9076183c0ce4296f9572b15f8d7a57c59447889de62db7ed19bd4bcebb25",
+    "raw_response_1.txt": "5ba4b3a21b75563a407f1c210ccc335980816a293705dbee22a87f52d9752dd0",
+    "summary.json": "6771da03cfe9d35743d7e94d4de29601512695da358b05c04c07ea26d1404fd3"
+  }
+}

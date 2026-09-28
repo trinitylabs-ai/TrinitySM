@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Advanced-027",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "2be458142579e8c525412c9ad20339ec264235322e58f9ea43fb7ccfccfd86d0",
+  "proof": "evidence/proofs/2be458142579e8c525412c9ad20339ec264235322e58f9ea43fb7ccfccfd86d0.md",
+  "completed_at": "2026-09-17T20:25:43.080913+00:00",
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/advanced/results/advanced027_c3_t07r01_20260917T163503Z/grades/PB-Advanced-027/t07_r01/R1-C3/result.json",
+    "native_record_file_sha256": "276e7c3f075fbfcbbbed2c8682b4ec823e7a760deb5f5d432f356dafb197cde1",
+    "selected_record": "benchmarks/imo-proofbench/advanced/results/advanced027_c3_t07r01_20260917T163503Z/grades/PB-Advanced-027/t07_r01/R1-C3/result.json",
+    "selected_record_file_sha256": "276e7c3f075fbfcbbbed2c8682b4ec823e7a760deb5f5d432f356dafb197cde1",
+    "proof": "benchmarks/imo-proofbench/advanced/results/advanced027_c3_t07r01_20260917T163503Z/proofs/PB-Advanced-027/t07_r01/R1-C3.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "a952b42e27d7ccd1e4dffdb2842c057d88099aa3cffb6c70290faa13d3dd504a",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "bcf01ad0e4dc5e3a975291cfbd4efb8d435a18e997a1d0e039678c8a3bd97e7d",
+  "reference_sha256": "b98da3c7dee65c2c5fde180c1cb4f8cd6dc365314e080e20e566fc5b6ab65946",
+  "guidelines_sha256": "12d39f971dfc3ae7d92238688cee97491d3b6b3c98880fa27cfcd966b1259a2b",
+  "response_sha256": "27c965bdf50f5bc977716fb27a2c41bb11e33f2ce57b39280ece3b623e643efe",
+  "isolation_verified": true
+}

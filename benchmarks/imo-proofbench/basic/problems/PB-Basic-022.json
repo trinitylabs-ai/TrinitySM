@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Basic-022",
+  "problem": "Let $S=\\{0,1,2^{2024},3^{2024},\\ldots\\}$ be the set of all perfect\n 2024-th powers. Find all polynomials $P$ with integer coefficients\n such that $P(x)=s$ has an integer solution $x$ for every $s\\in S$."
+}

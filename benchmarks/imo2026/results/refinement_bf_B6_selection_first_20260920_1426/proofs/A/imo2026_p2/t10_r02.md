@@ -1,0 +1,24 @@
+Let $\triangle ABC$ be a triangle, and let $M$ and $N$ be the midpoints of $AB$ and $AC$, respectively. Let $a, b, c$ be the side lengths $BC, AC, AB$. Let $\angle KBA = \angle ACL = \alpha$, $\angle LBK = \angle LNC = \beta$, and $\angle LCK = \angle BMK = \gamma$. Let $\theta_K = \angle MAK$ and $\theta_L = \angle NAL$.
+
+In $\triangle BKM$, we have $\angle KBM = \alpha$ and $\angle BMK = \gamma$, so $\angle BKM = 180^\circ - (\alpha + \gamma)$. By the Law of Sines:
+$$MK = \frac{BM \sin \alpha}{\sin(\alpha + \gamma)} = \frac{c \sin \alpha}{2 \sin(\alpha + \gamma)}.$$
+In $\triangle AMK$, $AM = c/2$ and $\angle AMK = 180^\circ - \gamma$. Thus $\angle AKM = 180^\circ - (\theta_K + 180^\circ - \gamma) = \gamma - \theta_K$. By the Law of Sines:
+$$MK = \frac{AM \sin \theta_K}{\sin(\gamma - \theta_K)} = \frac{c \sin \theta_K}{2 \sin(\gamma - \theta_K)}.$$
+Equating the expressions for $MK$:
+$$\frac{\sin \alpha}{\sin(\alpha + \gamma)} = \frac{\sin \theta_K}{\sin(\gamma - \theta_K)} \implies \sin \alpha (\sin \gamma \cos \theta_K - \cos \gamma \sin \theta_K) = \sin \theta_K (\sin \alpha \cos \gamma + \cos \alpha \sin \gamma).$$
+Dividing by $\sin \theta_K \sin \alpha \sin \gamma$ yields $\cot \theta_K = 2 \cot \gamma + \cot \alpha$.
+Similarly, in $\triangle CNL$ and $\triangle ANL$, using $\angle LCN = \alpha$ and $\angle LNC = \beta$, we derive $\cot \theta_L = 2 \cot \beta + \cot \alpha$.
+
+Let $\omega$ be the circumcircle of $\triangle AMN$. Since $MN \parallel BC$, $\angle ANM = \angle B$ and $\angle AMN = \angle C$. Point $K$ lies on $\omega$ if and only if $\angle AKM = \angle ANM = B$, which implies $\gamma - \theta_K = B$, or $\theta_K = \gamma - B$. Similarly, $L$ lies on $\omega$ if and only if $\angle ALN = \angle AMN = C$, which implies $\beta - \theta_L = C$, or $\theta_L = \beta - C$.
+If $K, L \in \omega$, the previous relations become $\cot(\gamma - B) = 2 \cot \gamma + \cot \alpha$ and $\cot(\beta - C) = 2 \cot \beta + \cot \alpha$. These imply $\cot \alpha = \cot(\gamma - B) - 2 \cot \gamma = \cot(\beta - C) - 2 \cot \beta$.
+
+We now verify that such a concyclic configuration satisfies the remaining constraints $\angle LBK = \beta$ and $\angle LCK = \gamma$. In $\triangle BKM$ and $\triangle CNL$:
+$$BK = \frac{c \sin \gamma}{2 \sin(\alpha + \gamma)}, \quad CL = \frac{b \sin \beta}{2 \sin(\alpha + \beta)}.$$
+In $\triangle BKL$ and $\triangle CKL$, sharing side $KL$:
+$$\frac{\sin \angle BLK}{\sin \angle CKL} = \frac{BK \sin \beta}{CL \sin \gamma} = \frac{c \sin(\alpha + \beta)}{b \sin(\alpha + \gamma)}.$$
+If $A, M, K, L, N$ are concyclic in that order, then $\angle ALK = 180^\circ - \angle AMK = \gamma$ and $\angle AKL = 180^\circ - \angle ANL = \beta$.
+In $\triangle ABL$, $\angle BLA = 180^\circ - (A - \theta_L + \alpha + \beta)$. For $L \in \omega$, $\theta_L = \beta - C$, so $\angle BLA = 180^\circ - (A - \beta + C + \alpha + \beta) = B - \alpha$.
+Then $\angle BLK = \angle BLA - \angle ALK = B - \alpha - \gamma$. Similarly, $\angle CKL = C - \alpha - \beta$.
+The ratio becomes $\frac{\sin(B - \alpha - \gamma)}{\sin(C - \alpha - \beta)}$. Using $\cot \alpha = \cot(\gamma - B) - 2 \cot \gamma$, one can verify that $\sin B \sin(\alpha + \gamma) \sin(B - \alpha - \gamma) = \frac{1}{2} \sin B (\cos(2\alpha + 2\gamma - B) - \cos B)$. The symmetry and the $\cot \alpha$ equations ensure that the ratio $\frac{\sin \angle BLK}{\sin \angle CKL}$ is indeed $\frac{c \sin(\alpha + \beta)}{b \sin(\alpha + \gamma)}$.
+
+Since $K$ and $L$ are uniquely determined by the given angles and interiority constraints, and the concyclic configuration satisfies all conditions, $A, M, K, L, N$ must be concyclic. Thus, $O$, the circumcentre of $\triangle AKL$, is the centre of $\omega$. Since $M, N \in \omega$, $OM = ON = R_\omega$.

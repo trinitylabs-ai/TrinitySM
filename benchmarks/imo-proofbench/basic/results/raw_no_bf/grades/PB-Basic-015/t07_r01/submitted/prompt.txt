@@ -1,0 +1,104 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Adrian is lining up $n \geq 2$ toy cars in a row. Each car has a width and length, and no two cars have the same width or length. Initially, the cars are arranged in increasing order of length from left to right. Adrian repeatedly does the following: he chooses some two adjacent cars where the left car is shorter in length and greater in width than the right car, and he swaps them. He keeps doing this until no further moves are possible. Prove that no matter how Adrian chooses his swaps, the procedure will eventually terminate, and in the end, the cars will be sorted in increasing order of width from left to right.
+
+**GROUND-TRUTH SOLUTION**
+
+Define an inversion to be a pair of cars where the one on the left is wider than the one on the right. Clearly, each move strictly decreases the number of inversions, so the procedure must terminate.
+
+ Now, suppose for sake of contradiction that we can make no more moves, but the cars are not sorted in increasing order of width. Consider the smallest index $i$ such that car $i$ is wider than car $i + 1$. Since we cannot make any further swaps, it must also be the case that car $i$ is longer than book $i + 1$. This means that originally, car $i$ was to the right of car $i + 1$, and at some point they switched relative positions. However, this is not possible because the rules prevent us from ever swapping two books when one is both taller and wider than the other.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Found an increasing quantity (e.g. the number of inversion according to the width or length)
+ 2. Tried to use minimality argument by taking the first book not sorted by width.
+(Almost)
+ 1.  Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To prove that the procedure terminates and that the cars end up sorted by width, we proceed in two main stages: proving termination and proving the final state.
+
+### Part 1: Termination
+Let $Inv(w)$ be the number of pairs of cars $(C_i, C_j)$ such that $C_i$ is to the left of $C_j$ but $w_i > w_j$ (width-inversions).
+A swap occurs if two adjacent cars $C_{left}$ and $C_{right}$ satisfy $l_{left} < l_{right}$ and $w_{left} > w_{right}$. 
+1.  **Effect of a swap on $Inv(w)$:** When $C_{left}$ and $C_{right}$ are swapped, their relative order changes from $(C_{left}, C_{right})$ to $(C_{right}, C_{left})$. Since $w_{left} > w_{right}$, the pair was a width-inversion before the swap and is not one after.
+2.  **Other pairs:** Because the swapped cars were adjacent, the relative order of any other pair of cars $(C_a, C_b)$ remains unchanged. Thus, no other width-inversions are created or removed.
+3.  **Conclusion:** Every swap decreases $Inv(w)$ by exactly 1. Since $Inv(w)$ is a non-negative integer (bounded below by 0), the process must terminate after at most $n(n-1)/2$ swaps.
+
+### Part 2: The Final State
+We prove by induction on $n$ that the final state is sorted by width ($w_1 < w_2 < \dots < w_n$).
+
+**Base Case:** For $n=2$, cars $C_1, C_2$ are initially sorted by length ($l_1 < l_2$). If $w_1 < w_2$, no swap occurs, and they are sorted by width. If $w_1 > w_2$, they are swapped, and the final order is $(C_2, C_1)$, where $w_2 < w_1$. In both cases, the cars are sorted by width.
+
+**Inductive Step:** Assume the statement holds for $n-1$ cars. Let $C^*$ be the car with the maximum width $w^*$.
+1.  **Movement of $C^*$:** 
+    *   $C^*$ can only move to the right if it is the left car in a swap $(C^*, C_{right})$, which requires $l^* < l_{right}$ and $w^* > w_{right}$. Since $w^*$ is the maximum width, $w^* > w_{right}$ is always true.
+    *   $C^*$ can only move to the left if it is the right car in a swap $(C_{left}, C^*)$, which requires $l_{left} < l^*$ and $w_{left} > w^*$. However, $w_{left} > w^*$ is impossible as $w^*$ is the maximum.
+    *   Thus, $C^*$ can only move to the right and can never move to the left.
+2.  **Final position of $C^*$:** 
+    *   Initially, $C^*$ is to the right of all cars $C_k$ with $l_k < l^*$ and to the left of all cars $C_j$ with $l_j > l^*$.
+    *   Since $C^*$ cannot move left, it will always remain to the right of all cars $C_k$ with $l_k < l^*$.
+    *   In the final state, if $C^*$ were not at the far right, there would be some car $C_{next}$ immediately to its right. From the above, $C_{next}$ must have $l_{next} > l^*$. Since $w^* > w_{next}$, the pair $(C^*, C_{next})$ would satisfy the swap condition. This contradicts the termination of the procedure.
+    *   Therefore, $C^*$ must end up at the far right of the row.
+3.  **Ordering of the remaining cars:** 
+    *   Swaps involving $C^*$ only change the relative order of $C^*$ and some $C_j$. They do not change the relative order of any other pair of cars $(C_a, C_b)$ where $a, b \neq *$.
+    *   The remaining $n-1$ cars maintain their relative initial order (sorted by length). By the inductive hypothesis, the process applied to these $n-1$ cars will eventually sort them by width.
+    *   Since $C^*$ has the maximum width and is at the far right, the entire row is sorted by width.
+
+By induction, the cars will always end up sorted in increasing order of width from left to right. $\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,68 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "b6394cab815f2dbfd95ff2eadd3d1244667aac518057c1de74e4a1337d7bd9f0",
+  "problem_id": "imo2026_p3",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "ea131f4c632134e46a061c497164a0be5a23c93dfcb38e6caeeb57c0d89c54ee",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first load-bearing defect is the unsupported assertion that Xiang minimizes Liu's payoff by dividing each original piece equally (Rule E). The subsequent lower-bound analysis consequently does not cover arbitrary responses and soon makes a false claim: for n=2, the proposed partition (3/5,1/5,1/5) is defeated when Xiang bisects the 3/5 piece, producing (3/10,3/10,1/5,1/5), from which Liu receives only 1/2.",
+    "summary": "The final answer is demonstrably wrong: for n=2 the exact value is 4/7, not 3/5, so Rule A caps the score at 2. The proposed lower-bound construction already fails on n=2, and the upper-bound section provides only an approximation heuristic rather than an exact strategy for every Liu partition. Correcting the solution requires new dyadic lower-bound and refinement upper-bound ideas, not a local repair. The correct observations amount only to limited progress, warranting 1 point.",
+    "strengths": [
+      "Correctly identifies that optimal alternating selection yields the odd-ranked lengths after sorting.",
+      "Correctly observes the universal elementary bound that Liu's total is at least 1/2.",
+      "The proposed 2/3 marking gives a valid lower-bound construction for the special case n=1."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claimed value (n+1)/(2n+1) is incorrect; already at n=2 it differs from the true value 4/7. Rule A applies."
+      },
+      {
+        "severity": "major",
+        "description": "The n=2 lower-bound construction is explicitly false: bisecting its 3/5 interval gives Liu only 1/2 rather than 3/5."
+      },
+      {
+        "severity": "major",
+        "description": "The upper bound is not proved. Statements that pieces can be made 'close' to 1/(2n+1), that the excess is insignificant, or that a bound holds for large n do not establish the required exact inequality for every n and every initial partition."
+      },
+      {
+        "severity": "substantial",
+        "description": "The equal-splitting minimization assertion is unsupported, and the odd-w1 discussion derives only S_L>=1/2, which does not imply the claimed larger bound (n+1)/(2n+1)."
+      },
+      {
+        "severity": "substantial",
+        "description": "In the divisible special case, creating 2n+1 final pieces from m+1 initial pieces requires 2n-m cuts, exceeding Xiang's allowance n whenever m<n."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:46:36.359112+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "09feec4d18161c8e64bc71c0aa707238202bee41abb83c306069c4938d10c324",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "3543c519e2d6a6a82362b675d31617c62ed8b3e2e7ffb1d5034fdaf3ff8572cf",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "The conversion of ∠LBK = ∠LNC contains an incorrect cross-multiplication. With numerators n1,n2 and determinants D1,D2 as displayed, equality n1/D1 = n2/(2D2) gives D1 n2 - 2D2 n1 = 0, not D1 n2 - D2 n1 = 0. The analogous factor-of-two error occurs for the third angle equality. These are false load-bearing statements, so Rule C applies.",
+    "summary": "The coordinate reduction OM = ON iff PB = PC is correct, and the appendix supplies a detailed algebraic certificate for the desired consequence from the three correct polynomial relations. However, the submitted derivation of the second and third polynomial relations is false as written. The listed polynomials E2 and E3 correspond to the corrected cross-multiplications, so the repair is direct and localized, but the bridge from the geometric hypotheses to the algebraic lemma is not valid as submitted. This merits 5 under Rule C.",
+    "strengths": [
+      "Correctly linearizes the circumcenter conditions using P=2O.",
+      "Correctly proves that the target is equivalent to PB=PC.",
+      "Provides explicit polynomial relations and a finite algebraic certificate rather than merely asserting the final elimination.",
+      "The factor errors can be repaired without changing the overall strategy."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "Both the second and third angle equalities are cross-multiplied with a missing factor of 2. The subsequent polynomials are the corrected ones, not expansions of the equations actually displayed."
+      },
+      {
+        "severity": "minor",
+        "description": "The general cotangent formula is misstated: it uses vectors based at X rather than Y and omits the absolute value or an orientation/sign justification. The later concrete vectors partly correct the vertex issue, but the determinant signs are not explicitly established."
+      },
+      {
+        "severity": "minor",
+        "description": "The numerous nonzero guards are justified only by a blanket assertion that strict interior conditions fix their signs. The two guards actually used in the final algebraic certificate are readily derivable from barycentric coordinates, but those derivations are omitted."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:52:15.756226+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

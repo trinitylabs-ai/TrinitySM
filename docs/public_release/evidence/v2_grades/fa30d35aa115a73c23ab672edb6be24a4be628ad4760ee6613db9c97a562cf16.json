@@ -1,0 +1,64 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "97674d7ea54a6c40a5df67a7a689cdfecd44e48503489b7ea5de3f69ed9f8615",
+  "problem_id": "imo2026_p3",
+  "repeat": 2,
+  "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+  "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+  "proof_sha256": "36bdce13e8d12075f779f78da71579b0a2aebb363ca29dc20e9beb0e50614928",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "8bae817a7759fe7213f62ac2fb51321d2a82e826b30e9bec9373e4998e26a0a5",
+  "grade": {
+    "score": 1,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "Rule A applies already at n=2: the claimed value 2/3 is false, since the actual value is 4/7. Moreover, the submission's own legal split of the proposed (1/4,1/4,1/2) partition gives Xiang 5/12 and hence Liu only 7/12<2/3.",
+    "summary": "The submission correctly models play as taking odd-ranked piece lengths and gives a valid lower-bound strategy for n=1, but it neither proves the required upper bound there nor develops a valid general argument. Its n=2 calculations directly contradict its conclusion, and the asserted constant answer 2/3 is wrong; the correct value depends on n and equals 2^n/(2^(n+1)-1).",
+    "strengths": [
+      "Correctly observes that optimal drafting gives Liu the first, third, fifth, etc. largest pieces.",
+      "Provides a valid strategy guaranteeing at least 2/3 when n=1.",
+      "Correctly describes Xiang's marks as subdivisions of Liu's initial segments."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final classification c=2/3 for every n is false. In particular, c(2)=4/7, so Rule A caps the score at 2."
+      },
+      {
+        "severity": "major",
+        "description": "The general claim that equal initial segments guarantee 2/3 is unsupported and false. For n=2, starting from three equal thirds, Xiang may split one third into three ninths, leaving Liu 1/3+1/9+1/9=5/9."
+      },
+      {
+        "severity": "substantial",
+        "description": "The n=2 analysis is internally inconsistent: after computing a legal response with Xiang's share 5/12, it nevertheless concludes that Liu can guarantee 2/3 without addressing that counterexample or optimizing over all responses."
+      },
+      {
+        "severity": "substantial",
+        "description": "For n=1, only a lower-bound strategy is supplied; no argument shows that every Liu marking can be held to at most 2/3."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:45:56.038417+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Under the coordinate setup $D=(0,0)$, $BC$ on the $x$-axis, $A=(0,h)$, $B=(-b,0)$, $C=(c,0)$ with $h,b,c>0$ and $h^2>bc$ (acute condition), the proof correctly derives coordinates for $H, M, G, L, R, S, N, O$ and establishes the power-of-point relation $DQ \cdot DC = DO \cdot DP$ for $\odot(OCP)$. It verifies that if $DP = \sqrt{W}/h$, then $DQ=b$, which implies $AB=AQ$.
+Claim gap: The critical length $DP = \sqrt{W}/h$ is asserted without derivation (line 28). This skips the algebraic determination of $\odot(DKL)$ and its intersection with line $DN$. The gap is a missing computational bridge between the defined points $K, L$ and the chord length $DP$.
+Qualifications and supplied repairs: NONE. All coordinate derivations and power-of-point applications are verified as correct. The gap is purely the unshown algebraic simplification for $DP$.
+Decisive checks: Lines 3-10 projection formulas for $L$ verified via standard point-to-line projection. Lines 13-16 circle $\odot(AHG)$ coefficients and root product $x_G x_R = F = bc$ verified. Lines 31-35 power of point $D$ wrt $\odot(OCP)$ correctly applied as $DO \cdot DP = DC \cdot DQ$; arithmetic $DO \cdot DP = bc \implies DQ=b$ verified. Line 28 claim is unverified and lacks intermediate steps.
+
+## Proof B
+Established theorem: Uses identical coordinate setup ($a$ for $h$). Correctly derives all intermediate points. Explicitly establishes the algebraic relation $DP \cdot DN = |D_L x_N + E_L y_N|$ (lines 20-21) and provides the exact Cramer's rule formula for $D_L x_N + E_L y_N$ in terms of coordinates of $K, L, N$ (line 24). Shows that substituting coordinates yields $DP \cdot DN = 2bc$, which leads to $DQ=b$ and $AB=AQ$.
+Claim gap: The final substitution of coordinates into the line 24 formula to obtain $2bc$ is omitted (line 25). This is a routine but lengthy algebraic simplification. The gap is smaller in nature because the exact algebraic pathway is fully specified and verified.
+Qualifications and supplied repairs: NONE. The determinant formula in line 24 is independently verified via Cramer's rule on the system for circle coefficients through $D, K, L$. The power-of-point logic and final conclusion are verified.
+Decisive checks: Lines 20-21 derivation $DP \cdot DN = |D_L x_N + E_L y_N|$ verified by substituting $P=kN$ into circle equation $x^2+y^2+D_L x+E_L y=0$ and solving for $k$. Line 24 formula verified algebraically; matches standard solution for circle coefficients. Lines 27-31 power of point $D$ wrt $\odot(OCP)$ correctly yields $DQ \cdot c = \frac{1}{2}(2bc) = bc \implies DQ=b$. Conclusion $AB=AQ$ follows from perpendicular bisector property. Verified.
+
+## Decision
+Winner: B
+Reason: Both proofs correctly reduce the problem to a chord-length calculation via coordinate geometry and power-of-point arguments. Proof A asserts the critical length $DP = \sqrt{W}/h$ without justification, leaving a black-box gap. Proof B explicitly derives the algebraic mechanism linking $\odot(DKL)$ to the chord length (lines 20-21) and provides the exact determinant formula (line 24) that yields the required identity. This formula is independently verified and reduces the remaining gap to a standard coordinate substitution. Proof B's transparency in the algebraic structure makes it mathematically stronger and more rigorous as written.

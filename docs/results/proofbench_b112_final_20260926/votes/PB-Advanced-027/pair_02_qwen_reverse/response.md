@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The proof establishes that if the set of forbidden ratios $V$ is meager, Bob can construct a $K_\infty$ subgraph (non-planar). If $V$ is not meager, it deduces that $\text{cl}(V)$ has interior.
+Claim gap: The strategy for Case 2 (non-meager $V$) contains a significant logical defect. The argument relies on an area comparison to place a "killer" city $C_k$ in the killing zone of an existing edge $C_i C_j$. This requires the killing zone (a scaled copy of $V$) to have an area larger than the union of exclusion disks around existing cities. This condition depends on the length of the edge $|c_j - c_i|$ being sufficiently large. However, the proof fails to demonstrate that Bob can maintain long edges throughout the game. If Alice chooses $S$ such that $V$ is bounded (e.g., $V \subset D(0, M)$ with $M < 1$), placing a killer city necessarily creates shorter edges (scaling by factor $\le M$). Eventually, edges become too short for the killing zone to escape the exclusion disks, causing the strategy to fail. The text also contains index confusion ("When picking city $C_j$...") regarding which city's position is being controlled.
+Qualifications and supplied repairs: The derivation of the road condition and the definition of the forbidden set $V$ are correct. The Baire Category Theorem application in Case 1 is valid. The deduction that non-meager implies interior of closure is correct. The gap in Case 2 is a failure to justify the maintenance of edge lengths required for the area argument.
+Decisive checks: 
+- Line 3-5: Correct derivation of road condition and forbidden set $V$.
+- Line 15: Correct application of BCT for meager sets.
+- Line 20-22: The area argument $\text{Area}(B_{i,j}) > (k-1)\pi$ is valid *if* $|c_j - c_i|$ is large. The proof claims Bob ensures this by picking $C_j$ far away, but $C_j$ is an endpoint of an existing edge, so its position is fixed. The proof does not show how Bob ensures existing edges are long enough.
+
+## Proof B
+Established theorem: The proof establishes that if $\text{int}(\text{cl}(W)) = \emptyset$ (nowhere dense closure), Bob can construct a $K_5$ subgraph (non-planar). If $\text{int}(\text{cl}(W)) \neq \emptyset$, it argues Bob can kill all edges.
+Claim gap: Similar to Proof A, the strategy for Case 2 relies on the killing zone being large enough to contain a valid city placement. The proof states "By picking $z_m$ to be sufficiently far from the origin...", but $z_m$ is an existing city endpoint. It fails to rigorously justify that Bob can maintain long edges to keep killing zones large, especially if $W$ is bounded. However, the Case 1 strategy is simpler and more robust than A's, as it only requires preserving a finite $K_5$ rather than an infinite $K_\infty$, and the topological argument (nowhere dense sets) is cleanly applied.
+Qualifications and supplied repairs: The derivation of the road condition is correct. The case split covers all possibilities. The Case 1 argument is rigorous. The Case 2 argument has the same "small edge" vulnerability as Proof A but is presented with slightly less confusing indexing.
+Decisive checks:
+- Line 6-9: Correct derivation of road condition and forbidden set $W$.
+- Line 14-19: Case 1 strategy is sound. The union of nowhere dense sets is nowhere dense; its complement is dense. Intersection with the complement of finite disks (open dense) is non-empty. Bob can pick points to preserve $K_5$.
+- Line 21-26: Case 2 strategy relies on density in a ball. The claim that Bob can pick cities far away is asserted but not fully justified in the context of dynamic edge creation.
+
+## Decision
+Winner: B
+Reason: Both proofs suffer from a similar gap in Case 2 regarding the maintenance of long edges when the forbidden set is bounded. However, Proof B is superior because its Case 1 strategy (constructing $K_5$) is mathematically simpler and more robust than Proof A's strategy (constructing $K_\infty$). Proof A's Case 1 requires avoiding both $V$ and $V^{-1}$ for all future cities, a more complex constraint that is harder to justify rigorously in an inductive step. Proof B's Case 1 only requires avoiding the killing zones of a fixed finite set of edges, which is a standard and clean application of the Baire Category Theorem. Additionally, Proof B's case split (nowhere dense vs. interior closure) is topologically precise, whereas Proof A's split (meager vs. non-meager) is broader but the execution in Case 2 is marred by index confusion. Given the shared flaw in Case 2, the rigor of Case 1 decides the preference.

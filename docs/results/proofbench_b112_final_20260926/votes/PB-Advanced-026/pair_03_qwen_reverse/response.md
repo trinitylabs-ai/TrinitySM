@@ -1,0 +1,23 @@
+# Proof comparison
+
+## Proof A
+Established theorem: Under the assumption that all roots of $P(x)$ are real, distinct, and nonzero, the proof correctly reduces the problem to $n=k+1$. It establishes the identity $e_m(S_i) = R_m(r_i)$ linking elementary symmetric polynomials of root subsets to a family of polynomials $R_m(x)$. It correctly derives the bound $|S_m| \le \min(m, k-m)-1$ for $m \in \{2, \dots, k-2\}$ by showing that equality would force a subset of roots to be zero, contradicting $P(0) \neq 0$.
+Claim gap: The counting argument $n \le \sum_{m=1}^{k-1} |S_m|$ yields $k+1 \le \lfloor k^2/4 \rfloor - k + 3$, which fails to produce a contradiction for $k \ge 7$. The submission acknowledges this but asserts without proof that "the sum of these reduced capacities cannot cover $n$ distinct nonzero real roots for any $k < n$." This is a load-bearing gap; the derived bounds are asymptotically $\sim k^2/4$, which easily exceeds $k+1$ for large $k$, so the counting method is fundamentally insufficient for the general case.
+Qualifications and supplied repairs: NONE. The reduction to $n=k+1$ and the symmetric polynomial identities are verified. The gap at $k \ge 7$ requires a new argument or stronger bounds not present in the text.
+Decisive checks: 
+- Lines 8-11: Identity $e_m(S_i) = \sum_{j=0}^m (-1)^j E_{m-j} r_i^j$ is verified by iterative expansion of $e_m(X) = e_m(S_i) + r_i e_{m-1}(S_i)$.
+- Lines 15-21: Contradiction for $|S_m|=m$ is verified. $e_1(S_m^c)=0$ and $e_2(S_m^c)=0$ for real numbers implies $\sum r^2=0$, forcing roots to be 0. Valid for $|S_m^c| \ge 2$, which holds since $m \le k-1$ and $n=k+1$.
+- Lines 26-29: Summation bound verified. For $k=7$, RHS=8, LHS=8. Inequality holds, so no contradiction. The claim in line 30 is unsubstantiated and mathematically false as a direct consequence of the derived bounds.
+
+## Proof B
+Established theorem: Assuming all roots are real, distinct, and nonzero, the proof establishes that for any $(k-1)$-subset $T$, the remaining roots $X \setminus T$ must lie in the ratio set $R(T) = \{b_{m-1}/b_m\}$. Using Descartes' Rule of Signs (equality case for real-rooted polynomials), it proves $p \le k-1$ and $q \le k-1$, hence $n \le 2k-2$. For the extremal case $n=2k-2$, it rigorously derives $p_i = -q_j$ for all positive/negative roots via product identities, contradicting distinctness unless $k \le 2$ (which violates $k<n$).
+Claim gap: The treatment of $k < n < 2k-2$ (line 16) is abbreviated, relying on the claim that the condition is "even more restrictive" and sketching examples. However, the core mechanism ($X \setminus T \subseteq R(T)$ combined with sign/product constraints) is fully established and clearly generalizes. The extremal case $n=2k-2$ is the mathematical bottleneck, and it is completely resolved.
+Qualifications and supplied repairs: NONE. The equality case of Descartes' Rule of Signs for polynomials with all real roots is a standard verified fact. The algebraic manipulations in lines 13-14 are checked and correct.
+Decisive checks:
+- Lines 5-6: Derivation $a_m = b_{m-1} - r b_m$ from $Q_S(x) = (x-r)Q_T(x)$ is verified. The implication $X \setminus T \subseteq R(T)$ is correct (if $b_m=0$, then $a_m=b_{m-1} \neq 0$, so the zero coefficient must come from an index with $b_m \neq 0$, forcing $r = b_{m-1}/b_m$).
+- Lines 7-9: Sign analysis verified. For real-rooted $Q_T$, sign changes = number of positive roots $p_T$. Negative ratios in $R(T)$ correspond exactly to sign changes, so $|R(T) \cap \mathbb{R}_{<0}| = p_T$. The contradiction for $p > k-1$ is airtight.
+- Lines 13-14: Product argument verified. $\prod_{r \in X \setminus T} r = b_0/b_{k-1}$ holds. Substitution and cancellation correctly yield $p_1^2 = q_1^2 \implies p_1 = -q_1$. Symmetry forces all positive roots equal and all negative roots equal, contradicting distinctness for $k>2$.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, rigorous resolution of the critical extremal case $n=2k-2$ using a clean algebraic mechanism ($X \setminus T \subseteq R(T)$ and sign/product constraints) that directly contradicts the distinctness of real roots. Proof A's approach relies on a counting bound that demonstrably fails for $k \ge 7$ (where $\sum |S_m| \approx k^2/4 > k+1$), leaving a load-bearing gap that is patched only by an unsubstantiated assertion. While Proof B briefly sketches the $n < 2k-2$ range, its core argument is mathematically sound and covers the hardest constraints, whereas Proof A's central derivation cannot establish the theorem for large $k$ without additional unprovided work.

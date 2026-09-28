@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The sequence of minimal hitting set products $m_n$ is non-decreasing and bounded above by the product of prime factors of $a_1$, thus stabilizing to a constant $m$. Consequently, the gaps $a_{n+1} - a_n$ are bounded by $m$ for all sufficiently large $n$.
+Claim gap: The proof claims that the set of all prime factors appearing in the sequence, $P_n$, stabilizes. This is false; new primes can be introduced into the sequence (e.g., if $a_{n+1}$ is a multiple of an existing prime and a new prime). The subsequent argument that $\mathcal{G}_n$ stabilizes relies on this false claim. The proof fails to establish the periodicity of the sequence.
+Qualifications and supplied repairs: The claim that $\mathcal{P}(a_1)$ is a hitting set for $\mathcal{G}_n$ is true (since $\gcd(a_1, a_i) > 1$ for all $i$), but the justification provided in Line 7 is logically flawed (confusing "hitting" with "containing"). The bounded gap result is valid and significant.
+Decisive checks: Line 9 correctly derives $a_{n+1} \le a_n + m$ from the stabilization of $m_n$. Line 11 incorrectly asserts $P_n$ is non-increasing; a counter-example is $a_1=6, a_2=8, a_3=10$ where $P_2=\{2,3\}$ and $P_3=\{2,3,5\}$, showing growth.
+
+## Proof B
+Established theorem: The set of terms $S$ is a subset of the set $V_\infty = \{ x \in \mathbb{Z}^+ : \forall s \in S, \gcd(x, s) > 1 \}$. The proof correctly identifies that if $V_\infty$ were a finite union of arithmetic progressions, the sequence would be periodic.
+Claim gap: The proof claims $S = V_\infty$, which is false because $V_\infty$ may contain integers smaller than $a_1$ or integers skipped by the greedy process (though the gap argument suggests $S$ is dense in $V_\infty \cap [a_1, \infty)$). More critically, the proof attempts to show $V_\infty$ is a union of APs by proving the family of minimal hitting sets $\mathcal{M}$ is finite. The induction argument for the finiteness of $\mathcal{M}$ relies on the false claim that $\mathcal{M}$ is an intersecting family (Line 7), which is not guaranteed for general intersecting families $\mathcal{F}$, nor justified here since the elements $m_M$ are not necessarily in $S$.
+Qualifications and supplied repairs: The characterization $S = V_\infty \cap [a_1, \infty)$ is likely true for the tail of the sequence, but the proof does not establish it rigorously. The combinatorial lemma regarding the finiteness of minimal hitting sets is incorrect as stated.
+Decisive checks: Line 3's claim $S = \{x : \forall s \in S, \gcd(x, s) > 1\}$ fails for $x < a_1$ (e.g., $a_1=6, x=2$). Line 7's claim that $\mathcal{M}$ is intersecting is false in general (e.g., $\mathcal{F}=\{\{1,2,3\}\}$ has minimal hitting sets $\{1\}, \{2\}, \{3\}$ which are disjoint).
+
+## Decision
+Winner: A
+Reason: Proof A establishes the crucial property that the sequence has bounded gaps ($a_{n+1} \le a_n + m$), which is a verified and strong structural result derived from the stabilization of the minimal hitting set product. While Proof A fails to complete the proof of periodicity due to a false claim about the stabilization of the prime universe, its core derivation is mathematically sound up to that point. Proof B relies on a fundamentally flawed characterization of the sequence set $S$ and an incorrect combinatorial lemma regarding the finiteness of minimal hitting sets. Proof A's verified progress (bounded gaps) provides a concrete mathematical advantage over Proof B's unverified and incorrect structural claims.

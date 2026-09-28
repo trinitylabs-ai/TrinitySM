@@ -1,0 +1,81 @@
+{
+  "description": "Separate Gemma 4 four-raw-proof harness; MTP=4, no budget forcing. Archived runner matches both saved GPU manifests.",
+  "recorded_settings": [
+    {
+      "gpu": 0,
+      "config": {
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "max_tokens": 65536,
+        "timeout_sec": 14400.0,
+        "raw_seed_offset": 0,
+        "workers": 4,
+        "mtp_speculative_tokens": 4,
+        "budget_forcing": false,
+        "requests_per_candidate": 1,
+        "prompt_sha256": {
+          "system.txt": "aea702bbb2bb3724a3c50ae71117337361c1856b7fa5a8928fbca5f095385225",
+          "user_prefix.txt": "59d1388a237de6a1b77ef9570c9e0c3715ce98f30df349ca9617e195ea7f45cb",
+          "user_suffix.txt": "7daed8aac343155656d7aed6763aaa78d8eb2ed531319035ce9770e8b7db441a"
+        },
+        "runner_sha256": "282f9b0fc2d01171a89e9a05123ec4eb00222c8ac90a7a827fe1d29cab387aa4"
+      },
+      "server": {
+        "verified_at": "2026-09-13T01:37:16.998621+00:00",
+        "endpoint": "http://127.0.0.1:8030/v1",
+        "model": "google/gemma-4-31B-it",
+        "model_root": "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it/snapshots/842da3794eaa0b77d5f08bae87a17459d91ff475",
+        "max_model_len": 262144,
+        "pid": 32690,
+        "process_start_ticks": "3473570",
+        "argv_sha256": "940cf7165987b671b4d62557d396e678a6bfbbbc08789ffc43f1a4a6197a8287",
+        "speculative_config": {
+          "method": "mtp",
+          "model": "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it-assistant/snapshots/627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+          "num_speculative_tokens": 4
+        },
+        "dtype": "bfloat16",
+        "reasoning_parser": "gemma4"
+      }
+    },
+    {
+      "gpu": 1,
+      "config": {
+        "endpoint": "http://127.0.0.1:8031/v1",
+        "model": "google/gemma-4-31B-it",
+        "max_tokens": 65536,
+        "timeout_sec": 14400.0,
+        "raw_seed_offset": 0,
+        "workers": 4,
+        "mtp_speculative_tokens": 4,
+        "budget_forcing": false,
+        "requests_per_candidate": 1,
+        "prompt_sha256": {
+          "system.txt": "aea702bbb2bb3724a3c50ae71117337361c1856b7fa5a8928fbca5f095385225",
+          "user_prefix.txt": "59d1388a237de6a1b77ef9570c9e0c3715ce98f30df349ca9617e195ea7f45cb",
+          "user_suffix.txt": "7daed8aac343155656d7aed6763aaa78d8eb2ed531319035ce9770e8b7db441a"
+        },
+        "runner_sha256": "282f9b0fc2d01171a89e9a05123ec4eb00222c8ac90a7a827fe1d29cab387aa4"
+      },
+      "server": {
+        "verified_at": "2026-09-13T01:45:51.959024+00:00",
+        "endpoint": "http://127.0.0.1:8031/v1",
+        "model": "google/gemma-4-31B-it",
+        "model_root": "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it/snapshots/842da3794eaa0b77d5f08bae87a17459d91ff475",
+        "max_model_len": 262144,
+        "pid": 144522,
+        "process_start_ticks": "16362291",
+        "argv_sha256": "79a32376b5db3ad126d0bd5bb91e934732cdd6da336e4701986cf98aa5dfdbaa",
+        "speculative_config": {
+          "method": "mtp",
+          "model": "/home/user/.cache/huggingface/hub/models--google--gemma-4-31B-it-assistant/snapshots/627c5ec1458b9086b841a91e0512fd31fd2fbbf1",
+          "num_speculative_tokens": 4
+        },
+        "dtype": "bfloat16",
+        "reasoning_parser": "gemma4"
+      }
+    }
+  ],
+  "missing_values": "Unrecorded deployment revisions/settings are unknown; current server settings are not retroactively substituted.",
+  "original_run_artifacts": "../../../runs"
+}

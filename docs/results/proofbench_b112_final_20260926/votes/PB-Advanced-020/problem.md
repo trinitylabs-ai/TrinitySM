@@ -1,0 +1,5 @@
+For given positive integers $x$ and $y$, we define a sequence $(a_n)_{n \ge 1}$ as
+ $$
+ a_n = \gcd \left( x^n +y , \, (y-x)\left(\sum_{i=0}^{n-1} y^i x^{n-i-1} - 1\right) \right)
+ $$
+ for all $n\in \mathbb{N}$. Find all pairs $(x,y)$ of positive integers such that the limit of the sequence $(a_n)$ exists.

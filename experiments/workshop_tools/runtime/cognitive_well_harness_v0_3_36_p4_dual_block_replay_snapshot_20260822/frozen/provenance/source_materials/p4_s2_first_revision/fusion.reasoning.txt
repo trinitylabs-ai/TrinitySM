@@ -1,0 +1,111 @@
+*   Problem: For which $\theta \in (0, 180^\circ)$ can Mulan guarantee victory in finitely many steps?
+    *   Game: Shan-Yu chooses initial triangle $T$. Mulan cuts $T$ into $T_1, T_2$ by choosing $P$ on the perimeter and cutting to the opposite vertex. Shan-Yu discards one. Mulan wins if $T$ has an angle exactly $\theta$.
+    *   Solution's Claim: $\theta = 180^\circ/n$ for $n \in \{2, 3, \dots\}$.
+    *   Solution's Logic:
+        1.  Defines winning set $W$.
+        2.  Claims if $180^\circ/\theta = n$, any triangle with an angle $k\theta$ is in $W$.
+        3.  Claims any triangle can be cut such that both resulting triangles are in $W$ by choosing a cut angle $\phi = k\theta$.
+        4.  Claims the range of $\phi$ is $(A, A+C)$, and this interval always contains a multiple of $\theta$.
+        5.  Claims if $180^\circ/\theta \notin \mathbb{Z}$, Mulan cannot guarantee victory.
+
+    *   Reviewer 1 (OPC):
+        *   Identifies that the inductive step for $k\theta$ is flawed (cut doesn't necessarily produce $\theta$ and $(k-1)\theta$).
+        *   Identifies that the interval $(A, A+C)$ claim is incorrect.
+        *   Identifies that the "not an integer" case is not justified.
+        *   Grade: 0/7.
+
+    *   Reviewer 2 (GPT-OSS):
+        *   Analyzes the "winning set" definition (correctly identifies it as the requirement that both resulting triangles be in $W$).
+        *   Analyzes the range of $\phi = \angle APC$. Corrects it to $(A, B)$ or similar, noting $(A, A+C)$ is wrong.
+        *   Tests $\theta=90^\circ$ with triangle $30^\circ, 30^\circ, 120^\circ$.
+        *   Concludes that for $\theta=90^\circ$, Mulan cannot guarantee a win because no cut produces two triangles with $90^\circ$ angles.
+        *   Grade: 3/7.
+
+    *   *Claim 1: The range of $\phi = \angle APC$ is $(A, A+C)$.*
+        Let $A, B, C$ be the angles of the triangle. Let $P$ be on $AB$. $\phi = \angle APC$.
+        As $P \to A$, $\phi \to \angle BAC = A$.
+        As $P \to B$, $\phi \to \angle ABC = B$.
+        The range of $\phi$ is actually $(\min(A, B), \max(A, B))$ if we consider the angle at $P$. Wait, $\angle APC$ is the angle at $P$.
+        Let's check: In $\triangle APC$, $\angle APC = 180^\circ - A - \angle ACP$.
+        As $P \to A$, $\angle ACP \to 0$, so $\angle APC \to 180^\circ - A$.
+        As $P \to B$, $\angle ACP \to C$, so $\angle APC \to 180^\circ - A - C = B$.
+        So the range of $\phi$ is $(B, 180^\circ - A)$.
+        The solution claims $(A, A+C)$. Since $A+C = 180^\circ - B$, the solution claims $(A, 180^\circ - B)$.
+        Is $(B, 180^\circ - A)$ the same as $(A, 180^\circ - B)$? No.
+        Example: $A=30, B=30, C=120$.
+        Range of $\phi$: $(30, 180-30) = (30, 150)$.
+        Solution's claimed range: $(30, 30+120) = (30, 150)$.
+        Wait, in this specific case they match. Let's try $A=10, B=20, C=150$.
+        Range of $\phi$: $(20, 180-10) = (20, 170)$.
+        Solution's claimed range: $(10, 10+150) = (10, 160)$.
+        They are different. Regardless, the solution's claim that this interval *always* contains a multiple of $\theta$ for any $n \ge 2$ is the core of the argument.
+
+    *   *Claim 2: If $180^\circ/\theta = n$, Mulan can always win.*
+        Test $\theta=90^\circ$ ($n=2$).
+        Triangle $30^\circ, 30^\circ, 120^\circ$.
+        Cuts from $C(120^\circ)$ to $AB$: $\phi \in (30, 150)$.
+        To win in one step, we need both $\triangle APC$ and $\triangle BPC$ to have a $90^\circ$ angle.
+        $\triangle APC$ angles: $A=30, \angle ACP = \beta, \angle APC = \phi$.
+        $\triangle BPC$ angles: $B=30, \angle BCP = 120-\beta, \angle BPC = 180-\phi$.
+        For $\triangle APC$ to have $90^\circ$: $\beta=90$ (then $\phi=60$) or $\phi=90$ (then $\beta=60$).
+        If $\beta=90$, $\triangle BPC$ has angles $30, 30, 120$. No $90^\circ$.
+        If $\phi=90$, $\triangle BPC$ has angles $30, 120-\beta, 90$. For $\triangle BPC$ to have $90^\circ$, we need $120-\beta=90 \implies \beta=30$. But if $\beta=30$, then in $\triangle APC$, $\phi = 180-30-30=120 \neq 90$.
+        So no cut from $C$ works.
+        Cuts from $A(30^\circ)$ to $BC$: $\phi \in (B, 180-A) = (30, 150)$? No, the range is relative to the vertex.
+        Let's use the property: Mulan wins if she can cut $T$ into $T_1, T_2$ such that both are in $W$.
+        For $\theta=90^\circ$, $W$ is the set of triangles with a $90^\circ$ angle.
+        Can we cut $30, 30, 120$ into two right triangles?
+        A triangle can be cut into two right triangles if and only if the cut is the altitude.
+        The altitude from $C$ to $AB$ falls outside the triangle.
+        The altitude from $A$ to $BC$ falls inside the triangle.
+        If we cut from $A$ to $BC$ along the altitude, we get two right triangles.
+        Wait! If Mulan cuts along the altitude from $A$ to $BC$, she creates two right triangles.
+        Both $T_1$ and $T_2$ have a $90^\circ$ angle.
+        Mulan wins immediately!
+        So $\theta=90^\circ$ is actually a winning value.
+
+    *   *Re-evaluating the Solution's Claim:*
+        The solution claims $\theta = 180/n$.
+        Is this correct?
+        If $\theta = 180/n$, can Mulan always win?
+        If $n=2, \theta=90^\circ$. Mulan can always cut along an altitude. In any triangle, at least one altitude falls inside the triangle (the one from the vertex of the largest angle, or any vertex if the triangle is acute).
+        Wait, if the triangle is obtuse, only one altitude falls inside. But Mulan only needs *one* such cut.
+        If she cuts along the altitude from the obtuse vertex, it falls outside.
+        If she cuts along the altitude from one of the acute vertices, it falls inside.
+        So for $\theta=90^\circ$, Mulan can always win in one step by cutting along an altitude from an acute vertex.
+        Wait, the problem says "Mulan chooses a point $P$ on the perimeter... and makes a straight cut from $P$ to the opposite vertex".
+        If she cuts from vertex $A$ to point $P$ on $BC$, and $AP \perp BC$, then $P$ is the foot of the altitude.
+        Since $A$ is an acute angle in an obtuse triangle (where $C$ is obtuse), the foot of the altitude from $A$ to $BC$ always lies *inside* the segment $BC$.
+        Thus, for $\theta=90^\circ$, Mulan wins in one step for *any* triangle.
+
+    *   *Is the solution's logic correct?*
+        The solution's logic about the interval $(A, A+C)$ is messy and likely wrong, but the conclusion $\theta = 180/n$ is a known result for this problem (IMO Shortlist/Problem).
+        Wait, let me double check the problem source. This looks like a variation of a known problem.
+        Actually, the condition for Mulan to win is that $\theta$ must be of the form $180/n$.
+        If $\theta = 180/n$, Mulan can use the strategy of creating angles that are multiples of $\theta$.
+        The solution's inductive step: "Mulan can cut this angle into $\theta$ and $(k-1)\theta$".
+        If a triangle has an angle $k\theta$, Mulan can cut it into two triangles, one with angle $\theta$ and one with angle $(k-1)\theta$.
+        This is done by picking $P$ on the opposite side such that the angle at the vertex is split into $\theta$ and $(k-1)\theta$.
+        This is always possible because $P$ can be any point on the opposite side, allowing the angle at the vertex to be split into any two values that sum to the original angle.
+        So if $T$ has an angle $k\theta$, Mulan can cut it into $T_1$ (with angle $\theta$) and $T_2$ (with angle $(k-1)\theta$).
+        Since $T_1$ has angle $\theta$, $T_1 \in W$.
+        Since $T_2$ has angle $(k-1)\theta$, by induction $T_2 \in W$.
+        Thus $T \in W$.
+        This part of the solution is actually correct.
+        Now, can Mulan always reach a triangle with an angle $k\theta$?
+        If $180/\theta = n$, then $S = \{ \theta, 2\theta, \dots, (n-1)\theta \}$.
+        Mulan needs to cut $T$ into $T_1, T_2$ such that both have angles in $S$.
+        The solution says: "Mulan can win if she can choose $\phi$ such that both $\phi \in S$ and $180-\phi \in S$."
+        $\phi$ is the angle $\angle APC$.
+        As $P$ moves from $A$ to $B$, $\phi$ ranges from $B$ to $180-A$.
+        Mulan needs to find $\phi \in (B, 180-A)$ such that $\phi = k\theta$ and $180-\phi = m\theta$.
+        This means $k\theta + m\theta = 180^\circ$, which is true if $180/\theta = n$ (with $k+m=n$).
+        So Mulan just needs to find $k$ such that $k\theta \in (B, 180-A)$.
+        The length of the interval $(B, 180-A)$ is $180-A-B = C$.
+        If $C \ge \theta$, the interval $(B, 180-A)$ must contain a multiple of $\theta$ unless the endpoints are multiples of $\theta$.
+        If $C < \theta$, can she still win?
+        If $C < \theta$, then $A+B > 180-\theta$.
+        Since $A+B+C=180$, if $C < \theta$, then $A+B > 180-\theta$.
+        This means at least one of $A$ or $B$ must be $>\frac{180-\theta}{2}$.
+        This doesn't immediately guarantee a multiple of $\theta$ in $(B, 180-A)$.
+        Wait, if $C < \theta$,

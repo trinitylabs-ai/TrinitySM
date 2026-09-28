@@ -1,0 +1,57 @@
+To find all non-negative integers $a, b, c$ such that $20^a + b^4 = 2024^c$, we analyze the equation using modular arithmetic.
+
+First, we consider the case where $c = 0$. The equation becomes:
+\[20^a + b^4 = 2024^0 = 1\]
+Since $a$ and $b$ are non-negative integers, $20^a$ and $b^4$ are non-negative integers. The only way their sum can be 1 is if one of them is 1 and the other is 0.
+1. If $20^a = 1$, then $a = 0$. This implies $1 + b^4 = 1$, so $b^4 = 0$, which means $b = 0$. This gives the solution $(a, b, c) = (0, 0, 0)$.
+2. If $20^a = 0$, this is impossible for any non-negative integer $a$.
+
+Now, we consider the case where $c \ge 1$.
+We examine the equation modulo 11. First, we find the remainder of the constants when divided by 11:
+\[20 \equiv 9 \pmod{11}\]
+\[2024 = 11 \times 184 + 0 \equiv 0 \pmod{11}\]
+The equation $20^a + b^4 = 2024^c$ modulo 11 becomes:
+\[9^a + b^4 \equiv 0 \pmod{11}\]
+\[b^4 \equiv -9^a \pmod{11}\]
+
+We list the possible values of $9^a \pmod{11}$ for $a \in \mathbb{N}_0$:
+- For $a = 0$, $9^0 \equiv 1 \pmod{11}$.
+- For $a = 1$, $9^1 \equiv 9 \pmod{11}$.
+- For $a = 2$, $9^2 = 81 \equiv 4 \pmod{11}$.
+- For $a = 3$, $9^3 = 9 \times 4 = 36 \equiv 3 \pmod{11}$.
+- For $a = 4$, $9^4 = 9 \times 3 = 27 \equiv 5 \pmod{11}$.
+- For $a = 5$, $9^5 = 9 \times 5 = 45 \equiv 1 \pmod{11}$.
+The values of $9^a \pmod{11}$ cycle through the set $\{1, 9, 4, 3, 5\}$.
+
+Consequently, the possible values of $-9^a \pmod{11}$ are:
+- If $9^a \equiv 1$, then $-9^a \equiv -1 \equiv 10 \pmod{11}$.
+- If $9^a \equiv 9$, then $-9^a \equiv -9 \equiv 2 \pmod{11}$.
+- If $9^a \equiv 4$, then $-9^a \equiv -4 \equiv 7 \pmod{11}$.
+- If $9^a \equiv 3$, then $-9^a \equiv -3 \equiv 8 \pmod{11}$.
+- If $9^a \equiv 5$, then $-9^a \equiv -5 \equiv 6 \pmod{11}$.
+So, $-9^a \pmod{11} \in \{10, 2, 7, 8, 6\}$.
+
+Next, we find the possible values of $b^4 \pmod{11}$ for $b \in \mathbb{N}_0$:
+- $0^4 = 0 \equiv 0 \pmod{11}$
+- $1^4 = 1 \equiv 1 \pmod{11}$
+- $2^4 = 16 \equiv 5 \pmod{11}$
+- $3^4 = 81 \equiv 4 \pmod{11}$
+- $4^4 = 256 = 11 \times 23 + 3 \equiv 3 \pmod{11}$
+- $5^4 = 625 = 11 \times 56 + 9 \equiv 9 \pmod{11}$
+- $6^4 \equiv (-5)^4 \equiv 9 \pmod{11}$
+- $7^4 \equiv (-4)^4 \equiv 3 \pmod{11}$
+- $8^4 \equiv (-3)^4 \equiv 4 \pmod{11}$
+- $9^4 \equiv (-2)^4 \equiv 5 \pmod{11}$
+- $10^4 \equiv (-1)^4 \equiv 1 \pmod{11}$
+The possible values of $b^4 \pmod{11}$ are $\{0, 1, 3, 4, 5, 9\}$.
+
+Comparing the two sets of possible values:
+Values of $b^4 \pmod{11}$: $\{0, 1, 3, 4, 5, 9\}$
+Values of $-9^a \pmod{11}$: $\{2, 6, 7, 8, 10\}$
+The intersection of these two sets is empty. Therefore, the congruence $b^4 \equiv -9^a \pmod{11}$ has no solutions for any non-negative integers $a$ and $b$. This means that $20^a + b^4$ can never be a multiple of 11, whereas $2024^c$ is a multiple of 11 for all $c \ge 1$.
+
+Thus, the only possible solution is the one we found for $c = 0$.
+
+The only non-negative integer solution is $(a, b, c) = (0, 0, 0)$.
+
+\(\square\)

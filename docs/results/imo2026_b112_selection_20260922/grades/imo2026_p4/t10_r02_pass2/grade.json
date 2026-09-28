@@ -1,0 +1,55 @@
+{
+  "problem_id": "imo2026_p4",
+  "submission_id": "proof_67fdfb1eda85a47ca59eafb289b84c1f",
+  "pass_index": 2,
+  "score": 5,
+  "verdict": "substantial_gap",
+  "grade": {
+    "score": 5,
+    "verdict": "substantial_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "routine_direct",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "In Case 1, after ordering α≤β≤γ, the proof says to cut from the vertex of angle α but then uses the admissible interval (β,β+γ), whose length is γ. For a cut from the α-vertex, the corresponding interval has length α, so the asserted cut need not exist. For example, with θ=60° and angles (10°,80°,90°), no parameter equal to 60° or 120° is attainable by such a cut. This is a false load-bearing construction, so Rule C caps the score at 5.",
+    "summary": "The classification is correct, and the necessity argument and reduction from a multiple of θ to θ are sound. The sufficiency construction contains a decisive vertex-label error: it becomes valid by cutting from the largest-angle vertex γ, for which the interval really is (β,β+γ). This is a routine one-word repair, but the false assertion is load-bearing as submitted.",
+    "strengths": [
+      "Correctly identifies exactly θ=180°/n for integers n≥2.",
+      "Correctly proves that a triangle containing a positive multiple of θ is winning by splitting that angle.",
+      "The four-case safe-triangle obstruction in the necessity direction is exhaustive and essentially correct.",
+      "Once the intended largest-angle cut is substituted, the lattice-point argument completes sufficiency."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The central sufficiency move uses the admissible interval belonging to a cut from the largest angle while explicitly claiming to cut from the smallest angle. Thus the proposed cut is not generally geometrically admissible. Replacing “smallest angle α” by “largest angle γ” repairs the proof directly."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+  "proof_sha256": "67fdfb1eda85a47ca59eafb289b84c1fe2511098bfc65430fae7a8403a162256",
+  "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+  "evidence_sha256": "97522cb3fd0f03d52d22573f01b7f3e6a3eff4d60372fd4e2722c0603c6ec7e0",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p4/t10_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "3685358ee09dea2b63ec1b2dce76b087a4462198e6254cb147411a6f681b427e",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "59d29a3f0aa34c1c7f841105121ca382896f2051e6ea8c2db95b9749e040652a",
+    "raw_response_1.txt": "930c7138b818d7fc318a90e9f86195815b2f139fcbcda2d0646ad2e2f12a760a",
+    "summary.json": "2b47821b4d94f24662438dbd6f9be8504a7ca71bf792b3d506affe78a804afc4"
+  }
+}

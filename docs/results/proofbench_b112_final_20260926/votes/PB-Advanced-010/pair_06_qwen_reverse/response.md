@@ -1,0 +1,24 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The locus of $T$ as $X$ varies on the Euler line $OG$ satisfies a quadratic equation of the form $x^2+y^2+Dx+Ey+F=0$ with coefficients depending only on $\triangle ABC$, establishing that $T$ moves along a fixed circle.
+Claim gap: The algebraic elimination of parameters $p$ and $q$ in steps 10–12 is asserted without explicit computation. While the coordinate framework, circle equations, radical axis, and bilinear constraint are correctly derived, the final step relies on an unverified claim that substituting the bilinear relation yields exactly a circle equation. This is a non-trivial algebraic elimination; its correctness is structurally plausible but not explicitly demonstrated.
+Qualifications and supplied repairs: Assumed standard directed segment conventions for the power-of-point calculation in step 7 (signs of $\cos C$ and segment directions). The sign in the radical axis equation (step 9) differs by a factor of $-1$ from the standard form but defines the same line, so no repair is needed. The bilinear relation for $X \in OG$ in step 10 is accepted as a standard barycentric property. No substantive mathematical repair was supplied; the gap is purely presentational (omitted algebraic elimination).
+Decisive checks: 
+- Step 5: Center $y_1$ derivation verified. Perp bisector of $KP$ has slope $\cot A$ and passes through midpoint $(\frac{3pb\cos A}{2}, \frac{pb\sin A}{2})$. Substituting $x_1$ yields $y_1 = \frac{qc\cos A - pb\cos 2A}{2\sin A}$. VERIFIED.
+- Step 7: Power of $A$ wrt $\mathcal{C}_2$ uses $\vec{CP}\cdot\vec{CS} = \vec{CH}\cdot\vec{CM}$. With $CP=b(1-p)$, $CH=b\cos C$, $CM=a/2$, we get $CS = \frac{a\cos C}{2(1-p)}$. Then $\mathcal{P}_2(A) = AP\cdot AS = pb(b-CS)$. VERIFIED under directed segments.
+- Step 9: Radical axis equation correctly captures the difference of circle equations. Sign discrepancy is immaterial for line definition. VERIFIED.
+- Step 10–12: Bilinear constraint from Euler line is standard. Elimination of $p,q$ from radical axis and $\mathcal{C}_1$ to yield a circle is structurally sound but algebraically omitted. UNRESOLVED (requires explicit elimination to be fully rigorous).
+
+## Proof B
+Established theorem: Only the coordinate setup and the equation of $\mathcal{C}_1$ (steps 1–8) are correctly established. The subsequent geometric claims are false.
+Claim gap: Step 11 asserts a false lemma: "for any point $X$ on $OG$, the points $H, K, P, Q$ are concyclic." This claim is the load-bearing step for the entire proof. Its falsity collapses the argument, as it incorrectly forces $H \in \mathcal{C}_1$, leading to the erroneous conclusion that $T=H$ (a fixed point) and that $\mathcal{C}_1$ coincides with the nine-point circle at $X=G$.
+Qualifications and supplied repairs: None. The central lemma is mathematically incorrect and cannot be repaired without fundamentally changing the approach. The proof's conclusion that $T$ is constant contradicts the problem's implication of a non-degenerate locus and standard geometric behavior of this configuration.
+Decisive checks:
+- Step 11: Claims $H \in \odot(KPQ)$ iff $X \in OG$. FALSIFIED. The power of $A$ wrt $\odot(KPQ)$ is $AK \cdot AQ = 2pqbc\cos A$, which varies as $X$ moves on $OG$. Testing $X=G$ (midpoints $P,Q$) shows $\mathcal{C}_1$ passes through midpoints of $AC, AB$ and $K$ (reflection of $A$ over projection of midpoint of $AC$). The nine-point circle passes through $H$, but $\mathcal{C}_1$ does not generally pass through $H$ at $X=G$ (since $K \neq$ foot of altitude from $C$). Thus $H \notin \mathcal{C}_1$ generally. DEMONSTRATED DEFECT.
+- Step 16: Claims $\mathcal{C}_1$ coincides with the nine-point circle at $X=G$. FALSIFIED by the same counterexample. $\mathcal{C}_2$ does coincide with the nine-point circle, but $\mathcal{C}_1$ does not. DEMONSTRATED DEFECT.
+- Step 15: Concludes $T=H$. Follows directly from the false lemma in step 11. INVALID.
+
+## Decision
+Winner: A
+Reason: Proof A correctly establishes the coordinate framework, derives accurate equations for both circumcircles, correctly formulates the radical axis, and identifies the bilinear parameter constraint imposed by the Euler line. Its only gap is the omission of the explicit algebraic elimination in steps 10–12, which is a standard computational step that follows logically from the verified setup. Proof B, by contrast, relies on a fundamentally false geometric lemma in step 11 claiming $H \in \odot(KPQ)$ for all $X \in OG$. This claim is easily falsified (e.g., at $X=G$, $\odot(KPQ)$ does not pass through $H$), which invalidates the entire subsequent argument and incorrectly reduces the locus to a single point. Proof A's approach is mathematically sound and correctly targets the required circle locus, while Proof B's central mechanism is defective.

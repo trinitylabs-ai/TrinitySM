@@ -1,0 +1,79 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T13:59:58.107291+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "per_problem": {
+    "2": {
+      "scores": [
+        4
+      ],
+      "mean": 4.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T13:59:58.105598+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 2,
+      "problem_id": "imo2026_p2",
+      "case_id": "imo2026_p2.explicit.t07_r01",
+      "candidate_id": "t07_r01",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p2.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q2_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r2_remaining_problems_fusion_gate_20260908/p2/strict_scores/R2/t07_r01/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "31d3aa64197a55dd74497d7720ddccc8028e932c6c1f276fa24dd65f68f851fb",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 4,
+        "verdict": "substantial_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "partial_credit",
+        "first_issue": "After expressing the circumcentre and deriving several sine-law relations, the submission simply asserts that substituting them makes the decisive dot-product expression equal to \\((b^2-c^2)/4\\); this substantial trigonometric elimination is not shown.",
+        "summary": "The solution develops a coherent coordinate-and-trigonometric strategy and correctly reduces the conclusion to a linear identity for the circumcentre. However, the entire central compatibility calculation is replaced by an unsupported claim of simplification. The additional statement that the needed side ratios follow from the inside-triangle conditions is also unjustified: those conditions primarily determine geometric branches and signs, while the ratios must come from the angle and sine-law relations. Under the strict policy, the omitted load-bearing multi-step elimination caps the proof at 4.",
+        "strengths": [
+          "Correctly rewrites OM=ON as a dot-product condition involving C-B.",
+          "Obtains useful sine-law relations for AK, AL, and the auxiliary angles.",
+          "Correctly writes and solves the two linear circumcentre equations.",
+          "The proposed framework is plausibly capable of proving the result if the missing elimination is supplied."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "The decisive trigonometric identity is asserted without calculation. Verifying it requires combining both expressions for AK and AL, extracting the compatibility relation among A, b/c, and the auxiliary angles, and carrying out a nontrivial elimination."
+          },
+          {
+            "severity": "minor",
+            "description": "The claim that the ratios b/c and c/b are derived from the inside-triangle conditions is inaccurate and does not explain the required compatibility argument."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

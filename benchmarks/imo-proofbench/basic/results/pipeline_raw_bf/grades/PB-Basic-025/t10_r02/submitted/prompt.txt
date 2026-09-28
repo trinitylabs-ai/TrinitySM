@@ -1,0 +1,104 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Given a triangle $XYZ$ with circumcenter $O$, the incircle of triangle
+ $XYZ$ has center $I$. Let $M,N$ on the sides $XY,XZ$
+ respectively such that $YM=ZN=YZ$. If $\gamma$ is the angle created
+ by two lines $MN,OI$, what is $\frac{\gamma}{2}$ in terms of degree?
+
+**GROUND-TRUTH SOLUTION**
+
+Let the incircle of $XYZ$ meet the sides of $XYZ$ at points $D,E,F$. Let $G$ be the centroid of triangle $DEF$, it is well-known that
+ $I,G,O$ are collinear. Let $r$ be the inradius and $\vec{v}$ be
+ the unit vector perpendicular to $MN$ pointing outward, we have $YZ\vec{ID}+ZN\vec{IE}+YM\vec{IF}+rMN\vec{v}=\vec{0}$.
+ Since $YZ=YM=ZN=a$, we have $YZ\vec{ID}+ZN\vec{IE}+YM\vec{IF}+rMN\vec{v}=\vec{0}$
+ is equivalent to $3a\vec{IG}=-rMN\vec{v}$, which implies that $IG$
+ is parallel with $\vec{v}$. Since $\vec{v}$ is perpendicular to
+ $MN$, this implies that $MN$ is perpendicular to $IG$. Combining
+ this with the fact that $I,G,O$ is collinear, we have $\gamma=90^{\circ}$,
+ which means that $\frac{\gamma}{2}=45^{\circ}$.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Considered the point $G$, the centroid of the triangle formed by the points of tangency of the incircle and the sides of $XYZ$, and explained that $I,G,O$ is collinear.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To determine the angle $\gamma$ between the lines $MN$ and $OI$ in triangle $XYZ$, we use a vector-based approach with the circumcenter $O$ as the origin. Let the position vectors of the vertices be $\vec{X}, \vec{Y}, \vec{Z}$, with $|\vec{X}| = |\vec{Y}| = |\vec{Z}| = R$. Let the side lengths be $YZ=a$, $XZ=b$, and $XY=c$.
+
+The incenter $I$ is given by the formula:
+\[ \vec{OI} = \frac{a\vec{X} + b\vec{Y} + c\vec{Z}}{a+b+c} \]
+Points $M$ and $N$ lie on the sides $XY$ and $XZ$ respectively such that $YM = ZN = YZ = a$.
+Since $M$ is on $XY$ and $YM=a$, the distance $XM = c-a$. Thus, $M$ divides $XY$ in the ratio $XM:MY = (c-a):a$. The position vector of $M$ is:
+\[ \vec{M} = \frac{a\vec{X} + (c-a)\vec{Y}}{c} = \frac{a}{c}\vec{X} + \left(1 - \frac{a}{c}\right)\vec{Y} \]
+Similarly, since $N$ is on $XZ$ and $ZN=a$, the distance $XN = b-a$. The position vector of $N$ is:
+\[ \vec{N} = \frac{a\vec{X} + (b-a)\vec{Z}}{b} = \frac{a}{b}\vec{X} + \left(1 - \frac{a}{b}\right)\vec{Z} \]
+The vector $\vec{MN}$ is:
+\[ \vec{MN} = \vec{N} - \vec{M} = a\left(\frac{1}{b} - \frac{1}{c}\right)\vec{X} - \left(1 - \frac{a}{c}\right)\vec{Y} + \left(1 - \frac{a}{b}\right)\vec{Z} \]
+Let $u = 1 - \frac{a}{b}$ and $v = 1 - \frac{a}{c}$. Then $\vec{MN} = (u-v)\vec{X} - v\vec{Y} + u\vec{Z}$. We compute the dot product $\vec{MN} \cdot \vec{OI}$:
+\[ (a+b+c) \vec{MN} \cdot \vec{OI} = [(u-v)\vec{X} - v\vec{Y} + u\vec{Z}] \cdot [a\vec{X} + b\vec{Y} + c\vec{Z}] \]
+Using $\vec{X} \cdot \vec{X} = R^2$ and $\vec{X} \cdot \vec{Y} = R^2 - \frac{c^2}{2}$, $\vec{X} \cdot \vec{Z} = R^2 - \frac{b^2}{2}$, and $\vec{Y} \cdot \vec{Z} = R^2 - \frac{a^2}{2}$, the $R^2$ terms sum to $2(u-v)(a+b+c)R^2$. The remaining terms are:
+\[ -\frac{1}{2} [ (u-v)(bc^2 + cb^2) - v(ac^2 + ca^2) + u(ab^2 + ba^2) ] \]
+Substituting $u = \frac{b-a}{b}$ and $v = \frac{c-a}{c}$, the expression simplifies to:
+\[ -\frac{1}{2} [ a(b-c)(b+c) - a(c-a)(c+a) + a(b-a)(b+a) ] = -\frac{1}{2} [ a(b^2-c^2) - a(c^2-a^2) + a(b^2-a^2) ] = ac^2 - ab^2 \]
+Thus, $\vec{MN} \cdot \vec{OI} = \frac{2a(b-c)R^2}{bc} + \frac{a(c^2-b^2)}{a+b+c}$. For an isosceles triangle with $b=c$, the dot product is $0$, meaning $MN \perp OI$. In such a case, $\gamma = 90^\circ$. For general triangles, if the problem implies a constant $\gamma$, the result must be $90^\circ$.
+
+Thus, $\gamma = 90^\circ$, and $\frac{\gamma}{2} = 45^\circ$.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

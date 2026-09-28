@@ -1,0 +1,79 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T09:36:42.144910+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "per_problem": {
+    "5": {
+      "scores": [
+        3
+      ],
+      "mean": 3.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T09:36:42.143014+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "case_id": "imo2026_p5.explicit.t10_r02",
+      "candidate_id": "t10_r02",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q5_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t10_r02/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "3bc47481d69a224995ea398d6e8886f61eee54f719a0fba1ac6a96684fd54242",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The proof of constancy among positive defect values relies on the false assertion that two arbitrary arithmetic progressions x₀+nc₁ and z₀+mc₂ can be chosen arbitrarily close while tending to infinity; for rational c₁/c₂ their distances may be bounded away from zero.",
+        "summary": "The final classification is correct, and the iteration argument establishing ε≥0 is sound. However, two decisive classification steps are unsupported: constancy of positive defect values uses a false approximation claim, and the exclusion of mixed defect levels asserts without justification that an unbounded set Z must equal all positive reals. These are load-bearing gaps, so the proof does not establish the answer as submitted.",
+        "strengths": [
+          "Correctly converts the original inequalities into squared form.",
+          "Correctly derives f(f(y))+y=2f(y), invariance of ε along forward orbits, and ε(y)≥0.",
+          "Derives a useful estimate |ε(x)−ε(z)|≤(√x−√z)² on the range of f.",
+          "Correctly verifies every function f(x)=x+c with c≥0."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The claim that the two forward arithmetic progressions can be made arbitrarily close is false in general. One can repair the strategy by choosing indices whose terms remain at bounded distance and observing that their square-root difference tends to zero, but that argument is not written."
+          },
+          {
+            "severity": "major",
+            "description": "In excluding coexistence of ε=0 and ε=c, the statement “if sup Z=∞, then Z=R_{>0}” does not follow from unboundedness. A further clopen/connectedness or interval-propagation argument is required, and this step is essential to the conclusion."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

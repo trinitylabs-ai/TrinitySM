@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-09-17T07:20:31.667746+00:00",
+  "package": "/opt/proof-workshop/cognitive_well_harness_v0_3_356_v349_discrete_consolidation_20260917",
+  "release_sha256": "b899438a603c521d5b40f1fc97fbedc0bbfb7c82d086223014e1e3f706b11e68",
+  "source_files_verified": 145,
+  "tests_passed": 115,
+  "saved_success_cases": 3,
+  "all_three_exports_byte_identical": true,
+  "new_external_grades": {
+    "p2": 6,
+    "basic008": 6,
+    "basic009": 7
+  },
+  "all_three_at_least_six": true
+}

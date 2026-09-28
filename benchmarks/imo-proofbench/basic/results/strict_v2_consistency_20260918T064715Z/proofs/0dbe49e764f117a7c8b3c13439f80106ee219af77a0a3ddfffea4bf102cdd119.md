@@ -1,0 +1,30 @@
+To prove that the procedure terminates and that the cars end up sorted by width, we proceed in two main stages: proving termination and proving the final state.
+
+### Part 1: Termination
+Let $Inv(w)$ be the number of pairs of cars $(C_i, C_j)$ such that $C_i$ is to the left of $C_j$ but $w_i > w_j$ (width-inversions).
+A swap occurs if two adjacent cars $C_{left}$ and $C_{right}$ satisfy $l_{left} < l_{right}$ and $w_{left} > w_{right}$. 
+1.  **Effect of a swap on $Inv(w)$:** When $C_{left}$ and $C_{right}$ are swapped, their relative order changes from $(C_{left}, C_{right})$ to $(C_{right}, C_{left})$. Since $w_{left} > w_{right}$, the pair was a width-inversion before the swap and is not one after.
+2.  **Other pairs:** Because the swapped cars were adjacent, the relative order of any other pair of cars $(C_a, C_b)$ remains unchanged. Thus, no other width-inversions are created or removed.
+3.  **Conclusion:** Every swap decreases $Inv(w)$ by exactly 1. Since $Inv(w)$ is a non-negative integer (bounded below by 0), the process must terminate after at most $n(n-1)/2$ swaps.
+
+### Part 2: The Final State
+We prove by induction on $n$ that the final state is sorted by width ($w_1 < w_2 < \dots < w_n$).
+
+**Base Case:** For $n=2$, cars $C_1, C_2$ are initially sorted by length ($l_1 < l_2$). If $w_1 < w_2$, no swap occurs, and they are sorted by width. If $w_1 > w_2$, they are swapped, and the final order is $(C_2, C_1)$, where $w_2 < w_1$. In both cases, the cars are sorted by width.
+
+**Inductive Step:** Assume the statement holds for $n-1$ cars. Let $C^*$ be the car with the maximum width $w^*$.
+1.  **Movement of $C^*$:** 
+    *   $C^*$ can only move to the right if it is the left car in a swap $(C^*, C_{right})$, which requires $l^* < l_{right}$ and $w^* > w_{right}$. Since $w^*$ is the maximum width, $w^* > w_{right}$ is always true.
+    *   $C^*$ can only move to the left if it is the right car in a swap $(C_{left}, C^*)$, which requires $l_{left} < l^*$ and $w_{left} > w^*$. However, $w_{left} > w^*$ is impossible as $w^*$ is the maximum.
+    *   Thus, $C^*$ can only move to the right and can never move to the left.
+2.  **Final position of $C^*$:** 
+    *   Initially, $C^*$ is to the right of all cars $C_k$ with $l_k < l^*$ and to the left of all cars $C_j$ with $l_j > l^*$.
+    *   Since $C^*$ cannot move left, it will always remain to the right of all cars $C_k$ with $l_k < l^*$.
+    *   In the final state, if $C^*$ were not at the far right, there would be some car $C_{next}$ immediately to its right. From the above, $C_{next}$ must have $l_{next} > l^*$. Since $w^* > w_{next}$, the pair $(C^*, C_{next})$ would satisfy the swap condition. This contradicts the termination of the procedure.
+    *   Therefore, $C^*$ must end up at the far right of the row.
+3.  **Ordering of the remaining cars:** 
+    *   Swaps involving $C^*$ only change the relative order of $C^*$ and some $C_j$. They do not change the relative order of any other pair of cars $(C_a, C_b)$ where $a, b \neq *$.
+    *   The remaining $n-1$ cars maintain their relative initial order (sorted by length). By the inductive hypothesis, the process applied to these $n-1$ cars will eventually sort them by width.
+    *   Since $C^*$ has the maximum width and is at the far right, the entire row is sorted by width.
+
+By induction, the cars will always end up sorted in increasing order of width from left to right. $\square$

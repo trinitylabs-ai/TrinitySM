@@ -1,0 +1,42 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T17:35:43.183627+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 16,
+  "problem_id": "PB-Basic-016",
+  "case_id": "PB-Basic-016.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/p16/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "b7c61f1b0a854f75a7b8ffbb8c95ed45496ae0ef06e52fc526a08babda679cd6",
+  "reference_sha256": "a26399654be52ba0ffb8544a40186c12222e4ac40472531796bbc0390fa4a33e",
+  "proof_sha256": "a80638ab9268f5fe7d8369c35a4066fa46722fed76144a0baae43a1fae68a9be",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T173528954941Z/inputs/tasks.json",
+  "task_manifest_sha256": "5039baa647efcb46330330160cdb4692ad07b3a6ab14df28b51c8db7e3f4e244",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The signed cyclic color-difference sum is correctly defined, proved invariant under every permissible repainting, and computed as \\(-3\\) initially and \\(3\\) in the target state. This is a complete equivalent invariant proof.",
+    "strengths": [
+      "Correctly characterizes when a stone can be repainted and checks all resulting changes to the invariant.",
+      "Computes the invariant accurately in both endpoint colorings."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

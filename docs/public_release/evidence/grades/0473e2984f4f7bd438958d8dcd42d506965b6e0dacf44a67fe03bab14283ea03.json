@@ -1,0 +1,56 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "imo2026_p2",
+  "grader_candidate_id": "t10_r02",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+  "proof": "evidence/proofs/d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50.md",
+  "completed_at": "2026-09-15T16:38:01.306281+00:00",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The proof incorrectly states \\(\\angle ANM=B\\) and \\(\\angle AMN=C\\); triangle \\(AMN\\) is similar to \\(ABC\\), so these angles are \\(C\\) and \\(B\\), respectively.",
+    "summary": "The initial sine-law calculations yield useful cotangent relations, but the subsequent argument assumes the decisive concyclicity instead of deriving it. The reversed angles, unproved “verification,” and unsupported uniqueness claim leave no valid route to \\(OM=ON\\).",
+    "strengths": [
+      "The derivations \\(\\cot\\theta_K=2\\cot\\gamma+\\cot\\alpha\\) and \\(\\cot\\theta_L=2\\cot\\beta+\\cot\\alpha\\) are meaningful local progress.",
+      "Several preliminary sine-law length formulas are correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The angles of the midpoint triangle \\(AMN\\) are interchanged, invalidating the stated criteria for \\(K,L\\in\\omega\\)."
+      },
+      {
+        "severity": "major",
+        "description": "The proof supposes \\(K,L\\in\\omega\\) and derives consequences, but never proves that the given configuration satisfies this supposition."
+      },
+      {
+        "severity": "major",
+        "description": "The asserted trigonometric “verification” is neither shown nor sufficient to establish the two required angle conditions."
+      },
+      {
+        "severity": "major",
+        "description": "The claim that uniqueness and a hypothetical concyclic configuration force the actual points \\(K,L\\) to be concyclic is wholly unjustified."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "source": {
+    "native_record": "benchmarks/imo2026/results/p2_c3_t10r02_then_v327_20260915T063548Z/grading/work/strict_c3_20260915T163357Z/scores/p2/t10_r02/summary.json",
+    "native_record_file_sha256": "0473e2984f4f7bd438958d8dcd42d506965b6e0dacf44a67fe03bab14283ea03",
+    "selected_record": "benchmarks/imo2026/results/p2_c3_t10r02_then_v327_20260915T063548Z/grades/imo2026_p2/t10_r02/R1-C3.strict.json",
+    "selected_record_file_sha256": "3b9057dd00447a0c4c07d307c491e4e8854c11a75ef5422019a88d45a612bf95",
+    "proof": "benchmarks/imo2026/results/p2_c3_t10r02_then_v327_20260915T063548Z/proofs/imo2026_p2/t10_r02/R1-C3.md"
+  },
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd"
+}

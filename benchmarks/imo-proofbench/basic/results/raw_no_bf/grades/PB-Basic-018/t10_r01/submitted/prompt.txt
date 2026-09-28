@@ -1,0 +1,110 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $x$ and $y$ be positive integers satisfying $2x^2 + x = 3y^2 + y$. Prove that $2x+2y+1$ is a perfect square.
+
+**GROUND-TRUTH SOLUTION**
+
+Lemma: If $ab$ is a perfect square for coprime integers $a,b$ then they are perfect squares.
+
+ Observe that $2x^2+x=3y^2+y$ is equivalent to $y^2 = 2x^2-2y^2+x-y = (x-y)(2x+2y+1)$. Let $d$ be the greatest common divisior of $x-y,2x+2y+1$, we have $d | x-y$ and $d | 2x+2y+1$. On the other hand, observe that $y^2 = (x-y)(2x+2y+1)$. Hence, we must have that $d^2 | y^2$, which implies $d | y$. Since $d | y$ and $d | x-y$, we have $d | x$. Furthermore, since $d | x, d | y, d | 2x+2y+1$, we have that $d | 1$ and thus, $d = 1$, meaning that $x-y,2x+2y+1$ are coprime integers. From the Lemma, we have that $x-y,2x+2y+1$ are perfect squares. Hence proved.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Correctly factorized $(x-y)(2x+2y+1) = y^2$ but did not get other non-trivial results.
+(Almost)
+ 1. Proved the problem but made minor mistakes or did not prove $d = 1$
+
+**PROPOSED SOLUTION**
+
+To prove that $2x + 2y + 1$ is a perfect square for positive integers $x, y$ satisfying $2x^2 + x = 3y^2 + y$, we begin by manipulating the given equation.
+
+**1. Algebraic Transformation**
+The given equation is $2x^2 + x - 3y^2 - y = 0$. To eliminate the linear terms and create squares, we multiply the entire equation by 24:
+$$48x^2 + 24x - 72y^2 - 24y = 0$$
+We complete the squares for $x$ and $y$:
+$$3(16x^2 + 8x) - 2(36y^2 + 12y) = 0$$
+$$3(4x + 1)^2 - 3 - 2(6y + 1)^2 + 2 = 0$$
+$$3(4x + 1)^2 - 2(6y + 1)^2 = 1$$
+Let $A = 4x + 1$ and $B = 6y + 1$. The equation becomes:
+$$3A^2 - 2B^2 = 1$$
+Since $x, y$ are positive integers, $A$ and $B$ must be positive integers such that $A \equiv 1 \pmod 4$ and $B \equiv 1 \pmod 6$.
+
+**2. Solving the Pell-like Equation**
+The equation $3A^2 - 2B^2 = 1$ is a Pell-like equation. The fundamental solution is $(A_0, B_0) = (1, 1)$. All solutions $(A_n, B_n)$ are generated by the relation:
+$$A_n\sqrt{3} + B_n\sqrt{2} = (1\sqrt{3} + 1\sqrt{2})(5 + 2\sqrt{6})^n$$
+The recurrence relations for $A_n$ and $B_n$ are:
+$$A_n = 5A_{n-1} + 4B_{n-1}$$
+$$B_n = 6A_{n-1} + 5B_{n-1}$$
+Checking the constraints on $n$:
+- $A_n \equiv A_{n-1} \pmod 4$, and since $A_0 = 1$, $A_n \equiv 1 \pmod 4$ for all $n$.
+- $B_n \equiv -B_{n-1} \pmod 6$. Since $B_0 = 1$, $B_n \equiv 1 \pmod 6$ if and only if $n$ is even.
+Thus, for $y$ to be an integer, we must have $n = 2m$ for some integer $m \ge 1$ (since $x, y > 0$ excludes $n=0$).
+
+**3. Evaluating the Expression $2x + 2y + 1$**
+Expressing $2x + 2y + 1$ in terms of $A_n$ and $B_n$:
+$$x = \frac{A_n - 1}{4}, \quad y = \frac{B_n - 1}{6}$$
+$$2x + 2y + 1 = 2\left(\frac{A_n - 1}{4}\right) + 2\left(\frac{B_n - 1}{6}\right) + 1 = \frac{3(A_n - 1) + 2(B_n - 1) + 6}{6} = \frac{3A_n + 2B_n + 1}{6}$$
+Let $S_n = \frac{3A_n + 2B_n + 1}{6}$. We use the closed forms for $A_n, B_n$ with $\alpha = 5 + 2\sqrt{6}$ and $\beta = 5 - 2\sqrt{6}$:
+$$A_n = \frac{3+\sqrt{6}}{6}\alpha^n + \frac{3-\sqrt{6}}{6}\beta^n, \quad B_n = \frac{2+\sqrt{6}}{4}\alpha^n + \frac{2-\sqrt{6}}{4}\beta^n$$
+Calculating $3A_n + 2B_n$:
+$$3A_n + 2B_n = \left(\frac{3+\sqrt{6}}{2} + \frac{2+\sqrt{6}}{2}\right)\alpha^n + \left(\frac{3-\sqrt{6}}{2} + \frac{2-\sqrt{6}}{2}\right)\beta^n = \frac{5+2\sqrt{6}}{2}\alpha^n + \frac{5-2\sqrt{6}}{2}\beta^n = \frac{\alpha^{n+1} + \beta^{n+1}}{2}$$
+For $n=2m$, $S_{2m} = \frac{\alpha^{2m+1} + \beta^{2m+1} + 2}{12}$.
+Now we calculate $A_m^2$:
+$$A_m^2 = \left(\frac{3+\sqrt{6}}{6}\alpha^m + \frac{3-\sqrt{6}}{6}\beta^m\right)^2 = \frac{15+6\sqrt{6}}{36}\alpha^{2m} + \frac{15-6\sqrt{6}}{36}\beta^{2m} + \frac{2(9-6)}{36} = \frac{5+2\sqrt{6}}{12}\alpha^{2m} + \frac{5-2\sqrt{6}}{12}\beta^{2m} + \frac{1}{6}$$
+$$A_m^2 = \frac{\alpha \cdot \alpha^{2m} + \beta \cdot \beta^{2m} + 2}{12} = \frac{\alpha^{2m+1} + \beta^{2m+1} + 2}{12} = S_{2m}$$
+Since $A_m$ is an integer, $2x + 2y + 1$ is a perfect square. $\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

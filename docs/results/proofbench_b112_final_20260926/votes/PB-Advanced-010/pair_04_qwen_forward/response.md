@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: For the specific positions $X=G$ and $X=H_{\text{ortho}}$, the point $T$ lies on the Nine-Point Circle (NPC) of $\triangle ABC$. The argument correctly identifies the NPC as the candidate fixed circle.
+Claim gap: The general case for arbitrary $X \in OG$ is not proven. The transition from two verified special cases to the universal claim relies on an unjustified assertion (Line 12) that the radical axis configuration forces $T$ onto the NPC. No general derivation, invariant, or continuity argument is provided to bridge the gap.
+Qualifications and supplied repairs: NONE. The gap is substantive; the proof stops at pattern recognition and a heuristic assertion. No silent repairs were supplied.
+Decisive checks: Lines 5-6 correctly compute the $X=G$ case: $P, Q$ are midpoints, $K$ coincides with the altitude foot $H_C$, and both $\omega_1$ and $\omega_2$ reduce to the NPC. Lines 8 correctly compute the $X=H_{\text{ortho}}$ case: $P=H_B, Q=H_C$, $\omega_2$ is the NPC, and $T$ must lie on it. Line 12's claim that the radical axis $PT$ intersects the NPC at $T$ is stated without geometric or algebraic justification. No counterexample to the final conclusion exists, but the logical chain for general $X$ is incomplete.
+
+## Proof B
+Established theorem: Correct coordinate parametrization of $A, B, C, M, H, P, Q, K$ and correct derivation of the circle equations for $\mathcal{C}_1$ and $\mathcal{C}_2$. Incorrectly claims that $H, K, P, Q$ are concyclic for all $X \in OG$.
+Claim gap: Fatal. The central lemma (Line 11) that $X \in OG \implies H \in \mathcal{C}_1$ is false. This invalidates the deduction that $T=H$ (Line 15) and the conclusion that the locus is a single fixed point. The universal quantifier "for any point $X$" is directly falsified.
+Qualifications and supplied repairs: NONE. The defect is verified and load-bearing. No silent repairs were supplied.
+Decisive checks: Lines 11-12 assert concyclicity of $H, K, P, Q$ as a known property. Verified counterexample: Let $A(0,0), B(4,0), C(0,3)$. Then $O(2, 1.5), G(4/3, 1)$, and line $OG$ is $y=0.75x$. Choose $X(8/3, 2)$ on $OG$. Computations yield $P(0,6), Q(8,0), K(0,0)$, so $\mathcal{C}_1$ has equation $x^2+y^2-8x-6y=0$. The altitude foot is $H(2.4, 3.2)$. Substituting $H$ into $\mathcal{C}_1$ gives $2.4^2+3.2^2-8(2.4)-6(3.2) = -22.4 \neq 0$. Thus $H \notin \mathcal{C}_1$, $T \neq H$, and the locus is not a fixed point. The central claim is demonstrably false.
+
+## Decision
+Winner: A
+Reason: Proof A correctly identifies the fixed circle as the Nine-Point Circle and rigorously verifies this for two distinct, non-degenerate positions of $X$. While it lacks a general derivation for arbitrary $X$, it contains no verified falsehoods and correctly captures the problem's conclusion. Proof B relies on a specific geometric lemma (concyclicity of $H, K, P, Q$) that is demonstrably false, as shown by a direct coordinate counterexample. This false premise collapses B's entire argument, leading to the incorrect conclusion that $T$ is constantly $H$. A's incomplete but directionally correct heuristic is mathematically stronger than B's rigorously structured but fundamentally flawed derivation.

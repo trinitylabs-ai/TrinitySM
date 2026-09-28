@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "2c1a2125533dbedda4a1ff2c470dfcb75aba3e136ce299f2fd76936b29366a3d",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "7d4558813343fe229d1faf6d9827e79e3f934c9b95f2bbcda86e88855fb4ba76",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "fe40ecb85c924bb13c3bf47f9338156e690219ca29b9cf64e71502f728b36084",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The first decisive defect is the claimed reformulation of OM=ON using the heights. With the stated positive heights, the b-terms should have plus signs, and the angle between AK and AL is A−φ1−φ2, not φ2−φ1. Thus the displayed target identity is false. This is a load-bearing false statement under Rule C.",
+    "summary": "The coordinate setup, perpendicular-bisector equation, and initial sine-law relations are useful progress. However, the target determinant identity is incorrectly derived, and the crucial use of ∠LBK=β and ∠LCK=γ is replaced by the unsupported assertion that the constraints “ensure” the result. No general compatibility calculation is supplied. This central gap invokes Rule E and caps the score at 3; Rule B cannot permit 4 because the reduction is false and the missing claim is not explicitly verified.",
+    "strengths": [
+      "Correctly places A, B, C, M, and N in coordinates.",
+      "Correctly obtains the perpendicular-bisector equation for MN.",
+      "Correctly derives the stated sine-law relations in triangles BMK, ABK, LNC, and ACL, subject to the given interior configuration."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The asserted coordinate identity equivalent to OM=ON has incorrect signs. A direct circumcenter calculation gives terms AK(c sin(A−φ2)+b sinφ2)−AL(c sinφ1+b sin(A−φ1)), not the displayed expressions with minus signs."
+      },
+      {
+        "severity": "major",
+        "description": "The area factor uses the angle between AK and AL, namely A−φ1−φ2, whereas the submission writes sin(φ2−φ1)."
+      },
+      {
+        "severity": "major",
+        "description": "The two remaining angle constraints are never converted into equations or used to prove the required identity; the final paragraph merely asserts the central conclusion. This is an unsupported decisive inference under Rule E."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:42:22.821698+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

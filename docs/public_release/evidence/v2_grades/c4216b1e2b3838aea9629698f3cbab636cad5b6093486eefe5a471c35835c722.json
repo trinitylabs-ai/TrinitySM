@@ -1,0 +1,56 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "d76ca1b6ef7b257aac3881b840f8eb6a76ed0d9d79a22d6dea052a61ec3f865f",
+  "problem_id": "imo2026_p5",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "9a4f3813773eaec0c78466299d489750f38f9287fd727df5fa1723a1c0541b39",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "b7e655ff2a1de5e91fe4abcc5f09a86189cbc23ed5bce4f4db815d52a58cd45a",
+  "grade": {
+    "score": 2,
+    "verdict": "incorrect",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "In Step 5, the submission assumes “if f(y)=y” and then takes extrema over all y as though f(y)=y had been established universally. This is a circular, unsupported central inference; moreover, the resulting classification is false.",
+    "summary": "Rule A applies: the claimed unique solution f(x)=x excludes the valid solutions f(x)=x+c for every c>0. Indeed, for such a function, both squared gaps equal (x-y-c)^2, so both required inequalities hold. The submission contains correct preliminary algebra, correctly analyzes the restricted family f(x)=ax, and verifies f(x)=x, but it makes no valid transition from these observations to a classification of arbitrary functions.",
+    "strengths": [
+      "The two original inequalities are squared correctly using positivity.",
+      "The analysis of the restricted homogeneous-linear family f(x)=ax reaches the correct conclusion a=1.",
+      "The submission correctly verifies that f(x)=x is a solution."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The final answer is false: every translation f(x)=x+c with c≥0 is a solution, not only c=0."
+      },
+      {
+        "severity": "major",
+        "description": "The general argument conditionally assumes f(y)=y and then varies y over all positive reals, without proving that identity. This effectively assumes the desired conclusion and cannot constrain a general admissible function."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:45:36.857997+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

@@ -1,0 +1,1680 @@
+{
+  "schema": "workshop-strict-v2-results-v1",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "rows": [
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r01",
+      "group": "core",
+      "grader_candidate": "core_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77.md",
+      "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+      "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+      "proof_sha256": "872723f9d14d47100862f83294a3955dae723f8792cc1e7444b3d1795eeb8e77",
+      "v1_score": 7,
+      "v1_grade": "docs/public_release/evidence/grades/72be8eb7d3a16b3e6a8a2ac12ab9ef82058515ec487f7453bd608b1508256153.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:11:38.581032+00:00",
+      "grade": {
+        "score": 7,
+        "verdict": "pass",
+        "answer_supported": true,
+        "dependency_impact": "none",
+        "repair_complexity": "none",
+        "olympiad_treatment": "full_credit",
+        "first_issue": "No decisive defect.",
+        "summary": "The submission gives a complete and correct proof. The pair (N,V) supplies a valid well-founded descent: N never increases, and whenever it remains constant the nonnegative integer V strictly decreases. The terminal board must retain at least one entry greater than 1, so it has exactly one. Primewise, the gcd of all valuation exponents is invariant under the subtraction-Euclidean transformation, and at termination these invariants reconstruct M uniquely from the initial board.",
+        "strengths": [
+          "Correctly distinguishes the cases in which the number of entries greater than 1 decreases or remains constant.",
+          "Correctly proves strict decrease of the sum-of-squares potential whenever N remains constant.",
+          "Correctly establishes that every board retains at least one entry greater than 1.",
+          "Uses the primewise exponent transformation and Euclidean gcd invariance correctly.",
+          "Provides an explicit formula for the terminal value, proving independence of all choices."
+        ],
+        "errors": [],
+        "contract_consistent": true,
+        "full_credit": true
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "1fa29cea71590690148c700d830b5eca27018f957fe34fd4544aa8c1bb7df66a",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t07_r02",
+      "group": "core",
+      "grader_candidate": "core_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b.md",
+      "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+      "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+      "proof_sha256": "a09f7d722fc4ff8ac815b0685d6bad0f1a037154d7d3e1b52e9482d603b4fd3b",
+      "v1_score": 7,
+      "v1_grade": "docs/public_release/evidence/grades/a87548aa372dd9ea6fa391dfdb7059570172fa04effedb49f7e157f8bfbfd110.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:11:39.660466+00:00",
+      "grade": {
+        "score": 7,
+        "verdict": "pass",
+        "answer_supported": true,
+        "dependency_impact": "none",
+        "repair_complexity": "none",
+        "olympiad_treatment": "full_credit",
+        "first_issue": "No decisive defect; none of Rules A–F imposes a deduction.",
+        "summary": "The proof is complete and correct. The lexicographic potential establishes termination, the process cannot eliminate every entry greater than 1, and the primewise gcd of valuations is correctly shown to be invariant and to determine the unique terminal value.",
+        "strengths": [
+          "Correctly computes that each move divides the total product by gcd(m,n).",
+          "Uses a valid lexicographic descent argument, including the coprime case.",
+          "Correctly proves that every terminal board has exactly one entry greater than 1.",
+          "Identifies and proves the invariant gcd of the p-adic valuations for every prime p.",
+          "Correctly reconstructs the terminal integer solely from the initial board."
+        ],
+        "errors": [],
+        "contract_consistent": true,
+        "full_credit": true
+      },
+      "response_selection": {
+        "selected_attempt": 2,
+        "total_attempts": 2,
+        "rejected_attempts_before_selection": 1,
+        "failed_process_attempts": [
+          {
+            "attempt": 1,
+            "returncode": 1,
+            "reason": "model_capacity"
+          }
+        ],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "80fb7593992e82b41e505cb39d4e38fdc698c4b5ae98cbf64342214412350be5",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 1
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r01",
+      "group": "core",
+      "grader_candidate": "core_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c.md",
+      "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+      "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+      "proof_sha256": "fa128ac70b2f13c99a846cc082aeb8683855a1e0ab5143eb8c12ead43c247c9c",
+      "v1_score": 7,
+      "v1_grade": "docs/public_release/evidence/grades/2000243833f62c510d7734e5a6140d69387a73f5aa03780efef3515d751fc119.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:11:35.777587+00:00",
+      "grade": {
+        "score": 7,
+        "verdict": "pass",
+        "answer_supported": true,
+        "dependency_impact": "none",
+        "repair_complexity": "none",
+        "olympiad_treatment": "full_credit",
+        "first_issue": "No decisive defect.",
+        "summary": "The proof is complete and correct. The lexicographically decreasing measure (total number of prime factors counted with multiplicity, number of entries greater than 1) proves termination and leaves exactly one nonunit. Primewise, the move applies the subtraction step of Euclid's algorithm to valuation pairs, preserving the gcd of all valuations; at termination this invariant equals each valuation of the unique remaining integer, determining it independently of all choices.",
+        "strengths": [
+          "Provides a valid well-founded lexicographic descent for every move.",
+          "Correctly proves that at least one entry greater than 1 persists.",
+          "Handles prime valuations, including zero exponents, via the Euclidean gcd identity.",
+          "Derives an explicit choice-independent formula for the terminal integer."
+        ],
+        "errors": [],
+        "contract_consistent": true,
+        "full_credit": true
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "dd2169ad131d5740a5a6960ac41c0dad1a8b6413d7c4fbed9aac87d9af02708e",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p1",
+      "candidate": "t10_r02",
+      "group": "core",
+      "grader_candidate": "core_t10_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p1/core_t10_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed.md",
+      "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+      "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+      "proof_sha256": "72ed70c59dff373cc1c8ffc22884a29d22eabf81d012910526111913dd3c54ed",
+      "v1_score": 6,
+      "v1_grade": "docs/public_release/evidence/grades/45e53bd96ec745085c9afdcc6c9752468b07c141d7f3c2c85034fe6ce61d3c97.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t10_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:12:57.517952+00:00",
+      "grade": {
+        "score": 7,
+        "verdict": "pass",
+        "answer_supported": true,
+        "dependency_impact": "none",
+        "repair_complexity": "none",
+        "olympiad_treatment": "full_credit",
+        "first_issue": "No decisive defect. The parenthetical claim that h equals lcm(m,n) and is always greater than 1 is false in general, but it is non-load-bearing: the preceding case split already proves that every move leaves an entry greater than 1—namely g when gcd(m,n)>1, and h=mn when gcd(m,n)=1. Thus Rule C does not apply by its deletion-test carve-out.",
+        "summary": "The lexicographically decreasing potential (total prime-factor count, number of entries greater than 1) correctly proves termination and, together with preservation of at least one nonunit, gives exactly one terminal nonunit. Primewise valuations transform by the subtractive Euclidean step, so their board-wide gcds are invariant and uniquely determine the terminal integer.",
+        "strengths": [
+          "Correct well-founded lexicographic potential for termination.",
+          "Correct handling of both gcd cases and terminal-state uniqueness.",
+          "Correct primewise valuation transformation and gcd invariant.",
+          "The invariant determines every prime exponent of the terminal value, proving independence of choices."
+        ],
+        "errors": [
+          {
+            "severity": "cosmetic",
+            "description": "The phrase “h = lcm(m,n) > 1 always” is incorrect when gcd(m,n)>1; for example, m=n gives h=1. It is unnecessary because g itself is then greater than 1."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": true
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 2,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 1
+      },
+      "native_scorer_failed": true,
+      "prompt_sha256": "87f9dd76363d870d5d058ed98e5b5b14a3c85b098acf0b3eb11d4bdae3ac59df",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 2
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "group": "core",
+      "grader_candidate": "core_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "4bb7d28422d5ba0a179db3e53c306d3b6b7d01d66490c73c27af34649fc151fe",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/09210773bcd3c5313e9ea23539fc744a2da319258a07619072cde906d3d3ce8e.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:15:23.101289+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first load-bearing error is a sign reversal when expanding P·(b−c). The cross terms should be +kc sin(phi_L)−lc sin(A−theta_K), whereas the submission obtains their negatives. This is a false load-bearing calculation under Rule C. More importantly, the subsequent conclusion PB=PC is only asserted, triggering Rule E and the lower cap of 3.",
+        "summary": "The reduction of OM=ON to PB=PC for P=2O and the circumcenter dot-product relations are useful and largely correct. However, after a sign error in the coordinate calculation, the proof never translates the conditions angle LBK=beta and angle LCK=gamma into equations or derives the required equality. The statement that the terms 'balance' is not an explicit checkable identity, so Rule B does not make score 4 eligible and Rule E caps the solution at 3.",
+        "strengths": [
+          "Correctly proves that OM=ON is equivalent to P=2O lying on the perpendicular bisector of BC.",
+          "Correctly derives P·k=|k|² and P·l=|l|² from the circumcenter equations.",
+          "Obtains useful sine-law relations for the lengths AK and AL and sets up a plausible coordinate strategy."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "In expanding P·(b−c), both mixed-term signs are reversed. The correct expression contains +kc sin(phi_L)−lc sin(A−theta_K), invalidating all subsequent displayed formulas."
+          },
+          {
+            "severity": "major",
+            "description": "The decisive claim PB=PC is not proved. The two remaining angle conditions are never converted into usable relations; saying that the terms balance merely restates the required compatibility. This is an unsupported central inference under Rule E, and the omitted derivation also fails Rule B's explicit-equality requirement."
+          },
+          {
+            "severity": "minor",
+            "description": "The tangent formulas divide by cosine factors and denominators without treating possible right-angle or zero-denominator cases. They are not subsequently used, so this is not the controlling defect."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "40648c963a7cee8bcd98db3f72dfe647a1e04c252080bc8fe06a84505f8f5197",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "group": "core",
+      "grader_candidate": "core_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "eeb08fc14fbc596391cf79815b325b764de9ae8232ad83ca262ccfda97fd49f7",
+      "v1_score": 4,
+      "v1_grade": "docs/public_release/evidence/grades/8949bbf3cf2be5423b3334d99a0fe19b8bbb085fcae0207d0198a13ac0aef7c9.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:14:48.426060+00:00",
+      "grade": {
+        "score": 4,
+        "verdict": "substantial_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "partial_credit",
+        "first_issue": "The proof's final step merely asserts that the displayed expression for bz-cx simplifies to (b^2-c^2)/4 using the remaining angle constraints; it never translates those constraints into equations or performs the required elimination.",
+        "summary": "The coordinate reduction, sine-law computations, cotangent relations, and circumcenter projection formulas are coherent and correctly reduce the problem to one explicit trigonometric equality. That equality is true under the stated hypotheses, but proving it is the central nontrivial compatibility calculation, and no part of that calculation is supplied. Under Rules B and F, the explicit verified target equality makes a score of 4 eligible, but the substantial omitted derivation precludes 5 or higher.",
+        "strengths": [
+          "Correctly reformulates OM=ON as the linear dot-product identity bz-cx=(b^2-c^2)/4.",
+          "Correctly obtains cot(theta_K)=2cot(gamma)+cot(alpha) and cot(theta_L)=2cot(beta)+cot(alpha) from the sine law.",
+          "Correctly uses the perpendicular-bisector equations for the circumcenter and derives an explicit formula for bz-cx."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "The load-bearing trigonometric simplification is wholly omitted. The equalities angle LBK=beta and angle LCK=gamma encode the difficult compatibility between the two constructions, and merely citing them does not demonstrate that the displayed expression has the claimed value."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "c2ae201acd1b70fd5ef6668cb1856d67a7d04707483c5c4209bc89a786616007",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "group": "core",
+      "grader_candidate": "core_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "90d6b24be1f42db72d50bef9c823f2d6c6b7958b58cf78de9e3e1aa1f43978c2",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/7d05db928c9dd1072ab5217cdd76b911cfe0552662542b9777ebca42204e3bd7.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:13:00.024636+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "After correctly reducing the goal to the displayed trigonometric identity equivalent to O'B=O'C, the submission merely asserts that the remaining angle conditions force this identity. Neither that compatibility claim nor the asserted uniqueness of K and L is proved. This is the decisive central inference and invokes Rule E, capping the score at 3.",
+        "summary": "The coordinate setup, the two cotangent relations, and the reduction of OM=ON to O' lying on the perpendicular bisector of BC are meaningful and largely correct. However, the proof omits the essential step connecting the angle conditions LBK=β and LCK=γ to the required identity. The concluding paragraph restates that these conditions make the identity true without deriving it, so the main difficulty of the problem remains unresolved.",
+        "strengths": [
+          "Correctly places A,B,C,M,N in coordinates.",
+          "Derives the relations cot(phi_1)=cot(alpha)+2cot(gamma) and cot(phi_3)=cot(alpha)+2cot(beta) via the sine law.",
+          "Correctly introduces the antipode O'=2O-A and shows that OM=ON is equivalent to O'B=O'C.",
+          "Obtains an explicit coordinate identity whose proof would suffice to finish the argument."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The claim that the remaining angle conditions ensure the final displayed identity is wholly unsupported; no equations encoding LBK=β and LCK=γ are developed or used to verify it."
+          },
+          {
+            "severity": "substantial",
+            "description": "The assertion that K and L are uniquely determined by the angle conditions is unproved and, even if true, would not imply the required perpendicular-bisector identity."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "64dfa303e75178ba5da260238d196d3bd3577a82efa63cc3d9585d2280d34167",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r02",
+      "group": "core",
+      "grader_candidate": "core_t10_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/core_t10_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "d12476ebb4fd5b93ebdb9a1e6fef421a662744359879eb6802a67696c172eb50",
+      "v1_score": 2,
+      "v1_grade": "docs/public_release/evidence/grades/0473e2984f4f7bd438958d8dcd42d506965b6e0dacf44a67fe03bab14283ea03.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t10_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:15:07.464305+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first decisive error is the reversal of the angles of the medial triangle: since triangle AMN is similar to triangle ABC, ∠ANM=∠C and ∠AMN=∠B, not the other way around. Thus the asserted cyclicity criteria θ_K=γ−B and θ_L=β−C are false. This is a load-bearing false statement under Rule C.",
+        "summary": "The initial sine-law computations and the two cotangent identities are meaningful progress. However, after the incorrect angle assignment, the central concyclicity argument is unsupported. Even with B and C corrected, the proof merely assumes a concyclic configuration and then asserts, without a complete compatibility or existence argument, that it satisfies the original cross-angle conditions. The displayed sine ratio and the phrase that symmetry and the cotangent equations “ensure” it do not establish those conditions, handle angle branches, or prove that such a configuration exists. Consequently the final uniqueness step cannot show that the given K and L are concyclic. This unsupported central inference invokes Rule E and caps the score at 3.",
+        "strengths": [
+          "Correctly applies the sine law to triangles BKM and AMK to obtain cot θ_K=2cot γ+cot α.",
+          "The analogous derivation cot θ_L=2cot β+cot α is also essentially correct.",
+          "Recognizes that proving M and N lie on the circumcircle of AKL would imply the desired equality."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The angles ∠ANM and ∠AMN are interchanged, invalidating all subsequent formulas involving γ−B and β−C."
+          },
+          {
+            "severity": "major",
+            "description": "The existence and compatibility of the proposed concyclic configuration are never proved. The asserted trigonometric verification is not supplied, and a sine ratio alone does not establish the required angles without branch and angle-sum arguments."
+          },
+          {
+            "severity": "major",
+            "description": "Uniqueness of points determined by prescribed rays cannot be invoked until a concyclic configuration satisfying all the same prescribed angles has actually been constructed; that load-bearing step is missing."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "00dba3085cbc3c5696a587acc39ea371799f5744ed67b21236a171993663d9ba",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r01",
+      "group": "core",
+      "grader_candidate": "core_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd.md",
+      "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+      "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+      "proof_sha256": "73e370e8695f8778a70ab65ae58cb1a792c432304ed9737e0d9aea66a33508bd",
+      "v1_score": 1,
+      "v1_grade": "docs/public_release/evidence/grades/ab97ed8995b70dc8d6e891826642f0b33e08b5debbddab59d11f8bc68a617bb0.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:15:08.122587+00:00",
+      "grade": {
+        "score": 2,
+        "verdict": "incorrect",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The proposed lower-bound strategy already fails at n=2: from Liu's pieces (3/5,1/5,1/5), Xiang can bisect the 3/5 piece, leaving lengths (3/10,3/10,1/5,1/5), so Liu receives only 1/2 rather than 3/5. Moreover, the true value at n=2 is 4/7, so the claimed final answer 3/5 is false; Rule A caps the score at 2.",
+        "summary": "The submission correctly models the drafting payoff using odd-ranked lengths and obtains the elementary bound S_L≥1/2, with a valid lower-bound construction for n=1. However, its general lower-bound construction is false, and its alleged upper bound consists only of approximation claims and does not prove an exact bound. Since the final formula is incorrect for every n≥2, only limited preliminary progress receives credit.",
+        "strengths": [
+          "Correctly identifies the alternating optimal-selection payoff as the sum of the odd-ranked piece lengths.",
+          "Correctly observes by pairing adjacent ranked pieces that Liu always receives at least half the total length.",
+          "The stated n=1 marking (2/3,1/3) does guarantee at least 2/3."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The final formula (n+1)/(2n+1) is incorrect; for example, the actual value for n=2 is 4/7, not 3/5."
+          },
+          {
+            "severity": "major",
+            "description": "The claimed n=2 and general lower-bound construction is explicitly defeated by bisecting the large piece, as shown in the first issue."
+          },
+          {
+            "severity": "major",
+            "description": "The upper-bound argument is not a proof: making pieces merely 'close' to 1/(2n+1), obtaining a bound only 'significantly' close, or reasoning only 'for large n' cannot establish the required exact universal inequality."
+          },
+          {
+            "severity": "substantial",
+            "description": "In the odd-w_1 case the proof falls back on S_L≥1/2, which does not imply S_L≥(n+1)/(2n+1). Several accompanying estimates, such as r_1≥1/(2n+1), are also unjustified or false after the smaller parent pieces have been split."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "ea131f4c632134e46a061c497164a0be5a23c93dfcb38e6caeeb57c0d89c54ee",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t07_r02",
+      "group": "core",
+      "grader_candidate": "core_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8.md",
+      "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+      "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+      "proof_sha256": "22b0fb35045a4d11e68522222f09121afc14a5e6352731d2a97d6bc311006cf8",
+      "v1_score": 2,
+      "v1_grade": "docs/public_release/evidence/grades/2c60c460334f3a9fba7c641b6cbea7e713b8e096b9819af72912c5b4e9c608c2.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:16:05.313825+00:00",
+      "grade": {
+        "score": 2,
+        "verdict": "incorrect",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first decisive defect is the false central claim that, for Liu's equal intervals, Xiang minimizes the alternating sum by splitting n different intervals in half. For n=1, Xiang may make no mark, leaving two pieces of length 1/2, so Liu receives 1/2<2/3. Thus the proposed lower-bound strategy already fails; this is an unsupported central inference under Rule E.",
+        "summary": "The claimed value (n+1)/(2n+1) is incorrect: for example, at n=2 the actual value is 4/7, not 3/5, so Rule A caps the score at 2. The submission correctly formulates the greedy drafting payoff and gives a valid parity-integral identity, but neither extremal bound is proved. The upper-bound paragraph reverses the required quantifiers by treating one particular Liu partition rather than every possible Liu marking. Recovering the correct result requires the substantially different dyadic lower construction and universal refinement argument.",
+        "strengths": [
+          "Correctly observes that optimal drafting gives Liu the sum of the odd-ranked piece lengths.",
+          "The alternating-discrepancy formula and its layer-cake parity representation are correct."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The asserted minimization for equal initial intervals is false. Xiang is allowed fewer than n marks; for n=1, using no mark gives Liu only 1/2, contradicting the claimed 2/3 guarantee."
+          },
+          {
+            "severity": "major",
+            "description": "The claimed final answer is false for n≥2; already for n=2 it gives 3/5 whereas the exact value is 4/7. Rule A applies."
+          },
+          {
+            "severity": "major",
+            "description": "The purported upper bound only analyzes a specially chosen Liu partition. An upper bound requires a response for every Liu marking, so the central quantifier and compatibility requirement are unaddressed."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "3f80d1f975fc2f95f88e06faf6b2287f09424d444e86a008d608ed3a0c435c40",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r01",
+      "group": "core",
+      "grader_candidate": "core_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015.md",
+      "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+      "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+      "proof_sha256": "696e2473698176f714641102711455b69dab489bc5ff4a22767e361940c60015",
+      "v1_score": 2,
+      "v1_grade": "docs/public_release/evidence/grades/9af286c73d5d5d23a4229a952118225062924afbcebdd7142ebb581a950c2870.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:17:30.291423+00:00",
+      "grade": {
+        "score": 1,
+        "verdict": "incorrect",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first decisive error is the asserted maximization identity for the alternating discrepancy. Alternating signs in sorted order do not maximize the signed sum among all sign assignments of the prescribed cardinalities. For example, for (2/5,2/5,1/10,1/10,0), the alternating sum is 0, while the stated maximum is 4/5. Thus the entire Val_i argument is invalid.",
+        "summary": "The claimed value is false: the correct value is 2^n/(2^(n+1)-1), giving 4/7 when n=2 rather than the submitted 3/5, so Rule A caps the score at 2. Moreover, the proposed lower strategy already fails for n=2: after Liu creates gaps 2/5,2/5,1/5, Xiang can halve the last gap, producing 2/5,2/5,1/10,1/10, from which Liu receives only 1/2. The upper-bound section merely asserts an unproved approximation/pairing construction and does not control the number of cuts. Only the initial sorted-payoff/discrepancy setup is useful, warranting score 1.",
+        "strengths": [
+          "Correctly identifies Liu's drafting payoff as the sum of the odd-ranked lengths after sorting.",
+          "Correctly relates that payoff to the alternating discrepancy through 2L-1."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The final answer is incorrect for every n beyond the coincidental n=1 case; Rule A applies."
+          },
+          {
+            "severity": "major",
+            "description": "The central signed-sum maximization identity is false, so the lower-bound argument does not follow."
+          },
+          {
+            "severity": "major",
+            "description": "The proposed lower-bound construction is explicitly defeated at n=2 by halving the 1/5 segment, yielding Liu only 1/2 instead of 3/5."
+          },
+          {
+            "severity": "major",
+            "description": "The upper bound relies on unsupported claims that n cuts can make all pieces or sorted pairs arbitrarily close; no valid allocation of the cuts or quantitative construction is proved."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "d7c32910cfce47394e2db13530cdeb03222f1d1385d1fe39785c191f51f2519b",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p3",
+      "candidate": "t10_r02",
+      "group": "core",
+      "grader_candidate": "core_t10_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p3/core_t10_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc.md",
+      "problem_sha256": "4b12234f1cda5fedaf908c911a21b7e4f395f649394b111b0adabad430ac248c",
+      "reference_sha256": "371f0acd696f7ccbcb7d2c1fcd618b1419f787a74f67e4adbdd79132febede66",
+      "proof_sha256": "e4afde8818fc7762c86131846aaefee4e6842f9cc24535c731e0bb58d43be0bc",
+      "v1_score": 2,
+      "v1_grade": "docs/public_release/evidence/grades/234ba15833bc33143f6b158dad4290655108a1f93395e26ded271148d3de1307.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t10_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:17:11.410105+00:00",
+      "grade": {
+        "score": 2,
+        "verdict": "incorrect",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The claimed lower bound is false. For n=2, Liu's proposed partition is (3/5,1/5,1/5). Xiang may use only one cut, splitting 3/5 into two pieces of length 3/10. The final lengths are 3/10,3/10,1/5,1/5, so Liu receives only 1/2, not the claimed 3/5.",
+        "summary": "Rule A applies: the claimed value (n+1)/(2n+1) is incorrect. Already for n=2 it gives 3/5, whereas the correct value is 4/7. The proposed lower-bound construction fails explicitly, and the upper-bound construction in Case 2 can produce a nonpositive final piece. Substantial replacement arguments are needed.",
+        "strengths": [
+          "Correctly reduces the claiming phase to the sum of the odd-ranked piece lengths.",
+          "Correctly observes that Liu always receives at least 1/2.",
+          "Uses the useful alternating-discrepancy formulation."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The assertion that equalizing all pieces is Xiang's minimizing strategy, and that unequal pieces or fewer cuts increase Liu's payoff, is unsupported and false; the n=2 counterexample above invalidates the entire lower bound."
+          },
+          {
+            "severity": "major",
+            "description": "The Case 2 response may not define positive pieces. For n=2 and initial lengths (0.34,0.33,0.33), the proposed last piece is x_3=2(0.34)-1+2ε=-0.32+2ε, which is negative for sufficiently small ε. Thus the central upper-bound construction is not admissible."
+          },
+          {
+            "severity": "minor",
+            "description": "In Case 1, the claimed exact sorted ordering into consecutive specified pairs need not hold when the unpaired smallest original piece interleaves with the half-pieces. The discrepancy conclusion could be repaired by deleting adjacent equal pairs, but that argument is not given."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "44b83dfeeb8c572c8c7240c264a2b0893c9b3fdca7e9553a64913c930707309e",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r01",
+      "group": "core",
+      "grader_candidate": "core_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p4/core_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2.md",
+      "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+      "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+      "proof_sha256": "2cc1bc1e817d852a912b81a927c9552f1b95dc433a75339860e89b9e2bc0a2c2",
+      "v1_score": 6,
+      "v1_grade": "docs/public_release/evidence/grades/6733413f745c78eee6f48d211c27cec679691f76d80bbd3962a817bbe6a0ad1a.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:20:00.178566+00:00",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "In the necessity direction, after proving that every triangle with no angle in S is losing, the submission does not explicitly show that such an initial triangle exists when 180°/θ is nonintegral. This is a minor, directly repairable witness omission rather than a Rule E central gap: the equilateral triangle works, since 60°=kθ would imply 180°/θ=3k∈Z.",
+        "summary": "The stated classification is correct. The peeling argument, the normalized-interval construction for 180°=Nθ, and the invariant showing that Shan-Yu can preserve the absence of multiples of θ are all sound. The sole substantive omission is the final choice of an S-free starting triangle needed to complete the converse quantifier.",
+        "strengths": [
+          "Correctly shows that a triangle containing a positive integral multiple of θ is winning by repeatedly splitting that angle.",
+          "For θ=180°/N, correctly constructs a cut whose two children contain complementary multiples nθ and (N−n)θ, and the interval argument covers all N≥2.",
+          "The converse exhaustively analyzes how either child could acquire an angle in S and correctly proves that both children cannot do so when 180°/θ is nonintegral."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "No explicit admissible S-free initial triangle is supplied in the converse. Adding the equilateral triangle, with the one-line verification above, completes the proof."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "bc2b3e558d77419c8da6407857878bfecd060e97776312a6c52389836fd298bb",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t07_r02",
+      "group": "core",
+      "grader_candidate": "core_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p4/core_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278.md",
+      "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+      "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+      "proof_sha256": "bc912717b82e966e21d22e26dbadda5299baa545af34301513ec0d9231f26278",
+      "v1_score": 6,
+      "v1_grade": "docs/public_release/evidence/grades/917549bd7433dffdff94dd1968fc1367877bf6b282f46152b9759a7537d2c857.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:19:26.266895+00:00",
+      "grade": {
+        "score": 5,
+        "verdict": "substantial_gap",
+        "answer_supported": true,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "partial_credit",
+        "first_issue": "In the sufficiency argument, the assertion that every open interval of length at least θ contains a multiple of θ is false. For k=3 and the equilateral triangle, the relevant interval is (60°,120°), which has length θ but contains no multiple of θ. Thus the proposed cut does not exist in that case. The triangle is already terminal, so separating this boundary case repairs the proof directly, but the submitted construction contains a false load-bearing assertion; Rule C caps the score at 5.",
+        "summary": "The final classification θ=180°/k for integers k≥2 is correct, and both main strategies are essentially sound. The sufficiency construction needs an explicit already-winning boundary case, and the necessity proof contains a malformed equality in its third case. Both are routine local repairs, but the false construction assertion invokes Rule C.",
+        "strengths": [
+          "Correctly identifies all and only the reciprocal-integer angles.",
+          "The induction reducing an angle nθ to (n−1)θ is valid.",
+          "The one-cut construction using supplementary multiples works once the equality boundary case is separated.",
+          "The necessity argument has the correct safe-state invariant: every cut of a triangle with no angle in W has at least one child with no angle in W.",
+          "Existence of an initial triangle avoiding the finite set W is routine."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "The open-interval claim with length at least θ is false, causing the stated one-step construction to fail for k=3 and the equilateral triangle. This case is already won, so the repair is to handle it separately and use strict length greater than θ otherwise."
+          },
+          {
+            "severity": "minor",
+            "description": "In necessity case 3, the displayed equality is algebraically false. The intended argument is 180°−α1−β=γ+(α−α1); subtracting the positive multiple α−α1 then gives γ∈W."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "1e760116b2f13157670ceb3f33b16f1f7ecfb228600fc868e8e22a4626e7c2f9",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r01",
+      "group": "core",
+      "grader_candidate": "core_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p4/core_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e.md",
+      "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+      "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+      "proof_sha256": "81de194f835455bd7b7c7b8eca9fd8e7ca78446cf9f3f7397cb626092af7834e",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/3c6cdc7ae843e9bab412c1788c6a1175e72170dcd8d19be8d8e4948503ebd8e4.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:18:15.530264+00:00",
+      "grade": {
+        "score": 2,
+        "verdict": "incorrect",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The necessity proof first fails when it claims that, outside the two proposed families, no s in S can have 180°−s also in S. For θ=36°, which belongs to neither proposed family, s=36° and 180°−s=144°=4θ are both in S. Thus the claimed classification excludes a valid value, so Rule A applies and caps the score at 2.",
+        "summary": "The final classification is false: the actual winning values are θ=180°/n for every integer n≥2, including omitted values such as 36°=180°/5. The two sufficiency arguments correctly establish some valid subfamilies, which constitutes meaningful progress, but the necessity argument is fundamentally invalid.",
+        "strengths": [
+          "The angle-bisection observation correctly shows that a triangle containing 2^kθ can be converted to one containing θ after finitely many retained-child choices.",
+          "The altitude construction correctly proves sufficiency for θ=180°/2^n.",
+          "The 60°/120° cut correctly proves sufficiency for θ=60°/2^n."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The arithmetic assertion about sums of two powers of two ignores cases such as 1+4=5. Hence the claimed complementary-angle obstruction is false; θ=36°, s=36° gives 180°−s=144°=4θ."
+          },
+          {
+            "severity": "major",
+            "description": "The proposed initial condition that α, β, 180°, θ be linearly independent over Q cannot hold whenever θ/180° is rational. The hypothesis being considered still includes many such values, including θ=36°."
+          },
+          {
+            "severity": "major",
+            "description": "The one-move argument is applied only to the specially chosen initial triangle, but the proof never establishes that the required linear-independence properties persist in the retained child. Therefore the conclusion that Shan-Yu can maintain a nonwinning triangle indefinitely is unsupported."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "76c0b8f33143c2f3c5cd684af6e3c5d918b3c95636f3b8473e1ace1b386442ab",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p4",
+      "candidate": "t10_r02",
+      "group": "core",
+      "grader_candidate": "core_t10_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p4/core_t10_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c.md",
+      "problem_sha256": "835a3cf2cf2a4da833abf3c177c2b9e7e8573fa1ac69e0e546c6405f40608852",
+      "reference_sha256": "0e4c005372484b1f9f5d2ce76fd331180ebfc8e3d43280aa94e4352172c207eb",
+      "proof_sha256": "3cd95a600e6de05281fefd68108008b3dde14531a16b7f86c8d14fad9712e78c",
+      "v1_score": 4,
+      "v1_grade": "docs/public_release/evidence/grades/b178a8e22c126c20fc8d207e8e720d61c1a55ac9338281e1107f67a0a39cfb1e.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t10_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:19:53.839968+00:00",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "In the sufficiency proof, the claim that repeated cuts near C force the minimum angle below θ does not explicitly handle Shan-Yu retaining the other child; only one child is shown to have a small angle. This is a minor, directly checkable omission rather than a Rule E central gap: choose a fixed ε<θ (or bisect the chosen vertex angle); one child has angle ε, while in the other the chosen angle decreases by ε, so after finitely many repetitions every response yields an angle below θ.",
+        "summary": "The classification is correct. Apart from the omitted adversarial-branch check in the initial angle-shrinking step, the sufficiency argument correctly forces θ or (n−1)θ and then peels multiples of θ. The necessity argument correctly maintains the invariant that no angle is a positive multiple of θ. The missing branch analysis has a routine, local repair, warranting a minor deduction.",
+        "strengths": [
+          "States the correct complete classification θ=180°/n for integers n≥2.",
+          "Correctly computes the attainable cut-angle intervals and uses an angle below θ to force either θ or 180°−θ.",
+          "Correctly reduces an angle kθ to θ or (k−1)θ, giving finite termination.",
+          "The necessity proof gives a valid safe starting triangle and exhaustively checks the four possible ways both children could contain multiples of θ."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "The initial shrinking argument shows only that one child can have an arbitrarily small angle and omits why Shan-Yu cannot indefinitely retain the other child. A fixed-angle decrement or repeated angle bisection supplies the missing finite-response argument."
+          },
+          {
+            "severity": "cosmetic",
+            "description": "The statement that Mulan wins 'if and only if' she can make both children contain an angle in S is stronger than needed and is not generally justified; the proof only uses, and correctly establishes, that Shan-Yu can preserve the safe invariant whenever at least one child is safe."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "e10218d932f9bd2fd1e5941ae786a5f63c889db42e00001710a1300d27b80490",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r01",
+      "group": "core",
+      "grader_candidate": "core_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20.md",
+      "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+      "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+      "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+      "v1_score": 7,
+      "v1_grade": "docs/public_release/evidence/grades/acdbf40a31f9f2fdfc2dcf28fc3f68a5c32bcd9b54d4f489a31bb17bb5c51375.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:19:02.120326+00:00",
+      "grade": {
+        "score": 7,
+        "verdict": "pass",
+        "answer_supported": true,
+        "dependency_impact": "none",
+        "repair_complexity": "none",
+        "olympiad_treatment": "full_credit",
+        "first_issue": "No decisive defect; no grading-rule cap applies.",
+        "summary": "The submission correctly proves that the solutions are exactly f(x)=x+c with c≥0. It establishes orbit invariance of g=f−id, nonnegativity of g, equality of all positive values of g through a valid tail comparison on Ran(f), and then excludes coexistence of the values 0 and c by connectedness. The converse is also verified correctly.",
+        "strengths": [
+          "Correctly derives f(f(y))=2f(y)−y and hence g(f(y))=g(y).",
+          "Correctly uses forward iterates to prove g≥0.",
+          "The comparison estimate on Ran(f) validly forces all positive defect values to coincide; the brief limiting inference is routine and justified by the unbounded forward orbit.",
+          "The openness and connectedness argument correctly rules out mixed defect values.",
+          "Both inequalities are checked correctly for f(x)=x+c."
+        ],
+        "errors": [],
+        "contract_consistent": true,
+        "full_credit": true
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "9553f13ff48b093bd69959c4e7a1186c11928304c88c832defed5683a1e45b5f",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t07_r02",
+      "group": "core",
+      "grader_candidate": "core_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4.md",
+      "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+      "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+      "proof_sha256": "f500460afeaa6f2d3bdc46817a762c3b39d456cac33e38fdbbe1b7e64c6babc4",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/5627e78d24d19dd279469e769a48335f2eca5216f48a942da37876d6c2b13417.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:21:26.591770+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "In Case 2, the assertion that the distance from x0 to the forward progression {y+n c(y): n∈N} is at most c(y) is unjustified and generally false when y>x0.",
+        "summary": "The claimed classification is correct, and the proof correctly establishes defect invariance, nonnegativity, equality of all positive defect values, and the converse. However, the sole argument excluding coexistence of zero and positive defects relies on a false distance claim. Consequently, neither c(y)≥4x0 nor the subsequent propagation of the zero set follows. This is a decisive compatibility gap under Rule E, so the score is capped at 3. A repair would require a separate argument, such as proving the zero- and positive-defect level sets are both relatively open and invoking connectedness.",
+        "strengths": [
+          "Correctly derives f(f(x))=2f(x)-x, c(f(x))=c(x), the iterate formula, and c(x)≥0.",
+          "Correctly obtains the estimate |c(x)-c(z)|≤(sqrt(x)-sqrt(z))^2 on the image and uses orbit approximation to show all positive defect values agree.",
+          "Correctly verifies that every f(x)=x+c with c≥0 satisfies both inequalities."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "For a forward arithmetic progression y+nC, if y>x0 then its distance from x0 is at least y-x0, which need not be at most C. No preceding argument establishes y≤x0. This false assertion is load-bearing: without it, the mixed case c∈{0,C} is not eliminated, so the final constancy conclusion is unsupported."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "0651d4867b26391a858a45da627b47ec42d44d65d676c48a00acb960a824b360",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r01",
+      "group": "core",
+      "grader_candidate": "core_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed.md",
+      "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+      "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+      "proof_sha256": "af97927af2ccd94d67b4f623fd84fb0dea1236e9e3095a23029da7e1f8c41fed",
+      "v1_score": 6,
+      "v1_grade": "docs/public_release/evidence/grades/98e6b7e39a4b8f6b3a3f9e8ecd25f4d1742f98ddb373b4c3801bf5623392dec4.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:22:52.900984+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "In Case 3, the claim that an arithmetic progression tending to infinity must start to the right of the finite forbidden interval is false; it may begin to the left and skip the interval. Moreover, the previously defined y_0 is naturally a zero-defect point, in which case y_n=y_0+n c_1 is not its orbit. Thus the mixed zero/positive-defect case is not validly resolved.",
+        "summary": "The classification is correct, and the proof correctly verifies the candidates, proves g≥0, and essentially establishes equality of all positive values of g. However, the exclusion of simultaneous defect values 0 and c>0 contains a false inference and then asserts without proof that the two level sets must be complementary intervals. This unsupported central structural claim is load-bearing, so Rule E caps the score at 3; Rule B does not permit 4 because the missing compatibility argument is not reduced to an explicit equality.",
+        "strengths": [
+          "Correctly verifies every f(x)=x+c with c≥0 using RMS–AM–GM.",
+          "Correctly obtains f(f(y))=2f(y)-y, invariance of g along forward orbits, and g≥0.",
+          "The orbit-comparison argument gives meaningful progress toward proving that any two positive values of g are equal.",
+          "The submitted final classification agrees with the true answer."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "In the mixed-defect case, y_n→∞ does not imply that y_0 lies to the right of the forbidden interval; an arithmetic progression can start to its left and avoid it. The displayed formula y_n=y_0+n c_1 is also inconsistent if y_0 is the zero-defect point chosen earlier."
+          },
+          {
+            "severity": "major",
+            "description": "The statement that S_0∪S_{c_1}=(0,∞) implies S_0=(0,b] and S_{c_1}=(b,∞) is false without first proving an ordering or interval property of the level sets. That missing structural step is essential to the final contradiction."
+          },
+          {
+            "severity": "minor",
+            "description": "Even after proving separation by a threshold, the boundary could belong to S_{c_1} rather than S_0; the proof handles only one of these two endpoint cases."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "6a25875711199f4cc50fb479bbfe04f4fb52728353552ff078e1ab1ecd8ffe2c",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p5",
+      "candidate": "t10_r02",
+      "group": "core",
+      "grader_candidate": "core_t10_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p5/core_t10_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3.md",
+      "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+      "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+      "proof_sha256": "9a8558954f0a6aa4b579d4f4f934f4950ee817f62ff25ed6e2a3fb02d75be9e3",
+      "v1_score": 7,
+      "v1_grade": "docs/public_release/evidence/grades/fe31771c5ba1471ab2a0a4bdd72e26c9f3c6c1f948a2f891974a3648393dcec4.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t10_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:22:39.685085+00:00",
+      "grade": {
+        "score": 7,
+        "verdict": "pass",
+        "answer_supported": true,
+        "dependency_impact": "none",
+        "repair_complexity": "none",
+        "olympiad_treatment": "full_credit",
+        "first_issue": "No decisive defect; Rules A–F impose no cap. The phrase “for any n” in the orbit-approximation step should literally be “for all sufficiently large n,” but the proof immediately uses only the limit as n tends to infinity, so this is harmless.",
+        "summary": "The submission correctly derives the iterate relation and nonnegativity of g=f-id, proves that all positive values of g coincide by comparing nearby arithmetic-progressive orbits, excludes coexistence of defect values 0 and c using connectedness, and verifies every translation f(x)=x+c with c≥0. The argument supports the complete and correct classification.",
+        "strengths": [
+          "Correctly squares the inequalities using positivity and obtains equality at x=f(y).",
+          "Correctly derives g(f(y))=g(y), the arithmetic form of forward iterates, and g≥0.",
+          "The orbit-approximation argument validly proves uniqueness of a positive value of g.",
+          "The clopen-set argument correctly rules out mixed values 0 and c.",
+          "The converse is verified by exact square identities."
+        ],
+        "errors": [
+          {
+            "severity": "cosmetic",
+            "description": "The choice of a nonnegative integer m approximating z1+nc1 by z2+mc2 is guaranteed only for sufficiently large n, not necessarily every n. This is exactly the range used in the limiting argument."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": true
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 2,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 1
+      },
+      "native_scorer_failed": true,
+      "prompt_sha256": "1fcbe6f26280366a23e1765b8e10ba3f7810fcb54f3cf4af4ac716eec3d75837",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 2
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r01",
+      "group": "core",
+      "grader_candidate": "core_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf.md",
+      "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+      "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+      "proof_sha256": "73e1ad305b64df0e1e4c30875340aca7e9c65c5ae3a0ad03237a4d9eec8ecddf",
+      "v1_score": 2,
+      "v1_grade": "docs/public_release/evidence/grades/d62cbe8b429aa5e4d53938f395e7e97c86a75684caf8e765e96075eccd981159.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:22:09.339850+00:00",
+      "grade": {
+        "score": 2,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first decisive defect is the claim that S, the union of all prime divisors of the terms, is finite. This is false: for a_1=2 the greedy sequence is a_n=2n, so S contains every prime. The pigeonhole argument only finds a possibly bounded prime q accompanying p and does not bound p. This false structural claim supports the entire finite-state argument, so Rule E caps the score at 3.",
+        "summary": "The proof contains useful preliminary observations about hitting sets and bounded gaps, but its central finiteness assertion is demonstrably false. Moreover, the attempted passage from eventual to global translation periodicity is independently invalid: the required choice of K cannot exist and the backward induction uses unproved translation and gcd invariance. Repair requires the new structural idea of isolating finitely many minimal accepted divisors, not a local correction.",
+        "strengths": [
+          "Correctly observes that the prime support of each new term must hit every earlier prime support.",
+          "Correctly obtains the uniform bound a_{n+1}-a_n at most rad(a_1).",
+          "Conditionally on having a genuinely finite stabilized family, the identity f(x+L_0)=f(x)+L_0 and the finite-state residue argument point toward eventual translation periodicity."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The assertion S is finite is false. In the admissible case a_1=2, induction gives a_n=2n, whose terms collectively contain every prime divisor. The displayed inequalities are consistent with every large p appearing together with the fixed small prime q=2, so the claimed conclusion does not follow."
+          },
+          {
+            "severity": "major",
+            "description": "The choice of K in the global-periodicity section is impossible. From the alleged eventual relation, a_{N+KT}=a_N+KL'=a_N+L>L, yet the proof requires a_{N+KT} to divide L."
+          },
+          {
+            "severity": "major",
+            "description": "The backward induction is circular: in proving the case n=N-1 it already uses a_{N-2+T_new}=a_{N-2}+L, which is precisely a later, not yet established, backward-induction case."
+          },
+          {
+            "severity": "major",
+            "description": "The minimality argument incorrectly treats gcd as translation-invariant, for example asserting gcd(w-L,a_j+L)=gcd(w-L,a_j). This is false without an additional divisibility condition on the arbitrary number w-L."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "9e80b2120c8c733384f3dbbab0c0904e2a19f6a8d3722b004f94122ec4458806",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t07_r02",
+      "group": "core",
+      "grader_candidate": "core_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9.md",
+      "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+      "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+      "proof_sha256": "9ae30b0ef1d5a97df27a4402aac028caed8a2a6de6af4f745865aa491d5542d9",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/49cde7546efb8a0acc7d875f218e21362c4561006c91b8d895368b99f1b0884d.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:23:13.266144+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first decisive defect is the claim that cases with a_{n+1}=m(H)>m^* can occur only finitely often because \\mathcal M_n is finite. This is false: for a_1=2 the sequence is a_n=2n, and whenever n+1=p is prime, H={2,p} achieves a_{n+1}=m(H)=2p>m^*=2. Thus the asserted eventual reduction to a fixed finite family of hitting sets is unsupported, invoking Rule E.",
+        "summary": "The hitting-set reformulation and the conditional finite-state periodicity argument are meaningful progress. However, the proof never establishes its essential fixed finite family of moduli; doing so is the main structural difficulty of the problem. Moreover, even its conditional argument yields the translation law only eventually. The final statement that T and L can be enlarged to absorb an arbitrary initial transient is invalid and leaves the required conclusion for every positive n unproved, so Rule D also caps the score at 3.",
+        "strengths": [
+          "Correctly translates the gcd conditions into hitting-set language and observes that the hitting-set families are nested.",
+          "The minimum products m_n are nondecreasing and can be bounded using P_1 as a hitting set, so their eventual stabilization is essentially valid.",
+          "Assuming a fixed finite family of relevant moduli, the lcm-equivariance of f and the resulting eventual periodicity of the increments are correctly described."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The assertion that equality cases a_{n+1}=m(H)>m^* occur only finitely often does not follow from finiteness of \\mathcal M_n and is demonstrably false. Consequently, no proof is given that all future transitions are controlled by a fixed finite collection \\mathcal S_N. This is an unsupported central structural claim under Rule E."
+          },
+          {
+            "severity": "major",
+            "description": "The argument establishes at most an eventual relation a_{n+T}=a_n+L. Merely choosing larger T and L cannot in general make such a relation hold throughout a finite initial transient. The required all-n quantifier is therefore unhandled, invoking Rule D."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "76086a1504bdbc8006f5d971ad5852b273b1b860991f0ead7899a96d0e15adc6",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r01",
+      "group": "core",
+      "grader_candidate": "core_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260.md",
+      "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+      "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+      "proof_sha256": "6505bccfc60bc4426ca735dd8fe0715b1ebfc2781bdc8e17192d7938d389c260",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/36547a3ca2c7995f34aeaca61ccfb0888d5e6685415e5ae54b0d701296c704f8.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:24:38.147864+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The first decisive defect is the inference that, if a witness satisfies H∩P_i={p} and P_i∩P(m)≠∅, then p∈P(m). The prime in P_i∩P(m) may lie outside H; for example, P_i may contain p and q with q∈P(m) but q∉H. Thus H⊆H_N∪P(m) is unsupported, so the claimed finiteness and stabilization of the sets S_n do not follow. This is an unsupported central structural claim under Rule E.",
+        "summary": "The proof correctly models S_n using finite hitting sets and correctly observes that a stabilized S_n would be periodic and would yield the required index shift. However, its central argument that only finitely many minimal hitting sets can occur is invalid. Establishing the needed finiteness requires substantial new structural reasoning, so Rule E caps the score at 3.",
+        "strengths": [
+          "Correctly identifies membership in S_n with the prime support being a hitting set for P_1,…,P_n.",
+          "Correctly concludes that each fixed S_n is periodic as a finite union of sets of multiples.",
+          "The enumeration argument and the final deduction from eventual stabilization to a translation period are essentially sound, conditional on stabilization."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "The claim that earlier terms belong to S_n is incorrectly attributed to S_n⊆S_{n-1}; inclusion gives the opposite membership implication. The claim is nevertheless repaired directly because a_n shares a factor with every earlier term, and gcd is symmetric."
+          },
+          {
+            "severity": "minor",
+            "description": "A nondecreasing sequence of positive integers need not stabilize merely because its terms are positive. Here stabilization of m_n would follow from the omitted bound m_n≤a_1, since a_1∈S_n for every n."
+          },
+          {
+            "severity": "major",
+            "description": "From H∩P_i={p} and P_i∩P(m)≠∅, the proof falsely infers p∈P(m). Consequently the containment H⊆H_N∪P(m), the finiteness of all possible minimal hitting sets, and eventual stabilization of S_n are not proved. This is the load-bearing heart of the solution."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "074ec65cda4d88eb14ed4813e75c2d02d08c2a5b16d34e7a55652ab7b42bed49",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p6",
+      "candidate": "t10_r02",
+      "group": "core",
+      "grader_candidate": "core_t10_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p6/core_t10_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1.md",
+      "problem_sha256": "b0b81d8c895294b8bf4011921375f158e4c4c00496998f4b0fbf07fea2b38f58",
+      "reference_sha256": "f364d2c0ab4c86ee3bea1d11d9f7a22802594a10dfc81ab91f15ad3fc6d35a9c",
+      "proof_sha256": "f8f72c484e3629e81550aea3ec5d5212b1ee1a1dba5ba0d2f4e548a5a128afa1",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/fa9699798ad5e4df7b794ca22ec5630b69a64b58d1932b6fb1bfbe746452a99d.json",
+      "v1_reconstructed_prompt_sha256": null,
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t10_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:23:41.339319+00:00",
+      "grade": {
+        "score": 3,
+        "verdict": "major_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "new_idea",
+        "olympiad_treatment": "major_deduction",
+        "first_issue": "The proof that the union P of all prime divisors of the terms is finite is false. For example, if a_1=2, then a_n=2n, so P contains every prime. In particular, infinitude of P does not imply that some new prime divisor p of a_{n+1} satisfies p>a_n+M; the subsequent claim that (a_n+M)/p<2 for large a_n merely from p>M is also false.",
+        "summary": "The submission correctly introduces the global accepted set C, proves that every sequence term lies in C, and obtains a uniform bound on consecutive gaps. However, its central route to periodicity depends on the demonstrably false claim that only finitely many primes occur among all terms. The reference argument instead requires proving finiteness only of the primes occurring in minimal accepted squarefree divisors, which is a substantial new structural idea absent here. Moreover, the final passage from eventual periodicity to periodicity for every index is not justified as written. Thus Rule E applies: a false decisive structural inference replaces the central argument, giving a ceiling of 3.",
+        "strengths": [
+          "Correctly reformulates the gcd conditions using prime supports.",
+          "Correctly observes that multiples of the radical of a_1 are always admissible, yielding bounded gaps.",
+          "Correctly proves that every a_n belongs to the global accepted set C.",
+          "Identifies the useful high-level strategy of showing C is periodic and then enumerating it."
+        ],
+        "errors": [
+          {
+            "severity": "major",
+            "description": "The assertion that P=⋃S_n is finite is false; the admissible sequence beginning with a_1=2 is 2,4,6,8,… and has infinitely many prime divisors collectively."
+          },
+          {
+            "severity": "major",
+            "description": "The contradiction argument contains invalid implications: infinitude of P gives no new prime p>a_n+M, and M<p≤a_n+M does not imply (a_n+M)/p<2 for large a_n."
+          },
+          {
+            "severity": "substantial",
+            "description": "Even after claiming eventual enumeration of a periodic set, the proof does not validly deduce the required identity for all n. Determinism does not back-propagate eventual periodicity, and a_1 need not be the numerically smallest member of C."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "cdc3126292490d02acde61177b4bbbd7882d319d88d77f6b87754c4867918e80",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r01",
+      "group": "tool_rewrite",
+      "grader_candidate": "tool_rewrite_t07_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/tool_rewrite_t07_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "cd8697d8a2d5a1130039baaf90ecbd322be8bfb2f1d6861da614ff4bf0eb0222",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/75bb5b00bd7b01c4de9d5ce7712ed5f45a7b1de5628e8425e140d4e980b98332.json",
+      "v1_reconstructed_prompt_sha256": "c0915cb2ed0f8225b0846f5575f6e3b721cfc22ad7d55df04edf1154432022c5",
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t07_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:26:52.322447+00:00",
+      "grade": {
+        "score": 5,
+        "verdict": "substantial_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "partial_credit",
+        "first_issue": "The first decisive defect is the translation of ∠LBK=∠LNC. Writing D=(L-B)×(K-B), d=L×C, u=(L-B)·(K-B), and v=L·C−|C|²/2, the displayed cotangents imply du−Dv=0. The submission instead writes 2Dv−du=0, which is not equivalent. It then falsely claims that this expands to E2. This is a false load-bearing assertion, so Rule C caps the score at 5.",
+        "summary": "The coordinate reduction from OM=ON to PB=PC is correct, and the appendix supplies an explicit algebraic certificate for the intended polynomial implication. However, the second and third angle equalities are both cross-multiplied with an erroneous factor of 2, so the listed polynomial hypotheses E2 and E3 are not established by the equations actually written. Correcting those two lines recovers the intended polynomials. The signed-cotangent branch signs and the numerous nonzero guards are also asserted rather than demonstrated, though the guards actually used by the certificate follow routinely from barycentric coordinates. Thus the strategy is essentially repairable, but it is not valid as submitted.",
+        "strengths": [
+          "Correctly derives the circumcenter relations 2O·K=|K|² and 2O·L=|L|².",
+          "Correctly proves that OM=ON is equivalent to PB=PC for P=2O.",
+          "Provides explicit circumcenter coordinates, a target residual, and a finite algebraic certificate rather than leaving the central algebra wholly unspecified.",
+          "The large listed polynomials E2 and E3 appear to correspond to the corrected cotangent cross-multiplications, so the main strategy can be repaired directly."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "For ∠LBK=∠LNC, the submitted cleared-denominator equation has an extra factor of 2 on the Dv term and therefore does not expand to the displayed polynomial E2."
+          },
+          {
+            "severity": "substantial",
+            "description": "The analogous translation of ∠LCK=∠BMK has the same erroneous factor of 2, so E3 is likewise not derived as written."
+          },
+          {
+            "severity": "minor",
+            "description": "The general formula stated for cot(∠XYZ) uses vectors based at X rather than Y and omits the absolute value required for an unsigned angle. The later coordinate formulas use the proper vertex, but equality of their signed versions requires a determinant-sign argument that is not supplied."
+          },
+          {
+            "severity": "minor",
+            "description": "The claim that strict interior placement guarantees every listed nonzero guard is made without calculation. Most listed guards are unused; the two special guards used in the algebraic certificate can be verified directly using barycentric coordinates, but that verification is absent."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "3543c519e2d6a6a82362b675d31617c62ed8b3e2e7ffb1d5034fdaf3ff8572cf",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t07_r02",
+      "group": "tool_rewrite",
+      "grader_candidate": "tool_rewrite_t07_r02",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/tool_rewrite_t07_r02.md",
+      "source_proof": "docs/public_release/evidence/proofs/1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "1f8e6fd78b64ec409ff39d0d1d2b7cead87c62750d9b50ad706c812f4f357867",
+      "v1_score": 6,
+      "v1_grade": "docs/public_release/evidence/grades/3fef3da994eaab0fc6e77f6c3a1268d27090b01a36544439dca658fc2be8dd6c.json",
+      "v1_reconstructed_prompt_sha256": "f550f30736ac9f89b8ab0a79ef60b8f147ca6f7a7094376a6a349ab223f907aa",
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t07_r02.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:30:43.276840+00:00",
+      "grade": {
+        "score": 5,
+        "verdict": "substantial_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "partial_credit",
+        "first_issue": "The conversion of the three unsigned angle equalities into E1, E2, E3 uses the false identity cot(angle(u,v))=(u·v)/(u×v) with a signed determinant; the correct denominator is |u×v|. The proof neither fixes an orientation nor explicitly verifies that the two determinants in each comparison have the same sign.",
+        "summary": "The circumcenter calculation, reduction to T=0, and explicit algebraic certificate are coherent. However, the polynomial equations feeding that certificate are obtained through a false load-bearing signed-angle formula. Interiority does make the relevant determinant pairs have matching signs, so the proof can be repaired by a short affine-coordinate sign check, but that check is not actually supplied; the later generic reference to “correct sides” does not establish the three needed comparisons. Rule C therefore caps the score at 5.",
+        "strengths": [
+          "Correctly proves that A,K,L are noncollinear and writes the circumcenter coordinates.",
+          "Correctly reduces OM=ON to the explicit polynomial identity T=0.",
+          "Provides a fully specified finite algebraic certificate showing that E1=E2=E3 together with the two stated guards implies T=0."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "The central angle-to-polynomial translation omits absolute values in the cotangent formula and does not prove the necessary matching orientation signs. Thus the hypotheses E1=E2=E3 used by the certificate are not validly derived as submitted."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "5f35280d4178e8178e14da6b463f88209e45eb6ae79d49bbf41f08ddd2dcbd1b",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    },
+    {
+      "problem_id": "imo2026_p2",
+      "candidate": "t10_r01",
+      "group": "tool_rewrite",
+      "grader_candidate": "tool_rewrite_t10_r01",
+      "proof": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/proofs/imo2026_p2/tool_rewrite_t10_r01.md",
+      "source_proof": "docs/public_release/evidence/proofs/22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da.md",
+      "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+      "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+      "proof_sha256": "22c1e3e2225785be042943247ee167e2c8110ee085c0e2ddbaa25c16611ee6da",
+      "v1_score": 3,
+      "v1_grade": "docs/public_release/evidence/grades/653b3305883094bd8906de8a1628171e1be40a752466f1291228354ba6360ad4.json",
+      "v1_reconstructed_prompt_sha256": "197950d402df6daab5653f3f92e474fa049048a95de91177cf42e86ab4715716",
+      "v2_grade": "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t10_r01.json",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+      "completed_at": "2026-09-18T06:27:50.564599+00:00",
+      "grade": {
+        "score": 5,
+        "verdict": "substantial_gap",
+        "answer_supported": false,
+        "dependency_impact": "load_bearing",
+        "repair_complexity": "local_nontrivial",
+        "olympiad_treatment": "partial_credit",
+        "first_issue": "The first angle-to-polynomial conversion has a sign error: det(CA,CL)=cy·lx−cx·ly, the negative of the displayed denominator. Moreover, ordinary unsigned cotangent uses the absolute determinant unless compatible orientations are proved. Thus E1 does not follow from the displayed equations as written. This is a false load-bearing assertion, so Rule C caps the score at 5.",
+        "summary": "The final claim is correct, and the explicit algebraic certificate would complete the argument once E1,E2,E3 and the necessary nonzero conditions are validly obtained. A bounded repair is possible: use affine/barycentric coordinates supplied by the strict interior hypotheses to establish the determinant signs, correct the sign in the first cotangent formula, and verify the few guards actually used in Appendix A. As submitted, however, this compatibility work is missing and one displayed central formula is false.",
+        "strengths": [
+          "The coordinate formulas for the circumcenter and the final scaling from O′ to the midpoint distances are correct.",
+          "The appendix supplies an explicit finite algebraic certificate rather than merely asserting that a computer calculation works.",
+          "After correcting the angle conversion and guards, the overall coordinate strategy is coherent and reaches the desired result."
+        ],
+        "errors": [
+          {
+            "severity": "substantial",
+            "description": "The stated formula for cot∠ACL has the determinant sign reversed, and the proof does not justify replacing unsigned-angle cotangents by signed dot/cross quotients. Consequently the crucial polynomial relation E1 is not derived as written."
+          },
+          {
+            "severity": "minor",
+            "description": "The assertion that the strict interior conditions make every triple of the listed points noncollinear is false in general and does not itself justify all the displayed guards. The guards actually needed by the appendix do follow by short barycentric inequalities, but those checks are not supplied."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "response_selection": {
+        "selected_attempt": 1,
+        "total_attempts": 1,
+        "rejected_attempts_before_selection": 0,
+        "failed_process_attempts": [],
+        "unselected_later_attempts": 0
+      },
+      "native_scorer_failed": false,
+      "prompt_sha256": "c1d681a9e358f999e2079b389e09c587aa8f9c8509272042ed252053d1d6012f",
+      "isolation_audit": {
+        "tool_calls": 0,
+        "successful_processes_audited": true
+      },
+      "native_rejection_count": 0
+    }
+  ],
+  "artifacts": {
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t07_r01.json": "53dd827be540a2456e2c8010a747a29f959ed461ff6ca2cd942908720fc8e396",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t07_r02.json": "4fcaad54efad351843e7abbbcbe2306ffce5603a63b35720d58967b756a1969d",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t10_r01.json": "90e887782b8d7521e385f3e5f6b919616f0bdb0e3eaa347eb2dc27900c5b24cb",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p1/core_t10_r02.json": "b087ef9f494881238a8e20a17bba0e3b04e92dad1ed1f9558fc616f725fe4064",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t07_r01.json": "0bbda870fe53e3c447fc0053a73fd2a108bce63a7b67d1daa3ddd4efe0519354",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t07_r02.json": "09a4de271f7dc5fada5816c52b22525f86bbb480533cf0b3d1e2336f26a4901f",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t10_r01.json": "d08e5a181885a7d4e8ac6d80f89f8ec8cd845bbf0fe0c4380f93e3fe89b656f4",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/core_t10_r02.json": "a5a5f916da0ff5d0e043a2cb563a647a425a5ad80ae7ad9ee74ae19dbae74a3a",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t07_r01.json": "d6e4750b5df2acdf89d3c669325b68e9d425f54905b58b20c927745b297d38f6",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t07_r02.json": "4d49f2c25baa41836d79e080646480c725a7554c79ac1d493e36874bfe45188b",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t10_r01.json": "66a8a09858add5ad4022eed809c448968e64f4ba47c50bb7a288d687ba4e6e6b",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p3/core_t10_r02.json": "e7b9f3ea103e8edc2388adfd009a619100bc2dd55204b9dba76d73b9ddeeded5",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t07_r01.json": "5c6ef52c4a02a6ac21aab9be85bb64ceea373a4cfb5a219a40a0fce4256e0e54",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t07_r02.json": "edeb20e39fb4027be1192d7c3a1129fe73d33c3a5a4781e1d13660b60fe55718",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t10_r01.json": "92b3eef34117d4bb20f20c9a0b8c737e96160de38950697c137f3c5a9c49a5a8",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p4/core_t10_r02.json": "b261fa6a34ee8f962098ad1e2abda94e189f8553d69ce5ef4395e574ce8ba16d",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t07_r01.json": "c3bd39e0ceff2353a4257564da01fb03f9e9393bf67a2e9c9d7b0c32acd30184",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t07_r02.json": "ed4cb91ec0f923e2c5e688ed53b4f222db5640b6006769571eef08284b059450",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t10_r01.json": "868dee7233149318603b9c109bfc85a8fc10e2ef1849be19e56ed157b3056f77",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p5/core_t10_r02.json": "f5a0ea6441bbba358e94c36588d43b27a2cb868e083752b51612e180b3237882",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t07_r01.json": "c58c25982b0e2efa0101b27d2a61736ed8e56d2623498ad50870cdefc2a4b84d",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t07_r02.json": "3b719fa76c61c7cececcdac9fec2e0bf0f80906cace397b2b46f364f00dc8175",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t10_r01.json": "d65f1894a31486fb712cf014a13178e002abedb4a23c0c1d8e46b68370d247bb",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p6/core_t10_r02.json": "6ccc1642e0daf26dc62d4786355426f923e9533b45f79417624190576fc3a036",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t07_r01.json": "ecbb96ef8b9f119dee33f5edff6303a266a0ce2dbb481c67e2fa864d7a139f38",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t07_r02.json": "2427eb8dc5080765f3bcbc40ffc2319ffd5db32a3e7f1aca80e575ba8c40714b",
+    "benchmarks/imo2026/results/strict_v2_20260918T061000Z/grades/imo2026_p2/tool_rewrite_t10_r01.json": "d35dad67936d6600abb7b05c598a42ca158fa84f08198902cb87dae69f547d7b"
+  }
+}

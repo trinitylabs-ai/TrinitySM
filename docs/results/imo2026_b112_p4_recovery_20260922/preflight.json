@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "model_calls": 0,
+  "source_unchanged": true,
+  "producer_hashes_prompts_seeds_bf_replayed": true,
+  "verdict_unchanged": true,
+  "frozen_release_unchanged": true,
+  "policy": "acceptance-none-routine-completion-annotation-v1",
+  "resolver_seed": 482381079,
+  "resolver_temperature": 0.4,
+  "resume_point": "R2 resolver",
+  "new_raw_lazy_r1_or_r2_review_fusion_calls": 0
+}

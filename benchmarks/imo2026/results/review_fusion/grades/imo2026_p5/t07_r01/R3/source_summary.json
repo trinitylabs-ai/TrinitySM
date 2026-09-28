@@ -1,0 +1,75 @@
+{
+  "schema": "gold-informed-olympiad-calibrated-batch-summary-v1",
+  "state": "completed",
+  "completed_at": "2026-09-08T09:37:07.818438+00:00",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "candidate_count": 1,
+  "score_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 0
+  },
+  "per_problem": {
+    "5": {
+      "scores": [
+        6
+      ],
+      "mean": 6.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+      "state": "completed",
+      "completed_at": "2026-09-08T09:37:07.816576+00:00",
+      "grader": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh",
+      "policy_mode": "strict",
+      "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+      "problem_number": 5,
+      "problem_id": "imo2026_p5",
+      "case_id": "imo2026_p5.explicit.t07_r01",
+      "candidate_id": "t07_r01",
+      "problem_path": "/opt/proof-workshop/math_harness_inputs/imo2026_p4_p2_v0313_20260815/imo2026_p5.json",
+      "reference_path": "/opt/proof-workshop/math_harness_references/imo2026_mechmath_20260817/Q5_solution.txt",
+      "proof_path": "/opt/proof-workshop/runs/v0290r1_p5_lazy_checked_strict_per_proof_20260908/R3/t07_r01/submitted_proof.md",
+      "proof_source_kind": "explicit_terminal_proof",
+      "proof_sha256": "5e2ddd069da39e22601fac99a9e50c51dbc01a2103daa5aad097e86dd40d31c2",
+      "resolver_outcome": "EXPLICIT_ARTIFACT",
+      "grade": {
+        "score": 6,
+        "verdict": "minor_gap",
+        "answer_supported": true,
+        "dependency_impact": "local",
+        "repair_complexity": "routine_direct",
+        "olympiad_treatment": "minor_deduction",
+        "first_issue": "The claim that the neighborhood-expansion property forces a nonempty set B to equal all of (0,∞) is asserted without proof.",
+        "summary": "The orbit argument, nonnegativity of g, comparison of positive defect values, exclusion of mixed defect levels, and converse verification are mathematically sound. The only notable omission is a short propagation argument: the connected component of B containing w₀ cannot have a finite positive endpoint, since the radii 2√(wc) stay bounded away from zero near such an endpoint. Thus that component is (0,∞). This is routine and directly repairable.",
+        "strengths": [
+          "Correctly derives g(f(y))=g(y), the iterate formula f^(n)(y)=y+ng(y), and hence g≥0.",
+          "Correctly proves that all positive values of g coincide by comparing suitably close forward-orbit points.",
+          "Correctly obtains the local separation between the zero-defect and positive-defect sets.",
+          "Correctly verifies every function f(x)=x+c with c≥0."
+        ],
+        "errors": [
+          {
+            "severity": "minor",
+            "description": "The sentence 'By iterating this expansion, B must be R_{>0}' omits the direct connected-component/endpoint justification. It is true, but under a harsh proof-as-submitted standard it should be supplied."
+          }
+        ],
+        "contract_consistent": true,
+        "full_credit": false
+      },
+      "errors": []
+    }
+  ],
+  "failures": {}
+}

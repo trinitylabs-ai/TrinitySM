@@ -1,0 +1,39 @@
+To find $f(n)$, the number of pairs of paths $P_1$ and $P_2$ on an $n \times n$ grid starting at $(0,0)$ and ending at $(n,n)$ such that the $y$-coordinate of the first path never exceeds the $y$-coordinate of the second path at any timestep $t \in \{0, 1, \dots, 2n\}$, we proceed as follows:
+
+### 1. Formalization of the condition
+A path $P$ from $(0,0)$ to $(n,n)$ is a sequence of $2n$ steps, each being either Right (R) or Up (U). Let $y_{i,t}$ be the $y$-coordinate of path $P_i$ after $t$ steps. The condition is $y_{1,t} \le y_{2,t}$ for all $t \in \{0, 1, \dots, 2n\}$. Both paths must satisfy $y_{i,0} = 0$, $y_{i,2n} = n$, and $y_{i,t+1} - y_{i,t} \in \{0, 1\}$.
+
+### 2. Application of the Lindström-Gessel-Viennot Lemma
+To use the LGV Lemma, we transform the condition $y_{1,t} \le y_{2,t}$ into a non-intersecting path problem. We shift the paths by defining new paths $P'_1$ and $P'_2$ such that they are vertex-disjoint. Let $y'_{1,t} = y_{1,t} - 1$ and $y'_{2,t} = y_{2,t}$. 
+The condition $y_{1,t} \le y_{2,t}$ is equivalent to $y'_{1,t} < y'_{2,t}$ for all $t$.
+The new paths start and end at the following points in the $(t, y)$-plane:
+- $P'_1$: starts at $S_1 = (0, -1)$ and ends at $E_1 = (2n, n-1)$.
+- $P'_2$: starts at $S_2 = (0, 0)$ and ends at $E_2 = (2n, n)$.
+The steps allowed are $(1, 0)$ and $(1, 1)$. The number of such paths is the number of ways to choose which $y_{end} - y_{start}$ steps are $(1, 1)$ out of $2n$ total steps.
+
+Using the LGV Lemma, the number of non-intersecting pairs is given by the determinant:
+\[ f(n) = \det \begin{pmatrix} N(S_1, E_1) & N(S_1, E_2) \\ N(S_2, E_1) & N(S_2, E_2) \end{pmatrix} \]
+where $N(S, E)$ is the number of paths from $S$ to $E$:
+- $N(S_1, E_1) = \binom{2n}{(n-1) - (-1)} = \binom{2n}{n}$
+- $N(S_2, E_2) = \binom{2n}{n - 0} = \binom{2n}{n}$
+- $N(S_1, E_2) = \binom{2n}{n - (-1)} = \binom{2n}{n+1}$
+- $N(S_2, E_1) = \binom{2n}{(n-1) - 0} = \binom{2n}{n-1}$
+
+Thus, $f(n) = \binom{2n}{n}^2 - \binom{2n}{n+1}\binom{2n}{n-1} = \binom{2n}{n}^2 - \binom{2n}{n+1}^2$.
+
+### 3. Calculation for $n = 10$
+We compute the values for $n = 10$:
+\[ \binom{20}{10} = \frac{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 184756 \]
+\[ \binom{20}{11} = \binom{20}{9} = \binom{20}{10} \cdot \frac{10}{11} = 184756 \cdot \frac{10}{11} = 16796 \cdot 10 = 167960 \]
+Now we evaluate the difference of squares:
+\[ f(10) = 184756^2 - 167960^2 = (184756 - 167960)(184756 + 167960) \]
+\[ f(10) = 16796 \cdot 352716 \]
+Performing the multiplication:
+\[ 16796 \cdot 352716 = 16796 \cdot (300000 + 50000 + 2000 + 700 + 16) \]
+\[ = 5038800000 + 839800000 + 33592000 + 11757200 + 268736 \]
+\[ = 5878600000 + 45349200 + 268736 \]
+\[ = 5923949200 + 268736 = 5924217936 \]
+
+The number of pairs of paths is $5,924,217,936$.
+
+\(\square\)

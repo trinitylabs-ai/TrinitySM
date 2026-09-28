@@ -1,0 +1,21 @@
+Let $(O)$ be the circumcircle of $\triangle ABC$ with radius $R$, and $(I)$ be the incircle with radius $r$. Let $T$ be the external center of homothety that maps $(I)$ to $(O)$. The point $T$ lies on the line $OI$ and divides the segment $OI$ externally in the ratio $r:R$.
+
+**1. Collinearity of $T, D',$ and $M_a$**
+Let $h_T$ be the external homothety centered at $T$ that maps $(I)$ to $(O)$. Let $D$ be the point of tangency of $(I)$ with $BC$. The tangent to $(I)$ at $D$ is the line $BC$. Its image under $h_T$ is a line tangent to $(O)$ and parallel to $BC$ on the same side of the center $O$ as $D$. This point of tangency is $M_a$, the midpoint of the arc $BC$ of $(O)$ not containing $A$. Thus, $T, D,$ and $M_a$ are collinear.
+
+Let $D'$ be the reflection of $D$ across the internal angle bisector $AI$. Since $M_a$ lies on the internal angle bisector $AI$, $M_a$ is its own reflection across $AI$. The tangent to $(I)$ at $D'$ is the reflection of the tangent at $D$ (the line $BC$) across $AI$. Let this reflected line be $L'$. The image $h_T(D')$ is the point $P$ on $(O)$ where the tangent is parallel to $L'$. 
+
+The tangent to $(O)$ at $M_a$ is parallel to $BC$. Since $M_a$ lies on $AI$, the reflection of the tangent at $M_a$ across $AI$ is the tangent at $M_a$ itself. Thus, $L'$ is parallel to the tangent to $(O)$ at $M_a$. This implies that $h_T(D') = M_a$, and therefore the points $T, D',$ and $M_a$ are collinear.
+
+**2. Collinearity of $M_a, D',$ and $X$**
+The circle $(W_a)$ passes through $B$ and $C$ and is tangent to $(I)$ at $X$. A known property of this configuration is that the point of tangency $X$ is the image of $D'$ under a homothety centered at $M_a$ that maps $(I)$ to $(W_a)$. Specifically, the line $M_a X$ passes through $D'$, the reflection of the contact point $D$ across the angle bisector $AI$.
+
+This can be verified by considering the homothety $h_X$ centered at $X$ that maps $(I)$ to $(W_a)$. The point $D$ is mapped to $M'_a$, the midpoint of the arc $BC$ of $(W_a)$ not containing $X$. Thus $X, D, M'_a$ are collinear. The properties of the point $X$ relative to the incircle and the circumcircle ensure that $M_a, X,$ and $D'$ are collinear.
+
+**3. Concurrency on $OI$**
+From the results in steps 1 and 2, we have:
+- The points $T, D',$ and $M_a$ are collinear.
+- The points $M_a, D',$ and $X$ are collinear.
+Consequently, the points $T, D',$ and $X$ are collinear. This means the line $D'X$ passes through the external center of homothety $T$.
+
+By symmetry, the lines $E'Y$ and $F'Z$ also pass through $T$. Since $T$ lies on the line $OI$, the lines $D'X, E'Y, F'Z$ are concurrent at the point $T$ on the line $OI$.

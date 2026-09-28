@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "5ba5966aa7c25ebe129a879c76308f2c3b612fbe2dc315e3880c67b2c87dc1a0",
+  "problem_id": "imo2026_p2",
+  "repeat": 1,
+  "problem_sha256": "f52789b35a23f650a84aff4af130a8ba3ac3cb69ab67d9e2b54dd1d73be89763",
+  "reference_sha256": "763c35bee3096133f78a6e8a5691289973daf0ef1b10ead12187899a25383bbd",
+  "proof_sha256": "965698c4bfbb433ccd300f49085dca6652c25d3dbcb32fb48ed9d3b75442e308",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "88295998c25dac331cb7a6c72d202420060192eab517b9f29fc357475d22dfcf",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "partial_credit",
+    "first_issue": "At the circumcentre calculation, the formula for O and the subsequent conversion of O·(c-b) into cross products have incompatible signs: if the displayed formula for O is correct under a chosen perpendicular/cross-product convention, the resulting cross-product numerator is the negative of the one written. This is a false load-bearing step under Rule C.",
+    "summary": "The submission makes meaningful progress by reducing OM=ON to a linear condition on O and obtaining useful sine-law parametrizations of K and L. However, after a sign-inconsistent circumcentre calculation, it merely asserts that the remaining two angle conditions imply the displayed identity. That compatibility identity is the central substance of the problem and is not derived at all. Moreover, the printed identity has the wrong sign, so Rule B does not make a score of 4 eligible; the unsupported central inference invokes the lower Rule E ceiling of 3.",
+    "strengths": [
+      "Correctly derives that OM=ON is equivalent to O·(c-b)=(|c|²-|b|²)/4.",
+      "Correctly states the circumcentre equations O·K=|K|²/2 and O·L=|L|²/2.",
+      "The sine-law lengths in triangles BMK and LNC, and the intended complex parametrizations, constitute a coherent start toward a coordinate solution."
+    ],
+    "errors": [
+      {
+        "severity": "substantial",
+        "description": "The circumcentre vector formula and the following dot-to-cross-product conversion cannot simultaneously have the signs written; the displayed target identity therefore does not correctly express the required midpoint condition."
+      },
+      {
+        "severity": "major",
+        "description": "The proof never translates ∠LBK=β and ∠LCK=γ into compatibility equations or proves that they imply the required algebraic identity. The sentence that these conditions 'ensure' the conclusion replaces the entire central elimination argument, so Rule E applies."
+      },
+      {
+        "severity": "minor",
+        "description": "The notation switches without definition from vector b,c to scalar side lengths b,c and uses e^{iA} without explicitly fixing the axis, orientation, and angle branches."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T14:52:01.124939+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pair_batch_00002",
+  "native_rejection_count": 0
+}

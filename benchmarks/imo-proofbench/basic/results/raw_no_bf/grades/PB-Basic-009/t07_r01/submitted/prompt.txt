@@ -1,0 +1,97 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Let $a_1,a_2,...,a_{18}$ be 18 real numbers, not necessarily distinct, with average $m$. Let $A$ denote the number of triples $1 \le i < j < k \le 18$ for which $a_i + a_j + a_k \ge 3m$. What is the minimum possible value of $A$?
+
+**GROUND-TRUTH SOLUTION**
+
+I claim the answer is $136$. Take the construction $17, -1,...,-1,-1,-1,-1,-1,-1,-1,-1$, which clearly works.
+ Now I will show that this is the minimum. For any partition of $\{a_1, a_2, ..., a_{18}\}$ into six triplets, at least one triplet must satisfy that $a_i + a_j +a_k \ge 0$.
+ Therefore there are $\frac{18!}{(3!)^6 6!}$ partitions, and a fixed triplet is contatined in $\frac{15!}{(3!)^5 5!}$ partitions, so there are at least $\frac{18!}{(3!)^6 6!}/\frac{15!}{(3!)^5 5!} = 136$ partitions satisfying the condition.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Guessed the answer $136$, and constructed the equality case.
+(Almost)
+ 1. Solution is almost complete, but made minor mistakes which are not negligible.
+
+**PROPOSED SOLUTION**
+
+To find the minimum possible value of $A$, the number of triples $1 \le i < j < k \le 18$ such that $a_i + a_j + a_k \ge 3m$, we first simplify the problem by substituting $x_i = a_i - m$. The condition that the average of $a_1, \dots, a_{18}$ is $m$ implies that $\sum_{i=1}^{18} x_i = 0$. The condition $a_i + a_j + a_k \ge 3m$ then becomes $x_i + x_j + x_k \ge 0$. We wish to minimize the number of such triples.
+
+Let the sorted numbers be $x_1 \ge x_2 \ge \dots \ge x_{18}$. Since $\sum x_i = 0$, it is impossible for all $x_i$ to be strictly negative, and if all $x_i = 0$, then all $\binom{18}{3} = 816$ triples satisfy the condition. Thus, we must have $x_1 > 0$.
+
+**Case 1: Only one positive number ($x_1 > 0$ and $x_2, \dots, x_{18} \le 0$).**
+If $x_2, \dots, x_{18}$ are all strictly negative, then $x_1 = \sum_{i=2}^{18} |x_i|$. For any triple $(1, j, k)$ with $2 \le j < k \le 18$, the sum is:
+$$x_1 + x_j + x_k = \sum_{i=2}^{18} |x_i| - |x_j| - |x_k| = \sum_{i \in \{2, \dots, 18\} \setminus \{j, k\}} |x_i|.$$
+Since there are 15 terms in this sum and all are strictly positive, $x_1 + x_j + x_k > 0$. There are $\binom{17}{2} = 136$ such triples. Any triple not containing $x_1$ consists of three negative numbers, so its sum is strictly negative. Thus, $A = 136$.
+
+**Case 2: Multiple positive numbers ($k$ positive numbers).**
+Let $P$ be the set of indices of positive numbers and $N$ be the set of indices of negative numbers, with $|P| = k$.
+- If $k=1$, we found $A = 136$.
+- If $k \ge 13$, then $\binom{k}{3} \ge \binom{13}{3} = 286$, so $A \ge 286$.
+- If $6 < k \le 12$, and we set $x_i = \epsilon$ for $i \in P$ and $x_i = -\frac{k\epsilon}{18-k}$ for $i \in N$, then triples with 3 positives or 2 positives and 1 negative are $\ge 0$ if $2\epsilon - \frac{k\epsilon}{18-k} \ge 0 \implies 36-3k \ge 0 \implies k \le 12$. The number of such triples is $A = \binom{k}{3} + \binom{k}{2}(18-k) = \frac{k(k-1)(26-k)}{3}$. For $k=7$, $A = \frac{7 \cdot 6 \cdot 19}{3} = 266$.
+- If $2 \le k \le 6$, and we set $x_i = \epsilon$ for $i \in P$ and $x_i = -\frac{k\epsilon}{18-k}$ for $i \in N$, then 1 positive and 2 negatives are $\ge 0$ if $\epsilon - \frac{2k\epsilon}{18-k} \ge 0 \implies 18-3k \ge 0 \implies k \le 6$. The number of such triples is $A = \binom{k}{3} + \binom{k}{2}(18-k) + k\binom{18-k}{2}$. For $k=2$, $A = 0 + 1 \cdot 16 + 2 \cdot \binom{16}{2} = 16 + 240 = 256$.
+
+**General Lower Bound:**
+If $x_1 \ge x_2 \ge \dots \ge x_{18}$ and $\sum x_i = 0$, the sum of all $\binom{18}{3}$ triples is $\binom{17}{2} \sum x_i = 0$. For $A$ to be small, most triples must be negative. If $x_2 \le 0$, we already found $A \ge 136$. If $x_2 > 0$, we must have at least 16 triples of the form $(1, 2, k)$ that are $\ge 0$ unless $x_1 + x_2 + x_k < 0$ for some $k$. However, to make $x_1 + x_2 + x_{18} < 0$, $x_{18}$ must be very negative, which forces other $x_i$ to be positive or $x_1, x_2$ to be small, effectively returning us to Case 1.
+
+The minimum value is achieved when $x_1 = 17$ and $x_2 = \dots = x_{18} = -1$. The triples with sum $\ge 0$ are exactly the $\binom{17}{2} = 136$ triples containing $x_1$.
+
+The minimum possible value of $A$ is 136.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

@@ -1,0 +1,60 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "fc77b4f90ffe182f444eea67b3b91ebc6609fd3be445bbc03d3e18d57dede407",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "7ee7c7ac8983476f6bec570d618c8a7d7539fed2b971a31e9805c489842442e2",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "126af03676b0316c0253275b8d73dc45e08ed6821ea7e0bf195d21bdb573336a",
+  "grade": {
+    "score": 2,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The necessity argument begins with an invalid unconditional lower bound for f(y): taking its displayed square root requires (f(x)+y)^2-2x^2>=0. If that expression is negative, the original inequality is merely vacuous in that direction, not contradictory. More decisively, the subsequent assertion that consistency forces f(x)-x to be constant is unsupported, invoking Rule E.",
+    "summary": "The submitted classification is correct, and the entire family f(x)=x+c with c>=0 is verified correctly by RMS-AM and AM-GM. However, there is essentially no proof that every solution belongs to this family. Considering only linear or power functions cannot exclude arbitrary functions, and the central constancy claim is simply asserted. Completing the proof requires a new structural argument, not a local repair.",
+    "strengths": [
+      "Correctly squares the two inequalities using positivity.",
+      "Correctly verifies that every f(x)=x+c with c>=0 satisfies both inequalities.",
+      "Correctly identifies c>=0 as necessary for such a translation to map all positive reals to positive reals."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The claim that any deviation from f(x)=x+c violates the inequalities, or that consistency forces c(x) to be constant, is not proved. Testing linear and power-form examples does not establish necessity for arbitrary functions."
+      },
+      {
+        "severity": "substantial",
+        "description": "The displayed square-root lower bound for f(y) is only meaningful when its radicand is nonnegative. A negative radicand imposes no contradiction; describing it as becoming imaginary does not constrain f."
+      },
+      {
+        "severity": "substantial",
+        "description": "The asymptotic upper bound under the extra assumption f(x)=x+epsilon(x) with bounded epsilon gives approximately x/4, which tends to infinity and hence does not contradict the fixed value f(y). Moreover, that bounded-deviation assumption is itself unproved."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T07:44:49.375257+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "batch_00001",
+  "native_rejection_count": 0
+}

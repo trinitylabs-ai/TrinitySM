@@ -1,0 +1,26 @@
+{
+  "proof_sha256": "dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137",
+  "grade": {
+    "score": 6,
+    "category": "Almost"
+  },
+  "problem_sha256": "b918d6c5ad44757bde0ae77b8dabfbd03ef827d2aabff3ee01f47ba53066bf04",
+  "reference_sha256": "d83ac43e47551005bae8e8a8db4e644ee2ef7298fff4f215508cfba226863ff0",
+  "guidelines_sha256": "385d2fc54ca6c2baa7a3c090c9531a94e8002290b11bfdee02af854a7d10c7ec",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "5ed75a318a2e8c804196f38d7b467ebcb080f3b6a77d899b4407d9a6973537ef",
+  "reasoning_effort": "xhigh",
+  "isolation_verified": true,
+  "completed_at": "2026-09-19T01:25:17.357367+00:00",
+  "response_sha256": "906c8903200714edcf26fb43a9209705f5a684dd7e8e05d2ea82613e6833ad6d",
+  "isolation_config_sha256": "a5917c07a3db6bc066bc7a358c0afa8351a57a289dfcfafaff37f80e68287b09",
+  "evaluator_instructions_sha256": "015e67bb885a2531c0aa51431d404c9d479d6676a024dca2a24df0a332f2587c",
+  "schema": "public-release-grade-export-v1",
+  "problem_id": "PB-Advanced-017",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "proof": "evidence/proofs/dbb960c29845dc8e071241f3e725ad129744d5d5cf58b00689650ff3c6ad4137.md",
+  "source_record_sha256": "721bd7fd946d4d7d01fd068ed14c3e65beb26ae25782877657979cb755223d87"
+}

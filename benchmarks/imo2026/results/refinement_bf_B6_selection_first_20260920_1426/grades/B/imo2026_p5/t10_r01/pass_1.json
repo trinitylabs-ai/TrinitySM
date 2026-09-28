@@ -1,0 +1,46 @@
+{
+  "schema": "refinement-bf-independent-grade-v1",
+  "problem_id": "imo2026_p5",
+  "submission_id": "proof_1a38c9f1931d41e90ed115c3",
+  "repeat": 1,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "836a79ab9ed2a1eba296e948c8f75c4c024244c5530830da25e11148f1eea61a",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "a16bfe3ea3247aaee0eb06451d8b9ef638395deb2cb87965fa592bbe724967dc",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect; none of Rules A–F imposes a cap.",
+    "summary": "The submission correctly proves that the solutions are exactly f(x)=x+c for constants c≥0. It verifies these functions, derives nonnegativity and orbit invariance of g=f−id, proves all positive values of g coincide using asymptotically close forward orbits, and excludes coexistence of defect values 0 and c by connectedness.",
+    "strengths": [
+      "The substitution x=f(y) correctly yields the linear behavior of every forward orbit and hence g≥0.",
+      "The limiting argument comparing two positive defect values is valid and proves their equality.",
+      "The mixed-value case is correctly ruled out by showing the two level sets are relatively open.",
+      "The converse follows immediately and correctly from AM–GM and RMS–AM."
+    ],
+    "errors": [
+      {
+        "severity": "cosmetic",
+        "description": "When asserting I_y⊆A and J_x⊆B, the intervals should formally be intersected with (0,∞); the surrounding context makes the intended relative-domain statement clear and the openness argument remains valid."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": [],
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "completed_at": "2026-09-20T13:47:23.448429+00:00",
+  "native_case": "source_workspace/benchmarks/imo2026/results/refinement_bf_cues_six_20260920_0657/grading/work/imo2026_p5/pass_1/p5/proof_1a38c9f1931d41e90ed115c3"
+}

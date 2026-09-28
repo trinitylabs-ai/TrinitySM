@@ -1,0 +1,47 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-12T21:33:04.564526+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 29,
+  "problem_id": "PB-Basic-029",
+  "case_id": "PB-Basic-029.generic.t10_r02",
+  "candidate_id": "t10_r02",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/p29/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/p29/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/p29/proofs/t10_r02.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "7d10b497e0a181f1ade424d79eea55fc4e910070e5aebbbc7441f128b547ecc6",
+  "reference_sha256": "b5e85aeeb35e1e54676761b393c2d39972d68043850c2caac65cef859c5acfef",
+  "proof_sha256": "d3320c975257a00f3f540a76997ecfffff75d4ea753757465e6b60ed1ef534ed",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260912T213056709145Z/inputs/tasks.json",
+  "task_manifest_sha256": "c52dfad21680905c42eb93274b02feb738fa150ad3c013528d6560e486f46cae",
+  "grade": {
+    "score": 3,
+    "verdict": "major_gap",
+    "answer_supported": false,
+    "dependency_impact": "load_bearing",
+    "repair_complexity": "new_idea",
+    "olympiad_treatment": "major_deduction",
+    "first_issue": "The projective transformation does not necessarily map every segment \\(OX\\) to a downward ray: vertices on opposite sides of the transformation’s exceptional line map to oppositely directed vertical rays.",
+    "summary": "Under the [strict gold-informed rubric](/home/user/.codex/skills/strict-gold-informed-olympiad-scorer/SKILL.md), the construction correctly establishes the upper bound, but the claimed projective reduction is false for arbitrary \\(O\\). Consequently, the entire lower bound is proved only for a special directional-level model and does not establish the required result.",
+    "strengths": [
+      "The construction and its level counts correctly yield exactly \\(\\binom{p+2}{2}\\) red points.",
+      "Conditional on the downward-ray model, the maximum-slope induction is coherent and correct."
+    ],
+    "errors": [
+      {
+        "severity": "major",
+        "description": "The unsupported and generally false projective-ray assertion is the load-bearing bridge from the original problem to the lower-bound argument."
+      }
+    ],
+    "contract_consistent": true,
+    "full_credit": false
+  },
+  "errors": []
+}

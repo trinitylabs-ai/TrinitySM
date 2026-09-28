@@ -1,0 +1,4 @@
+{
+  "problem_id": "PB-Advanced-006",
+  "problem": "Find all functions$f:\\mathbb{Z}\\rightarrow\\mathbb{Z}$\n such that the equation\n \\[\n f(x-f(xy))=f(x)f(1-y)\n \\]\n holds for all $x,y\\in\\mathbb{Z}$."
+}

@@ -1,0 +1,126 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+Given a trapezoid $ABCD$ with $AB,CD$ as the two legs. Circle $(W_{1})$ passes through $A,B$, and $(W_{2})$ passes through $C,D$ so that they are tangent to each other. The inscribed angle on circle $W_1$ corresponding to the arc AB on the side opposite to C and D is alpha, and the inscribed angle on circle $W_2$ corresponding to the arc CD on the side opposite to  A and B is beta. Construct $(W_{3})$ passing through $A,B$, $(W_{4})$ passing through $C,D$ such that the inscribed angle on circle W3 corresponding to the arc AB on the side opposite to C and D is $\beta$, and the inscribed angle on circle $W_4$ corresponding to the arc CD on the side opposite to  A and B is b $\alpha$. Prove that $(W_{3}),(W_{4})$ are tangent to each other.
+
+**GROUND-TRUTH SOLUTION**
+
+If $AB,CD$ are parallel to each other then $(W_{1})$ maps to $(W_{4}),(W_{2})$
+ maps to $(W_{3})$ via a reflection w.r.t. the center $O$ of the
+ parallelogram $ABCD$.
+
+ If $AB,CD$ are not parallel to each other then let $X$ be the intersection
+ of $AB,CD$. Consider the inversion with power $XA.XC$ and then reflect
+ it w.r.t. to the internal bisector $\angle AXD$, we have $A\rightarrow C$,
+ $B\rightarrow D$ (1). Note that inversion preserves the angle between
+ the circles and the lines, and so $(W_{1})$ is mapped to $(W_{4})$
+ since we have (1) and the angle between $(W_{1})$ and $AB$ is $\alpha$,
+ which is also the angle between $(W_{4})$ and $CD$. Similarly, we
+ have $(W_{2})$ is mapped to $(W_{3})$. Since $(W_{1})$ is tangent
+ to $(W_{2})$, we have $(W_{3})$ is tangent to $(W_{4})$. Hence
+ proved.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Performed an inversion w.r.t. $AB\cap CD$ and re-analyzed the given problem.
+(Almost)
+ 1. Verification contains minor mistakes only.
+ 2. Did not consider the case when $AB$ and $CD$ are parallel.
+
+**PROPOSED SOLUTION**
+
+To prove that the circles $(W_3)$ and $(W_4)$ are tangent, we set up a coordinate system and use the properties of the centers and radii of the circles.
+
+### 1. Setup and Coordinate System
+Let the trapezoid be $ABCD$ with parallel sides $AD$ and $BC$. Thus, $AB$ and $CD$ are the legs. Let the height of the trapezoid be $h$. We can set the coordinates as $A = (0, h)$, $D = (d, h)$, $B = (b, 0)$, and $C = (c, 0)$.
+The legs are $AB$ and $CD$. Let $L_1 = AB = \sqrt{b^2 + h^2}$ and $L_2 = CD = \sqrt{(d-c)^2 + h^2}$. Let $M_1$ and $M_2$ be the midpoints of $AB$ and $CD$, respectively:
+$M_1 = \left(\frac{b}{2}, \frac{h}{2}\right), \quad M_2 = \left(\frac{c+d}{2}, \frac{h}{2}\right)$.
+The vector $\vec{m} = \vec{M_1 M_2} = \left(\frac{c+d-b}{2}, 0\right)$.
+
+### 2. Centers and Radii of the Circles
+The center $O_1$ of circle $(W_1)$ passing through $A, B$ is located on the perpendicular bisector of $AB$. Given the inscribed angle $\alpha$ on the side opposite to $C$ and $D$, the distance from $M_1$ to $O_1$ is $d_1 = \frac{L_1}{2} \cot \alpha$. Let $\vec{n_1}$ be the unit normal to $AB$ pointing towards $C, D$.
+$\vec{n_1} = \frac{(h, -b)}{L_1} \implies O_1 = M_1 + \frac{L_1}{2} \cot \alpha \vec{n_1}$.
+Similarly, for $(W_2)$ passing through $C, D$ with inscribed angle $\beta$:
+$\vec{n_2} = \frac{(-h, d-c)}{L_2} \implies O_2 = M_2 + \frac{L_2}{2} \cot \beta \vec{n_2}$.
+The radii are $R_1 = \frac{L_1}{2 \sin \alpha}$ and $R_2 = \frac{L_2}{2 \sin \beta}$.
+
+For the constructed circles $(W_3)$ and $(W_4)$, the roles of $\alpha$ and $\beta$ are swapped:
+$O_3 = M_1 + \frac{L_1}{2} \cot \beta \vec{n_1}, \quad O_4 = M_2 + \frac{L_2}{2} \cot \alpha \vec{n_2}$.
+The radii are $R_3 = \frac{L_1}{2 \sin \beta}$ and $R_4 = \frac{L_2}{2 \sin \alpha}$.
+
+### 3. Tangency Condition
+Circles $(W_1)$ and $(W_2)$ are tangent if $|O_1 - O_2|^2 = (R_1 \pm R_2)^2 = R_1^2 + R_2^2 \pm 2R_1 R_2$.
+Let $k_1 = L_1/2$ and $k_2 = L_2/2$. We have:
+$O_1 - O_2 = \vec{m} + k_1 \cot \alpha \vec{n_1} - k_2 \cot \beta \vec{n_2}$.
+$|O_1 - O_2|^2 = m^2 + k_1^2 \cot^2 \alpha + k_2^2 \cot^2 \beta + 2k_1 \cot \alpha (\vec{m} \cdot \vec{n_1}) - 2k_2 \cot \beta (\vec{m} \cdot \vec{n_2}) - 2k_1 k_2 \cot \alpha \cot \beta (\vec{n_1} \cdot \vec{n_2})$.
+Since $R_1^2 = k_1^2 (1 + \cot^2 \alpha)$ and $R_2^2 = k_2^2 (1 + \cot^2 \beta)$, we find:
+$|O_1 - O_2|^2 - (R_1^2 + R_2^2) = m^2 - k_1^2 - k_2^2 + 2k_1 \cot \alpha (\vec{m} \cdot \vec{n_1}) - 2k_2 \cot \beta (\vec{m} \cdot \vec{n_2}) - 2k_1 k_2 \cot \alpha \cot \beta (\vec{n_1} \cdot \vec{n_2})$.
+
+Similarly, for $(W_3)$ and $(W_4)$:
+$|O_3 - O_4|^2 - (R_3^2 + R_4^2) = m^2 - k_1^2 - k_2^2 + 2k_1 \cot \beta (\vec{m} \cdot \vec{n_1}) - 2k_2 \cot \alpha (\vec{m} \cdot \vec{n_2}) - 2k_1 k_2 \cot \alpha \cot \beta (\vec{n_1} \cdot \vec{n_2})$.
+
+### 4. Final Verification
+The difference between these two expressions is:
+$2 (\cot \alpha - \cot \beta) [k_1 (\vec{m} \cdot \vec{n_1}) + k_2 (\vec{m} \cdot \vec{n_2})]$.
+Using our coordinates:
+$k_1 (\vec{m} \cdot \vec{n_1}) = \frac{L_1}{2} \left( \frac{c+d-b}{2} \cdot \frac{h}{L_1} \right) = \frac{h(c+d-b)}{4}$.
+$k_2 (\vec{m} \cdot \vec{n_2}) = \frac{L_2}{2} \left( \frac{c+d-b}{2} \cdot \frac{-h}{L_2} \right) = \frac{-h(c+d-b)}{4}$.
+Thus, $k_1 (\vec{m} \cdot \vec{n_1}) + k_2 (\vec{m} \cdot \vec{n_2}) = 0$.
+This implies $|O_3 - O_4|^2 - (R_3^2 + R_4^2) = |O_1 - O_2|^2 - (R_1^2 + R_2^2) = \pm 2R_1 R_2$.
+Since $R_1 R_2 = \frac{L_1 L_2}{4 \sin \alpha \sin \beta} = R_3 R_4$, we have:
+$|O_3 - O_4|^2 = R_3^2 + R_4^2 \pm 2R_3 R_4 = (R_3 \pm R_4)^2$.
+Thus, $(W_3)$ and $(W_4)$ are tangent to each other. $\square$
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

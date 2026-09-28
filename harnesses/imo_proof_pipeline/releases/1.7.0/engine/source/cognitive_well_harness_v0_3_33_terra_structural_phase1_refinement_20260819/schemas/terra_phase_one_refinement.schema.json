@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "score",
+    "verdict",
+    "first_break",
+    "global_strategy_status",
+    "independent_later_breaks",
+    "requires_new_math",
+    "external_information_used"
+  ],
+  "properties": {
+    "score": {"type": "integer", "enum": [0, 1, 2, 3, 4, 6, 7]},
+    "verdict": {
+      "type": "string",
+      "enum": ["pass", "minor_slip", "substantive_gap", "incorrect"]
+    },
+    "first_break": {"type": ["string", "null"]},
+    "global_strategy_status": {
+      "type": "string",
+      "enum": ["sound", "salvageable", "invalid"]
+    },
+    "independent_later_breaks": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "requires_new_math": {"type": "boolean"},
+    "external_information_used": {"type": "boolean", "const": false}
+  }
+}

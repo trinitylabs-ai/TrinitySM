@@ -1,0 +1,18 @@
+{
+  "schema": "harness-b-promotion-validation-v1",
+  "validated_at": "2026-09-20T22:51:22.254178+00:00",
+  "release": "1.8.0",
+  "harness_variant": "B",
+  "release_sha256": "4f4ee1cc8da3584ff46ad7a686275b8067dd32ed3d8dd081af50239015cfc1b7",
+  "previous_release": "1.7.0",
+  "previous_release_sha256": "1374943fba9e8a39a734160565b926a5b3c869d79ea0b80ed8e5deebd34685b2",
+  "tests_passed": 134,
+  "primary_suite_passed": 133,
+  "additional_boundary_cases": 1,
+  "model_calls": 0,
+  "network_calls_in_pipeline_regression": 0,
+  "exact_archived_B_policy": true,
+  "scope": "three-pass routing, A/B inventory, raw and seed preservation, CLI defaults, independent scorer boundary, saved-run recovery",
+  "test_log": "offline_checks.txt",
+  "test_log_sha256": "31e3623f52048842e20726222757cd4b1a8f029e602339ee173c995a41d3d3cc"
+}

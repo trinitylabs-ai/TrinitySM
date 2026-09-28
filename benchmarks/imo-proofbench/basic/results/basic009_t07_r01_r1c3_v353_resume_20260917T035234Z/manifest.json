@@ -1,0 +1,33 @@
+{
+  "schema": "tool-harness-result-artifact-manifest-v1",
+  "run_id": "basic009_t07_r01_r1c3_v353_resume_20260917T035234Z",
+  "harness_revision": "0.3.353+discrete-synthesis-binding.1",
+  "proofs": [
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate_id": "t07_r01",
+      "checkpoint": "R1-C3",
+      "path": "proofs/PB-Basic-009/t07_r01/R1-C3.md",
+      "source": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v353_resume_20260917T035234Z/generation/run/input/source_proof.md",
+      "sha256": "9fe853ab7e59d304818d60d76deac4e2a603f70a843db0bfd6e1bd49070199a8",
+      "canonical_text_sha256": "c1d670688260272061a2a457e79af47255f96e3e65b486f130e6dfc565facaf8"
+    },
+    {
+      "problem_id": "PB-Basic-009",
+      "candidate_id": "t07_r01",
+      "checkpoint": "tool_rewrite",
+      "path": "proofs/PB-Basic-009/t07_r01/tool_rewrite.md",
+      "source": "/opt/proof-workshop/benchmarks/imo-proofbench/basic/results/basic009_t07_r01_r1c3_v353_resume_20260917T035234Z/generation/run/rewritten_proof.md",
+      "sha256": "6db6d47d9a0b0a8e2e2cb60247e3a095a2f006e53706429f44a8842b954e7373",
+      "canonical_text_sha256": "45182d979a7805d9f387ec4199eae6d1f935f36baea42809023a091c59054b1f",
+      "grade_status": "completed",
+      "grade_path": "grades/PB-Basic-009/t07_r01/tool_rewrite/result.json"
+    }
+  ],
+  "reports": [
+    "reports/run_summary.json",
+    "reports/run_summary.md",
+    "reports/imobench_score.json",
+    "reports/imobench_score.md"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "state": "passed",
+  "model_calls": 0,
+  "checks": [
+    "saved first two substantive defects remain rejected",
+    "saved third annotated NONE accepted",
+    "original output and hash preserved",
+    "unresolved, conditional, uncertain, and appended caveats rejected",
+    "verdict and other defect fields cannot be upgraded",
+    "saved producer prompts seed BF and hashes replay",
+    "tampered producer rejected",
+    "all unchanged grades reused without inference on repeated runs",
+    "one changed proof produces exactly two independent grades",
+    "rerunning skips both completed grades",
+    "grader manifest blinds lane, stage, and condition"
+  ]
+}

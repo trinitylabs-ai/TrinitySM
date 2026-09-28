@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Basic-022",
+  "grader_candidate_id": "t07_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "ff07d3e0905be6f3a284c15dbad9b50cb556684060a08689113e9fceca8e25f1",
+  "proof": "evidence/proofs/ff07d3e0905be6f3a284c15dbad9b50cb556684060a08689113e9fceca8e25f1.md",
+  "completed_at": "2026-09-13T00:23:57.387873+00:00",
+  "grade": {
+    "score": 1,
+    "category": "Partial"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-022/t07_r01/submitted/result.json",
+    "native_record_file_sha256": "d1c59be009419ed69360014bb09b7d74530ef524599d8ca7c37b5d19ba443885",
+    "selected_record": "benchmarks/imo-proofbench/basic/results/pipeline_final/grades/PB-Basic-022/t07_r01/submitted/result.json",
+    "selected_record_file_sha256": "d1c59be009419ed69360014bb09b7d74530ef524599d8ca7c37b5d19ba443885",
+    "proof": "runs/basic002_030_v263_v290_run01/problems/PB-Basic-022/02_r1_cycles/lanes/t07_r01/03_r1_cycle_3/cases/PB-Basic-022.t07_r01/resolver/temperature_0_4/gpu0/p22/t07_r01/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "b24a8bab9e1a172b6fefed6cfab4ad4f3fc82d3f4c90a31cfd71b3831d0fc931",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "1efea3a9dd6c26c80e0fbe5bf4d31b3a340d8a46fe300c0f17f18033217e5cf8",
+  "reference_sha256": "88f4d123bb4de7af98dc52cc35cdf7c94c2a6dcc73184ef23e250bc4abc71e68",
+  "guidelines_sha256": "a1833ebfec581dcf6979d935d835d2e745e0d02b144af77c40ef67c80d4118cf",
+  "response_sha256": "3d2f93e7b7d76eb619049c3fefdd62011ef83e12daca18eeae0ab8008bd7dee8",
+  "isolation_verified": true
+}

@@ -1,0 +1,129 @@
+You are an expert grader for the International Mathematics Olympiad (IMO). Your task is to evaluate a proposed solution strictly and rigorously. Keep in mind the standards at the IMO are extremely high: only arguments that are logically sound, complete, and precise should be rewarded.
+
+### General Scoring Rubric
+
+Scores are assigned on a 0-7 scale. The general guidelines are:
+
+**7 Points (Correct):** The solution is complete, correct, and fully rigorous. If the submission contains incorrect attempts or lines of reasoning but ultimately presents a complete and correct solution, it should still be awarded full points; the presence of earlier, discarded work does not detract from the final correct proof.
+
+**6 Points (Almost Correct):** The solution is almost correct with a sound core argument, but contains minor errors in calculation or small gaps in logic. Missing proofs for major components, unjustified claims, or sketchy arguments are **not** eligible for 6 points.
+
+**1 Point (Partial Progress):** The solution demonstrates substantial progress explicitly mentioned in the grading guidelines. Initial observations, reformulating the problem without making substantive headway, or proving partial results not mentioned in the grading guidelines are generally **not** eligible for this score.
+
+**0 Points (Incorrect):** The solution doesn’t make substantial progress that is a key step in the full solution or is fundamentally flawed. All partial progress without key results or lacking rigor also fall in this category.
+
+### Input Data and Interpretation
+
+You are provided with the following:
+
+**Problem Statement:** The IMO problem.
+
+**Ground Truth Solution:** A reference solution. Assume this solution is correct. It demonstrates one valid approach.
+
+**Specific Grading Guidelines:** Criteria for awarding credit for this specific problem. These guidelines take precedence over the General Scoring Rubric, especially for partial credit.
+
+**Proposed Solution:** The student submission.
+
+### Evaluation Process
+
+You must follow this structured process:
+
+**Analyze References:** Meticulously read and understand the problem and Ground Truth Solution check the Specific Grading Guidelines. Identify the key steps for a complete solution and the criteria for partial credit.
+
+**Step-by-Step Verification:** Verify the logical validity and rigor of every step. Identify all flaws, gaps, assumptions, and errors. **Make sure you fully understand every piece of logic behind each step of the proposed solution, you must be careful for solutions that ’pretend’ to be correct.**
+
+**Assess Progress:** Determine the extent of non-trivial progress made.
+
+**Score Determination:** Compare the findings against the Specific Grading Guidelines and the General Rubric to determine the final score.
+
+### Output Requirements
+
+You must provide your final score in the format <points>N out of 7</points>. Ensure the ‘<points>‘ block is used **only once**, as your answer will be parsed based on the first <points> </points> block that appears in your whole response.
+
+**PROBLEM STATEMENT**
+
+In $\triangle ABC$ the altitudes $BE$ and $CF$ intersect at $H$. A circle $(W)$ is
+ externally tangent to the Euler circle $(E)$ of $\triangle ABC$ and also tangent
+ to the sides $AB$ and $AC$ at $X$ and $Y$, respectively, with
+ $(W)$ being closer to $A$ than the Euler circle. Let $I'$ be the
+ incenter of $\triangle AEF$. Prove that $AXI'Y$ is a rhombus.
+
+**GROUND-TRUTH SOLUTION**
+
+Consider the inversion centered at $A$ with power $\sqrt{\frac{1}{2} AE \times AC}$. Under
+ this inversion, the Euler circle remains unchanged, while $B$ and
+ $C$ are mapped to $B'$ and $C'$, which are the midpoints of $AF$
+ and $AE$, respectively.
+
+
+ Observe that if $AXI'Y$ is a rhombus, then $(W)$ is the image of
+ the mixtilinear incircle of $\triangle AEF$ under a homothety centered
+ at $A$ with ratio $\frac{1}{2}$. The $A$-excircle of $\triangle ABC$,
+ which is tangent to $AB,AC$, and $BC$, is mapped to the circle $(V)$,
+ which is tangent to $AB,AC$, and $(AB'C')$, i.e., the mixtilinear
+ incircle of $\triangle AEF$.
+
+
+ It remains to prove that $(V)$ is tangent to the Euler circle, which
+ would imply that $(V)$ coincides with $(W)$. Indeed, by Feuerbach's
+ theorem, the $A$-excircle is externally tangent to $(E)$. Thus,
+ under the inversion, $(V)$ is also tangent to $(E)$, which implies
+ that $(V)$ coincides with $(W)$, as desired.
+
+**SPECIFIC GRADING GUIDELINES**
+
+(Partial)
+ 1. Applied correct inversion and modified the goal to showing $(V)$ is tangent to the Euler circle.
+ 2. Obtained equivalent information without inversion.
+(Almost)
+ 1. Verification contains minor mistakes only.
+
+**PROPOSED SOLUTION**
+
+To prove that $AXI'Y$ is a rhombus, we let $R$ be the circumradius of $\triangle ABC$ and $A, B, C$ denote the angles of the triangle. The Euler circle $(E)$ has radius $R_E = R/2$. Let $N$ be the center of $(E)$, which is the midpoint of $OH$, where $O$ is the circumcenter and $H$ is the orthocenter.
+
+1.  **Coordinates and Distances:** Let $A$ be the origin $(0,0)$ and the angle bisector of $\angle A$ be the $x$-axis. The vector $\vec{AO}$ has length $R$ and makes an angle $\frac{|B-C|}{2}$ with the $x$-axis. Thus, $\vec{AO} = (R \cos \frac{B-C}{2}, R \sin \frac{B-C}{2})$. The orthocenter $H$ is given by $\vec{AH} = (2R \cos A \cos \frac{B-C}{2}, -2R \cos A \sin \frac{B-C}{2})$. The center $N$ of the Euler circle is $\vec{AN} = \frac{1}{2}(\vec{AO} + \vec{AH}) = \left( \frac{R(1+2\cos A)\cos\frac{B-C}{2}}{2}, \frac{R(1-2\cos A)\sin\frac{B-C}{2}}{2} \right)$.
+
+2.  **The Circle $(W)$:** Let $r_W$ be the radius of $(W)$. Its center $O_W$ lies on the angle bisector, so $\vec{AO_W} = (d, 0)$ where $d = \frac{r_W}{\sin(A/2)}$. Since $(W)$ is externally tangent to $(E)$, $O_W N = r_W + R/2$. Squaring both sides:
+    \[ (r_W + R/2)^2 = \left( d - \frac{R(1+2\cos A)\cos\frac{B-C}{2}}{2} \right)^2 + \left( \frac{R(1-2\cos A)\sin\frac{B-C}{2}}{2} \right)^2 \]
+    Expanding the right side, we obtain $d^2 - 2d \frac{R(1+2\cos A)\cos\frac{B-C}{2}}{2} + \frac{R^2}{4} [ (1+2\cos A)^2 \cos^2\frac{B-C}{2} + (1-2\cos A)^2 \sin^2\frac{B-C}{2} ]$.
+    The term in the bracket simplifies as:
+    \[ (1 + 4\cos A + 4\cos^2 A)\cos^2\frac{B-C}{2} + (1 - 4\cos A + 4\cos^2 A)\sin^2\frac{B-C}{2} \]
+    \[ = (\cos^2\frac{B-C}{2} + \sin^2\frac{B-C}{2}) + 4\cos A (\cos^2\frac{B-C}{2} - \sin^2\frac{B-C}{2}) + 4\cos^2 A (\cos^2\frac{B-C}{2} + \sin^2\frac{B-C}{2}) \]
+    \[ = 1 + 4\cos A \cos(B-C) + 4\cos^2 A. \]
+    Substituting this back and using $d = \frac{r_W}{\sin(A/2)}$, the equation becomes:
+    \[ r_W^2 + r_W R + \frac{R^2}{4} = \frac{r_W^2}{\sin^2(A/2)} - \frac{r_W R (1+2\cos A)\cos\frac{B-C}{2}}{\sin(A/2)} + \frac{R^2}{4} (1 + 4\cos A \cos(B-C) + 4\cos^2 A) \]
+    Rearranging terms into a quadratic in $r_W$:
+    \[ r_W^2 \cot^2(A/2) - r_W R \left[ 1 + \frac{(1+2\cos A)\cos\frac{B-C}{2}}{\sin(A/2)} \right] + R^2 \cos A (\cos A + \cos(B-C)) = 0 \]
+    Let $z = AX = r_W \cot(A/2)$. Then $r_W = z \tan(A/2)$. Substituting this into the quadratic:
+    \[ z^2 - z \tan(A/2) R \left[ 1 + \frac{(1+2\cos A)\cos\frac{B-C}{2}}{\sin(A/2)} \right] + R^2 \cos A (\cos A + \cos(B-C)) = 0 \]
+    The coefficient of $z$ is $R \left( \tan(A/2) + \frac{(1+2\cos A)\cos\frac{B-C}{2}}{\cos(A/2)} \right) = \frac{R}{\cos(A/2)} \left( \sin(A/2) + \cos\frac{B-C}{2} + 2\cos A \cos\frac{B-C}{2} \right)$.
+    Using $\sin(A/2) = \cos\frac{B+C}{2}$, we have $\sin(A/2) + \cos\frac{B-C}{2} = 2 \cos\frac{B}{2} \cos\frac{C}{2}$. Thus:
+    \[ z^2 - \frac{2 R z}{\cos(A/2)} \left[ \cos\frac{B}{2} \cos\frac{C}{2} + \cos A \cos\frac{B-C}{2} \right] + 2 R^2 \cos A \sin B \sin C = 0 \]
+    where we used $\cos A + \cos(B-C) = 2 \sin B \sin C$.
+
+3.  **Incenter $I'$:** $\triangle AEF \sim \triangle ABC$ with ratio $\cos A$. Thus $AI' = AI \cos A$. Since $AI = 4R \sin\frac{B}{2} \sin\frac{C}{2}$, we have $AI' = 4R \sin\frac{B}{2} \sin\frac{C}{2} \cos A$. For $AXI'Y$ to be a rhombus, we must have $AX = \frac{AI'}{2 \cos(A/2)}$, so $z = AX = \frac{2 R \sin\frac{B}{2} \sin\frac{C}{2} \cos A}{\cos(A/2)}$.
+
+4.  **Verification:** Substitute $z = \frac{2 R \sin\frac{B}{2} \sin\frac{C}{2} \cos A}{\cos(A/2)}$ into the quadratic $z^2 - L + C = 0$, where $C = 2 R^2 \cos A \sin B \sin C$ and $L = \frac{2 R z}{\cos(A/2)} [ \cos\frac{B}{2} \cos\frac{C}{2} + \cos A \cos\frac{B-C}{2} ]$.
+    \[ L = \frac{4 R^2 \sin\frac{B}{2} \sin\frac{C}{2} \cos A}{\cos^2(A/2)} \left[ \cos\frac{B}{2} \cos\frac{C}{2} + \cos A \cos\frac{B-C}{2} \right] \]
+    \[ L = \frac{R^2 \sin B \sin C \cos A}{\cos^2(A/2)} + \frac{4 R^2 \sin\frac{B}{2} \sin\frac{C}{2} \cos^2 A \cos\frac{B-C}{2}}{\cos^2(A/2)} \]
+    We calculate $L - z^2$:
+    \[ L - z^2 = \frac{R^2 \cos A}{\cos^2(A/2)} \left[ \sin B \sin C + 4 \sin\frac{B}{2} \sin\frac{C}{2} \cos A \left( \cos\frac{B-C}{2} - \sin\frac{B}{2} \sin\frac{C}{2} \right) \right] \]
+    Since $\cos\frac{B-C}{2} - \sin\frac{B}{2} \sin\frac{C}{2} = \cos\frac{B}{2} \cos\frac{C}{2}$, the bracket is:
+    \[ \sin B \sin C + 4 \sin\frac{B}{2} \cos\frac{B}{2} \sin\frac{C}{2} \cos\frac{C}{2} \cos A = \sin B \sin C (1 + \cos A) = 2 \sin B \sin C \cos^2(A/2). \]
+    Thus $L - z^2 = \frac{R^2 \cos A}{\cos^2(A/2)} [ 2 \sin B \sin C \cos^2(A/2) ] = 2 R^2 \cos A \sin B \sin C = C$.
+    This implies $z^2 - L + C = 0$. This proves $AX = \frac{AI'}{2 \cos(A/2)}$, which implies $AXI'Y$ is a rhombus.
+
+\(\square\)
+
+Present your detailed thought process and formal justification based on the scoring rubric and grading guidelines, and finally present your final score in the format below.
+
+[Select one of the following options]
+
+<points>7 out of 7</points>
+
+<points>6 out of 7</points>
+
+<points>1 out of 7</points>
+
+<points>0 out of 7</points>

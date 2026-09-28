@@ -1,0 +1,31 @@
+{
+  "schema": "public-release-grade-export-v1",
+  "export_note": "Selected fields from the completed native grade; machine-local paths are omitted. The mathematical grade is preserved.",
+  "problem_id": "PB-Advanced-008",
+  "grader_candidate_id": "t10_r01",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "imobench-proof-autograder-b5-v1",
+  "proof_sha256": "1130ad8d122d474c5f97baf2f022284abb68be6dc13e348a2fa9682c3f4305be",
+  "proof": "evidence/proofs/1130ad8d122d474c5f97baf2f022284abb68be6dc13e348a2fa9682c3f4305be.md",
+  "completed_at": "2026-09-13T16:03:33.552005+00:00",
+  "grade": {
+    "score": 0,
+    "category": "Incorrect"
+  },
+  "source": {
+    "native_record": "benchmarks/imo-proofbench/advanced/results/advanced004_030_ipp110_20260913T0750Z/grading/work/batches/batch_0025/scores/cases/PB-Advanced-008/t10_r01/result.json",
+    "native_record_file_sha256": "f1905be11211e6746bde7299fa6b87a619a2c3f01ee68d49c3ff4c072a28b06d",
+    "selected_record": "benchmarks/imo-proofbench/advanced/results/advanced004_030_ipp110_20260913T0750Z/grading/work/batches/batch_0025/scores/cases/PB-Advanced-008/t10_r01/result.json",
+    "selected_record_file_sha256": "f1905be11211e6746bde7299fa6b87a619a2c3f01ee68d49c3ff4c072a28b06d",
+    "proof": "benchmarks/imo-proofbench/advanced/results/advanced004_030_ipp110_20260913T0750Z/generation/run/problems/PB-Advanced-008/02_r1_cycles/lanes/t10_r01/03_r1_cycle_3/cases/PB-Advanced-008.t10_r01/resolver/temperature_0_4/gpu0/p8/t10_r01/resolved_proof.md"
+  },
+  "prompt_template_sha256": "e71ec3a05b6fa906e27fa7f95dabe5f950786eafa921ba526afe7596af809b4c",
+  "prompt_sha256": "8b3c42fc4f182f43efddc960b6ba1625a014d7f27c57889dcdb09d0db13381b3",
+  "dataset_sha256": "aa8b813dbd4068137e3d165e5da228f6e0e1cc85a91c37883e1791b954e43af0",
+  "problem_sha256": "f05b2a04f6014d3eabeac0ddfd937e7a778344ac4185a6e9671621527df7841e",
+  "reference_sha256": "25823c9e705bbb7180ed55319546730cc034932e770b777af059a80fc451705d",
+  "guidelines_sha256": "f1bc1d5ee17afe67bc2b909216b4470ae2ca3d4c0207a52b3f95c872007f5abf",
+  "response_sha256": "4d4800d1d41c8156f837d3461e6fe126449cee4285b46b6092a4592430ec8098",
+  "isolation_verified": true
+}

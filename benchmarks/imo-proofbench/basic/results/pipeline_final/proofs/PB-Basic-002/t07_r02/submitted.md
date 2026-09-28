@@ -1,0 +1,36 @@
+To show that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for any positive real numbers $x, y, z, t$ that satisfy $2(x + y + z + t) \ge xyzt$, we proceed as follows:
+
+Let $S = x + y + z + t$ and $P = xyzt$. The given condition is:
+\[ 2S \ge P \]
+
+First, we establish two lower bounds for the sum of squares $x^2 + y^2 + z^2 + t^2$.
+By the Arithmetic Mean-Geometric Mean (AM-GM) Inequality applied to the four positive real numbers $x^2, y^2, z^2, t^2$:
+\[ \frac{x^2 + y^2 + z^2 + t^2}{4} \ge \sqrt[4]{x^2 y^2 z^2 t^2} = \sqrt{xyzt} = \sqrt{P} \]
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{P} \]
+
+Second, by the Cauchy-Schwarz Inequality:
+\[ (x^2 + y^2 + z^2 + t^2)(1^2 + 1^2 + 1^2 + 1^2) \ge (x + y + z + t)^2 \]
+\[ 4(x^2 + y^2 + z^2 + t^2) \ge S^2 \]
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \]
+
+We now use the given condition $S \ge P/2$ to compare these lower bounds with the product $P$. We consider two cases for the value of $P$:
+
+Case 1: $P \le 16$.
+In this case, $\sqrt{P} \le 4$. Multiplying both sides by $\sqrt{P}$ (since $P > 0$), we obtain $P \le 4\sqrt{P}$.
+Combining this with the AM-GM bound, we have:
+\[ x^2 + y^2 + z^2 + t^2 \ge 4\sqrt{P} \ge P \]
+
+Case 2: $P > 16$.
+Using the Cauchy-Schwarz bound and the given condition $S \ge P/2$:
+\[ x^2 + y^2 + z^2 + t^2 \ge \frac{S^2}{4} \ge \frac{(P/2)^2}{4} = \frac{P^2}{16} \]
+Since $P > 16$, we have $P^2 > 16P$, which implies $\frac{P^2}{16} > P$.
+Thus:
+\[ x^2 + y^2 + z^2 + t^2 > P \]
+
+In both cases, we have shown that $x^2 + y^2 + z^2 + t^2 \ge P = xyzt$.
+
+Equality holds if and only if $x=y=z=t$ (for the AM-GM and Cauchy-Schwarz equalities to hold) and $P=16$ (to satisfy the boundary between the two cases). This occurs when $x=y=z=t=2$. In this case, $2(2+2+2+2) = 16$ and $2 \cdot 2 \cdot 2 \cdot 2 = 16$, so the given condition is satisfied.
+
+Thus, we have shown that $x^2 + y^2 + z^2 + t^2 \ge xyzt$ for all positive real numbers $x, y, z, t$ satisfying $2(x + y + z + t) \ge xyzt$.
+
+\(\square\)

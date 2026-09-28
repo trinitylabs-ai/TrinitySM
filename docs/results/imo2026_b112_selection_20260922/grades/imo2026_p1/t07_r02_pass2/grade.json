@@ -1,0 +1,50 @@
+{
+  "problem_id": "imo2026_p1",
+  "submission_id": "proof_7e59e0fddd4db63c83f79fbb8b2d1745",
+  "pass_index": 2,
+  "score": 7,
+  "verdict": "pass",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect.",
+    "summary": "The proof is complete and correct. The lexicographic potential (product, number of entries greater than 1) proves termination, and the argument that every move leaves at least one entry greater than 1 establishes the terminal count. Primewise, the gcd of all p-adic valuations is invariant under the Euclidean transformation (a,b)↦(min(a,b),|a−b|), which uniquely reconstructs the final integer and proves independence of choices.",
+    "strengths": [
+      "Correctly identifies a well-founded lexicographic potential and verifies strict descent in both gcd cases.",
+      "Correctly proves that a move cannot eliminate all entries greater than 1.",
+      "Uses a valid primewise invariant and correctly connects it to the unique terminal entry.",
+      "Provides an explicit formula for the choice-independent terminal value."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "problem_sha256": "531991751cc8fcb3177f1c06c167973ea8e610579b46be70a285e468cbad2d6d",
+  "proof_sha256": "7e59e0fddd4db63c83f79fbb8b2d1745f61609517b10151b8c0620ae6dfb40ae",
+  "reference_sha256": "bc82124a5875e6fbacd3fcb7e6c2e89099d13bc2c0979712a291888da23c04e7",
+  "evidence_sha256": "4b16489fa88712fee2bfa01342558c231fc6514ef7d2e76cd1b79d5f4b52de66",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "raw_responses": [
+    "grades/imo2026_p1/t07_r02_pass2/raw_response_1.txt"
+  ],
+  "source_evidence_hashes": {
+    "codex.jsonl": "3fd35bce2ab4d0269e87dc7475a7828ab08d8ae5904ff4b93fbed430e504b7de",
+    "grading_policy.txt": "956875d72822d0ae2dbe353de803056604e79608b794764b80a6b08128e511e3",
+    "isolation_audit.json": "969f36b2428fd867e0f9043e18b72edf5568d5fde485aa17623ed094becbf816",
+    "manifest.json": "ac01ac6978003e919cbd310766b11271c1f281380ef3b76bb2b21c28d182ff12",
+    "raw_response_1.txt": "26bdcc833d213d416306b8103c27e6bfe57fc736ccf2a2ad8cfce89202acd271",
+    "summary.json": "fefdde6884667f9fcddefaef49ed6f98724f5782fb4b473a2f77695bed6f1ef7"
+  }
+}

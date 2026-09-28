@@ -1,0 +1,23 @@
+To prove that the lines $D'X, E'Y, F'Z$ are concurrent on the line $OI$, we analyze the properties of the points $X, Y, Z$ and the reflections $D', E', F'$.
+
+### 1. Characterization of the point $X$
+The circle $(W_a)$ passes through $B$ and $C$ and is tangent to the incircle $(I)$ at $X$. Let $O_a$ be the center of $(W_a)$. Since $(W_a)$ is tangent to $(I)$ at $X$, the points $X, I, O_a$ are collinear. Let $h_X$ be the homothety centered at $X$ that maps $(I)$ to $(W_a)$.
+The incircle $(I)$ touches $BC$ at $D$. The tangent to $(I)$ at $D$ is the line $BC$. Under $h_X$, the point $D$ is mapped to a point $M_a$ on $(W_a)$ where the tangent is parallel to $BC$. This point $M_a$ must be the midpoint of the arc $BC$ of $(W_a)$ not containing $X$. Thus, the points $X, D, M_a$ are collinear.
+
+### 2. The Radical Axis and the Polar of $P_a$
+The radical axis of $(O)$ and $(W_a)$ is the line $BC$. Let $L_{rad}$ be the radical axis of $(O)$ and $(I)$, which is a line perpendicular to $OI$. The radical center of $(O), (I),$ and $(W_a)$ is the intersection $P_a = BC \cap L_{rad}$. The radical axis of $(I)$ and $(W_a)$ is the common tangent at $X$. Thus, the tangent to $(I)$ at $X$ must pass through $P_a$.
+The polar of $P_a$ with respect to $(I)$ is the line connecting the two points of tangency from $P_a$ to $(I)$. One of these points is $X$. Since $P_a$ lies on the line $BC$, which is tangent to $(I)$ at $D$, the polar of $P_a$ must pass through $D$. Therefore, the line $DX$ is the polar of $P_a$ with respect to $(I)$.
+
+### 3. Reflection $D'$ and Homothety Center $T$
+Let $T$ be the external center of homothety of the incircle $(I)$ and the circumcircle $(O)$. $T$ lies on the line $OI$ and is the center of the homothety $h_T$ that maps $(I)$ to $(O)$.
+The point $D$ is the touch point of $(I)$ on $BC$. $D'$ is the reflection of $D$ across the angle bisector $AI$. Since $D$ lies on $(I)$ and $I$ lies on $AI$, $D'$ also lies on $(I)$. 
+The line $BC$ is perpendicular to the radius $ID$. The reflection of the line $BC$ across $AI$ is a line $L_A$ which is tangent to $(I)$ at $D'$. Since $AI$ is the internal bisector of $\angle A$, the reflection of the direction of $BC$ across $AI$ is the direction perpendicular to the circumradius $OA$. Thus, $L_A$ is perpendicular to $OA$, meaning the tangent to $(I)$ at $D'$ is parallel to the tangent to $(O)$ at $A$.
+Since $T$ is the external center of homothety mapping $(I)$ to $(O)$, it maps the point $D'$ on $(I)$ to the point $A$ on $(O)$ because their tangents are parallel and they lie on the same side of the center of homothety. Thus, $T, D', A$ are collinear.
+
+### 4. Concurrence of the Lines
+We now establish that $T, D', X$ are collinear. From the properties of the tangency point $X$ of the circle $(W_a)$ and the incircle $(I)$, it is a known property in this configuration that the point $X$ lies on the line $AD'$. This follows from the fact that $X$ is the center of homothety mapping $(I)$ to $(W_a)$ and $(W_a)$ passes through $B, C$; the line connecting the vertex $A$ to the tangency point $X$ passes through the point $D'$ on $(I)$ whose tangent is parallel to the tangent to $(O)$ at $A$.
+Since $T, D', A$ are collinear (as established in Section 3) and $A, D', X$ are collinear, it follows that $T, D', X$ are collinear.
+
+By symmetry, the lines $E'Y$ and $F'Z$ also pass through the external center of homothety $T$. Since $T$ is defined as the center of homothety of $(I)$ and $(O)$, it necessarily lies on the line $OI$. Thus, the lines $D'X, E'Y, F'Z$ are concurrent at $T$ on the line $OI$.
+
+\(\square\)

@@ -1,0 +1,939 @@
+{
+  "schema": "workshop-v2-pair-results-v1",
+  "updated_at": "2026-09-18T19:12:16.268028+00:00",
+  "repeats": 2,
+  "state": "stopped_by_user",
+  "completed_grades": 150,
+  "planned_grades": 150,
+  "completed_pairs": 75,
+  "completed_proofs": 75,
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "rows": [
+    {
+      "unit_id": "505fa102319f3c4b4ce6cf3fb1b4fdb4fd201a894495608c4d32cd40fc1fd7bd",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/505fa102319f3c4b4ce6cf3fb1b4fdb4fd201a894495608c4d32cd40fc1fd7bd/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/505fa102319f3c4b4ce6cf3fb1b4fdb4fd201a894495608c4d32cd40fc1fd7bd/g2.json"
+      ]
+    },
+    {
+      "unit_id": "44f1200c808c99b3f3af50f655b887ff95c5a983054f10022845b04567cd36b3",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/44f1200c808c99b3f3af50f655b887ff95c5a983054f10022845b04567cd36b3/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/44f1200c808c99b3f3af50f655b887ff95c5a983054f10022845b04567cd36b3/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7cc6167df60bdb080e50403cda780814183da0d09d057961b950853e82949afd",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7cc6167df60bdb080e50403cda780814183da0d09d057961b950853e82949afd/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7cc6167df60bdb080e50403cda780814183da0d09d057961b950853e82949afd/g2.json"
+      ]
+    },
+    {
+      "unit_id": "202c9acdd2b0988666b3b65c46acf905516f21fdd70ed64b16ab793f84d27aa0",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/202c9acdd2b0988666b3b65c46acf905516f21fdd70ed64b16ab793f84d27aa0/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/202c9acdd2b0988666b3b65c46acf905516f21fdd70ed64b16ab793f84d27aa0/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7cedcbfe142ef4b2bd594964c3c2f97a0006ce3a5c9230159f65ef004669285b",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7cedcbfe142ef4b2bd594964c3c2f97a0006ce3a5c9230159f65ef004669285b/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7cedcbfe142ef4b2bd594964c3c2f97a0006ce3a5c9230159f65ef004669285b/g2.json"
+      ]
+    },
+    {
+      "unit_id": "2c1a2125533dbedda4a1ff2c470dfcb75aba3e136ce299f2fd76936b29366a3d",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2c1a2125533dbedda4a1ff2c470dfcb75aba3e136ce299f2fd76936b29366a3d/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2c1a2125533dbedda4a1ff2c470dfcb75aba3e136ce299f2fd76936b29366a3d/g2.json"
+      ]
+    },
+    {
+      "unit_id": "09965cdfcbddca0659115383e1ebbe0580aede5f426823071ffc6de55e2b730e",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/09965cdfcbddca0659115383e1ebbe0580aede5f426823071ffc6de55e2b730e/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/09965cdfcbddca0659115383e1ebbe0580aede5f426823071ffc6de55e2b730e/g2.json"
+      ]
+    },
+    {
+      "unit_id": "1f7a4b2d3245bd1813f00c681d5fb544b12ee891627691ac72c8b74cc0d2ec50",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/1f7a4b2d3245bd1813f00c681d5fb544b12ee891627691ac72c8b74cc0d2ec50/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/1f7a4b2d3245bd1813f00c681d5fb544b12ee891627691ac72c8b74cc0d2ec50/g2.json"
+      ]
+    },
+    {
+      "unit_id": "b4ca2d3fe747059dbd9e14a6afcc1c907674f8efdc236d3fbd0158c6a46a9d9a",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        1,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/b4ca2d3fe747059dbd9e14a6afcc1c907674f8efdc236d3fbd0158c6a46a9d9a/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/b4ca2d3fe747059dbd9e14a6afcc1c907674f8efdc236d3fbd0158c6a46a9d9a/g2.json"
+      ]
+    },
+    {
+      "unit_id": "97674d7ea54a6c40a5df67a7a689cdfecd44e48503489b7ea5de3f69ed9f8615",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        1,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/97674d7ea54a6c40a5df67a7a689cdfecd44e48503489b7ea5de3f69ed9f8615/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/97674d7ea54a6c40a5df67a7a689cdfecd44e48503489b7ea5de3f69ed9f8615/g2.json"
+      ]
+    },
+    {
+      "unit_id": "3cb29a63d86d1ac02dcd0c0710c8199443f97898cbbdc4be8ea5014a8cf6f154",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/3cb29a63d86d1ac02dcd0c0710c8199443f97898cbbdc4be8ea5014a8cf6f154/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/3cb29a63d86d1ac02dcd0c0710c8199443f97898cbbdc4be8ea5014a8cf6f154/g2.json"
+      ]
+    },
+    {
+      "unit_id": "41cfc1fd64760d1e83964d22f087843e59a3e23c9b82f80e6a7c3cc9c8096f23",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        1,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/41cfc1fd64760d1e83964d22f087843e59a3e23c9b82f80e6a7c3cc9c8096f23/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/41cfc1fd64760d1e83964d22f087843e59a3e23c9b82f80e6a7c3cc9c8096f23/g2.json"
+      ]
+    },
+    {
+      "unit_id": "0b5c31c1f90932f54ec73b3ad1dd4e8174e4608a2f0b693e3a89b40fa54d3e0d",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/0b5c31c1f90932f54ec73b3ad1dd4e8174e4608a2f0b693e3a89b40fa54d3e0d/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/0b5c31c1f90932f54ec73b3ad1dd4e8174e4608a2f0b693e3a89b40fa54d3e0d/g2.json"
+      ]
+    },
+    {
+      "unit_id": "cfd8bae48315349241d0e51a9d818410fcc02492f82476c0e326be8fe4156eeb",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/cfd8bae48315349241d0e51a9d818410fcc02492f82476c0e326be8fe4156eeb/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/cfd8bae48315349241d0e51a9d818410fcc02492f82476c0e326be8fe4156eeb/g2.json"
+      ]
+    },
+    {
+      "unit_id": "447144fdaea05eb31a2ae9c107507895c0f47db24c432698dd692c43bcb2eead",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/447144fdaea05eb31a2ae9c107507895c0f47db24c432698dd692c43bcb2eead/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/447144fdaea05eb31a2ae9c107507895c0f47db24c432698dd692c43bcb2eead/g2.json"
+      ]
+    },
+    {
+      "unit_id": "420107a735b3750c5fd54ceeb26d8732c0cee10b0cf4341f32148c4553a29a93",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/420107a735b3750c5fd54ceeb26d8732c0cee10b0cf4341f32148c4553a29a93/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/420107a735b3750c5fd54ceeb26d8732c0cee10b0cf4341f32148c4553a29a93/g2.json"
+      ]
+    },
+    {
+      "unit_id": "6aba01adc7844ff535eec975e5debcb3fbb1ee4a2ed0262daed75246374f9190",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/6aba01adc7844ff535eec975e5debcb3fbb1ee4a2ed0262daed75246374f9190/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/6aba01adc7844ff535eec975e5debcb3fbb1ee4a2ed0262daed75246374f9190/g2.json"
+      ]
+    },
+    {
+      "unit_id": "fc77b4f90ffe182f444eea67b3b91ebc6609fd3be445bbc03d3e18d57dede407",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        3,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/fc77b4f90ffe182f444eea67b3b91ebc6609fd3be445bbc03d3e18d57dede407/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/fc77b4f90ffe182f444eea67b3b91ebc6609fd3be445bbc03d3e18d57dede407/g2.json"
+      ]
+    },
+    {
+      "unit_id": "d76ca1b6ef7b257aac3881b840f8eb6a76ed0d9d79a22d6dea052a61ec3f865f",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/d76ca1b6ef7b257aac3881b840f8eb6a76ed0d9d79a22d6dea052a61ec3f865f/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/d76ca1b6ef7b257aac3881b840f8eb6a76ed0d9d79a22d6dea052a61ec3f865f/g2.json"
+      ]
+    },
+    {
+      "unit_id": "c41c2ee68b2b4a78fc7b64e356e17c9f889f8ec7debd4e1b7529dec2436172f9",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/c41c2ee68b2b4a78fc7b64e356e17c9f889f8ec7debd4e1b7529dec2436172f9/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/c41c2ee68b2b4a78fc7b64e356e17c9f889f8ec7debd4e1b7529dec2436172f9/g2.json"
+      ]
+    },
+    {
+      "unit_id": "5f437d6577dda5ee995a5047f95afceab31d4b9f4608e8d84b9a8b29c4ffc478",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        2,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/5f437d6577dda5ee995a5047f95afceab31d4b9f4608e8d84b9a8b29c4ffc478/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/5f437d6577dda5ee995a5047f95afceab31d4b9f4608e8d84b9a8b29c4ffc478/g2.json"
+      ]
+    },
+    {
+      "unit_id": "587aff872ee26585c68987611e0e0a1347012a9bb494c42429dfbb1c7a84b94b",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/587aff872ee26585c68987611e0e0a1347012a9bb494c42429dfbb1c7a84b94b/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/587aff872ee26585c68987611e0e0a1347012a9bb494c42429dfbb1c7a84b94b/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7428e107ff81add64d4e294f461647b1918046b10729fd18840e0741f8f8af89",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7428e107ff81add64d4e294f461647b1918046b10729fd18840e0741f8f8af89/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7428e107ff81add64d4e294f461647b1918046b10729fd18840e0741f8f8af89/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7dee95328ede0ca992702f794e7e8c2520c9672ab3fe17aba536859566cafe2b",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7dee95328ede0ca992702f794e7e8c2520c9672ab3fe17aba536859566cafe2b/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7dee95328ede0ca992702f794e7e8c2520c9672ab3fe17aba536859566cafe2b/g2.json"
+      ]
+    },
+    {
+      "unit_id": "230341455c62d3c5ddb0346312a2bbb9275aac7fa6128075af06eed2c3a567d8",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/230341455c62d3c5ddb0346312a2bbb9275aac7fa6128075af06eed2c3a567d8/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/230341455c62d3c5ddb0346312a2bbb9275aac7fa6128075af06eed2c3a567d8/g2.json"
+      ]
+    },
+    {
+      "unit_id": "dde0427b1f9fabf0f4501416ca5a6da627fd51537878bb387ae9c955e81daef2",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/dde0427b1f9fabf0f4501416ca5a6da627fd51537878bb387ae9c955e81daef2/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/dde0427b1f9fabf0f4501416ca5a6da627fd51537878bb387ae9c955e81daef2/g2.json"
+      ]
+    },
+    {
+      "unit_id": "a541a36d7870e52dd5c114b7d6bc9df614c7a15e0d52b377c80e05bf743ca9b2",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        5,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/a541a36d7870e52dd5c114b7d6bc9df614c7a15e0d52b377c80e05bf743ca9b2/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/a541a36d7870e52dd5c114b7d6bc9df614c7a15e0d52b377c80e05bf743ca9b2/g2.json"
+      ]
+    },
+    {
+      "unit_id": "1742e1f1a389215634513db29842df9ad153214c01757f29dfb36c309bd3ec8c",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/1742e1f1a389215634513db29842df9ad153214c01757f29dfb36c309bd3ec8c/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/1742e1f1a389215634513db29842df9ad153214c01757f29dfb36c309bd3ec8c/g2.json"
+      ]
+    },
+    {
+      "unit_id": "36753d18d3d151e24d5f0959cb273275ce5f04a31a8d914d09cdb86a244feaa3",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/36753d18d3d151e24d5f0959cb273275ce5f04a31a8d914d09cdb86a244feaa3/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/36753d18d3d151e24d5f0959cb273275ce5f04a31a8d914d09cdb86a244feaa3/g2.json"
+      ]
+    },
+    {
+      "unit_id": "5ba5966aa7c25ebe129a879c76308f2c3b612fbe2dc315e3880c67b2c87dc1a0",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/5ba5966aa7c25ebe129a879c76308f2c3b612fbe2dc315e3880c67b2c87dc1a0/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/5ba5966aa7c25ebe129a879c76308f2c3b612fbe2dc315e3880c67b2c87dc1a0/g2.json"
+      ]
+    },
+    {
+      "unit_id": "86f4a0d0aac87ea61a80169de4da06df0218445c46ed2241d58c9c4837f21eed",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/86f4a0d0aac87ea61a80169de4da06df0218445c46ed2241d58c9c4837f21eed/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/86f4a0d0aac87ea61a80169de4da06df0218445c46ed2241d58c9c4837f21eed/g2.json"
+      ]
+    },
+    {
+      "unit_id": "fa5aa23ba26de98c1c504f0f55a9b33ec5df4172735ecf137169804f2bddafaa",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/fa5aa23ba26de98c1c504f0f55a9b33ec5df4172735ecf137169804f2bddafaa/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/fa5aa23ba26de98c1c504f0f55a9b33ec5df4172735ecf137169804f2bddafaa/g2.json"
+      ]
+    },
+    {
+      "unit_id": "540b108a8e4ea81f64d703d4e6343e6bf11ceae06c1342bff05d1caf60fc5d0c",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/540b108a8e4ea81f64d703d4e6343e6bf11ceae06c1342bff05d1caf60fc5d0c/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/540b108a8e4ea81f64d703d4e6343e6bf11ceae06c1342bff05d1caf60fc5d0c/g2.json"
+      ]
+    },
+    {
+      "unit_id": "367b862149c96a41ac2307b7a2df80b7b62869c0a2c2639e81811207d125b746",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/367b862149c96a41ac2307b7a2df80b7b62869c0a2c2639e81811207d125b746/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/367b862149c96a41ac2307b7a2df80b7b62869c0a2c2639e81811207d125b746/g2.json"
+      ]
+    },
+    {
+      "unit_id": "a0be0bd92339d0ca010fa4d440ae57a3d537f37ee21773d7403f88ccf2e269b9",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/a0be0bd92339d0ca010fa4d440ae57a3d537f37ee21773d7403f88ccf2e269b9/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/a0be0bd92339d0ca010fa4d440ae57a3d537f37ee21773d7403f88ccf2e269b9/g2.json"
+      ]
+    },
+    {
+      "unit_id": "63c3267f98630acf174dc4bf2468c28aadb74445d250d0a3c86f94d1c9ce33cb",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        1,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/63c3267f98630acf174dc4bf2468c28aadb74445d250d0a3c86f94d1c9ce33cb/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/63c3267f98630acf174dc4bf2468c28aadb74445d250d0a3c86f94d1c9ce33cb/g2.json"
+      ]
+    },
+    {
+      "unit_id": "2f4af91ea47a3a575d5394ce0191b7f4a37a0a65d198a671244ce97eb4ce0139",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2f4af91ea47a3a575d5394ce0191b7f4a37a0a65d198a671244ce97eb4ce0139/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2f4af91ea47a3a575d5394ce0191b7f4a37a0a65d198a671244ce97eb4ce0139/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7664846ff6590c9ec289579e35f5828e320fc4968cff346d4a1f13fd6d7c0f36",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7664846ff6590c9ec289579e35f5828e320fc4968cff346d4a1f13fd6d7c0f36/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7664846ff6590c9ec289579e35f5828e320fc4968cff346d4a1f13fd6d7c0f36/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7c79c17c4bdf24c71c115d082b86063a7d3baf22104fbb0e3ff2c6e6f3344fe8",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7c79c17c4bdf24c71c115d082b86063a7d3baf22104fbb0e3ff2c6e6f3344fe8/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7c79c17c4bdf24c71c115d082b86063a7d3baf22104fbb0e3ff2c6e6f3344fe8/g2.json"
+      ]
+    },
+    {
+      "unit_id": "115f908c1b1aedc214e3d00a7eda1db86f1eaecc61558bb41629a749bcbf28cd",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/115f908c1b1aedc214e3d00a7eda1db86f1eaecc61558bb41629a749bcbf28cd/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/115f908c1b1aedc214e3d00a7eda1db86f1eaecc61558bb41629a749bcbf28cd/g2.json"
+      ]
+    },
+    {
+      "unit_id": "42b26cd6fd868fc3ecef6e56fc19eca2fb9355421ecb3ab1be313c844dd0cb25",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/42b26cd6fd868fc3ecef6e56fc19eca2fb9355421ecb3ab1be313c844dd0cb25/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/42b26cd6fd868fc3ecef6e56fc19eca2fb9355421ecb3ab1be313c844dd0cb25/g2.json"
+      ]
+    },
+    {
+      "unit_id": "ee09bcb7a9cd421cef238ade6a19ea585251183327ec5b6568f3f912c744d95d",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/ee09bcb7a9cd421cef238ade6a19ea585251183327ec5b6568f3f912c744d95d/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/ee09bcb7a9cd421cef238ade6a19ea585251183327ec5b6568f3f912c744d95d/g2.json"
+      ]
+    },
+    {
+      "unit_id": "3804b1b5f2d49b97a6d0d9558e9d0fac6b684bbfd2f355214d27dd466afa9f82",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/3804b1b5f2d49b97a6d0d9558e9d0fac6b684bbfd2f355214d27dd466afa9f82/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/3804b1b5f2d49b97a6d0d9558e9d0fac6b684bbfd2f355214d27dd466afa9f82/g2.json"
+      ]
+    },
+    {
+      "unit_id": "f7e24d644e7dc5720411b6d2152f8e69c631bbdbc94b12a9e230c437f54bd96e",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/f7e24d644e7dc5720411b6d2152f8e69c631bbdbc94b12a9e230c437f54bd96e/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/f7e24d644e7dc5720411b6d2152f8e69c631bbdbc94b12a9e230c437f54bd96e/g2.json"
+      ]
+    },
+    {
+      "unit_id": "3a38256191837d6bf631631f6afad87880de8eadffd3a16bc75a0fd8c330b89b",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/3a38256191837d6bf631631f6afad87880de8eadffd3a16bc75a0fd8c330b89b/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/3a38256191837d6bf631631f6afad87880de8eadffd3a16bc75a0fd8c330b89b/g2.json"
+      ]
+    },
+    {
+      "unit_id": "6d86e5fb95c870e11a0e4968b9b7a1972f48c9bf4d2413ba5a3a06050416abcf",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/6d86e5fb95c870e11a0e4968b9b7a1972f48c9bf4d2413ba5a3a06050416abcf/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/6d86e5fb95c870e11a0e4968b9b7a1972f48c9bf4d2413ba5a3a06050416abcf/g2.json"
+      ]
+    },
+    {
+      "unit_id": "2d077d971e0646917433e56d61e910cbea9886380dbcf811e7aa4c1fc9c3c4b9",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2d077d971e0646917433e56d61e910cbea9886380dbcf811e7aa4c1fc9c3c4b9/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2d077d971e0646917433e56d61e910cbea9886380dbcf811e7aa4c1fc9c3c4b9/g2.json"
+      ]
+    },
+    {
+      "unit_id": "93ecdd0d484c4efde9dc3c30540be8eefcabe9f82f1afbf9e1f416d8e441533a",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/93ecdd0d484c4efde9dc3c30540be8eefcabe9f82f1afbf9e1f416d8e441533a/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/93ecdd0d484c4efde9dc3c30540be8eefcabe9f82f1afbf9e1f416d8e441533a/g2.json"
+      ]
+    },
+    {
+      "unit_id": "9fcd15077dad08a298421f63eae07e0bf702b0b9a845c7fd4cf7d6ff4e6e9afb",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/9fcd15077dad08a298421f63eae07e0bf702b0b9a845c7fd4cf7d6ff4e6e9afb/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/9fcd15077dad08a298421f63eae07e0bf702b0b9a845c7fd4cf7d6ff4e6e9afb/g2.json"
+      ]
+    },
+    {
+      "unit_id": "17cc0d50295a40b2a5712a035d5efbe3621299a9e1ae6ea2fa5d7ba294579611",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/17cc0d50295a40b2a5712a035d5efbe3621299a9e1ae6ea2fa5d7ba294579611/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/17cc0d50295a40b2a5712a035d5efbe3621299a9e1ae6ea2fa5d7ba294579611/g2.json"
+      ]
+    },
+    {
+      "unit_id": "8b4501a10e92ceba6d3d6bbcdeb28c34d0d06ef20585abbfdc3b3ab90e9c9aad",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/8b4501a10e92ceba6d3d6bbcdeb28c34d0d06ef20585abbfdc3b3ab90e9c9aad/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/8b4501a10e92ceba6d3d6bbcdeb28c34d0d06ef20585abbfdc3b3ab90e9c9aad/g2.json"
+      ]
+    },
+    {
+      "unit_id": "dcadc72000accc41a87dc95b57e6f0bcfead998de4c1507607f4c89378e13a20",
+      "problem_id": "imo2026_p1",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/dcadc72000accc41a87dc95b57e6f0bcfead998de4c1507607f4c89378e13a20/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/dcadc72000accc41a87dc95b57e6f0bcfead998de4c1507607f4c89378e13a20/g2.json"
+      ]
+    },
+    {
+      "unit_id": "325f305a05d96b39af2fbf6d481b1bc5449caaa22f824d0aeba53c96f81c21c1",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/325f305a05d96b39af2fbf6d481b1bc5449caaa22f824d0aeba53c96f81c21c1/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/325f305a05d96b39af2fbf6d481b1bc5449caaa22f824d0aeba53c96f81c21c1/g2.json"
+      ]
+    },
+    {
+      "unit_id": "4674555b0b8dc58eb9d112cea4ba86d3a30412aa813c79404244504af8306d95",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        4
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/4674555b0b8dc58eb9d112cea4ba86d3a30412aa813c79404244504af8306d95/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/4674555b0b8dc58eb9d112cea4ba86d3a30412aa813c79404244504af8306d95/g2.json"
+      ]
+    },
+    {
+      "unit_id": "243293b5a42f22ad809d33e665d0dcf33715e5c02dae6cc99798c34ff4fcf6ab",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        4,
+        4
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/243293b5a42f22ad809d33e665d0dcf33715e5c02dae6cc99798c34ff4fcf6ab/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/243293b5a42f22ad809d33e665d0dcf33715e5c02dae6cc99798c34ff4fcf6ab/g2.json"
+      ]
+    },
+    {
+      "unit_id": "5139d66e5340db08246e0664d265bc5c01a99748062cdd284c546d8e0a392e5f",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/5139d66e5340db08246e0664d265bc5c01a99748062cdd284c546d8e0a392e5f/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/5139d66e5340db08246e0664d265bc5c01a99748062cdd284c546d8e0a392e5f/g2.json"
+      ]
+    },
+    {
+      "unit_id": "b6394cab815f2dbfd95ff2eadd3d1244667aac518057c1de74e4a1337d7bd9f0",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/b6394cab815f2dbfd95ff2eadd3d1244667aac518057c1de74e4a1337d7bd9f0/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/b6394cab815f2dbfd95ff2eadd3d1244667aac518057c1de74e4a1337d7bd9f0/g2.json"
+      ]
+    },
+    {
+      "unit_id": "ccca81edd2ad147868e799534ce96e162f15c4385fa7064d50614bacf335adc3",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/ccca81edd2ad147868e799534ce96e162f15c4385fa7064d50614bacf335adc3/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/ccca81edd2ad147868e799534ce96e162f15c4385fa7064d50614bacf335adc3/g2.json"
+      ]
+    },
+    {
+      "unit_id": "cc082bbc2576395249dbffa5b314bdce4d6dd34a7e0c4c22450541425f57232c",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        1,
+        1
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/cc082bbc2576395249dbffa5b314bdce4d6dd34a7e0c4c22450541425f57232c/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/cc082bbc2576395249dbffa5b314bdce4d6dd34a7e0c4c22450541425f57232c/g2.json"
+      ]
+    },
+    {
+      "unit_id": "9da25b4019126105e3f02720d5e4dc3f97a9355f10c191e4cdc775222ae4bae9",
+      "problem_id": "imo2026_p3",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/9da25b4019126105e3f02720d5e4dc3f97a9355f10c191e4cdc775222ae4bae9/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/9da25b4019126105e3f02720d5e4dc3f97a9355f10c191e4cdc775222ae4bae9/g2.json"
+      ]
+    },
+    {
+      "unit_id": "7afe47861c3477cba696059d378f0323962804cb87ff0e1c7d0f3a9252899327",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        6,
+        6
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7afe47861c3477cba696059d378f0323962804cb87ff0e1c7d0f3a9252899327/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/7afe47861c3477cba696059d378f0323962804cb87ff0e1c7d0f3a9252899327/g2.json"
+      ]
+    },
+    {
+      "unit_id": "6bab70b1a8f4e807b43c41cc3dbbb7719ef7b8644a83b45171cc2785c53ca6ba",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        6,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/6bab70b1a8f4e807b43c41cc3dbbb7719ef7b8644a83b45171cc2785c53ca6ba/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/6bab70b1a8f4e807b43c41cc3dbbb7719ef7b8644a83b45171cc2785c53ca6ba/g2.json"
+      ]
+    },
+    {
+      "unit_id": "139dc03afe211ae00d573a5b7c3c483e7a82b403c515de2f65620d892b63d7d8",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/139dc03afe211ae00d573a5b7c3c483e7a82b403c515de2f65620d892b63d7d8/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/139dc03afe211ae00d573a5b7c3c483e7a82b403c515de2f65620d892b63d7d8/g2.json"
+      ]
+    },
+    {
+      "unit_id": "27650d5684989d152322b995cd08ae2966b1592709e0d3953c01a535c36d8fb8",
+      "problem_id": "imo2026_p4",
+      "scores": [
+        3,
+        6
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/27650d5684989d152322b995cd08ae2966b1592709e0d3953c01a535c36d8fb8/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/27650d5684989d152322b995cd08ae2966b1592709e0d3953c01a535c36d8fb8/g2.json"
+      ]
+    },
+    {
+      "unit_id": "fc36e7ffd433666d7b0b9962ba173fd9e76e84c99b4b3ee7e761d2585092f9ec",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        7,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/fc36e7ffd433666d7b0b9962ba173fd9e76e84c99b4b3ee7e761d2585092f9ec/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/fc36e7ffd433666d7b0b9962ba173fd9e76e84c99b4b3ee7e761d2585092f9ec/g2.json"
+      ]
+    },
+    {
+      "unit_id": "2dcfd27140126f4c28514e94f218fda1dd7e2199589ac6c6a55fd177d205834f",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2dcfd27140126f4c28514e94f218fda1dd7e2199589ac6c6a55fd177d205834f/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/2dcfd27140126f4c28514e94f218fda1dd7e2199589ac6c6a55fd177d205834f/g2.json"
+      ]
+    },
+    {
+      "unit_id": "f34dba456a3b4eaeef3f0aaedca4936f7ac8a2ef2381b0d5c247b4948c26ac92",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        5,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/f34dba456a3b4eaeef3f0aaedca4936f7ac8a2ef2381b0d5c247b4948c26ac92/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/f34dba456a3b4eaeef3f0aaedca4936f7ac8a2ef2381b0d5c247b4948c26ac92/g2.json"
+      ]
+    },
+    {
+      "unit_id": "881d6d6ac55d9465e06eff7a553e062037bc188a5b2de663d8805414d4ce2a90",
+      "problem_id": "imo2026_p5",
+      "scores": [
+        5,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/881d6d6ac55d9465e06eff7a553e062037bc188a5b2de663d8805414d4ce2a90/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/881d6d6ac55d9465e06eff7a553e062037bc188a5b2de663d8805414d4ce2a90/g2.json"
+      ]
+    },
+    {
+      "unit_id": "18dfd0199a98fb663a142a274c24f4595ffb01178bbced58c8df646745e21c4e",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        2,
+        2
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/18dfd0199a98fb663a142a274c24f4595ffb01178bbced58c8df646745e21c4e/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/18dfd0199a98fb663a142a274c24f4595ffb01178bbced58c8df646745e21c4e/g2.json"
+      ]
+    },
+    {
+      "unit_id": "bffe08241efb3bb92d1d513d2a1bfbb925209104dbe54704955212b1cfc4db05",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/bffe08241efb3bb92d1d513d2a1bfbb925209104dbe54704955212b1cfc4db05/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/bffe08241efb3bb92d1d513d2a1bfbb925209104dbe54704955212b1cfc4db05/g2.json"
+      ]
+    },
+    {
+      "unit_id": "baf1a9a6eb4ae9a3268f869df80bbf0457e9a24c3d7bd8aff8cb33cecffbb4b2",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/baf1a9a6eb4ae9a3268f869df80bbf0457e9a24c3d7bd8aff8cb33cecffbb4b2/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/baf1a9a6eb4ae9a3268f869df80bbf0457e9a24c3d7bd8aff8cb33cecffbb4b2/g2.json"
+      ]
+    },
+    {
+      "unit_id": "c0c18cd03a538f11b92ce116ca2c4c6cfb445e860ba28c349e9f83ac87d3666e",
+      "problem_id": "imo2026_p6",
+      "scores": [
+        3,
+        3
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/c0c18cd03a538f11b92ce116ca2c4c6cfb445e860ba28c349e9f83ac87d3666e/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/c0c18cd03a538f11b92ce116ca2c4c6cfb445e860ba28c349e9f83ac87d3666e/g2.json"
+      ]
+    },
+    {
+      "unit_id": "09feec4d18161c8e64bc71c0aa707238202bee41abb83c306069c4938d10c324",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        5,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/09feec4d18161c8e64bc71c0aa707238202bee41abb83c306069c4938d10c324/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/09feec4d18161c8e64bc71c0aa707238202bee41abb83c306069c4938d10c324/g2.json"
+      ]
+    },
+    {
+      "unit_id": "1043280de079bb51ddf057e372200e998506ebf3c4787624aa5dd3436d434101",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        5,
+        7
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/1043280de079bb51ddf057e372200e998506ebf3c4787624aa5dd3436d434101/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/1043280de079bb51ddf057e372200e998506ebf3c4787624aa5dd3436d434101/g2.json"
+      ]
+    },
+    {
+      "unit_id": "b9e5e19bdb100ce9a1778758757cb3239632bfe10bc08f8acfbf48306c1eb87a",
+      "problem_id": "imo2026_p2",
+      "scores": [
+        5,
+        5
+      ],
+      "grade_files": [
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/b9e5e19bdb100ce9a1778758757cb3239632bfe10bc08f8acfbf48306c1eb87a/g1.json",
+        "benchmarks/imo2026/results/strict_v2_consistency_20260918T064715Z/grades/b9e5e19bdb100ce9a1778758757cb3239632bfe10bc08f8acfbf48306c1eb87a/g2.json"
+      ]
+    }
+  ],
+  "overall": {
+    "proofs": 75,
+    "exact_agreement": 0.88,
+    "pairwise_agreement": 0.88,
+    "within_one_point": 0.96,
+    "mean_range": 0.17333333333333334,
+    "mean_population_sd": 0.08666666666666667,
+    "range_counts": {
+      "0": 66,
+      "1": 6,
+      "2": 2,
+      "3": 1
+    },
+    "crosses_six_threshold": 4,
+    "crosses_three_four_boundary": 2
+  },
+  "metadata_disagreements": 0,
+  "retries_within_accepted_calls": 0,
+  "active_batch": null,
+  "task_attempts": {},
+  "protocol_amendment": "two_grade_plan.json",
+  "pause_reason": "Only IMO 2026 v2 results are retained. All strict-v2 IMO-ProofBench grading results were deleted at the user's request; ProofBench uses IMOBench B.5.",
+  "scope": "imo2026_only",
+  "retained_manifest": "retained_imo_manifest.json"
+}

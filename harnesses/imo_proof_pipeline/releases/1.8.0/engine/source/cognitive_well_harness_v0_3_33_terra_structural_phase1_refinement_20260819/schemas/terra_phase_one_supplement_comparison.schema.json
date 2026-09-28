@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "different_root_characterization",
+    "different_invariant",
+    "alternative_construction",
+    "supplies_missing_necessity_or_sufficiency",
+    "sound_lemma_absent_from_anchor"
+  ],
+  "properties": {
+    "different_root_characterization": {"type": "integer", "enum": [0, 1]},
+    "different_invariant": {"type": "integer", "enum": [0, 1]},
+    "alternative_construction": {"type": "integer", "enum": [0, 1]},
+    "supplies_missing_necessity_or_sufficiency": {
+      "type": "integer",
+      "enum": [0, 1]
+    },
+    "sound_lemma_absent_from_anchor": {
+      "type": "integer",
+      "enum": [0, 1]
+    }
+  }
+}

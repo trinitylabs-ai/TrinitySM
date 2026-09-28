@@ -1,0 +1,41 @@
+{
+  "schema": "v097-gold-informed-olympiad-calibrated-score-v1",
+  "state": "completed",
+  "completed_at": "2026-09-11T19:41:04.698634+00:00",
+  "grader": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "policy_mode": "strict",
+  "model_output_format": "markdown",
+  "policy_sha256": "1a8c5d02a7bd84a53ad011cf889ceaaca7ff94166536565bda49082649781ecf",
+  "problem_number": 19,
+  "problem_id": "PB-Basic-019",
+  "case_id": "PB-Basic-019.generic.t10_r01",
+  "candidate_id": "t10_r01",
+  "problem_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/p19/problem.json",
+  "reference_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/p19/reference.md",
+  "proof_path": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/p19/proofs/t10_r01.md",
+  "proof_source_kind": "generic_manifest_terminal_proof",
+  "problem_sha256": "00c21aeff0854d1a045f7260fb4cab6487e5a4586d65d2177dd8d55422e8dfe3",
+  "reference_sha256": "22341fbfa5b1be4d043f86519f346329f13786ede1e24f33d5ea0966194d0106",
+  "proof_sha256": "fcdfad96ca65de83b4d82b5473488d292fc283c6464864e9d85cf5624a46562f",
+  "resolver_outcome": "GENERIC_HASH_BOUND_ARTIFACT",
+  "task_manifest": "/opt/proof-workshop/runs/basic_strict_incremental_20260911/batches/20260911T194050100255Z/inputs/tasks.json",
+  "task_manifest_sha256": "df432d0e61bd8dbc0f4f32699a3973abeccaf36b09b9d5c77a82959ae923abe3",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "NONE",
+    "summary": "The proof correctly groups integers by their 2-adic valuation, telescopes the resulting floor sum, and derives a strict error bound below 1. It also consistently handles nonintegral \\(N\\) by interpreting the sum through \\(\\lfloor N\\rfloor\\).",
+    "strengths": [
+      "The counting formula, telescoping identity, fractional-part estimate, and final absolute-value argument are all correct and sufficiently justified."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "errors": []
+}

@@ -1,0 +1,29 @@
+To prove that $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ for positive reals $a,b,c$ such that $a+b+c=1$, we define the function
+\[ L(a,b,c) = \sqrt{a}+\sqrt{b}+\sqrt{c} - 3\sqrt{3}(ab+bc+ca). \]
+The expression is symmetric in $a,b,c$. We wish to show that $L(a,b,c) \geq 0$ for all $a,b,c > 0$ with $a+b+c=1$.
+
+**1. Analysis of the case where two variables are equal**
+Assume $a=b$. Then $c = 1-2a$. Since $a,b,c > 0$, we have $0 < a < 1/2$. The function becomes:
+\[ f(a) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(a^2 + 2a(1-2a)) = 2\sqrt{a} + \sqrt{1-2a} - 3\sqrt{3}(2a - 3a^2). \]
+To find the minimum of $f(a)$, we compute its derivative:
+\[ f'(a) = \frac{1}{\sqrt{a}} - \frac{1}{\sqrt{1-2a}} - 3\sqrt{3}(2 - 6a) = \frac{\sqrt{1-2a} - \sqrt{a}}{\sqrt{a(1-2a)}} - 6\sqrt{3}(1-3a). \]
+Factoring out $(1-3a)$, we have:
+\[ f'(a) = (1-3a) \left[ \frac{1}{\sqrt{a(1-2a)}(\sqrt{1-2a} + \sqrt{a})} - 6\sqrt{3} \right]. \]
+At $a=1/3$, $f'(1/3) = 0$ and $f(1/3) = 2/\sqrt{3} + 1/\sqrt{3} - 3\sqrt{3}(2/3 - 1/3) = \sqrt{3} - \sqrt{3} = 0$.
+Checking the second derivative at $a=1/3$:
+\[ f''(a) = -\frac{1}{2a^{3/2}} - \frac{1}{(1-2a)^{3/2}} + 18\sqrt{3} \implies f''(1/3) = -\frac{3\sqrt{3}}{2} - 3\sqrt{3} + 18\sqrt{3} = 13.5\sqrt{3} > 0. \]
+Thus, $a=1/3$ is a local minimum. At the boundaries, $f(0) = 1 > 0$ and $f(1/2) = \sqrt{2} - \frac{3\sqrt{3}}{4} \approx 1.414 - 1.299 > 0$. Since $f(a)$ has only one other critical point near $a=0$ where it is a local maximum, the minimum value of $f(a)$ on $(0, 1/2)$ is $f(1/3) = 0$.
+
+**2. Generalization using the Mixing Variables method**
+Fix $c$ and $S = a+b$. We examine the function $g(a) = \sqrt{a} + \sqrt{S-a} - 3\sqrt{3}a(S-a)$.
+The derivative is $g'(a) = (S-2a) \left[ \frac{1}{2\sqrt{a(S-a)}(\sqrt{S-a} + \sqrt{a})} - 3\sqrt{3} \right]$.
+Let $K(a) = 2\sqrt{a(S-a)}(\sqrt{S-a} + \sqrt{a})$. $K(a)$ is 0 at $a=0, S$ and reaches its maximum at $a=S/2$ with $K(S/2) = S\sqrt{2S}$.
+If $S\sqrt{2S} > \frac{1}{3\sqrt{3}}$, then $g'(a)$ has the opposite sign of $(S-2a)$ near $a=S/2$, making $a=S/2$ a local minimum. If $S$ is small, the minimum occurs at the boundaries $a=0$ or $a=S$.
+In either case, the global minimum of $L(a,b,c)$ must occur when:
+- Two variables are equal ($a=b$), which we found leads to $L \geq 0$.
+- One variable is 0 (e.g., $a=0$), in which case $L(0,b,c) = \sqrt{b} + \sqrt{c} - 3\sqrt{3}bc$ with $b+c=1$.
+Applying the same "two variables equal" logic to $L(0,b,c)$, the minimum is at $b=c=1/2$:
+\[ L(0, 1/2, 1/2) = \sqrt{2} - \frac{3\sqrt{3}}{4} > 0. \]
+Thus, the global minimum of $L(a,b,c)$ is $L(1/3, 1/3, 1/3) = 0$.
+
+Conclusion: $\sqrt{a}+\sqrt{b}+\sqrt{c} \geq 3\sqrt{3}(ab+bc+ca)$ for all $a,b,c > 0, a+b+c=1$. \(\square\)

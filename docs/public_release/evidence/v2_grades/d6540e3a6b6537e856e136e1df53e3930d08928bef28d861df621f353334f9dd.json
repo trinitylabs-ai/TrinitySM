@@ -1,0 +1,49 @@
+{
+  "schema": "workshop-v2-independent-grade-v1",
+  "unit_id": "fc36e7ffd433666d7b0b9962ba173fd9e76e84c99b4b3ee7e761d2585092f9ec",
+  "problem_id": "imo2026_p5",
+  "repeat": 2,
+  "problem_sha256": "f298ac63a0c7bbca176888c0ed48a1da2fedb09f7609c042dfbb9540bde8231e",
+  "reference_sha256": "259c24a023c05037ffd612b20240016fa4bf2be0b3e41b9c1c996992e5f82efb",
+  "proof_sha256": "162a6c3a4dcd903960aee3063451d7966dbc65a2eb4fa22ecfc17ca2c22b4f20",
+  "policy_sha256": "d1c93550ca49f52a35fe4c0eb0b1ccca9534e9112d928002667e404c367de4e4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "prompt_sha256": "9553f13ff48b093bd69959c4e7a1186c11928304c88c832defed5683a1e45b5f",
+  "grade": {
+    "score": 7,
+    "verdict": "pass",
+    "answer_supported": true,
+    "dependency_impact": "none",
+    "repair_complexity": "none",
+    "olympiad_treatment": "full_credit",
+    "first_issue": "No decisive defect. The comparison argument on the range, followed by connectedness, correctly proves that the nonnegative defect g(x)=f(x)-x is constant.",
+    "summary": "The submission correctly identifies all solutions as f(x)=x+c with c≥0, verifies the converse, and proves necessity. It derives orbit invariance and nonnegativity of g, establishes injectivity, shows all positive values of g coincide via an asymptotic range estimate, and excludes coexistence of defect values 0 and c using openness and connectedness.",
+    "strengths": [
+      "Correctly obtains f(f(y))=2f(y)-y and hence g(f(x))=g(x).",
+      "Correctly derives f^(n)(x)=x+ng(x) and uses positivity to show g(x)≥0.",
+      "The range estimate is valid and implies that all positive defect values are equal.",
+      "The openness arguments for D_0 and D_c correctly rule out mixed defect levels.",
+      "Both inequalities are correctly verified for f(x)=x+c."
+    ],
+    "errors": [],
+    "contract_consistent": true,
+    "full_credit": true
+  },
+  "response_selection": {
+    "selected_attempt": 1,
+    "total_attempts": 1,
+    "rejected_attempts_before_selection": 0,
+    "failed_process_attempts": [],
+    "unselected_later_attempts": 0
+  },
+  "completed_at": "2026-09-18T18:49:04.178070+00:00",
+  "isolation_audit": {
+    "tool_calls": 0,
+    "successful_processes_audited": true,
+    "policy_version": "strict-olympiad-v2",
+    "evaluator_instructions_sha256": "f431038663b5c2474bfb1373784250fc2c36c7ba097e53e160893366aacf782c"
+  },
+  "source_batch": "pool_job_00037",
+  "native_rejection_count": 0
+}

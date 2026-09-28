@@ -1,0 +1,17 @@
+# Proof comparison
+
+## Proof A
+Established theorem: The conclusion that there exists some integer $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots.
+Claim gap: Relies on an unverified citation of a deep external theorem (Pólya's theorem on partial sums of power series with real roots) and uses a heuristic limit argument to pass from finite-degree Newton's inequalities to an infinite sequence condition. The quantifier shift from "for all finite $k$" to "limit as $k \to \infty$" is not rigorously justified within the text.
+Qualifications and supplied repairs: NONE supplied; the proof depends entirely on the correctness and exact statement of the cited Pólya theorem, which is not derived or verified in-text. The limit step in lines 7-10 is plausible but lacks rigorous justification of index independence and uniform convergence.
+Decisive checks: Lines 5-10 correctly state Newton's inequalities for hyperbolic polynomials, but taking $k \to \infty$ to obtain ultra-log-concavity for fixed $i$ is heuristic without addressing how the inequalities for varying $k$ interact. Lines 11-17 correctly invoke Pólya's theorem to conclude the power series defines an entire function, which forces $\lim |c_n|^{1/n} = 0$, contradicting $|c_n| \geq 1$ for non-zero integers. The logical chain is valid if the theorem is accepted, but the proof is not self-contained and leaves the theorem's applicability to the exact coefficient form $c_i$ (without factorial scaling) unverified.
+
+## Proof B
+Established theorem: The conclusion that there exists some integer $k \geq 0$ such that $P_k(x)$ has fewer than $k$ distinct real roots.
+Claim gap: NONE supported by checks.
+Qualifications and supplied repairs: NONE.
+Decisive checks: Lines 5-9 correctly construct the reciprocal polynomial, scale it to $R_k(y)$, and verify it is monic with integer coefficients. The discriminant $\Delta_k = \prod_{i<j}(y_{i,k}-y_{j,k})^2$ is correctly identified as a positive integer, yielding $\Delta_k \geq 1$. Lines 11-13 correctly apply AM-GM to the positive terms $(y_{i,k}-y_{j,k})^2$, establishing $\sum_{i<j}(y_{i,k}-y_{j,k})^2 \geq \binom{k}{2}$. Lines 14-17 correctly use the algebraic identity $\sum_{i<j}(y_i-y_j)^2 = k\sum y_i^2 - (\sum y_i)^2$ and Vieta's formulas ($\sum y_i = -c_1$, $\sum y_i^2 = c_1^2 - 2c_0 c_2$) to substitute coefficients. Lines 18-20 correctly derive $k(c_1^2 - 2c_0 c_2) - c_1^2 \geq \frac{1}{2}k^2 - \frac{1}{2}k$, a linear-vs-quadratic inequality that fails for sufficiently large $k$. Every step is elementary, self-contained, and rigorously verified. The quantifier shift from "for all $k$" to "for sufficiently large $k$" is standard and correctly handled for contradiction.
+
+## Decision
+Winner: B
+Reason: Proof B provides a complete, self-contained, and elementary proof using only discriminants, AM-GM, Vieta's formulas, and asymptotic comparison, with every algebraic step rigorously verified. Proof A reaches the correct conclusion but relies on a heavy, unverified citation of Pólya's theorem and a heuristic limit argument, making it less transparent and dependent on advanced external theory. B's contradiction is derived directly from coefficient bounds and polynomial identities without black-box machinery, offering a stronger justified solution.
